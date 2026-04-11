@@ -4,6 +4,7 @@ const ASSETS = [
   './index.html',
   './manifest.webmanifest',
   './sync.js',
+  './version.json',
   './assets/icons/icon-180.png',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
@@ -12,7 +13,7 @@ const ASSETS = [
   './data/canary_import_seed.json',
   './data/allen_question_counts_2026-04-10.json'
 ];
-const NETWORK_FIRST_PATHS = new Set(['/', '/kmle-planner/', '/kmle-planner/index.html', '/kmle-planner/sync.js', '/kmle-planner/manifest.webmanifest']);
+const NETWORK_FIRST_PATHS = new Set(['/', '/kmle-planner/', '/kmle-planner/index.html', '/kmle-planner/sync.js', '/kmle-planner/manifest.webmanifest', '/kmle-planner/version.json']);
 
 async function putInCache(request, response) {
   if (!response || response.status !== 200) return response;
