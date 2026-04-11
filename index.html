@@ -1079,6 +1079,16 @@
       opacity: 0.62;
     }
 
+    .event-item.completed {
+      opacity: 0.72;
+      background: rgba(148,163,184,0.08);
+      border-style: dashed;
+    }
+
+    .event-item.completed .item-title {
+      text-decoration: line-through;
+    }
+
     .task-topline {
       display: flex;
       justify-content: space-between;
@@ -2082,6 +2092,16 @@
       const bundlePrefix = `clerkship-${safeBundleId}`;
       const legacyEventPrefix = `event-${safeBundleId}-`;
       const legacyTaskPrefix = `task-${safeBundleId}-`;
+      const existingBundleEvents = nextState.calendarEvents.filter(event => {
+        const id = String(event.id || '');
+        return id.startsWith(bundlePrefix) || id.startsWith(legacyEventPrefix);
+      });
+      const completedAssignmentMap = new Map(
+        existingBundleEvents
+          .filter(event => Boolean(event.sourceAssignmentId) || event.sourceKind === 'assignment' || event.type === 'assignment')
+          .map(event => [`${event.sourceAssignmentId || ''}__${event.date || ''}__${event.windowType || ''}`, Boolean(event.completed)])
+      );
+
       nextState.calendarEvents = nextState.calendarEvents.filter(event => {
         const id = String(event.id || '');
         return !id.startsWith(bundlePrefix) && !id.startsWith(legacyEventPrefix);
@@ -2103,7 +2123,13 @@
         nextState.calendarEvents.push(bundleSessionToCalendarEvent(bundle, session));
       });
       bundle.assignments.forEach(assignment => {
-        bundleAssignmentToCalendarEvents(bundle, assignment).forEach(event => nextState.calendarEvents.push(event));
+        bundleAssignmentToCalendarEvents(bundle, assignment).forEach(event => {
+          const completedKey = `${event.sourceAssignmentId || ''}__${event.date || ''}__${event.windowType || ''}`;
+          if (completedAssignmentMap.has(completedKey)) {
+            event.completed = completedAssignmentMap.get(completedKey) === true;
+          }
+          nextState.calendarEvents.push(event);
+        });
       });
 
       nextState.calendarEvents = nextState.calendarEvents.map(normalizeCalendarEvent)
@@ -3156,6 +3182,7 @@
 
       const session = findBundleSessionForEvent(event);
       const assignment = findBundleAssignmentForEvent(event);
+      const isAssignmentEvent = event.type === 'assignment' || event.sourceKind === 'assignment';
       const groupMeta = EVENT_TYPE_META[event.type] || { label: '일정', color: '#2f6df6' };
       const summaryText = session?.summary || assignment?.content_summary || event.note || '';
       const contentHtml = session
@@ -3174,12 +3201,14 @@
             <div class="detail-screen-hero">
               <div class="badge-row">
                 <span class="detail-chip" style="background:${groupMeta.color}; color:white;">${groupMeta.label}</span>
+                ${event.completed ? `<span class="calendar-mini-chip" style="background:#dcfce7; color:#166534; border-color:#86efac;">완료</span>` : ''}
                 ${event.professor ? `<span class="calendar-mini-chip">${escapeHtml(event.professor)}</span>` : ''}
                 ${event.difficulty ? `<span class="calendar-mini-chip">난이도 ${event.difficulty}/10</span>` : ''}
                 ${event.track ? `<span class="calendar-mini-chip">${escapeHtml(event.track)}트랙</span>` : ''}
                 <span class="calendar-mini-chip">${escapeHtml(event.time || '종일')}</span>
               </div>
-              <div class="detail-screen-title">${escapeHtml(event.title)}</div>
+              <div class="detail-screen-title" style="${event.completed ? 'text-decoration:line-through; opacity:0.72;' : ''}">${escapeHtml(event.title)}</div>
+              ${isAssignmentEvent ? `<div style="margin-top:12px;"><button class="btn btn-small ${event.completed ? 'btn-ghost' : 'btn-secondary'}" onclick="toggleCalendarEvent('${event.id}')">${event.completed ? '완료 해제' : '완료 체크'}</button></div>` : ''}
               ${summaryText ? `<div class="detail-screen-summary">${escapeHtml(summaryText)}</div>` : ''}
             </div>
             ${contentHtml || `<div class="detail-screen-section"><h4>요약</h4><ul><li>추가 설명이 아직 없다.</li></ul></div>`}
@@ -3210,19 +3239,22 @@
             ${summaryEvents.length ? `<div class="event-list">${summaryEvents.map(event => {
               const meta = EVENT_TYPE_META[event.type] || { label: '일정', color: '#2f6df6' };
               const dateLabel = `${parseIsoDate(event.date).getDate()}일`;
+              const isAssignmentEvent = event.type === 'assignment' || event.sourceKind === 'assignment';
               return `
-                <div class="event-item">
+                <div class="event-item ${event.completed ? 'completed' : ''}">
                   <div class="event-time">${dateLabel}<br/>${escapeHtml(event.time || '종일')}</div>
                   <div>
                     <div class="badge-row">
                       <span class="detail-chip" style="background:${meta.color}; color:white;">${meta.label}</span>
+                      ${event.completed ? `<span class="calendar-mini-chip" style="background:#dcfce7; color:#166534; border-color:#86efac;">완료</span>` : ''}
                       ${event.professor ? `<span class="calendar-mini-chip">${escapeHtml(event.professor)}</span>` : ''}
                       ${event.difficulty ? `<span class="calendar-mini-chip">난이도 ${event.difficulty}/10</span>` : ''}
                     </div>
-                    <div class="item-title" style="margin-top:6px;">${escapeHtml(event.title)}</div>
+                    <div class="item-title" style="margin-top:6px; ${event.completed ? 'text-decoration:line-through;' : ''}">${escapeHtml(event.title)}</div>
                     <div class="item-meta">${escapeHtml(weekSummaryMeta(event))}</div>
                   </div>
                   <div class="event-actions">
+                    ${isAssignmentEvent ? `<button class="btn btn-small ${event.completed ? 'btn-ghost' : 'btn-secondary'}" onclick="toggleCalendarEvent('${event.id}')">${event.completed ? '완료 해제' : '완료 체크'}</button>` : ''}
                     <button class="event-open-btn" onclick="openCalendarEventDetail('${event.id}')">자세히 보기</button>
                   </div>
                 </div>
