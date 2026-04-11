@@ -70,6 +70,33 @@ python3 -m http.server 8765
 ## GitHub Pages로 배포해서 태블릿 앱처럼 쓰기
 이 폴더는 **정적 사이트 + PWA** 형태로 배포 가능하게 준비되어 있습니다.
 
+## 자동 동기화 (맥 ↔ 태블릿)
+이제 플래너는 **Supabase 기반 자동 동기화**도 지원합니다.
+
+### 구성 파일
+- `sync.js`
+- `supabase/schema.sql`
+- `supabase/SETUP.md`
+
+### 핵심 방식
+- 플래너 데이터는 기본적으로 localStorage에 저장
+- 같은 이메일로 맥과 태블릿에서 로그인하면
+- Supabase에 planner state를 저장하고 서로 받아와 자동 동기화
+
+### 빠른 시작
+1. GitHub Pages로 배포
+2. `supabase/SETUP.md` 보고 Supabase 프로젝트 생성
+3. 앱 상단 **자동 동기화** 버튼에서
+   - Supabase URL
+   - anon key
+   - 동기화용 이메일
+   입력
+4. 맥/태블릿 둘 다 같은 이메일로 로그인
+
+### 동기화 방식
+- 현재는 **last-write-wins**
+- 즉 마지막으로 저장한 기기의 상태가 최신본이 됨
+
 ### 포함된 배포 파일
 - `manifest.webmanifest`
 - `service-worker.js`

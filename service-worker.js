@@ -1,8 +1,9 @@
-const CACHE_NAME = 'kmle-planner-v1';
+const CACHE_NAME = 'kmle-planner-v2';
 const ASSETS = [
   './',
   './index.html',
   './manifest.webmanifest',
+  './sync.js',
   './assets/icons/icon-180.png',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
@@ -38,7 +39,12 @@ self.addEventListener('fetch', (event) => {
           caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy)).catch(() => {});
           return response;
         })
-        .catch(() => caches.match('./index.html'));
+        .catch(() => {
+          if (event.request.mode === 'navigate') {
+            return caches.match('./index.html');
+          }
+          return Response.error();
+        });
     })
   );
 });
