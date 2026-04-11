@@ -1,0 +1,2863 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>국시 준비 플래너</title>
+  <meta name="theme-color" content="#2f6df6" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="국시 플래너" />
+  <meta name="description" content="국시 준비 일정, 과목 진행도, 복습 루프를 관리하는 학습 플래너" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+  <link rel="apple-touch-icon" href="./assets/icons/icon-180.png" />
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --surface: rgba(255,255,255,0.92);
+      --surface-strong: #ffffff;
+      --text: #18212f;
+      --muted: #64748b;
+      --line: #dbe4f0;
+      --primary: #2f6df6;
+      --primary-soft: #e7efff;
+      --teal: #0f8b8d;
+      --green: #16a34a;
+      --amber: #d97706;
+      --red: #dc2626;
+      --shadow: 0 18px 45px rgba(27, 40, 69, 0.10);
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(47,109,246,0.10), transparent 28%),
+        radial-gradient(circle at top right, rgba(15,139,141,0.10), transparent 22%),
+        var(--bg);
+      color: var(--text);
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    .app-shell {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 28px 20px 48px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .hero-card, .panel, .subject-list, .subject-detail, .task-board, .composer, .modal-card {
+      background: var(--surface);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.65);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius-xl);
+    }
+
+    .hero-card {
+      padding: 28px;
+    }
+
+    .hero-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .eyebrow {
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    h1, h2, h3, h4, p { margin: 0; }
+    h1 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-sub {
+      color: var(--muted);
+      line-height: 1.65;
+      margin-top: 12px;
+      max-width: 760px;
+    }
+
+    .top-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .btn {
+      border: 0;
+      padding: 11px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: 0.18s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 600;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #4f8dff);
+      color: white;
+      box-shadow: 0 12px 24px rgba(47,109,246,0.22);
+    }
+    .btn-secondary {
+      background: var(--primary-soft);
+      color: var(--primary);
+    }
+    .btn-ghost {
+      background: rgba(255,255,255,0.76);
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+    .btn-danger {
+      background: #fff0f0;
+      color: var(--red);
+    }
+    .btn-small {
+      padding: 8px 12px;
+      border-radius: 12px;
+      font-size: 13px;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .check-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .check-row input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--primary);
+    }
+
+    .parts-table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.82);
+      margin-top: 14px;
+    }
+
+    .parts-table {
+      width: 100%;
+      min-width: 880px;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .parts-table th,
+    .parts-table td {
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    .parts-table th {
+      background: rgba(231,239,255,0.65);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      position: sticky;
+      top: 0;
+    }
+
+    .parts-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .parts-table input[type="number"],
+    .parts-table select,
+    .parts-table textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 8px 10px;
+      background: white;
+      color: var(--text);
+    }
+
+    .parts-table textarea {
+      min-height: 44px;
+      resize: vertical;
+    }
+
+    .parts-check {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .parts-check input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--primary);
+    }
+
+    .parts-summary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .calendar-layout {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 18px;
+    }
+
+    .calendar-panel,
+    .calendar-detail {
+      background: var(--surface);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.65);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius-xl);
+      padding: 22px;
+    }
+
+    .calendar-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .calendar-month-label {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0,1fr));
+      gap: 10px;
+    }
+
+    .calendar-weekday {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 4px 2px 8px;
+      text-align: center;
+    }
+
+    .calendar-cell {
+      min-height: 122px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.82);
+      padding: 10px;
+      display: grid;
+      align-content: start;
+      gap: 8px;
+      cursor: pointer;
+      transition: 0.18s ease;
+    }
+
+    .calendar-cell:hover {
+      transform: translateY(-1px);
+      border-color: color-mix(in srgb, var(--primary) 28%, var(--line));
+    }
+
+    .calendar-cell.empty {
+      background: rgba(219,228,240,0.28);
+      cursor: default;
+    }
+
+    .calendar-cell.selected {
+      border-color: var(--text);
+      box-shadow: 0 0 0 2px rgba(24,33,47,0.08);
+    }
+
+    .calendar-cell.today {
+      background: color-mix(in srgb, var(--primary-soft) 55%, white);
+    }
+
+    .calendar-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .calendar-day {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .calendar-block-chip,
+    .calendar-mini-chip,
+    .detail-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .calendar-block-chip {
+      color: white;
+      justify-self: start;
+    }
+
+    .calendar-mini-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .calendar-mini-chip {
+      background: rgba(255,255,255,0.95);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      padding: 4px 8px;
+    }
+
+    .calendar-hint {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .calendar-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .detail-stack {
+      display: grid;
+      gap: 16px;
+    }
+
+    .detail-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.82);
+      padding: 16px;
+    }
+
+    .detail-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .detail-sub {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .event-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .event-item {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 12px;
+      align-items: start;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.9);
+      padding: 12px 14px;
+    }
+
+    .event-time {
+      min-width: 58px;
+      padding: 6px 8px;
+      border-radius: 10px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .event-actions input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--green);
+    }
+
+    .hero-side {
+      padding: 24px;
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 14px;
+    }
+
+    .stat-card {
+      background: rgba(255,255,255,0.82);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    .stat-value {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .stat-note {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .nav-tab {
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.84);
+      color: var(--muted);
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.18s ease;
+    }
+
+    .nav-tab.active {
+      background: var(--text);
+      color: white;
+      border-color: var(--text);
+    }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 18px;
+    }
+
+    .panel {
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .panel-title {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .panel-subtitle {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .timeline, .task-list, .stage-breakdown, .weak-list, .history-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .timeline-item, .task-item, .weak-item, .history-item {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 14px;
+      align-items: start;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.82);
+    }
+
+    .timeline-time, .task-time {
+      min-width: 58px;
+      padding: 7px 10px;
+      border-radius: 12px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .item-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .item-meta {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .badge-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #eef4ff;
+      color: var(--primary);
+    }
+
+    .badge.overdue {
+      background: #fff0f0;
+      color: var(--red);
+    }
+
+    .badge.review {
+      background: #eefcf5;
+      color: var(--green);
+    }
+
+    .subject-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .subject-card {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.84);
+      display: grid;
+      gap: 14px;
+    }
+
+    .subject-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 12px;
+    }
+
+    .subject-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .subject-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      flex: none;
+    }
+
+    .subject-name {
+      font-weight: 700;
+      font-size: 17px;
+    }
+
+    .subject-progress-value {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      text-align: right;
+    }
+
+    .progress-track {
+      height: 10px;
+      border-radius: 999px;
+      background: #edf2f8;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--primary), #4ba9ff);
+    }
+
+    .mini-stage-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .mini-stage {
+      display: grid;
+      gap: 6px;
+    }
+
+    .mini-stage-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .planner-layout {
+      display: grid;
+      grid-template-columns: 370px 1fr;
+      gap: 18px;
+    }
+
+    .composer, .task-board {
+      padding: 22px;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .field label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: rgba(255,255,255,0.94);
+      color: var(--text);
+      outline: none;
+      transition: 0.16s ease;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: rgba(47,109,246,0.5);
+      box-shadow: 0 0 0 4px rgba(47,109,246,0.10);
+    }
+
+    .split-2, .split-3 {
+      display: grid;
+      gap: 12px;
+    }
+
+    .split-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .split-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+
+    .filter-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .week-grid {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0,1fr));
+      gap: 12px;
+      align-items: start;
+    }
+
+    .day-column {
+      min-height: 320px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.86);
+      padding: 14px;
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .day-header {
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .day-name {
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .day-date {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .day-task {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 11px;
+      background: #fff;
+      display: grid;
+      gap: 8px;
+    }
+
+    .day-task.overdue {
+      border-color: rgba(220,38,38,0.28);
+      background: #fff9f9;
+    }
+
+    .day-task.completed {
+      opacity: 0.62;
+    }
+
+    .task-topline {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .task-title {
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .task-actions {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .subjects-layout {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 18px;
+    }
+
+    .subject-list, .subject-detail {
+      padding: 22px;
+    }
+
+    .subject-nav {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .subject-nav-item {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.9);
+      border-radius: 16px;
+      padding: 14px 16px;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .subject-nav-item.active {
+      border-color: rgba(47,109,246,0.36);
+      background: var(--primary-soft);
+    }
+
+    .subject-nav-meta {
+      display: grid;
+      gap: 4px;
+      min-width: 0;
+    }
+
+    .subject-nav-name {
+      font-weight: 700;
+    }
+
+    .subject-nav-note {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .detail-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .detail-progress {
+      min-width: 120px;
+      text-align: right;
+    }
+
+    .detail-big {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .detail-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .stage-row {
+      display: grid;
+      grid-template-columns: 1.2fr auto auto auto;
+      gap: 12px;
+      align-items: center;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.88);
+    }
+
+    .stage-name-wrap {
+      min-width: 0;
+    }
+
+    .stage-name {
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .stage-note {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .stage-row input[type="number"] {
+      width: 84px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+      text-align: center;
+    }
+
+    .stage-percent {
+      min-width: 62px;
+      text-align: right;
+      font-weight: 800;
+    }
+
+    .section-block {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.86);
+      display: grid;
+      gap: 12px;
+    }
+
+    .helper-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .empty {
+      border: 1px dashed var(--line);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      color: var(--muted);
+      text-align: center;
+      background: rgba(255,255,255,0.60);
+      line-height: 1.6;
+    }
+
+    .footer-note {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.45);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 50;
+    }
+
+    .modal.show { display: flex; }
+    .modal-card {
+      width: min(560px, 100%);
+      padding: 24px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 1120px) {
+      .hero,
+      .dashboard-grid,
+      .planner-layout,
+      .subjects-layout,
+      .calendar-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .week-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .app-shell { padding: 18px 14px 34px; }
+      .stats-grid,
+      .filter-row,
+      .split-2,
+      .split-3,
+      .week-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stage-row {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .stage-name-wrap {
+        grid-column: 1 / -1;
+      }
+
+      .timeline-item,
+      .task-item,
+      .weak-item,
+      .history-item,
+      .event-item {
+        grid-template-columns: 1fr;
+      }
+
+      .calendar-grid {
+        gap: 8px;
+      }
+
+      .calendar-cell {
+        min-height: 106px;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <section class="hero">
+      <div class="hero-card">
+        <div class="eyebrow">KMLE Planner</div>
+        <div class="hero-title">
+          <div>
+            <h1>국시 준비 일정 관리 플래너</h1>
+            <p class="hero-sub">
+              과목별 학습량과 5단계 진행도를 한 번에 보고, 주간 일정과 복습 루프까지 같이 관리하는 로컬 플래너다.
+              데이터는 이 브라우저에 저장된다.
+            </p>
+          </div>
+        </div>
+        <div class="top-actions">
+          <button class="btn btn-primary" id="startTodayBtn">오늘 학습 시작</button>
+          <button class="btn btn-secondary" id="loadCanaryBtn">4월 Canary 세팅</button>
+          <button class="btn btn-secondary" id="exportBtn">데이터 내보내기</button>
+          <label class="btn btn-ghost" for="importInput">데이터 가져오기</label>
+          <input id="importInput" type="file" accept="application/json" class="sr-only" />
+          <button class="btn btn-ghost" id="resetDemoBtn">초기 canary 다시 넣기</button>
+        </div>
+      </div>
+      <div class="hero-card hero-side">
+        <div class="panel-header" style="margin-bottom:0;">
+          <div>
+            <div class="panel-title">한눈 요약</div>
+            <div class="panel-subtitle">이번 주 기준으로 자동 계산</div>
+          </div>
+        </div>
+        <div class="stats-grid" id="heroStats"></div>
+      </div>
+    </section>
+
+    <nav class="nav-tabs">
+      <button class="nav-tab active" data-tab="dashboard">대시보드</button>
+      <button class="nav-tab" data-tab="planner">주간 플래너</button>
+      <button class="nav-tab" data-tab="calendar">실습 캘린더</button>
+      <button class="nav-tab" data-tab="subjects">과목 관리</button>
+    </nav>
+
+    <section class="tab-content active" id="tab-dashboard">
+      <div class="dashboard-grid">
+        <div>
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">오늘의 타임라인</div>
+                <div class="panel-subtitle">오늘 일정과 가장 가까운 학습 블록</div>
+              </div>
+            </div>
+            <div class="timeline" id="todayTimeline"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">과목별 진행도</div>
+                <div class="panel-subtitle">학습량과 5단계 진행률을 함께 확인</div>
+              </div>
+            </div>
+            <div class="subject-card-grid" id="dashboardSubjects"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">4월 Canary 빠른 시작</div>
+                <div class="panel-subtitle">오늘은 호흡기 몰입, 내일은 심장내과 조장 준비</div>
+              </div>
+            </div>
+            <div class="task-list">
+              <div class="task-item">
+                <div>
+                  <div class="item-title">오늘(토)</div>
+                  <div class="item-meta">호흡기 강의 학습 → 핵심 개념 메모 → 밤에 배국자 1차 전송</div>
+                  <div class="badge-row">
+                    <span class="badge">CANARY_TRACKER_APRIL.md 같이 열기</span>
+                  </div>
+                </div>
+              </div>
+              <div class="task-item">
+                <div>
+                  <div class="item-title">내일(일)</div>
+                  <div class="item-meta">심장내과 인계 분석 → 조장 업무 분해 → 첫 3일 준비안 작성</div>
+                  <div class="badge-row">
+                    <span class="badge review">CARDIOLOGY_CHIEF_PREP.md 채우기</span>
+                  </div>
+                </div>
+              </div>
+              <div class="task-item">
+                <div>
+                  <div class="item-title">시드 데이터</div>
+                  <div class="item-meta">`data/canary_import_seed.json`을 가져오면 호흡기/순환기 canary 시작값과 주말 일정이 바로 들어간다.</div>
+                  <div class="badge-row">
+                    <span class="badge overdue">가져오기 전 export로 백업 권장</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">주간 단계 요약</div>
+                <div class="panel-subtitle">어느 단계가 밀리는지 빠르게 확인</div>
+              </div>
+            </div>
+            <div class="stage-breakdown" id="stageBreakdown"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">다가오는 복습</div>
+                <div class="panel-subtitle">복습 단계와 마감 가까운 항목 우선</div>
+              </div>
+            </div>
+            <div class="task-list" id="reviewTasks"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">밀린 일정</div>
+                <div class="panel-subtitle">미완료 상태로 기한이 지난 항목</div>
+              </div>
+            </div>
+            <div class="task-list" id="overdueTasks"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tab-content" id="tab-planner">
+      <div class="planner-layout">
+        <aside class="composer">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">일정 추가</div>
+              <div class="panel-subtitle">강의 · 개념틀 · 문제 · 오답정리 · 복습을 블록으로 넣기</div>
+            </div>
+          </div>
+          <form class="form-grid" id="taskForm">
+            <div class="field">
+              <label for="taskTitle">할 일 이름</label>
+              <input id="taskTitle" name="title" required placeholder="예: 순환기 강의 3개 듣기" />
+            </div>
+            <div class="split-2">
+              <div class="field">
+                <label for="taskDate">날짜</label>
+                <input id="taskDate" name="date" type="date" required />
+              </div>
+              <div class="field">
+                <label for="taskStart">시작 시간</label>
+                <input id="taskStart" name="startTime" type="time" required />
+              </div>
+            </div>
+            <div class="split-3">
+              <div class="field">
+                <label for="taskDuration">분량(분)</label>
+                <input id="taskDuration" name="duration" type="number" min="10" step="10" value="60" required />
+              </div>
+              <div class="field">
+                <label for="taskSubject">과목</label>
+                <select id="taskSubject" name="subjectId" required></select>
+              </div>
+              <div class="field">
+                <label for="taskStage">단계</label>
+                <select id="taskStage" name="stageId" required></select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="taskMemo">메모</label>
+              <textarea id="taskMemo" name="memo" rows="4" placeholder="예: 심잡음 파트까지, 약한 개념은 따로 표시"></textarea>
+            </div>
+            <div class="helper-row">
+              <span>완료 체크는 오른쪽 주간 보드에서 할 수 있다.</span>
+            </div>
+            <button class="btn btn-primary" type="submit">일정 저장</button>
+          </form>
+        </aside>
+
+        <section class="task-board">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">주간 보드</div>
+              <div class="panel-subtitle">이번 주 중심으로 일정, 복습, 밀린 항목 확인</div>
+            </div>
+          </div>
+          <div class="filter-row">
+            <div class="field">
+              <label for="filterScope">범위</label>
+              <select id="filterScope">
+                <option value="week">이번 주</option>
+                <option value="today">오늘</option>
+                <option value="all">전체</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="filterSubject">과목 필터</label>
+              <select id="filterSubject"></select>
+            </div>
+            <div class="field">
+              <label for="filterStage">단계 필터</label>
+              <select id="filterStage"></select>
+            </div>
+            <div class="field">
+              <label for="filterStatus">상태</label>
+              <select id="filterStatus">
+                <option value="all">전체</option>
+                <option value="pending">미완료</option>
+                <option value="done">완료</option>
+                <option value="overdue">밀림</option>
+              </select>
+            </div>
+          </div>
+          <div class="week-grid" id="weekGrid"></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="tab-content" id="tab-calendar">
+      <div class="calendar-layout">
+        <section class="calendar-panel">
+          <div class="calendar-head">
+            <div>
+              <div class="panel-title">실습 캘린더</div>
+              <div class="panel-subtitle">월간 블록은 훑고, 하루 상세는 아래 패널에서 본다</div>
+            </div>
+            <div class="top-actions" style="margin-top:0;">
+              <button class="btn btn-small btn-ghost" id="calendarPrevBtn">이전 달</button>
+              <div class="calendar-month-label" id="calendarMonthLabel"></div>
+              <button class="btn btn-small btn-ghost" id="calendarNextBtn">다음 달</button>
+            </div>
+          </div>
+          <div class="calendar-grid" id="calendarGrid"></div>
+          <div class="calendar-legend" id="calendarLegend"></div>
+        </section>
+
+        <aside class="calendar-detail">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">선택한 날짜 상세</div>
+              <div class="panel-subtitle">실습 블록 · 과제/발표/조장 업무 · 공부 타임라인</div>
+            </div>
+          </div>
+          <div class="detail-stack" id="calendarDetail"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="tab-content" id="tab-subjects">
+      <div class="subjects-layout">
+        <aside class="subject-list">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">과목 목록</div>
+              <div class="panel-subtitle">새 과목을 추가하고 세부 관리</div>
+            </div>
+          </div>
+          <form class="form-grid" id="subjectForm">
+            <div class="split-2">
+              <div class="field">
+                <label for="subjectName">과목명</label>
+                <input id="subjectName" name="name" placeholder="예: 감염" required />
+              </div>
+              <div class="field">
+                <label for="subjectColor">색상</label>
+                <input id="subjectColor" name="color" type="color" value="#2f6df6" />
+              </div>
+            </div>
+            <button class="btn btn-secondary" type="submit">과목 추가</button>
+          </form>
+          <div class="subject-nav" id="subjectNav"></div>
+        </aside>
+
+        <section class="subject-detail" id="subjectDetail"></section>
+      </div>
+    </section>
+
+    <div class="footer-note">
+      국시 준비 흐름에 맞춰 <strong>강의 듣기 → 개념 틀 짜기 → 문제 풀기 → 오답노트/개념틀 수정 → 복습하기</strong>
+      순서가 항상 드러나도록 설계했다. 데이터는 현재 브라우저의 localStorage에 저장된다.
+      <br />아침 시작 추천: <strong>4월 Canary 세팅 → 오늘 학습 시작</strong>
+      <br />4월 canary 보조 파일: <strong>CANARY_TRACKER_APRIL.md</strong> · <strong>CARDIOLOGY_CHIEF_PREP.md</strong> · <strong>data/canary_import_seed.json</strong>
+    </div>
+  </div>
+
+  <div class="modal" id="confirmResetModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">초기 canary 다시 넣기</div>
+          <div class="panel-subtitle">현재 데이터가 4월 canary 초기 상태로 덮인다.</div>
+        </div>
+      </div>
+      <div class="form-grid">
+        <p style="color:var(--muted); line-height:1.65;">현재 저장된 과목, 진행도, 일정이 4월 canary 초기 상태로 교체된다. 지금 상태를 보존하려면 먼저 내보내기를 해두는 게 좋다.</p>
+        <div class="top-actions" style="margin-top:0;">
+          <button class="btn btn-danger" id="confirmResetBtn">초기 canary로 교체</button>
+          <button class="btn btn-ghost" id="cancelResetBtn">취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'kmlePlannerState.v2';
+    const STAGES = [
+      { id: 'lecture', label: '강의 듣기', short: '강의', note: '강의/팟캐스트/기본 인강 소화' },
+      { id: 'framework', label: '개념 틀 짜기', short: '개념틀', note: '총정리 구조, 도식, 로직 프레임 정리' },
+      { id: 'questions', label: '문제 풀기', short: '문풀', note: '문제집·기출 풀이 진행량 관리' },
+      { id: 'revise', label: '오답노트/개념틀 수정', short: '오답정리', note: '오답노트 정리 및 개념 구조 재보강' },
+      { id: 'review', label: '복습하기', short: '복습', note: '재회독, spaced review, 취약 파트 재점검' }
+    ];
+
+    const DEFAULT_SUBJECTS = [
+      ['순환기', '#2563eb'],
+      ['호흡기', '#0f766e'],
+      ['내분비', '#7c3aed'],
+      ['소화기', '#ea580c'],
+      ['신장', '#1d4ed8'],
+      ['감염', '#b91c1c'],
+      ['류마티스', '#be185d'],
+      ['신경', '#4338ca'],
+      ['산과', '#0f766e'],
+      ['소아과', '#ca8a04']
+    ];
+
+    const PART_STAGE_OPTIONS = [
+      { value: 0, label: '0 미시작' },
+      { value: 1, label: '1 강의' },
+      { value: 2, label: '2 개념틀' },
+      { value: 3, label: '3 문풀' },
+      { value: 4, label: '4 오답정리' },
+      { value: 5, label: '5 복습' }
+    ];
+
+    const CANARY_PARTS = {
+      호흡기: [
+        { partNo: '01', name: '호흡기 총론', questionTotal: 59 },
+        { partNo: '02', name: '폐기능 장애', questionTotal: 12 },
+        { partNo: '03', name: '폐질환 검사법', questionTotal: 20 },
+        { partNo: '04', name: '폐렴', questionTotal: 39 },
+        { partNo: '05', name: '폐농양', questionTotal: 16 },
+        { partNo: '06', name: '폐결핵', questionTotal: 49 },
+        { partNo: '07', name: '천식', questionTotal: 56 },
+        { partNo: '08', name: '만성폐쇄성폐질환', questionTotal: 56 },
+        { partNo: '09', name: '기관지확장증', questionTotal: 10 },
+        { partNo: '10', name: '간질성 폐질환', questionTotal: 51 },
+        { partNo: '11', name: '호산구성 폐질환', questionTotal: 7 },
+        { partNo: '12', name: '직업성 폐질환', questionTotal: 14 },
+        { partNo: '13', name: '폐암', questionTotal: 40 },
+        { partNo: '14', name: '폐색전증', questionTotal: 44 },
+        { partNo: '15', name: '흉막과 종격동 질환', questionTotal: 87 },
+        { partNo: '16', name: '환기 장애', questionTotal: 11 },
+        { partNo: '17', name: '급성호흡곤란증후군', questionTotal: 21 },
+        { partNo: '18', name: '기타 폐질환', questionTotal: 5 }
+      ],
+      순환기: [
+        { partNo: '01', name: '순환기 총론', questionTotal: 25 },
+        { partNo: '02', name: '고혈압', questionTotal: 50 },
+        { partNo: '03', name: '부정맥', questionTotal: 104 },
+        { partNo: '04', name: '허혈성 심장질환', questionTotal: 95 },
+        { partNo: '05', name: '심부전', questionTotal: 49 },
+        { partNo: '06', name: '심인성 쇼크, 급성 폐부종', questionTotal: 9 },
+        { partNo: '07', name: '판막질환', questionTotal: 51 },
+        { partNo: '08', name: '심근 질환', questionTotal: 24 },
+        { partNo: '09', name: '심장막 질환', questionTotal: 44 },
+        { partNo: '10', name: '대동맥 질환', questionTotal: 18 },
+        { partNo: '11', name: '감염심내막염', questionTotal: 11 },
+        { partNo: '12', name: '기타 심장 질환', questionTotal: 0 }
+      ]
+    };
+
+    const EVENT_TYPE_META = {
+      assignment: { label: '과제', color: '#d97706' },
+      presentation: { label: '발표', color: '#7c3aed' },
+      chief: { label: '조장', color: '#0f172a' },
+      exam: { label: '시험', color: '#dc2626' },
+      admin: { label: '행정', color: '#0f8b8d' }
+    };
+
+    const CLERKSHIP_BLOCKS = [
+      { start: '2026-04-01', end: '2026-04-10', label: '내분비대사', color: '#7c3aed', intensity: '중간', note: '블록 막바지라 마무리·복습 위주' },
+      { start: '2026-04-13', end: '2026-04-24', label: '호흡기', color: '#0f766e', intensity: '높음', note: '실습 직전/실습 중 1순위 과목' },
+      { start: '2026-04-27', end: '2026-05-08', label: '심장', color: '#2563eb', intensity: '높음', note: '실습 + 조장 준비가 겹치는 핵심 블록' }
+    ];
+
+    const byId = (id) => document.getElementById(id);
+    const today = new Date();
+
+    let state = loadState();
+    let selectedSubjectId = state.subjects[0]?.id || null;
+    let selectedCalendarDate = formatDateInput(new Date());
+    let calendarMonthCursor = new Date(today.getFullYear(), today.getMonth(), 1);
+
+    function uid(prefix='id') {
+      return `${prefix}-${Math.random().toString(36).slice(2, 10)}`;
+    }
+
+    function stageTemplate(done = 0, total = 0) {
+      return { done, total };
+    }
+
+    function createPart(partNo, name, questionTotal = 0) {
+      return {
+        id: uid('part'),
+        partNo,
+        name,
+        currentStage: 0,
+        questionDone: 0,
+        questionTotal,
+        conceptSent: false,
+        trapSent: false,
+        blockedReason: '',
+        note: ''
+      };
+    }
+
+    function createCalendarEvent(date, type, title, { time = '종일', note = '', completed = false } = {}) {
+      return {
+        id: uid('event'),
+        date,
+        type,
+        title,
+        time,
+        note,
+        completed
+      };
+    }
+
+    function buildParts(subjectName) {
+      return (CANARY_PARTS[subjectName] || []).map(part => createPart(part.partNo, part.name, part.questionTotal));
+    }
+
+    function buildCalendarSeedEvents() {
+      return [
+        createCalendarEvent('2026-04-12', 'chief', '심장내과 조장 준비', { time: '09:00', note: '인계 분석 + 첫 3일 준비안 작성' }),
+        createCalendarEvent('2026-04-12', 'admin', '심장내과 인계 체크리스트 정리', { time: '11:00', note: 'CARDIOLOGY_CHIEF_PREP.md 채우기' }),
+        createCalendarEvent('2026-04-13', 'assignment', '호흡기 1일차 배국자 전송 확인', { time: '21:00', note: '개념틀 전송 누락 여부 체크' }),
+        createCalendarEvent('2026-04-27', 'chief', '심장내과 첫날 공지/연락 루트 점검', { time: '07:30', note: '조원 공지, 출결, 질문 목록 최종 확인' }),
+        createCalendarEvent('2026-04-27', 'assignment', '심장내과 과제/발표 항목 확인', { time: '18:30', note: '실제 인계 내용 기준으로 제목과 마감 보강' })
+      ];
+    }
+
+    function recomputeSubjectFromParts(subject) {
+      if (!subject?.parts?.length) return subject;
+      const partCount = subject.parts.length;
+      subject.stages.lecture = stageTemplate(subject.parts.filter(part => Number(part.currentStage || 0) >= 1).length, partCount);
+      subject.stages.framework = stageTemplate(subject.parts.filter(part => Number(part.currentStage || 0) >= 2).length, partCount);
+      subject.stages.questions = stageTemplate(
+        subject.parts.reduce((sum, part) => sum + Number(part.questionDone || 0), 0),
+        subject.parts.reduce((sum, part) => sum + Number(part.questionTotal || 0), 0)
+      );
+      subject.stages.revise = stageTemplate(subject.parts.filter(part => Number(part.currentStage || 0) >= 4).length, partCount);
+      subject.stages.review = stageTemplate(subject.parts.filter(part => Number(part.currentStage || 0) >= 5).length, partCount);
+      subject.conceptSent = subject.parts.some(part => part.conceptSent);
+      subject.trapSent = subject.parts.some(part => part.trapSent);
+      return subject;
+    }
+
+    function createSubject(name, color) {
+      return {
+        id: uid('subject'),
+        name,
+        color,
+        stages: {
+          lecture: stageTemplate(),
+          framework: stageTemplate(),
+          questions: stageTemplate(),
+          revise: stageTemplate(),
+          review: stageTemplate()
+        },
+        weakPoints: '',
+        nextAction: '',
+        conceptSent: false,
+        trapSent: false,
+        blockedReason: '',
+        parts: [],
+        note: '',
+        recentHistory: []
+      };
+    }
+
+    function normalizeSubject(subject) {
+      const base = createSubject(subject?.name || '과목', subject?.color || '#2f6df6');
+      return {
+        ...base,
+        ...subject,
+        id: subject?.id || base.id,
+        name: subject?.name || base.name,
+        color: subject?.color || base.color,
+        stages: {
+          lecture: { ...stageTemplate(), ...(subject?.stages?.lecture || {}) },
+          framework: { ...stageTemplate(), ...(subject?.stages?.framework || {}) },
+          questions: { ...stageTemplate(), ...(subject?.stages?.questions || {}) },
+          revise: { ...stageTemplate(), ...(subject?.stages?.revise || {}) },
+          review: { ...stageTemplate(), ...(subject?.stages?.review || {}) }
+        },
+        weakPoints: subject?.weakPoints || '',
+        nextAction: subject?.nextAction || '',
+        conceptSent: Boolean(subject?.conceptSent),
+        trapSent: Boolean(subject?.trapSent),
+        blockedReason: subject?.blockedReason || '',
+        parts: Array.isArray(subject?.parts)
+          ? subject.parts.map(part => ({
+              ...createPart(part?.partNo || '00', part?.name || '파트', Number(part?.questionTotal || 0)),
+              ...part,
+              currentStage: Number(part?.currentStage || 0),
+              questionDone: Number(part?.questionDone || 0),
+              questionTotal: Number(part?.questionTotal || 0),
+              conceptSent: Boolean(part?.conceptSent),
+              trapSent: Boolean(part?.trapSent),
+              blockedReason: part?.blockedReason || '',
+              note: part?.note || ''
+            }))
+          : [],
+        note: subject?.note || '',
+        recentHistory: Array.isArray(subject?.recentHistory) ? subject.recentHistory : []
+      };
+    }
+
+    function normalizeTask(task) {
+      return {
+        id: task?.id || uid('task'),
+        title: String(task?.title || '').trim(),
+        date: task?.date || formatDateInput(new Date()),
+        startTime: task?.startTime || '09:00',
+        duration: Number(task?.duration || 60),
+        subjectId: task?.subjectId || '',
+        stageId: task?.stageId || 'lecture',
+        memo: String(task?.memo || '').trim(),
+        completed: Boolean(task?.completed),
+        createdAt: task?.createdAt || new Date().toISOString()
+      };
+    }
+
+    function normalizeCalendarEvent(event) {
+      return {
+        id: event?.id || uid('event'),
+        date: event?.date || formatDateInput(new Date()),
+        type: event?.type || 'assignment',
+        title: String(event?.title || '').trim(),
+        time: event?.time || '종일',
+        note: String(event?.note || '').trim(),
+        completed: Boolean(event?.completed)
+      };
+    }
+
+    function normalizeState(data) {
+      const normalized = {
+        subjects: Array.isArray(data?.subjects) ? data.subjects.map(normalizeSubject) : [],
+        tasks: Array.isArray(data?.tasks) ? data.tasks.map(normalizeTask) : [],
+        calendarEvents: Array.isArray(data?.calendarEvents) ? data.calendarEvents.map(normalizeCalendarEvent) : buildCalendarSeedEvents()
+      };
+      normalized.subjects.forEach(recomputeSubjectFromParts);
+      return normalized;
+    }
+
+    function buildDemoState() {
+      const subjects = DEFAULT_SUBJECTS.map(([name, color]) => createSubject(name, color));
+      const seed = {
+        순환기: { lecture:[8,10], framework:[6,10], questions:[320,500], revise:[41,80], review:[3,8], weak:'심잡음 감별, 심부전 약물 순서', next:'심부전 문제풀이 40문제 + 오답 보강' },
+        호흡기: { lecture:[6,10], framework:[5,10], questions:[220,400], revise:[26,60], review:[2,8], weak:'PFT 해석, ILD 정리', next:'PFT 파트 개념틀 다시 잡기' },
+        내분비: { lecture:[10,10], framework:[7,10], questions:[410,550], revise:[52,90], review:[5,8], weak:'부신 위기 대응, 갑상선 결절 접근', next:'부신 문제집 2회독 시작' },
+        소화기: { lecture:[4,12], framework:[3,12], questions:[120,450], revise:[14,70], review:[1,10], weak:'간염·간경변 정리, IBD 감별', next:'간 파트 강의 2개 듣기' },
+        신장: { lecture:[5,8], framework:[4,8], questions:[180,300], revise:[18,45], review:[1,6], weak:'산염기, 전해질', next:'산염기 도식 다시 만들기' },
+        감염: { lecture:[3,8], framework:[2,8], questions:[90,250], revise:[9,40], review:[0,5], weak:'항생제 선택 기준', next:'패혈증/항생제표 정리' },
+        류마티스: { lecture:[7,7], framework:[6,7], questions:[300,360], revise:[38,48], review:[4,6], weak:'혈관염 분류', next:'혈관염 오답 정리 마무리' },
+        신경: { lecture:[4,9], framework:[3,9], questions:[150,330], revise:[12,55], review:[1,7], weak:'뇌졸중 알고리즘, 두통 red flag', next:'뇌졸중 강의와 문제 묶어서 진행' },
+        산과: { lecture:[2,8], framework:[2,8], questions:[60,250], revise:[6,35], review:[0,6], weak:'산전관리, 고위험 임신', next:'산전관리 프레임 먼저 세우기' },
+        소아과: { lecture:[3,9], framework:[2,9], questions:[80,280], revise:[8,38], review:[0,6], weak:'예방접종, 성장발달', next:'예방접종 파트 강의 듣기' }
+      };
+
+      subjects.forEach(subject => {
+        const s = seed[subject.name];
+        if (!s) return;
+        subject.stages.lecture = stageTemplate(...s.lecture);
+        subject.stages.framework = stageTemplate(...s.framework);
+        subject.stages.questions = stageTemplate(...s.questions);
+        subject.stages.revise = stageTemplate(...s.revise);
+        subject.stages.review = stageTemplate(...s.review);
+        subject.weakPoints = s.weak;
+        subject.nextAction = s.next;
+        subject.note = `${subject.name} 핵심 파트의 누적 학습량을 계속 기록하면서, 약한 개념은 오답정리 단계에서 바로 개념틀에 반영.`;
+        subject.recentHistory = [
+          `${formatDateLabel(offsetDate(today, -1))} · ${subject.name} 진행도 업데이트`,
+          `${formatDateLabel(offsetDate(today, -3))} · 문제풀이 후 약점 체크`
+        ];
+      });
+
+      const makeDemoTask = ({ dayOffset, start, duration, subject, stage, title, memo = '', completed = false }) => {
+        const subjectObj = subjects.find(s => s.name === subject);
+        const date = formatDateInput(offsetDate(today, dayOffset));
+        return {
+          id: uid('task'),
+          date,
+          startTime: start,
+          duration,
+          subjectId: subjectObj?.id || '',
+          stageId: stage,
+          title,
+          memo,
+          completed,
+          createdAt: new Date().toISOString()
+        };
+      };
+
+      const tasks = [
+        makeDemoTask({ dayOffset:0, start:'08:30', duration:70, subject:'순환기', stage:'lecture', title:'심부전 강의 2개 듣기', memo:'강의 후 바로 핵심 약물 순서 메모' }),
+        makeDemoTask({ dayOffset:0, start:'10:20', duration:90, subject:'순환기', stage:'questions', title:'심부전 문제 40문제', memo:'틀린 문제는 바로 체크' }),
+        makeDemoTask({ dayOffset:0, start:'13:30', duration:60, subject:'호흡기', stage:'framework', title:'PFT 해석 개념틀 재정리', memo:'정상/폐쇄/제한형 기준 한 장 정리' }),
+        makeDemoTask({ dayOffset:0, start:'16:00', duration:50, subject:'호흡기', stage:'review', title:'호흡기 복습 블록', memo:'천식과 COPD 차이 재확인' }),
+        makeDemoTask({ dayOffset:1, start:'09:00', duration:80, subject:'내분비', stage:'questions', title:'부신 문제 50문제', memo:'위기 대응 포인트 표시' }),
+        makeDemoTask({ dayOffset:1, start:'14:00', duration:60, subject:'내분비', stage:'revise', title:'오답노트 반영 + 개념틀 수정', memo:'틀린 포인트만 재정리' }),
+        makeDemoTask({ dayOffset:2, start:'08:40', duration:75, subject:'소화기', stage:'lecture', title:'간 파트 강의 2개', memo:'간염 감별 중심' }),
+        makeDemoTask({ dayOffset:2, start:'19:00', duration:45, subject:'순환기', stage:'review', title:'순환기 취약 개념 복습', memo:'심잡음과 판막 다시 보기' }),
+        makeDemoTask({ dayOffset:3, start:'10:00', duration:90, subject:'신장', stage:'framework', title:'산염기 전체 도식 만들기', memo:'anion gap / compensation 정리' }),
+        makeDemoTask({ dayOffset:4, start:'15:30', duration:70, subject:'류마티스', stage:'review', title:'혈관염 파트 복습', memo:'ANCA 감별 확인' }),
+        makeDemoTask({ dayOffset:-1, start:'18:30', duration:50, subject:'감염', stage:'lecture', title:'패혈증 기본 강의', memo:'밀린 일정 예시', completed:false }),
+        makeDemoTask({ dayOffset:-2, start:'21:00', duration:40, subject:'신경', stage:'review', title:'두통 red flag 복습', memo:'밀린 복습 예시', completed:false })
+      ];
+
+      tasks[1].completed = true;
+      tasks[5].completed = true;
+
+      return { subjects, tasks };
+    }
+
+    function buildCanaryState() {
+      const respiratory = createSubject('호흡기', '#0f766e');
+      respiratory.parts = buildParts('호흡기');
+      recomputeSubjectFromParts(respiratory);
+      respiratory.weakPoints = 'PFT 해석, 간질성 폐질환, 폐색전증, 흉막·종격동 질환 파트를 canary 기준으로 우선 추적';
+      respiratory.nextAction = '토요일은 호흡기 강의 몰입 + 파트별 1차 루프 시작';
+      respiratory.note = '문풀 total은 실제 알렌 파트별 문항 수를 합산한다. 강의/개념틀/오답정리/복습은 파트 수 기준으로 자동 계산.';
+      respiratory.recentHistory = [
+        `${formatDateLabel(new Date())} · 4월 canary 세팅 적용`,
+        `${formatDateLabel(new Date())} · 파트 기반 초기화 완료`
+      ];
+
+      const circulation = createSubject('순환기', '#2563eb');
+      circulation.parts = buildParts('순환기');
+      recomputeSubjectFromParts(circulation);
+      circulation.weakPoints = '부정맥, 허혈성 심장질환, 판막질환, 심부전 파트를 canary 기준으로 우선 추적';
+      circulation.nextAction = '일요일은 심장내과 인계 분석 + 조장 준비 + 대문항 파트 예열';
+      circulation.note = '심장내과는 조장 예외 과목. 순환기는 파트 기반으로 운영하고, 일요일엔 인계/운영 분석을 우선한다.';
+      circulation.recentHistory = [
+        `${formatDateLabel(new Date())} · 4월 canary 세팅 적용`,
+        `${formatDateLabel(offsetDate(new Date(), 1))} · 심장내과 조장 준비용 순환기 루프 시작 예정`
+      ];
+
+      const tasks = [
+        {
+          id: uid('task'),
+          date: formatDateInput(new Date()),
+          startTime: '08:30',
+          duration: 120,
+          subjectId: respiratory.id,
+          stageId: 'lecture',
+          title: '호흡기 1차 루프 시작 · 총론~검사법 강의 블록',
+          memo: '토요일 메인 블록. 호흡기 총론, 폐기능 장애, 폐질환 검사법을 끊김 없이 진입',
+          completed: false,
+          createdAt: new Date().toISOString()
+        },
+        {
+          id: uid('task'),
+          date: formatDateInput(new Date()),
+          startTime: '11:00',
+          duration: 90,
+          subjectId: respiratory.id,
+          stageId: 'framework',
+          title: '호흡기 개념틀 초안 · PFT/ILD 축 잡기',
+          memo: '2단계 완료 시 배국자 전송 체크. PFT 해석 축과 ILD 분류를 같이 정리',
+          completed: false,
+          createdAt: new Date().toISOString()
+        },
+        {
+          id: uid('task'),
+          date: formatDateInput(new Date()),
+          startTime: '14:00',
+          duration: 110,
+          subjectId: respiratory.id,
+          stageId: 'questions',
+          title: '호흡기 문풀 · 폐렴/천식/COPD canary 블록',
+          memo: '함정 포인트는 메모란에 바로 적고 4단계 재료로 수집',
+          completed: false,
+          createdAt: new Date().toISOString()
+        },
+        {
+          id: uid('task'),
+          date: formatDateInput(new Date()),
+          startTime: '19:30',
+          duration: 70,
+          subjectId: respiratory.id,
+          stageId: 'revise',
+          title: '호흡기 오답/개념틀 수정 · 배국자 전송 후보 정리',
+          memo: '4단계 완료 시 배국자 전송 완료로 기록',
+          completed: false,
+          createdAt: new Date().toISOString()
+        },
+        {
+          id: uid('task'),
+          date: formatDateInput(offsetDate(new Date(), 1)),
+          startTime: '09:00',
+          duration: 80,
+          subjectId: circulation.id,
+          stageId: 'framework',
+          title: '심장내과 인계 분석 · 실습 구조 파악',
+          memo: '일요일 운영 설계 목표. 인계장을 보며 실습 구조와 조장 업무를 구조화',
+          completed: false,
+          createdAt: new Date().toISOString()
+        },
+        {
+          id: uid('task'),
+          date: formatDateInput(offsetDate(new Date(), 1)),
+          startTime: '11:00',
+          duration: 100,
+          subjectId: circulation.id,
+          stageId: 'lecture',
+          title: '순환기 canary 루프 진입 · 부정맥/허혈성 심질환 우선',
+          memo: '대문항 파트 먼저 진입해서 주중 운영 부담 줄이기',
+          completed: false,
+          createdAt: new Date().toISOString()
+        },
+        {
+          id: uid('task'),
+          date: formatDateInput(offsetDate(new Date(), 1)),
+          startTime: '15:00',
+          duration: 60,
+          subjectId: circulation.id,
+          stageId: 'revise',
+          title: '심장내과 조장 준비 체크리스트 작성',
+          memo: '인계 내용 반영 후 조장 업무, 과제, 준비물, 질문 리스트 정리',
+          completed: false,
+          createdAt: new Date().toISOString()
+        },
+        {
+          id: uid('task'),
+          date: formatDateInput(offsetDate(new Date(), 1)),
+          startTime: '20:30',
+          duration: 50,
+          subjectId: circulation.id,
+          stageId: 'review',
+          title: '순환기 첫 복습 블록 · 심부전/판막질환 훑기',
+          memo: '일요일 마감 전 가볍게 회고하며 월요일 스타트 포인트 확보',
+          completed: false,
+          createdAt: new Date().toISOString()
+        }
+      ];
+
+      return {
+        subjects: [respiratory, circulation],
+        tasks,
+        calendarEvents: buildCalendarSeedEvents()
+      };
+    }
+
+    function isCanaryState(currentState = state) {
+      const names = new Set((currentState?.subjects || []).map(subject => subject.name));
+      return names.size === 2 && names.has('호흡기') && names.has('순환기');
+    }
+
+    function activateTodayFlow() {
+      document.querySelector('[data-tab="planner"]').click();
+      byId('filterScope').value = 'today';
+      const respiratory = state.subjects.find(subject => subject.name === '호흡기');
+      byId('filterSubject').value = respiratory?.id || 'all';
+      byId('filterStage').value = 'all';
+      byId('filterStatus').value = 'pending';
+      renderWeekGrid();
+    }
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) {
+          return buildCanaryState();
+        }
+        const parsed = normalizeState(JSON.parse(raw));
+        if (!parsed.subjects.length && !parsed.tasks.length) throw new Error('invalid state');
+        return parsed;
+      } catch (e) {
+        return buildCanaryState();
+      }
+    }
+
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function resetWithDemo() {
+      state = buildCanaryState();
+      selectedSubjectId = state.subjects[0]?.id || null;
+      selectedCalendarDate = formatDateInput(new Date());
+      calendarMonthCursor = new Date(today.getFullYear(), today.getMonth(), 1);
+      saveState();
+      closeResetModal();
+      renderAll();
+    }
+
+    function sumStage(subject) {
+      return STAGES.reduce((acc, stage) => {
+        const cur = subject.stages[stage.id] || { done: 0, total: 0 };
+        return {
+          done: acc.done + Number(cur.done || 0),
+          total: acc.total + Number(cur.total || 0)
+        };
+      }, { done: 0, total: 0 });
+    }
+
+    function partSummary(subject) {
+      if (!subject?.parts?.length) return null;
+      return {
+        totalParts: subject.parts.length,
+        startedParts: subject.parts.filter(part => Number(part.currentStage || 0) > 0).length,
+        closedParts: subject.parts.filter(part => Number(part.currentStage || 0) >= 5).length,
+        questionDone: subject.parts.reduce((sum, part) => sum + Number(part.questionDone || 0), 0),
+        questionTotal: subject.parts.reduce((sum, part) => sum + Number(part.questionTotal || 0), 0)
+      };
+    }
+
+    function percent(done, total) {
+      if (!total || total <= 0) return 0;
+      return Math.max(0, Math.min(100, Math.round((done / total) * 100)));
+    }
+
+    function subjectPercent(subject) {
+      if (!subject) return 0;
+      const totalPct = STAGES.reduce((sum, stage) => sum + stagePercentForSubject(subject, stage.id), 0);
+      return Math.round(totalPct / STAGES.length);
+    }
+
+    function stagePercentForSubject(subject, stageId) {
+      const stage = subject.stages[stageId] || { done: 0, total: 0 };
+      return percent(Number(stage.done || 0), Number(stage.total || 0));
+    }
+
+    function getSubject(subjectId) {
+      return state.subjects.find(s => s.id === subjectId);
+    }
+
+    function getStage(stageId) {
+      return STAGES.find(s => s.id === stageId);
+    }
+
+    function formatDateInput(date) {
+      const y = date.getFullYear();
+      const m = String(date.getMonth() + 1).padStart(2, '0');
+      const d = String(date.getDate()).padStart(2, '0');
+      return `${y}-${m}-${d}`;
+    }
+
+    function formatDateLabel(date) {
+      const weekdays = ['일', '월', '화', '수', '목', '금', '토'];
+      return `${date.getMonth() + 1}/${date.getDate()} (${weekdays[date.getDay()]})`;
+    }
+
+    function offsetDate(base, offset) {
+      const d = new Date(base);
+      d.setHours(0, 0, 0, 0);
+      d.setDate(d.getDate() + offset);
+      return d;
+    }
+
+    function parseTaskDate(task) {
+      return new Date(`${task.date}T${task.startTime || '00:00'}:00`);
+    }
+
+    function parseIsoDate(iso) {
+      return new Date(`${iso}T00:00:00`);
+    }
+
+    function startOfWeek(date) {
+      const d = new Date(date);
+      const day = d.getDay();
+      const diff = day === 0 ? -6 : 1 - day;
+      d.setDate(d.getDate() + diff);
+      d.setHours(0, 0, 0, 0);
+      return d;
+    }
+
+    function endOfWeek(date) {
+      const d = startOfWeek(date);
+      d.setDate(d.getDate() + 6);
+      d.setHours(23, 59, 59, 999);
+      return d;
+    }
+
+    function isSameDate(dateA, dateB) {
+      return formatDateInput(dateA) === formatDateInput(dateB);
+    }
+
+    function getClerkshipBlock(dateInput) {
+      const date = typeof dateInput === 'string' ? dateInput : formatDateInput(dateInput);
+      return CLERKSHIP_BLOCKS.find(block => date >= block.start && date <= block.end) || null;
+    }
+
+    function calendarEventsForDate(dateInput) {
+      const date = typeof dateInput === 'string' ? dateInput : formatDateInput(dateInput);
+      return (state.calendarEvents || []).filter(event => event.date === date);
+    }
+
+    function tasksForDate(dateInput) {
+      const date = typeof dateInput === 'string' ? dateInput : formatDateInput(dateInput);
+      return sortTasks(state.tasks.filter(task => task.date === date));
+    }
+
+    function availabilityHint(dateInput) {
+      const date = typeof dateInput === 'string' ? parseIsoDate(dateInput) : dateInput;
+      const block = getClerkshipBlock(date);
+      if (date.getDay() === 0 || date.getDay() === 6) return '여유 있음';
+      if (!block) return '조정 가능';
+      return block.intensity === '높음' ? '저녁 짧게' : '저녁 보통';
+    }
+
+    function isOverdue(task) {
+      if (task.completed) return false;
+      const due = parseTaskDate(task);
+      return due < new Date();
+    }
+
+    function taskRangeLabel(task) {
+      const start = task.startTime || '00:00';
+      const [h, m] = start.split(':').map(Number);
+      const startDate = new Date(`${task.date}T${start}:00`);
+      const endDate = new Date(startDate.getTime() + Number(task.duration || 0) * 60000);
+      const end = `${String(endDate.getHours()).padStart(2,'0')}:${String(endDate.getMinutes()).padStart(2,'0')}`;
+      return `${start}–${end}`;
+    }
+
+    function sortTasks(tasks) {
+      return [...tasks].sort((a, b) => parseTaskDate(a) - parseTaskDate(b));
+    }
+
+    function weekTasks() {
+      const start = startOfWeek(new Date());
+      const end = endOfWeek(new Date());
+      return state.tasks.filter(task => {
+        const due = parseTaskDate(task);
+        return due >= start && due <= end;
+      });
+    }
+
+    function todayTasks() {
+      return sortTasks(state.tasks.filter(task => isSameDate(parseTaskDate(task), new Date())));
+    }
+
+    function completedThisWeekCount() {
+      return weekTasks().filter(t => t.completed).length;
+    }
+
+    function weeklyCompletionRate() {
+      const tasks = weekTasks();
+      if (!tasks.length) return 0;
+      return Math.round((tasks.filter(t => t.completed).length / tasks.length) * 100);
+    }
+
+    function stageTotals() {
+      return STAGES.map(stage => {
+        const aggregate = state.subjects.reduce((acc, subject) => {
+          const cur = subject.stages[stage.id] || { done: 0, total: 0 };
+          return {
+            done: acc.done + Number(cur.done || 0),
+            total: acc.total + Number(cur.total || 0)
+          };
+        }, { done: 0, total: 0 });
+        return { ...stage, ...aggregate, pct: percent(aggregate.done, aggregate.total) };
+      });
+    }
+
+    function recommendedStage(subject) {
+      return STAGES.find(stage => stagePercentForSubject(subject, stage.id) < 100) || STAGES[STAGES.length - 1];
+    }
+
+    function totalProgress() {
+      if (!state.subjects.length) return 0;
+      return Math.round(state.subjects.reduce((sum, subject) => sum + subjectPercent(subject), 0) / state.subjects.length);
+    }
+
+    function upcomingReviewTasks() {
+      return sortTasks(state.tasks.filter(task => !task.completed && (task.stageId === 'review' || task.stageId === 'revise'))).slice(0, 6);
+    }
+
+    function renderHeroStats() {
+      const stats = [
+        { label: '전체 진행률', value: `${totalProgress()}%`, note: '모든 과목·단계 합산 기준' },
+        { label: '이번 주 완료', value: `${completedThisWeekCount()}/${weekTasks().length || 0}`, note: `주간 완료율 ${weeklyCompletionRate()}%` },
+        { label: '오늘 일정', value: `${todayTasks().length}`, note: '오늘 배정된 학습 블록 수' },
+        { label: '밀린 일정', value: `${state.tasks.filter(isOverdue).length}`, note: '미완료 상태로 기한 지난 일정' }
+      ];
+      byId('heroStats').innerHTML = stats.map(stat => `
+        <div class="stat-card">
+          <div class="stat-label">${stat.label}</div>
+          <div class="stat-value">${stat.value}</div>
+          <div class="stat-note">${stat.note}</div>
+        </div>
+      `).join('');
+    }
+
+    function renderTodayTimeline() {
+      const container = byId('todayTimeline');
+      const tasks = todayTasks();
+      if (!tasks.length) {
+        container.innerHTML = `<div class="empty">오늘 일정이 아직 없다.<br />주간 플래너에서 블록을 추가해보자.</div>`;
+        return;
+      }
+      container.innerHTML = tasks.map(task => {
+        const subject = getSubject(task.subjectId);
+        const stage = getStage(task.stageId);
+        return `
+          <div class="timeline-item">
+            <div class="timeline-time">${taskRangeLabel(task)}</div>
+            <div>
+              <div class="item-title">${task.title}</div>
+              <div class="item-meta">${subject?.name || '-'} · ${stage?.label || '-'}</div>
+              ${task.memo ? `<div class="badge-row"><span class="badge">메모 · ${escapeHtml(task.memo)}</span></div>` : ''}
+            </div>
+            <div class="badge-row">
+              <span class="badge ${task.completed ? 'review' : ''}">${task.completed ? '완료' : '예정'}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderDashboardSubjects() {
+      const container = byId('dashboardSubjects');
+      const subjects = [...state.subjects].sort((a, b) => subjectPercent(b) - subjectPercent(a));
+      container.innerHTML = subjects.map(subject => {
+        const summary = sumStage(subject);
+        const partInfo = partSummary(subject);
+        return `
+          <article class="subject-card">
+            <div class="subject-top">
+              <div class="subject-title-wrap">
+                <span class="subject-dot" style="background:${subject.color}"></span>
+                <div>
+                  <div class="subject-name">${subject.name}</div>
+                  <div class="item-meta">${partInfo ? `파트 시작 ${partInfo.startedParts}/${partInfo.totalParts} · 문풀 ${partInfo.questionDone}/${partInfo.questionTotal}` : `학습량 ${summary.done} / ${summary.total || 0}`}</div>
+                </div>
+              </div>
+              <div class="subject-progress-value">${subjectPercent(subject)}%</div>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" style="width:${subjectPercent(subject)}%"></div>
+            </div>
+            <div class="mini-stage-grid">
+              ${STAGES.map(stage => {
+                const stageData = subject.stages[stage.id] || { done: 0, total: 0 };
+                const pct = stagePercentForSubject(subject, stage.id);
+                return `
+                  <div class="mini-stage">
+                    <div class="mini-stage-top">
+                      <span>${stage.short}</span>
+                      <span>${stageData.done}/${stageData.total || 0} · ${pct}%</span>
+                    </div>
+                    <div class="progress-track"><div class="progress-fill" style="width:${pct}%; background:linear-gradient(90deg, ${subject.color}, #77b5ff);"></div></div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+            <div class="item-meta">
+              <strong>다음 추천:</strong> ${escapeHtml(subject.nextAction || recommendedStage(subject).label + ' 진행')}
+            </div>
+            <div class="badge-row" style="margin-top:10px;">
+              <span class="badge ${subject.conceptSent ? 'review' : ''}">배국자 개념 ${subject.conceptSent ? '전송완료' : '미전송'}</span>
+              <span class="badge ${subject.trapSent ? 'review' : ''}">배국자 함정 ${subject.trapSent ? '전송완료' : '미전송'}</span>
+              ${subject.blockedReason ? `<span class="badge overdue">막힘: ${escapeHtml(subject.blockedReason)}</span>` : ''}
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function renderStageBreakdown() {
+      const container = byId('stageBreakdown');
+      container.innerHTML = stageTotals().map(stage => `
+        <div class="task-item">
+          <div class="timeline-time">${stage.short}</div>
+          <div>
+            <div class="item-title">${stage.label}</div>
+            <div class="item-meta">전체 학습량 ${stage.done} / ${stage.total || 0}</div>
+            <div class="progress-track" style="margin-top:10px;">
+              <div class="progress-fill" style="width:${stage.pct}%; background:linear-gradient(90deg, ${stage.id === 'review' ? '#16a34a' : stage.id === 'revise' ? '#d97706' : '#2f6df6'}, #7dd3fc);"></div>
+            </div>
+          </div>
+          <div class="stage-percent">${stage.pct}%</div>
+        </div>
+      `).join('');
+    }
+
+    function renderTaskCollection(el, tasks, emptyText, variant = 'general') {
+      if (!tasks.length) {
+        el.innerHTML = `<div class="empty">${emptyText}</div>`;
+        return;
+      }
+      el.innerHTML = tasks.map(task => {
+        const subject = getSubject(task.subjectId);
+        const stage = getStage(task.stageId);
+        return `
+          <div class="task-item">
+            <div class="task-time">${taskRangeLabel(task)}</div>
+            <div>
+              <div class="item-title">${task.title}</div>
+              <div class="item-meta">${formatDateLabel(parseTaskDate(task))} · ${subject?.name || '-'} · ${stage?.label || '-'}</div>
+              ${task.memo ? `<div class="badge-row"><span class="badge">${escapeHtml(task.memo)}</span></div>` : ''}
+            </div>
+            <div class="badge-row">
+              <span class="badge ${variant === 'overdue' ? 'overdue' : variant === 'review' ? 'review' : ''}">${variant === 'overdue' ? '밀림' : variant === 'review' ? '복습' : (task.completed ? '완료' : '예정')}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderReviewAndOverdue() {
+      renderTaskCollection(byId('reviewTasks'), upcomingReviewTasks(), '다가오는 복습 일정이 없다.', 'review');
+      renderTaskCollection(byId('overdueTasks'), sortTasks(state.tasks.filter(isOverdue)).slice(0, 8), '밀린 일정이 없다.', 'overdue');
+    }
+
+    function calendarMonthRange(baseDate) {
+      const first = new Date(baseDate.getFullYear(), baseDate.getMonth(), 1);
+      const last = new Date(baseDate.getFullYear(), baseDate.getMonth() + 1, 0);
+      return { first, last };
+    }
+
+    function renderCalendarBoard() {
+      const { first, last } = calendarMonthRange(calendarMonthCursor);
+      const grid = byId('calendarGrid');
+      const label = byId('calendarMonthLabel');
+      const legend = byId('calendarLegend');
+      if (!grid || !label || !legend) return;
+
+      label.textContent = `${first.getFullYear()}년 ${first.getMonth() + 1}월`;
+      const weekdays = ['일', '월', '화', '수', '목', '금', '토'];
+      const leading = first.getDay();
+      const days = [];
+      for (let i = 0; i < leading; i += 1) days.push(null);
+      for (let day = 1; day <= last.getDate(); day += 1) {
+        days.push(new Date(first.getFullYear(), first.getMonth(), day));
+      }
+      while (days.length % 7 !== 0) days.push(null);
+
+      grid.innerHTML = `${weekdays.map(day => `<div class="calendar-weekday">${day}</div>`).join('')}${days.map(day => {
+        if (!day) return `<div class="calendar-cell empty"></div>`;
+        const iso = formatDateInput(day);
+        const block = getClerkshipBlock(iso);
+        const events = calendarEventsForDate(iso);
+        const counts = Object.keys(EVENT_TYPE_META).map(type => ({ type, count: events.filter(event => event.type === type).length })).filter(item => item.count > 0);
+        return `
+          <button class="calendar-cell ${iso === selectedCalendarDate ? 'selected' : ''} ${isSameDate(day, new Date()) ? 'today' : ''}" onclick="selectCalendarDate('${iso}')">
+            <div class="calendar-top">
+              <span class="calendar-day">${day.getDate()}</span>
+              <span class="calendar-hint">${availabilityHint(day)}</span>
+            </div>
+            ${block ? `<span class="calendar-block-chip" style="background:${block.color}">${block.label}</span>` : '<span class="calendar-hint">블록 없음</span>'}
+            <div class="calendar-mini-row">
+              ${counts.map(item => `<span class="calendar-mini-chip">${EVENT_TYPE_META[item.type].label} ${item.count}</span>`).join('')}
+              ${tasksForDate(iso).length ? `<span class="calendar-mini-chip">공부 ${tasksForDate(iso).length}</span>` : ''}
+            </div>
+          </button>
+        `;
+      }).join('')}`;
+
+      legend.innerHTML = [
+        ...CLERKSHIP_BLOCKS.map(block => `<span class="detail-chip" style="background:${block.color}; color:white;">${block.label}</span>`),
+        ...Object.values(EVENT_TYPE_META).map(meta => `<span class="calendar-mini-chip">${meta.label}</span>`)
+      ].join('');
+    }
+
+    function renderCalendarDetail() {
+      const el = byId('calendarDetail');
+      if (!el) return;
+      const date = parseIsoDate(selectedCalendarDate);
+      const block = getClerkshipBlock(selectedCalendarDate);
+      const events = calendarEventsForDate(selectedCalendarDate);
+      const tasks = tasksForDate(selectedCalendarDate);
+      const eventGroups = Object.keys(EVENT_TYPE_META).map(type => ({
+        type,
+        meta: EVENT_TYPE_META[type],
+        items: events.filter(event => event.type === type)
+      })).filter(group => group.items.length > 0);
+
+      el.innerHTML = `
+        <div class="detail-card">
+          <div class="detail-title">${formatDateLabel(date)}</div>
+          <div class="detail-sub">${block ? `${block.label} 블록 · ${block.note} · 저녁 공부 가용도 ${availabilityHint(date)}` : `현재 등록된 실습 블록 없음 · 저녁 공부 가용도 ${availabilityHint(date)}`}</div>
+          <div class="calendar-legend" style="margin-top:12px;">
+            ${block ? `<span class="detail-chip" style="background:${block.color}; color:white;">${block.label}</span>` : ''}
+            <span class="calendar-mini-chip">${availabilityHint(date)}</span>
+            ${tasks.length ? `<span class="calendar-mini-chip">공부 블록 ${tasks.length}</span>` : ''}
+          </div>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-title">과제 · 발표 · 조장 업무</div>
+          <div class="detail-sub">실습 운영 이벤트는 여기서 보고, 실제 공부 블록은 아래에서 분리해 본다.</div>
+          ${eventGroups.length ? `<div class="event-list">${eventGroups.flatMap(group => group.items.map(event => `
+            <div class="event-item">
+              <div class="event-time">${escapeHtml(event.time || '종일')}</div>
+              <div>
+                <div class="badge-row"><span class="detail-chip" style="background:${group.meta.color}; color:white;">${group.meta.label}</span></div>
+                <div class="item-title" style="margin-top:6px;">${escapeHtml(event.title)}</div>
+                ${event.note ? `<div class="item-meta">${escapeHtml(event.note)}</div>` : ''}
+              </div>
+              <div class="event-actions"><input type="checkbox" ${event.completed ? 'checked' : ''} onchange="toggleCalendarEvent('${event.id}')" aria-label="${event.title} 완료" /></div>
+            </div>
+          `)).join('')}</div>` : `<div class="empty" style="margin-top:12px;">아직 입력된 과제/발표/조장 이벤트가 없다.<br />지금은 월간 블록 중심으로 먼저 읽고, 실제 과제는 인계 분석 후 붙이는 게 맞다.</div>`}
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-title">그날 공부 타임라인</div>
+          <div class="detail-sub">실습 일정과 분리해서, 오늘 밤/주말 공부 블록을 같이 본다.</div>
+          ${tasks.length ? `<div class="event-list">${tasks.map(task => {
+            const stage = getStage(task.stageId);
+            const subject = getSubject(task.subjectId);
+            return `
+              <div class="event-item">
+                <div class="event-time">${taskRangeLabel(task)}</div>
+                <div>
+                  <div class="badge-row"><span class="calendar-mini-chip">${subject?.name || '-'}</span><span class="calendar-mini-chip">${stage?.label || '-'}</span></div>
+                  <div class="item-title" style="margin-top:6px;">${escapeHtml(task.title)}</div>
+                  ${task.memo ? `<div class="item-meta">${escapeHtml(task.memo)}</div>` : ''}
+                </div>
+                <div class="event-actions"><input type="checkbox" ${task.completed ? 'checked' : ''} onchange="toggleTask('${task.id}')" aria-label="${task.title} 완료" /></div>
+              </div>
+            `;
+          }).join('')}</div>` : `<div class="empty" style="margin-top:12px;">등록된 공부 블록이 없다.</div>`}
+        </div>
+      `;
+    }
+
+    function plannerFilteredTasks() {
+      const scope = byId('filterScope').value;
+      const subjectId = byId('filterSubject').value;
+      const stageId = byId('filterStage').value;
+      const status = byId('filterStatus').value;
+      const now = new Date();
+      const start = startOfWeek(now);
+      const end = endOfWeek(now);
+
+      return sortTasks(state.tasks.filter(task => {
+        const due = parseTaskDate(task);
+        if (scope === 'today' && !isSameDate(due, now)) return false;
+        if (scope === 'week' && (due < start || due > end)) return false;
+        if (subjectId !== 'all' && task.subjectId !== subjectId) return false;
+        if (stageId !== 'all' && task.stageId !== stageId) return false;
+        if (status === 'pending' && task.completed) return false;
+        if (status === 'done' && !task.completed) return false;
+        if (status === 'overdue' && !isOverdue(task)) return false;
+        return true;
+      }));
+    }
+
+    function renderWeekGrid() {
+      const grid = byId('weekGrid');
+      const scope = byId('filterScope').value;
+      const now = new Date();
+      const tasks = plannerFilteredTasks();
+      let days = [];
+
+      if (scope === 'today') {
+        days = [offsetDate(now, 0)];
+      } else if (scope === 'all') {
+        const uniqueDates = [...new Set(tasks.map(task => task.date))].sort();
+        days = uniqueDates.length ? uniqueDates.map(date => new Date(`${date}T00:00:00`)) : [offsetDate(now, 0)];
+      } else {
+        const start = startOfWeek(now);
+        days = Array.from({ length: 7 }, (_, i) => offsetDate(start, i));
+      }
+
+      grid.innerHTML = days.map(day => {
+        const dayTasks = tasks.filter(task => task.date === formatDateInput(day));
+        return `
+          <div class="day-column">
+            <div class="day-header">
+              <div class="day-name">${['일','월','화','수','목','금','토'][day.getDay()]}요일</div>
+              <div class="day-date">${formatDateLabel(day)}</div>
+            </div>
+            ${dayTasks.length ? dayTasks.map(renderDayTask).join('') : `<div class="empty">일정 없음</div>`}
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderDayTask(task) {
+      const subject = getSubject(task.subjectId);
+      const stage = getStage(task.stageId);
+      return `
+        <article class="day-task ${task.completed ? 'completed' : ''} ${isOverdue(task) ? 'overdue' : ''}">
+          <div class="task-topline">
+            <span>${taskRangeLabel(task)}</span>
+            <span>${subject?.name || '-'}</span>
+          </div>
+          <div class="task-title">${escapeHtml(task.title)}</div>
+          <div class="badge-row">
+            <span class="badge">${stage?.short || '-'}</span>
+            ${isOverdue(task) ? `<span class="badge overdue">밀림</span>` : ''}
+            ${task.completed ? `<span class="badge review">완료</span>` : ''}
+          </div>
+          ${task.memo ? `<div class="item-meta">${escapeHtml(task.memo)}</div>` : ''}
+          <div class="task-actions">
+            <button class="btn btn-small ${task.completed ? 'btn-ghost' : 'btn-secondary'}" onclick="toggleTask('${task.id}')">${task.completed ? '완료 해제' : '완료 체크'}</button>
+            <button class="btn btn-small btn-danger" onclick="deleteTask('${task.id}')">삭제</button>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderSubjectNav() {
+      const nav = byId('subjectNav');
+      nav.innerHTML = state.subjects.map(subject => {
+        const recommended = recommendedStage(subject);
+        return `
+          <button class="subject-nav-item ${selectedSubjectId === subject.id ? 'active' : ''}" onclick="selectSubject('${subject.id}')">
+            <div class="subject-nav-meta">
+              <div class="subject-nav-name">${subject.name}</div>
+              <div class="subject-nav-note">다음 추천 · ${recommended.short}</div>
+            </div>
+            <strong>${subjectPercent(subject)}%</strong>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function renderSubjectDetail() {
+      const subject = getSubject(selectedSubjectId) || state.subjects[0];
+      if (!subject) {
+        byId('subjectDetail').innerHTML = `<div class="empty">과목을 먼저 추가해보자.</div>`;
+        return;
+      }
+      selectedSubjectId = subject.id;
+      const summary = sumStage(subject);
+      const partInfo = partSummary(subject);
+      const relatedTasks = sortTasks(state.tasks.filter(task => task.subjectId === subject.id)).slice(0, 6);
+
+      byId('subjectDetail').innerHTML = `
+        <div class="detail-head">
+          <div>
+            <div class="eyebrow" style="margin-bottom:10px;">Subject Detail</div>
+            <div class="subject-title-wrap">
+              <span class="subject-dot" style="background:${subject.color}; width:14px; height:14px;"></span>
+              <div>
+                <h2 class="panel-title" style="font-size:28px;">${subject.name}</h2>
+                <div class="panel-subtitle">${partInfo ? `파트 시작 ${partInfo.startedParts}/${partInfo.totalParts} · 문풀 ${partInfo.questionDone}/${partInfo.questionTotal}` : `학습량 ${summary.done} / ${summary.total || 0}`} · 추천 다음 단계: ${recommendedStage(subject).label}</div>
+              </div>
+            </div>
+          </div>
+          <div class="detail-progress">
+            <div class="detail-big">${subjectPercent(subject)}%</div>
+            <div class="panel-subtitle">전체 진행률</div>
+          </div>
+        </div>
+
+        <div class="detail-grid">
+          <div class="section-block">
+            <div class="panel-header" style="margin-bottom:0;">
+              <div>
+                <div class="panel-title">5단계 진행도</div>
+                <div class="panel-subtitle">${subject.parts?.length ? '파트 진행도에서 자동 계산된다.' : '완료량 / 목표량 입력 후 바로 저장'}</div>
+              </div>
+              <button class="btn btn-small btn-danger" onclick="deleteSubject('${subject.id}')">과목 삭제</button>
+            </div>
+            ${STAGES.map(stage => {
+              const stageData = subject.stages[stage.id] || { done: 0, total: 0 };
+              const pct = stagePercentForSubject(subject, stage.id);
+              return `
+                <div class="stage-row">
+                  <div class="stage-name-wrap">
+                    <div class="stage-name">${stage.label}</div>
+                    <div class="stage-note">${stage.note}</div>
+                    <div class="progress-track" style="margin-top:10px;"><div class="progress-fill" style="width:${pct}%; background:linear-gradient(90deg, ${subject.color}, #7cc2ff);"></div></div>
+                  </div>
+                  <input type="number" min="0" value="${stageData.done || 0}" ${subject.parts?.length ? 'disabled' : ''} onchange="updateStage('${subject.id}','${stage.id}','done', this.value)" aria-label="${stage.label} 완료량" />
+                  <input type="number" min="0" value="${stageData.total || 0}" ${subject.parts?.length ? 'disabled' : ''} onchange="updateStage('${subject.id}','${stage.id}','total', this.value)" aria-label="${stage.label} 목표량" />
+                  <div class="stage-percent">${pct}%</div>
+                </div>
+              `;
+            }).join('')}
+            ${subject.parts?.length ? `<div class="parts-summary"><span class="badge review">강의/개념틀/오답정리/복습은 파트 수 기준</span><span class="badge">문풀은 알렌 문항수 기준</span></div>` : ''}
+          </div>
+
+          ${subject.parts?.length ? `
+          <div class="section-block">
+            <div class="panel-title">파트별 플랜</div>
+            <div class="panel-subtitle">실제 관리 단위는 과목이 아니라 파트. 문풀 total은 알렌 문제 수(y) 기준.</div>
+            <div class="parts-table-wrap">
+              <table class="parts-table">
+                <thead>
+                  <tr>
+                    <th>파트</th>
+                    <th>현재단계</th>
+                    <th>문풀</th>
+                    <th>개념전송</th>
+                    <th>함정전송</th>
+                    <th>막힘 이유</th>
+                    <th>메모</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${subject.parts.map(part => `
+                    <tr>
+                      <td><strong>${escapeHtml(part.partNo)}. ${escapeHtml(part.name)}</strong><br /><span class="item-meta">알렌 ${Number(part.questionTotal || 0)}문항</span></td>
+                      <td>
+                        <select onchange="updatePartField('${subject.id}','${part.id}','currentStage', this.value)">
+                          ${PART_STAGE_OPTIONS.map(option => `<option value="${option.value}" ${Number(part.currentStage || 0) === option.value ? 'selected' : ''}>${option.label}</option>`).join('')}
+                        </select>
+                      </td>
+                      <td>
+                        <div style="display:grid; gap:6px; grid-template-columns: 1fr 1fr;">
+                          <input type="number" min="0" max="${Number(part.questionTotal || 0)}" value="${Number(part.questionDone || 0)}" onchange="updatePartField('${subject.id}','${part.id}','questionDone', this.value)" aria-label="${part.name} 문제풀이 완료" />
+                          <input type="number" value="${Number(part.questionTotal || 0)}" disabled aria-label="${part.name} 문제풀이 총량" />
+                        </div>
+                      </td>
+                      <td><label class="parts-check"><input type="checkbox" ${part.conceptSent ? 'checked' : ''} onchange="togglePartFlag('${subject.id}','${part.id}','conceptSent', this.checked)" /></label></td>
+                      <td><label class="parts-check"><input type="checkbox" ${part.trapSent ? 'checked' : ''} onchange="togglePartFlag('${subject.id}','${part.id}','trapSent', this.checked)" /></label></td>
+                      <td><textarea rows="2" onchange="updatePartField('${subject.id}','${part.id}','blockedReason', this.value)" placeholder="예: PFT 해석 막힘">${escapeHtml(part.blockedReason || '')}</textarea></td>
+                      <td><textarea rows="2" onchange="updatePartField('${subject.id}','${part.id}','note', this.value)" placeholder="예: COPD와 비교">${escapeHtml(part.note || '')}</textarea></td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          ` : ''}
+
+          <div class="split-2">
+            <div class="section-block">
+              <div class="panel-title">취약 파트</div>
+              <div class="panel-subtitle">약한 영역, 헷갈리는 포인트</div>
+              <div class="field">
+                <textarea rows="5" onchange="updateSubjectText('${subject.id}','weakPoints', this.value)" placeholder="예: 심잡음 감별, PFT 해석, 산염기">${escapeHtml(subject.weakPoints || '')}</textarea>
+              </div>
+            </div>
+            <div class="section-block">
+              <div class="panel-title">다음 액션</div>
+              <div class="panel-subtitle">다음 세션에서 바로 할 작업</div>
+              <div class="field">
+                <textarea rows="5" onchange="updateSubjectText('${subject.id}','nextAction', this.value)" placeholder="예: 순환기 문제 40문제 + 오답 반영">${escapeHtml(subject.nextAction || '')}</textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-block">
+            <div class="panel-title">메모</div>
+            <div class="panel-subtitle">과목 운영 원칙, 자료 위치, 체크 포인트</div>
+            <div class="field">
+              <textarea rows="5" onchange="updateSubjectText('${subject.id}','note', this.value)" placeholder="예: 강의 듣고 24시간 안에 개념틀로 옮기기">${escapeHtml(subject.note || '')}</textarea>
+            </div>
+          </div>
+
+          <div class="section-block">
+            <div class="panel-title">Canary 운영 체크</div>
+            <div class="panel-subtitle">2단계/4단계 완료는 배국자 전송 완료를 뜻함</div>
+            <div class="check-list">
+              <label class="check-row">
+                <input type="checkbox" ${subject.conceptSent ? 'checked' : ''} onchange="toggleSubjectFlag('${subject.id}','conceptSent', this.checked)" />
+                <span>배국자 개념틀 전송 완료</span>
+              </label>
+              <label class="check-row">
+                <input type="checkbox" ${subject.trapSent ? 'checked' : ''} onchange="toggleSubjectFlag('${subject.id}','trapSent', this.checked)" />
+                <span>배국자 함정/출제개념 전송 완료</span>
+              </label>
+            </div>
+            <div class="field" style="margin-top:14px;">
+              <label>막힘 이유</label>
+              <textarea rows="4" onchange="updateSubjectText('${subject.id}','blockedReason', this.value)" placeholder="예: 피로, 실습 과제, 전송 미룸, 교수님 확인 필요">${escapeHtml(subject.blockedReason || '')}</textarea>
+            </div>
+          </div>
+
+          <div class="split-2">
+            <div class="section-block">
+              <div class="panel-title">관련 일정</div>
+              <div class="panel-subtitle">가장 가까운 일정 6개</div>
+              <div class="task-list">
+                ${relatedTasks.length ? relatedTasks.map(task => {
+                  const stage = getStage(task.stageId);
+                  return `
+                    <div class="history-item">
+                      <div class="timeline-time">${formatDateLabel(parseTaskDate(task))}</div>
+                      <div>
+                        <div class="item-title">${escapeHtml(task.title)}</div>
+                        <div class="item-meta">${taskRangeLabel(task)} · ${stage?.label || '-'}</div>
+                      </div>
+                      <div class="badge-row"><span class="badge ${task.completed ? 'review' : ''}">${task.completed ? '완료' : '예정'}</span></div>
+                    </div>
+                  `;
+                }).join('') : `<div class="empty">이 과목 관련 일정이 아직 없다.</div>`}
+              </div>
+            </div>
+            <div class="section-block">
+              <div class="panel-title">최근 기록</div>
+              <div class="panel-subtitle">업데이트 히스토리 간단 로그</div>
+              <div class="history-list">
+                ${(subject.recentHistory || []).length ? subject.recentHistory.map(item => `
+                  <div class="history-item">
+                    <div class="timeline-time">기록</div>
+                    <div>
+                      <div class="item-meta">${escapeHtml(item)}</div>
+                    </div>
+                    <div></div>
+                  </div>
+                `).join('') : `<div class="empty">최근 기록이 아직 없다.</div>`}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function populateFormOptions() {
+      const subjectOptions = state.subjects.map(subject => `<option value="${subject.id}">${subject.name}</option>`).join('');
+      byId('taskSubject').innerHTML = subjectOptions;
+      byId('filterSubject').innerHTML = `<option value="all">전체</option>${subjectOptions}`;
+      const stageOptions = STAGES.map(stage => `<option value="${stage.id}">${stage.label}</option>`).join('');
+      byId('taskStage').innerHTML = stageOptions;
+      byId('filterStage').innerHTML = `<option value="all">전체</option>${stageOptions}`;
+    }
+
+    function renderAll() {
+      populateFormOptions();
+      renderHeroStats();
+      renderTodayTimeline();
+      renderDashboardSubjects();
+      renderStageBreakdown();
+      renderReviewAndOverdue();
+      renderCalendarBoard();
+      renderCalendarDetail();
+      renderSubjectNav();
+      renderSubjectDetail();
+      renderWeekGrid();
+      saveState();
+    }
+
+    function toggleTask(taskId) {
+      const task = state.tasks.find(t => t.id === taskId);
+      if (!task) return;
+      task.completed = !task.completed;
+      const subject = getSubject(task.subjectId);
+      if (subject) {
+        subject.recentHistory = [`${formatDateLabel(new Date())} · ${task.title} ${task.completed ? '완료' : '완료 해제'}`, ...(subject.recentHistory || [])].slice(0, 8);
+      }
+      renderAll();
+    }
+
+    function toggleCalendarEvent(eventId) {
+      const event = (state.calendarEvents || []).find(item => item.id === eventId);
+      if (!event) return;
+      event.completed = !event.completed;
+      renderAll();
+    }
+
+    function deleteTask(taskId) {
+      if (!confirm('이 일정을 삭제할까?')) return;
+      state.tasks = state.tasks.filter(task => task.id !== taskId);
+      renderAll();
+    }
+
+    function selectSubject(subjectId) {
+      selectedSubjectId = subjectId;
+      renderSubjectNav();
+      renderSubjectDetail();
+    }
+
+    function selectCalendarDate(isoDate) {
+      selectedCalendarDate = isoDate;
+      renderCalendarBoard();
+      renderCalendarDetail();
+    }
+
+    function updateStage(subjectId, stageId, field, value) {
+      const subject = getSubject(subjectId);
+      if (!subject) return;
+      if (subject.parts?.length) return;
+      subject.stages[stageId][field] = Math.max(0, Number(value || 0));
+      subject.recentHistory = [`${formatDateLabel(new Date())} · ${getStage(stageId).label} ${field === 'done' ? '완료량' : '목표량'} 수정`, ...(subject.recentHistory || [])].slice(0, 8);
+      renderAll();
+    }
+
+    function updateSubjectText(subjectId, field, value) {
+      const subject = getSubject(subjectId);
+      if (!subject) return;
+      subject[field] = value;
+      const fieldLabel = field === 'weakPoints'
+        ? '취약 파트'
+        : field === 'nextAction'
+          ? '다음 액션'
+          : field === 'blockedReason'
+            ? '막힘 이유'
+            : '메모';
+      subject.recentHistory = [`${formatDateLabel(new Date())} · ${fieldLabel} 업데이트`, ...(subject.recentHistory || [])].slice(0, 8);
+      renderAll();
+    }
+
+    function toggleSubjectFlag(subjectId, field, checked) {
+      const subject = getSubject(subjectId);
+      if (!subject) return;
+      subject[field] = checked;
+      const label = field === 'conceptSent' ? '배국자 개념틀 전송' : '배국자 함정 전송';
+      subject.recentHistory = [`${formatDateLabel(new Date())} · ${label} ${checked ? '완료' : '해제'}`, ...(subject.recentHistory || [])].slice(0, 8);
+      renderAll();
+    }
+
+    function updatePartField(subjectId, partId, field, value) {
+      const subject = getSubject(subjectId);
+      if (!subject?.parts?.length) return;
+      const part = subject.parts.find(item => item.id === partId);
+      if (!part) return;
+
+      if (field === 'currentStage') {
+        part.currentStage = Math.max(0, Math.min(5, Number(value || 0)));
+      } else if (field === 'questionDone') {
+        const max = Number(part.questionTotal || 0);
+        part.questionDone = Math.max(0, Math.min(max, Number(value || 0)));
+      } else {
+        part[field] = value;
+      }
+
+      recomputeSubjectFromParts(subject);
+      subject.recentHistory = [`${formatDateLabel(new Date())} · ${part.partNo}. ${part.name} 업데이트`, ...(subject.recentHistory || [])].slice(0, 8);
+      renderAll();
+    }
+
+    function togglePartFlag(subjectId, partId, field, checked) {
+      const subject = getSubject(subjectId);
+      if (!subject?.parts?.length) return;
+      const part = subject.parts.find(item => item.id === partId);
+      if (!part) return;
+      part[field] = checked;
+      recomputeSubjectFromParts(subject);
+      const label = field === 'conceptSent' ? '개념 전송' : '함정 전송';
+      subject.recentHistory = [`${formatDateLabel(new Date())} · ${part.partNo}. ${part.name} ${label} ${checked ? '완료' : '해제'}`, ...(subject.recentHistory || [])].slice(0, 8);
+      renderAll();
+    }
+
+    function deleteSubject(subjectId) {
+      const subject = getSubject(subjectId);
+      if (!subject) return;
+      if (!confirm(`${subject.name} 과목을 삭제할까? 연결된 일정도 함께 지워진다.`)) return;
+      state.subjects = state.subjects.filter(s => s.id !== subjectId);
+      state.tasks = state.tasks.filter(task => task.subjectId !== subjectId);
+      selectedSubjectId = state.subjects[0]?.id || null;
+      renderAll();
+    }
+
+    function escapeHtml(text) {
+      return String(text || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function openResetModal() {
+      byId('confirmResetModal').classList.add('show');
+    }
+
+    function closeResetModal() {
+      byId('confirmResetModal').classList.remove('show');
+    }
+
+    document.querySelectorAll('.nav-tab').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.nav-tab').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+        button.classList.add('active');
+        byId(`tab-${button.dataset.tab}`).classList.add('active');
+      });
+    });
+
+    byId('taskForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const form = new FormData(event.currentTarget);
+      const task = {
+        id: uid('task'),
+        title: form.get('title').trim(),
+        date: form.get('date'),
+        startTime: form.get('startTime'),
+        duration: Number(form.get('duration')),
+        subjectId: form.get('subjectId'),
+        stageId: form.get('stageId'),
+        memo: String(form.get('memo') || '').trim(),
+        completed: false,
+        createdAt: new Date().toISOString()
+      };
+      state.tasks.push(task);
+      const subject = getSubject(task.subjectId);
+      if (subject) {
+        subject.recentHistory = [`${formatDateLabel(new Date())} · 일정 추가: ${task.title}`, ...(subject.recentHistory || [])].slice(0, 8);
+      }
+      event.currentTarget.reset();
+      byId('taskDate').value = formatDateInput(new Date());
+      byId('taskStart').value = '09:00';
+      byId('taskDuration').value = 60;
+      renderAll();
+    });
+
+    byId('subjectForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const form = new FormData(event.currentTarget);
+      const name = String(form.get('name') || '').trim();
+      const color = String(form.get('color') || '#2f6df6');
+      if (!name) return;
+      const subject = createSubject(name, color);
+      subject.note = `${name} 과목 운영 메모를 여기에 적어두기.`;
+      state.subjects.push(subject);
+      selectedSubjectId = subject.id;
+      event.currentTarget.reset();
+      byId('subjectColor').value = '#2f6df6';
+      renderAll();
+    });
+
+    ['filterScope','filterSubject','filterStage','filterStatus'].forEach(id => {
+      byId(id).addEventListener('change', renderWeekGrid);
+    });
+
+    byId('startTodayBtn').addEventListener('click', () => {
+      if (!isCanaryState()) {
+        const shouldLoadCanary = confirm('지금은 4월 canary 세팅이 아니라서, 오늘 스타트 전에 canary 세팅을 먼저 불러올까?');
+        if (shouldLoadCanary) {
+          state = buildCanaryState();
+          selectedSubjectId = state.subjects[0]?.id || null;
+          selectedCalendarDate = formatDateInput(new Date());
+          calendarMonthCursor = new Date(today.getFullYear(), today.getMonth(), 1);
+          renderAll();
+        }
+      }
+      activateTodayFlow();
+    });
+
+    byId('loadCanaryBtn').addEventListener('click', () => {
+      if (!confirm('현재 데이터를 4월 canary 세팅으로 바꿀까? 필요한 경우 먼저 데이터를 내보내기 해둬.')) return;
+      state = buildCanaryState();
+      selectedSubjectId = state.subjects[0]?.id || null;
+      selectedCalendarDate = formatDateInput(new Date());
+      calendarMonthCursor = new Date(today.getFullYear(), today.getMonth(), 1);
+      renderAll();
+      activateTodayFlow();
+      alert('4월 canary 세팅을 불러왔어. 바로 오늘 플래너로 이동했어. TODAY_START_GUIDE.md와 CANARY_TRACKER_APRIL.md를 같이 열어두면 좋아.');
+    });
+
+    byId('calendarPrevBtn').addEventListener('click', () => {
+      calendarMonthCursor = new Date(calendarMonthCursor.getFullYear(), calendarMonthCursor.getMonth() - 1, 1);
+      renderCalendarBoard();
+      renderCalendarDetail();
+    });
+
+    byId('calendarNextBtn').addEventListener('click', () => {
+      calendarMonthCursor = new Date(calendarMonthCursor.getFullYear(), calendarMonthCursor.getMonth() + 1, 1);
+      renderCalendarBoard();
+      renderCalendarDetail();
+    });
+
+    byId('exportBtn').addEventListener('click', () => {
+      const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `kmle-planner-backup-${formatDateInput(new Date())}.json`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    });
+
+    byId('importInput').addEventListener('change', async (event) => {
+      const file = event.target.files[0];
+      if (!file) return;
+      try {
+        const text = await file.text();
+        const data = normalizeState(JSON.parse(text));
+        if (!data.subjects || !data.tasks) throw new Error('invalid backup');
+        state = data;
+        selectedSubjectId = state.subjects[0]?.id || null;
+        selectedCalendarDate = formatDateInput(new Date());
+        renderAll();
+      } catch (error) {
+        alert('가져오기 실패: 올바른 백업 파일인지 확인해줘.');
+      } finally {
+        event.target.value = '';
+      }
+    });
+
+    byId('resetDemoBtn').addEventListener('click', openResetModal);
+    byId('cancelResetBtn').addEventListener('click', closeResetModal);
+    byId('confirmResetBtn').addEventListener('click', resetWithDemo);
+
+    byId('taskDate').value = formatDateInput(new Date());
+    byId('taskStart').value = '09:00';
+
+    renderAll();
+
+    window.toggleTask = toggleTask;
+    window.toggleCalendarEvent = toggleCalendarEvent;
+    window.deleteTask = deleteTask;
+    window.selectSubject = selectSubject;
+    window.selectCalendarDate = selectCalendarDate;
+    window.updateStage = updateStage;
+    window.updateSubjectText = updateSubjectText;
+    window.toggleSubjectFlag = toggleSubjectFlag;
+    window.updatePartField = updatePartField;
+    window.togglePartFlag = togglePartFlag;
+    window.deleteSubject = deleteSubject;
+
+    if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js').catch((error) => {
+          console.error('Service worker registration failed:', error);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

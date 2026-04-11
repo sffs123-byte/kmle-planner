@@ -1,0 +1,526 @@
+{
+  "subjects": [
+    {
+      "id": "subject-canary-resp",
+      "name": "호흡기",
+      "color": "#0f766e",
+      "stages": {
+        "lecture": {
+          "done": 0,
+          "total": 18
+        },
+        "framework": {
+          "done": 0,
+          "total": 18
+        },
+        "questions": {
+          "done": 0,
+          "total": 597
+        },
+        "revise": {
+          "done": 0,
+          "total": 18
+        },
+        "review": {
+          "done": 0,
+          "total": 18
+        }
+      },
+      "weakPoints": "PFT 해석, 간질성 폐질환, 폐색전증, 흉막·종격동 질환 파트를 canary 기준으로 우선 추적",
+      "nextAction": "토요일은 호흡기 강의 몰입 + 파트별 1차 루프 시작",
+      "conceptSent": false,
+      "trapSent": false,
+      "blockedReason": "",
+      "parts": [
+        {
+          "id": "resp-part-01",
+          "partNo": "01",
+          "name": "호흡기 총론",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 59,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "resp-part-02",
+          "partNo": "02",
+          "name": "폐기능 장애",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 12,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "resp-part-03",
+          "partNo": "03",
+          "name": "폐질환 검사법",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 20,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "resp-part-04",
+          "partNo": "04",
+          "name": "폐렴",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 39,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "resp-part-05",
+          "partNo": "05",
+          "name": "폐농양",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 16,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "resp-part-06",
+          "partNo": "06",
+          "name": "폐결핵",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 49,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "resp-part-07",
+          "partNo": "07",
+          "name": "천식",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 56,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "resp-part-08",
+          "partNo": "08",
+          "name": "만성폐쇄성폐질환",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 56,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "resp-part-09",
+          "partNo": "09",
+          "name": "기관지확장증",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 10,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "resp-part-10",
+          "partNo": "10",
+          "name": "간질성 폐질환",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 51,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "resp-part-11",
+          "partNo": "11",
+          "name": "호산구성 폐질환",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 7,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "resp-part-12",
+          "partNo": "12",
+          "name": "직업성 폐질환",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 14,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "resp-part-13",
+          "partNo": "13",
+          "name": "폐암",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 40,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "resp-part-14",
+          "partNo": "14",
+          "name": "폐색전증",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 44,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "resp-part-15",
+          "partNo": "15",
+          "name": "흉막과 종격동 질환",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 87,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "resp-part-16",
+          "partNo": "16",
+          "name": "환기 장애",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 11,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "resp-part-17",
+          "partNo": "17",
+          "name": "급성호흡곤란증후군",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 21,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "resp-part-18",
+          "partNo": "18",
+          "name": "기타 폐질환",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 5,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        }
+      ],
+      "note": "문풀 total은 실제 알렌 파트별 문항 수를 합산한다. 강의/개념틀/오답정리/복습은 파트 수 기준으로 자동 계산.",
+      "recentHistory": [
+        "4/11 (토) · 4월 canary 세팅 적용"
+      ]
+    },
+    {
+      "id": "subject-canary-circ",
+      "name": "순환기",
+      "color": "#2563eb",
+      "stages": {
+        "lecture": {
+          "done": 0,
+          "total": 12
+        },
+        "framework": {
+          "done": 0,
+          "total": 12
+        },
+        "questions": {
+          "done": 0,
+          "total": 480
+        },
+        "revise": {
+          "done": 0,
+          "total": 12
+        },
+        "review": {
+          "done": 0,
+          "total": 12
+        }
+      },
+      "weakPoints": "부정맥, 허혈성 심장질환, 판막질환, 심부전 파트를 canary 기준으로 우선 추적",
+      "nextAction": "일요일은 심장내과 인계 분석 + 조장 준비 + 대문항 파트 예열",
+      "conceptSent": false,
+      "trapSent": false,
+      "blockedReason": "",
+      "parts": [
+        {
+          "id": "circ-part-01",
+          "partNo": "01",
+          "name": "순환기 총론",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 25,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "circ-part-02",
+          "partNo": "02",
+          "name": "고혈압",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 50,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "circ-part-03",
+          "partNo": "03",
+          "name": "부정맥",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 104,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "circ-part-04",
+          "partNo": "04",
+          "name": "허혈성 심장질환",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 95,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "circ-part-05",
+          "partNo": "05",
+          "name": "심부전",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 49,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "circ-part-06",
+          "partNo": "06",
+          "name": "심인성 쇼크, 급성 폐부종",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 9,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "circ-part-07",
+          "partNo": "07",
+          "name": "판막질환",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 51,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "circ-part-08",
+          "partNo": "08",
+          "name": "심근 질환",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 24,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "circ-part-09",
+          "partNo": "09",
+          "name": "심장막 질환",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 44,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "circ-part-10",
+          "partNo": "10",
+          "name": "대동맥 질환",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 18,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "circ-part-11",
+          "partNo": "11",
+          "name": "감염심내막염",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 11,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        },
+        {
+          "id": "circ-part-12",
+          "partNo": "12",
+          "name": "기타 심장 질환",
+          "currentStage": 0,
+          "questionDone": 0,
+          "questionTotal": 0,
+          "conceptSent": false,
+          "trapSent": false,
+          "blockedReason": "",
+          "note": ""
+        }
+      ],
+      "note": "심장내과는 조장 예외 과목. 순환기는 파트 기반으로 운영하고, 일요일엔 인계/운영 분석을 우선한다.",
+      "recentHistory": [
+        "4/11 (토) · 4월 canary 세팅 적용"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-canary-1",
+      "date": "2026-04-11",
+      "startTime": "08:30",
+      "duration": 120,
+      "subjectId": "subject-canary-resp",
+      "stageId": "lecture",
+      "title": "호흡기 1차 루프 시작 · 총론~검사법 강의 블록",
+      "memo": "토요일 메인 블록. 호흡기 총론, 폐기능 장애, 폐질환 검사법을 끊김 없이 진입",
+      "completed": false,
+      "createdAt": "2026-04-11T09:44:43.044279"
+    },
+    {
+      "id": "task-canary-2",
+      "date": "2026-04-11",
+      "startTime": "11:00",
+      "duration": 90,
+      "subjectId": "subject-canary-resp",
+      "stageId": "framework",
+      "title": "호흡기 개념틀 초안 · PFT/ILD 축 잡기",
+      "memo": "2단계 완료 시 배국자 전송 체크. PFT 해석 축과 ILD 분류를 같이 정리",
+      "completed": false,
+      "createdAt": "2026-04-11T09:44:43.044279"
+    },
+    {
+      "id": "task-canary-3",
+      "date": "2026-04-11",
+      "startTime": "14:00",
+      "duration": 110,
+      "subjectId": "subject-canary-resp",
+      "stageId": "questions",
+      "title": "호흡기 문풀 · 폐렴/천식/COPD canary 블록",
+      "memo": "함정 포인트는 메모란에 바로 적고 4단계 재료로 수집",
+      "completed": false,
+      "createdAt": "2026-04-11T09:44:43.044279"
+    },
+    {
+      "id": "task-canary-4",
+      "date": "2026-04-11",
+      "startTime": "19:30",
+      "duration": 70,
+      "subjectId": "subject-canary-resp",
+      "stageId": "revise",
+      "title": "호흡기 오답/개념틀 수정 · 배국자 전송 후보 정리",
+      "memo": "4단계 완료 시 배국자 전송 완료로 기록",
+      "completed": false,
+      "createdAt": "2026-04-11T09:44:43.044279"
+    },
+    {
+      "id": "task-canary-5",
+      "date": "2026-04-12",
+      "startTime": "09:00",
+      "duration": 80,
+      "subjectId": "subject-canary-circ",
+      "stageId": "framework",
+      "title": "심장내과 인계 분석 · 실습 구조 파악",
+      "memo": "일요일 운영 설계 목표. 인계장을 보며 실습 구조와 조장 업무를 구조화",
+      "completed": false,
+      "createdAt": "2026-04-11T09:44:43.044279"
+    },
+    {
+      "id": "task-canary-6",
+      "date": "2026-04-12",
+      "startTime": "11:00",
+      "duration": 100,
+      "subjectId": "subject-canary-circ",
+      "stageId": "lecture",
+      "title": "순환기 canary 루프 진입 · 부정맥/허혈성 심질환 우선",
+      "memo": "대문항 파트 먼저 진입해서 주중 운영 부담 줄이기",
+      "completed": false,
+      "createdAt": "2026-04-11T09:44:43.044279"
+    },
+    {
+      "id": "task-canary-7",
+      "date": "2026-04-12",
+      "startTime": "15:00",
+      "duration": 60,
+      "subjectId": "subject-canary-circ",
+      "stageId": "revise",
+      "title": "심장내과 조장 준비 체크리스트 작성",
+      "memo": "인계 내용 반영 후 조장 업무, 과제, 준비물, 질문 리스트 정리",
+      "completed": false,
+      "createdAt": "2026-04-11T09:44:43.044279"
+    }
+  ]
+}

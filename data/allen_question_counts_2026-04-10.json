@@ -1,0 +1,1980 @@
+{
+  "capturedAt": "2026-04-10",
+  "source": "User-provided screenshots of Allen question counts",
+  "rule": "Ignore solved counts (x/y의 x) and use only total question counts (y)",
+  "notes": [
+    "순환기 12파트 '기타 심장 질환'은 스크린샷에 총 문제 수 배지가 보이지 않았음.",
+    "사용자가 먼저 준 순환기 총합 480과 01~11파트 합계가 정확히 480이므로, 12파트 총 문제 수는 0으로 기록함.",
+    "내분비 01파트 '내분비 및 대사질환의 접근'은 스크린샷에서 문제 수 배지가 보이지 않았음.",
+    "사용자가 먼저 준 내분비 총합 386과 02~12파트 합계가 정확히 386이므로, 01파트 총 문제 수는 0으로 기록함.",
+    "부인과 21~23파트 추가 캡처 반영 후 사용자 총합 465와 맞추기 위해 04파트 '무월경'을 63문항으로 보정 기록함.",
+    "류마티스 01파트 '류마티스 질환의 개요'는 배지가 보이지 않았으나, 사용자 총합 130과 02~13파트 합계가 일치해 0문항으로 기록함.",
+    "마이너는 여러 과(신경/피부/이비인후/안과/응급/정형/비뇨)가 섞인 과목이며, 10파트 '피부과 총론'과 15파트 '기타 피부질환'은 배지가 보이지 않았지만 총합 454와 다른 파트 합계가 일치해 0문항으로 기록함.",
+    "정신건강의학과 17파트 '파괴적, 충동조절 및 품행장애'는 배지가 보이지 않았지만 총합 569와 나머지 합계가 일치해 0문항으로 기록함.",
+    "외과총론은 현재 02~10파트만 캡처되었고, 해당 합계가 이미 사용자 총합 221와 일치하므로 01파트는 미확인 0문항으로 임시 기록함.",
+    "rotationWeights에서 신경과/정형외과/비뇨의학과 값은 마이너 과목 내부 세부 파트 합으로 파생한 값이다. 신경과는 '신경과/신경외과' 묶음 기준이라 신경외과 문항이 포함된다.",
+    "소화기 21파트, 신장 11파트, 알레르기 7파트, 감염 12파트, 혈액 12파트의 파트별 문항 수를 추가 반영했고 모두 사용자가 पहले 준 과 총합과 일치함.",
+    "혈액종양내과 로테이션 계산용 가중치는 현재 혈액 163 + 종양 14 = 177로 유지한다.",
+    "종양 파트별 문항 수는 01 종양의 진단/치료 5문항, 02 종양의 합병증 9문항으로 추가 반영 완료했다."
+  ],
+  "rotationWeights": {
+    "심장내과": 480,
+    "호흡기내과": 597,
+    "내분비내과": 386,
+    "류마티스내과": 130,
+    "소아청소년과": 778,
+    "산부인과": 834,
+    "신경과": 168,
+    "정형외과": 44,
+    "비뇨의학과": 19,
+    "소화기내과": 767,
+    "신장내과": 298,
+    "감염내과": 265,
+    "혈액종양내과": 177
+  },
+  "subjects": {
+    "circulation": {
+      "labelKo": "순환기",
+      "rotationLabel": "심장내과",
+      "totalQuestions": 480,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "순환기 총론",
+          "theoryCount": 5,
+          "totalQuestions": 25
+        },
+        {
+          "partNo": "02",
+          "nameKo": "고혈압",
+          "theoryCount": 1,
+          "totalQuestions": 50
+        },
+        {
+          "partNo": "03",
+          "nameKo": "부정맥",
+          "theoryCount": 14,
+          "totalQuestions": 104
+        },
+        {
+          "partNo": "04",
+          "nameKo": "허혈성 심장질환",
+          "theoryCount": 3,
+          "totalQuestions": 95
+        },
+        {
+          "partNo": "05",
+          "nameKo": "심부전",
+          "theoryCount": 4,
+          "totalQuestions": 49
+        },
+        {
+          "partNo": "06",
+          "nameKo": "심인성 쇼크, 급성 폐부종",
+          "theoryCount": 1,
+          "totalQuestions": 9
+        },
+        {
+          "partNo": "07",
+          "nameKo": "판막질환",
+          "theoryCount": 8,
+          "totalQuestions": 51
+        },
+        {
+          "partNo": "08",
+          "nameKo": "심근 질환",
+          "theoryCount": 4,
+          "totalQuestions": 24
+        },
+        {
+          "partNo": "09",
+          "nameKo": "심장막 질환",
+          "theoryCount": 3,
+          "totalQuestions": 44
+        },
+        {
+          "partNo": "10",
+          "nameKo": "대동맥 질환",
+          "theoryCount": 1,
+          "totalQuestions": 18
+        },
+        {
+          "partNo": "11",
+          "nameKo": "감염심내막염",
+          "theoryCount": 1,
+          "totalQuestions": 11
+        },
+        {
+          "partNo": "12",
+          "nameKo": "기타 심장 질환",
+          "theoryCount": 1,
+          "totalQuestions": 0,
+          "inferred": true
+        }
+      ]
+    },
+    "respiratory": {
+      "labelKo": "호흡기",
+      "rotationLabel": "호흡기내과",
+      "totalQuestions": 597,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "호흡기 총론",
+          "theoryCount": 4,
+          "totalQuestions": 59
+        },
+        {
+          "partNo": "02",
+          "nameKo": "폐기능 장애",
+          "theoryCount": 3,
+          "totalQuestions": 12
+        },
+        {
+          "partNo": "03",
+          "nameKo": "폐질환 검사법",
+          "theoryCount": 2,
+          "totalQuestions": 20
+        },
+        {
+          "partNo": "04",
+          "nameKo": "폐렴",
+          "theoryCount": 2,
+          "totalQuestions": 39
+        },
+        {
+          "partNo": "05",
+          "nameKo": "폐농양",
+          "theoryCount": 1,
+          "totalQuestions": 16
+        },
+        {
+          "partNo": "06",
+          "nameKo": "폐결핵",
+          "theoryCount": 3,
+          "totalQuestions": 49
+        },
+        {
+          "partNo": "07",
+          "nameKo": "천식",
+          "theoryCount": 2,
+          "totalQuestions": 56
+        },
+        {
+          "partNo": "08",
+          "nameKo": "만성폐쇄성폐질환",
+          "theoryCount": 2,
+          "totalQuestions": 56
+        },
+        {
+          "partNo": "09",
+          "nameKo": "기관지확장증",
+          "theoryCount": 1,
+          "totalQuestions": 10
+        },
+        {
+          "partNo": "10",
+          "nameKo": "간질성 폐질환",
+          "theoryCount": 4,
+          "totalQuestions": 51
+        },
+        {
+          "partNo": "11",
+          "nameKo": "호산구성 폐질환",
+          "theoryCount": 3,
+          "totalQuestions": 7
+        },
+        {
+          "partNo": "12",
+          "nameKo": "직업성 폐질환",
+          "theoryCount": 1,
+          "totalQuestions": 14
+        },
+        {
+          "partNo": "13",
+          "nameKo": "폐암",
+          "theoryCount": 3,
+          "totalQuestions": 40
+        },
+        {
+          "partNo": "14",
+          "nameKo": "폐색전증",
+          "theoryCount": 1,
+          "totalQuestions": 44
+        },
+        {
+          "partNo": "15",
+          "nameKo": "흉막과 종격동 질환",
+          "theoryCount": 3,
+          "totalQuestions": 87
+        },
+        {
+          "partNo": "16",
+          "nameKo": "환기 장애",
+          "theoryCount": 2,
+          "totalQuestions": 11
+        },
+        {
+          "partNo": "17",
+          "nameKo": "급성호흡곤란증후군",
+          "theoryCount": 3,
+          "totalQuestions": 21
+        },
+        {
+          "partNo": "18",
+          "nameKo": "기타 폐질환",
+          "theoryCount": 3,
+          "totalQuestions": 5
+        }
+      ]
+    },
+    "endocrine": {
+      "labelKo": "내분비",
+      "rotationLabel": "내분비내과",
+      "totalQuestions": 386,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "내분비 및 대사질환의 접근",
+          "theoryCount": 1,
+          "totalQuestions": 0,
+          "inferred": true
+        },
+        {
+          "partNo": "02",
+          "nameKo": "뇌하수체 전엽 질환",
+          "theoryCount": 6,
+          "totalQuestions": 35
+        },
+        {
+          "partNo": "03",
+          "nameKo": "뇌하수체 후엽 질환",
+          "theoryCount": 1,
+          "totalQuestions": 19
+        },
+        {
+          "partNo": "04",
+          "nameKo": "갑상샘 질환",
+          "theoryCount": 11,
+          "totalQuestions": 96
+        },
+        {
+          "partNo": "05",
+          "nameKo": "부신 피질 질환",
+          "theoryCount": 5,
+          "totalQuestions": 54
+        },
+        {
+          "partNo": "06",
+          "nameKo": "부신 수질 질환",
+          "theoryCount": 1,
+          "totalQuestions": 15
+        },
+        {
+          "partNo": "07",
+          "nameKo": "당뇨병",
+          "theoryCount": 5,
+          "totalQuestions": 97
+        },
+        {
+          "partNo": "08",
+          "nameKo": "저혈당",
+          "theoryCount": 1,
+          "totalQuestions": 18
+        },
+        {
+          "partNo": "09",
+          "nameKo": "이상지질혈증과 비만 및 대사증후군",
+          "theoryCount": 4,
+          "totalQuestions": 34
+        },
+        {
+          "partNo": "10",
+          "nameKo": "부갑상샘 및 칼슘 대사",
+          "theoryCount": 3,
+          "totalQuestions": 12
+        },
+        {
+          "partNo": "11",
+          "nameKo": "뼈엉성증(골다공증)",
+          "theoryCount": 1,
+          "totalQuestions": 5
+        },
+        {
+          "partNo": "12",
+          "nameKo": "기타 내분비 질환",
+          "theoryCount": 1,
+          "totalQuestions": 1
+        }
+      ]
+    },
+    "obstetrics": {
+      "labelKo": "산과",
+      "rotationLabel": "산부인과",
+      "totalQuestions": 369,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "임신에 대한 모체의 적응",
+          "theoryCount": 1,
+          "totalQuestions": 3
+        },
+        {
+          "partNo": "02",
+          "nameKo": "산전진찰",
+          "theoryCount": 3,
+          "totalQuestions": 16
+        },
+        {
+          "partNo": "03",
+          "nameKo": "임신 중 태아감시",
+          "theoryCount": 2,
+          "totalQuestions": 18
+        },
+        {
+          "partNo": "04",
+          "nameKo": "난산",
+          "theoryCount": 2,
+          "totalQuestions": 48
+        },
+        {
+          "partNo": "05",
+          "nameKo": "조산",
+          "theoryCount": 3,
+          "totalQuestions": 50
+        },
+        {
+          "partNo": "06",
+          "nameKo": "과숙임신",
+          "theoryCount": 1,
+          "totalQuestions": 4
+        },
+        {
+          "partNo": "07",
+          "nameKo": "태아성장지연",
+          "theoryCount": 1,
+          "totalQuestions": 14
+        },
+        {
+          "partNo": "08",
+          "nameKo": "다태임신",
+          "theoryCount": 1,
+          "totalQuestions": 7
+        },
+        {
+          "partNo": "09",
+          "nameKo": "양수, 태반, 탯줄 이상",
+          "theoryCount": 1,
+          "totalQuestions": 4
+        },
+        {
+          "partNo": "10",
+          "nameKo": "태아 질환 및 손상",
+          "theoryCount": 1,
+          "totalQuestions": 2
+        },
+        {
+          "partNo": "11",
+          "nameKo": "자궁외 임신",
+          "theoryCount": 1,
+          "totalQuestions": 24
+        },
+        {
+          "partNo": "12",
+          "nameKo": "유산",
+          "theoryCount": 1,
+          "totalQuestions": 18
+        },
+        {
+          "partNo": "13",
+          "nameKo": "임신 고혈압",
+          "theoryCount": 1,
+          "totalQuestions": 37
+        },
+        {
+          "partNo": "14",
+          "nameKo": "산과적 출혈",
+          "theoryCount": 2,
+          "totalQuestions": 51
+        },
+        {
+          "partNo": "15",
+          "nameKo": "산욕기 질환",
+          "theoryCount": 1,
+          "totalQuestions": 24
+        },
+        {
+          "partNo": "16",
+          "nameKo": "임신의 내/외과적 합병증",
+          "theoryCount": 4,
+          "totalQuestions": 49
+        }
+      ]
+    },
+    "gynecology": {
+      "labelKo": "부인과",
+      "rotationLabel": "산부인과",
+      "totalQuestions": 465,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "가족계획",
+          "theoryCount": 1,
+          "totalQuestions": 24
+        },
+        {
+          "partNo": "02",
+          "nameKo": "성폭행",
+          "theoryCount": 1,
+          "totalQuestions": 15
+        },
+        {
+          "partNo": "03",
+          "nameKo": "불임",
+          "theoryCount": 2,
+          "totalQuestions": 27
+        },
+        {
+          "partNo": "04",
+          "nameKo": "무월경",
+          "theoryCount": 4,
+          "totalQuestions": 63,
+          "inferred": true
+        },
+        {
+          "partNo": "05",
+          "nameKo": "다낭성 난소 증후군",
+          "theoryCount": 1,
+          "totalQuestions": 18
+        },
+        {
+          "partNo": "06",
+          "nameKo": "폐경",
+          "theoryCount": 1,
+          "totalQuestions": 21
+        },
+        {
+          "partNo": "07",
+          "nameKo": "비정상 자궁출혈",
+          "theoryCount": 1,
+          "totalQuestions": 15
+        },
+        {
+          "partNo": "08",
+          "nameKo": "골반통",
+          "theoryCount": 2,
+          "totalQuestions": 20
+        },
+        {
+          "partNo": "09",
+          "nameKo": "여성생식기 선천기형",
+          "theoryCount": 1,
+          "totalQuestions": 7
+        },
+        {
+          "partNo": "10",
+          "nameKo": "부인과 감염질환",
+          "theoryCount": 3,
+          "totalQuestions": 68
+        },
+        {
+          "partNo": "11",
+          "nameKo": "비뇨부인과",
+          "theoryCount": 2,
+          "totalQuestions": 27
+        },
+        {
+          "partNo": "12",
+          "nameKo": "자궁근종",
+          "theoryCount": 1,
+          "totalQuestions": 24
+        },
+        {
+          "partNo": "13",
+          "nameKo": "자궁내막증",
+          "theoryCount": 1,
+          "totalQuestions": 18
+        },
+        {
+          "partNo": "14",
+          "nameKo": "자궁샘근육증",
+          "theoryCount": 1,
+          "totalQuestions": 12
+        },
+        {
+          "partNo": "15",
+          "nameKo": "자궁경부 상피내 종양",
+          "theoryCount": 2,
+          "totalQuestions": 22
+        },
+        {
+          "partNo": "16",
+          "nameKo": "자궁경부암",
+          "theoryCount": 1,
+          "totalQuestions": 9
+        },
+        {
+          "partNo": "17",
+          "nameKo": "자궁내막증식증",
+          "theoryCount": 1,
+          "totalQuestions": 22
+        },
+        {
+          "partNo": "18",
+          "nameKo": "자궁내막암",
+          "theoryCount": 1,
+          "totalQuestions": 2
+        },
+        {
+          "partNo": "19",
+          "nameKo": "골반 종괴",
+          "theoryCount": 1,
+          "totalQuestions": 23
+        },
+        {
+          "partNo": "20",
+          "nameKo": "상피성 난소암",
+          "theoryCount": 1,
+          "totalQuestions": 6
+        },
+        {
+          "partNo": "21",
+          "nameKo": "비상피성 난소암",
+          "theoryCount": 2,
+          "totalQuestions": 9
+        },
+        {
+          "partNo": "22",
+          "nameKo": "외음부암",
+          "theoryCount": 1,
+          "totalQuestions": 5
+        },
+        {
+          "partNo": "23",
+          "nameKo": "임신융모질환",
+          "theoryCount": 1,
+          "totalQuestions": 8
+        }
+      ]
+    },
+    "pediatrics_general": {
+      "labelKo": "소아청소년과총론",
+      "rotationLabel": "소아청소년과",
+      "combinedRotationTotal": 778,
+      "totalQuestions": 209,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "소아의 진찰",
+          "theoryCount": 1,
+          "totalQuestions": 4
+        },
+        {
+          "partNo": "02",
+          "nameKo": "소아의 발달",
+          "theoryCount": 1,
+          "totalQuestions": 15
+        },
+        {
+          "partNo": "03",
+          "nameKo": "소아의 영양",
+          "theoryCount": 1,
+          "totalQuestions": 12
+        },
+        {
+          "partNo": "04",
+          "nameKo": "예방 소아과학",
+          "theoryCount": 1,
+          "totalQuestions": 15
+        },
+        {
+          "partNo": "05",
+          "nameKo": "수분 및 전해질 평형",
+          "theoryCount": 1,
+          "totalQuestions": 14
+        },
+        {
+          "partNo": "06",
+          "nameKo": "유전 및 유전성 대사질환",
+          "theoryCount": 2,
+          "totalQuestions": 15
+        },
+        {
+          "partNo": "07",
+          "nameKo": "신생아 질환 - 고위험 신생아",
+          "theoryCount": 1,
+          "totalQuestions": 4
+        },
+        {
+          "partNo": "08",
+          "nameKo": "신생아 질환 - 분만손상",
+          "theoryCount": 1,
+          "totalQuestions": 9
+        },
+        {
+          "partNo": "09",
+          "nameKo": "신생아 질환 - 주산기 가사 및 소생술",
+          "theoryCount": 1,
+          "totalQuestions": 15
+        },
+        {
+          "partNo": "10",
+          "nameKo": "신생아 질환 - 호흡기",
+          "theoryCount": 1,
+          "totalQuestions": 38
+        },
+        {
+          "partNo": "11",
+          "nameKo": "신생아 질환 - 소화기",
+          "theoryCount": 1,
+          "totalQuestions": 14
+        },
+        {
+          "partNo": "12",
+          "nameKo": "신생아 질환 - 신생아 황달",
+          "theoryCount": 1,
+          "totalQuestions": 37
+        },
+        {
+          "partNo": "13",
+          "nameKo": "신생아 질환 - 기타",
+          "theoryCount": 1,
+          "totalQuestions": 17
+        }
+      ]
+    },
+    "pediatrics_specific": {
+      "labelKo": "소아청소년과각론",
+      "rotationLabel": "소아청소년과",
+      "combinedRotationTotal": 778,
+      "totalQuestions": 569,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "감염병",
+          "theoryCount": 2,
+          "totalQuestions": 51
+        },
+        {
+          "partNo": "02",
+          "nameKo": "소화기 질환",
+          "theoryCount": 10,
+          "totalQuestions": 105
+        },
+        {
+          "partNo": "03",
+          "nameKo": "호흡기 질환",
+          "theoryCount": 3,
+          "totalQuestions": 58
+        },
+        {
+          "partNo": "04",
+          "nameKo": "심혈관 질환",
+          "theoryCount": 4,
+          "totalQuestions": 66
+        },
+        {
+          "partNo": "05",
+          "nameKo": "면역학",
+          "theoryCount": 1,
+          "totalQuestions": 1
+        },
+        {
+          "partNo": "06",
+          "nameKo": "결체조직 질환",
+          "theoryCount": 3,
+          "totalQuestions": 34
+        },
+        {
+          "partNo": "07",
+          "nameKo": "혈액 질환",
+          "theoryCount": 2,
+          "totalQuestions": 14
+        },
+        {
+          "partNo": "08",
+          "nameKo": "종양성 질환",
+          "theoryCount": 2,
+          "totalQuestions": 33
+        },
+        {
+          "partNo": "09",
+          "nameKo": "신요로 질환",
+          "theoryCount": 4,
+          "totalQuestions": 38
+        },
+        {
+          "partNo": "10",
+          "nameKo": "내분비 질환",
+          "theoryCount": 7,
+          "totalQuestions": 55
+        },
+        {
+          "partNo": "11",
+          "nameKo": "신경계 질환",
+          "theoryCount": 8,
+          "totalQuestions": 82
+        },
+        {
+          "partNo": "12",
+          "nameKo": "골격계 질환",
+          "theoryCount": 1,
+          "totalQuestions": 3
+        },
+        {
+          "partNo": "13",
+          "nameKo": "알레르기 질환",
+          "theoryCount": 2,
+          "totalQuestions": 18
+        },
+        {
+          "partNo": "14",
+          "nameKo": "손상과 중독",
+          "theoryCount": 2,
+          "totalQuestions": 11
+        }
+      ]
+    },
+    "rheumatology": {
+      "labelKo": "류마티스",
+      "rotationLabel": "류마티스내과",
+      "totalQuestions": 130,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "류마티스 질환의 개요",
+          "theoryCount": 2,
+          "totalQuestions": 0,
+          "inferred": true
+        },
+        {
+          "partNo": "02",
+          "nameKo": "전신홍반루푸스",
+          "theoryCount": 2,
+          "totalQuestions": 18
+        },
+        {
+          "partNo": "03",
+          "nameKo": "전신경화증",
+          "theoryCount": 1,
+          "totalQuestions": 2
+        },
+        {
+          "partNo": "04",
+          "nameKo": "쇼그렌 증후군",
+          "theoryCount": 1,
+          "totalQuestions": 2
+        },
+        {
+          "partNo": "05",
+          "nameKo": "혈관염",
+          "theoryCount": 1,
+          "totalQuestions": 3
+        },
+        {
+          "partNo": "06",
+          "nameKo": "염증성 근육병증",
+          "theoryCount": 1,
+          "totalQuestions": 6
+        },
+        {
+          "partNo": "07",
+          "nameKo": "베체트병",
+          "theoryCount": 1,
+          "totalQuestions": 7
+        },
+        {
+          "partNo": "08",
+          "nameKo": "척추관절염",
+          "theoryCount": 2,
+          "totalQuestions": 21
+        },
+        {
+          "partNo": "09",
+          "nameKo": "류마티스관절염",
+          "theoryCount": 1,
+          "totalQuestions": 23
+        },
+        {
+          "partNo": "10",
+          "nameKo": "골관절염",
+          "theoryCount": 1,
+          "totalQuestions": 19
+        },
+        {
+          "partNo": "11",
+          "nameKo": "결정유발 관절염",
+          "theoryCount": 1,
+          "totalQuestions": 19
+        },
+        {
+          "partNo": "12",
+          "nameKo": "감염 관절염",
+          "theoryCount": 1,
+          "totalQuestions": 8
+        },
+        {
+          "partNo": "13",
+          "nameKo": "기타 류마티스 질환",
+          "theoryCount": 1,
+          "totalQuestions": 2
+        }
+      ]
+    },
+    "minor": {
+      "labelKo": "마이너",
+      "rotationLabel": null,
+      "totalQuestions": 454,
+      "derivedRotationSubtotals": {
+        "신경과": 168,
+        "정형외과": 44,
+        "비뇨의학과": 19
+      },
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "신경과/신경외과-신경계 총론",
+          "theoryCount": 3,
+          "totalQuestions": 18
+        },
+        {
+          "partNo": "02",
+          "nameKo": "신경과/신경외과-뇌혈관질환",
+          "theoryCount": 3,
+          "totalQuestions": 33
+        },
+        {
+          "partNo": "03",
+          "nameKo": "신경과/신경외과-발작",
+          "theoryCount": 1,
+          "totalQuestions": 9
+        },
+        {
+          "partNo": "04",
+          "nameKo": "신경과/신경외과-뇌감염 질환",
+          "theoryCount": 1,
+          "totalQuestions": 18
+        },
+        {
+          "partNo": "05",
+          "nameKo": "신경과/신경외과-신경근육 질환",
+          "theoryCount": 1,
+          "totalQuestions": 13
+        },
+        {
+          "partNo": "06",
+          "nameKo": "신경과/신경외과-외상",
+          "theoryCount": 1,
+          "totalQuestions": 20
+        },
+        {
+          "partNo": "07",
+          "nameKo": "신경과/신경외과-이상운동 질환",
+          "theoryCount": 1,
+          "totalQuestions": 23
+        },
+        {
+          "partNo": "08",
+          "nameKo": "신경과/신경외과-두통",
+          "theoryCount": 1,
+          "totalQuestions": 31
+        },
+        {
+          "partNo": "09",
+          "nameKo": "신경과/신경외과-뇌종양",
+          "theoryCount": 1,
+          "totalQuestions": 3
+        },
+        {
+          "partNo": "10",
+          "nameKo": "피부과-피부과 총론",
+          "theoryCount": 1,
+          "totalQuestions": 0,
+          "inferred": true
+        },
+        {
+          "partNo": "11",
+          "nameKo": "피부과-감염성 질환",
+          "theoryCount": 4,
+          "totalQuestions": 21
+        },
+        {
+          "partNo": "12",
+          "nameKo": "피부과-습진성 질환",
+          "theoryCount": 2,
+          "totalQuestions": 20
+        },
+        {
+          "partNo": "13",
+          "nameKo": "피부과-약물발진, 홍반 및 두드러기",
+          "theoryCount": 3,
+          "totalQuestions": 10
+        },
+        {
+          "partNo": "14",
+          "nameKo": "피부과-구진인설성 질환",
+          "theoryCount": 1,
+          "totalQuestions": 1
+        },
+        {
+          "partNo": "15",
+          "nameKo": "피부과-기타 피부질환",
+          "theoryCount": 4,
+          "totalQuestions": 0,
+          "inferred": true
+        },
+        {
+          "partNo": "16",
+          "nameKo": "이비인후과-이과학",
+          "theoryCount": 6,
+          "totalQuestions": 42
+        },
+        {
+          "partNo": "17",
+          "nameKo": "이비인후과-비과학",
+          "theoryCount": 4,
+          "totalQuestions": 7
+        },
+        {
+          "partNo": "18",
+          "nameKo": "이비인후과-두경부학",
+          "theoryCount": 2,
+          "totalQuestions": 1
+        },
+        {
+          "partNo": "19",
+          "nameKo": "안과-결막, 각막, 수정체 질환",
+          "theoryCount": 3,
+          "totalQuestions": 20
+        },
+        {
+          "partNo": "20",
+          "nameKo": "안과-망막, 포도막 질환",
+          "theoryCount": 4,
+          "totalQuestions": 11
+        },
+        {
+          "partNo": "21",
+          "nameKo": "안과-녹내장",
+          "theoryCount": 1,
+          "totalQuestions": 7
+        },
+        {
+          "partNo": "22",
+          "nameKo": "안과-안구 외 질환",
+          "theoryCount": 4,
+          "totalQuestions": 4
+        },
+        {
+          "partNo": "23",
+          "nameKo": "응급의학과-심폐소생술",
+          "theoryCount": 3,
+          "totalQuestions": 14
+        },
+        {
+          "partNo": "24",
+          "nameKo": "응급의학과-사고와 중독",
+          "theoryCount": 2,
+          "totalQuestions": 65
+        },
+        {
+          "partNo": "25",
+          "nameKo": "정형외과-견관절",
+          "theoryCount": 4,
+          "totalQuestions": 9
+        },
+        {
+          "partNo": "26",
+          "nameKo": "정형외과-주관절, 수부",
+          "theoryCount": 2,
+          "totalQuestions": 9
+        },
+        {
+          "partNo": "27",
+          "nameKo": "정형외과-척추",
+          "theoryCount": 4,
+          "totalQuestions": 8
+        },
+        {
+          "partNo": "28",
+          "nameKo": "정형외과-고관절",
+          "theoryCount": 1,
+          "totalQuestions": 4
+        },
+        {
+          "partNo": "29",
+          "nameKo": "정형외과-슬관절, 족부",
+          "theoryCount": 2,
+          "totalQuestions": 4
+        },
+        {
+          "partNo": "30",
+          "nameKo": "정형외과-기타",
+          "theoryCount": 2,
+          "totalQuestions": 10
+        },
+        {
+          "partNo": "31",
+          "nameKo": "비뇨기과-요석",
+          "theoryCount": 1,
+          "totalQuestions": 3
+        },
+        {
+          "partNo": "32",
+          "nameKo": "비뇨기과-비뇨기계 감염 질환",
+          "theoryCount": 1,
+          "totalQuestions": 3
+        },
+        {
+          "partNo": "33",
+          "nameKo": "비뇨기과-전립샘비대증과 종양",
+          "theoryCount": 2,
+          "totalQuestions": 3
+        },
+        {
+          "partNo": "34",
+          "nameKo": "비뇨기과-손상",
+          "theoryCount": 1,
+          "totalQuestions": 5
+        },
+        {
+          "partNo": "35",
+          "nameKo": "비뇨기과-음낭, 음경 질환",
+          "theoryCount": 3,
+          "totalQuestions": 5
+        }
+      ]
+    },
+    "preventive_medicine": {
+      "labelKo": "예방의학",
+      "rotationLabel": null,
+      "totalQuestions": 494,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "건강과 의료윤리",
+          "theoryCount": 2,
+          "totalQuestions": 57
+        },
+        {
+          "partNo": "02",
+          "nameKo": "역학-역학의 기본원리",
+          "theoryCount": 1,
+          "totalQuestions": 11
+        },
+        {
+          "partNo": "03",
+          "nameKo": "역학-역학적 자료",
+          "theoryCount": 2,
+          "totalQuestions": 23
+        },
+        {
+          "partNo": "04",
+          "nameKo": "역학-질병 및 사망분포의 측정",
+          "theoryCount": 1,
+          "totalQuestions": 21
+        },
+        {
+          "partNo": "05",
+          "nameKo": "역학-타당도, 신뢰도, 바이아스",
+          "theoryCount": 1,
+          "totalQuestions": 36
+        },
+        {
+          "partNo": "06",
+          "nameKo": "역학-역학적 연구방법",
+          "theoryCount": 2,
+          "totalQuestions": 49
+        },
+        {
+          "partNo": "07",
+          "nameKo": "역학-감염병의 역학",
+          "theoryCount": 1,
+          "totalQuestions": 45
+        },
+        {
+          "partNo": "08",
+          "nameKo": "역학-만성질환의 역학",
+          "theoryCount": 1,
+          "totalQuestions": 6
+        },
+        {
+          "partNo": "09",
+          "nameKo": "환경 및 산업보건-환경보건",
+          "theoryCount": 1,
+          "totalQuestions": 13
+        },
+        {
+          "partNo": "10",
+          "nameKo": "환경 및 산업보건-물리적 요인",
+          "theoryCount": 4,
+          "totalQuestions": 25
+        },
+        {
+          "partNo": "11",
+          "nameKo": "환경 및 산업보건-화학적 요인",
+          "theoryCount": 4,
+          "totalQuestions": 32
+        },
+        {
+          "partNo": "12",
+          "nameKo": "환경 및 산업보건-생활오염",
+          "theoryCount": 2,
+          "totalQuestions": 24
+        },
+        {
+          "partNo": "13",
+          "nameKo": "환경 및 산업보건-산업보건",
+          "theoryCount": 4,
+          "totalQuestions": 28
+        },
+        {
+          "partNo": "14",
+          "nameKo": "의료관리-서론",
+          "theoryCount": 2,
+          "totalQuestions": 23
+        },
+        {
+          "partNo": "15",
+          "nameKo": "의료관리-의료자원의 조직과 관리",
+          "theoryCount": 3,
+          "totalQuestions": 34
+        },
+        {
+          "partNo": "16",
+          "nameKo": "의료관리-건강관련 행태와 의료이용",
+          "theoryCount": 2,
+          "totalQuestions": 29
+        },
+        {
+          "partNo": "17",
+          "nameKo": "의료관리-의료보장",
+          "theoryCount": 2,
+          "totalQuestions": 25
+        },
+        {
+          "partNo": "18",
+          "nameKo": "의료관리-우리나라 의료정책과 보건행정체계",
+          "theoryCount": 3,
+          "totalQuestions": 13
+        }
+      ]
+    },
+    "medical_law": {
+      "labelKo": "의료법규",
+      "rotationLabel": null,
+      "totalQuestions": 436,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "보건의료기본법",
+          "theoryCount": 7,
+          "totalQuestions": 23
+        },
+        {
+          "partNo": "02",
+          "nameKo": "의료법(의료인)",
+          "theoryCount": 13,
+          "totalQuestions": 91
+        },
+        {
+          "partNo": "03",
+          "nameKo": "의료법(의료기관)",
+          "theoryCount": 8,
+          "totalQuestions": 64
+        },
+        {
+          "partNo": "04",
+          "nameKo": "응급의료에 관한 법률",
+          "theoryCount": 6,
+          "totalQuestions": 22
+        },
+        {
+          "partNo": "05",
+          "nameKo": "감염병의 예방 및 관리에 관한 법률",
+          "theoryCount": 4,
+          "totalQuestions": 45
+        },
+        {
+          "partNo": "06",
+          "nameKo": "검역법",
+          "theoryCount": 3,
+          "totalQuestions": 22
+        },
+        {
+          "partNo": "07",
+          "nameKo": "후천성면역결핍증 예방법",
+          "theoryCount": 4,
+          "totalQuestions": 25
+        },
+        {
+          "partNo": "08",
+          "nameKo": "국민건강보험법",
+          "theoryCount": 4,
+          "totalQuestions": 22
+        },
+        {
+          "partNo": "09",
+          "nameKo": "지역보건법",
+          "theoryCount": 3,
+          "totalQuestions": 22
+        },
+        {
+          "partNo": "10",
+          "nameKo": "마약류관리에 관한 법률",
+          "theoryCount": 5,
+          "totalQuestions": 44
+        },
+        {
+          "partNo": "11",
+          "nameKo": "국민건강증진법",
+          "theoryCount": 4,
+          "totalQuestions": 22
+        },
+        {
+          "partNo": "12",
+          "nameKo": "혈액관리법",
+          "theoryCount": 4,
+          "totalQuestions": 22
+        },
+        {
+          "partNo": "13",
+          "nameKo": "연명의료결정법",
+          "theoryCount": 1,
+          "totalQuestions": 12
+        }
+      ]
+    },
+    "psychiatry": {
+      "labelKo": "정신건강의학과",
+      "rotationLabel": null,
+      "totalQuestions": 569,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "인간의 발달",
+          "theoryCount": 1,
+          "totalQuestions": 2
+        },
+        {
+          "partNo": "02",
+          "nameKo": "인간행동의 사회심리학적 이해",
+          "theoryCount": 1,
+          "totalQuestions": 2
+        },
+        {
+          "partNo": "03",
+          "nameKo": "인간행동의 생물학적 이해",
+          "theoryCount": 1,
+          "totalQuestions": 1
+        },
+        {
+          "partNo": "04",
+          "nameKo": "정신병리학",
+          "theoryCount": 7,
+          "totalQuestions": 6
+        },
+        {
+          "partNo": "05",
+          "nameKo": "정신과적 평가",
+          "theoryCount": 2,
+          "totalQuestions": 2
+        },
+        {
+          "partNo": "06",
+          "nameKo": "생물학적 치료",
+          "theoryCount": 5,
+          "totalQuestions": 37
+        },
+        {
+          "partNo": "07",
+          "nameKo": "정신사회적 치료",
+          "theoryCount": 3,
+          "totalQuestions": 19
+        },
+        {
+          "partNo": "08",
+          "nameKo": "정신병적 장애",
+          "theoryCount": 4,
+          "totalQuestions": 46
+        },
+        {
+          "partNo": "09",
+          "nameKo": "기분장애",
+          "theoryCount": 2,
+          "totalQuestions": 77
+        },
+        {
+          "partNo": "10",
+          "nameKo": "불안장애",
+          "theoryCount": 1,
+          "totalQuestions": 40
+        },
+        {
+          "partNo": "11",
+          "nameKo": "강박 및 관련 장애",
+          "theoryCount": 1,
+          "totalQuestions": 20
+        },
+        {
+          "partNo": "12",
+          "nameKo": "외상 및 스트레스 관련 장애",
+          "theoryCount": 1,
+          "totalQuestions": 26
+        },
+        {
+          "partNo": "13",
+          "nameKo": "해리장애",
+          "theoryCount": 1,
+          "totalQuestions": 2
+        },
+        {
+          "partNo": "14",
+          "nameKo": "신체증상 및 관련 장애",
+          "theoryCount": 1,
+          "totalQuestions": 23
+        },
+        {
+          "partNo": "15",
+          "nameKo": "섭식장애",
+          "theoryCount": 1,
+          "totalQuestions": 24
+        },
+        {
+          "partNo": "16",
+          "nameKo": "수면-각성장애",
+          "theoryCount": 1,
+          "totalQuestions": 34
+        },
+        {
+          "partNo": "17",
+          "nameKo": "파괴적, 충동조절 및 품행장애",
+          "theoryCount": 1,
+          "totalQuestions": 0,
+          "inferred": true
+        },
+        {
+          "partNo": "18",
+          "nameKo": "성격장애",
+          "theoryCount": 1,
+          "totalQuestions": 15
+        },
+        {
+          "partNo": "19",
+          "nameKo": "소아정신의학",
+          "theoryCount": 2,
+          "totalQuestions": 44
+        },
+        {
+          "partNo": "20",
+          "nameKo": "신경인지장애",
+          "theoryCount": 3,
+          "totalQuestions": 65
+        },
+        {
+          "partNo": "21",
+          "nameKo": "물질 관련 장애",
+          "theoryCount": 3,
+          "totalQuestions": 65
+        },
+        {
+          "partNo": "22",
+          "nameKo": "기타 정신장애",
+          "theoryCount": 5,
+          "totalQuestions": 19
+        }
+      ]
+    },
+    "surgery_general": {
+      "labelKo": "외과총론",
+      "rotationLabel": "외과",
+      "totalQuestions": 221,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": null,
+          "theoryCount": null,
+          "totalQuestions": 0,
+          "inferred": true
+        },
+        {
+          "partNo": "02",
+          "nameKo": "쇼크",
+          "theoryCount": 1,
+          "totalQuestions": 35
+        },
+        {
+          "partNo": "03",
+          "nameKo": "수혈의 원칙 및 부작용",
+          "theoryCount": 2,
+          "totalQuestions": 32
+        },
+        {
+          "partNo": "04",
+          "nameKo": "수술 환자의 신진대사",
+          "theoryCount": 2,
+          "totalQuestions": 9
+        },
+        {
+          "partNo": "05",
+          "nameKo": "외과적 창상",
+          "theoryCount": 1,
+          "totalQuestions": 3
+        },
+        {
+          "partNo": "06",
+          "nameKo": "수술 전 처치",
+          "theoryCount": 1,
+          "totalQuestions": 10
+        },
+        {
+          "partNo": "07",
+          "nameKo": "외과적 합병증",
+          "theoryCount": 3,
+          "totalQuestions": 57
+        },
+        {
+          "partNo": "08",
+          "nameKo": "외상",
+          "theoryCount": 4,
+          "totalQuestions": 50
+        },
+        {
+          "partNo": "09",
+          "nameKo": "화상",
+          "theoryCount": 1,
+          "totalQuestions": 15
+        },
+        {
+          "partNo": "10",
+          "nameKo": "뱀물림과 동물물림",
+          "theoryCount": 1,
+          "totalQuestions": 10
+        }
+      ]
+    },
+    "surgery_specific": {
+      "labelKo": "외과각론",
+      "rotationLabel": "외과",
+      "totalQuestions": 413,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "유방",
+          "theoryCount": 3,
+          "totalQuestions": 55
+        },
+        {
+          "partNo": "02",
+          "nameKo": "갑상샘",
+          "theoryCount": 1,
+          "totalQuestions": 23
+        },
+        {
+          "partNo": "03",
+          "nameKo": "탈장 및 복벽질환",
+          "theoryCount": 1,
+          "totalQuestions": 33
+        },
+        {
+          "partNo": "04",
+          "nameKo": "급성 복증",
+          "theoryCount": 1,
+          "totalQuestions": 17
+        },
+        {
+          "partNo": "05",
+          "nameKo": "위 식도 샘창자",
+          "theoryCount": 4,
+          "totalQuestions": 40
+        },
+        {
+          "partNo": "06",
+          "nameKo": "소장",
+          "theoryCount": 2,
+          "totalQuestions": 33
+        },
+        {
+          "partNo": "07",
+          "nameKo": "충수돌기",
+          "theoryCount": 2,
+          "totalQuestions": 16
+        },
+        {
+          "partNo": "08",
+          "nameKo": "대장",
+          "theoryCount": 2,
+          "totalQuestions": 21
+        },
+        {
+          "partNo": "09",
+          "nameKo": "항문",
+          "theoryCount": 1,
+          "totalQuestions": 28
+        },
+        {
+          "partNo": "10",
+          "nameKo": "간",
+          "theoryCount": 3,
+          "totalQuestions": 17
+        },
+        {
+          "partNo": "11",
+          "nameKo": "담도",
+          "theoryCount": 6,
+          "totalQuestions": 48
+        },
+        {
+          "partNo": "12",
+          "nameKo": "이자",
+          "theoryCount": 2,
+          "totalQuestions": 4
+        },
+        {
+          "partNo": "13",
+          "nameKo": "혈관",
+          "theoryCount": 6,
+          "totalQuestions": 55
+        },
+        {
+          "partNo": "14",
+          "nameKo": "소아외과",
+          "theoryCount": 1,
+          "totalQuestions": 23
+        }
+      ]
+    },
+    "gastroenterology": {
+      "labelKo": "소화기",
+      "rotationLabel": "소화기내과",
+      "totalQuestions": 767,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "위장관-총론",
+          "theoryCount": 6,
+          "totalQuestions": 56
+        },
+        {
+          "partNo": "02",
+          "nameKo": "위장관-위장관 출혈",
+          "theoryCount": 1,
+          "totalQuestions": 23
+        },
+        {
+          "partNo": "03",
+          "nameKo": "위장관-식도질환",
+          "theoryCount": 6,
+          "totalQuestions": 69
+        },
+        {
+          "partNo": "04",
+          "nameKo": "위장관-소화성 궤양",
+          "theoryCount": 2,
+          "totalQuestions": 47
+        },
+        {
+          "partNo": "05",
+          "nameKo": "위장관-위암",
+          "theoryCount": 1,
+          "totalQuestions": 16
+        },
+        {
+          "partNo": "06",
+          "nameKo": "위장관-흡수장애",
+          "theoryCount": 1,
+          "totalQuestions": 9
+        },
+        {
+          "partNo": "07",
+          "nameKo": "위장관-염증성 장질환",
+          "theoryCount": 2,
+          "totalQuestions": 71
+        },
+        {
+          "partNo": "08",
+          "nameKo": "위장관-과민대장증후군",
+          "theoryCount": 1,
+          "totalQuestions": 20
+        },
+        {
+          "partNo": "09",
+          "nameKo": "위장관-결주머니 질환",
+          "theoryCount": 1,
+          "totalQuestions": 12
+        },
+        {
+          "partNo": "10",
+          "nameKo": "위장관-혈관성 장질환",
+          "theoryCount": 1,
+          "totalQuestions": 21
+        },
+        {
+          "partNo": "11",
+          "nameKo": "위장관-급성 장폐색",
+          "theoryCount": 1,
+          "totalQuestions": 23
+        },
+        {
+          "partNo": "12",
+          "nameKo": "위장관-하부위장관 종양",
+          "theoryCount": 1,
+          "totalQuestions": 34
+        },
+        {
+          "partNo": "13",
+          "nameKo": "간담췌-총론",
+          "theoryCount": 3,
+          "totalQuestions": 29
+        },
+        {
+          "partNo": "14",
+          "nameKo": "간담췌-급성 간염",
+          "theoryCount": 3,
+          "totalQuestions": 27
+        },
+        {
+          "partNo": "15",
+          "nameKo": "간담췌-만성 간염",
+          "theoryCount": 3,
+          "totalQuestions": 23
+        },
+        {
+          "partNo": "16",
+          "nameKo": "간담췌-알코올성/비알코올성 간질환",
+          "theoryCount": 2,
+          "totalQuestions": 9
+        },
+        {
+          "partNo": "17",
+          "nameKo": "간담췌-간경변 및 합병증",
+          "theoryCount": 7,
+          "totalQuestions": 77
+        },
+        {
+          "partNo": "18",
+          "nameKo": "간담췌-간 종양",
+          "theoryCount": 1,
+          "totalQuestions": 23
+        },
+        {
+          "partNo": "19",
+          "nameKo": "간담췌-간농양 및 기타 간질환",
+          "theoryCount": 2,
+          "totalQuestions": 25
+        },
+        {
+          "partNo": "20",
+          "nameKo": "간담췌-담도질환",
+          "theoryCount": 5,
+          "totalQuestions": 79
+        },
+        {
+          "partNo": "21",
+          "nameKo": "간담췌-이자질환",
+          "theoryCount": 4,
+          "totalQuestions": 74
+        }
+      ]
+    },
+    "nephrology": {
+      "labelKo": "신장",
+      "rotationLabel": "신장내과",
+      "totalQuestions": 298,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "수분 및 전해질 대사 장애",
+          "theoryCount": 4,
+          "totalQuestions": 28
+        },
+        {
+          "partNo": "02",
+          "nameKo": "산-염기 대사장애",
+          "theoryCount": 3,
+          "totalQuestions": 12
+        },
+        {
+          "partNo": "03",
+          "nameKo": "세관기능장애",
+          "theoryCount": 2,
+          "totalQuestions": 11
+        },
+        {
+          "partNo": "04",
+          "nameKo": "콩팥질환의 접근",
+          "theoryCount": 3,
+          "totalQuestions": 37
+        },
+        {
+          "partNo": "05",
+          "nameKo": "급성콩팥기능상실",
+          "theoryCount": 2,
+          "totalQuestions": 37
+        },
+        {
+          "partNo": "06",
+          "nameKo": "만성콩팥기능상실/신대체요법",
+          "theoryCount": 3,
+          "totalQuestions": 20
+        },
+        {
+          "partNo": "07",
+          "nameKo": "콩팥토리 질환",
+          "theoryCount": 3,
+          "totalQuestions": 61
+        },
+        {
+          "partNo": "08",
+          "nameKo": "콩팥세관사이질/혈관 질환",
+          "theoryCount": 2,
+          "totalQuestions": 32
+        },
+        {
+          "partNo": "09",
+          "nameKo": "다낭성 신질환",
+          "theoryCount": 1,
+          "totalQuestions": 8
+        },
+        {
+          "partNo": "10",
+          "nameKo": "요로돌/요로폐색",
+          "theoryCount": 1,
+          "totalQuestions": 20
+        },
+        {
+          "partNo": "11",
+          "nameKo": "요로감염",
+          "theoryCount": 4,
+          "totalQuestions": 32
+        }
+      ]
+    },
+    "allergy": {
+      "labelKo": "알레르기",
+      "rotationLabel": null,
+      "totalQuestions": 105,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "알레르기 질환의 진단",
+          "theoryCount": 1,
+          "totalQuestions": 4
+        },
+        {
+          "partNo": "02",
+          "nameKo": "아나필락시스",
+          "theoryCount": 1,
+          "totalQuestions": 26
+        },
+        {
+          "partNo": "03",
+          "nameKo": "두드러기",
+          "theoryCount": 1,
+          "totalQuestions": 26
+        },
+        {
+          "partNo": "04",
+          "nameKo": "혈관부종",
+          "theoryCount": 1,
+          "totalQuestions": 10
+        },
+        {
+          "partNo": "05",
+          "nameKo": "알레르기 비염",
+          "theoryCount": 1,
+          "totalQuestions": 14
+        },
+        {
+          "partNo": "06",
+          "nameKo": "음식 알레르기",
+          "theoryCount": 1,
+          "totalQuestions": 5
+        },
+        {
+          "partNo": "07",
+          "nameKo": "약물 알레르기",
+          "theoryCount": 1,
+          "totalQuestions": 20
+        }
+      ]
+    },
+    "infectious_disease": {
+      "labelKo": "감염",
+      "rotationLabel": "감염내과",
+      "totalQuestions": 265,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "감염성 질환에 관한 기본 고찰",
+          "theoryCount": 3,
+          "totalQuestions": 16
+        },
+        {
+          "partNo": "02",
+          "nameKo": "지역사회 감염증",
+          "theoryCount": 2,
+          "totalQuestions": 15
+        },
+        {
+          "partNo": "03",
+          "nameKo": "병원 내 감염",
+          "theoryCount": 3,
+          "totalQuestions": 21
+        },
+        {
+          "partNo": "04",
+          "nameKo": "그람양성균에 의한 질환",
+          "theoryCount": 5,
+          "totalQuestions": 35
+        },
+        {
+          "partNo": "05",
+          "nameKo": "그람음성균에 의한 질환",
+          "theoryCount": 6,
+          "totalQuestions": 31
+        },
+        {
+          "partNo": "06",
+          "nameKo": "스피로헤타병",
+          "theoryCount": 3,
+          "totalQuestions": 18
+        },
+        {
+          "partNo": "07",
+          "nameKo": "리케차",
+          "theoryCount": 1,
+          "totalQuestions": 14
+        },
+        {
+          "partNo": "08",
+          "nameKo": "바이러스 질환",
+          "theoryCount": 10,
+          "totalQuestions": 66
+        },
+        {
+          "partNo": "09",
+          "nameKo": "진균 감염",
+          "theoryCount": 1,
+          "totalQuestions": 15
+        },
+        {
+          "partNo": "10",
+          "nameKo": "원생동물 감염",
+          "theoryCount": 2,
+          "totalQuestions": 15
+        },
+        {
+          "partNo": "11",
+          "nameKo": "기생충 감염",
+          "theoryCount": 1,
+          "totalQuestions": 2
+        },
+        {
+          "partNo": "12",
+          "nameKo": "성인예방접종",
+          "theoryCount": 1,
+          "totalQuestions": 17
+        }
+      ]
+    },
+    "hematology": {
+      "labelKo": "혈액",
+      "rotationLabel": null,
+      "totalQuestions": 163,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "빈혈의 접근",
+          "theoryCount": 1,
+          "totalQuestions": 2
+        },
+        {
+          "partNo": "02",
+          "nameKo": "소적혈구빈혈",
+          "theoryCount": 3,
+          "totalQuestions": 17
+        },
+        {
+          "partNo": "03",
+          "nameKo": "거대적혈모구빈혈",
+          "theoryCount": 1,
+          "totalQuestions": 17
+        },
+        {
+          "partNo": "04",
+          "nameKo": "재생불량성 빈혈",
+          "theoryCount": 1,
+          "totalQuestions": 4
+        },
+        {
+          "partNo": "05",
+          "nameKo": "용혈성 빈혈",
+          "theoryCount": 1,
+          "totalQuestions": 14
+        },
+        {
+          "partNo": "06",
+          "nameKo": "출혈질환의 접근",
+          "theoryCount": 2,
+          "totalQuestions": 7
+        },
+        {
+          "partNo": "07",
+          "nameKo": "혈소판 장애",
+          "theoryCount": 5,
+          "totalQuestions": 22
+        },
+        {
+          "partNo": "08",
+          "nameKo": "혈액응고인자의 장애",
+          "theoryCount": 3,
+          "totalQuestions": 15
+        },
+        {
+          "partNo": "09",
+          "nameKo": "파종혈관내응고",
+          "theoryCount": 1,
+          "totalQuestions": 7
+        },
+        {
+          "partNo": "10",
+          "nameKo": "백혈병",
+          "theoryCount": 1,
+          "totalQuestions": 22
+        },
+        {
+          "partNo": "11",
+          "nameKo": "림프종",
+          "theoryCount": 2,
+          "totalQuestions": 23
+        },
+        {
+          "partNo": "12",
+          "nameKo": "기타 혈액암",
+          "theoryCount": 1,
+          "totalQuestions": 13
+        }
+      ]
+    },
+    "oncology": {
+      "labelKo": "종양",
+      "rotationLabel": "혈액종양내과",
+      "totalQuestions": 14,
+      "parts": [
+        {
+          "partNo": "01",
+          "nameKo": "종양의 진단/치료",
+          "theoryCount": 2,
+          "totalQuestions": 5
+        },
+        {
+          "partNo": "02",
+          "nameKo": "종양의 합병증",
+          "theoryCount": 4,
+          "totalQuestions": 9
+        }
+      ]
+    }
+  }
+}
