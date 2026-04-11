@@ -3731,7 +3731,7 @@
             ? '막힘 이유'
             : '메모';
       subject.recentHistory = [`${formatDateLabel(new Date())} · ${fieldLabel} 업데이트`, ...(subject.recentHistory || [])].slice(0, 8);
-      renderAll();
+      saveState();
     }
 
     function toggleSubjectFlag(subjectId, field, checked) {
@@ -3760,6 +3760,12 @@
 
       recomputeSubjectFromParts(subject);
       subject.recentHistory = [`${formatDateLabel(new Date())} · ${part.partNo}. ${part.name} 업데이트`, ...(subject.recentHistory || [])].slice(0, 8);
+
+      if (field === 'blockedReason' || field === 'note') {
+        saveState();
+        return;
+      }
+
       renderAll();
     }
 
