@@ -5,7 +5,7 @@ import argparse
 import copy
 import json
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -410,40 +410,53 @@ def session_to_calendar_event(bundle: Dict[str, Any], session: Dict[str, Any]) -
     }
 
 
+def monday_start(date_text: str) -> datetime:
+    date = datetime.fromisoformat(date_text)
+    return date - timedelta(days=date.weekday())
+
+
+def assignment_summary_label(assignment: Dict[str, Any]) -> str:
+    start_date = (assignment.get('start_at') or '')[:10]
+    end_date = (assignment.get('hard_deadline') or '')[:10]
+    if start_date and end_date and start_date != end_date:
+        return f"{start_date[5:]}~{end_date[5:]}"
+    if end_date:
+        return end_date[5:]
+    if start_date:
+        return start_date[5:]
+    return '기간 확인'
+
+
 def assignment_to_events(bundle: Dict[str, Any], assignment: Dict[str, Any]) -> List[Dict[str, Any]]:
-    out = []
     prefix = safe_id(bundle['meta']['clerkship_id'])
-    if assignment.get('start_at'):
-        date, time = assignment['start_at'].split('T', 1)
+    start_date = (assignment.get('start_at') or assignment.get('hard_deadline') or '')[:10]
+    end_date = (assignment.get('hard_deadline') or assignment.get('start_at') or '')[:10]
+    if not start_date:
+        return []
+
+    week_cursor = monday_start(start_date)
+    last_week = monday_start(end_date)
+    anchors = []
+    while week_cursor <= last_week:
+        anchor_date = max(week_cursor.date().isoformat(), start_date)
+        if anchor_date <= end_date:
+            anchors.append(anchor_date)
+        week_cursor += timedelta(days=7)
+
+    label = assignment_summary_label(assignment)
+    out = []
+    for idx, anchor_date in enumerate(anchors, start=1):
         out.append({
-            'id': f"event-{prefix}-{safe_id(assignment['id'])}-start",
-            'date': date,
+            'id': f"event-{prefix}-{safe_id(assignment['id'])}-summary-w{idx}",
+            'date': anchor_date,
             'type': 'assignment',
-            'title': f"{assignment['name']} 착수",
-            'time': (time or '09:00')[:5],
+            'title': assignment['name'],
+            'time': label,
             'note': assignment.get('content_summary', ''),
             'completed': False,
             'difficulty': assignment.get('difficulty_total'),
             'track': bundle['meta'].get('track', ''),
-            'windowType': 'assignment-start',
-            'bundleId': bundle['meta']['clerkship_id'],
-            'sourceSessionId': '',
-            'sourceAssignmentId': assignment['id'],
-            'sourceKind': 'assignment'
-        })
-    if assignment.get('hard_deadline'):
-        date, time = assignment['hard_deadline'].split('T', 1)
-        out.append({
-            'id': f"event-{prefix}-{safe_id(assignment['id'])}-deadline",
-            'date': date,
-            'type': 'assignment',
-            'title': f"{assignment['name']} 마감",
-            'time': (time or '23:59')[:5],
-            'note': assignment.get('content_summary', ''),
-            'completed': False,
-            'difficulty': assignment.get('difficulty_total'),
-            'track': bundle['meta'].get('track', ''),
-            'windowType': 'assignment-deadline',
+            'windowType': 'assignment-summary',
             'bundleId': bundle['meta']['clerkship_id'],
             'sourceSessionId': '',
             'sourceAssignmentId': assignment['id'],
