@@ -3473,8 +3473,8 @@
                       </td>
                       <td><label class="parts-check"><input type="checkbox" ${part.conceptSent ? 'checked' : ''} onchange="togglePartFlag('${subject.id}','${part.id}','conceptSent', this.checked)" /></label></td>
                       <td><label class="parts-check"><input type="checkbox" ${part.trapSent ? 'checked' : ''} onchange="togglePartFlag('${subject.id}','${part.id}','trapSent', this.checked)" /></label></td>
-                      <td><textarea rows="2" onchange="updatePartField('${subject.id}','${part.id}','blockedReason', this.value)" placeholder="예: PFT 해석 막힘">${escapeHtml(part.blockedReason || '')}</textarea></td>
-                      <td><textarea rows="2" onchange="updatePartField('${subject.id}','${part.id}','note', this.value)" placeholder="예: COPD와 비교">${escapeHtml(part.note || '')}</textarea></td>
+                      <td><textarea rows="2" oninput="updatePartField('${subject.id}','${part.id}','blockedReason', this.value)" placeholder="예: PFT 해석 막힘">${escapeHtml(part.blockedReason || '')}</textarea></td>
+                      <td><textarea rows="2" oninput="updatePartField('${subject.id}','${part.id}','note', this.value)" placeholder="예: COPD와 비교">${escapeHtml(part.note || '')}</textarea></td>
                     </tr>
                   `).join('')}
                 </tbody>
@@ -3488,14 +3488,14 @@
               <div class="panel-title">취약 파트</div>
               <div class="panel-subtitle">약한 영역, 헷갈리는 포인트</div>
               <div class="field">
-                <textarea rows="5" onchange="updateSubjectText('${subject.id}','weakPoints', this.value)" placeholder="예: 심잡음 감별, PFT 해석, 산염기">${escapeHtml(subject.weakPoints || '')}</textarea>
+                <textarea rows="5" oninput="updateSubjectText('${subject.id}','weakPoints', this.value)" placeholder="예: 심잡음 감별, PFT 해석, 산염기">${escapeHtml(subject.weakPoints || '')}</textarea>
               </div>
             </div>
             <div class="section-block">
               <div class="panel-title">다음 액션</div>
               <div class="panel-subtitle">다음 세션에서 바로 할 작업</div>
               <div class="field">
-                <textarea rows="5" onchange="updateSubjectText('${subject.id}','nextAction', this.value)" placeholder="예: 순환기 문제 40문제 + 오답 반영">${escapeHtml(subject.nextAction || '')}</textarea>
+                <textarea rows="5" oninput="updateSubjectText('${subject.id}','nextAction', this.value)" placeholder="예: 순환기 문제 40문제 + 오답 반영">${escapeHtml(subject.nextAction || '')}</textarea>
               </div>
             </div>
           </div>
@@ -3504,7 +3504,7 @@
             <div class="panel-title">메모</div>
             <div class="panel-subtitle">과목 운영 원칙, 자료 위치, 체크 포인트</div>
             <div class="field">
-              <textarea rows="5" onchange="updateSubjectText('${subject.id}','note', this.value)" placeholder="예: 강의 듣고 24시간 안에 개념틀로 옮기기">${escapeHtml(subject.note || '')}</textarea>
+              <textarea rows="5" oninput="updateSubjectText('${subject.id}','note', this.value)" placeholder="예: 강의 듣고 24시간 안에 개념틀로 옮기기">${escapeHtml(subject.note || '')}</textarea>
             </div>
           </div>
 
@@ -3523,7 +3523,7 @@
             </div>
             <div class="field" style="margin-top:14px;">
               <label>막힘 이유</label>
-              <textarea rows="4" onchange="updateSubjectText('${subject.id}','blockedReason', this.value)" placeholder="예: 피로, 실습 과제, 전송 미룸, 교수님 확인 필요">${escapeHtml(subject.blockedReason || '')}</textarea>
+              <textarea rows="4" oninput="updateSubjectText('${subject.id}','blockedReason', this.value)" placeholder="예: 피로, 실습 과제, 전송 미룸, 교수님 확인 필요">${escapeHtml(subject.blockedReason || '')}</textarea>
             </div>
           </div>
 
