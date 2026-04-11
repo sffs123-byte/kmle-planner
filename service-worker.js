@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kmle-planner-v9';
+const CACHE_NAME = 'kmle-planner-v10';
 const ASSETS = [
   './',
   './index.html',
@@ -12,6 +12,44 @@ const ASSETS = [
   './data/canary_import_seed.json',
   './data/allen_question_counts_2026-04-10.json'
 ];
+const NETWORK_FIRST_PATHS = new Set(['/', '/kmle-planner/', '/kmle-planner/index.html', '/kmle-planner/sync.js', '/kmle-planner/manifest.webmanifest']);
+
+async function putInCache(request, response) {
+  if (!response || response.status !== 200) return response;
+  const cache = await caches.open(CACHE_NAME);
+  await cache.put(request, response.clone());
+  return response;
+}
+
+async function networkFirst(request, fallbackKey = null) {
+  try {
+    const response = await fetch(request, { cache: 'no-store' });
+    return await putInCache(request, response);
+  } catch {
+    const cached = await caches.match(request);
+    if (cached) return cached;
+    if (fallbackKey) {
+      const fallback = await caches.match(fallbackKey);
+      if (fallback) return fallback;
+    }
+    return Response.error();
+  }
+}
+
+async function cacheFirst(request, fallbackKey = null) {
+  const cached = await caches.match(request);
+  if (cached) return cached;
+  try {
+    const response = await fetch(request);
+    return await putInCache(request, response);
+  } catch {
+    if (fallbackKey) {
+      const fallback = await caches.match(fallbackKey);
+      if (fallback) return fallback;
+    }
+    return Response.error();
+  }
+}
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS)));
@@ -32,35 +70,13 @@ self.addEventListener('fetch', (event) => {
 
   const url = new URL(event.request.url);
   const isLiveBundle = url.pathname.includes('/data/clerkships/bundles/');
+  const isNavigation = event.request.mode === 'navigate';
+  const isShellPath = NETWORK_FIRST_PATHS.has(url.pathname);
 
-  if (isLiveBundle) {
-    event.respondWith(
-      fetch(event.request)
-        .then((response) => {
-          const copy = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy)).catch(() => {});
-          return response;
-        })
-        .catch(() => caches.match(event.request).then((cached) => cached || Response.error()))
-    );
+  if (isLiveBundle || isNavigation || isShellPath) {
+    event.respondWith(networkFirst(event.request, './index.html'));
     return;
   }
 
-  event.respondWith(
-    caches.match(event.request).then((cached) => {
-      if (cached) return cached;
-      return fetch(event.request)
-        .then((response) => {
-          const copy = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy)).catch(() => {});
-          return response;
-        })
-        .catch(() => {
-          if (event.request.mode === 'navigate') {
-            return caches.match('./index.html');
-          }
-          return Response.error();
-        });
-    })
-  );
+  event.respondWith(cacheFirst(event.request, isNavigation ? './index.html' : null));
 });
