@@ -2289,20 +2289,46 @@
       renderWeekGrid();
     }
 
-    async function loadPlannerBundleFromUrl(url) {
+    function applyPlannerBundle(bundle, { switchToCalendar = true, jumpToBundleDate = true } = {}) {
+      state = mergePlannerBundleIntoState(bundle, state);
+      selectedSubjectId = ensureSubjectForBundle(state, bundle).id;
+      if (jumpToBundleDate) {
+        selectedCalendarDate = bundle.sessions?.[0]?.date || formatDateInput(new Date());
+        selectedCalendarScope = 'day';
+        selectedWeekKey = null;
+        const baseDate = parseIsoDate(selectedCalendarDate);
+        calendarMonthCursor = new Date(baseDate.getFullYear(), baseDate.getMonth(), 1);
+      }
+      renderAll();
+      if (switchToCalendar) {
+        document.querySelector('[data-tab="calendar"]').click();
+      }
+    }
+
+    async function loadPlannerBundleFromUrl(url, options = {}) {
       const response = await fetch(url, { cache: 'no-store' });
       if (!response.ok) throw new Error(`bundle fetch failed: ${response.status}`);
       const bundle = await response.json();
       if (!looksLikePlannerBundle(bundle)) throw new Error('invalid bundle');
-      state = mergePlannerBundleIntoState(bundle, state);
-      selectedSubjectId = ensureSubjectForBundle(state, bundle).id;
-      selectedCalendarDate = bundle.sessions?.[0]?.date || formatDateInput(new Date());
-      selectedCalendarScope = 'day';
-      selectedWeekKey = null;
-      const baseDate = parseIsoDate(selectedCalendarDate);
-      calendarMonthCursor = new Date(baseDate.getFullYear(), baseDate.getMonth(), 1);
-      renderAll();
-      document.querySelector('[data-tab="calendar"]').click();
+      applyPlannerBundle(bundle, options);
+      return bundle;
+    }
+
+    async function ensureRespiratoryBundlePresent() {
+      const clerkshipId = 'respiratory-2026-04-track-b';
+      const alreadyLoaded = Boolean(state.clerkshipBundles?.[clerkshipId])
+        && (state.calendarEvents || []).some(event => event.bundleId === clerkshipId);
+      if (alreadyLoaded || location.protocol === 'file:') return false;
+      try {
+        await loadPlannerBundleFromUrl('./data/clerkships/bundles/respiratory_content_handoff_v2.bundle.json', {
+          switchToCalendar: false,
+          jumpToBundleDate: false
+        });
+        return true;
+      } catch (error) {
+        console.error('auto respiratory bundle load failed', error);
+        return false;
+      }
     }
 
     function loadState() {
@@ -3826,6 +3852,7 @@
     byId('taskStart').value = '09:00';
 
     renderAll();
+    void ensureRespiratoryBundlePresent();
 
     window.toggleTask = toggleTask;
     window.toggleCalendarEvent = toggleCalendarEvent;
