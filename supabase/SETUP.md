@@ -65,3 +65,32 @@ Supabase에서:
 - 따라서 code는 개인용으로만 관리
 - sync는 편의 기능이지 백업 대체가 아님
 - 주기적으로 **데이터 내보내기** 백업 권장
+
+---
+
+## DB-first 전환 준비 (2026-04-11 추가)
+
+현재 운영 원칙은 다음과 같습니다.
+- **앱 셸(HTML / sync / service worker)은 freeze**
+- **공용 콘텐츠는 live bundle JSON 교체로 운영**
+- **개인 상태만 Supabase DB로 이동**
+
+이번 단계에서 schema.sql에는 아래 RPC가 추가되었습니다.
+- `planner_user_state_pull(p_user_id text)`
+- `planner_user_state_push(p_user_id text, p_state_json jsonb, ...)`
+
+의도:
+- `planner_sync_slots` = 기존 전체 state sync 실험용 / 레거시 호환
+- `planner_user_state` = 앞으로의 **single-user, multi-device 정본 상태 저장소**
+
+권장 user_id:
+- 당분간은 단순하게 하나의 고정 값 사용
+- 예: `gangryeol-main`
+
+권장 운영 구조:
+1. **공용 구조/일정/설명** → GitHub Pages의 live bundle JSON
+2. **개인 진행도/체크/메모** → Supabase `planner_user_state`
+
+즉 앞으로 맥/핸드폰 동기화의 핵심은
+- bundle은 서버 정적 파일에서 공통으로 읽고
+- 네가 체크한 값은 `planner_user_state`에서 읽고 쓰는 방향입니다.
