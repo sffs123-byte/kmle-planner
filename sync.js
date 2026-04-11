@@ -4,6 +4,8 @@ const STORAGE_KEY = 'kmlePlannerState.v2';
 const CONFIG_KEY = 'kmlePlannerSyncCodeConfig.v1';
 const META_KEY = 'kmlePlannerSyncMeta.v3';
 const PLANNER_STATE_VERSION = 'kmlePlannerState.v2';
+const PLANNER_USER_STATE_VERSION = 'planner-user-state.v1';
+const PLANNER_USER_ID = 'gangryeol-main';
 
 const defaultConfig = {
   supabaseUrl: 'https://fqvmubjivjyohrwqfbdk.supabase.co',
@@ -43,6 +45,9 @@ function defaultMeta() {
     lastUploadedAt: 0,
     lastRemoteAppliedAt: 0,
     lastRemoteSeenAt: 0,
+    lastUserStateUploadedAt: 0,
+    lastUserStateAppliedAt: 0,
+    lastUserStateSeenAt: 0,
     lastStatus: '로컬 전용 모드',
     lastStatusAt: 0
   };
@@ -377,17 +382,13 @@ function renderSessionText() {
   const config = readConfig();
   const meta = readMeta();
 
-  if (!config.syncCode) {
-    ui.sessionText.textContent = '동기화 코드 없음 — 이 기기는 현재 로컬 저장만 사용 중\n추천: 맥에서 새 동기화 코드를 먼저 생성';
-    return;
-  }
-
   ui.sessionText.textContent = [
-    `sync code: ${maskCode(config.syncCode)}`,
+    `user state: ${PLANNER_USER_ID}`,
     `device: ${meta.deviceId}`,
-    `마지막 업로드: ${formatDateTime(meta.lastUploadedAt)}`,
-    `마지막 원격 반영: ${formatDateTime(meta.lastRemoteAppliedAt)}`,
-    `마지막 원격 확인: ${formatDateTime(meta.lastRemoteSeenAt)}`
+    `마지막 user state 업로드: ${formatDateTime(meta.lastUserStateUploadedAt)}`,
+    `마지막 user state 반영: ${formatDateTime(meta.lastUserStateAppliedAt)}`,
+    `마지막 user state 확인: ${formatDateTime(meta.lastUserStateSeenAt)}`,
+    config.syncCode ? `legacy sync code: ${maskCode(config.syncCode)}` : 'legacy sync code: 없음'
   ].join('\n');
 }
 
@@ -432,15 +433,12 @@ async function initializeSupabase() {
 
   renderSessionText();
 
-  if (!config.syncCode) {
-    stopLoops();
-    setStatus('동기화 코드 없음 — 로컬 전용 모드', 'default');
-    return;
-  }
-
   kickOffLoops();
-  setStatus('동기화 코드 연결됨. 원격 상태를 확인 중이다.', 'connected');
-  await pullRemoteState({ reason: '초기 확인' });
+  setStatus('Supabase 연결됨. planner_user_state를 확인 중이다.', 'connected');
+  await pullPlannerUserState({ reason: '초기 확인' });
+  if (config.syncCode) {
+    await pullRemoteState({ reason: 'legacy 초기 확인' });
+  }
 }
 
 function kickOffLoops() {
@@ -454,7 +452,8 @@ function kickOffLoops() {
 
   if (config.autoSync !== false) {
     remoteTimer = setInterval(() => {
-      void pullRemoteState({ reason: '자동 폴링' });
+      void pullPlannerUserState({ reason: '자동 폴링' });
+      if (config.syncCode) void pullRemoteState({ reason: 'legacy 자동 폴링' });
     }, 30000);
   }
 }
@@ -468,7 +467,6 @@ function stopLoops() {
 
 async function checkLocalStateChange() {
   const config = readConfig();
-  if (!config.syncCode) return;
 
   const raw = getRawPlannerState();
   const nextHash = hashStateRaw(raw);
@@ -481,7 +479,8 @@ async function checkLocalStateChange() {
   saveMeta(meta);
 
   if (config.autoSync !== false) {
-    await pushLocalState('자동 업로드');
+    await pushPlannerUserState('자동 업로드');
+    if (config.syncCode) await pushLocalState('legacy 자동 업로드');
   } else {
     setStatus('로컬 데이터가 바뀌었다. 자동 동기화는 꺼져 있으니 필요하면 수동 업로드를 눌러줘.', 'pending');
   }
@@ -503,6 +502,55 @@ async function plannerSyncPush(syncCode, payload, updatedAt, deviceId) {
   });
   if (error) throw error;
   return Array.isArray(data) ? data[0] : data;
+}
+
+async function plannerUserStatePull(userId = PLANNER_USER_ID) {
+  const { data, error } = await supabase.rpc('planner_user_state_pull', { p_user_id: userId });
+  if (error) throw error;
+  return Array.isArray(data) ? data[0] : data;
+}
+
+async function plannerUserStatePush(payload, updatedAt, deviceId, userId = PLANNER_USER_ID) {
+  const { data, error } = await supabase.rpc('planner_user_state_push', {
+    p_user_id: userId,
+    p_state_json: payload,
+    p_state_version: PLANNER_USER_STATE_VERSION,
+    p_updated_by: deviceId,
+    p_updated_at: updatedAt
+  });
+  if (error) throw error;
+  return Array.isArray(data) ? data[0] : data;
+}
+
+async function pushPlannerUserState(reason = '수동 업로드') {
+  if (syncing) return;
+  if (!supabase) {
+    setStatus('Supabase 연결이 아직 안 잡혔다.', 'error');
+    return;
+  }
+
+  const raw = getRawPlannerState();
+  if (!raw) {
+    setStatus('업로드할 플래너 데이터가 없다.', 'error');
+    return;
+  }
+
+  syncing = true;
+  try {
+    const payload = JSON.parse(raw);
+    const meta = readMeta();
+    const updatedAt = meta.lastLocalChangeAt || nowIso();
+    await plannerUserStatePush(payload, updatedAt, meta.deviceId);
+    meta.lastUserStateUploadedAt = updatedAt;
+    meta.lastUserStateSeenAt = updatedAt;
+    saveMeta(meta);
+    setStatus(`${reason} 완료 — planner_user_state에 현재 상태를 저장했다.`, 'connected');
+    renderSessionText();
+  } catch (error) {
+    setStatus(`user state 업로드 실패: ${error.message || error}`, 'error');
+  } finally {
+    syncing = false;
+  }
 }
 
 async function pushLocalState(reason = '수동 업로드') {
@@ -538,6 +586,75 @@ async function pushLocalState(reason = '수동 업로드') {
     setStatus(`업로드 실패: ${error.message || error}`, 'error');
   } finally {
     syncing = false;
+  }
+}
+
+async function pullPlannerUserState({ force = false, reason = '수동 새로받기' } = {}) {
+  if (syncing) return;
+  if (!supabase) return;
+
+  syncing = true;
+  try {
+    const row = await plannerUserStatePull(PLANNER_USER_ID);
+    const meta = readMeta();
+
+    if (!row?.state_json) {
+      if (force) setStatus('planner_user_state에 아직 저장된 상태가 없다.', 'pending');
+      return;
+    }
+
+    const remoteRaw = JSON.stringify(row.state_json);
+    const remoteHash = hashStateObject(row.state_json);
+    const remoteUpdatedAt = row.updated_at || nowIso();
+    const localRaw = getRawPlannerState();
+    const localCurrentHash = hashStateRaw(localRaw);
+    const localUpdatedAt = meta.lastLocalChangeAt || 0;
+    const remoteIsNewer = !localUpdatedAt || new Date(remoteUpdatedAt).getTime() > new Date(localUpdatedAt).getTime();
+    const localIsDirty = Boolean(meta.lastLocalChangeAt) && (!meta.lastUserStateUploadedAt || new Date(meta.lastLocalChangeAt).getTime() > new Date(meta.lastUserStateUploadedAt).getTime());
+    const firstSync = !meta.lastUserStateUploadedAt && !meta.lastUserStateAppliedAt;
+
+    meta.lastUserStateSeenAt = remoteUpdatedAt;
+
+    if (force || (remoteHash !== localCurrentHash && ((remoteIsNewer && !localIsDirty) || firstSync))) {
+      setRawPlannerState(remoteRaw);
+      localHash = remoteHash;
+      meta.lastHash = remoteHash;
+      meta.lastUserStateAppliedAt = remoteUpdatedAt;
+      saveMeta(meta);
+
+      let appliedInPlace = false;
+      try {
+        if (typeof window.__kmlePlannerApplyRemoteState === 'function') {
+          appliedInPlace = window.__kmlePlannerApplyRemoteState(row.state_json) === true;
+          if (appliedInPlace) window.__kmlePlannerState = row.state_json;
+        }
+      } catch (error) {
+        console.error('in-place planner_user_state apply failed', error);
+      }
+
+      setStatus(
+        appliedInPlace
+          ? `${reason} 완료 — planner_user_state를 현재 화면에 바로 반영했다.`
+          : `${reason} 완료 — planner_user_state를 이 기기에 반영했다.`,
+        'connected'
+      );
+      renderSessionText();
+
+      if (!appliedInPlace) {
+        setTimeout(() => location.reload(), 250);
+      }
+      return;
+    }
+
+    saveMeta(meta);
+    if (force) {
+      setStatus('planner_user_state는 확인했지만, 현재 기기 데이터가 더 최신이거나 동일하다.', 'connected');
+    }
+  } catch (error) {
+    setStatus(`planner_user_state 불러오기 실패: ${error.message || error}`, 'error');
+  } finally {
+    syncing = false;
+    renderSessionText();
   }
 }
 
@@ -628,8 +745,9 @@ function bootstrapMetaFromCurrentState() {
 window.addEventListener('visibilitychange', () => {
   if (!document.hidden) {
     void initializeSupabase();
+    void pullPlannerUserState({ reason: '포그라운드 복귀' });
     if (readConfig().syncCode) {
-      void pullRemoteState({ reason: '포그라운드 복귀' });
+      void pullRemoteState({ reason: 'legacy 포그라운드 복귀' });
     }
   }
 });
@@ -645,5 +763,5 @@ injectUI();
 bootstrapMetaFromCurrentState();
 renderConfigToUI();
 renderSessionText();
-setStatus('로컬 전용 모드 — 원하면 동기화 코드를 연결할 수 있다.', 'default');
+setStatus('planner_user_state 연결 준비 중이다.', 'default');
 void initializeSupabase();
