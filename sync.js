@@ -1,27 +1,29 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
 
 const STORAGE_KEY = 'kmlePlannerState.v2';
-const CONFIG_KEY = 'kmlePlannerSyncConfig.v1';
-const META_KEY = 'kmlePlannerSyncMeta.v1';
+const CONFIG_KEY = 'kmlePlannerSyncCodeConfig.v1';
+const META_KEY = 'kmlePlannerSyncMeta.v3';
 const PLANNER_STATE_VERSION = 'kmlePlannerState.v2';
 
 const defaultConfig = {
-  supabaseUrl: '',
-  supabaseAnonKey: '',
-  email: '',
+  supabaseUrl: 'https://fqvmubjivjyohrwqfbdk.supabase.co',
+  supabaseAnonKey: 'sb_publishable_x9mnaYjAMbFGGBacRbWmww_3GPRftzR',
+  syncCode: '',
   autoSync: true
 };
 
-function defaultMeta() {
-  return {
-    deviceId: getOrCreateDeviceId(),
-    lastHash: '',
-    lastLocalChangeAt: 0,
-    lastUploadedAt: 0,
-    lastRemoteAppliedAt: 0,
-    lastStatus: '로컬 전용 모드',
-    lastStatusAt: 0
-  };
+function generateRandomCode() {
+  const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  const bytes = new Uint8Array(16);
+  crypto.getRandomValues(bytes);
+  const raw = Array.from(bytes, (b) => alphabet[b % alphabet.length]).join('');
+  return raw.match(/.{1,4}/g).join('-');
+}
+
+function sanitizeSyncCode(value) {
+  const compact = String(value || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+  if (!compact) return '';
+  return compact.match(/.{1,4}/g).join('-');
 }
 
 function getOrCreateDeviceId() {
@@ -31,6 +33,19 @@ function getOrCreateDeviceId() {
   const created = globalThis.crypto?.randomUUID?.() || `device-${Math.random().toString(36).slice(2, 10)}`;
   localStorage.setItem(key, created);
   return created;
+}
+
+function defaultMeta() {
+  return {
+    deviceId: getOrCreateDeviceId(),
+    lastHash: '',
+    lastLocalChangeAt: 0,
+    lastUploadedAt: 0,
+    lastRemoteAppliedAt: 0,
+    lastRemoteSeenAt: 0,
+    lastStatus: '로컬 전용 모드',
+    lastStatusAt: 0
+  };
 }
 
 function readJSON(key, fallback) {
@@ -46,12 +61,25 @@ function writeJSON(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
+function normalizeConfig(config) {
+  return {
+    ...defaultConfig,
+    ...config,
+    supabaseUrl: config?.supabaseUrl?.trim?.() ? config.supabaseUrl.trim() : defaultConfig.supabaseUrl,
+    supabaseAnonKey: config?.supabaseAnonKey?.trim?.() ? config.supabaseAnonKey.trim() : defaultConfig.supabaseAnonKey,
+    syncCode: sanitizeSyncCode(config?.syncCode || ''),
+    autoSync: config?.autoSync !== false
+  };
+}
+
 function readConfig() {
-  return readJSON(CONFIG_KEY, defaultConfig);
+  const config = normalizeConfig(readJSON(CONFIG_KEY, defaultConfig));
+  saveConfig(config);
+  return config;
 }
 
 function saveConfig(config) {
-  writeJSON(CONFIG_KEY, config);
+  writeJSON(CONFIG_KEY, normalizeConfig(config));
 }
 
 function readMeta() {
@@ -71,6 +99,30 @@ function hashString(value) {
   return String(hash >>> 0);
 }
 
+function stableSerialize(value) {
+  if (value === null || typeof value !== 'object') {
+    return JSON.stringify(value);
+  }
+  if (Array.isArray(value)) {
+    return `[${value.map((item) => stableSerialize(item)).join(',')}]`;
+  }
+  const keys = Object.keys(value).sort();
+  return `{${keys.map((key) => `${JSON.stringify(key)}:${stableSerialize(value[key])}`).join(',')}}`;
+}
+
+function hashStateRaw(raw) {
+  if (!raw) return hashString('');
+  try {
+    return hashString(stableSerialize(JSON.parse(raw)));
+  } catch {
+    return hashString(raw);
+  }
+}
+
+function hashStateObject(obj) {
+  return hashString(stableSerialize(obj));
+}
+
 function getRawPlannerState() {
   return localStorage.getItem(STORAGE_KEY) || '';
 }
@@ -86,37 +138,39 @@ function nowIso() {
 function formatDateTime(value) {
   if (!value) return '없음';
   try {
-    return new Intl.DateTimeFormat('ko-KR', {
-      dateStyle: 'short',
-      timeStyle: 'short'
-    }).format(new Date(value));
+    return new Intl.DateTimeFormat('ko-KR', { dateStyle: 'short', timeStyle: 'short' }).format(new Date(value));
   } catch {
     return value;
   }
+}
+
+function maskCode(code) {
+  if (!code) return '없음';
+  const parts = code.split('-');
+  if (parts.length < 2) return code;
+  return `${parts[0]}-••••-••••-${parts[parts.length - 1]}`;
 }
 
 const ui = {
   statusPill: null,
   modal: null,
   statusText: null,
-  emailInput: null,
-  urlInput: null,
-  keyInput: null,
+  syncCodeInput: null,
   autoSyncInput: null,
   sessionText: null,
   openButton: null,
   saveButton: null,
-  signInButton: null,
-  signOutButton: null,
+  generateButton: null,
+  copyButton: null,
   pushButton: null,
-  pullButton: null
+  pullButton: null,
+  clearButton: null
 };
 
 let supabase = null;
-let currentSession = null;
 let pollingTimer = null;
 let remoteTimer = null;
-let localHash = hashString(getRawPlannerState());
+let localHash = hashStateRaw(getRawPlannerState());
 let syncing = false;
 
 function injectStyles() {
@@ -136,94 +190,37 @@ function injectStyles() {
       font-weight: 600;
       font-size: 13px;
     }
-    .sync-pill-dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 999px;
-      background: #94a3b8;
-      flex: none;
-    }
+    .sync-pill-dot { width: 9px; height: 9px; border-radius: 999px; background: #94a3b8; flex: none; }
     .sync-pill.connected .sync-pill-dot { background: #16a34a; }
     .sync-pill.pending .sync-pill-dot { background: #d97706; }
     .sync-pill.error .sync-pill-dot { background: #dc2626; }
     .sync-modal {
-      position: fixed;
-      inset: 0;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      background: rgba(15, 23, 42, 0.45);
-      z-index: 999;
+      position: fixed; inset: 0; display: none; align-items: center; justify-content: center;
+      padding: 20px; background: rgba(15, 23, 42, 0.45); z-index: 999;
     }
     .sync-modal.show { display: flex; }
     .sync-card {
-      width: min(680px, 100%);
-      max-height: min(90vh, 920px);
-      overflow: auto;
-      background: rgba(255,255,255,0.96);
-      border: 1px solid #dbe4f0;
-      border-radius: 24px;
-      box-shadow: 0 18px 45px rgba(27, 40, 69, 0.18);
-      padding: 24px;
-      color: #18212f;
+      width: min(680px, 100%); max-height: min(90vh, 920px); overflow: auto;
+      background: rgba(255,255,255,0.96); border: 1px solid #dbe4f0; border-radius: 24px;
+      box-shadow: 0 18px 45px rgba(27, 40, 69, 0.18); padding: 24px; color: #18212f;
     }
-    .sync-grid {
-      display: grid;
-      gap: 14px;
-      margin-top: 18px;
+    .sync-grid { display: grid; gap: 14px; margin-top: 18px; }
+    .sync-field { display: grid; gap: 8px; }
+    .sync-field label { font-size: 13px; color: #64748b; font-weight: 700; }
+    .sync-field input {
+      width: 100%; border: 1px solid #dbe4f0; border-radius: 14px; padding: 12px 14px;
+      font: inherit; background: #fff; color: #18212f;
     }
-    .sync-field {
-      display: grid;
-      gap: 8px;
-    }
-    .sync-field label {
-      font-size: 13px;
-      color: #64748b;
-      font-weight: 700;
-    }
-    .sync-field input, .sync-field textarea {
-      width: 100%;
-      border: 1px solid #dbe4f0;
-      border-radius: 14px;
-      padding: 12px 14px;
-      font: inherit;
-      background: #fff;
-      color: #18212f;
-    }
-    .sync-field textarea { min-height: 104px; resize: vertical; }
-    .sync-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-    .sync-note {
-      margin-top: 14px;
-      color: #64748b;
-      font-size: 13px;
-      line-height: 1.65;
-    }
+    .sync-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .sync-note { margin-top: 14px; color: #64748b; font-size: 13px; line-height: 1.65; white-space: pre-line; }
     .sync-block {
-      margin-top: 16px;
-      padding: 16px;
-      border-radius: 18px;
-      border: 1px solid #dbe4f0;
-      background: #f8fbff;
+      margin-top: 16px; padding: 16px; border-radius: 18px; border: 1px solid #dbe4f0; background: #f8fbff;
     }
-    .sync-status-text {
-      white-space: pre-line;
-      line-height: 1.6;
-      color: #334155;
-      font-size: 13px;
-      margin-top: 10px;
-    }
-    .sync-inline {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
+    .sync-status-text { white-space: pre-line; line-height: 1.6; color: #334155; font-size: 13px; margin-top: 10px; }
+    .sync-inline { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .sync-code-preview {
+      display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 12px;
+      background: #eef4ff; color: #1d4ed8; font-weight: 700; letter-spacing: 0.06em;
     }
   `;
   document.head.appendChild(style);
@@ -256,36 +253,29 @@ function injectUI() {
       <div class="sync-inline">
         <div>
           <div class="panel-title" style="font-size:24px;font-weight:800;">자동 동기화 설정</div>
-          <div class="panel-subtitle" style="margin-top:6px;color:#64748b;">GitHub Pages로 배포한 뒤 Supabase에 연결하면 맥·태블릿 간 상태를 자동 동기화할 수 있다.</div>
+          <div class="panel-subtitle" style="margin-top:6px;color:#64748b;">이메일 로그인 대신 개인용 sync code 하나를 공유해서 맥과 iPad 상태를 맞춘다.</div>
         </div>
         <button class="btn btn-ghost btn-small" id="syncCloseBtn">닫기</button>
       </div>
 
       <div class="sync-grid">
         <div class="sync-field">
-          <label for="syncSupabaseUrl">Supabase URL</label>
-          <input id="syncSupabaseUrl" placeholder="https://xxxx.supabase.co" />
-        </div>
-        <div class="sync-field">
-          <label for="syncSupabaseKey">Supabase anon key</label>
-          <textarea id="syncSupabaseKey" placeholder="eyJ... anon public key"></textarea>
-        </div>
-        <div class="sync-field">
-          <label for="syncEmail">동기화용 이메일</label>
-          <input id="syncEmail" type="email" placeholder="같은 이메일로 맥/태블릿 둘 다 로그인" />
+          <label for="syncCodeInput">동기화 코드</label>
+          <input id="syncCodeInput" placeholder="예: Q7RM-4K2P-B8XN-6JHT" autocapitalize="characters" />
         </div>
         <label style="display:flex; gap:10px; align-items:center; color:#334155; font-size:14px;">
           <input id="syncAutoMode" type="checkbox" checked />
-          자동 동기화 켜기 (상태가 바뀌면 자동 업로드, 다른 기기 변경도 주기적으로 반영)
+          자동 동기화 켜기 (상태가 바뀌면 자동 업로드, 다른 기기 변경도 자동 확인)
         </label>
       </div>
 
       <div class="sync-actions">
         <button class="btn btn-primary" id="syncSaveBtn">설정 저장</button>
-        <button class="btn btn-secondary" id="syncSignInBtn">이메일 로그인 링크 보내기</button>
+        <button class="btn btn-secondary" id="syncGenerateBtn">새 동기화 코드 생성</button>
+        <button class="btn btn-ghost" id="syncCopyBtn">코드 복사</button>
         <button class="btn btn-ghost" id="syncPushBtn">지금 밀어넣기</button>
         <button class="btn btn-ghost" id="syncPullBtn">지금 다시 받기</button>
-        <button class="btn btn-danger" id="syncSignOutBtn">로그아웃</button>
+        <button class="btn btn-danger" id="syncClearBtn">연결 해제</button>
       </div>
 
       <div class="sync-block">
@@ -294,10 +284,7 @@ function injectUI() {
         <div id="syncStatusText" class="sync-status-text"></div>
       </div>
 
-      <div class="sync-note">
-        초기 1회는 supabase/SETUP.md와 supabase/schema.sql을 보고 Supabase 프로젝트를 만들어야 한다.\n
-        그다음 같은 이메일로 맥과 태블릿에서 로그인하면 자동 동기화된다.
-      </div>
+      <div class="sync-note">추천 사용 순서\n1. 맥에서 새 동기화 코드 생성\n2. 지금 밀어넣기\n3. iPad에서 같은 코드를 입력하고 설정 저장\n4. 지금 다시 받기\n\n초기 운영은 맥을 정본(primary writer)으로 두는 것이 안전하다.</div>
     </div>
   `;
   document.body.appendChild(modal);
@@ -307,15 +294,14 @@ function injectUI() {
   ui.modal = modal;
   ui.statusText = modal.querySelector('#syncStatusText');
   ui.sessionText = modal.querySelector('#syncSessionText');
-  ui.emailInput = modal.querySelector('#syncEmail');
-  ui.urlInput = modal.querySelector('#syncSupabaseUrl');
-  ui.keyInput = modal.querySelector('#syncSupabaseKey');
+  ui.syncCodeInput = modal.querySelector('#syncCodeInput');
   ui.autoSyncInput = modal.querySelector('#syncAutoMode');
   ui.saveButton = modal.querySelector('#syncSaveBtn');
-  ui.signInButton = modal.querySelector('#syncSignInBtn');
-  ui.signOutButton = modal.querySelector('#syncSignOutBtn');
+  ui.generateButton = modal.querySelector('#syncGenerateBtn');
+  ui.copyButton = modal.querySelector('#syncCopyBtn');
   ui.pushButton = modal.querySelector('#syncPushBtn');
   ui.pullButton = modal.querySelector('#syncPullBtn');
+  ui.clearButton = modal.querySelector('#syncClearBtn');
 
   openButton.addEventListener('click', () => ui.modal.classList.add('show'));
   modal.querySelector('#syncCloseBtn').addEventListener('click', () => ui.modal.classList.remove('show'));
@@ -323,54 +309,43 @@ function injectUI() {
     if (event.target === modal) ui.modal.classList.remove('show');
   });
 
+  ui.syncCodeInput.addEventListener('input', () => {
+    ui.syncCodeInput.value = sanitizeSyncCode(ui.syncCodeInput.value);
+  });
+
   ui.saveButton.addEventListener('click', async () => {
-    const config = {
-      supabaseUrl: ui.urlInput.value.trim(),
-      supabaseAnonKey: ui.keyInput.value.trim(),
-      email: ui.emailInput.value.trim(),
-      autoSync: Boolean(ui.autoSyncInput.checked)
-    };
-    saveConfig(config);
-    setStatus('설정 저장 완료. URL/key가 있으면 연결을 다시 시도한다.', 'pending');
+    saveConfig({ syncCode: ui.syncCodeInput.value, autoSync: Boolean(ui.autoSyncInput.checked) });
+    setStatus('동기화 코드 저장 완료. 연결 상태를 다시 확인한다.', 'pending');
     await initializeSupabase();
   });
 
-  ui.signInButton.addEventListener('click', async () => {
+  ui.generateButton.addEventListener('click', async () => {
+    const code = generateRandomCode();
+    ui.syncCodeInput.value = code;
+    saveConfig({ syncCode: code, autoSync: Boolean(ui.autoSyncInput.checked) });
+    renderConfigToUI();
+    setStatus('새 동기화 코드를 만들었다. 맥에서 정본을 밀어넣고, iPad에는 같은 코드를 넣으면 된다.', 'pending');
     try {
-      const config = readConfig();
-      if (!config.supabaseUrl || !config.supabaseAnonKey) {
-        setStatus('먼저 Supabase URL과 anon key를 저장해줘.', 'error');
-        return;
-      }
-      if (!config.email) {
-        setStatus('동기화용 이메일을 먼저 입력해줘.', 'error');
-        return;
-      }
-      await initializeSupabase();
-      if (!supabase) {
-        setStatus('Supabase 연결이 아직 안 잡혔다.', 'error');
-        return;
-      }
-      const { error } = await supabase.auth.signInWithOtp({
-        email: config.email,
-        options: {
-          shouldCreateUser: true,
-          emailRedirectTo: `${location.origin}${location.pathname}`
-        }
-      });
-      if (error) throw error;
-      setStatus('로그인 링크를 이메일로 보냈다. 맥과 태블릿 모두 같은 이메일로 링크를 눌러 로그인하면 된다.', 'pending');
-    } catch (error) {
-      setStatus(`로그인 링크 발송 실패: ${error.message || error}`, 'error');
+      await navigator.clipboard.writeText(code);
+      setStatus(`새 동기화 코드 생성 완료. 클립보드에 복사했다: ${code}`, 'connected');
+    } catch {
+      setStatus(`새 동기화 코드 생성 완료: ${code}`, 'connected');
     }
+    await initializeSupabase();
   });
 
-  ui.signOutButton.addEventListener('click', async () => {
-    if (!supabase) return;
-    await supabase.auth.signOut();
-    currentSession = null;
-    setStatus('로그아웃 완료. 현재는 로컬 전용 모드다.', 'pending');
-    renderSessionText();
+  ui.copyButton.addEventListener('click', async () => {
+    const code = sanitizeSyncCode(ui.syncCodeInput.value || readConfig().syncCode);
+    if (!code) {
+      setStatus('복사할 동기화 코드가 없다. 먼저 새 코드를 만들거나 입력해줘.', 'error');
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(code);
+      setStatus('동기화 코드를 클립보드에 복사했다.', 'connected');
+    } catch {
+      setStatus(`클립보드 복사가 안 되면 이 코드를 직접 써줘: ${code}`, 'pending');
+    }
   });
 
   ui.pushButton.addEventListener('click', async () => {
@@ -380,29 +355,39 @@ function injectUI() {
   ui.pullButton.addEventListener('click', async () => {
     await pullRemoteState({ force: true, reason: '수동 새로받기' });
   });
+
+  ui.clearButton.addEventListener('click', async () => {
+    saveConfig({ syncCode: '', autoSync: Boolean(ui.autoSyncInput.checked) });
+    renderConfigToUI();
+    stopLoops();
+    setStatus('동기화 코드 연결을 해제했다. 현재는 로컬 전용 모드다.', 'pending');
+    renderSessionText();
+  });
 }
 
 function renderConfigToUI() {
-  if (!ui.urlInput) return;
+  if (!ui.syncCodeInput) return;
   const config = readConfig();
-  ui.urlInput.value = config.supabaseUrl || '';
-  ui.keyInput.value = config.supabaseAnonKey || '';
-  ui.emailInput.value = config.email || '';
+  ui.syncCodeInput.value = config.syncCode || '';
   ui.autoSyncInput.checked = config.autoSync !== false;
 }
 
 function renderSessionText() {
   if (!ui.sessionText) return;
-  if (!currentSession?.user) {
-    ui.sessionText.textContent = '로그인 전 — 로컬 저장만 사용 중';
+  const config = readConfig();
+  const meta = readMeta();
+
+  if (!config.syncCode) {
+    ui.sessionText.textContent = '동기화 코드 없음 — 이 기기는 현재 로컬 저장만 사용 중\n추천: 맥에서 새 동기화 코드를 먼저 생성';
     return;
   }
-  const meta = readMeta();
+
   ui.sessionText.textContent = [
-    `로그인됨: ${currentSession.user.email || currentSession.user.id}`,
+    `sync code: ${maskCode(config.syncCode)}`,
     `device: ${meta.deviceId}`,
     `마지막 업로드: ${formatDateTime(meta.lastUploadedAt)}`,
-    `마지막 원격 반영: ${formatDateTime(meta.lastRemoteAppliedAt)}`
+    `마지막 원격 반영: ${formatDateTime(meta.lastRemoteAppliedAt)}`,
+    `마지막 원격 확인: ${formatDateTime(meta.lastRemoteSeenAt)}`
   ].join('\n');
 }
 
@@ -431,57 +416,31 @@ async function initializeSupabase() {
 
   if (!config.supabaseUrl || !config.supabaseAnonKey) {
     supabase = null;
-    currentSession = null;
     renderSessionText();
-    setStatus('Supabase URL/anon key를 넣으면 자동 동기화를 켤 수 있다.', 'default');
-    stopRemoteLoop();
+    setStatus('Supabase 연결값이 비어 있다. 배포본이 최신인지 확인해줘.', 'error');
+    stopLoops();
     return;
   }
 
   if (!supabase || supabase.__plannerUrl !== config.supabaseUrl || supabase.__plannerKey !== config.supabaseAnonKey) {
     supabase = createClient(config.supabaseUrl, config.supabaseAnonKey, {
-      auth: {
-        persistSession: true,
-        autoRefreshToken: true,
-        detectSessionInUrl: true
-      }
+      auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false }
     });
     supabase.__plannerUrl = config.supabaseUrl;
     supabase.__plannerKey = config.supabaseAnonKey;
-
-    supabase.auth.onAuthStateChange((_event, session) => {
-      currentSession = session;
-      renderSessionText();
-      if (session?.user) {
-        setStatus('동기화 연결됨. 원격 상태를 확인 중이다.', 'connected');
-        kickOffLoops();
-        void reconcileState('auth-change');
-      } else {
-        stopRemoteLoop();
-        setStatus('로그인 전 — 로컬 저장만 사용 중', 'default');
-      }
-    });
   }
 
-  const { data, error } = await supabase.auth.getSession();
-  if (error) {
-    currentSession = null;
-    renderSessionText();
-    setStatus(`세션 확인 실패: ${error.message || error}`, 'error');
+  renderSessionText();
+
+  if (!config.syncCode) {
+    stopLoops();
+    setStatus('동기화 코드 없음 — 로컬 전용 모드', 'default');
     return;
   }
 
-  currentSession = data.session;
-  renderSessionText();
-
-  if (currentSession?.user) {
-    kickOffLoops();
-    setStatus('동기화 연결됨. 마지막 저장 상태를 맞추는 중이다.', 'connected');
-    await reconcileState('init');
-  } else {
-    stopRemoteLoop();
-    setStatus('설정은 저장됨. 같은 이메일로 로그인하면 자동 동기화가 시작된다.', 'pending');
-  }
+  kickOffLoops();
+  setStatus('동기화 코드 연결됨. 원격 상태를 확인 중이다.', 'connected');
+  await pullRemoteState({ reason: '초기 확인' });
 }
 
 function kickOffLoops() {
@@ -500,7 +459,7 @@ function kickOffLoops() {
   }
 }
 
-function stopRemoteLoop() {
+function stopLoops() {
   if (pollingTimer) clearInterval(pollingTimer);
   if (remoteTimer) clearInterval(remoteTimer);
   pollingTimer = null;
@@ -508,8 +467,11 @@ function stopRemoteLoop() {
 }
 
 async function checkLocalStateChange() {
+  const config = readConfig();
+  if (!config.syncCode) return;
+
   const raw = getRawPlannerState();
-  const nextHash = hashString(raw);
+  const nextHash = hashStateRaw(raw);
   if (nextHash === localHash) return;
 
   localHash = nextHash;
@@ -518,39 +480,43 @@ async function checkLocalStateChange() {
   meta.lastLocalChangeAt = nowIso();
   saveMeta(meta);
 
-  if (currentSession?.user && readConfig().autoSync !== false) {
+  if (config.autoSync !== false) {
     await pushLocalState('자동 업로드');
   } else {
-    setStatus('로컬 데이터가 바뀌었지만, 아직 동기화 로그인은 안 된 상태다.', 'pending');
+    setStatus('로컬 데이터가 바뀌었다. 자동 동기화는 꺼져 있으니 필요하면 수동 업로드를 눌러줘.', 'pending');
   }
 }
 
-async function reconcileState(reason = 'manual') {
-  await checkLocalStateChange();
-  await pullRemoteState({ reason });
-  const remoteApplied = sessionStorage.getItem('kmlePlannerRemoteApplied');
-  if (!remoteApplied) {
-    await pushLocalState(`초기 동기화 (${reason})`);
-  }
-}
-
-async function fetchRemoteRow() {
-  if (!supabase || !currentSession?.user) return null;
-  const { data, error } = await supabase
-    .from('planner_states')
-    .select('user_id, state_json, state_version, updated_at, updated_by')
-    .eq('user_id', currentSession.user.id)
-    .maybeSingle();
-
+async function plannerSyncPull(syncCode) {
+  const { data, error } = await supabase.rpc('planner_sync_pull', { p_sync_code: syncCode });
   if (error) throw error;
-  return data;
+  return Array.isArray(data) ? data[0] : data;
+}
+
+async function plannerSyncPush(syncCode, payload, updatedAt, deviceId) {
+  const { data, error } = await supabase.rpc('planner_sync_push', {
+    p_sync_code: syncCode,
+    p_state_json: payload,
+    p_state_version: PLANNER_STATE_VERSION,
+    p_updated_by: deviceId,
+    p_updated_at: updatedAt
+  });
+  if (error) throw error;
+  return Array.isArray(data) ? data[0] : data;
 }
 
 async function pushLocalState(reason = '수동 업로드') {
-  if (syncing || !supabase || !currentSession?.user) {
-    if (!currentSession?.user) setStatus('로그인 후 업로드할 수 있다.', 'pending');
+  if (syncing) return;
+  const config = readConfig();
+  if (!config.syncCode) {
+    setStatus('먼저 동기화 코드를 만들거나 입력해줘.', 'error');
     return;
   }
+  if (!supabase) {
+    setStatus('Supabase 연결이 아직 안 잡혔다.', 'error');
+    return;
+  }
+
   const raw = getRawPlannerState();
   if (!raw) {
     setStatus('업로드할 플래너 데이터가 없다.', 'error');
@@ -562,21 +528,11 @@ async function pushLocalState(reason = '수동 업로드') {
     const payload = JSON.parse(raw);
     const meta = readMeta();
     const updatedAt = meta.lastLocalChangeAt || nowIso();
-    const { error } = await supabase
-      .from('planner_states')
-      .upsert({
-        user_id: currentSession.user.id,
-        state_json: payload,
-        state_version: PLANNER_STATE_VERSION,
-        updated_at: updatedAt,
-        updated_by: meta.deviceId
-      });
-    if (error) throw error;
-
+    await plannerSyncPush(config.syncCode, payload, updatedAt, meta.deviceId);
     meta.lastUploadedAt = updatedAt;
+    meta.lastRemoteSeenAt = updatedAt;
     saveMeta(meta);
-    sessionStorage.setItem('kmlePlannerRemoteApplied', updatedAt);
-    setStatus(`${reason} 완료 — 다른 기기에서도 같은 이메일로 로그인하면 반영된다.`, 'connected');
+    setStatus(`${reason} 완료 — 같은 동기화 코드를 가진 다른 기기에서 바로 가져올 수 있다.`, 'connected');
     renderSessionText();
   } catch (error) {
     setStatus(`업로드 실패: ${error.message || error}`, 'error');
@@ -586,39 +542,66 @@ async function pushLocalState(reason = '수동 업로드') {
 }
 
 async function pullRemoteState({ force = false, reason = '수동 새로받기' } = {}) {
-  if (syncing || !supabase || !currentSession?.user) return;
+  if (syncing) return;
+  const config = readConfig();
+  if (!config.syncCode || !supabase) return;
+
   syncing = true;
   try {
-    const row = await fetchRemoteRow();
+    const row = await plannerSyncPull(config.syncCode);
+    const meta = readMeta();
+
     if (!row?.state_json) {
-      if (force) setStatus('원격에 아직 저장된 플래너 상태가 없다.', 'pending');
+      if (force) setStatus('이 동기화 코드에는 아직 원격 상태가 없다. 맥 정본에서 먼저 밀어넣기를 눌러줘.', 'pending');
       return;
     }
 
     const remoteRaw = JSON.stringify(row.state_json);
-    const remoteHash = hashString(remoteRaw);
+    const remoteHash = hashStateObject(row.state_json);
     const remoteUpdatedAt = row.updated_at || nowIso();
-    const meta = readMeta();
     const localRaw = getRawPlannerState();
-    const localCurrentHash = hashString(localRaw);
+    const localCurrentHash = hashStateRaw(localRaw);
     const localUpdatedAt = meta.lastLocalChangeAt || 0;
-
     const remoteIsNewer = !localUpdatedAt || new Date(remoteUpdatedAt).getTime() > new Date(localUpdatedAt).getTime();
     const localIsDirty = Boolean(meta.lastLocalChangeAt) && (!meta.lastUploadedAt || new Date(meta.lastLocalChangeAt).getTime() > new Date(meta.lastUploadedAt).getTime());
+    const firstSync = !meta.lastUploadedAt && !meta.lastRemoteAppliedAt;
 
-    if (force || (remoteHash !== localCurrentHash && remoteIsNewer && !localIsDirty)) {
+    meta.lastRemoteSeenAt = remoteUpdatedAt;
+
+    if (force || (remoteHash !== localCurrentHash && ((remoteIsNewer && !localIsDirty) || firstSync))) {
       setRawPlannerState(remoteRaw);
       localHash = remoteHash;
       meta.lastHash = remoteHash;
       meta.lastRemoteAppliedAt = remoteUpdatedAt;
-      meta.lastUploadedAt = remoteUpdatedAt;
       saveMeta(meta);
-      sessionStorage.setItem('kmlePlannerRemoteApplied', remoteUpdatedAt);
-      setStatus(`${reason} 완료 — 원격 상태를 이 기기에 반영했다.`, 'connected');
-      setTimeout(() => location.reload(), 300);
+
+      let appliedInPlace = false;
+      try {
+        if (typeof window.__kmlePlannerApplyRemoteState === 'function') {
+          appliedInPlace = window.__kmlePlannerApplyRemoteState(row.state_json) === true;
+          if (appliedInPlace) {
+            window.__kmlePlannerState = row.state_json;
+          }
+        }
+      } catch (error) {
+        console.error('in-place remote apply failed', error);
+      }
+
+      setStatus(
+        appliedInPlace
+          ? `${reason} 완료 — 원격 상태를 현재 화면에 바로 반영했다.`
+          : `${reason} 완료 — 원격 상태를 이 기기에 반영했다.`,
+        'connected'
+      );
+      renderSessionText();
+
+      if (!appliedInPlace) {
+        setTimeout(() => location.reload(), 250);
+      }
       return;
     }
 
+    saveMeta(meta);
     if (force) {
       setStatus('원격 상태는 확인했지만, 현재 기기 데이터가 더 최신이거나 동일하다.', 'connected');
     }
@@ -633,7 +616,7 @@ async function pullRemoteState({ force = false, reason = '수동 새로받기' }
 function bootstrapMetaFromCurrentState() {
   const meta = readMeta();
   const raw = getRawPlannerState();
-  const currentHash = hashString(raw);
+  const currentHash = hashStateRaw(raw);
   if (!meta.lastHash) {
     meta.lastHash = currentHash;
     meta.lastLocalChangeAt = nowIso();
@@ -645,7 +628,7 @@ function bootstrapMetaFromCurrentState() {
 window.addEventListener('visibilitychange', () => {
   if (!document.hidden) {
     void initializeSupabase();
-    if (currentSession?.user && readConfig().autoSync !== false) {
+    if (readConfig().syncCode) {
       void pullRemoteState({ reason: '포그라운드 복귀' });
     }
   }
@@ -653,7 +636,7 @@ window.addEventListener('visibilitychange', () => {
 
 window.addEventListener('storage', (event) => {
   if (event.key === STORAGE_KEY) {
-    localHash = hashString(event.newValue || '');
+    localHash = hashStateRaw(event.newValue || '');
     renderSessionText();
   }
 });
@@ -662,5 +645,5 @@ injectUI();
 bootstrapMetaFromCurrentState();
 renderConfigToUI();
 renderSessionText();
-setStatus('로컬 전용 모드 — 원하면 자동 동기화를 연결할 수 있다.', 'default');
+setStatus('로컬 전용 모드 — 원하면 동기화 코드를 연결할 수 있다.', 'default');
 void initializeSupabase();

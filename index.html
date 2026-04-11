@@ -2349,6 +2349,38 @@
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     }
 
+    function applyExternalState(nextState, { preserveSelection = true } = {}) {
+      const normalized = normalizeState(nextState);
+      state = normalized;
+
+      if (preserveSelection && selectedSubjectId && state.subjects.some(subject => subject.id === selectedSubjectId)) {
+        selectedSubjectId = selectedSubjectId;
+      } else {
+        selectedSubjectId = state.subjects[0]?.id || null;
+      }
+
+      if (!selectedCalendarDate) {
+        selectedCalendarDate = formatDateInput(new Date());
+      }
+
+      if (activeCalendarEventId && !(state.calendarEvents || []).some(event => event.id === activeCalendarEventId)) {
+        activeCalendarEventId = null;
+      }
+
+      window.__kmlePlannerState = state;
+      renderAll();
+    }
+
+    window.__kmlePlannerApplyRemoteState = function applyRemoteStateBridge(remoteState) {
+      try {
+        applyExternalState(remoteState, { preserveSelection: true });
+        return true;
+      } catch (error) {
+        console.error('failed to apply remote state', error);
+        return false;
+      }
+    };
+
     function resetWithDemo() {
       state = buildCanaryState();
       selectedSubjectId = state.subjects[0]?.id || null;
@@ -3851,6 +3883,7 @@
     byId('taskDate').value = formatDateInput(new Date());
     byId('taskStart').value = '09:00';
 
+    window.__kmlePlannerState = state;
     renderAll();
     void ensureRespiratoryBundlePresent();
 

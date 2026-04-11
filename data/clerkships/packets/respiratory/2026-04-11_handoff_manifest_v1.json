@@ -1,0 +1,14 @@
+{
+  "subject": "호흡기내과 메인 인계",
+  "track": "B반 기준",
+  "recommended_split": {
+    "raw_archive": "/Users/sffs123gmail.com/Desktop/의학과 공부 파일/본3/호흡기내과/AI_정리/호흡기내과_메인인계_DB_v15.json",
+    "human_readable_pdf": "/Users/sffs123gmail.com/Desktop/의학과 공부 파일/본3/호흡기내과/AI_정리/호흡기내과_메인인계_압축정리_v9.pdf",
+    "planner_packet": "/Users/sffs123gmail.com/Desktop/의학과 공부 파일/본3/호흡기내과/AI_정리/호흡기내과_planner_packet_v1.json"
+  },
+  "usage": {
+    "raw_archive": "원문/분석/긴 메모 보존용",
+    "human_readable_pdf": "강렬이 실전에서 읽는 정돈본",
+    "planner_packet": "비서 자비스와 플래너가 직접 소비하는 실행용 packet"
+  }
+}

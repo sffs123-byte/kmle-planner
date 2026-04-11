@@ -1,0 +1,503 @@
+{
+  "meta": {
+    "clerkship_id": "respiratory-2026-04-track-b",
+    "subject": "호흡기내과",
+    "track": "B",
+    "generated_at": "2026-04-11T18:46:46",
+    "packet_source": {
+      "subject": "호흡기내과 메인 인계",
+      "track": "B반 기준",
+      "packet_version": "v1",
+      "intended_consumer": "secretary / planner",
+      "raw_archive_reference": "/Users/sffs123gmail.com/Desktop/의학과 공부 파일/본3/호흡기내과/AI_정리/호흡기내과_메인인계_DB_v15.json",
+      "pdf_reference": "/Users/sffs123gmail.com/Desktop/의학과 공부 파일/본3/호흡기내과/AI_정리/호흡기내과_메인인계_압축정리_v9.pdf"
+    },
+    "config_source": {
+      "clerkship_id": "respiratory-2026-04-track-b",
+      "subject": "호흡기내과",
+      "track": "B",
+      "block_start": "2026-04-13",
+      "block_end": "2026-04-24",
+      "weekend_end": "2026-04-26T23:59:00",
+      "notes": [
+        "호흡기내과 2주 실습 B트랙 기준 import 설정",
+        "원문 보존형 정돈 원칙: 원문 설명은 raw/notes에 보존하고, 플래너에는 실행 가능한 구조화 정보로 재배치한다."
+      ]
+    },
+    "rubric_source": {
+      "clerkship": "호흡기내과",
+      "scale": "1-10",
+      "anchor": "정성수 교수님 = 10점",
+      "updated_at": "2026-04-11",
+      "notes": [
+        "사용자 override를 최우선 반영한다.",
+        "점수는 호감도나 외래 추천도가 아니라 플래너 운영상 중요도/난이도 기준이다.",
+        "근거 축은 stakes, questioning, volatility, case_fit_risk, prep_load 다섯 가지다."
+      ]
+    }
+  },
+  "days": [
+    {
+      "date": "2026-04-13",
+      "headline": "환자 문진 신체검사 경과기록지 작성법",
+      "day_digest": [],
+      "sessions": [
+        {
+          "time": "10:30~12:30",
+          "title": "환자 문진 신체검사 경과기록지 작성법",
+          "professor": "김덕기 교수님",
+          "difficulty": 4,
+          "prepare_points": [],
+          "focus_points": [
+            "첫 기록은 입원 후 첫 평가처럼 자세히 쓴다.",
+            "증상이 여러 개면 하나만 적지 말고 각각의 감별 흐름을 생각해야 한다.",
+            "교수님이 나눠주시는 잘 쓴 예시가 사실상 정답지 역할을 한다."
+          ]
+        },
+        {
+          "time": "8:50",
+          "title": "실습 오리엔테이션 및 환자 배정",
+          "professor": "김소윤",
+          "difficulty": 5,
+          "prepare_points": [
+            "OT에서 병동기록지 환자 배정 타이밍 확인",
+            "예진을 언제부터 얼마나 채울지 조 내부 전략 세우기",
+            "일정 변동 시 누구에게 직접 연락할지 확인"
+          ],
+          "focus_points": [
+            "병동경과기록지는 주차당 1명씩 총 2명의 환자를 맡아 6일치 SOAP을 쓰는 구조로 이해하면 된다.",
+            "환자 배정은 실시간으로 조금 늦어질 수 있으니 월요일 오전에 안 떨어져도 이상한 것은 아니다.",
+            "일정이 자주 흔들리므로 OT 때 바뀐 일정과 연락 체계를 같이 잡아야 한다."
+          ]
+        },
+        {
+          "time": "시간 추후확인",
+          "title": "결핵, NTM 강의",
+          "professor": "김옥화 교수님",
+          "difficulty": 4,
+          "prepare_points": [
+            "의국에서 줌으로 듣는 흐름",
+            "잠복결핵은 건너뛰는 경우가 있었다",
+            "마지막에 물어볼 질문 1~2개 정도 준비하면 무난"
+          ],
+          "focus_points": []
+        },
+        {
+          "time": "시간 추후확인",
+          "title": "폐기능실 참관",
+          "professor": null,
+          "difficulty": 4,
+          "prepare_points": [
+            "외래 가장 안쪽 폐기능검사실에서 시간 조율",
+            "검사 자체는 오래 걸리지 않음",
+            "시간표상의 수요일 폐기능실 일정은 월요일 선시행으로 사라질 수 있음"
+          ],
+          "focus_points": []
+        }
+      ],
+      "assignment_start_today": [
+        "병동 경과기록지 (주당 3개)",
+        "예진 평가(기존 CP 포트폴리오 대체)"
+      ],
+      "assignment_due_today": [],
+      "max_professor_score": 7,
+      "max_session_difficulty": 5
+    },
+    {
+      "date": "2026-04-14",
+      "headline": "호흡기계 검사 강의",
+      "day_digest": [],
+      "sessions": [
+        {
+          "time": "10:30~12:30",
+          "title": "호흡기계 검사 강의",
+          "professor": "우성대 교수님",
+          "difficulty": 4,
+          "prepare_points": [
+            "본인 PFT 결과지 지참",
+            "수업 끝나고 바로 레포트 초안 메모",
+            "2주차 금요일 제출 마감 체크"
+          ],
+          "focus_points": []
+        },
+        {
+          "time": "13:30~14:30",
+          "title": "중환자실 참관, 환자 배정",
+          "professor": "이송이 교수님",
+          "difficulty": 6,
+          "prepare_points": [
+            "교수님 바로 옆에서 듣는 사람이 메모를 책임지는 게 중요",
+            "배정 직후 발표에 넣을 내용과 review 주제를 다시 확인하는 게 좋음",
+            "최신판 해리슨(22판) review를 선호한다는 인계가 있음"
+          ],
+          "focus_points": []
+        },
+        {
+          "time": "15:30~18:00",
+          "title": "폐진찰 시행 및 피드백",
+          "professor": "박희선 교수님",
+          "difficulty": 7,
+          "prepare_points": [
+            "피드백2 종이 준비",
+            "타진 연습",
+            "앞6 뒤8 위치 연습"
+          ],
+          "focus_points": [
+            "타진과 청진을 같은 위치에서 하기",
+            "위에서 아래로 level 맞춰 대칭적으로 내려오기",
+            "타진 손가락을 흉곽 평면과 수직으로 두기"
+          ]
+        },
+        {
+          "time": "9:00~10:00",
+          "title": "CXR 판독",
+          "professor": "정재욱 교수님",
+          "difficulty": 6,
+          "prepare_points": [
+            "유튜브 강의 미리 보기",
+            "아이패드에 판독 포인트 정리",
+            "마지막 질문 1개 준비"
+          ],
+          "focus_points": []
+        }
+      ],
+      "assignment_start_today": [
+        "폐진찰 피드백",
+        "중환자실 케이스",
+        "PFT, SPT",
+        "CXR 과제"
+      ],
+      "assignment_due_today": [
+        "폐진찰 피드백"
+      ],
+      "max_professor_score": 7,
+      "max_session_difficulty": 7
+    },
+    {
+      "date": "2026-04-15",
+      "headline": "폐기능실 참관(우성대 교수님)",
+      "day_digest": [],
+      "sessions": [
+        {
+          "time": "13:30~15:30",
+          "title": "폐기능실 참관(우성대 교수님)",
+          "professor": null,
+          "difficulty": 4,
+          "prepare_points": [],
+          "focus_points": []
+        },
+        {
+          "time": "16:00",
+          "title": "-17:00 오가노이드 (정재욱 교수님)",
+          "professor": null,
+          "difficulty": 4,
+          "prepare_points": [],
+          "focus_points": []
+        },
+        {
+          "time": "9:00~10:00",
+          "title": "외래 예진",
+          "professor": null,
+          "difficulty": 4,
+          "prepare_points": [
+            "예진기록지 2장 + 환자로그 개념을 챙기되, 최신 기준으로는 시작/종료시간 기록 후 의국 제출이 핵심",
+            "간호조무사 선생님께 먼저 초진 대기한다고 말해두면 기회가 생길 수 있음",
+            "1주차에 많이 봐두지 않으면 후반부에 초진 환자 잡기가 어렵다"
+          ],
+          "focus_points": []
+        },
+        {
+          "time": "9:00~10:00",
+          "title": "회진 참관",
+          "professor": "정재욱 교수님",
+          "difficulty": 6,
+          "prepare_points": [],
+          "focus_points": []
+        }
+      ],
+      "assignment_start_today": [
+        "외래 예진 (2개)"
+      ],
+      "assignment_due_today": [],
+      "max_professor_score": 7,
+      "max_session_difficulty": 6
+    },
+    {
+      "date": "2026-04-16",
+      "headline": "약물 알레르기 + 알레르기 증례, 피부반응검사 실습",
+      "day_digest": [],
+      "sessions": [
+        {
+          "time": "11:00~12:30",
+          "title": "약물 알레르기 + 알레르기 증례, 피부반응검사 실습",
+          "professor": "우성대 교수님",
+          "difficulty": 4,
+          "prepare_points": [
+            "조장 인계에는 SPT 시약을 수업 15분 전에 챙기라는 말이 있음",
+            "사진은 본인 팔 + 학생증이 같이 나오게 찍는 게 중요",
+            "약물 알레르기 증례는 진단, 분류, 원인약물확인, 치료계획 4축으로 정리하면 됨"
+          ],
+          "focus_points": []
+        },
+        {
+          "time": "15:30~18:00",
+          "title": "대면 실습 에세이 피드백",
+          "professor": "이소영 교수님",
+          "difficulty": 7,
+          "prepare_points": [],
+          "focus_points": []
+        },
+        {
+          "time": "8:00~10:00",
+          "title": "호흡기내과 시술 강의",
+          "professor": "박동일 교수님",
+          "difficulty": 4,
+          "prepare_points": [],
+          "focus_points": []
+        }
+      ],
+      "assignment_start_today": [
+        "실습 면담 평행차트 (word 첨부)",
+        "알레르기 질환 케이스"
+      ],
+      "assignment_due_today": [
+        "실습 면담 평행차트 (word 첨부)"
+      ],
+      "max_professor_score": 5,
+      "max_session_difficulty": 7
+    },
+    {
+      "date": "2026-04-17",
+      "headline": "천식/COPD",
+      "day_digest": [],
+      "sessions": [
+        {
+          "time": "11:00~12:30",
+          "title": "천식/COPD",
+          "professor": "김덕기 교수님",
+          "difficulty": 4,
+          "prepare_points": [
+            "정상 진행을 전제하지 말고 취소 가능성을 염두에 둘 것",
+            "실제 진행되면 COPD 위주 30분 수업으로 생각하면 됨",
+            "질문은 거의 없었다는 인계가 많음"
+          ],
+          "focus_points": []
+        },
+        {
+          "time": "15:00~18:00",
+          "title": "병동환자 문진, 진찰/경과기록지 피드백",
+          "professor": "홍그린 교수님",
+          "difficulty": 7,
+          "prepare_points": [],
+          "focus_points": [
+            "전날 밤까지 업로드 + 당일 프린트 필수",
+            "짧지만 논리 있게 말해야 함",
+            "질문 방어를 위해 환자 경과와 검사/치료 이유를 미리 정리해가야 함"
+          ]
+        }
+      ],
+      "assignment_start_today": [],
+      "assignment_due_today": [],
+      "max_professor_score": 5,
+      "max_session_difficulty": 7
+    },
+    {
+      "date": "2026-04-20",
+      "headline": "폐암",
+      "day_digest": [],
+      "sessions": [
+        {
+          "time": "15:00~16:00",
+          "title": "폐암",
+          "professor": "김소윤 교수님",
+          "difficulty": 6,
+          "prepare_points": [],
+          "focus_points": [
+            "환자안전 관련 강의는 30분 정도",
+            "낙상 등 인턴 때 할만한 실수 중심 증례",
+            "분위기는 좋아서 부담 없음"
+          ]
+        }
+      ],
+      "assignment_start_today": [
+        "임상추론평가",
+        "Mini CEX"
+      ],
+      "assignment_due_today": [],
+      "max_professor_score": 7,
+      "max_session_difficulty": 6
+    },
+    {
+      "date": "2026-04-21",
+      "headline": "폐렴",
+      "day_digest": [],
+      "sessions": [
+        {
+          "time": "10:30~11:30",
+          "title": "폐렴",
+          "professor": "이은소 교수님",
+          "difficulty": 4,
+          "prepare_points": [],
+          "focus_points": []
+        },
+        {
+          "time": "14:00~15:30",
+          "title": "ILD 강의",
+          "professor": "김옥화 교수님 or 이은소 교수님",
+          "difficulty": 4,
+          "prepare_points": [],
+          "focus_points": []
+        },
+        {
+          "time": "17:00~18:00",
+          "title": "임상추론평가",
+          "professor": "정성수 교수님",
+          "difficulty": 10,
+          "prepare_points": [],
+          "focus_points": [
+            "손유영/안성주 둘 다 병태생리 설명이 길어지는 경향이 있어, 정성수 교수님 실시간 피드백용 초안은 이보다 약간 더 압축해도 됨",
+            "단순 general disease essay처럼 쓰면 안 되고, 반드시 이 환자에게서 나온 단서와 연결해야 함",
+            "진단가설 3개를 세우더라도 1순위 가설이 왜 제일 설득력 있는지는 더 분명히 보여줘야 함"
+          ]
+        },
+        {
+          "time": "9:00~10:00",
+          "title": "CXR",
+          "professor": "정재욱 교수님",
+          "difficulty": 8,
+          "prepare_points": [],
+          "focus_points": []
+        }
+      ],
+      "assignment_start_today": [
+        "임상윤리수업"
+      ],
+      "assignment_due_today": [],
+      "max_professor_score": 10,
+      "max_session_difficulty": 10
+    },
+    {
+      "date": "2026-04-22",
+      "headline": "예진평가 – 이정은 교수님",
+      "day_digest": [],
+      "sessions": [
+        {
+          "time": "14:00~16:00",
+          "title": "예진평가 – 이정은 교수님",
+          "professor": "이정은 교수님",
+          "difficulty": 10,
+          "prepare_points": [],
+          "focus_points": []
+        },
+        {
+          "time": "16:00~18:00",
+          "title": "Mini-CEX",
+          "professor": "정성수 교수님",
+          "difficulty": 10,
+          "prepare_points": [
+            "종이 보지 말고 환자와 대화에 집중",
+            "신체진찰은 등쪽 청진 위주로 충분할 수 있음",
+            "단계마다 다 설명하지 말고 자연스럽게 묶어서 하기"
+          ],
+          "focus_points": [
+            "개방형 질문",
+            "주호소 중심의 깊은 꼬리질문",
+            "PPI와 라포"
+          ]
+        },
+        {
+          "time": "9:00~12:30",
+          "title": "회진 참관",
+          "professor": "정재욱 교수님",
+          "difficulty": 6,
+          "prepare_points": [],
+          "focus_points": []
+        }
+      ],
+      "assignment_start_today": [],
+      "assignment_due_today": [
+        "중환자실 케이스"
+      ],
+      "max_professor_score": 10,
+      "max_session_difficulty": 10
+    },
+    {
+      "date": "2026-04-23",
+      "headline": "중환자실 증례발표",
+      "day_digest": [],
+      "sessions": [
+        {
+          "time": "13:30~15:30",
+          "title": "중환자실 증례발표",
+          "professor": "이송이 교수님",
+          "difficulty": 6,
+          "prepare_points": [
+            "환자 경과 전체를 조원 모두 공유",
+            "ABGA/ventilator 파트는 전원 최소 핵심 개념 숙지",
+            "환자번호 알아가기"
+          ],
+          "focus_points": [
+            "CURB-65 이유",
+            "항생제 변경 이유",
+            "ABGA 분석"
+          ]
+        },
+        {
+          "time": "15:30~18:00",
+          "title": "임상윤리 토의",
+          "professor": "문재영 교수님",
+          "difficulty": 6,
+          "prepare_points": [
+            "노트북 권장",
+            "이메일로 주제/명단/이메일 명단 미리 보내는 흐름 유지",
+            "최근엔 토론보다 교수님 질문에 답하는 방식일 수 있음"
+          ],
+          "focus_points": []
+        },
+        {
+          "time": "9:00~10:00",
+          "title": "흉수 강의",
+          "professor": "박동일 교수님",
+          "difficulty": 4,
+          "prepare_points": [],
+          "focus_points": []
+        }
+      ],
+      "assignment_start_today": [],
+      "assignment_due_today": [],
+      "max_professor_score": 5,
+      "max_session_difficulty": 6
+    },
+    {
+      "date": "2026-04-24",
+      "headline": "병동 경과 기록지 피드백",
+      "day_digest": [],
+      "sessions": [
+        {
+          "time": "15:00~18:00",
+          "title": "병동 경과 기록지 피드백",
+          "professor": "김윤주 교수님",
+          "difficulty": 7,
+          "prepare_points": [
+            "전날 조장이 줌 링크 준비 및 전달",
+            "반절씩 나눠서 들어가는 구조",
+            "EMR과 영상까지 같이 보시므로 환자 전체 경과를 알고 가야 함"
+          ],
+          "focus_points": []
+        }
+      ],
+      "assignment_start_today": [
+        "기관지내시경 참관 (word 첨부)"
+      ],
+      "assignment_due_today": [
+        "병동 경과기록지 (주당 3개)",
+        "예진 평가(기존 CP 포트폴리오 대체)",
+        "임상추론평가",
+        "외래 예진 (2개)",
+        "PFT, SPT"
+      ],
+      "max_professor_score": 5,
+      "max_session_difficulty": 7
+    }
+  ]
+}

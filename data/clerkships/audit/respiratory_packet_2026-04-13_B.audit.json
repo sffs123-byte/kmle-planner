@@ -1,0 +1,36 @@
+{
+  "excluded_sessions": [
+    {
+      "week": "1주차",
+      "day": "금요일",
+      "title": "기관지경실",
+      "reason": "B트랙은 1주차 기관지경실 제외"
+    },
+    {
+      "week": "1주차",
+      "day": "금요일",
+      "title": "호흡기 내과 실험실 참관",
+      "reason": "packet status excluded"
+    },
+    {
+      "week": "2주차",
+      "day": "월요일",
+      "title": "mini CEX",
+      "reason": "packet status excluded"
+    },
+    {
+      "week": "2주차",
+      "day": "금요일",
+      "title": "기관지경실",
+      "reason": "packet status excluded"
+    },
+    {
+      "week": "2주차",
+      "day": "금요일",
+      "title": "환자안전 증례토의",
+      "reason": "packet status excluded"
+    }
+  ],
+  "unconfigured_assignments": [],
+  "warnings": []
+}

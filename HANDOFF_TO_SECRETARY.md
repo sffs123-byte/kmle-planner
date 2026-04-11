@@ -33,6 +33,8 @@
 - `~/.openclaw/workspace/kmle-planner/HANDOFF_TO_JARVIS_PROFESSOR.md`
 - `~/.openclaw/workspace/kmle-planner/HANDOFF_CLERK_PROFESSOR_COLLAB.md`
 - `~/.openclaw/workspace/kmle-planner/HANDOFF_PRETEXT_MAIN_PAGE_TO_SECRETARY.md`
+- `~/.openclaw/workspace/kmle-planner/DEPLOY_GITHUB.md`
+- `~/.openclaw/workspace/kmle-planner/supabase/SETUP.md`
 
 ### 현재 앱 기능
 1. 과목별 5단계 진행도 관리
@@ -181,6 +183,7 @@
 5. export/import를 포함한 데이터 보존 습관 정착
 6. 필요 시 메인 자비스에게 앱 개선 요청
 7. 메인 페이지를 Pretext-inspired living typography 방향으로 고도화하는 프로젝트 관리
+8. GitHub Pages 배포 및 Supabase 자동 동기화 운영 가이드 추적
 
 ---
 

@@ -67,11 +67,47 @@ python3 -m http.server 8765
 - **오늘(토)**: 호흡기 강의 몰입 + 밤에 배국자 1차 전송
 - **내일(일)**: 심장내과 인계 분석 + 조장 준비
 
+## 실습 JSON import 시스템
+실습 인계/일정/과제/교수님 정보가 들어 있는 JSON을 반복적으로 받는 경우,
+매번 HTML을 수정하지 않고도 플래너에 반영할 수 있도록 ingest 구조를 추가했습니다.
+
+### 관련 파일
+- `CLERKSHIP_IMPORT_SYSTEM.md`
+- `scripts/build_clerkship_bundle.py`
+- `data/clerkships/raw/`
+- `data/clerkships/config/`
+- `data/clerkships/rubrics/`
+- `data/clerkships/bundles/`
+- `data/clerkships/audit/`
+
+### 현재 준비된 예시
+- raw archive: `data/clerkships/raw/respiratory/2026-04-11_v15.json`
+- primary content source: `data/clerkships/packets/respiratory/2026-04-11_content_handoff_v2.json`
+- execution packet(보조): `data/clerkships/packets/respiratory/2026-04-11_planner_packet_v1.json`
+- 과도기 packet: `data/clerkships/packets/respiratory/2026-04-11_handoff_v1.json`
+- config: `data/clerkships/config/respiratory_2026-04-13_B.json`
+- rubric: `data/clerkships/rubrics/respiratory_professors.json`
+- bundle: `data/clerkships/bundles/respiratory_content_handoff_v2.bundle.json`
+- daily briefing seed: `data/clerkships/briefings/respiratory_content_handoff_v2.daily_briefing.json`
+- day reminders: `data/clerkships/reminders/respiratory_content_handoff_v2.day_reminders.json`
+- planner import: `data/planner_state_respiratory_content_handoff_v2_import.json`
+
+### 핵심 원칙
+- raw JSON은 원본 그대로 보존
+- override / 날짜 / 마감 / 난이도는 config와 rubric에서 관리
+- 검증 통과한 bundle만 플래너 import 상태로 승격
+- 앱은 이제 `state backup JSON`뿐 아니라 `planner bundle JSON`도 직접 import/merge 가능
+- 상단 `호흡기 실습 불러오기` 버튼은 기본 bundle(`respiratory_content_handoff_v2.bundle.json`)을 바로 불러온다
+
+## Planner bundle spec
+- `PLANNER_BUNDLE_SPEC.md`
+- bundle은 `meta / sessions / assignments / daily_briefing_seed / day_reminders / audit`를 중심으로 유지한다.
+
 ## GitHub Pages로 배포해서 태블릿 앱처럼 쓰기
 이 폴더는 **정적 사이트 + PWA** 형태로 배포 가능하게 준비되어 있습니다.
 
 ## 자동 동기화 (맥 ↔ 태블릿)
-이제 플래너는 **Supabase 기반 자동 동기화**도 지원합니다.
+이제 플래너는 **Supabase + sync code 기반 자동 동기화**도 지원합니다.
 
 ### 구성 파일
 - `sync.js`
@@ -80,22 +116,20 @@ python3 -m http.server 8765
 
 ### 핵심 방식
 - 플래너 데이터는 기본적으로 localStorage에 저장
-- 같은 이메일로 맥과 태블릿에서 로그인하면
-- Supabase에 planner state를 저장하고 서로 받아와 자동 동기화
+- 맥에서 **새 동기화 코드**를 만들고 상태를 밀어넣음
+- iPad에서 **같은 코드**를 입력해 원격 상태를 받아옴
+- 이메일 로그인 없이도 같은 planner state를 공유 가능
 
 ### 빠른 시작
 1. GitHub Pages로 배포
 2. `supabase/SETUP.md` 보고 Supabase 프로젝트 생성
-3. 앱 상단 **자동 동기화** 버튼에서
-   - Supabase URL
-   - anon key
-   - 동기화용 이메일
-   입력
-4. 맥/태블릿 둘 다 같은 이메일로 로그인
+3. 맥에서 앱 상단 **자동 동기화** → **새 동기화 코드 생성** → **지금 밀어넣기**
+4. iPad에서 같은 코드 입력 → **설정 저장** → **지금 다시 받기**
 
 ### 동기화 방식
 - 현재는 **last-write-wins**
 - 즉 마지막으로 저장한 기기의 상태가 최신본이 됨
+- 초기 운영은 **맥을 정본(primary writer)** 으로 두는 것을 권장
 
 ### 포함된 배포 파일
 - `manifest.webmanifest`

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kmle-planner-v2';
+const CACHE_NAME = 'kmle-planner-v8';
 const ASSETS = [
   './',
   './index.html',
@@ -10,7 +10,8 @@ const ASSETS = [
   './assets/icons/icon-512-maskable.png',
   './assets/icons/favicon.svg',
   './data/canary_import_seed.json',
-  './data/allen_question_counts_2026-04-10.json'
+  './data/allen_question_counts_2026-04-10.json',
+  './data/clerkships/bundles/respiratory_planner_packet_v1.bundle.json'
 ];
 
 self.addEventListener('install', (event) => {

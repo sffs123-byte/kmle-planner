@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "clerkship": "호흡기내과",
+    "scale": "1-10",
+    "anchor": "정성수 교수님 = 10점",
+    "updated_at": "2026-04-11",
+    "notes": [
+      "사용자 override를 최우선 반영한다.",
+      "점수는 호감도나 외래 추천도가 아니라 플래너 운영상 중요도/난이도 기준이다.",
+      "근거 축은 stakes, questioning, volatility, case_fit_risk, prep_load 다섯 가지다."
+    ]
+  },
+  "axes_guide": {
+    "stakes": "점수/통과/핵심 평가와 직접 연결되는 정도",
+    "questioning": "구두 질문, 브리핑, 논리 방어 강도",
+    "volatility": "시간표 변동, 사전 확인 필요, 현장 리스크",
+    "case_fit_risk": "환자/케이스 선택이 결과를 크게 좌우하는 정도",
+    "prep_load": "미리 써가기, 자료 준비, 후처리 부담"
+  },
+  "professors": {
+    "정성수": {
+      "score": 10,
+      "confidence": "high",
+      "source": "user_override",
+      "rationale": "사용자 기준 최상. 임상추론평가/mini-CEX 연결과 확인 필요성이 커서 플래너상 가장 강한 이벤트로 취급.",
+      "axes": { "stakes": 5, "questioning": 5, "volatility": 4, "case_fit_risk": 3, "prep_load": 4 }
+    },
+    "이정은": {
+      "score": 8,
+      "confidence": "high",
+      "source": "user_override",
+      "rationale": "사용자 기준 상. 예진평가와 직접 연결되고 준비 시점 관리가 중요하다.",
+      "axes": { "stakes": 5, "questioning": 4, "volatility": 3, "case_fit_risk": 4, "prep_load": 4 }
+    },
+    "정재욱": {
+      "score": 7,
+      "confidence": "high",
+      "source": "user_override",
+      "rationale": "사용자 기준 상. 외래 추천도는 낮아도 CXR/회진/오가노이드 등 실제 일정 접점이 많아 플래너 중요도는 높다.",
+      "axes": { "stakes": 3, "questioning": 3, "volatility": 3, "case_fit_risk": 4, "prep_load": 3 }
+    },
+    "김소윤": {
+      "score": 7,
+      "confidence": "high",
+      "source": "user_override_plus_json",
+      "rationale": "사용자 지정 7점. OT, 환자 배정, 운영 질문의 허브라서 직접 평가보다 운영 영향력이 크다.",
+      "axes": { "stakes": 4, "questioning": 4, "volatility": 5, "case_fit_risk": 3, "prep_load": 4 }
+    },
+    "김윤주": {
+      "score": 8,
+      "confidence": "medium",
+      "source": "json_v15_evidence",
+      "rationale": "병동 경과기록지 피드백 강도가 높고 진단/치료 근거를 계속 묻는 구조라 실전 부담이 크다.",
+      "axes": { "stakes": 5, "questioning": 5, "volatility": 2, "case_fit_risk": 4, "prep_load": 4 }
+    },
+    "박희선": {
+      "score": 7,
+      "confidence": "medium",
+      "source": "json_v15_evidence",
+      "rationale": "폐진찰 피드백이 세세하고 발표/프레젠테이션 요구 가능성이 있어 준비 강도가 높다.",
+      "axes": { "stakes": 4, "questioning": 4, "volatility": 2, "case_fit_risk": 3, "prep_load": 4 }
+    },
+    "문재영": {
+      "score": 6,
+      "confidence": "medium",
+      "source": "json_v15_evidence",
+      "rationale": "임상윤리 토의는 주제 선정, 명단 제출, meet 준비 등 조장/사전 준비 부담이 존재한다.",
+      "axes": { "stakes": 3, "questioning": 3, "volatility": 4, "case_fit_risk": 1, "prep_load": 4 }
+    },
+    "이송이": {
+      "score": 7,
+      "confidence": "medium",
+      "source": "json_v15_evidence",
+      "rationale": "중환자실 케이스 발표 환자 배정과 review 방향 설정을 맡아 발표 결과에 미치는 영향이 크다. 설명 청취 리스크도 있다.",
+      "axes": { "stakes": 4, "questioning": 3, "volatility": 4, "case_fit_risk": 4, "prep_load": 4 }
+    },
+    "김덕기": {
+      "score": 5,
+      "confidence": "medium",
+      "source": "json_v15_evidence",
+      "rationale": "무난하지만 기록지 논리와 가독성을 본다. 중간 강도의 준비가 필요한 교수님.",
+      "axes": { "stakes": 3, "questioning": 3, "volatility": 1, "case_fit_risk": 2, "prep_load": 3 }
+    },
+    "우성대": {
+      "score": 4,
+      "confidence": "medium",
+      "source": "json_v15_evidence",
+      "rationale": "수업 자체는 편한 편이지만 PFT/알레르기 환자 제한과 사전 확인 포인트가 약간 있다.",
+      "axes": { "stakes": 2, "questioning": 2, "volatility": 2, "case_fit_risk": 2, "prep_load": 2 }
+    },
+    "홍그린": {
+      "score": 4,
+      "confidence": "medium",
+      "source": "json_v15_evidence",
+      "rationale": "전반적으로 good 평가가 많고 부담이 낮은 편. 다만 실제 진찰 여부나 감별 포인트는 확인할 수 있다.",
+      "axes": { "stakes": 2, "questioning": 2, "volatility": 1, "case_fit_risk": 2, "prep_load": 2 }
+    },
+    "박동일": {
+      "score": 5,
+      "confidence": "medium",
+      "source": "json_v15_evidence",
+      "rationale": "시술/기관지경실/흉수 강의 등 일정 변동성이 있고 일부 세션이 취소/대체 과제로 바뀌는 리스크가 있다.",
+      "axes": { "stakes": 2, "questioning": 2, "volatility": 4, "case_fit_risk": 2, "prep_load": 2 }
+    },
+    "김옥화": {
+      "score": 3,
+      "confidence": "medium",
+      "source": "json_v15_evidence",
+      "rationale": "zoom 기반으로 비교적 무난하고 질문/시험 부담이 낮은 편이다.",
+      "axes": { "stakes": 1, "questioning": 1, "volatility": 1, "case_fit_risk": 1, "prep_load": 2 }
+    },
+    "이은소": {
+      "score": 3,
+      "confidence": "medium",
+      "source": "json_v15_evidence",
+      "rationale": "zoom/통합 강의 비중이 높고 전반적으로 부담이 낮다.",
+      "axes": { "stakes": 1, "questioning": 1, "volatility": 1, "case_fit_risk": 1, "prep_load": 2 }
+    },
+    "강다현": {
+      "score": 3,
+      "confidence": "medium",
+      "source": "json_v15_evidence",
+      "rationale": "피드백이 부드럽고 수정 요구도 낮은 편이라 하중이 낮다.",
+      "axes": { "stakes": 2, "questioning": 1, "volatility": 1, "case_fit_risk": 1, "prep_load": 1 }
+    },
+    "윤선영": {
+      "score": 5,
+      "confidence": "low",
+      "source": "provisional_default",
+      "rationale": "현재 JSON 근거가 부족해 임시 중간값으로 둔다. 이후 실제 인계/피드백을 받으면 조정.",
+      "axes": { "stakes": 3, "questioning": 2, "volatility": 2, "case_fit_risk": 2, "prep_load": 2 }
+    },
+    "박희선교수님": {
+      "alias_of": "박희선"
+    },
+    "정성수 교수님": {
+      "alias_of": "정성수"
+    },
+    "이정은 교수님": {
+      "alias_of": "이정은"
+    },
+    "정재욱 교수님": {
+      "alias_of": "정재욱"
+    },
+    "김소윤 교수님": {
+      "alias_of": "김소윤"
+    }
+  }
+}

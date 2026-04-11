@@ -1,7 +1,13 @@
-# Supabase 자동 동기화 설정
+# Supabase 자동 동기화 설정 (sync code 방식)
 
 국시 플래너는 GitHub Pages 같은 정적 호스팅에서도 동작하도록 만들었기 때문에,
-**기기 간 자동 동기화는 Supabase를 백엔드로 붙이는 방식**으로 설계했습니다.
+**기기 간 자동 동기화는 Supabase + 개인용 sync code 방식**으로 설계했습니다.
+
+## 핵심 개념
+- GitHub Pages = 앱 배포
+- Supabase = state 저장소
+- 로그인/이메일 인증 없음
+- 대신 **맥과 iPad가 같은 sync code를 공유**해서 같은 planner state를 읽고 씁니다.
 
 ## 1. Supabase 프로젝트 생성
 1. https://supabase.com 로그인
@@ -15,64 +21,47 @@ Supabase 대시보드에서:
 - `supabase/schema.sql` 내용 전체 붙여넣기
 - 실행
 
-이 테이블은 로그인한 사용자 자신의 planner state만 읽고/쓰게 되어 있습니다.
+이 SQL은 `planner_sync_slots` 테이블과
+- `planner_sync_pull`
+- `planner_sync_push`
+RPC 함수를 만듭니다.
 
-## 3. Email 로그인 켜기
+## 3. URL / API key 확인
 Supabase에서:
-- **Authentication → Providers → Email**
-- Email provider 활성화
-
-기본 magic link 로그인만 써도 충분합니다.
-
-## 4. URL / Redirect 설정
-Supabase에서:
-- **Authentication → URL Configuration**
-
-여기에 다음을 추가합니다.
-
-### Site URL
-GitHub Pages 배포 주소
-예:
-- `https://<github-username>.github.io/<repo-name>/`
-
-### Redirect URLs
-적어도 아래 둘 중 쓰는 주소를 추가:
-- `https://<github-username>.github.io/<repo-name>/`
-- `http://127.0.0.1:8766/`
-- `http://127.0.0.1:8765/`
-
-## 5. anon key 복사
-Supabase에서:
-- **Project Settings → API**
+- **Project Settings → API Keys**
 - `Project URL`
-- `anon public key`
-를 복사
+- `public / publishable key`
+확인
 
-## 6. 플래너 앱에서 연결
-앱 상단의 **자동 동기화** 버튼 클릭 후:
-- Supabase URL 입력
-- anon key 입력
-- 같은 이메일 입력
-- **설정 저장**
-- **이메일 로그인 링크 보내기**
+> 현재 기본 배포본에는 이 프로젝트 값이 이미 들어가 있으므로,
+> 보통은 사용자가 직접 다시 입력할 필요가 없습니다.
 
-맥과 태블릿 둘 다 **같은 이메일로 로그인**하면 자동 동기화됩니다.
+## 4. 플래너 앱에서 연결
+### 맥에서
+1. 상단 **자동 동기화** 버튼
+2. **새 동기화 코드 생성**
+3. **지금 밀어넣기**
+4. 코드를 복사
 
-## 7. 동작 방식
+### iPad에서
+1. 같은 앱 열기
+2. **자동 동기화** 버튼
+3. 맥에서 생성한 **같은 동기화 코드 입력**
+4. **설정 저장**
+5. **지금 다시 받기**
+
+## 5. 동작 방식
 - 플래너는 기본적으로 localStorage에 저장됨
-- 자동 동기화가 켜지면 변경 시 원격 업로드
-- 다른 기기에서 로그인하면 원격 상태를 받아옴
-- 현재는 **last-write-wins** 방식
+- sync code가 연결되면 상태를 Supabase에 저장/불러옴
+- 현재 충돌 해결은 **last-write-wins**
+
+## 추천 운영
+- **맥 = primary writer(정본)**
+- **iPad = 보기 + 간단 수정**
+- 처음 1주일은 두 기기에서 동시에 많이 수정하지 않기
 
 ## 주의
-- 동기화는 같은 이메일 계정 기준
-- GitHub Pages 자체에는 데이터가 저장되지 않음
-- 민감한 비밀번호는 앱에 넣지 않음
-- anon key는 공개 키라 클라이언트에 넣어도 됨
-
-## 권장 사용 순서
-1. GitHub Pages 배포
-2. Supabase 설정
-3. 맥에서 로그인
-4. 태블릿에서 같은 이메일로 로그인
-5. 실제로 일정 하나 수정해서 반영 확인
+- sync code를 아는 기기는 같은 상태에 접근할 수 있음
+- 따라서 code는 개인용으로만 관리
+- sync는 편의 기능이지 백업 대체가 아님
+- 주기적으로 **데이터 내보내기** 백업 권장
