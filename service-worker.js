@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kmle-planner-v8';
+const CACHE_NAME = 'kmle-planner-v9';
 const ASSETS = [
   './',
   './index.html',
@@ -10,8 +10,7 @@ const ASSETS = [
   './assets/icons/icon-512-maskable.png',
   './assets/icons/favicon.svg',
   './data/canary_import_seed.json',
-  './data/allen_question_counts_2026-04-10.json',
-  './data/clerkships/bundles/respiratory_planner_packet_v1.bundle.json'
+  './data/allen_question_counts_2026-04-10.json'
 ];
 
 self.addEventListener('install', (event) => {
@@ -30,6 +29,22 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
+
+  const url = new URL(event.request.url);
+  const isLiveBundle = url.pathname.includes('/data/clerkships/bundles/');
+
+  if (isLiveBundle) {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          const copy = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy)).catch(() => {});
+          return response;
+        })
+        .catch(() => caches.match(event.request).then((cached) => cached || Response.error()))
+    );
+    return;
+  }
 
   event.respondWith(
     caches.match(event.request).then((cached) => {
