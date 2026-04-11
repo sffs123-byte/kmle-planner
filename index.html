@@ -1952,48 +1952,50 @@
       });
     }
 
+    function assignmentSummaryLabel(assignment) {
+      const startDate = String(assignment.start_at || '').slice(0, 10);
+      const endDate = String(assignment.hard_deadline || '').slice(0, 10);
+      if (startDate && endDate && startDate !== endDate) return `${startDate.slice(5)}~${endDate.slice(5)}`;
+      if (endDate) return endDate.slice(5);
+      if (startDate) return startDate.slice(5);
+      return '기간 확인';
+    }
+
+    function assignmentSummaryAnchorDates(assignment) {
+      const startDate = String(assignment.start_at || assignment.hard_deadline || '').slice(0, 10);
+      const endDate = String(assignment.hard_deadline || assignment.start_at || '').slice(0, 10);
+      if (!startDate) return [];
+      const anchors = [];
+      let cursor = startOfWeek(parseIsoDate(startDate));
+      const lastWeek = startOfWeek(parseIsoDate(endDate));
+      while (cursor <= lastWeek) {
+        const cursorIso = formatDateInput(cursor);
+        const anchor = cursorIso > startDate ? cursorIso : startDate;
+        if (anchor <= endDate) anchors.push(anchor);
+        cursor = offsetDate(cursor, 7);
+      }
+      return anchors;
+    }
+
     function bundleAssignmentToCalendarEvents(bundle, assignment) {
-      const events = [];
       const bundlePrefix = `clerkship-${safeId(bundle.meta.clerkship_id)}`;
-      if (assignment.start_at) {
-        const [date, time] = assignment.start_at.split('T');
-        events.push(normalizeCalendarEvent({
-          id: `${bundlePrefix}-assignment-start-${safeId(assignment.id || assignment.name)}`,
-          date,
-          type: 'assignment',
-          title: `${assignment.name} 착수`,
-          time: (time || '09:00').slice(0,5),
-          note: assignment.content_summary || assignment.format || '',
-          completed: false,
-          difficulty: assignment.difficulty_total || null,
-          track: bundle.meta?.track || '',
-          windowType: 'assignment-start',
-          bundleId: bundle.meta?.clerkship_id || '',
-          sourceSessionId: '',
-          sourceAssignmentId: assignment.id || '',
-          sourceKind: 'assignment'
-        }));
-      }
-      if (assignment.hard_deadline) {
-        const [date, time] = assignment.hard_deadline.split('T');
-        events.push(normalizeCalendarEvent({
-          id: `${bundlePrefix}-assignment-deadline-${safeId(assignment.id || assignment.name)}`,
-          date,
-          type: 'assignment',
-          title: `${assignment.name} 마감`,
-          time: (time || '23:59').slice(0,5),
-          note: assignment.content_summary || assignment.format || assignment.raw_deadline || '',
-          completed: false,
-          difficulty: assignment.difficulty_total || null,
-          track: bundle.meta?.track || '',
-          windowType: 'assignment-deadline',
-          bundleId: bundle.meta?.clerkship_id || '',
-          sourceSessionId: '',
-          sourceAssignmentId: assignment.id || '',
-          sourceKind: 'assignment'
-        }));
-      }
-      return events;
+      const label = assignmentSummaryLabel(assignment);
+      return assignmentSummaryAnchorDates(assignment).map((date, index) => normalizeCalendarEvent({
+        id: `${bundlePrefix}-assignment-summary-${safeId(assignment.id || assignment.name)}-${index + 1}`,
+        date,
+        type: 'assignment',
+        title: assignment.name,
+        time: label,
+        note: assignment.content_summary || assignment.format || assignment.raw_deadline || '',
+        completed: false,
+        difficulty: assignment.difficulty_total || null,
+        track: bundle.meta?.track || '',
+        windowType: 'assignment-summary',
+        bundleId: bundle.meta?.clerkship_id || '',
+        sourceSessionId: '',
+        sourceAssignmentId: assignment.id || '',
+        sourceKind: 'assignment'
+      }));
     }
 
     function bundleAssignmentToTasks(bundle, assignment, subjectId) {
