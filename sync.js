@@ -175,6 +175,7 @@ const ui = {
 let supabase = null;
 let pollingTimer = null;
 let remoteTimer = null;
+let realtimeChannel = null;
 let localHash = hashStateRaw(getRawPlannerState());
 let syncing = false;
 
@@ -441,6 +442,37 @@ async function initializeSupabase() {
   }
 }
 
+function startRealtimeSubscription() {
+  if (!supabase) return;
+  if (realtimeChannel) {
+    try { supabase.removeChannel(realtimeChannel); } catch {}
+    realtimeChannel = null;
+  }
+
+  realtimeChannel = supabase
+    .channel(`planner-user-state-${PLANNER_USER_ID}`)
+    .on(
+      'postgres_changes',
+      {
+        event: '*',
+        schema: 'public',
+        table: 'planner_user_state',
+        filter: `user_id=eq.${PLANNER_USER_ID}`
+      },
+      (payload) => {
+        const changedBy = payload?.new?.updated_by || payload?.old?.updated_by || '';
+        const myDeviceId = readMeta().deviceId;
+        if (changedBy && changedBy === myDeviceId) return;
+        void pullPlannerUserState({ reason: '실시간 반영' });
+      }
+    )
+    .subscribe((status) => {
+      if (status === 'SUBSCRIBED') {
+        setStatus('Supabase realtime 연결됨. 다른 기기 변경을 바로 반영한다.', 'connected');
+      }
+    });
+}
+
 function kickOffLoops() {
   const config = readConfig();
   if (pollingTimer) clearInterval(pollingTimer);
@@ -448,21 +480,27 @@ function kickOffLoops() {
 
   pollingTimer = setInterval(() => {
     void checkLocalStateChange();
-  }, 2000);
+  }, 1500);
+
+  startRealtimeSubscription();
 
   if (config.autoSync !== false) {
     remoteTimer = setInterval(() => {
-      void pullPlannerUserState({ reason: '자동 폴링' });
+      void pullPlannerUserState({ reason: '백업 폴링' });
       if (config.syncCode) void pullRemoteState({ reason: 'legacy 자동 폴링' });
-    }, 30000);
+    }, 60000);
   }
 }
 
 function stopLoops() {
   if (pollingTimer) clearInterval(pollingTimer);
   if (remoteTimer) clearInterval(remoteTimer);
+  if (realtimeChannel && supabase) {
+    try { supabase.removeChannel(realtimeChannel); } catch {}
+  }
   pollingTimer = null;
   remoteTimer = null;
+  realtimeChannel = null;
 }
 
 async function checkLocalStateChange() {
