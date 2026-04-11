@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "clerkship_id": "respiratory-2026-04-track-b",
+    "subject": "호흡기내과",
+    "track": "B",
+    "block_start": "2026-04-13",
+    "block_end": "2026-04-24",
+    "weekend_end": "2026-04-26T23:59:00",
+    "notes": [
+      "호흡기내과 2주 실습 B트랙 기준 import 설정",
+      "원문 보존형 정돈 원칙: 원문 설명은 raw/notes에 보존하고, 플래너에는 실행 가능한 구조화 정보로 재배치한다."
+    ]
+  },
+  "week_date_map": {
+    "1주차": {
+      "월요일": "2026-04-13",
+      "화요일": "2026-04-14",
+      "수요일": "2026-04-15",
+      "목요일": "2026-04-16",
+      "금요일": "2026-04-17"
+    },
+    "2주차": {
+      "월요일": "2026-04-20",
+      "화요일": "2026-04-21",
+      "수요일": "2026-04-22",
+      "목요일": "2026-04-23",
+      "금요일": "2026-04-24"
+    }
+  },
+  "session_overrides": [
+    {
+      "match": { "week": "1주차", "day": "월요일", "title_contains": "실습 오리엔테이션 및 환자 배정" },
+      "replace": {
+        "professor": "김소윤",
+        "note_append": "2학기 운영 기준에서 OT/환자배정 허브 교수는 김소윤으로 본다"
+      }
+    },
+    {
+      "match": { "week": "1주차", "day": "금요일", "title_contains": "기관지경실" },
+      "action": "exclude",
+      "reason": "B트랙은 1주차 기관지경실 제외"
+    },
+    {
+      "match": { "week": "1주차", "day": "금요일", "title_contains": "호흡기 내과 실험실 참관" },
+      "replace": {
+        "date": "2026-04-15",
+        "time": "16:00~17:00",
+        "title_suffix": " (수요일로 이동 반영)",
+        "note_append": "원문 주석의 '1주차 수요일로 변경'을 적용한 override"
+      }
+    },
+    {
+      "match": { "week": "2주차", "day": "수요일", "title_contains": "CP를 활용한 포트폴리오" },
+      "replace": {
+        "title": "예진평가 – 이정은 교수님",
+        "note_append": "원문상 CP 포트폴리오 표기가 남아 있으나 최신 운영 기준에서는 예진평가로 대체"
+      }
+    }
+  ],
+  "event_type_rules": [
+    { "contains": ["오리엔테이션", "환자 배정"], "type": "admin" },
+    { "contains": ["예진평가", "Mini-CEX", "mini CEX", "임상추론평가", "피드백"], "type": "exam" },
+    { "contains": ["증례발표", "케이스"], "type": "presentation" },
+    { "contains": ["조장"], "type": "chief" },
+    { "contains": ["강의", "참관", "실습", "회진"], "type": "session" }
+  ],
+  "assignment_overrides": {
+    "임상윤리수업": {
+      "linked_session_keywords": ["임상윤리 토의"],
+      "start_at": "2026-04-21T18:00:00",
+      "soft_deadline": "2026-04-24T21:00:00",
+      "hard_deadline": "2026-04-26T23:59:00",
+      "difficulty_content": 4,
+      "difficulty_operational": 5,
+      "needs_confirmation": true,
+      "notes": ["문재영 교수님 토의/과제 운영 변경 가능성 있음"]
+    },
+    "PFT, SPT": {
+      "linked_session_keywords": ["호흡기계 검사 강의", "폐기능실 참관", "피부반응검사"],
+      "start_at": "2026-04-14T12:30:00",
+      "soft_deadline": "2026-04-23T21:00:00",
+      "hard_deadline": "2026-04-24T23:59:00",
+      "difficulty_content": 4,
+      "difficulty_operational": 3,
+      "needs_confirmation": false
+    },
+    "중환자실 케이스": {
+      "linked_session_keywords": ["중환자실 참관", "중환자실 증례발표"],
+      "start_at": "2026-04-14T14:30:00",
+      "soft_deadline": "2026-04-22T21:00:00",
+      "hard_deadline": "2026-04-22T23:59:00",
+      "followup_deadline": "2026-04-24T23:59:00",
+      "difficulty_content": 6,
+      "difficulty_operational": 7,
+      "needs_confirmation": false
+    },
+    "알레르기 질환 케이스": {
+      "linked_session_keywords": ["약물 알레르기", "피부반응검사"],
+      "start_at": "2026-04-16T12:30:00",
+      "soft_deadline": "2026-04-24T21:00:00",
+      "hard_deadline": "2026-04-26T23:59:00",
+      "difficulty_content": 5,
+      "difficulty_operational": 5,
+      "needs_confirmation": true
+    },
+    "실습 면담 평행차트 (word 첨부)": {
+      "linked_session_keywords": ["대면 실습 에세이 피드백", "실습 면담"],
+      "start_at": "2026-04-16T09:00:00",
+      "soft_deadline": "2026-04-16T18:00:00",
+      "hard_deadline": "2026-04-16T23:59:00",
+      "difficulty_content": 4,
+      "difficulty_operational": 6,
+      "needs_confirmation": true
+    },
+    "임상추론평가": {
+      "linked_session_keywords": ["임상추론평가"],
+      "start_at": "2026-04-20T20:00:00",
+      "soft_deadline": "2026-04-23T21:00:00",
+      "hard_deadline": "2026-04-24T23:59:00",
+      "difficulty_content": 7,
+      "difficulty_operational": 8,
+      "needs_confirmation": false
+    },
+    "예진 평가(기존 CP 포트폴리오 대체)": {
+      "linked_session_keywords": ["예진평가", "외래 예진"],
+      "start_at": "2026-04-13T18:00:00",
+      "soft_deadline": "2026-04-22T14:00:00",
+      "hard_deadline": "2026-04-24T23:59:00",
+      "difficulty_content": 7,
+      "difficulty_operational": 9,
+      "needs_confirmation": false,
+      "milestones": [
+        { "title": "예진용 환자/케이스 확보 시작", "due": "2026-04-15T18:00:00" },
+        { "title": "예진평가 제출본 1개 확보", "due": "2026-04-22T14:00:00" }
+      ]
+    },
+    "병동 경과기록지 (주당 3개)": {
+      "linked_session_keywords": ["병동 경과 기록지 피드백", "경과기록지"],
+      "start_at": "2026-04-13T18:30:00",
+      "soft_deadline": "2026-04-23T21:00:00",
+      "hard_deadline": "2026-04-24T23:59:00",
+      "difficulty_content": 7,
+      "difficulty_operational": 9,
+      "needs_confirmation": false,
+      "milestones": [
+        { "title": "병동 경과기록지 1주차 3개 진행", "due": "2026-04-17T23:00:00" },
+        { "title": "병동 경과기록지 2주차 3개 마감", "due": "2026-04-24T23:59:00" }
+      ]
+    },
+    "외래 예진 (2개)": {
+      "linked_session_keywords": ["외래 예진", "예진평가"],
+      "start_at": "2026-04-15T10:00:00",
+      "soft_deadline": "2026-04-22T18:00:00",
+      "hard_deadline": "2026-04-24T23:59:00",
+      "difficulty_content": 6,
+      "difficulty_operational": 8,
+      "needs_confirmation": false,
+      "milestones": [
+        { "title": "외래 예진 1개 확보", "due": "2026-04-18T18:00:00" },
+        { "title": "외래 예진 2개 + 스캔 준비", "due": "2026-04-24T18:00:00" }
+      ]
+    },
+    "CXR 과제": {
+      "linked_session_keywords": ["CXR"],
+      "start_at": "2026-04-14T10:00:00",
+      "soft_deadline": null,
+      "hard_deadline": null,
+      "difficulty_content": 3,
+      "difficulty_operational": 2,
+      "needs_confirmation": false,
+      "notes": ["최신 인계상 정식 과제는 없고 정재욱 교수님 발표자료 이메일 제출만 reference"]
+    },
+    "기관지내시경 참관 (word 첨부)": {
+      "linked_session_keywords": ["기관지경실"],
+      "start_at": "2026-04-24T10:00:00",
+      "soft_deadline": "2026-04-24T21:00:00",
+      "hard_deadline": "2026-04-26T23:59:00",
+      "difficulty_content": 3,
+      "difficulty_operational": 4,
+      "needs_confirmation": true
+    },
+    "Mini CEX": {
+      "linked_session_keywords": ["Mini-CEX", "mini CEX"],
+      "start_at": "2026-04-20T08:00:00",
+      "soft_deadline": null,
+      "hard_deadline": null,
+      "difficulty_content": 6,
+      "difficulty_operational": 6,
+      "needs_confirmation": true,
+      "notes": ["최신 인계상 제출 요구는 불분명하므로 확인 필요"]
+    },
+    "폐진찰 피드백": {
+      "linked_session_keywords": ["폐진찰 시행 및 피드백"],
+      "start_at": "2026-04-14T20:00:00",
+      "soft_deadline": "2026-04-14T23:00:00",
+      "hard_deadline": "2026-04-14T23:59:00",
+      "difficulty_content": 5,
+      "difficulty_operational": 6,
+      "needs_confirmation": false
+    }
+  }
+}

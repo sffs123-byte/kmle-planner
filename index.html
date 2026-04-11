@@ -259,6 +259,10 @@
       padding: 22px;
     }
 
+    .calendar-panel {
+      overflow-x: auto;
+    }
+
     .calendar-head {
       display: flex;
       justify-content: space-between;
@@ -275,8 +279,9 @@
 
     .calendar-grid {
       display: grid;
-      grid-template-columns: repeat(7, minmax(0,1fr));
+      grid-template-columns: repeat(8, minmax(0,1fr));
       gap: 10px;
+      min-width: 1080px;
     }
 
     .calendar-weekday {
@@ -310,6 +315,73 @@
     .calendar-cell.empty {
       background: rgba(219,228,240,0.28);
       cursor: default;
+    }
+
+    .calendar-summary-cell {
+      min-height: 122px;
+      border-radius: 18px;
+      border: 1px solid rgba(208,218,234,0.92);
+      background: linear-gradient(180deg, rgba(249,251,255,0.98), rgba(241,246,255,0.94));
+      padding: 10px;
+      display: grid;
+      align-content: start;
+      gap: 8px;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .calendar-summary-cell.selected {
+      border-color: var(--text);
+      box-shadow: 0 0 0 2px rgba(24,33,47,0.08);
+    }
+
+    .calendar-summary-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .calendar-summary-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .calendar-summary-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .calendar-summary-item {
+      display: grid;
+      gap: 4px;
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(220,226,238,0.92);
+      background: rgba(255,255,255,0.96);
+    }
+
+    .calendar-summary-item-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.35;
+    }
+
+    .calendar-summary-item-meta {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .calendar-summary-empty {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      padding-top: 4px;
     }
 
     .calendar-cell.selected {
@@ -433,6 +505,195 @@
       width: 16px;
       height: 16px;
       accent-color: var(--green);
+    }
+
+    .event-actions {
+      display: grid;
+      justify-items: end;
+      gap: 10px;
+    }
+
+    .event-open-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(47,109,246,0.18);
+      background: linear-gradient(180deg, rgba(241,246,255,0.98), rgba(231,239,255,0.88));
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 13px;
+      border-radius: 999px;
+      padding: 8px 12px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(47,109,246,0.08);
+      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+    }
+
+    .event-open-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(47,109,246,0.12);
+      border-color: rgba(47,109,246,0.32);
+    }
+
+    .event-open-btn::after {
+      content: '›';
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .session-content {
+      margin-top: 12px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .session-section {
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(240,244,252,0.85);
+      border: 1px solid rgba(208,218,234,0.9);
+    }
+
+    .session-section-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+    }
+
+    .session-section ul {
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+      color: var(--text);
+    }
+
+    .detail-screen {
+      position: fixed;
+      inset: 0;
+      background: rgba(16, 24, 40, 0.36);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: flex-end;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 40;
+    }
+
+    .detail-screen.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .detail-screen-panel {
+      width: min(920px, 100%);
+      height: 100%;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,250,255,0.98));
+      border-left: 1px solid rgba(220,226,238,0.95);
+      box-shadow: -24px 0 48px rgba(16, 24, 40, 0.12);
+      transform: translateX(28px);
+      transition: transform 0.24s ease;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    .detail-screen.open .detail-screen-panel {
+      transform: translateX(0);
+    }
+
+    .detail-screen-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 22px;
+      border-bottom: 1px solid rgba(220,226,238,0.95);
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(12px);
+    }
+
+    .detail-screen-body {
+      overflow-y: auto;
+      padding: 22px;
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+
+    .detail-screen-back,
+    .detail-screen-close {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.95);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .detail-screen-close {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      font-size: 18px;
+    }
+
+    .detail-screen-hero {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255,255,255,0.92);
+      padding: 20px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .detail-screen-title {
+      font-size: clamp(24px, 2.5vw, 34px);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      font-weight: 800;
+    }
+
+    .detail-screen-summary {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+      max-width: 62ch;
+    }
+
+    .detail-screen-stack {
+      display: grid;
+      gap: 14px;
+    }
+
+    .detail-screen-section {
+      border: 1px solid rgba(220,226,238,0.95);
+      border-radius: 18px;
+      background: rgba(248,250,255,0.94);
+      padding: 18px;
+    }
+
+    .detail-screen-section h4 {
+      margin: 0 0 10px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    .detail-screen-section ul {
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 8px;
+      line-height: 1.65;
     }
 
     .hero-side {
@@ -1037,6 +1298,19 @@
         min-height: 106px;
         padding: 8px;
       }
+
+      .detail-screen-panel {
+        width: 100%;
+      }
+
+      .detail-screen-head,
+      .detail-screen-body {
+        padding: 16px;
+      }
+
+      .detail-screen-title {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
@@ -1057,6 +1331,7 @@
         <div class="top-actions">
           <button class="btn btn-primary" id="startTodayBtn">오늘 학습 시작</button>
           <button class="btn btn-secondary" id="loadCanaryBtn">4월 Canary 세팅</button>
+          <button class="btn btn-secondary" id="loadRespBundleBtn">호흡기 실습 불러오기</button>
           <button class="btn btn-secondary" id="exportBtn">데이터 내보내기</button>
           <label class="btn btn-ghost" for="importInput">데이터 가져오기</label>
           <input id="importInput" type="file" accept="application/json" class="sr-only" />
@@ -1324,6 +1599,8 @@
       </div>
     </section>
 
+    <div class="detail-screen" id="eventDetailScreen" aria-hidden="true"></div>
+
     <div class="footer-note">
       국시 준비 흐름에 맞춰 <strong>강의 듣기 → 개념 틀 짜기 → 문제 풀기 → 오답노트/개념틀 수정 → 복습하기</strong>
       순서가 항상 드러나도록 설계했다. 데이터는 현재 브라우저의 localStorage에 저장된다.
@@ -1420,6 +1697,7 @@
     };
 
     const EVENT_TYPE_META = {
+      session: { label: '수업', color: '#2563eb' },
       assignment: { label: '과제', color: '#d97706' },
       presentation: { label: '발표', color: '#7c3aed' },
       chief: { label: '조장', color: '#0f172a' },
@@ -1440,6 +1718,9 @@
     let selectedSubjectId = state.subjects[0]?.id || null;
     let selectedCalendarDate = formatDateInput(new Date());
     let calendarMonthCursor = new Date(today.getFullYear(), today.getMonth(), 1);
+    let activeCalendarEventId = null;
+    let selectedCalendarScope = 'day';
+    let selectedWeekKey = null;
 
     function uid(prefix='id') {
       return `${prefix}-${Math.random().toString(36).slice(2, 10)}`;
@@ -1590,7 +1871,15 @@
         title: String(event?.title || '').trim(),
         time: event?.time || '종일',
         note: String(event?.note || '').trim(),
-        completed: Boolean(event?.completed)
+        completed: Boolean(event?.completed),
+        professor: event?.professor || '',
+        difficulty: Number(event?.difficulty || 0) || null,
+        track: event?.track || '',
+        windowType: event?.windowType || '',
+        bundleId: event?.bundleId || '',
+        sourceSessionId: event?.sourceSessionId || '',
+        sourceAssignmentId: event?.sourceAssignmentId || '',
+        sourceKind: event?.sourceKind || ''
       };
     }
 
@@ -1598,10 +1887,192 @@
       const normalized = {
         subjects: Array.isArray(data?.subjects) ? data.subjects.map(normalizeSubject) : [],
         tasks: Array.isArray(data?.tasks) ? data.tasks.map(normalizeTask) : [],
-        calendarEvents: Array.isArray(data?.calendarEvents) ? data.calendarEvents.map(normalizeCalendarEvent) : buildCalendarSeedEvents()
+        calendarEvents: Array.isArray(data?.calendarEvents) ? data.calendarEvents.map(normalizeCalendarEvent) : buildCalendarSeedEvents(),
+        clerkshipBundles: data?.clerkshipBundles && typeof data.clerkshipBundles === 'object' ? data.clerkshipBundles : {}
       };
       normalized.subjects.forEach(recomputeSubjectFromParts);
       return normalized;
+    }
+
+    function looksLikePlannerBundle(data) {
+      return Boolean(data?.meta?.clerkship_id) && Array.isArray(data?.sessions) && Array.isArray(data?.assignments);
+    }
+
+    function cloneState(data) {
+      return normalizeState(JSON.parse(JSON.stringify(data)));
+    }
+
+    function subjectNameFromBundle(bundle) {
+      const raw = String(bundle?.meta?.subject || '');
+      if (raw.includes('호흡')) return '호흡기';
+      if (raw.includes('심장') || raw.includes('순환')) return '순환기';
+      if (raw.includes('내분비')) return '내분비';
+      if (raw.includes('소아')) return '소아과';
+      if (raw.includes('산과') || raw.includes('부인')) return '산과';
+      return raw.replace(/내과|클럭십|실습|메인 인계/g, '').trim() || '실습';
+    }
+
+    function colorForSubjectName(subjectName) {
+      const found = DEFAULT_SUBJECTS.find(([name]) => name === subjectName);
+      return found?.[1] || '#2f6df6';
+    }
+
+    function ensureSubjectForBundle(nextState, bundle) {
+      const subjectName = subjectNameFromBundle(bundle);
+      let subject = nextState.subjects.find(item => item.name === subjectName);
+      if (!subject) {
+        subject = createSubject(subjectName, colorForSubjectName(subjectName));
+        if (CANARY_PARTS[subjectName]) {
+          subject.parts = buildParts(subjectName);
+          recomputeSubjectFromParts(subject);
+        }
+        nextState.subjects.push(subject);
+      }
+      return subject;
+    }
+
+    function bundleSessionToCalendarEvent(bundle, session) {
+      const bundlePrefix = `clerkship-${safeId(bundle.meta.clerkship_id)}`;
+      return normalizeCalendarEvent({
+        id: `${bundlePrefix}-event-${safeId(session.id || session.title || uid('session'))}`,
+        date: session.date,
+        type: session.event_type || 'session',
+        title: session.title,
+        time: session.time_label || session.time_raw || '종일',
+        note: session.note || session.summary || '',
+        completed: false,
+        professor: session.professor || '',
+        difficulty: session.difficulty || null,
+        track: bundle.meta?.track || '',
+        windowType: 'clerkship-session',
+        bundleId: bundle.meta?.clerkship_id || '',
+        sourceSessionId: session.id || '',
+        sourceAssignmentId: '',
+        sourceKind: 'session'
+      });
+    }
+
+    function bundleAssignmentToCalendarEvents(bundle, assignment) {
+      const events = [];
+      const bundlePrefix = `clerkship-${safeId(bundle.meta.clerkship_id)}`;
+      if (assignment.start_at) {
+        const [date, time] = assignment.start_at.split('T');
+        events.push(normalizeCalendarEvent({
+          id: `${bundlePrefix}-assignment-start-${safeId(assignment.id || assignment.name)}`,
+          date,
+          type: 'assignment',
+          title: `${assignment.name} 착수`,
+          time: (time || '09:00').slice(0,5),
+          note: assignment.content_summary || assignment.format || '',
+          completed: false,
+          difficulty: assignment.difficulty_total || null,
+          track: bundle.meta?.track || '',
+          windowType: 'assignment-start',
+          bundleId: bundle.meta?.clerkship_id || '',
+          sourceSessionId: '',
+          sourceAssignmentId: assignment.id || '',
+          sourceKind: 'assignment'
+        }));
+      }
+      if (assignment.hard_deadline) {
+        const [date, time] = assignment.hard_deadline.split('T');
+        events.push(normalizeCalendarEvent({
+          id: `${bundlePrefix}-assignment-deadline-${safeId(assignment.id || assignment.name)}`,
+          date,
+          type: 'assignment',
+          title: `${assignment.name} 마감`,
+          time: (time || '23:59').slice(0,5),
+          note: assignment.content_summary || assignment.format || assignment.raw_deadline || '',
+          completed: false,
+          difficulty: assignment.difficulty_total || null,
+          track: bundle.meta?.track || '',
+          windowType: 'assignment-deadline',
+          bundleId: bundle.meta?.clerkship_id || '',
+          sourceSessionId: '',
+          sourceAssignmentId: assignment.id || '',
+          sourceKind: 'assignment'
+        }));
+      }
+      return events;
+    }
+
+    function bundleAssignmentToTasks(bundle, assignment, subjectId) {
+      const tasks = [];
+      const bundlePrefix = `clerkship-${safeId(bundle.meta.clerkship_id)}`;
+      if (assignment.start_at) {
+        const [date, time] = assignment.start_at.split('T');
+        tasks.push(normalizeTask({
+          id: `${bundlePrefix}-task-start-${safeId(assignment.id || assignment.name)}`,
+          date,
+          startTime: (time || '09:00').slice(0,5),
+          duration: 45,
+          subjectId,
+          stageId: 'framework',
+          title: `${assignment.name} 시작`,
+          memo: `운영 ${assignment.difficulty_operational || assignment.difficulty_total || '-'} / 10 · ${assignment.format || ''}`,
+          completed: false,
+          createdAt: new Date().toISOString()
+        }));
+      }
+      (assignment.milestones || []).forEach((milestone, index) => {
+        const [date, time] = String(milestone.due || '').split('T');
+        if (!date) return;
+        tasks.push(normalizeTask({
+          id: `${bundlePrefix}-task-milestone-${safeId(assignment.id || assignment.name)}-${index + 1}`,
+          date,
+          startTime: (time || '20:00').slice(0,5),
+          duration: 40,
+          subjectId,
+          stageId: 'revise',
+          title: milestone.title || `${assignment.name} 체크포인트`,
+          memo: assignment.name,
+          completed: false,
+          createdAt: new Date().toISOString()
+        }));
+      });
+      return tasks;
+    }
+
+    function mergePlannerBundleIntoState(bundle, baseState) {
+      const nextState = cloneState(baseState);
+      nextState.clerkshipBundles = nextState.clerkshipBundles || {};
+      nextState.clerkshipBundles[bundle.meta.clerkship_id] = bundle;
+
+      const safeBundleId = safeId(bundle.meta.clerkship_id);
+      const bundlePrefix = `clerkship-${safeBundleId}`;
+      const legacyEventPrefix = `event-${safeBundleId}-`;
+      const legacyTaskPrefix = `task-${safeBundleId}-`;
+      nextState.calendarEvents = nextState.calendarEvents.filter(event => {
+        const id = String(event.id || '');
+        return !id.startsWith(bundlePrefix) && !id.startsWith(legacyEventPrefix);
+      });
+      nextState.tasks = nextState.tasks.filter(task => {
+        const id = String(task.id || '');
+        return !id.startsWith(bundlePrefix) && !id.startsWith(legacyTaskPrefix);
+      });
+
+      const subject = ensureSubjectForBundle(nextState, bundle);
+      const bundleNote = `[${bundle.meta.subject} bundle 적용] ${bundle.meta.track || ''} 기준 · sessions ${bundle.sessions.length} · assignments ${bundle.assignments.length}`;
+      subject.note = [subject.note, bundleNote].filter(Boolean).join('\n\n');
+      subject.recentHistory = [
+        `${formatDateLabel(new Date())} · ${bundle.meta.subject} bundle 적용`,
+        ...(subject.recentHistory || [])
+      ].slice(0, 8);
+
+      bundle.sessions.forEach(session => {
+        nextState.calendarEvents.push(bundleSessionToCalendarEvent(bundle, session));
+      });
+      bundle.assignments.forEach(assignment => {
+        bundleAssignmentToCalendarEvents(bundle, assignment).forEach(event => nextState.calendarEvents.push(event));
+      });
+
+      nextState.calendarEvents = nextState.calendarEvents.map(normalizeCalendarEvent)
+        .sort((a, b) => `${a.date} ${a.time} ${a.title}`.localeCompare(`${b.date} ${b.time} ${b.title}`, 'ko'));
+      nextState.tasks = nextState.tasks.map(normalizeTask)
+        .sort((a, b) => `${a.date} ${a.startTime} ${a.title}`.localeCompare(`${b.date} ${b.startTime} ${b.title}`, 'ko'));
+      nextState.subjects = nextState.subjects.map(normalizeSubject);
+      nextState.subjects.forEach(recomputeSubjectFromParts);
+      return nextState;
     }
 
     function buildDemoState() {
@@ -1818,6 +2289,22 @@
       renderWeekGrid();
     }
 
+    async function loadPlannerBundleFromUrl(url) {
+      const response = await fetch(url, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`bundle fetch failed: ${response.status}`);
+      const bundle = await response.json();
+      if (!looksLikePlannerBundle(bundle)) throw new Error('invalid bundle');
+      state = mergePlannerBundleIntoState(bundle, state);
+      selectedSubjectId = ensureSubjectForBundle(state, bundle).id;
+      selectedCalendarDate = bundle.sessions?.[0]?.date || formatDateInput(new Date());
+      selectedCalendarScope = 'day';
+      selectedWeekKey = null;
+      const baseDate = parseIsoDate(selectedCalendarDate);
+      calendarMonthCursor = new Date(baseDate.getFullYear(), baseDate.getMonth(), 1);
+      renderAll();
+      document.querySelector('[data-tab="calendar"]').click();
+    }
+
     function loadState() {
       try {
         const raw = localStorage.getItem(STORAGE_KEY);
@@ -1870,6 +2357,13 @@
     function percent(done, total) {
       if (!total || total <= 0) return 0;
       return Math.max(0, Math.min(100, Math.round((done / total) * 100)));
+    }
+
+    function safeId(value) {
+      return String(value || '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
     }
 
     function subjectPercent(subject) {
@@ -1953,6 +2447,98 @@
       return sortTasks(state.tasks.filter(task => task.date === date));
     }
 
+    function buildCalendarWeeks(baseDate) {
+      const { first, last } = calendarMonthRange(baseDate);
+      const leading = first.getDay();
+      const days = [];
+      for (let i = 0; i < leading; i += 1) days.push(null);
+      for (let day = 1; day <= last.getDate(); day += 1) {
+        days.push(new Date(first.getFullYear(), first.getMonth(), day));
+      }
+      while (days.length % 7 !== 0) days.push(null);
+      const weeks = [];
+      for (let i = 0; i < days.length; i += 7) weeks.push(days.slice(i, i + 7));
+      return weeks;
+    }
+
+    function weekKeyFromDays(weekDays) {
+      const first = weekDays.find(Boolean);
+      const last = [...weekDays].reverse().find(Boolean);
+      if (!first || !last) return `empty-${Math.random().toString(36).slice(2,8)}`;
+      return `${formatDateInput(first)}__${formatDateInput(last)}`;
+    }
+
+    function bundleIdForDate(dateIso) {
+      const bundles = state.clerkshipBundles || {};
+      for (const [bundleId, bundle] of Object.entries(bundles)) {
+        if ((bundle.sessions || []).some(session => session.date === dateIso)) return bundleId;
+      }
+      return null;
+    }
+
+    function bundleIdForWeek(weekDays) {
+      for (const day of weekDays) {
+        if (!day) continue;
+        const bundleId = bundleIdForDate(formatDateInput(day));
+        if (bundleId) return bundleId;
+      }
+      return null;
+    }
+
+    function isWeeklySummaryEvent(event) {
+      if (!event) return false;
+      if (event.sourceSessionId || event.sourceKind === 'session' || event.windowType === 'clerkship-session') return false;
+      if (event.sourceAssignmentId || event.sourceKind === 'assignment') return true;
+      if (event.windowType && event.windowType !== 'clerkship-session') return true;
+      return ['assignment', 'admin', 'presentation', 'exam', 'chief'].includes(event.type);
+    }
+
+    function weeklySummaryCounts(events) {
+      const counts = { assignment: 0, presentation: 0, chief: 0, exam: 0, admin: 0 };
+      events.forEach(event => {
+        if (counts[event.type] !== undefined) counts[event.type] += 1;
+      });
+      return counts;
+    }
+
+    function timeSortValue(value) {
+      return (value || '99:99').replace(':', '');
+    }
+
+    function compareEventChronology(a, b) {
+      return `${a.date} ${timeSortValue(a.time)} ${a.title}`.localeCompare(`${b.date} ${timeSortValue(b.time)} ${b.title}`, 'ko');
+    }
+
+    function weekSummaryMeta(event) {
+      const assignment = findBundleAssignmentForEvent(event);
+      if (assignment) {
+        const chunks = [];
+        if (assignment.start_at) chunks.push(`착수 ${assignment.start_at.slice(5).replace('T', ' ')}`);
+        if (assignment.hard_deadline) chunks.push(`마감 ${assignment.hard_deadline.slice(5).replace('T', ' ')}`);
+        return chunks.join(' · ');
+      }
+      const day = parseIsoDate(event.date).getDate();
+      return `${day}일 ${event.time || '종일'}`;
+    }
+
+    function weekSummaryEvents(weekDays) {
+      const dateSet = new Set(weekDays.filter(Boolean).map(day => formatDateInput(day)));
+      const bundleId = bundleIdForWeek(weekDays);
+      return state.calendarEvents
+        .filter(event => dateSet.has(event.date))
+        .filter(event => !bundleId || event.bundleId === bundleId)
+        .filter(isWeeklySummaryEvent)
+        .sort(compareEventChronology);
+    }
+
+    function dailyPrimaryEvents(dateIso) {
+      const bundleId = bundleIdForDate(dateIso);
+      return calendarEventsForDate(dateIso)
+        .filter(event => !bundleId || event.bundleId === bundleId)
+        .filter(event => !isWeeklySummaryEvent(event))
+        .sort(compareEventChronology);
+    }
+
     function availabilityHint(dateInput) {
       const date = typeof dateInput === 'string' ? parseIsoDate(dateInput) : dateInput;
       const block = getClerkshipBlock(date);
@@ -1974,6 +2560,48 @@
       const endDate = new Date(startDate.getTime() + Number(task.duration || 0) * 60000);
       const end = `${String(endDate.getHours()).padStart(2,'0')}:${String(endDate.getMinutes()).padStart(2,'0')}`;
       return `${start}–${end}`;
+    }
+
+    function getCalendarEvents() {
+      return Array.isArray(state.calendarEvents) ? state.calendarEvents : [];
+    }
+
+    function parseCalendarEventDate(event) {
+      return new Date(`${event.date}T${event.startTime || '00:00'}:00`);
+    }
+
+    function calendarEventRangeLabel(event) {
+      if (event.allDay) return '하루 종일';
+      if (event.startTime && event.endTime) return `${event.startTime}–${event.endTime}`;
+      if (event.startTime) return event.startTime;
+      return '시간 미정';
+    }
+
+    function isCalendarEventOverdue(event) {
+      const end = event.endTime || event.startTime || '23:59';
+      const due = new Date(`${event.date}T${end}:00`);
+      return due < new Date();
+    }
+
+    function calendarEventLabel(event) {
+      return event.category || event.type || event.source || '실습 일정';
+    }
+
+    function sortBoardEntries(entries) {
+      return [...entries].sort((a, b) => {
+        const aDate = a.kind === 'task' ? parseTaskDate(a.item) : parseCalendarEventDate(a.item);
+        const bDate = b.kind === 'task' ? parseTaskDate(b.item) : parseCalendarEventDate(b.item);
+        return aDate - bDate;
+      });
+    }
+
+    function todayBoardEntries() {
+      const now = new Date();
+      const taskEntries = todayTasks().map(task => ({ kind: 'task', item: task }));
+      const eventEntries = getCalendarEvents()
+        .filter(event => isSameDate(parseCalendarEventDate(event), now))
+        .map(event => ({ kind: 'event', item: event }));
+      return sortBoardEntries([...taskEntries, ...eventEntries]);
     }
 
     function sortTasks(tasks) {
@@ -2047,24 +2675,42 @@
 
     function renderTodayTimeline() {
       const container = byId('todayTimeline');
-      const tasks = todayTasks();
-      if (!tasks.length) {
+      const entries = todayBoardEntries();
+      if (!entries.length) {
         container.innerHTML = `<div class="empty">오늘 일정이 아직 없다.<br />주간 플래너에서 블록을 추가해보자.</div>`;
         return;
       }
-      container.innerHTML = tasks.map(task => {
-        const subject = getSubject(task.subjectId);
-        const stage = getStage(task.stageId);
+      container.innerHTML = entries.map(entry => {
+        if (entry.kind === 'task') {
+          const task = entry.item;
+          const subject = getSubject(task.subjectId);
+          const stage = getStage(task.stageId);
+          return `
+            <div class="timeline-item">
+              <div class="timeline-time">${taskRangeLabel(task)}</div>
+              <div>
+                <div class="item-title">${task.title}</div>
+                <div class="item-meta">${subject?.name || '-'} · ${stage?.label || '-'}</div>
+                ${task.memo ? `<div class="badge-row"><span class="badge">메모 · ${escapeHtml(task.memo)}</span></div>` : ''}
+              </div>
+              <div class="badge-row">
+                <span class="badge ${task.completed ? 'review' : ''}">${task.completed ? '완료' : '예정'}</span>
+              </div>
+            </div>
+          `;
+        }
+
+        const event = entry.item;
         return `
           <div class="timeline-item">
-            <div class="timeline-time">${taskRangeLabel(task)}</div>
+            <div class="timeline-time event">${calendarEventRangeLabel(event)}</div>
             <div>
-              <div class="item-title">${task.title}</div>
-              <div class="item-meta">${subject?.name || '-'} · ${stage?.label || '-'}</div>
-              ${task.memo ? `<div class="badge-row"><span class="badge">메모 · ${escapeHtml(task.memo)}</span></div>` : ''}
+              <div class="item-title">${escapeHtml(event.title || '실습 일정')}</div>
+              <div class="item-meta">${escapeHtml(calendarEventLabel(event))}${event.location ? ` · ${escapeHtml(event.location)}` : ''}</div>
+              ${event.memo ? `<div class="badge-row"><span class="badge calendar">메모 · ${escapeHtml(event.memo)}</span></div>` : ''}
             </div>
             <div class="badge-row">
-              <span class="badge ${task.completed ? 'review' : ''}">${task.completed ? '완료' : '예정'}</span>
+              <span class="badge calendar">실습</span>
             </div>
           </div>
         `;
@@ -2173,42 +2819,52 @@
     }
 
     function renderCalendarBoard() {
-      const { first, last } = calendarMonthRange(calendarMonthCursor);
+      const { first } = calendarMonthRange(calendarMonthCursor);
       const grid = byId('calendarGrid');
       const label = byId('calendarMonthLabel');
       const legend = byId('calendarLegend');
       if (!grid || !label || !legend) return;
 
       label.textContent = `${first.getFullYear()}년 ${first.getMonth() + 1}월`;
-      const weekdays = ['일', '월', '화', '수', '목', '금', '토'];
-      const leading = first.getDay();
-      const days = [];
-      for (let i = 0; i < leading; i += 1) days.push(null);
-      for (let day = 1; day <= last.getDate(); day += 1) {
-        days.push(new Date(first.getFullYear(), first.getMonth(), day));
-      }
-      while (days.length % 7 !== 0) days.push(null);
+      const weekdays = ['일', '월', '화', '수', '목', '금', '토', '종합'];
+      const weeks = buildCalendarWeeks(calendarMonthCursor);
 
-      grid.innerHTML = `${weekdays.map(day => `<div class="calendar-weekday">${day}</div>`).join('')}${days.map(day => {
-        if (!day) return `<div class="calendar-cell empty"></div>`;
-        const iso = formatDateInput(day);
-        const block = getClerkshipBlock(iso);
-        const events = calendarEventsForDate(iso);
-        const counts = Object.keys(EVENT_TYPE_META).map(type => ({ type, count: events.filter(event => event.type === type).length })).filter(item => item.count > 0);
-        return `
-          <button class="calendar-cell ${iso === selectedCalendarDate ? 'selected' : ''} ${isSameDate(day, new Date()) ? 'today' : ''}" onclick="selectCalendarDate('${iso}')">
-            <div class="calendar-top">
-              <span class="calendar-day">${day.getDate()}</span>
-              <span class="calendar-hint">${availabilityHint(day)}</span>
+      grid.innerHTML = weekdays.map(day => `<div class="calendar-weekday">${day}</div>`).join('') + weeks.map(weekDays => {
+        const weekKey = weekKeyFromDays(weekDays);
+        const dayCells = weekDays.map(day => {
+          if (!day) return `<div class="calendar-cell empty"></div>`;
+          const iso = formatDateInput(day);
+          const block = getClerkshipBlock(iso);
+          return `
+            <button class="calendar-cell ${iso === selectedCalendarDate ? 'selected' : ''} ${isSameDate(day, new Date()) ? 'today' : ''}" onclick="selectCalendarDate('${iso}')">
+              <div class="calendar-top">
+                <span class="calendar-day">${day.getDate()}</span>
+                <span class="calendar-hint">${availabilityHint(day)}</span>
+              </div>
+              ${block ? `<span class="calendar-block-chip" style="background:${block.color}">${block.label}</span>` : '<span class="calendar-hint">블록 없음</span>'}
+            </button>
+          `;
+        }).join('');
+
+        const summaryEvents = weekSummaryEvents(weekDays);
+        const counts = weeklySummaryCounts(summaryEvents);
+        const summaryCell = `
+          <button class="calendar-summary-cell ${selectedCalendarScope === 'week' && selectedWeekKey === weekKey ? 'selected' : ''}" onclick="selectCalendarWeek('${weekKey}')">
+            <div class="calendar-summary-head">
+              <span class="calendar-summary-title">종합</span>
+              <span class="calendar-hint">${summaryEvents.length ? `${summaryEvents.length}개` : '없음'}</span>
             </div>
-            ${block ? `<span class="calendar-block-chip" style="background:${block.color}">${block.label}</span>` : '<span class="calendar-hint">블록 없음</span>'}
-            <div class="calendar-mini-row">
-              ${counts.map(item => `<span class="calendar-mini-chip">${EVENT_TYPE_META[item.type].label} ${item.count}</span>`).join('')}
-              ${tasksForDate(iso).length ? `<span class="calendar-mini-chip">공부 ${tasksForDate(iso).length}</span>` : ''}
-            </div>
+            ${summaryEvents.length ? `<div class="calendar-summary-list">
+              ${counts.assignment ? `<div class="calendar-summary-item"><div class="calendar-summary-item-title">과제 ${counts.assignment}개</div></div>` : ''}
+              ${counts.presentation ? `<div class="calendar-summary-item"><div class="calendar-summary-item-title">발표 ${counts.presentation}개</div></div>` : ''}
+              ${counts.exam ? `<div class="calendar-summary-item"><div class="calendar-summary-item-title">평가 ${counts.exam}개</div></div>` : ''}
+              ${counts.chief ? `<div class="calendar-summary-item"><div class="calendar-summary-item-title">조장 ${counts.chief}개</div></div>` : ''}
+              ${counts.admin ? `<div class="calendar-summary-item"><div class="calendar-summary-item-title">행정 ${counts.admin}개</div></div>` : ''}
+            </div>` : `<div class="calendar-summary-empty">이번 주 종합 일정 없음</div>`}
           </button>
         `;
-      }).join('')}`;
+        return dayCells + summaryCell;
+      }).join('');
 
       legend.innerHTML = [
         ...CLERKSHIP_BLOCKS.map(block => `<span class="detail-chip" style="background:${block.color}; color:white;">${block.label}</span>`),
@@ -2216,18 +2872,242 @@
       ].join('');
     }
 
+    function findBundleSessionForEvent(event) {
+      if (!event?.bundleId || !event?.sourceSessionId) return null;
+      const bundle = state.clerkshipBundles?.[event.bundleId];
+      if (!bundle?.sessions) return null;
+      return bundle.sessions.find(session => session.id === event.sourceSessionId) || null;
+    }
+
+    function findBundleAssignmentForEvent(event) {
+      if (!event?.bundleId || !event?.sourceAssignmentId) return null;
+      const bundle = state.clerkshipBundles?.[event.bundleId];
+      if (!bundle?.assignments) return null;
+      return bundle.assignments.find(assignment => assignment.id === event.sourceAssignmentId) || null;
+    }
+
+    function findCalendarEventById(eventId) {
+      return state.calendarEvents.find(event => event.id === eventId) || null;
+    }
+
+    function findRelatedAssignmentsForSession(event, session) {
+      if (!event?.bundleId || !session?.id) return [];
+      const bundle = state.clerkshipBundles?.[event.bundleId];
+      if (!bundle?.assignments) return [];
+      return bundle.assignments.filter(assignment => (assignment.linked_session_ids || []).includes(session.id));
+    }
+
+    function findRelatedSessionsForAssignment(event, assignment) {
+      if (!event?.bundleId || !assignment?.linked_session_ids?.length) return [];
+      const bundle = state.clerkshipBundles?.[event.bundleId];
+      if (!bundle?.sessions) return [];
+      return (assignment.linked_session_ids || [])
+        .map(sessionId => bundle.sessions.find(session => session.id === sessionId) || null)
+        .filter(Boolean);
+    }
+
+    function eventPreviewText(event) {
+      const session = findBundleSessionForEvent(event);
+      if (session?.summary) return session.summary;
+      const assignment = findBundleAssignmentForEvent(event);
+      if (assignment?.content_summary) return assignment.content_summary;
+      if (event?.note) {
+        return String(event.note).split('·')[0].trim();
+      }
+      return '자세히 눌러서 확인';
+    }
+
+    function renderSessionSectionsHtml(session, event) {
+      if (!session?.sections) return '';
+      const heroSummary = session.summary || '';
+      const relatedAssignments = findRelatedAssignmentsForSession(event, session);
+      const ordered = ['intro', '핵심 정리', '준비 / 운영 포인트', '질문 / 예시 포인트', '조사 / 보강 내용'];
+      const sections = ordered
+        .map(key => {
+          let items = Array.isArray(session.sections[key]) ? [...session.sections[key]] : [];
+          if (key === 'intro' && heroSummary) {
+            items = items.filter(item => item !== heroSummary);
+          }
+          return [key, items];
+        })
+        .filter(([, items]) => items.length > 0);
+
+      const relationHtml = relatedAssignments.length > 0
+        ? `<div class="detail-screen-section">
+            <h4>🔗 연관 과제 (1페이지)</h4>
+            <div class="badge-row" style="margin-top:8px;">
+              ${relatedAssignments.map(a => `<span class="calendar-mini-chip" style="background:#fff7ed; border:1px solid #fdba74; color:#9a3412;">${escapeHtml(a.name)}</span>`).join('')}
+            </div>
+            <p class="item-meta" style="margin-top:4px;">※ 이 과제는 '종합' 칸에서 진행도를 관리하세요.</p>
+           </div>`
+        : '';
+
+      if (!sections.length && !relationHtml) return '';
+      return `
+        <div class="detail-screen-stack">
+          ${relationHtml}
+          ${sections.map(([title, items]) => `
+            <div class="detail-screen-section">
+              <h4>${escapeHtml(title)}</h4>
+              <ul>${items.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    function renderAssignmentSectionsHtml(assignment, event) {
+      if (!assignment) return '';
+      const relatedSessions = findRelatedSessionsForAssignment(event, assignment);
+      const sections = [
+        {
+          title: '착수 / 마감',
+          items: [
+            assignment.start_when ? `착수 기준: ${assignment.start_when}` : null,
+            assignment.start_at ? `플래너 착수 시점: ${assignment.start_at.replace('T', ' ')}` : null,
+            assignment.hard_deadline ? `마감: ${assignment.hard_deadline.replace('T', ' ')}` : null,
+            assignment.follow_up ? `후속 체크: ${assignment.follow_up}` : null
+          ].filter(Boolean)
+        },
+        {
+          title: '운영 포인트',
+          items: [
+            assignment.content_summary || null,
+            assignment.needs_confirmation ? '확인 필요 항목 있음' : null,
+            ...(assignment.notes || [])
+          ].filter(Boolean)
+        }
+      ].filter(section => section.items.length > 0);
+
+      const sessionRelationHtml = relatedSessions.length > 0
+        ? `<div class="detail-screen-section">
+            <h4>📅 연관 수업/세션</h4>
+            <div class="event-list" style="margin-top:8px; background:rgba(0,0,0,0.03); border-radius:8px; padding:8px;">
+              ${relatedSessions.map(s => `
+                <div class="event-item" style="padding:4px 0; border:0;">
+                  <div class="event-time" style="font-size:11px;">${escapeHtml(s.date.slice(5))} ${escapeHtml(s.time_label || '')}</div>
+                  <div class="item-title" style="font-size:13px;">${escapeHtml(s.title)}</div>
+                </div>
+              `).join('')}
+            </div>
+           </div>`
+        : '';
+
+      return `
+        <div class="detail-screen-stack">
+          ${sections.map(section => `
+            <div class="detail-screen-section">
+              <h4>${escapeHtml(section.title)}</h4>
+              <ul>${section.items.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+            </div>
+          `).join('')}
+          ${sessionRelationHtml}
+        </div>
+      `;
+    }
+
+    function renderCalendarEventDetailScreen() {
+      const el = byId('eventDetailScreen');
+      if (!el) return;
+      if (!activeCalendarEventId) {
+        el.classList.remove('open');
+        el.setAttribute('aria-hidden', 'true');
+        el.innerHTML = '';
+        return;
+      }
+
+      const event = findCalendarEventById(activeCalendarEventId);
+      if (!event) {
+        activeCalendarEventId = null;
+        el.classList.remove('open');
+        el.setAttribute('aria-hidden', 'true');
+        el.innerHTML = '';
+        return;
+      }
+
+      const session = findBundleSessionForEvent(event);
+      const assignment = findBundleAssignmentForEvent(event);
+      const groupMeta = EVENT_TYPE_META[event.type] || { label: '일정', color: '#2f6df6' };
+      const summaryText = session?.summary || assignment?.content_summary || event.note || '';
+      const contentHtml = session
+        ? renderSessionSectionsHtml(session, event)
+        : renderAssignmentSectionsHtml(assignment, event);
+
+      el.classList.add('open');
+      el.setAttribute('aria-hidden', 'false');
+      el.innerHTML = `
+        <div class="detail-screen-panel">
+          <div class="detail-screen-head">
+            <button class="detail-screen-back" onclick="closeCalendarEventDetail()">← 캘린더로</button>
+            <button class="detail-screen-close" onclick="closeCalendarEventDetail()" aria-label="닫기">✕</button>
+          </div>
+          <div class="detail-screen-body">
+            <div class="detail-screen-hero">
+              <div class="badge-row">
+                <span class="detail-chip" style="background:${groupMeta.color}; color:white;">${groupMeta.label}</span>
+                ${event.professor ? `<span class="calendar-mini-chip">${escapeHtml(event.professor)}</span>` : ''}
+                ${event.difficulty ? `<span class="calendar-mini-chip">난이도 ${event.difficulty}/10</span>` : ''}
+                ${event.track ? `<span class="calendar-mini-chip">${escapeHtml(event.track)}트랙</span>` : ''}
+                <span class="calendar-mini-chip">${escapeHtml(event.time || '종일')}</span>
+              </div>
+              <div class="detail-screen-title">${escapeHtml(event.title)}</div>
+              ${summaryText ? `<div class="detail-screen-summary">${escapeHtml(summaryText)}</div>` : ''}
+            </div>
+            ${contentHtml || `<div class="detail-screen-section"><h4>요약</h4><ul><li>추가 설명이 아직 없다.</li></ul></div>`}
+          </div>
+        </div>
+      `;
+    }
+
     function renderCalendarDetail() {
       const el = byId('calendarDetail');
       if (!el) return;
+
+      if (selectedCalendarScope === 'week' && selectedWeekKey) {
+        const weeks = buildCalendarWeeks(calendarMonthCursor);
+        const weekDays = weeks.find(week => weekKeyFromDays(week) === selectedWeekKey) || [];
+        const summaryEvents = weekSummaryEvents(weekDays);
+        const firstDay = weekDays.find(Boolean);
+        const lastDay = [...weekDays].reverse().find(Boolean);
+        el.innerHTML = `
+          <div class="detail-card">
+            <div class="detail-title">선택한 주간 상세</div>
+            <div class="detail-sub">${firstDay && lastDay ? `${formatDateInput(firstDay).slice(5)} ~ ${formatDateInput(lastDay).slice(5)}` : ''} · 과제/발표/조장/행정 일정을 시간순으로 정리</div>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-title">주간 종합 일정</div>
+            <div class="detail-sub">1페이지 과제는 여기서만 본다. 설명은 자세히 보기에서 확인.</div>
+            ${summaryEvents.length ? `<div class="event-list">${summaryEvents.map(event => {
+              const meta = EVENT_TYPE_META[event.type] || { label: '일정', color: '#2f6df6' };
+              const dateLabel = `${parseIsoDate(event.date).getDate()}일`;
+              return `
+                <div class="event-item">
+                  <div class="event-time">${dateLabel}<br/>${escapeHtml(event.time || '종일')}</div>
+                  <div>
+                    <div class="badge-row">
+                      <span class="detail-chip" style="background:${meta.color}; color:white;">${meta.label}</span>
+                      ${event.professor ? `<span class="calendar-mini-chip">${escapeHtml(event.professor)}</span>` : ''}
+                      ${event.difficulty ? `<span class="calendar-mini-chip">난이도 ${event.difficulty}/10</span>` : ''}
+                    </div>
+                    <div class="item-title" style="margin-top:6px;">${escapeHtml(event.title)}</div>
+                    <div class="item-meta">${escapeHtml(weekSummaryMeta(event))}</div>
+                  </div>
+                  <div class="event-actions">
+                    <button class="event-open-btn" onclick="openCalendarEventDetail('${event.id}')">자세히 보기</button>
+                  </div>
+                </div>
+              `;
+            }).join('')}</div>` : `<div class="empty" style="margin-top:12px;">이 주에는 종합으로 볼 일정이 없다.</div>`}
+          </div>
+        `;
+        return;
+      }
+
       const date = parseIsoDate(selectedCalendarDate);
       const block = getClerkshipBlock(selectedCalendarDate);
-      const events = calendarEventsForDate(selectedCalendarDate);
+      const events = dailyPrimaryEvents(selectedCalendarDate);
       const tasks = tasksForDate(selectedCalendarDate);
-      const eventGroups = Object.keys(EVENT_TYPE_META).map(type => ({
-        type,
-        meta: EVENT_TYPE_META[type],
-        items: events.filter(event => event.type === type)
-      })).filter(group => group.items.length > 0);
 
       el.innerHTML = `
         <div class="detail-card">
@@ -2241,19 +3121,28 @@
         </div>
 
         <div class="detail-card">
-          <div class="detail-title">과제 · 발표 · 조장 업무</div>
-          <div class="detail-sub">실습 운영 이벤트는 여기서 보고, 실제 공부 블록은 아래에서 분리해 본다.</div>
-          ${eventGroups.length ? `<div class="event-list">${eventGroups.flatMap(group => group.items.map(event => `
-            <div class="event-item">
-              <div class="event-time">${escapeHtml(event.time || '종일')}</div>
-              <div>
-                <div class="badge-row"><span class="detail-chip" style="background:${group.meta.color}; color:white;">${group.meta.label}</span></div>
-                <div class="item-title" style="margin-top:6px;">${escapeHtml(event.title)}</div>
-                ${event.note ? `<div class="item-meta">${escapeHtml(event.note)}</div>` : ''}
+          <div class="detail-title">그날 실습 일정</div>
+          <div class="detail-sub">2·3페이지 세션만 시간순으로 본다. 1페이지 과제는 종합 칸에서 확인.</div>
+          ${events.length ? `<div class="event-list">${events.map(event => {
+            const meta = EVENT_TYPE_META[event.type] || { label: '일정', color: '#2f6df6' };
+            return `
+              <div class="event-item">
+                <div class="event-time">${escapeHtml(event.time || '종일')}</div>
+                <div>
+                  <div class="badge-row">
+                    <span class="detail-chip" style="background:${meta.color}; color:white;">${meta.label}</span>
+                    ${event.professor ? `<span class="calendar-mini-chip">${escapeHtml(event.professor)}</span>` : ''}
+                    ${event.difficulty ? `<span class="calendar-mini-chip">난이도 ${event.difficulty}/10</span>` : ''}
+                    ${event.track ? `<span class="calendar-mini-chip">${escapeHtml(event.track)}트랙</span>` : ''}
+                  </div>
+                  <div class="item-title" style="margin-top:6px;">${escapeHtml(event.title)}</div>
+                </div>
+                <div class="event-actions">
+                  <button class="event-open-btn" onclick="openCalendarEventDetail('${event.id}')">자세히 보기</button>
+                </div>
               </div>
-              <div class="event-actions"><input type="checkbox" ${event.completed ? 'checked' : ''} onchange="toggleCalendarEvent('${event.id}')" aria-label="${event.title} 완료" /></div>
-            </div>
-          `)).join('')}</div>` : `<div class="empty" style="margin-top:12px;">아직 입력된 과제/발표/조장 이벤트가 없다.<br />지금은 월간 블록 중심으로 먼저 읽고, 실제 과제는 인계 분석 후 붙이는 게 맞다.</div>`}
+            `;
+          }).join('')}</div>` : `<div class="empty" style="margin-top:12px;">아직 입력된 운영 일정이 없다.</div>`}
         </div>
 
         <div class="detail-card">
@@ -2278,6 +3167,16 @@
       `;
     }
 
+    function openCalendarEventDetail(eventId) {
+      activeCalendarEventId = eventId;
+      renderCalendarEventDetailScreen();
+    }
+
+    function closeCalendarEventDetail() {
+      activeCalendarEventId = null;
+      renderCalendarEventDetailScreen();
+    }
+
     function plannerFilteredTasks() {
       const scope = byId('filterScope').value;
       const subjectId = byId('filterSubject').value;
@@ -2300,11 +3199,37 @@
       }));
     }
 
+    function plannerFilteredEntries() {
+      const scope = byId('filterScope').value;
+      const subjectId = byId('filterSubject').value;
+      const stageId = byId('filterStage').value;
+      const status = byId('filterStatus').value;
+      const now = new Date();
+      const start = startOfWeek(now);
+      const end = endOfWeek(now);
+
+      const taskEntries = plannerFilteredTasks().map(task => ({ kind: 'task', item: task }));
+      const eventEntries = getCalendarEvents()
+        .filter(event => {
+          const due = parseCalendarEventDate(event);
+          if (scope === 'today' && !isSameDate(due, now)) return false;
+          if (scope === 'week' && (due < start || due > end)) return false;
+          if (subjectId !== 'all') return false;
+          if (stageId !== 'all') return false;
+          if (status === 'done') return false;
+          if (status === 'overdue' && !isCalendarEventOverdue(event)) return false;
+          return true;
+        })
+        .map(event => ({ kind: 'event', item: event }));
+
+      return sortBoardEntries([...taskEntries, ...eventEntries]);
+    }
+
     function renderWeekGrid() {
       const grid = byId('weekGrid');
       const scope = byId('filterScope').value;
       const now = new Date();
-      const tasks = plannerFilteredTasks();
+      const entries = plannerFilteredEntries();
       let days = [];
 
       if (scope === 'today') {
@@ -2318,17 +3243,24 @@
       }
 
       grid.innerHTML = days.map(day => {
-        const dayTasks = tasks.filter(task => task.date === formatDateInput(day));
+        const dayEntries = entries.filter(entry => {
+          const date = entry.kind === 'task' ? entry.item.date : entry.item.date;
+          return date === formatDateInput(day);
+        });
         return `
           <div class="day-column">
             <div class="day-header">
               <div class="day-name">${['일','월','화','수','목','금','토'][day.getDay()]}요일</div>
               <div class="day-date">${formatDateLabel(day)}</div>
             </div>
-            ${dayTasks.length ? dayTasks.map(renderDayTask).join('') : `<div class="empty">일정 없음</div>`}
+            ${dayEntries.length ? dayEntries.map(renderBoardEntry).join('') : `<div class="empty">일정 없음</div>`}
           </div>
         `;
       }).join('');
+    }
+
+    function renderBoardEntry(entry) {
+      return entry.kind === 'task' ? renderDayTask(entry.item) : renderCalendarEventCard(entry.item);
     }
 
     function renderDayTask(task) {
@@ -2351,6 +3283,25 @@
             <button class="btn btn-small ${task.completed ? 'btn-ghost' : 'btn-secondary'}" onclick="toggleTask('${task.id}')">${task.completed ? '완료 해제' : '완료 체크'}</button>
             <button class="btn btn-small btn-danger" onclick="deleteTask('${task.id}')">삭제</button>
           </div>
+        </article>
+      `;
+    }
+
+    function renderCalendarEventCard(event) {
+      return `
+        <article class="day-task event ${isCalendarEventOverdue(event) ? 'overdue' : ''}">
+          <div class="task-topline">
+            <span>${calendarEventRangeLabel(event)}</span>
+            <span>${escapeHtml(calendarEventLabel(event))}</span>
+          </div>
+          <div class="task-title">${escapeHtml(event.title || '실습 일정')}</div>
+          <div class="badge-row">
+            <span class="badge calendar">실습</span>
+            ${event.source ? `<span class="badge calendar">${escapeHtml(event.source)}</span>` : ''}
+            ${isCalendarEventOverdue(event) ? `<span class="badge overdue">지남</span>` : ''}
+          </div>
+          ${event.location ? `<div class="item-meta">장소 · ${escapeHtml(event.location)}</div>` : ''}
+          ${event.memo ? `<div class="item-meta">${escapeHtml(event.memo)}</div>` : ''}
         </article>
       `;
     }
@@ -2574,6 +3525,7 @@
       renderReviewAndOverdue();
       renderCalendarBoard();
       renderCalendarDetail();
+      renderCalendarEventDetailScreen();
       renderSubjectNav();
       renderSubjectDetail();
       renderWeekGrid();
@@ -2612,8 +3564,21 @@
 
     function selectCalendarDate(isoDate) {
       selectedCalendarDate = isoDate;
+      selectedCalendarScope = 'day';
+      selectedWeekKey = null;
+      activeCalendarEventId = null;
       renderCalendarBoard();
       renderCalendarDetail();
+      renderCalendarEventDetailScreen();
+    }
+
+    function selectCalendarWeek(weekKey) {
+      selectedCalendarScope = 'week';
+      selectedWeekKey = weekKey;
+      activeCalendarEventId = null;
+      renderCalendarBoard();
+      renderCalendarDetail();
+      renderCalendarEventDetailScreen();
     }
 
     function updateStage(subjectId, stageId, field, value) {
@@ -2788,6 +3753,20 @@
       alert('4월 canary 세팅을 불러왔어. 바로 오늘 플래너로 이동했어. TODAY_START_GUIDE.md와 CANARY_TRACKER_APRIL.md를 같이 열어두면 좋아.');
     });
 
+    byId('loadRespBundleBtn').addEventListener('click', async () => {
+      if (location.protocol === 'file:') {
+        alert('파일로 직접 열었을 때는 자동 fetch가 막힐 수 있어. `데이터 가져오기`로 bundle 파일을 직접 선택해줘.');
+        return;
+      }
+      try {
+        await loadPlannerBundleFromUrl('./data/clerkships/bundles/respiratory_content_handoff_v2.bundle.json');
+        alert('호흡기 실습 bundle을 불러왔어. 실습 캘린더 탭으로 이동했어.');
+      } catch (error) {
+        console.error(error);
+        alert('호흡기 실습 bundle 불러오기에 실패했어. 서버에서 열었는지, 파일 경로가 맞는지 확인해줘.');
+      }
+    });
+
     byId('calendarPrevBtn').addEventListener('click', () => {
       calendarMonthCursor = new Date(calendarMonthCursor.getFullYear(), calendarMonthCursor.getMonth() - 1, 1);
       renderCalendarBoard();
@@ -2817,11 +3796,20 @@
       if (!file) return;
       try {
         const text = await file.text();
-        const data = normalizeState(JSON.parse(text));
-        if (!data.subjects || !data.tasks) throw new Error('invalid backup');
-        state = data;
-        selectedSubjectId = state.subjects[0]?.id || null;
-        selectedCalendarDate = formatDateInput(new Date());
+        const parsed = JSON.parse(text);
+        if (looksLikePlannerBundle(parsed)) {
+          state = mergePlannerBundleIntoState(parsed, state);
+          selectedSubjectId = ensureSubjectForBundle(state, parsed).id;
+          selectedCalendarDate = parsed.sessions?.[0]?.date || formatDateInput(new Date());
+          const baseDate = parseIsoDate(selectedCalendarDate);
+          calendarMonthCursor = new Date(baseDate.getFullYear(), baseDate.getMonth(), 1);
+        } else {
+          const data = normalizeState(parsed);
+          if (!data.subjects || !data.tasks) throw new Error('invalid backup');
+          state = data;
+          selectedSubjectId = state.subjects[0]?.id || null;
+          selectedCalendarDate = formatDateInput(new Date());
+        }
         renderAll();
       } catch (error) {
         alert('가져오기 실패: 올바른 백업 파일인지 확인해줘.');
@@ -2841,9 +3829,12 @@
 
     window.toggleTask = toggleTask;
     window.toggleCalendarEvent = toggleCalendarEvent;
+    window.openCalendarEventDetail = openCalendarEventDetail;
+    window.closeCalendarEventDetail = closeCalendarEventDetail;
     window.deleteTask = deleteTask;
     window.selectSubject = selectSubject;
     window.selectCalendarDate = selectCalendarDate;
+    window.selectCalendarWeek = selectCalendarWeek;
     window.updateStage = updateStage;
     window.updateSubjectText = updateSubjectText;
     window.toggleSubjectFlag = toggleSubjectFlag;
