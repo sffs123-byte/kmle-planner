@@ -1674,8 +1674,8 @@
 
   <script>
     const STORAGE_KEY = 'kmlePlannerState.v2';
-    const APP_VERSION = '20260413T115800Z';
-    const APP_VERSION_LABEL = '2026-04-13 20:58 KST';
+    const APP_VERSION = '20260413T122400Z';
+    const APP_VERSION_LABEL = '2026-04-13 21:24 KST';
     const STAGES = [
       { id: 'lecture', label: '강의 듣기', short: '강의', note: '강의/팟캐스트/기본 인강 소화' },
       { id: 'framework', label: '개념 틀 짜기', short: '개념틀', note: '총정리 구조, 도식, 로직 프레임 정리' },
@@ -1767,6 +1767,8 @@
     let selectedCalendarDate = formatDateInput(new Date());
     let calendarMonthCursor = new Date(today.getFullYear(), today.getMonth(), 1);
     let activeCalendarEventId = null;
+    let activeCalendarMoveEventId = null;
+    let calendarEventLongPressTimer = null;
     let selectedCalendarScope = 'day';
     let selectedWeekKey = null;
 
@@ -1842,49 +1844,6 @@
           time: '21:00',
           note: '개념틀 전송 누락 여부 체크'
         }),
-        createCalendarEvent('2026-04-27', 'session', '심장내과 집결', {
-          id: 'seed-cardiology-day1-gather',
-          seedKey: 'cardiology-day1-gather',
-          time: '07:30',
-          note: '7시 30분 집결. 첫날 집결 일정.',
-          sourceKind: 'session'
-        }),
-        createCalendarEvent('2026-04-27', 'session', '심장내과 OT', {
-          id: 'seed-cardiology-day1-ot',
-          seedKey: 'cardiology-day1-ot',
-          time: '07:45',
-          note: '약 45분 OT 예정.',
-          sourceKind: 'session'
-        }),
-        createCalendarEvent('2026-04-27', 'session', '저널발표 듣기', {
-          id: 'seed-cardiology-day1-journal',
-          seedKey: 'cardiology-day1-journal',
-          time: '08:00',
-          note: '내용 몰라도 되지만 일정 흐름 파악. 이후 다음날 CPX/발표 준비 시간 있음.',
-          sourceKind: 'session'
-        }),
-        createCalendarEvent('2026-04-27', 'session', '심전도 찍기', {
-          id: 'seed-cardiology-day1-ecg',
-          seedKey: 'cardiology-day1-ecg',
-          time: '14:00',
-          note: '오후 2시 심전도 실습/촬영.',
-          sourceKind: 'session'
-        }),
-        createCalendarEvent('2026-04-27', 'exam', 'pre-test', {
-          id: 'seed-cardiology-day1-pretest',
-          seedKey: 'cardiology-day1-pretest',
-          time: '16:00',
-          note: '오후 4시 pre-test.',
-          sourceKind: 'session'
-        }),
-        createCalendarEvent('2026-04-27', 'exam', '보경남 교수님 심장진찰 시험 / 심초음파', {
-          id: 'seed-cardiology-day1-physical-exam',
-          seedKey: 'cardiology-day1-physical-exam',
-          time: '17:00',
-          note: '10점 만점 현장 승인. 심초음파도 같이 진행.',
-          professor: '보경남',
-          sourceKind: 'session'
-        }),
         createCalendarEvent('2026-04-29', 'session', '성인환 교수님 IHD 수업', {
           id: 'seed-cardiology-ihd-class',
           seedKey: 'cardiology-ihd-class',
@@ -1899,13 +1858,15 @@
     function upsertSeedCalendarEvents(nextState) {
       const existingEvents = Array.isArray(nextState.calendarEvents) ? nextState.calendarEvents.map(normalizeCalendarEvent) : [];
       const seeds = buildCalendarSeedEvents().map(normalizeCalendarEvent);
+      const seedKeys = new Set(seeds.map(seed => seed.seedKey).filter(Boolean));
+      const filteredEvents = existingEvents.filter(event => !event.seedKey || seedKeys.has(event.seedKey));
 
       seeds.forEach(seed => {
-        const existing = existingEvents.find(event => event.seedKey === seed.seedKey)
-          || existingEvents.find(event => !event.bundleId && event.title === seed.title);
+        const existing = filteredEvents.find(event => event.seedKey === seed.seedKey)
+          || filteredEvents.find(event => !event.bundleId && event.title === seed.title);
 
         if (!existing) {
-          existingEvents.push(seed);
+          filteredEvents.push(seed);
           return;
         }
 
@@ -1923,7 +1884,7 @@
         if (!existing.note) existing.note = seed.note;
       });
 
-      nextState.calendarEvents = existingEvents;
+      nextState.calendarEvents = filteredEvents;
       return nextState;
     }
 
@@ -2593,6 +2554,9 @@
       if (activeCalendarEventId && !(state.calendarEvents || []).some(event => event.id === activeCalendarEventId)) {
         activeCalendarEventId = null;
       }
+      if (activeCalendarMoveEventId && !(state.calendarEvents || []).some(event => event.id === activeCalendarMoveEventId)) {
+        activeCalendarMoveEventId = null;
+      }
 
       window.__kmlePlannerState = state;
       renderAll();
@@ -3210,6 +3174,66 @@
       return Boolean(event?.userDateOverride || event?.userTimeOverride);
     }
 
+    function canMoveCalendarEvent(event) {
+      if (!event) return false;
+      return !(event.type === 'assignment' || event.sourceKind === 'assignment');
+    }
+
+    function clearCalendarEventLongPressTimer() {
+      if (!calendarEventLongPressTimer) return;
+      window.clearTimeout(calendarEventLongPressTimer);
+      calendarEventLongPressTimer = null;
+    }
+
+    function beginCalendarEventLongPress(eventId, domEvent) {
+      if (domEvent?.target?.closest?.('.event-actions')) return;
+      clearCalendarEventLongPressTimer();
+      calendarEventLongPressTimer = window.setTimeout(() => {
+        const event = findCalendarEventById(eventId);
+        if (!canMoveCalendarEvent(event)) return;
+        activeCalendarMoveEventId = eventId;
+        renderCalendarBoard();
+        renderCalendarDetail();
+        renderCalendarEventDetailScreen();
+      }, 420);
+    }
+
+    function cancelCalendarEventLongPress() {
+      clearCalendarEventLongPressTimer();
+    }
+
+    function clearCalendarEventMoveSelection() {
+      activeCalendarMoveEventId = null;
+      renderCalendarBoard();
+      renderCalendarDetail();
+      renderCalendarEventDetailScreen();
+    }
+
+    function moveCalendarEventToDate(eventId, nextDate) {
+      const event = findCalendarEventById(eventId);
+      if (!event) return;
+      event.userDateOverride = nextDate !== (event.baseDate || event.date) ? nextDate : '';
+      event.date = nextDate;
+      if (selectedCalendarScope === 'day') selectedCalendarDate = nextDate;
+      renderAll();
+    }
+
+    function shiftCalendarEventTime(eventId, deltaMinutes) {
+      const event = findCalendarEventById(eventId);
+      if (!event) return;
+      const baseTime = normalizeClockTime(event.time || event.baseTime || '09:00') || '09:00';
+      const [hour, minute] = baseTime.split(':').map(Number);
+      let total = hour * 60 + minute + deltaMinutes;
+      total = Math.max(0, Math.min(23 * 60 + 59, total));
+      const nextHour = String(Math.floor(total / 60)).padStart(2, '0');
+      const nextMinute = String(total % 60).padStart(2, '0');
+      const nextTime = `${nextHour}:${nextMinute}`;
+      event.userTimeOverride = nextTime !== (event.baseTime || event.time) ? nextTime : '';
+      event.time = nextTime;
+      event.startTime = nextTime;
+      renderAll();
+    }
+
     function findRelatedAssignmentsForSession(event, session) {
       if (!event?.bundleId || !session?.id) return [];
       const bundle = state.clerkshipBundles?.[event.bundleId];
@@ -3483,11 +3507,13 @@
 
         <div class="detail-card">
           <div class="detail-title">그날 실습 일정</div>
-          <div class="detail-sub">2·3페이지 세션만 시간순으로 본다. 1페이지 과제는 종합 칸에서 확인.</div>
+          <div class="detail-sub">2·3페이지 세션만 시간순으로 본다. 1페이지 과제는 종합 칸에서 확인. 일정 카드를 꾹 누르면 이동 모드가 켜진다.</div>
           ${events.length ? `<div class="event-list">${events.map(event => {
             const meta = EVENT_TYPE_META[event.type] || { label: '일정', color: '#2f6df6' };
+            const moveSelected = activeCalendarMoveEventId === event.id;
+            const movable = canMoveCalendarEvent(event);
             return `
-              <div class="event-item">
+              <div class="event-item ${moveSelected ? 'selected' : ''}" ${movable ? `onpointerdown="beginCalendarEventLongPress('${event.id}', event)" onpointerup="cancelCalendarEventLongPress()" onpointerleave="cancelCalendarEventLongPress()" onpointercancel="cancelCalendarEventLongPress()" style="${moveSelected ? 'border:2px solid #2563eb; box-shadow:0 0 0 3px rgba(37,99,235,0.12);' : ''}"` : ''}>
                 <div class="event-time">${escapeHtml(event.time || '종일')}</div>
                 <div>
                   <div class="badge-row">
@@ -3499,8 +3525,10 @@
                     ${event.track ? `<span class="calendar-mini-chip">${escapeHtml(event.track)}트랙</span>` : ''}
                   </div>
                   <div class="item-title" style="margin-top:6px;">${escapeHtml(event.title)}</div>
+                  ${moveSelected ? `<div class="item-meta" style="margin-top:6px; color:#1d4ed8;">이동 모드: 달력의 다른 날짜를 누르면 그 날짜로 이동하고, 아래 버튼으로 시간 조정 가능</div>` : ''}
                 </div>
                 <div class="event-actions">
+                  ${moveSelected ? `<button class="btn btn-small btn-ghost" onclick="shiftCalendarEventTime('${event.id}', -30)">▲ 30분</button><button class="btn btn-small btn-ghost" onclick="shiftCalendarEventTime('${event.id}', 30)">▼ 30분</button><button class="btn btn-small btn-secondary" onclick="clearCalendarEventMoveSelection()">선택 해제</button>` : ''}
                   <button class="event-open-btn" onclick="openCalendarEventDetail('${event.id}')">자세히 보기</button>
                 </div>
               </div>
@@ -3965,6 +3993,17 @@
     }
 
     function selectCalendarDate(isoDate) {
+      if (activeCalendarMoveEventId) {
+        moveCalendarEventToDate(activeCalendarMoveEventId, isoDate);
+        activeCalendarMoveEventId = null;
+        selectedCalendarScope = 'day';
+        selectedWeekKey = null;
+        selectedCalendarDate = isoDate;
+        renderCalendarBoard();
+        renderCalendarDetail();
+        renderCalendarEventDetailScreen();
+        return;
+      }
       selectedCalendarDate = isoDate;
       selectedCalendarScope = 'day';
       selectedWeekKey = null;
@@ -3975,6 +4014,7 @@
     }
 
     function selectCalendarWeek(weekKey) {
+      clearCalendarEventLongPressTimer();
       selectedCalendarScope = 'week';
       selectedWeekKey = weekKey;
       activeCalendarEventId = null;
@@ -4245,6 +4285,10 @@
 
     window.toggleTask = toggleTask;
     window.toggleCalendarEvent = toggleCalendarEvent;
+    window.beginCalendarEventLongPress = beginCalendarEventLongPress;
+    window.cancelCalendarEventLongPress = cancelCalendarEventLongPress;
+    window.clearCalendarEventMoveSelection = clearCalendarEventMoveSelection;
+    window.shiftCalendarEventTime = shiftCalendarEventTime;
     window.updateCalendarEventUserNote = updateCalendarEventUserNote;
     window.applyCalendarEventScheduleOverride = applyCalendarEventScheduleOverride;
     window.resetCalendarEventScheduleOverride = resetCalendarEventScheduleOverride;
