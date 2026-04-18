@@ -167,6 +167,14 @@
       display: flex;
     }
 
+    .update-banner-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-left: auto;
+    }
+
     .update-banner-text {
       color: var(--text);
       font-size: 14px;
@@ -273,7 +281,7 @@
 
     .calendar-layout {
       display: grid;
-      grid-template-columns: 1.35fr 1fr;
+      grid-template-columns: 1fr;
       gap: 18px;
     }
 
@@ -287,150 +295,146 @@
       padding: 22px;
     }
 
+    .calendar-detail {
+      display: none;
+    }
+
     .calendar-panel {
-      overflow-x: auto;
+      overflow: hidden;
     }
 
     .calendar-head {
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .calendar-week-nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .calendar-edit-toolbar {
+      display: none;
       align-items: center;
       gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .calendar-month-label {
-      font-size: 24px;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-    }
-
-    .calendar-grid {
-      display: grid;
-      grid-template-columns: repeat(8, minmax(0,1fr));
-      gap: 10px;
-      min-width: 1080px;
-    }
-
-    .calendar-weekday {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      padding: 4px 2px 8px;
-      text-align: center;
-    }
-
-    .calendar-cell {
-      min-height: 122px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+      padding: 10px 12px;
       border-radius: 18px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.82);
-      padding: 10px;
-      display: grid;
-      align-content: start;
-      gap: 8px;
-      cursor: pointer;
-      transition: 0.18s ease;
+      border: 1px solid rgba(251, 191, 36, 0.45);
+      background: linear-gradient(180deg, rgba(255,251,235,0.96), rgba(255,247,237,0.98));
     }
 
-    .calendar-cell:hover {
-      transform: translateY(-1px);
-      border-color: color-mix(in srgb, var(--primary) 28%, var(--line));
-    }
-
-    .calendar-cell.empty {
-      background: rgba(219,228,240,0.28);
-      cursor: default;
-    }
-
-    .calendar-summary-cell {
-      min-height: 122px;
-      border-radius: 18px;
-      border: 1px solid rgba(208,218,234,0.92);
-      background: linear-gradient(180deg, rgba(249,251,255,0.98), rgba(241,246,255,0.94));
-      padding: 10px;
-      display: grid;
-      align-content: start;
-      gap: 8px;
-      cursor: pointer;
-      text-align: left;
-    }
-
-    .calendar-summary-cell.selected {
-      border-color: var(--text);
-      box-shadow: 0 0 0 2px rgba(24,33,47,0.08);
-    }
-
-    .calendar-summary-head {
+    .calendar-edit-toolbar.show {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 8px;
     }
 
-    .calendar-summary-title {
-      font-size: 12px;
-      font-weight: 800;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .calendar-summary-list {
-      display: grid;
-      gap: 8px;
-    }
-
-    .calendar-summary-item {
-      display: grid;
-      gap: 4px;
-      padding: 8px 10px;
-      border-radius: 12px;
-      border: 1px solid rgba(220,226,238,0.92);
-      background: rgba(255,255,255,0.96);
-    }
-
-    .calendar-summary-item-title {
+    .calendar-edit-toolbar-title {
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 800;
       color: var(--text);
+    }
+
+    .calendar-edit-toolbar-sub {
+      font-size: 11px;
+      color: var(--muted);
       line-height: 1.35;
     }
 
-    .calendar-summary-item-meta {
-      font-size: 12px;
-      color: var(--muted);
-      line-height: 1.45;
+    .calendar-month-label {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      min-width: 220px;
+      text-align: center;
     }
 
-    .calendar-summary-empty {
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.5;
-      padding-top: 4px;
+    .calendar-board-shell {
+      overflow-x: auto;
+      padding-bottom: 4px;
     }
 
-    .calendar-cell.selected {
-      border-color: var(--text);
-      box-shadow: 0 0 0 2px rgba(24,33,47,0.08);
+    .calendar-board-grid {
+      display: grid;
+      grid-template-columns: 74px repeat(5, minmax(150px, 1fr)) 196px;
+      grid-auto-rows: minmax(76px, auto);
+      gap: 8px;
+      min-width: 1120px;
+      align-items: stretch;
     }
 
-    .calendar-cell.today {
-      background: color-mix(in srgb, var(--primary-soft) 55%, white);
+    .calendar-time-head,
+    .calendar-day-head,
+    .calendar-summary-rail,
+    .calendar-time-cell,
+    .calendar-slot-cell {
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.86);
     }
 
-    .calendar-top {
+    .calendar-time-head,
+    .calendar-day-head {
+      min-height: 58px;
+      padding: 10px 10px;
+    }
+
+    .calendar-time-head {
       display: flex;
-      justify-content: space-between;
+      align-items: flex-end;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: rgba(231,239,255,0.78);
+    }
+
+    .calendar-day-head {
+      display: grid;
+      align-content: start;
+      gap: 4px;
+      background: linear-gradient(180deg, rgba(248,250,255,0.98), rgba(239,245,255,0.92));
+    }
+
+    .calendar-day-head.is-selected {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(47,109,246,0.10);
+    }
+
+    .calendar-day-top {
+      display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 8px;
     }
 
-    .calendar-day {
-      font-size: 15px;
-      font-weight: 700;
+    .calendar-day-week {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    .calendar-day-date {
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .calendar-day-note {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.3;
     }
 
     .calendar-block-chip,
@@ -440,8 +444,8 @@
       align-items: center;
       gap: 6px;
       border-radius: 999px;
-      padding: 6px 10px;
-      font-size: 12px;
+      padding: 4px 8px;
+      font-size: 11px;
       font-weight: 700;
       white-space: nowrap;
     }
@@ -449,12 +453,7 @@
     .calendar-block-chip {
       color: white;
       justify-self: start;
-    }
-
-    .calendar-mini-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
+      width: fit-content;
     }
 
     .calendar-mini-chip {
@@ -468,6 +467,609 @@
       color: var(--muted);
       font-size: 12px;
       line-height: 1.4;
+    }
+
+    .calendar-time-cell {
+      padding: 10px 8px;
+      display: grid;
+      align-content: start;
+      gap: 2px;
+      text-align: center;
+      background: rgba(244,247,251,0.96);
+    }
+
+    .calendar-time-main {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
+    }
+
+    .calendar-time-sub {
+      font-size: 10px;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .calendar-slot-cell {
+      padding: 6px;
+      display: grid;
+      align-content: start;
+      gap: 4px;
+      cursor: pointer;
+      transition: 0.18s ease;
+      text-align: left;
+    }
+
+    .calendar-slot-cell:hover {
+      transform: translateY(-1px);
+      border-color: color-mix(in srgb, var(--primary) 28%, var(--line));
+    }
+
+    .calendar-slot-cell.selected {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(47,109,246,0.10);
+      background: color-mix(in srgb, var(--primary-soft) 58%, white);
+    }
+
+    .calendar-slot-cell.today {
+      background: color-mix(in srgb, var(--primary-soft) 42%, white);
+    }
+
+    .calendar-slot-cell.move-source {
+      border-color: color-mix(in srgb, #d97706 64%, var(--line));
+      box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.16);
+      background: color-mix(in srgb, #fff7ed 84%, white);
+    }
+
+    .calendar-slot-empty {
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.3;
+      padding-top: 2px;
+    }
+
+    .calendar-session-stack {
+      display: grid;
+      gap: 4px;
+    }
+
+    .calendar-session-card {
+      position: relative;
+      border-radius: 12px;
+      border: 1px solid color-mix(in srgb, var(--slot-accent, var(--line)) 24%, var(--line));
+      border-left: 3px solid var(--slot-accent, var(--primary));
+      background: linear-gradient(180deg, color-mix(in srgb, var(--slot-accent, var(--primary)) 8%, white), rgba(255,255,255,0.98));
+      padding: 7px 8px;
+      display: grid;
+      gap: 3px;
+    }
+
+    .calendar-session-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .calendar-session-type {
+      display: none;
+    }
+
+    .calendar-session-title {
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.28;
+      color: var(--text);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .calendar-session-title.completed {
+      text-decoration: line-through;
+      opacity: 0.68;
+    }
+
+    .calendar-session-meta {
+      font-size: 10px;
+      color: var(--muted);
+      line-height: 1.25;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .calendar-session-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .calendar-session-card.is-cancelled {
+      background: linear-gradient(180deg, rgba(243,244,246,0.98), rgba(255,255,255,0.98));
+      border-left-color: #9ca3af;
+      opacity: 0.82;
+    }
+
+    .calendar-session-card.is-cancelled::after {
+      content: '✕';
+      position: absolute;
+      top: 6px;
+      right: 7px;
+      font-size: 12px;
+      font-weight: 900;
+      color: #9ca3af;
+    }
+
+    .calendar-session-card.is-cancelled .calendar-session-title {
+      text-decoration: line-through;
+      color: color-mix(in srgb, var(--text) 70%, #9ca3af);
+    }
+
+    .calendar-edit-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 11px;
+      font-weight: 800;
+      color: #9a3412;
+      background: #fff7ed;
+      border: 1px solid #fdba74;
+      width: fit-content;
+    }
+
+    .calendar-swatch-row,
+    .calendar-state-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .calendar-swatch {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      border: 2px solid rgba(255,255,255,0.92);
+      box-shadow: 0 0 0 1px rgba(148,163,184,0.28);
+      cursor: pointer;
+    }
+
+    .calendar-swatch.active {
+      box-shadow: 0 0 0 2px rgba(15,23,42,0.18);
+      transform: scale(1.06);
+    }
+
+    .calendar-state-btn {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.92);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .calendar-state-btn.active {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(47,109,246,0.10);
+    }
+
+    .calendar-override-grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .calendar-override-row {
+      display: grid;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 16px;
+      border: 1px solid rgba(220,226,238,0.92);
+      background: rgba(255,255,255,0.82);
+    }
+
+    .calendar-override-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .calendar-override-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .calendar-override-sub {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .calendar-summary-rail {
+      grid-column: 7;
+      grid-row: 1 / span 2;
+      padding: 14px 14px;
+      display: grid;
+      align-content: start;
+      gap: 12px;
+      text-align: left;
+      cursor: pointer;
+      background: linear-gradient(180deg, rgba(252,253,255,0.99), rgba(243,247,255,0.97));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.72);
+    }
+
+    .calendar-summary-rail.selected {
+      border-color: color-mix(in srgb, var(--primary) 38%, rgba(208,218,234,0.92));
+      box-shadow: 0 0 0 2px rgba(47,109,246,0.10), inset 0 1px 0 rgba(255,255,255,0.72);
+    }
+
+    .calendar-summary-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(220,226,238,0.92);
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .calendar-summary-hero {
+      display: grid;
+      gap: 6px;
+    }
+
+    .calendar-summary-hero-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .calendar-summary-hero-sub {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .calendar-summary-big-number {
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .calendar-summary-big-number strong {
+      font-size: 34px;
+      line-height: 0.95;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      color: var(--text);
+    }
+
+    .calendar-summary-big-number span {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 700;
+      padding-bottom: 4px;
+    }
+
+    .calendar-summary-section-title {
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .calendar-summary-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .calendar-summary-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 11px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.96);
+      border: 1px solid rgba(220,226,238,0.92);
+    }
+
+    .calendar-summary-row-label {
+      display: grid;
+      gap: 2px;
+    }
+
+    .calendar-summary-row-label strong {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .calendar-summary-row-label span {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .calendar-summary-row-value {
+      min-width: 34px;
+      text-align: right;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: var(--text);
+    }
+
+    .calendar-summary-note {
+      padding: 11px 12px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.7);
+      border: 1px dashed rgba(208,218,234,0.98);
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .calendar-summary-empty {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      padding-top: 4px;
+    }
+
+    .calendar-timeline-grid {
+      display: grid;
+      grid-template-columns: var(--timeline-axis-width, 88px) repeat(5, minmax(var(--timeline-day-min-width, 168px), 1fr)) var(--timeline-summary-width, 320px);
+      grid-template-rows: auto auto;
+      gap: 8px;
+      min-width: 1240px;
+      align-items: start;
+    }
+
+    .calendar-time-corner {
+      grid-column: 1;
+      grid-row: 1;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(231,239,255,0.78);
+      min-height: 58px;
+      padding: 10px 10px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .calendar-day-column {
+      grid-row: 2;
+      border-radius: 20px;
+      border: 1px solid rgba(220,226,238,0.92);
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,249,255,0.98));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.72);
+      overflow: hidden;
+    }
+
+    .calendar-time-axis {
+      grid-column: 1;
+      grid-row: 2;
+      position: relative;
+      height: var(--timeline-total-height, 540px);
+      border-radius: 20px;
+      border: 1px solid rgba(220,226,238,0.92);
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          rgba(148,163,184,0.22) 0,
+          rgba(148,163,184,0.22) 1px,
+          transparent 1px,
+          transparent calc(var(--timeline-half-hour-height, 27px) - 1px),
+          rgba(148,163,184,0.10) calc(var(--timeline-half-hour-height, 27px) - 1px),
+          rgba(148,163,184,0.10) var(--timeline-half-hour-height, 27px),
+          transparent var(--timeline-half-hour-height, 27px),
+          transparent var(--timeline-hour-height, 54px)
+        );
+      background-color: rgba(244,247,251,0.96);
+    }
+
+    .calendar-time-mark {
+      position: absolute;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      padding-left: 10px;
+      font-size: 11px;
+      font-weight: 800;
+      color: color-mix(in srgb, var(--muted) 92%, white);
+      letter-spacing: -0.01em;
+      pointer-events: none;
+    }
+
+    .calendar-day-canvas {
+      position: relative;
+      height: var(--timeline-total-height, 540px);
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          rgba(148,163,184,0.22) 0,
+          rgba(148,163,184,0.22) 1px,
+          transparent 1px,
+          transparent calc(var(--timeline-half-hour-height, 27px) - 1px),
+          rgba(148,163,184,0.10) calc(var(--timeline-half-hour-height, 27px) - 1px),
+          rgba(148,163,184,0.10) var(--timeline-half-hour-height, 27px),
+          transparent var(--timeline-half-hour-height, 27px),
+          transparent var(--timeline-hour-height, 54px)
+        );
+      background-color: rgba(255,255,255,0.98);
+      cursor: pointer;
+    }
+
+    .calendar-day-canvas.move-ready {
+      background-color: color-mix(in srgb, #fff7ed 66%, white);
+    }
+
+    .calendar-day-canvas.move-ready::after {
+      content: '이동 위치를 누르기';
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(255,247,237,0.96);
+      border: 1px solid rgba(253,186,116,0.92);
+      color: #9a3412;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      pointer-events: none;
+    }
+
+    .calendar-day-untimed {
+      padding: 8px;
+      border-top: 1px dashed rgba(220,226,238,0.92);
+      display: grid;
+      gap: 6px;
+      background: linear-gradient(180deg, rgba(249,251,255,0.96), rgba(255,255,255,0.98));
+    }
+
+    .calendar-day-untimed-title {
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .calendar-untimed-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      width: fit-content;
+      max-width: 100%;
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text);
+      background: rgba(255,255,255,0.96);
+      border: 1px solid rgba(220,226,238,0.92);
+      cursor: pointer;
+    }
+
+    .calendar-event-card {
+      position: absolute;
+      border-radius: 14px;
+      border: 1px solid color-mix(in srgb, var(--event-border, var(--line)) 24%, var(--line));
+      border-left: 3px solid var(--event-border, var(--primary));
+      background: linear-gradient(180deg, color-mix(in srgb, var(--event-surface, var(--primary)) 13%, white), rgba(255,255,255,0.98));
+      box-shadow: 0 8px 18px rgba(15,23,42,0.06);
+      padding: 8px 8px 7px;
+      display: block;
+      text-align: left;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+    }
+
+    .calendar-event-content {
+      display: grid;
+      align-content: start;
+      gap: 4px;
+    }
+
+    .calendar-event-card:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(15,23,42,0.10);
+    }
+
+    .calendar-event-card.is-active {
+      box-shadow: 0 0 0 2px rgba(217,119,6,0.16), 0 12px 22px rgba(15,23,42,0.10);
+      border-color: color-mix(in srgb, #d97706 44%, var(--line));
+    }
+
+    .calendar-event-card.is-cancelled {
+      opacity: 0.82;
+      background: linear-gradient(180deg, rgba(243,244,246,0.98), rgba(255,255,255,0.98));
+      border-left-color: #9ca3af;
+    }
+
+    .calendar-event-card.is-cancelled::after {
+      content: '✕';
+      position: absolute;
+      top: 6px;
+      right: 7px;
+      font-size: 12px;
+      font-weight: 900;
+      color: #9ca3af;
+    }
+
+    .calendar-event-title {
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.18;
+      color: var(--text);
+      padding-right: 12px;
+      overflow: visible;
+    }
+
+    .calendar-event-title.is-dimmed {
+      text-decoration: line-through;
+      opacity: 0.72;
+    }
+
+    .calendar-event-meta {
+      font-size: 9px;
+      line-height: 1.2;
+      color: var(--muted);
+      overflow: visible;
+    }
+
+    .calendar-event-flag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .calendar-event-flag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border-radius: 999px;
+      padding: 2px 6px;
+      font-size: 9px;
+      font-weight: 800;
+      color: color-mix(in srgb, var(--event-border, var(--muted)) 78%, var(--text));
+      background: color-mix(in srgb, var(--event-surface, #2563eb) 12%, white);
+      border: 1px solid color-mix(in srgb, var(--event-border, #2563eb) 20%, rgba(220,226,238,0.92));
+    }
+
+    .calendar-summary-rail {
+      grid-row: 1 / span 2;
+      border-radius: 20px;
+      border: 1px solid rgba(208,218,234,0.92);
     }
 
     .calendar-legend {
@@ -1328,13 +1930,18 @@
         grid-template-columns: 1fr;
       }
 
-      .calendar-grid {
-        gap: 8px;
+      .calendar-week-nav {
+        justify-content: flex-start;
       }
 
-      .calendar-cell {
-        min-height: 106px;
-        padding: 8px;
+      .calendar-month-label {
+        min-width: 0;
+        text-align: left;
+      }
+
+      .calendar-timeline-grid {
+        grid-template-columns: var(--timeline-axis-width, 76px) repeat(5, minmax(var(--timeline-day-min-width, 150px), 1fr)) var(--timeline-summary-width, 240px);
+        gap: 6px;
       }
 
       .detail-screen-panel {
@@ -1380,7 +1987,10 @@
             <div class="update-banner-text" id="updateBannerText">새 버전이 준비됐다.</div>
             <div class="update-banner-meta" id="updateBannerMeta"></div>
           </div>
-          <button class="btn btn-primary btn-small" id="reloadForUpdateBtn" type="button">지금 새로고침</button>
+          <div class="update-banner-actions">
+            <button class="btn btn-ghost btn-small" id="hardRefreshForUpdateBtn" type="button">캐시 초기화 새로받기</button>
+            <button class="btn btn-primary btn-small" id="reloadForUpdateBtn" type="button">지금 새로고침</button>
+          </div>
         </div>
       </div>
       <div class="hero-card hero-side">
@@ -1590,24 +2200,28 @@
         <section class="calendar-panel">
           <div class="calendar-head">
             <div>
-              <div class="panel-title">실습 캘린더</div>
-              <div class="panel-subtitle">월간 블록은 훑고, 하루 상세는 아래 패널에서 본다</div>
+              <div class="panel-title">실습 시간표</div>
+              <div class="panel-subtitle">월~금 시간표와 종합 체크를 한 화면에 압축하고, 상세는 클릭해서 전체 화면으로 본다</div>
             </div>
-            <div class="top-actions" style="margin-top:0;">
-              <button class="btn btn-small btn-ghost" id="calendarPrevBtn">이전 달</button>
+            <div class="calendar-week-nav">
+              <button class="btn btn-small btn-ghost" id="calendarPrevBtn">이전 주</button>
               <div class="calendar-month-label" id="calendarMonthLabel"></div>
-              <button class="btn btn-small btn-ghost" id="calendarNextBtn">다음 달</button>
+              <button class="btn btn-small btn-ghost" id="calendarTodayBtn">이번 주</button>
+              <button class="btn btn-small btn-ghost" id="calendarNextBtn">다음 주</button>
             </div>
           </div>
-          <div class="calendar-grid" id="calendarGrid"></div>
+          <div class="calendar-edit-toolbar" id="calendarEditToolbar"></div>
+          <div class="calendar-board-shell">
+            <div class="calendar-board-grid" id="calendarGrid"></div>
+          </div>
           <div class="calendar-legend" id="calendarLegend"></div>
         </section>
 
-        <aside class="calendar-detail">
+        <aside class="calendar-detail" aria-hidden="true">
           <div class="panel-header">
             <div>
-              <div class="panel-title">선택한 날짜 상세</div>
-              <div class="panel-subtitle">실습 블록 · 과제/발표/조장 업무 · 공부 타임라인</div>
+              <div class="panel-title">선택한 칸 상세</div>
+              <div class="panel-subtitle">시간표 칸이나 종합을 누르면 관련 내용과 체크 항목을 여기서 본다</div>
             </div>
           </div>
           <div class="detail-stack" id="calendarDetail"></div>
@@ -1674,8 +2288,8 @@
 
   <script>
     const STORAGE_KEY = 'kmlePlannerState.v2';
-    const APP_VERSION = '20260413T122400Z';
-    const APP_VERSION_LABEL = '2026-04-13 21:24 KST';
+    const APP_VERSION = '20260418T194500Z';
+    const APP_VERSION_LABEL = '2026-04-19 04:45 KST';
     const STAGES = [
       { id: 'lecture', label: '강의 듣기', short: '강의', note: '강의/팟캐스트/기본 인강 소화' },
       { id: 'framework', label: '개념 틀 짜기', short: '개념틀', note: '총정리 구조, 도식, 로직 프레임 정리' },
@@ -1758,19 +2372,67 @@
       { start: '2026-04-27', end: '2026-05-08', label: '심장', color: '#2563eb', intensity: '높음', note: '실습 + 조장 준비가 겹치는 핵심 블록' }
     ];
 
+    const CALENDAR_TIMELINE_START_HOUR = 8;
+    const CALENDAR_TIMELINE_END_HOUR = 18;
+    const CALENDAR_TIMELINE_STEP_MINUTES = 30;
+    const CALENDAR_TIMELINE_BASE_HOUR_HEIGHT = 54;
+    const CALENDAR_TIMELINE_START_MINUTES = CALENDAR_TIMELINE_START_HOUR * 60;
+    const CALENDAR_TIMELINE_END_MINUTES = CALENDAR_TIMELINE_END_HOUR * 60;
+    const CALENDAR_TIMELINE_TOTAL_MINUTES = CALENDAR_TIMELINE_END_MINUTES - CALENDAR_TIMELINE_START_MINUTES;
+    const CALENDAR_TIMELINE_DEFAULT_DURATION = 60;
+    const CALENDAR_TIMELINE_MIN_CARD_HEIGHT = 34;
+
     const byId = (id) => document.getElementById(id);
     const today = new Date();
     let updateBannerVisible = false;
+    let calendarTimelineHourHeight = CALENDAR_TIMELINE_BASE_HOUR_HEIGHT;
+    let calendarAxisColumnWidth = 88;
+    let calendarDayColumnMinWidth = 168;
+    let calendarSummaryColumnWidth = 320;
+    let calendarLayoutCorrectionDepth = 0;
 
     let state = loadState();
     let selectedSubjectId = state.subjects[0]?.id || null;
     let selectedCalendarDate = formatDateInput(new Date());
-    let calendarMonthCursor = new Date(today.getFullYear(), today.getMonth(), 1);
+    let calendarMonthCursor = startOfWeek(today);
+    let activeCalendarEditEventId = null;
     let activeCalendarEventId = null;
+    let activeCalendarSlotDetail = null;
+    let activeCalendarSummaryDetail = null;
     let activeCalendarMoveEventId = null;
     let calendarEventLongPressTimer = null;
-    let selectedCalendarScope = 'day';
-    let selectedWeekKey = null;
+    let calendarEventLongPressConsumed = false;
+    let calendarEventLongPressOriginId = null;
+    let calendarSlotLongPressTimer = null;
+    let calendarSlotLongPressConsumed = false;
+    let calendarSlotLongPressOrigin = null;
+    let selectedCalendarScope = 'slot';
+    let selectedWeekKey = formatDateInput(startOfWeek(today));
+    let selectedCalendarSlotKey = '';
+
+    const CALENDAR_COLOR_PRESETS = [
+      { key: '', label: '기본', color: '#2563eb' },
+      { key: '#2563eb', label: '파랑', color: '#2563eb' },
+      { key: '#0f766e', label: '초록', color: '#0f766e' },
+      { key: '#7c3aed', label: '보라', color: '#7c3aed' },
+      { key: '#d97706', label: '주황', color: '#d97706' },
+      { key: '#dc2626', label: '빨강', color: '#dc2626' },
+      { key: '#0f172a', label: '먹색', color: '#0f172a' },
+      { key: '#be185d', label: '핑크', color: '#be185d' }
+    ];
+
+    const CALENDAR_DIFFICULTY_BORDER_PALETTE = {
+      1: '#dc2626',
+      2: '#ea580c',
+      3: '#f97316',
+      4: '#f59e0b',
+      5: '#eab308',
+      6: '#84cc16',
+      7: '#22c55e',
+      8: '#14b8a6',
+      9: '#2563eb',
+      10: '#7c3aed'
+    };
 
     function uid(prefix='id') {
       return `${prefix}-${Math.random().toString(36).slice(2, 10)}`;
@@ -1987,8 +2649,18 @@
       return `${String(match[1]).padStart(2, '0')}:${match[2]}`;
     }
 
+    function extractClockRange(value) {
+      const raw = String(value || '').trim();
+      const matches = raw.match(/\d{1,2}:\d{2}/g) || [];
+      return {
+        start: matches[0] ? normalizeClockTime(matches[0]) : '',
+        end: matches[1] ? normalizeClockTime(matches[1]) : ''
+      };
+    }
+
     function normalizeCalendarEvent(event) {
       const time = event?.time || '종일';
+      const range = extractClockRange(time);
       return {
         id: event?.id || uid('event'),
         seedKey: event?.seedKey || '',
@@ -1998,12 +2670,22 @@
         title: String(event?.title || '').trim(),
         time,
         baseTime: event?.baseTime || time,
-        startTime: event?.startTime || normalizeClockTime(time),
-        endTime: event?.endTime || '',
+        startTime: event?.startTime || range.start || normalizeClockTime(time),
+        endTime: event?.endTime || range.end || '',
         note: String(event?.note || '').trim(),
         userNote: String(event?.userNote || '').trim(),
         userDateOverride: event?.userDateOverride || '',
         userTimeOverride: event?.userTimeOverride || '',
+        displayColor: event?.displayColor || '',
+        displayState: event?.displayState === 'cancelled' ? 'cancelled' : 'normal',
+        boardSignalOverrides: {
+          assignment: ['show', 'hide'].includes(event?.boardSignalOverrides?.assignment) ? event.boardSignalOverrides.assignment : 'auto',
+          presentation: ['show', 'hide'].includes(event?.boardSignalOverrides?.presentation) ? event.boardSignalOverrides.presentation : 'auto',
+          exam: ['show', 'hide'].includes(event?.boardSignalOverrides?.exam) ? event.boardSignalOverrides.exam : 'auto'
+        },
+        boardDifficultyOverride: Number.isFinite(Number(event?.boardDifficultyOverride)) && String(event?.boardDifficultyOverride) !== ''
+          ? Math.max(0, Math.min(10, Number(event.boardDifficultyOverride)))
+          : null,
         completed: Boolean(event?.completed),
         professor: event?.professor || '',
         difficulty: Number(event?.difficulty || 0) || null,
@@ -2014,6 +2696,26 @@
         sourceAssignmentId: event?.sourceAssignmentId || '',
         sourceKind: event?.sourceKind || ''
       };
+    }
+
+    function calendarEventSurfaceColor(event, boardConfig = null) {
+      if (event?.displayColor) return event.displayColor;
+      const config = boardConfig || calendarEventBoardConfig(event, findBundleSessionForEvent(event), findBundleSessionForEvent(event) ? findRelatedAssignmentsForSession(event, findBundleSessionForEvent(event)) : []);
+      if (config.exam?.visible) return EVENT_TYPE_META.exam.color;
+      if (config.presentation?.visible) return EVENT_TYPE_META.presentation.color;
+      if (config.assignment?.visible) return EVENT_TYPE_META.assignment.color;
+      return (EVENT_TYPE_META[event?.type] || { color: '#2563eb' }).color;
+    }
+
+    function calendarEventBorderColor(event, boardConfig = null) {
+      const config = boardConfig || calendarEventBoardConfig(event, findBundleSessionForEvent(event), findBundleSessionForEvent(event) ? findRelatedAssignmentsForSession(event, findBundleSessionForEvent(event)) : []);
+      const difficulty = Math.max(0, Math.min(10, Math.round(Number(config?.difficulty?.value || 0))));
+      if (difficulty >= 1 && CALENDAR_DIFFICULTY_BORDER_PALETTE[difficulty]) return CALENDAR_DIFFICULTY_BORDER_PALETTE[difficulty];
+      return calendarEventSurfaceColor(event, config);
+    }
+
+    function calendarEventIsCancelled(event) {
+      return event?.displayState === 'cancelled';
     }
 
     function normalizeState(data) {
@@ -2081,6 +2783,8 @@
         type: session.event_type || 'session',
         title: session.title,
         time: session.time_label || session.time_raw || '종일',
+        startTime: session.start_time || '',
+        endTime: session.end_time || '',
         note: session.note || session.summary || '',
         completed: false,
         professor: session.professor || '',
@@ -2195,7 +2899,13 @@
           completed: Boolean(event.completed),
           userNote: event.userNote || '',
           userDateOverride: event.userDateOverride || '',
-          userTimeOverride: event.userTimeOverride || ''
+          userTimeOverride: event.userTimeOverride || '',
+          displayColor: event.displayColor || '',
+          displayState: event.displayState || 'normal',
+          boardSignalOverrides: event.boardSignalOverrides || null,
+          boardDifficultyOverride: Number.isFinite(Number(event.boardDifficultyOverride)) && String(event.boardDifficultyOverride) !== ''
+            ? Number(event.boardDifficultyOverride)
+            : null
         }])
       );
 
@@ -2222,6 +2932,10 @@
         if (carry) {
           event.completed = carry.completed;
           event.userNote = carry.userNote;
+          event.displayColor = carry.displayColor || '';
+          event.displayState = carry.displayState || 'normal';
+          if (carry.boardSignalOverrides) event.boardSignalOverrides = { ...event.boardSignalOverrides, ...carry.boardSignalOverrides };
+          if (carry.boardDifficultyOverride !== null && carry.boardDifficultyOverride !== undefined) event.boardDifficultyOverride = carry.boardDifficultyOverride;
           if (carry.userDateOverride) {
             event.userDateOverride = carry.userDateOverride;
             event.date = carry.userDateOverride;
@@ -2237,13 +2951,17 @@
       bundle.assignments.forEach(assignment => {
         bundleAssignmentToCalendarEvents(bundle, assignment).forEach(event => {
           const carry = existingBundleEventState.get(calendarEventStableKey(event));
-          if (carry) {
-            event.completed = carry.completed;
-            event.userNote = carry.userNote;
-            if (carry.userDateOverride) {
-              event.userDateOverride = carry.userDateOverride;
-              event.date = carry.userDateOverride;
-            }
+        if (carry) {
+          event.completed = carry.completed;
+          event.userNote = carry.userNote;
+          event.displayColor = carry.displayColor || '';
+          event.displayState = carry.displayState || 'normal';
+          if (carry.boardSignalOverrides) event.boardSignalOverrides = { ...event.boardSignalOverrides, ...carry.boardSignalOverrides };
+          if (carry.boardDifficultyOverride !== null && carry.boardDifficultyOverride !== undefined) event.boardDifficultyOverride = carry.boardDifficultyOverride;
+          if (carry.userDateOverride) {
+            event.userDateOverride = carry.userDateOverride;
+            event.date = carry.userDateOverride;
+          }
             if (carry.userTimeOverride) {
               event.userTimeOverride = carry.userTimeOverride;
               event.time = carry.userTimeOverride;
@@ -2482,10 +3200,11 @@
       selectedSubjectId = ensureSubjectForBundle(state, bundle).id;
       if (jumpToBundleDate) {
         selectedCalendarDate = bundle.sessions?.[0]?.date || formatDateInput(new Date());
-        selectedCalendarScope = 'day';
-        selectedWeekKey = null;
+        selectedCalendarScope = 'slot';
+        selectedCalendarSlotKey = '';
         const baseDate = parseIsoDate(selectedCalendarDate);
-        calendarMonthCursor = new Date(baseDate.getFullYear(), baseDate.getMonth(), 1);
+        selectedWeekKey = weekKeyFromDate(baseDate);
+        calendarMonthCursor = startOfWeek(baseDate);
       }
       renderAll();
       if (switchToCalendar) {
@@ -2533,8 +3252,11 @@
       }
     }
 
-    function saveState() {
+    function saveState(reason = '앱 저장') {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      if (typeof window.__kmlePlannerNotifyLocalChange === 'function') {
+        window.__kmlePlannerNotifyLocalChange(reason);
+      }
     }
 
     function applyExternalState(nextState, { preserveSelection = true } = {}) {
@@ -2551,6 +3273,9 @@
         selectedCalendarDate = formatDateInput(new Date());
       }
 
+      if (activeCalendarEditEventId && !(state.calendarEvents || []).some(event => event.id === activeCalendarEditEventId)) {
+        activeCalendarEditEventId = null;
+      }
       if (activeCalendarEventId && !(state.calendarEvents || []).some(event => event.id === activeCalendarEventId)) {
         activeCalendarEventId = null;
       }
@@ -2576,7 +3301,10 @@
       state = buildCanaryState();
       selectedSubjectId = state.subjects[0]?.id || null;
       selectedCalendarDate = formatDateInput(new Date());
-      calendarMonthCursor = new Date(today.getFullYear(), today.getMonth(), 1);
+      selectedCalendarScope = 'slot';
+      selectedCalendarSlotKey = '';
+      selectedWeekKey = weekKeyFromDate(selectedCalendarDate);
+      calendarMonthCursor = startOfWeek(today);
       saveState();
       closeResetModal();
       renderAll();
@@ -2645,6 +3373,33 @@
       updateBannerVisible = true;
     }
 
+    function plannerStandaloneMode() {
+      return window.matchMedia?.('(display-mode: standalone)')?.matches || window.navigator.standalone === true;
+    }
+
+    async function softRefreshPlannerApp() {
+      const url = new URL(window.location.href);
+      url.searchParams.set('v', APP_VERSION);
+      url.searchParams.set('refresh', String(Date.now()));
+      window.location.replace(url.toString());
+    }
+
+    async function hardRefreshPlannerApp() {
+      try {
+        if ('serviceWorker' in navigator) {
+          const registrations = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(registrations.map(reg => reg.unregister().catch(() => false)));
+        }
+        if ('caches' in window) {
+          const keys = await caches.keys();
+          await Promise.all(keys.map(key => caches.delete(key).catch(() => false)));
+        }
+      } catch (error) {
+        console.error('hard refresh failed', error);
+      }
+      await softRefreshPlannerApp();
+    }
+
     async function checkForAppUpdate({ silent = true } = {}) {
       try {
         const response = await fetch('./version.json', { cache: 'no-store' });
@@ -2652,7 +3407,8 @@
         const payload = await response.json();
         if (!payload?.version) return;
         if (payload.version !== APP_VERSION) {
-          showUpdateBanner('새 버전이 준비됐다. 지금 새로고침하면 최신 동기화 로직을 바로 쓴다.', `현재 ${APP_VERSION_LABEL} · 서버 ${payload.label || payload.version}`);
+          const modeLabel = plannerStandaloneMode() ? '홈화면 앱 모드' : '브라우저 탭 모드';
+          showUpdateBanner('새 버전이 준비됐다. 홈화면 앱이면 캐시 초기화 새로받기가 더 안전하다.', `현재 ${APP_VERSION_LABEL} · 서버 ${payload.label || payload.version} · ${modeLabel}`);
           return;
         }
         if (!silent && updateBannerVisible) {
@@ -2773,10 +3529,28 @@
       return ['assignment', 'admin', 'presentation', 'exam', 'chief'].includes(event.type);
     }
 
-    function weeklySummaryCounts(events) {
+    function weeklySummaryCounts(weekDays, events) {
       const counts = { assignment: 0, presentation: 0, chief: 0, exam: 0, admin: 0 };
       events.forEach(event => {
-        if (counts[event.type] !== undefined) counts[event.type] += 1;
+        const session = findBundleSessionForEvent(event);
+        const relatedAssignments = session ? findRelatedAssignmentsForSession(event, session) : [];
+        const boardConfig = calendarEventBoardConfig(event, session, relatedAssignments);
+        if (event.type === 'assignment' || event.sourceKind === 'assignment') {
+          counts.assignment += 1;
+        }
+        if (event.type === 'chief') counts.chief += 1;
+        if (event.type === 'admin') counts.admin += 1;
+        if (boardConfig.presentation.visible) counts.presentation += 1;
+        if (boardConfig.exam.visible) counts.exam += 1;
+      });
+
+      weekAllPrimaryEvents(weekDays).forEach(event => {
+        const session = findBundleSessionForEvent(event);
+        const relatedAssignments = session ? findRelatedAssignmentsForSession(event, session) : [];
+        const boardConfig = calendarEventBoardConfig(event, session, relatedAssignments);
+        if (boardConfig.assignment.mode === 'show') counts.assignment += 1;
+        if (event.type !== 'presentation' && boardConfig.presentation.visible) counts.presentation += 1;
+        if (event.type !== 'exam' && boardConfig.exam.visible) counts.exam += 1;
       });
       return counts;
     }
@@ -2817,6 +3591,420 @@
         .filter(event => !bundleId || event.bundleId === bundleId)
         .filter(event => !isWeeklySummaryEvent(event))
         .sort(compareEventChronology);
+    }
+
+    function weekKeyFromDate(dateInput) {
+      const date = typeof dateInput === 'string' ? parseIsoDate(dateInput) : dateInput;
+      return formatDateInput(startOfWeek(date));
+    }
+
+    function buildCalendarWeekDays(baseDate) {
+      const start = startOfWeek(baseDate);
+      return Array.from({ length: 5 }, (_, index) => offsetDate(start, index));
+    }
+
+    function formatWeekdayShort(date) {
+      return ['일', '월', '화', '수', '목', '금', '토'][date.getDay()] || '';
+    }
+
+    function calendarBoardRangeLabel(weekDays) {
+      const first = weekDays[0];
+      const last = weekDays[weekDays.length - 1];
+      return `${first.getFullYear()}.${String(first.getMonth() + 1).padStart(2, '0')}.${String(first.getDate()).padStart(2, '0')}(${formatWeekdayShort(first)}) – ${String(last.getMonth() + 1).padStart(2, '0')}.${String(last.getDate()).padStart(2, '0')}(${formatWeekdayShort(last)})`;
+    }
+
+    function calendarEventSlotKey(event) {
+      if (!event) return 'untimed';
+      const start = event.startTime || extractClockRange(event.time || '').start || normalizeClockTime(event.time || '');
+      const end = event.endTime || extractClockRange(event.time || '').end || '';
+      const label = event.time || '시간 미정';
+      return `${start || 'untimed'}__${end || ''}__${label}`;
+    }
+
+    function buildCalendarWeekSlots(weekDays) {
+      const slotMap = new Map();
+      weekDays.forEach(day => {
+        const iso = formatDateInput(day);
+        dailyPrimaryEvents(iso).forEach(event => {
+          const key = calendarEventSlotKey(event);
+          if (!slotMap.has(key)) {
+            slotMap.set(key, {
+              key,
+              startTime: event.startTime || extractClockRange(event.time || '').start || '',
+              endTime: event.endTime || extractClockRange(event.time || '').end || '',
+              label: event.time || '시간 미정'
+            });
+          }
+        });
+      });
+      return [...slotMap.values()].sort((a, b) => `${timeSortValue(a.startTime || a.label)}-${a.label}`.localeCompare(`${timeSortValue(b.startTime || b.label)}-${b.label}`, 'ko'));
+    }
+
+    function calendarSlotLabel(slot) {
+      if (!slot) return { main: '시간 미정', sub: '' };
+      if (slot.startTime && slot.endTime) return { main: `${slot.startTime}–${slot.endTime}`, sub: '' };
+      if (slot.startTime) return { main: slot.startTime, sub: slot.label !== slot.startTime ? slot.label : '' };
+      return { main: slot.label || '시간 미정', sub: '' };
+    }
+
+    function eventsForCalendarSlot(dateIso, slotKey) {
+      return dailyPrimaryEvents(dateIso).filter(event => calendarEventSlotKey(event) === slotKey);
+    }
+
+    function weekAllPrimaryEvents(weekDays) {
+      return weekDays.flatMap(day => dailyPrimaryEvents(formatDateInput(day)));
+    }
+
+    function weekSummarySignals(weekDays) {
+      const summaryEvents = weekSummaryEvents(weekDays);
+      const primaryEvents = weekAllPrimaryEvents(weekDays);
+      return {
+        total: summaryEvents.length,
+        completed: summaryEvents.filter(event => event.completed).length,
+        pending: summaryEvents.filter(event => !event.completed).length,
+        changed: [...summaryEvents, ...primaryEvents].filter(calendarEventHasCustomSchedule).length,
+        needsConfirmation: summaryEvents.filter(event => findBundleAssignmentForEvent(event)?.needs_confirmation).length
+      };
+    }
+
+    function ensureCalendarSelectionForWeek(weekDays) {
+      if (!weekDays.length) return;
+      const selectedWeek = weekKeyFromDate(weekDays[0]);
+      selectedWeekKey = selectedWeek;
+      const firstIso = formatDateInput(weekDays[0]);
+      const lastIso = formatDateInput(weekDays[weekDays.length - 1]);
+      if (selectedCalendarDate < firstIso || selectedCalendarDate > lastIso) {
+        selectedCalendarDate = firstIso;
+        selectedCalendarSlotKey = '';
+      }
+      const slots = buildCalendarWeekSlots(weekDays);
+      if (selectedCalendarScope === 'summary') return;
+      if (!slots.length) {
+        selectedCalendarScope = 'summary';
+        selectedCalendarSlotKey = '';
+        return;
+      }
+      const dayIsoSet = new Set(weekDays.map(day => formatDateInput(day)));
+      if (!dayIsoSet.has(selectedCalendarDate)) selectedCalendarDate = firstIso;
+      if (!selectedCalendarSlotKey || !slots.some(slot => slot.key === selectedCalendarSlotKey)) {
+        const firstWithEvent = weekDays.find(day => eventsForCalendarSlot(formatDateInput(day), slots[0].key).length > 0);
+        selectedCalendarDate = formatDateInput(firstWithEvent || weekDays[0]);
+        selectedCalendarSlotKey = slots[0].key;
+      }
+      selectedCalendarScope = 'slot';
+    }
+
+    function calendarSummaryEventForAssignment(bundleId, assignmentId, weekKey) {
+      return (state.calendarEvents || []).find(event => event.bundleId === bundleId
+        && event.sourceAssignmentId === assignmentId
+        && weekKeyFromDate(event.date) === weekKey) || null;
+    }
+
+    function collectRelatedAssignmentsForSlotEvents(slotEvents) {
+      const weekKey = selectedWeekKey;
+      const seen = new Set();
+      return slotEvents.flatMap(event => {
+        const session = findBundleSessionForEvent(event);
+        if (!session) return [];
+        return findRelatedAssignmentsForSession(event, session).map(assignment => {
+          const key = `${event.bundleId}::${assignment.id}`;
+          if (seen.has(key)) return null;
+          seen.add(key);
+          return {
+            assignment,
+            summaryEvent: calendarSummaryEventForAssignment(event.bundleId, assignment.id, weekKey),
+            bundleId: event.bundleId
+          };
+        }).filter(Boolean);
+      });
+    }
+
+    function minutesFromClockString(value) {
+      const normalized = normalizeClockTime(value);
+      if (!normalized) return null;
+      const [hour, minute] = normalized.split(':').map(Number);
+      if (!Number.isFinite(hour) || !Number.isFinite(minute)) return null;
+      return hour * 60 + minute;
+    }
+
+    function formatMinutesAsClock(totalMinutes) {
+      const clamped = Math.max(0, Math.round(Number(totalMinutes) || 0));
+      const hour = String(Math.floor(clamped / 60)).padStart(2, '0');
+      const minute = String(clamped % 60).padStart(2, '0');
+      return `${hour}:${minute}`;
+    }
+
+    function roundCalendarMinutes(minutes) {
+      const step = CALENDAR_TIMELINE_STEP_MINUTES;
+      return Math.round(minutes / step) * step;
+    }
+
+    function calendarEventHasExplicitEnd(event) {
+      return Boolean(event?.endTime || extractClockRange(event?.time || '').end);
+    }
+
+    function calendarEventDurationMinutes(event, { forLayout = false } = {}) {
+      const start = minutesFromClockString(event?.startTime || extractClockRange(event?.time || '').start);
+      const end = minutesFromClockString(event?.endTime || extractClockRange(event?.time || '').end);
+      if (start !== null && end !== null && end > start) return end - start;
+      if (forLayout && start !== null) return CALENDAR_TIMELINE_DEFAULT_DURATION;
+      return 0;
+    }
+
+    function calendarEventStartMinutes(event) {
+      return minutesFromClockString(event?.startTime || extractClockRange(event?.time || '').start);
+    }
+
+    function calendarEventTimeLabel(event) {
+      if (!event) return '시간 미정';
+      const start = normalizeClockTime(event.startTime || extractClockRange(event.time || '').start || '');
+      const end = normalizeClockTime(event.endTime || extractClockRange(event.time || '').end || '');
+      if (start && end) return `${start}–${end}`;
+      if (start) return start;
+      return event.time || '시간 미정';
+    }
+
+    function calendarEventTimelineInfo(event) {
+      const start = calendarEventStartMinutes(event);
+      if (start === null) return null;
+      const duration = calendarEventDurationMinutes(event, { forLayout: true });
+      const explicitDuration = calendarEventDurationMinutes(event, { forLayout: false });
+      const unclampedEnd = start + Math.max(duration, 15);
+      const layoutStart = Math.max(CALENDAR_TIMELINE_START_MINUTES, Math.min(start, CALENDAR_TIMELINE_END_MINUTES));
+      const layoutEnd = Math.max(layoutStart + 15, Math.min(unclampedEnd, CALENDAR_TIMELINE_END_MINUTES));
+      return {
+        start,
+        end: start + explicitDuration,
+        layoutStart,
+        layoutEnd,
+        timeLabel: calendarEventTimeLabel(event),
+        hasExplicitEnd: calendarEventHasExplicitEnd(event)
+      };
+    }
+
+    function calendarTimelineHeightPx() {
+      return (CALENDAR_TIMELINE_TOTAL_MINUTES / 60) * calendarTimelineHourHeight;
+    }
+
+    function calendarTimelinePercentFromMinutes(minutes) {
+      return ((minutes - CALENDAR_TIMELINE_START_MINUTES) / CALENDAR_TIMELINE_TOTAL_MINUTES) * 100;
+    }
+
+    function layoutCalendarDayEvents(dateIso) {
+      const dayEvents = dailyPrimaryEvents(dateIso);
+      const timedEntries = [];
+      const untimedEvents = [];
+
+      dayEvents.forEach(event => {
+        const timeline = calendarEventTimelineInfo(event);
+        if (!timeline) {
+          untimedEvents.push(event);
+          return;
+        }
+        timedEntries.push({ event, timeline });
+      });
+
+      timedEntries.sort((a, b) => a.timeline.layoutStart - b.timeline.layoutStart || a.timeline.layoutEnd - b.timeline.layoutEnd || a.event.title.localeCompare(b.event.title, 'ko'));
+
+      const clusters = [];
+      let currentCluster = [];
+      let currentClusterEnd = null;
+      timedEntries.forEach(entry => {
+        if (!currentCluster.length) {
+          currentCluster = [entry];
+          currentClusterEnd = entry.timeline.layoutEnd;
+          return;
+        }
+        if (entry.timeline.layoutStart < currentClusterEnd) {
+          currentCluster.push(entry);
+          currentClusterEnd = Math.max(currentClusterEnd, entry.timeline.layoutEnd);
+          return;
+        }
+        clusters.push(currentCluster);
+        currentCluster = [entry];
+        currentClusterEnd = entry.timeline.layoutEnd;
+      });
+      if (currentCluster.length) clusters.push(currentCluster);
+
+      const gapPx = 6;
+      const positioned = [];
+      clusters.forEach(cluster => {
+        const laneEnds = [];
+        cluster.forEach(entry => {
+          let laneIndex = laneEnds.findIndex(end => end <= entry.timeline.layoutStart);
+          if (laneIndex === -1) {
+            laneIndex = laneEnds.length;
+            laneEnds.push(entry.timeline.layoutEnd);
+          } else {
+            laneEnds[laneIndex] = entry.timeline.layoutEnd;
+          }
+          entry.laneIndex = laneIndex;
+        });
+        const laneCount = Math.max(1, laneEnds.length);
+        cluster.forEach(entry => {
+          const top = (entry.timeline.layoutStart - CALENDAR_TIMELINE_START_MINUTES) / CALENDAR_TIMELINE_TOTAL_MINUTES * calendarTimelineHeightPx();
+          const height = Math.max(((entry.timeline.layoutEnd - entry.timeline.layoutStart) / 60) * calendarTimelineHourHeight, CALENDAR_TIMELINE_MIN_CARD_HEIGHT);
+          const widthPercent = 100 / laneCount;
+          const width = `calc(${widthPercent.toFixed(4)}% - ${((laneCount - 1) * gapPx) / laneCount}px)`;
+          const left = `calc(${(entry.laneIndex * widthPercent).toFixed(4)}% + ${entry.laneIndex * gapPx}px)`;
+          positioned.push({ ...entry, laneCount, top, height, width, left });
+        });
+      });
+
+      return { timedEntries: positioned, untimedEvents };
+    }
+
+    function calendarTimelineHourMarks() {
+      const marks = [];
+      for (let hour = CALENDAR_TIMELINE_START_HOUR; hour <= CALENDAR_TIMELINE_END_HOUR; hour += 1) {
+        const minutes = hour * 60;
+        marks.push({
+          label: `${hour}시`,
+          top: calendarTimelinePercentFromMinutes(minutes)
+        });
+      }
+      return marks;
+    }
+
+    function calendarTimelineStyleVars() {
+      const totalHeight = calendarTimelineHeightPx();
+      return `--timeline-hour-height:${calendarTimelineHourHeight}px; --timeline-half-hour-height:${calendarTimelineHourHeight / 2}px; --timeline-total-height:${totalHeight}px; --timeline-axis-width:${calendarAxisColumnWidth}px; --timeline-day-min-width:${calendarDayColumnMinWidth}px; --timeline-summary-width:${calendarSummaryColumnWidth}px;`;
+    }
+
+    function fitCalendarTimelineDensity() {
+      const grid = byId('calendarGrid');
+      if (!grid) return false;
+      const cards = [...grid.querySelectorAll('.calendar-event-card[data-duration-minutes]')];
+      if (!cards.length) {
+        if (calendarTimelineHourHeight !== CALENDAR_TIMELINE_BASE_HOUR_HEIGHT) {
+          calendarTimelineHourHeight = CALENDAR_TIMELINE_BASE_HOUR_HEIGHT;
+          renderCalendarBoard();
+          return true;
+        }
+        return false;
+      }
+
+      let requiredHourHeight = CALENDAR_TIMELINE_BASE_HOUR_HEIGHT;
+      cards.forEach(card => {
+        const duration = Number(card.dataset.durationMinutes || 0);
+        if (!duration) return;
+        const content = card.querySelector('.calendar-event-content');
+        const requiredContentHeight = Math.max((content?.scrollHeight || card.scrollHeight) + 18, CALENDAR_TIMELINE_MIN_CARD_HEIGHT);
+        const neededHourHeight = (requiredContentHeight * 60) / duration;
+        if (Number.isFinite(neededHourHeight)) {
+          requiredHourHeight = Math.max(requiredHourHeight, neededHourHeight);
+        }
+      });
+
+      const roundedHourHeight = Math.min(220, Math.max(CALENDAR_TIMELINE_BASE_HOUR_HEIGHT, Math.ceil(requiredHourHeight / 2) * 2));
+      if (Math.abs(roundedHourHeight - calendarTimelineHourHeight) >= 2) {
+        calendarTimelineHourHeight = roundedHourHeight;
+        renderCalendarBoard();
+        return true;
+      }
+      return false;
+    }
+
+    function runCalendarLayoutDiagnostics() {
+      const board = document.querySelector('.calendar-timeline-grid');
+      if (!board) return false;
+      if (calendarLayoutCorrectionDepth >= 1) {
+        calendarLayoutCorrectionDepth = 0;
+        return false;
+      }
+
+      const summary = board.querySelector('.calendar-summary-rail');
+      const timeAxis = board.querySelector('.calendar-time-axis');
+      const dayHeads = [...board.querySelectorAll('.calendar-day-head')];
+      const cards = [...board.querySelectorAll('.calendar-event-card')];
+
+      let needsRerender = false;
+      let touchedLayoutValue = false;
+
+      if (summary && timeAxis) {
+        const summaryRect = summary.getBoundingClientRect();
+        const timeRect = timeAxis.getBoundingClientRect();
+        const lastDayRect = dayHeads[dayHeads.length - 1]?.getBoundingClientRect();
+        if ((summaryRect.x <= timeRect.x || (lastDayRect && summaryRect.x <= lastDayRect.x)) && calendarSummaryColumnWidth < 360) {
+          calendarSummaryColumnWidth = 360;
+          needsRerender = true;
+          touchedLayoutValue = true;
+        }
+        if (summaryRect.width < 280 && calendarSummaryColumnWidth < 360) {
+          calendarSummaryColumnWidth = 360;
+          needsRerender = true;
+          touchedLayoutValue = true;
+        }
+      }
+
+      if (cards.length) {
+        const overflowCount = cards.filter(card => {
+          const content = card.querySelector('.calendar-event-content');
+          const contentHeight = (content?.scrollHeight || card.scrollHeight) + 12;
+          return contentHeight > card.getBoundingClientRect().height;
+        }).length;
+        if (overflowCount > 0) {
+          const changed = fitCalendarTimelineDensity();
+          if (changed) return true;
+        }
+      }
+
+      if (needsRerender && touchedLayoutValue) {
+        calendarLayoutCorrectionDepth += 1;
+        renderCalendarBoard();
+        return true;
+      }
+
+      calendarLayoutCorrectionDepth = 0;
+      return false;
+    }
+
+    function inferMoveTargetMinutesFromPointer(domEvent) {
+      const canvas = domEvent?.currentTarget;
+      if (!canvas || typeof canvas.getBoundingClientRect !== 'function') return null;
+      const rect = canvas.getBoundingClientRect();
+      if (!rect.height) return null;
+      const rawY = Math.max(0, Math.min(domEvent.clientY - rect.top, rect.height));
+      const ratio = rawY / rect.height;
+      const minutes = CALENDAR_TIMELINE_START_MINUTES + (ratio * CALENDAR_TIMELINE_TOTAL_MINUTES);
+      const rounded = roundCalendarMinutes(minutes);
+      return Math.max(CALENDAR_TIMELINE_START_MINUTES, Math.min(rounded, CALENDAR_TIMELINE_END_MINUTES));
+    }
+
+    function renderCalendarEditToolbar() {
+      const el = byId('calendarEditToolbar');
+      if (!el) return;
+      const event = activeCalendarEditEventId ? findCalendarEventById(activeCalendarEditEventId) : null;
+      if (!event) {
+        el.classList.remove('show');
+        el.innerHTML = '';
+        return;
+      }
+      const session = findBundleSessionForEvent(event);
+      const relatedAssignments = session ? findRelatedAssignmentsForSession(event, session) : [];
+      const boardConfig = calendarEventBoardConfig(event, session, relatedAssignments);
+      const borderColor = calendarEventBorderColor(event, boardConfig);
+      el.classList.add('show');
+      el.innerHTML = `
+        <div>
+          <div class="calendar-edit-toolbar-title">편집 중 · ${escapeHtml(event.title)}</div>
+          <div class="calendar-edit-toolbar-sub">${activeCalendarMoveEventId === event.id ? '다른 칸을 누르면 요일/시간이 같이 이동한다.' : '배경은 과제/발표/시험 계열, 왼쪽 테두리는 난이도 색으로 연동된다.'}</div>
+        </div>
+        <div class="calendar-swatch-row" style="margin-top:0;">
+          ${CALENDAR_COLOR_PRESETS.map(preset => `
+            <button class="calendar-swatch ${(event.displayColor || '') === preset.key ? 'active' : ''}" style="background:${preset.color}; box-shadow: inset 0 0 0 2px color-mix(in srgb, ${borderColor} 42%, white);" title="${preset.label}" aria-label="${preset.label}" onclick="setCalendarEventColor('${event.id}', '${preset.key.replace(/'/g, "&#039;")}')"></button>
+          `).join('')}
+        </div>
+        <div class="calendar-state-row" style="margin-top:0;">
+          <button class="calendar-state-btn ${event.displayState !== 'cancelled' ? 'active' : ''}" onclick="setCalendarEventDisplayState('${event.id}', 'normal')">기본</button>
+          <button class="calendar-state-btn ${event.displayState === 'cancelled' ? 'active' : ''}" onclick="setCalendarEventDisplayState('${event.id}', 'cancelled')">X표</button>
+          <button class="calendar-state-btn" onclick="shiftCalendarEventTime('${event.id}', -30)">-30분</button>
+          <button class="calendar-state-btn" onclick="shiftCalendarEventTime('${event.id}', 30)">+30분</button>
+          ${canMoveCalendarEvent(event) ? `<button class="calendar-state-btn ${activeCalendarMoveEventId === event.id ? 'active' : ''}" onclick="toggleCalendarEventMoveMode('${event.id}')">${activeCalendarMoveEventId === event.id ? '이동 켜짐' : '이동'}</button>` : ''}
+          <button class="calendar-state-btn" onclick="openCalendarEventDetail('${event.id}')">자세히</button>
+          <button class="calendar-state-btn" onclick="clearCalendarEditEvent()">닫기</button>
+        </div>
+      `;
     }
 
     function availabilityHint(dateInput) {
@@ -3099,57 +4287,147 @@
     }
 
     function renderCalendarBoard() {
-      const { first } = calendarMonthRange(calendarMonthCursor);
       const grid = byId('calendarGrid');
       const label = byId('calendarMonthLabel');
       const legend = byId('calendarLegend');
       if (!grid || !label || !legend) return;
 
-      label.textContent = `${first.getFullYear()}년 ${first.getMonth() + 1}월`;
-      const weekdays = ['일', '월', '화', '수', '목', '금', '토', '종합'];
-      const weeks = buildCalendarWeeks(calendarMonthCursor);
+      const weekDays = buildCalendarWeekDays(calendarMonthCursor);
+      ensureCalendarSelectionForWeek(weekDays);
+      const weekKey = weekKeyFromDate(weekDays[0]);
+      const summaryEvents = weekSummaryEvents(weekDays);
+      const counts = weeklySummaryCounts(weekDays, summaryEvents);
+      const signals = weekSummarySignals(weekDays);
+      const hourMarks = calendarTimelineHourMarks();
 
-      grid.innerHTML = weekdays.map(day => `<div class="calendar-weekday">${day}</div>`).join('') + weeks.map(weekDays => {
-        const weekKey = weekKeyFromDays(weekDays);
-        const dayCells = weekDays.map(day => {
-          if (!day) return `<div class="calendar-cell empty"></div>`;
+      label.textContent = calendarBoardRangeLabel(weekDays);
+
+      const headerCells = `
+        <div class="calendar-time-corner">시간</div>
+        ${weekDays.map(day => {
           const iso = formatDateInput(day);
           const block = getClerkshipBlock(iso);
+          const isSelectedDay = selectedCalendarDate === iso;
           return `
-            <button class="calendar-cell ${iso === selectedCalendarDate ? 'selected' : ''} ${isSameDate(day, new Date()) ? 'today' : ''}" onclick="selectCalendarDate('${iso}')">
-              <div class="calendar-top">
-                <span class="calendar-day">${day.getDate()}</span>
-                <span class="calendar-hint">${availabilityHint(day)}</span>
+            <div class="calendar-day-head ${isSelectedDay ? 'is-selected' : ''}" style="grid-column:${weekDays.indexOf(day) + 2}; grid-row:1;">
+              <div class="calendar-day-top">
+                <span class="calendar-day-week">${formatWeekdayShort(day)}</span>
+                <span class="calendar-day-date">${day.getMonth() + 1}/${day.getDate()}</span>
               </div>
-              ${block ? `<span class="calendar-block-chip" style="background:${block.color}">${block.label}</span>` : '<span class="calendar-hint">블록 없음</span>'}
-            </button>
-          `;
-        }).join('');
-
-        const summaryEvents = weekSummaryEvents(weekDays);
-        const counts = weeklySummaryCounts(summaryEvents);
-        const summaryCell = `
-          <button class="calendar-summary-cell ${selectedCalendarScope === 'week' && selectedWeekKey === weekKey ? 'selected' : ''}" onclick="selectCalendarWeek('${weekKey}')">
-            <div class="calendar-summary-head">
-              <span class="calendar-summary-title">종합</span>
-              <span class="calendar-hint">${summaryEvents.length ? `${summaryEvents.length}개` : '없음'}</span>
+              ${block ? `<span class="calendar-block-chip" style="background:${block.color}">${block.label}</span>` : '<span class="calendar-mini-chip">블록 없음</span>'}
+              <div class="calendar-day-note">${availabilityHint(day)}</div>
             </div>
-            ${summaryEvents.length ? `<div class="calendar-summary-list">
-              ${counts.assignment ? `<div class="calendar-summary-item"><div class="calendar-summary-item-title">과제 ${counts.assignment}개</div></div>` : ''}
-              ${counts.presentation ? `<div class="calendar-summary-item"><div class="calendar-summary-item-title">발표 ${counts.presentation}개</div></div>` : ''}
-              ${counts.exam ? `<div class="calendar-summary-item"><div class="calendar-summary-item-title">평가 ${counts.exam}개</div></div>` : ''}
-              ${counts.chief ? `<div class="calendar-summary-item"><div class="calendar-summary-item-title">조장 ${counts.chief}개</div></div>` : ''}
-              ${counts.admin ? `<div class="calendar-summary-item"><div class="calendar-summary-item-title">행정 ${counts.admin}개</div></div>` : ''}
-            </div>` : `<div class="calendar-summary-empty">이번 주 종합 일정 없음</div>`}
-          </button>
-        `;
-        return dayCells + summaryCell;
-      }).join('');
+          `;
+        }).join('')}
+        <button class="calendar-summary-rail ${(activeCalendarSummaryDetail === weekKey || selectedCalendarScope === 'summary') ? 'selected' : ''}" onclick="openCalendarSummaryDetail('${weekKey}')">
+          <div class="calendar-summary-kicker">
+            <span>종합</span>
+            <span>${signals.total}개</span>
+          </div>
+          <div class="calendar-summary-hero">
+            <div class="calendar-summary-big-number"><strong>${signals.total}</strong><span>이번 주 체크</span></div>
+            <div class="calendar-summary-hero-title">주간 운영 요약</div>
+            <div class="calendar-summary-hero-sub">과제, 발표, 조장 업무를 한 번에 훑고 클릭해서 전체 화면에서 마감/진행도를 관리한다.</div>
+          </div>
+          <div class="calendar-summary-section-title">이번 주 체크리스트</div>
+          <div class="calendar-summary-list">
+            <div class="calendar-summary-row">
+              <div class="calendar-summary-row-label"><strong>과제</strong><span>제출/확인할 문서와 체크</span></div>
+              <div class="calendar-summary-row-value">${counts.assignment || 0}</div>
+            </div>
+            <div class="calendar-summary-row">
+              <div class="calendar-summary-row-label"><strong>발표·시험</strong><span>발표 준비와 평가 일정</span></div>
+              <div class="calendar-summary-row-value">${(counts.presentation || 0) + (counts.exam || 0)}</div>
+            </div>
+            <div class="calendar-summary-row">
+              <div class="calendar-summary-row-label"><strong>조장·행정</strong><span>운영, 연락, 세팅 업무</span></div>
+              <div class="calendar-summary-row-value">${(counts.chief || 0) + (counts.admin || 0)}</div>
+            </div>
+            <div class="calendar-summary-row">
+              <div class="calendar-summary-row-label"><strong>미완</strong><span>아직 체크되지 않은 항목</span></div>
+              <div class="calendar-summary-row-value">${signals.pending}</div>
+            </div>
+            <div class="calendar-summary-row">
+              <div class="calendar-summary-row-label"><strong>확인 필요</strong><span>교수님/시간/형식 재확인 필요</span></div>
+              <div class="calendar-summary-row-value">${signals.needsConfirmation}</div>
+            </div>
+            <div class="calendar-summary-row">
+              <div class="calendar-summary-row-label"><strong>수정·완료</strong><span>변경 ${signals.changed} / 완료 ${signals.completed}</span></div>
+              <div class="calendar-summary-row-value">${signals.changed + signals.completed}</div>
+            </div>
+          </div>
+          <div class="calendar-summary-note">클릭하면 종합 상세가 전체 화면으로 열리고, 과제 체크·진행도 관리는 거기서 이어서 할 수 있다.</div>
+        </button>
+      `;
+
+      const bodyCells = `
+        <div class="calendar-time-axis">
+          ${hourMarks.map(mark => `<div class="calendar-time-mark" style="top:${mark.top}%;">${mark.label}</div>`).join('')}
+        </div>
+        ${weekDays.map(day => {
+          const iso = formatDateInput(day);
+          const { timedEntries, untimedEvents } = layoutCalendarDayEvents(iso);
+          const isMoveReady = Boolean(activeCalendarMoveEventId);
+          return `
+            <div class="calendar-day-column" style="grid-column:${weekDays.indexOf(day) + 2};">
+              <div class="calendar-day-canvas ${isMoveReady ? 'move-ready' : ''}" onclick="handleCalendarTimelineCanvasClick(event, '${iso}')">
+                ${timedEntries.map(entry => {
+                  const event = entry.event;
+                  const session = findBundleSessionForEvent(event);
+                  const relatedAssignments = session ? findRelatedAssignmentsForSession(event, session) : [];
+                  const metaParts = [event.professor, calendarEventTimeLabel(event)].filter(Boolean);
+                  if (!event.professor && session?.location) metaParts.unshift(session.location);
+                  const boardConfig = calendarEventBoardConfig(event, session, relatedAssignments);
+                  const surfaceColor = calendarEventSurfaceColor(event, boardConfig);
+                  const borderColor = calendarEventBorderColor(event, boardConfig);
+                  const flags = boardConfig.flags;
+                  return `
+                    <button
+                      class="calendar-event-card ${activeCalendarEditEventId === event.id || activeCalendarMoveEventId === event.id ? 'is-active' : ''} ${calendarEventIsCancelled(event) ? 'is-cancelled' : ''}"
+                      data-duration-minutes="${Math.max(calendarEventDurationMinutes(event, { forLayout: true }), 15)}"
+                      style="top:${entry.top}px; height:${entry.height}px; left:${entry.left}; width:${entry.width}; --event-surface:${surfaceColor}; --event-border:${borderColor};"
+                      onclick="handleCalendarEventCardClick(event, '${event.id}')"
+                      onpointerdown="beginCalendarEventLongPress('${event.id}', event)"
+                      onpointerup="cancelCalendarEventLongPress()"
+                      onpointerleave="cancelCalendarEventLongPress()"
+                      onpointercancel="cancelCalendarEventLongPress()"
+                    >
+                      <div class="calendar-event-content">
+                        <div class="calendar-event-title ${event.completed || calendarEventIsCancelled(event) ? 'is-dimmed' : ''}">${escapeHtml(event.title)}</div>
+                        <div class="calendar-event-meta">${escapeHtml(metaParts.join(' · ') || '클릭해서 상세 보기')}</div>
+                        ${flags.length ? `<div class="calendar-event-flag-row">${flags.map(flag => `<span class="calendar-event-flag">${escapeHtml(flag)}</span>`).join('')}</div>` : ''}
+                      </div>
+                    </button>
+                  `;
+                }).join('')}
+              </div>
+              ${untimedEvents.length ? `
+                <div class="calendar-day-untimed">
+                  <div class="calendar-day-untimed-title">시간 미정</div>
+                  <div class="calendar-session-badges">
+                    ${untimedEvents.map(event => `
+                      <button class="calendar-untimed-chip" onclick="handleCalendarEventCardClick(event, '${event.id}')" onpointerdown="beginCalendarEventLongPress('${event.id}', event)" onpointerup="cancelCalendarEventLongPress()" onpointerleave="cancelCalendarEventLongPress()" onpointercancel="cancelCalendarEventLongPress()">
+                        <span>${escapeHtml(event.title)}</span>
+                      </button>
+                    `).join('')}
+                  </div>
+                </div>
+              ` : ''}
+            </div>
+          `;
+        }).join('')}
+      `;
+
+      grid.innerHTML = `<div class="calendar-timeline-grid" style="${calendarTimelineStyleVars()}">${headerCells}${bodyCells}</div>`;
 
       legend.innerHTML = [
         ...CLERKSHIP_BLOCKS.map(block => `<span class="detail-chip" style="background:${block.color}; color:white;">${block.label}</span>`),
-        ...Object.values(EVENT_TYPE_META).map(meta => `<span class="calendar-mini-chip">${meta.label}</span>`)
+        '<span class="calendar-mini-chip">클릭: 상세 보기</span>',
+        '<span class="calendar-mini-chip">길게 누르기: 색/X/이동</span>'
       ].join('');
+
+      if (fitCalendarTimelineDensity()) return;
+      runCalendarLayoutDiagnostics();
     }
 
     function findBundleSessionForEvent(event) {
@@ -3179,22 +4457,65 @@
       return !(event.type === 'assignment' || event.sourceKind === 'assignment');
     }
 
+    function openCalendarSlotDetail(dateIso, slotKey, { editMode = false } = {}) {
+      activeCalendarSummaryDetail = null;
+      activeCalendarEventId = null;
+      activeCalendarSlotDetail = { date: dateIso, slotKey, editMode };
+      selectedCalendarDate = dateIso;
+      selectedCalendarScope = 'slot';
+      selectedCalendarSlotKey = slotKey;
+      selectedWeekKey = weekKeyFromDate(dateIso);
+      renderCalendarBoard();
+      renderCalendarEventDetailScreen();
+    }
+
+    function openCalendarSummaryDetail(weekKey) {
+      activeCalendarEventId = null;
+      activeCalendarSlotDetail = null;
+      activeCalendarSummaryDetail = weekKey;
+      selectedCalendarScope = 'summary';
+      selectedWeekKey = weekKey;
+      renderCalendarBoard();
+      renderCalendarEventDetailScreen();
+    }
+
+    function closeCalendarDetailScreen() {
+      activeCalendarEventId = null;
+      activeCalendarSlotDetail = null;
+      activeCalendarSummaryDetail = null;
+      activeCalendarMoveEventId = null;
+      renderCalendarBoard();
+      renderCalendarEventDetailScreen();
+    }
+
     function clearCalendarEventLongPressTimer() {
       if (!calendarEventLongPressTimer) return;
       window.clearTimeout(calendarEventLongPressTimer);
       calendarEventLongPressTimer = null;
     }
 
+    function clearCalendarSlotLongPressTimer() {
+      if (!calendarSlotLongPressTimer) return;
+      window.clearTimeout(calendarSlotLongPressTimer);
+      calendarSlotLongPressTimer = null;
+    }
+
     function beginCalendarEventLongPress(eventId, domEvent) {
       if (domEvent?.target?.closest?.('.event-actions')) return;
       clearCalendarEventLongPressTimer();
+      calendarEventLongPressConsumed = false;
       calendarEventLongPressTimer = window.setTimeout(() => {
         const event = findCalendarEventById(eventId);
-        if (!canMoveCalendarEvent(event)) return;
-        activeCalendarMoveEventId = eventId;
+        if (!event) return;
+        calendarEventLongPressConsumed = true;
+        calendarEventLongPressOriginId = eventId;
+        activeCalendarEditEventId = eventId;
+        activeCalendarMoveEventId = canMoveCalendarEvent(event) ? eventId : null;
+        activeCalendarSlotDetail = null;
+        activeCalendarSummaryDetail = null;
+        activeCalendarEventId = null;
+        renderCalendarEditToolbar();
         renderCalendarBoard();
-        renderCalendarDetail();
-        renderCalendarEventDetailScreen();
       }, 420);
     }
 
@@ -3202,11 +4523,109 @@
       clearCalendarEventLongPressTimer();
     }
 
+    function handleCalendarEventCardClick(domEvent, eventId) {
+      if (calendarEventLongPressConsumed && calendarEventLongPressOriginId === eventId) {
+        calendarEventLongPressConsumed = false;
+        calendarEventLongPressOriginId = null;
+        return;
+      }
+      calendarEventLongPressConsumed = false;
+      calendarEventLongPressOriginId = null;
+      const targetEvent = findCalendarEventById(eventId);
+      if (!targetEvent) return;
+      if (activeCalendarMoveEventId && activeCalendarMoveEventId !== eventId) {
+        const targetStart = calendarEventStartMinutes(targetEvent) ?? CALENDAR_TIMELINE_START_MINUTES;
+        moveCalendarEventToTimeline(activeCalendarMoveEventId, targetEvent.date, targetStart);
+        return;
+      }
+      openCalendarEventDetail(eventId);
+    }
+
+    function beginCalendarSlotLongPress(dateIso, encodedSlotKey, domEvent) {
+      clearCalendarSlotLongPressTimer();
+      calendarSlotLongPressConsumed = false;
+      const slotKey = decodeURIComponent(encodedSlotKey);
+      const slotEvents = eventsForCalendarSlot(dateIso, slotKey);
+      if (!slotEvents.length) return;
+      calendarSlotLongPressTimer = window.setTimeout(() => {
+        calendarSlotLongPressConsumed = true;
+        calendarSlotLongPressOrigin = { dateIso, slotKey };
+        if (slotEvents.length === 1) {
+          const [event] = slotEvents;
+          activeCalendarEditEventId = event.id;
+          activeCalendarMoveEventId = canMoveCalendarEvent(event) ? event.id : null;
+          activeCalendarSlotDetail = null;
+          activeCalendarSummaryDetail = null;
+          activeCalendarEventId = null;
+          selectedCalendarDate = dateIso;
+          selectedCalendarScope = 'slot';
+          selectedCalendarSlotKey = slotKey;
+          renderCalendarEditToolbar();
+          renderCalendarBoard();
+          return;
+        }
+        openCalendarSlotDetail(dateIso, slotKey, { editMode: true });
+      }, 420);
+    }
+
+    function cancelCalendarSlotLongPress() {
+      clearCalendarSlotLongPressTimer();
+    }
+
+    function handleCalendarSlotClick(domEvent, dateIso, encodedSlotKey) {
+      const slotKey = decodeURIComponent(encodedSlotKey);
+      if (calendarSlotLongPressConsumed) {
+        if (calendarSlotLongPressOrigin?.dateIso === dateIso && calendarSlotLongPressOrigin?.slotKey === slotKey) {
+          calendarSlotLongPressConsumed = false;
+          calendarSlotLongPressOrigin = null;
+          return;
+        }
+        calendarSlotLongPressConsumed = false;
+        calendarSlotLongPressOrigin = null;
+      }
+      if (activeCalendarMoveEventId) {
+        moveCalendarEventToSlot(activeCalendarMoveEventId, dateIso, slotKey);
+        return;
+      }
+      const slotEvents = eventsForCalendarSlot(dateIso, slotKey);
+      if (!slotEvents.length) {
+        selectedCalendarDate = dateIso;
+        selectedCalendarScope = 'slot';
+        selectedCalendarSlotKey = slotKey;
+        renderCalendarBoard();
+        return;
+      }
+      if (slotEvents.length === 1) {
+        openCalendarEventDetail(slotEvents[0].id);
+        selectedCalendarDate = dateIso;
+        selectedCalendarScope = 'slot';
+        selectedCalendarSlotKey = slotKey;
+        renderCalendarBoard();
+        return;
+      }
+      openCalendarSlotDetail(dateIso, slotKey);
+    }
+
+    function handleCalendarTimelineCanvasClick(domEvent, dateIso) {
+      if (!activeCalendarMoveEventId) return;
+      const nextStartMinutes = inferMoveTargetMinutesFromPointer(domEvent);
+      if (nextStartMinutes === null) return;
+      moveCalendarEventToTimeline(activeCalendarMoveEventId, dateIso, nextStartMinutes);
+    }
+
     function clearCalendarEventMoveSelection() {
       activeCalendarMoveEventId = null;
       renderCalendarBoard();
-      renderCalendarDetail();
       renderCalendarEventDetailScreen();
+    }
+
+    function clearCalendarEditEvent() {
+      activeCalendarEditEventId = null;
+      activeCalendarMoveEventId = null;
+      calendarSlotLongPressConsumed = false;
+      calendarSlotLongPressOrigin = null;
+      renderCalendarEditToolbar();
+      renderCalendarBoard();
     }
 
     function moveCalendarEventToDate(eventId, nextDate) {
@@ -3214,23 +4633,88 @@
       if (!event) return;
       event.userDateOverride = nextDate !== (event.baseDate || event.date) ? nextDate : '';
       event.date = nextDate;
-      if (selectedCalendarScope === 'day') selectedCalendarDate = nextDate;
+      if (selectedCalendarScope === 'slot') selectedCalendarDate = nextDate;
+      renderAll();
+    }
+
+    function moveCalendarEventToSlot(eventId, nextDate, slotKey) {
+      const event = findCalendarEventById(eventId);
+      if (!event) return;
+      const [slotStart = '', slotEnd = '', slotLabel = ''] = String(slotKey || '').split('__');
+      const normalizedStart = slotStart && slotStart !== 'untimed' ? slotStart : '';
+      const normalizedEnd = slotEnd || '';
+      const nextTime = normalizedStart && normalizedEnd
+        ? `${normalizedStart}–${normalizedEnd}`
+        : (normalizedStart || slotLabel || event.time || '시간 미정');
+
+      event.userDateOverride = nextDate !== (event.baseDate || event.date) ? nextDate : '';
+      event.userTimeOverride = nextTime !== (event.baseTime || event.time) ? nextTime : '';
+      event.date = nextDate;
+      event.time = nextTime;
+      event.startTime = normalizedStart || normalizeClockTime(nextTime) || '';
+      event.endTime = normalizedEnd || extractClockRange(nextTime).end || '';
+
+      selectedCalendarDate = nextDate;
+      selectedCalendarScope = 'slot';
+      selectedCalendarSlotKey = calendarEventSlotKey(event);
+      selectedWeekKey = weekKeyFromDate(nextDate);
+      calendarMonthCursor = startOfWeek(parseIsoDate(nextDate));
+      activeCalendarMoveEventId = null;
+      calendarSlotLongPressConsumed = false;
+      calendarSlotLongPressOrigin = null;
+      renderAll();
+    }
+
+    function moveCalendarEventToTimeline(eventId, nextDate, nextStartMinutes) {
+      const event = findCalendarEventById(eventId);
+      if (!event) return;
+      const roundedStart = Math.max(CALENDAR_TIMELINE_START_MINUTES, Math.min(roundCalendarMinutes(nextStartMinutes), CALENDAR_TIMELINE_END_MINUTES));
+      const explicitEnd = calendarEventHasExplicitEnd(event);
+      const duration = explicitEnd ? Math.max(calendarEventDurationMinutes(event, { forLayout: false }), 30) : 0;
+      const cappedStart = explicitEnd
+        ? Math.min(roundedStart, CALENDAR_TIMELINE_END_MINUTES - duration)
+        : roundedStart;
+      const nextStart = Math.max(CALENDAR_TIMELINE_START_MINUTES, cappedStart);
+      const nextEnd = explicitEnd ? Math.min(nextStart + duration, CALENDAR_TIMELINE_END_MINUTES) : null;
+      const nextTime = explicitEnd ? `${formatMinutesAsClock(nextStart)}–${formatMinutesAsClock(nextEnd)}` : formatMinutesAsClock(nextStart);
+
+      event.userDateOverride = nextDate !== (event.baseDate || event.date) ? nextDate : '';
+      event.userTimeOverride = nextTime !== (event.baseTime || event.time) ? nextTime : '';
+      event.date = nextDate;
+      event.time = nextTime;
+      event.startTime = formatMinutesAsClock(nextStart);
+      event.endTime = explicitEnd && nextEnd ? formatMinutesAsClock(nextEnd) : '';
+
+      selectedCalendarDate = nextDate;
+      selectedCalendarScope = 'slot';
+      selectedCalendarSlotKey = '';
+      selectedWeekKey = weekKeyFromDate(nextDate);
+      calendarMonthCursor = startOfWeek(parseIsoDate(nextDate));
+      activeCalendarMoveEventId = null;
+      calendarEventLongPressConsumed = false;
+      calendarEventLongPressOriginId = null;
       renderAll();
     }
 
     function shiftCalendarEventTime(eventId, deltaMinutes) {
       const event = findCalendarEventById(eventId);
       if (!event) return;
-      const baseTime = normalizeClockTime(event.time || event.baseTime || '09:00') || '09:00';
+      const baseTime = normalizeClockTime(event.startTime || event.time || event.baseTime || '09:00') || '09:00';
       const [hour, minute] = baseTime.split(':').map(Number);
       let total = hour * 60 + minute + deltaMinutes;
       total = Math.max(0, Math.min(23 * 60 + 59, total));
       const nextHour = String(Math.floor(total / 60)).padStart(2, '0');
       const nextMinute = String(total % 60).padStart(2, '0');
       const nextTime = `${nextHour}:${nextMinute}`;
-      event.userTimeOverride = nextTime !== (event.baseTime || event.time) ? nextTime : '';
-      event.time = nextTime;
+      const explicitEnd = calendarEventHasExplicitEnd(event);
+      const duration = explicitEnd ? Math.max(calendarEventDurationMinutes(event, { forLayout: false }), 30) : 0;
+      const nextEnd = explicitEnd ? formatMinutesAsClock(total + duration) : '';
+      const nextLabel = explicitEnd ? `${nextTime}–${nextEnd}` : nextTime;
+      event.userTimeOverride = nextLabel !== (event.baseTime || event.time) ? nextLabel : '';
+      event.time = nextLabel;
       event.startTime = nextTime;
+      event.endTime = nextEnd;
+      if (selectedCalendarScope === 'slot') selectedCalendarSlotKey = calendarEventSlotKey(event);
       renderAll();
     }
 
@@ -3259,6 +4743,55 @@
         return String(event.note).split('·')[0].trim();
       }
       return '자세히 눌러서 확인';
+    }
+
+    function calendarEventSignalOverrideMode(event, signalKey) {
+      const mode = event?.boardSignalOverrides?.[signalKey] || 'auto';
+      return ['show', 'hide'].includes(mode) ? mode : 'auto';
+    }
+
+    function calendarEventBoardConfig(event, session, relatedAssignments = []) {
+      const signature = [event?.title || '', session?.title || ''].join(' ');
+      const presentationRegex = /(발표|presentation)/i;
+      const examRegex = /(시험|test|pretest|cpx|osce|평가)/i;
+      const assignmentAuto = Boolean(relatedAssignments.length || event?.type === 'assignment' || event?.sourceKind === 'assignment');
+      const presentationAuto = Boolean(event?.type === 'presentation' || presentationRegex.test(signature));
+      const examAuto = Boolean(event?.type === 'exam' || examRegex.test(signature));
+
+      const assignmentMode = calendarEventSignalOverrideMode(event, 'assignment');
+      const presentationMode = calendarEventSignalOverrideMode(event, 'presentation');
+      const examMode = calendarEventSignalOverrideMode(event, 'exam');
+
+      const difficultyCandidates = [
+        Number(event?.difficulty || 0) || 0,
+        ...relatedAssignments.map(assignment => Number(assignment?.difficulty_total || 0) || 0)
+      ].filter(Boolean);
+      const autoDifficulty = difficultyCandidates.length ? Math.max(...difficultyCandidates) : 0;
+      const displayDifficulty = Number.isFinite(Number(event?.boardDifficultyOverride)) && String(event?.boardDifficultyOverride) !== ''
+        ? Math.max(0, Math.min(10, Number(event.boardDifficultyOverride)))
+        : autoDifficulty;
+
+      const assignmentCount = relatedAssignments.length || (assignmentMode === 'show' || assignmentAuto ? 1 : 0);
+      const assignmentVisible = assignmentMode === 'show' ? true : assignmentMode === 'hide' ? false : assignmentAuto;
+      const presentationVisible = presentationMode === 'show' ? true : presentationMode === 'hide' ? false : presentationAuto;
+      const examVisible = examMode === 'show' ? true : examMode === 'hide' ? false : examAuto;
+
+      const flags = [];
+      if (assignmentVisible) flags.push(assignmentCount > 1 ? `과제 ${assignmentCount}` : '과제');
+      if (presentationVisible) flags.push('발표');
+      if (examVisible) flags.push('시험');
+      if (displayDifficulty) flags.push(`난이도 ${displayDifficulty}/10`);
+      if (event?.completed) flags.push('완료');
+      if (calendarEventHasCustomSchedule(event)) flags.push('변경');
+      if (calendarEventIsCancelled(event)) flags.push('X');
+
+      return {
+        assignment: { visible: assignmentVisible, auto: assignmentAuto, mode: assignmentMode, count: assignmentCount },
+        presentation: { visible: presentationVisible, auto: presentationAuto, mode: presentationMode },
+        exam: { visible: examVisible, auto: examAuto, mode: examMode },
+        difficulty: { value: displayDifficulty, autoValue: autoDifficulty, overridden: Number.isFinite(Number(event?.boardDifficultyOverride)) && String(event?.boardDifficultyOverride) !== '' },
+        flags
+      };
     }
 
     function renderSessionSectionsHtml(session, event) {
@@ -3351,9 +4884,76 @@
     }
 
     function renderCalendarEventControlsHtml(event) {
-      const timeValue = normalizeClockTime(event.time || event.userTimeOverride || event.baseTime || '');
+      const startValue = normalizeClockTime(event.startTime || extractClockRange(event.time || '').start || '');
+      const endValue = normalizeClockTime(event.endTime || extractClockRange(event.time || '').end || '');
+      const session = findBundleSessionForEvent(event);
+      const relatedAssignments = session ? findRelatedAssignmentsForSession(event, session) : [];
+      const boardConfig = calendarEventBoardConfig(event, session, relatedAssignments);
+      const signalControl = (signalKey, label, helper) => {
+        const mode = boardConfig[signalKey]?.mode || 'auto';
+        const autoVisible = boardConfig[signalKey]?.auto ? '현재 자동 표시됨' : '현재 자동 숨김';
+        return `
+          <div class="calendar-override-row">
+            <div class="calendar-override-head">
+              <div class="calendar-override-title">${label}</div>
+              <div class="calendar-override-sub">${helper} · ${autoVisible}</div>
+            </div>
+            <div class="calendar-state-row" style="margin-top:0;">
+              <button class="calendar-state-btn ${mode === 'auto' ? 'active' : ''}" onclick="setCalendarEventSignalOverride('${event.id}', '${signalKey}', 'auto')">자동</button>
+              <button class="calendar-state-btn ${mode === 'show' ? 'active' : ''}" onclick="setCalendarEventSignalOverride('${event.id}', '${signalKey}', 'show')">표시</button>
+              <button class="calendar-state-btn ${mode === 'hide' ? 'active' : ''}" onclick="setCalendarEventSignalOverride('${event.id}', '${signalKey}', 'hide')">숨김</button>
+            </div>
+          </div>
+        `;
+      };
       return `
         <div class="detail-screen-stack">
+          <div class="detail-screen-section">
+            <h4>🎛️ 보드 표시 / 이동</h4>
+            <div class="calendar-state-row" style="margin-top:0;">
+              <button class="calendar-state-btn ${event.displayState !== 'cancelled' ? 'active' : ''}" onclick="setCalendarEventDisplayState('${event.id}', 'normal')">기본</button>
+              <button class="calendar-state-btn ${event.displayState === 'cancelled' ? 'active' : ''}" onclick="setCalendarEventDisplayState('${event.id}', 'cancelled')">X표 / 제외</button>
+            </div>
+            <div class="calendar-swatch-row">
+              ${CALENDAR_COLOR_PRESETS.map(preset => `
+                <button
+                  class="calendar-swatch ${(event.displayColor || '') === preset.key ? 'active' : ''}"
+                  style="background:${preset.color};"
+                  title="${preset.label}"
+                  aria-label="${preset.label}"
+                  onclick="setCalendarEventColor('${event.id}', '${preset.key.replace(/'/g, "&#039;")}')"
+                ></button>
+              `).join('')}
+            </div>
+            <div class="badge-row" style="margin-top:12px; gap:8px;">
+              ${canMoveCalendarEvent(event) ? `<button class="btn btn-small ${activeCalendarMoveEventId === event.id ? 'btn-secondary' : 'btn-ghost'}" onclick="toggleCalendarEventMoveMode('${event.id}')">${activeCalendarMoveEventId === event.id ? '이동 모드 끄기' : '이동 모드 켜기'}</button>` : ''}
+            </div>
+            <p class="item-meta" style="margin-top:8px;">${activeCalendarMoveEventId === event.id ? '지금은 이동 모드다. 시간표의 다른 칸을 누르면 이 일정이 그 칸으로 옮겨진다.' : '길게 눌러도 이동 모드가 켜지고, 켜진 뒤 다른 칸을 누르면 요일/시간이 함께 이동한다.'}</p>
+          </div>
+          <div class="detail-screen-section">
+            <h4>🏷️ 카드 표기 직접 수정</h4>
+            <div class="calendar-override-grid">
+              ${signalControl('assignment', '과제 표시', '자동 추정이 틀리면 여기서 직접 고친다.')}
+              ${signalControl('presentation', '발표 표시', '세션이 발표 성격이면 수동으로 표시할 수 있다.')}
+              ${signalControl('exam', '시험 표시', '시험·평가 성격이면 수동으로 표시할 수 있다.')}
+              <div class="calendar-override-row">
+                <div class="calendar-override-head">
+                  <div class="calendar-override-title">난이도 표시</div>
+                  <div class="calendar-override-sub">비워두면 자동, 직접 입력하면 그 숫자를 카드와 종합에서 사용한다.</div>
+                </div>
+                <div class="field-grid" style="grid-template-columns:minmax(0,180px) auto; gap:10px; align-items:end;">
+                  <label class="field-label">난이도 (0~10)
+                    <input id="event-difficulty-input-${event.id}" class="field-input" type="number" min="0" max="10" step="1" value="${boardConfig.difficulty.overridden ? escapeHtml(String(boardConfig.difficulty.value)) : ''}" placeholder="자동: ${boardConfig.difficulty.autoValue || '-'}" />
+                  </label>
+                  <div class="badge-row" style="gap:8px;">
+                    <button class="btn btn-small btn-secondary" onclick="setCalendarEventDifficultyOverride('${event.id}', byId('event-difficulty-input-${event.id}').value)">난이도 저장</button>
+                    ${boardConfig.difficulty.overridden ? `<button class="btn btn-small btn-ghost" onclick="setCalendarEventDifficultyOverride('${event.id}', '')">자동으로 되돌리기</button>` : ''}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="item-meta" style="margin-top:10px;">여기서 바꾼 값은 저장되어 다른 기기에도 동기화되고, 종합 숫자도 이 값을 우선해서 다시 계산한다.</p>
+          </div>
           <div class="detail-screen-section">
             <h4>✍️ 내 메모</h4>
             <textarea class="field-input" rows="5" placeholder="이 수업/일정에 대한 메모를 적어둬." oninput="updateCalendarEventUserNote('${event.id}', this.value)">${escapeHtml(event.userNote || '')}</textarea>
@@ -3361,16 +4961,21 @@
           </div>
           <div class="detail-screen-section">
             <h4>🗓️ 날짜 / 시간 조정</h4>
-            <div class="field-grid" style="grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px;">
+            <div class="field-grid" style="grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px;">
               <label class="field-label">날짜
                 <input id="event-date-input-${event.id}" class="field-input" type="date" value="${escapeHtml(event.date)}" />
               </label>
-              <label class="field-label">시간
-                <input id="event-time-input-${event.id}" class="field-input" type="time" value="${escapeHtml(timeValue)}" />
+              <label class="field-label">시작
+                <input id="event-start-input-${event.id}" class="field-input" type="time" value="${escapeHtml(startValue)}" />
+              </label>
+              <label class="field-label">종료
+                <input id="event-end-input-${event.id}" class="field-input" type="time" value="${escapeHtml(endValue)}" />
               </label>
             </div>
             <div class="badge-row" style="margin-top:12px; gap:8px;">
               <button class="btn btn-small btn-secondary" onclick="applyCalendarEventScheduleOverride('${event.id}')">일정 저장</button>
+              <button class="btn btn-small btn-ghost" onclick="shiftCalendarEventTime('${event.id}', -30)">-30분</button>
+              <button class="btn btn-small btn-ghost" onclick="shiftCalendarEventTime('${event.id}', 30)">+30분</button>
               ${calendarEventHasCustomSchedule(event) ? `<button class="btn btn-small btn-ghost" onclick="resetCalendarEventScheduleOverride('${event.id}')">원래 일정 복원</button>` : ''}
             </div>
             <p class="item-meta" style="margin-top:8px;">원본 일정은 유지하고, 개인 override만 저장한다.</p>
@@ -3379,13 +4984,169 @@
       `;
     }
 
+    function renderCalendarSlotDetailHtml(dateIso, slotKey, { editMode = false } = {}) {
+      const date = parseIsoDate(dateIso);
+      const block = getClerkshipBlock(dateIso);
+      const slotEvents = eventsForCalendarSlot(dateIso, slotKey);
+      const relatedAssignments = collectRelatedAssignmentsForSlotEvents(slotEvents);
+      const slot = buildCalendarWeekSlots(buildCalendarWeekDays(parseIsoDate(dateIso))).find(item => item.key === slotKey) || { key: slotKey, label: '시간 미정' };
+      const slotLabel = calendarSlotLabel(slot);
+
+      return `
+        <div class="detail-screen-panel">
+          <div class="detail-screen-head">
+            <button class="detail-screen-back" onclick="closeCalendarDetailScreen()">← 시간표로</button>
+            <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
+          </div>
+          <div class="detail-screen-body">
+            <div class="detail-screen-hero">
+              <div class="badge-row">
+                ${block ? `<span class="detail-chip" style="background:${block.color}; color:white;">${block.label}</span>` : ''}
+                <span class="calendar-mini-chip">${escapeHtml(slotLabel.main)}</span>
+                ${slotLabel.sub ? `<span class="calendar-mini-chip">${escapeHtml(slotLabel.sub)}</span>` : ''}
+                <span class="calendar-mini-chip">세션 ${slotEvents.length}</span>
+              </div>
+              <div class="detail-screen-title">${formatDateLabel(date)} · 시간표 상세</div>
+              <div class="detail-screen-summary">${block ? `${block.note} · ${availabilityHint(date)}` : `등록된 실습 블록 없음 · ${availabilityHint(date)}`}</div>
+              ${editMode ? `<div class="calendar-edit-pill">편집 모드 · 아래 일정에서 색, X표, 이동을 조정할 수 있다.</div>` : ''}
+            </div>
+
+            <div class="detail-screen-section">
+              <h4>이 시간대 일정</h4>
+              ${slotEvents.length ? `<div class="event-list">${slotEvents.map(event => {
+                const meta = EVENT_TYPE_META[event.type] || { label: '일정', color: '#2f6df6' };
+                const session = findBundleSessionForEvent(event);
+                const boardConfig = calendarEventBoardConfig(event, session, relatedAssignments);
+                const surfaceColor = calendarEventSurfaceColor(event, boardConfig);
+                const borderColor = calendarEventBorderColor(event, boardConfig);
+                return `
+                  <div class="event-item ${calendarEventIsCancelled(event) ? 'completed' : ''}">
+                    <div class="event-time">${escapeHtml(event.time || slotLabel.main)}</div>
+                    <div>
+                      <div class="badge-row">
+                        <span class="detail-chip" style="background:${surfaceColor}; color:white; box-shadow: inset 3px 0 0 ${borderColor};">${meta.label}</span>
+                        ${calendarEventIsCancelled(event) ? `<span class="calendar-mini-chip">X표</span>` : ''}
+                        ${event.professor ? `<span class="calendar-mini-chip">${escapeHtml(event.professor)}</span>` : ''}
+                        ${session?.location ? `<span class="calendar-mini-chip">${escapeHtml(session.location)}</span>` : ''}
+                      </div>
+                      <div class="item-title" style="margin-top:6px; ${calendarEventIsCancelled(event) ? 'text-decoration:line-through; opacity:0.72;' : ''}">${escapeHtml(event.title)}</div>
+                      <div class="item-meta">${escapeHtml(eventPreviewText(event))}</div>
+                    </div>
+                    <div class="event-actions">
+                      <button class="btn btn-small btn-ghost" onclick="openCalendarEventDetail('${event.id}')">편집</button>
+                    </div>
+                  </div>
+                `;
+              }).join('')}</div>` : `<div class="empty">이 시간대 일정이 아직 없다.</div>`}
+            </div>
+
+            <div class="detail-screen-section">
+              <h4>연관 과제 / 체크</h4>
+              ${relatedAssignments.length ? `<div class="event-list">${relatedAssignments.map(item => {
+                const summaryEvent = item.summaryEvent;
+                const assignment = item.assignment;
+                return `
+                  <div class="event-item ${summaryEvent?.completed ? 'completed' : ''}">
+                    <div class="event-time">${escapeHtml(summaryEvent?.time || '기간 확인')}</div>
+                    <div>
+                      <div class="badge-row">
+                        <span class="detail-chip" style="background:#d97706; color:white;">과제</span>
+                        ${summaryEvent?.completed ? `<span class="calendar-mini-chip" style="background:#dcfce7; color:#166534; border-color:#86efac;">완료</span>` : ''}
+                        ${assignment.needs_confirmation ? `<span class="calendar-mini-chip" style="background:#fff7ed; color:#9a3412; border-color:#fdba74;">확인 필요</span>` : ''}
+                      </div>
+                      <div class="item-title" style="margin-top:6px; ${summaryEvent?.completed ? 'text-decoration:line-through;' : ''}">${escapeHtml(assignment.name)}</div>
+                      <div class="item-meta">${escapeHtml(assignment.content_summary || assignment.format || assignment.raw_deadline || '상세는 자세히 보기에서 확인')}</div>
+                    </div>
+                    <div class="event-actions">
+                      ${summaryEvent ? `<button class="btn btn-small ${summaryEvent.completed ? 'btn-ghost' : 'btn-secondary'}" onclick="toggleCalendarEvent('${summaryEvent.id}')">${summaryEvent.completed ? '완료 해제' : '완료 체크'}</button>` : ''}
+                      ${summaryEvent ? `<button class="event-open-btn" onclick="openCalendarEventDetail('${summaryEvent.id}')">자세히 보기</button>` : ''}
+                    </div>
+                  </div>
+                `;
+              }).join('')}</div>` : `<div class="empty">이 시간대와 직접 연결된 과제는 아직 없다.</div>`}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderCalendarSummaryDetailHtml(weekKey) {
+      const weekDays = buildCalendarWeekDays(parseIsoDate(weekKey));
+      const summaryEvents = weekSummaryEvents(weekDays);
+      const signals = weekSummarySignals(weekDays);
+      return `
+        <div class="detail-screen-panel">
+          <div class="detail-screen-head">
+            <button class="detail-screen-back" onclick="closeCalendarDetailScreen()">← 시간표로</button>
+            <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
+          </div>
+          <div class="detail-screen-body">
+            <div class="detail-screen-hero">
+              <div class="badge-row">
+                <span class="calendar-mini-chip">총 ${signals.total}개</span>
+                <span class="calendar-mini-chip">미완 ${signals.pending}개</span>
+                <span class="calendar-mini-chip">확인 필요 ${signals.needsConfirmation}개</span>
+              </div>
+              <div class="detail-screen-title">이번 주 종합</div>
+              <div class="detail-screen-summary">${calendarBoardRangeLabel(weekDays)} · 종합 칸은 요약만, 실제 체크와 세부 확인은 여기서 한다.</div>
+            </div>
+            <div class="detail-screen-section">
+              <h4>주간 종합 일정</h4>
+              ${summaryEvents.length ? `<div class="event-list">${summaryEvents.map(event => {
+                const meta = EVENT_TYPE_META[event.type] || { label: '일정', color: '#2f6df6' };
+                const assignment = findBundleAssignmentForEvent(event);
+                const session = findBundleSessionForEvent(event);
+                const relatedAssignments = session ? findRelatedAssignmentsForSession(event, session) : [];
+                const boardConfig = calendarEventBoardConfig(event, session, relatedAssignments);
+                const surfaceColor = calendarEventSurfaceColor(event, boardConfig);
+                const borderColor = calendarEventBorderColor(event, boardConfig);
+                const isAssignmentEvent = event.type === 'assignment' || event.sourceKind === 'assignment';
+                return `
+                  <div class="event-item ${event.completed ? 'completed' : ''}">
+                    <div class="event-time">${escapeHtml(event.date.slice(5))}<br/>${escapeHtml(event.time || '종일')}</div>
+                    <div>
+                      <div class="badge-row">
+                        <span class="detail-chip" style="background:${surfaceColor}; color:white; box-shadow: inset 3px 0 0 ${borderColor};">${meta.label}</span>
+                        ${assignment?.needs_confirmation ? `<span class="calendar-mini-chip" style="background:#fff7ed; color:#9a3412; border-color:#fdba74;">확인 필요</span>` : ''}
+                        ${event.completed ? `<span class="calendar-mini-chip" style="background:#dcfce7; color:#166534; border-color:#86efac;">완료</span>` : ''}
+                      </div>
+                      <div class="item-title" style="margin-top:6px; ${event.completed ? 'text-decoration:line-through;' : ''}">${escapeHtml(event.title)}</div>
+                      <div class="item-meta">${escapeHtml(weekSummaryMeta(event))}</div>
+                    </div>
+                    <div class="event-actions">
+                      ${isAssignmentEvent ? `<button class="btn btn-small ${event.completed ? 'btn-ghost' : 'btn-secondary'}" onclick="toggleCalendarEvent('${event.id}')">${event.completed ? '완료 해제' : '완료 체크'}</button>` : ''}
+                      <button class="event-open-btn" onclick="openCalendarEventDetail('${event.id}')">자세히 보기</button>
+                    </div>
+                  </div>
+                `;
+              }).join('')}</div>` : `<div class="empty">이번 주 종합 일정이 아직 없다.</div>`}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
     function renderCalendarEventDetailScreen() {
       const el = byId('eventDetailScreen');
       if (!el) return;
-      if (!activeCalendarEventId) {
+      if (!activeCalendarEventId && !activeCalendarSlotDetail && !activeCalendarSummaryDetail) {
         el.classList.remove('open');
         el.setAttribute('aria-hidden', 'true');
         el.innerHTML = '';
+        return;
+      }
+
+      if (activeCalendarSlotDetail) {
+        el.classList.add('open');
+        el.setAttribute('aria-hidden', 'false');
+        el.innerHTML = renderCalendarSlotDetailHtml(activeCalendarSlotDetail.date, activeCalendarSlotDetail.slotKey, { editMode: Boolean(activeCalendarSlotDetail.editMode) });
+        return;
+      }
+
+      if (activeCalendarSummaryDetail) {
+        el.classList.add('open');
+        el.setAttribute('aria-hidden', 'false');
+        el.innerHTML = renderCalendarSummaryDetailHtml(activeCalendarSummaryDetail);
         return;
       }
 
@@ -3400,6 +5161,10 @@
 
       const session = findBundleSessionForEvent(event);
       const assignment = findBundleAssignmentForEvent(event);
+      const relatedAssignments = session ? findRelatedAssignmentsForSession(event, session) : [];
+      const boardConfig = calendarEventBoardConfig(event, session, relatedAssignments);
+      const surfaceColor = calendarEventSurfaceColor(event, boardConfig);
+      const borderColor = calendarEventBorderColor(event, boardConfig);
       const isAssignmentEvent = event.type === 'assignment' || event.sourceKind === 'assignment';
       const groupMeta = EVENT_TYPE_META[event.type] || { label: '일정', color: '#2f6df6' };
       const summaryText = session?.summary || assignment?.content_summary || event.note || '';
@@ -3413,24 +5178,29 @@
       el.innerHTML = `
         <div class="detail-screen-panel">
           <div class="detail-screen-head">
-            <button class="detail-screen-back" onclick="closeCalendarEventDetail()">← 캘린더로</button>
-            <button class="detail-screen-close" onclick="closeCalendarEventDetail()" aria-label="닫기">✕</button>
+            <button class="detail-screen-back" onclick="closeCalendarDetailScreen()">← 시간표로</button>
+            <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
           </div>
           <div class="detail-screen-body">
             <div class="detail-screen-hero">
               <div class="badge-row">
-                <span class="detail-chip" style="background:${groupMeta.color}; color:white;">${groupMeta.label}</span>
+                <span class="detail-chip" style="background:${surfaceColor}; color:white; box-shadow: inset 3px 0 0 ${borderColor};">${groupMeta.label}</span>
                 ${event.completed ? `<span class="calendar-mini-chip" style="background:#dcfce7; color:#166534; border-color:#86efac;">완료</span>` : ''}
+                ${calendarEventIsCancelled(event) ? `<span class="calendar-mini-chip">X표</span>` : ''}
                 ${event.userNote ? `<span class="calendar-mini-chip">메모 있음</span>` : ''}
                 ${calendarEventHasCustomSchedule(event) ? `<span class="calendar-mini-chip">시간/날짜 수정됨</span>` : ''}
                 ${event.professor ? `<span class="calendar-mini-chip">${escapeHtml(event.professor)}</span>` : ''}
-                ${event.difficulty ? `<span class="calendar-mini-chip">난이도 ${event.difficulty}/10</span>` : ''}
+                ${boardConfig.assignment.visible ? `<span class="calendar-mini-chip">${boardConfig.assignment.count > 1 ? `과제 ${boardConfig.assignment.count}` : '과제'}</span>` : ''}
+                ${boardConfig.presentation.visible ? `<span class="calendar-mini-chip">발표</span>` : ''}
+                ${boardConfig.exam.visible ? `<span class="calendar-mini-chip">시험</span>` : ''}
+                ${boardConfig.difficulty.value ? `<span class="calendar-mini-chip">난이도 ${boardConfig.difficulty.value}/10</span>` : ''}
                 ${event.track ? `<span class="calendar-mini-chip">${escapeHtml(event.track)}트랙</span>` : ''}
                 <span class="calendar-mini-chip">${escapeHtml(event.time || '종일')}</span>
               </div>
-              <div class="detail-screen-title" style="${event.completed ? 'text-decoration:line-through; opacity:0.72;' : ''}">${escapeHtml(event.title)}</div>
+              <div class="detail-screen-title" style="${event.completed || calendarEventIsCancelled(event) ? 'text-decoration:line-through; opacity:0.72;' : ''}">${escapeHtml(event.title)}</div>
               ${isAssignmentEvent ? `<div style="margin-top:12px;"><button class="btn btn-small ${event.completed ? 'btn-ghost' : 'btn-secondary'}" onclick="toggleCalendarEvent('${event.id}')">${event.completed ? '완료 해제' : '완료 체크'}</button></div>` : ''}
               ${summaryText ? `<div class="detail-screen-summary">${escapeHtml(summaryText)}</div>` : ''}
+              ${activeCalendarMoveEventId === event.id ? `<div class="calendar-edit-pill">이동 모드 켜짐 · 다른 시간표 칸을 누르면 여기로 이동한다.</div>` : ''}
             </div>
             ${contentHtml || `<div class="detail-screen-section"><h4>요약</h4><ul><li>추가 설명이 아직 없다.</li></ul></div>`}
             ${controlsHtml}
@@ -3442,130 +5212,18 @@
     function renderCalendarDetail() {
       const el = byId('calendarDetail');
       if (!el) return;
-
-      if (selectedCalendarScope === 'week' && selectedWeekKey) {
-        const weeks = buildCalendarWeeks(calendarMonthCursor);
-        const weekDays = weeks.find(week => weekKeyFromDays(week) === selectedWeekKey) || [];
-        const summaryEvents = weekSummaryEvents(weekDays);
-        const firstDay = weekDays.find(Boolean);
-        const lastDay = [...weekDays].reverse().find(Boolean);
-        el.innerHTML = `
-          <div class="detail-card">
-            <div class="detail-title">선택한 주간 상세</div>
-            <div class="detail-sub">${firstDay && lastDay ? `${formatDateInput(firstDay).slice(5)} ~ ${formatDateInput(lastDay).slice(5)}` : ''} · 과제/발표/조장/행정 일정을 시간순으로 정리</div>
-          </div>
-
-          <div class="detail-card">
-            <div class="detail-title">주간 종합 일정</div>
-            <div class="detail-sub">1페이지 과제는 여기서만 본다. 설명은 자세히 보기에서 확인.</div>
-            ${summaryEvents.length ? `<div class="event-list">${summaryEvents.map(event => {
-              const meta = EVENT_TYPE_META[event.type] || { label: '일정', color: '#2f6df6' };
-              const dateLabel = `${parseIsoDate(event.date).getDate()}일`;
-              const isAssignmentEvent = event.type === 'assignment' || event.sourceKind === 'assignment';
-              return `
-                <div class="event-item ${event.completed ? 'completed' : ''}">
-                  <div class="event-time">${dateLabel}<br/>${escapeHtml(event.time || '종일')}</div>
-                  <div>
-                    <div class="badge-row">
-                      <span class="detail-chip" style="background:${meta.color}; color:white;">${meta.label}</span>
-                      ${event.completed ? `<span class="calendar-mini-chip" style="background:#dcfce7; color:#166534; border-color:#86efac;">완료</span>` : ''}
-                      ${event.userNote ? `<span class="calendar-mini-chip">메모 있음</span>` : ''}
-                      ${calendarEventHasCustomSchedule(event) ? `<span class="calendar-mini-chip">수정됨</span>` : ''}
-                      ${event.professor ? `<span class="calendar-mini-chip">${escapeHtml(event.professor)}</span>` : ''}
-                      ${event.difficulty ? `<span class="calendar-mini-chip">난이도 ${event.difficulty}/10</span>` : ''}
-                    </div>
-                    <div class="item-title" style="margin-top:6px; ${event.completed ? 'text-decoration:line-through;' : ''}">${escapeHtml(event.title)}</div>
-                    <div class="item-meta">${escapeHtml(weekSummaryMeta(event))}</div>
-                  </div>
-                  <div class="event-actions">
-                    ${isAssignmentEvent ? `<button class="btn btn-small ${event.completed ? 'btn-ghost' : 'btn-secondary'}" onclick="toggleCalendarEvent('${event.id}')">${event.completed ? '완료 해제' : '완료 체크'}</button>` : ''}
-                    <button class="event-open-btn" onclick="openCalendarEventDetail('${event.id}')">자세히 보기</button>
-                  </div>
-                </div>
-              `;
-            }).join('')}</div>` : `<div class="empty" style="margin-top:12px;">이 주에는 종합으로 볼 일정이 없다.</div>`}
-          </div>
-        `;
-        return;
-      }
-
-      const date = parseIsoDate(selectedCalendarDate);
-      const block = getClerkshipBlock(selectedCalendarDate);
-      const events = dailyPrimaryEvents(selectedCalendarDate);
-      const tasks = tasksForDate(selectedCalendarDate);
-
-      el.innerHTML = `
-        <div class="detail-card">
-          <div class="detail-title">${formatDateLabel(date)}</div>
-          <div class="detail-sub">${block ? `${block.label} 블록 · ${block.note} · 저녁 공부 가용도 ${availabilityHint(date)}` : `현재 등록된 실습 블록 없음 · 저녁 공부 가용도 ${availabilityHint(date)}`}</div>
-          <div class="calendar-legend" style="margin-top:12px;">
-            ${block ? `<span class="detail-chip" style="background:${block.color}; color:white;">${block.label}</span>` : ''}
-            <span class="calendar-mini-chip">${availabilityHint(date)}</span>
-            ${tasks.length ? `<span class="calendar-mini-chip">공부 블록 ${tasks.length}</span>` : ''}
-          </div>
-        </div>
-
-        <div class="detail-card">
-          <div class="detail-title">그날 실습 일정</div>
-          <div class="detail-sub">2·3페이지 세션만 시간순으로 본다. 1페이지 과제는 종합 칸에서 확인. 일정 카드를 꾹 누르면 이동 모드가 켜진다.</div>
-          ${events.length ? `<div class="event-list">${events.map(event => {
-            const meta = EVENT_TYPE_META[event.type] || { label: '일정', color: '#2f6df6' };
-            const moveSelected = activeCalendarMoveEventId === event.id;
-            const movable = canMoveCalendarEvent(event);
-            return `
-              <div class="event-item ${moveSelected ? 'selected' : ''}" ${movable ? `onpointerdown="beginCalendarEventLongPress('${event.id}', event)" onpointerup="cancelCalendarEventLongPress()" onpointerleave="cancelCalendarEventLongPress()" onpointercancel="cancelCalendarEventLongPress()" style="${moveSelected ? 'border:2px solid #2563eb; box-shadow:0 0 0 3px rgba(37,99,235,0.12);' : ''}"` : ''}>
-                <div class="event-time">${escapeHtml(event.time || '종일')}</div>
-                <div>
-                  <div class="badge-row">
-                    <span class="detail-chip" style="background:${meta.color}; color:white;">${meta.label}</span>
-                    ${event.userNote ? `<span class="calendar-mini-chip">메모 있음</span>` : ''}
-                    ${calendarEventHasCustomSchedule(event) ? `<span class="calendar-mini-chip">수정됨</span>` : ''}
-                    ${event.professor ? `<span class="calendar-mini-chip">${escapeHtml(event.professor)}</span>` : ''}
-                    ${event.difficulty ? `<span class="calendar-mini-chip">난이도 ${event.difficulty}/10</span>` : ''}
-                    ${event.track ? `<span class="calendar-mini-chip">${escapeHtml(event.track)}트랙</span>` : ''}
-                  </div>
-                  <div class="item-title" style="margin-top:6px;">${escapeHtml(event.title)}</div>
-                  ${moveSelected ? `<div class="item-meta" style="margin-top:6px; color:#1d4ed8;">이동 모드: 달력의 다른 날짜를 누르면 그 날짜로 이동하고, 아래 버튼으로 시간 조정 가능</div>` : ''}
-                </div>
-                <div class="event-actions">
-                  ${moveSelected ? `<button class="btn btn-small btn-ghost" onclick="shiftCalendarEventTime('${event.id}', -30)">▲ 30분</button><button class="btn btn-small btn-ghost" onclick="shiftCalendarEventTime('${event.id}', 30)">▼ 30분</button><button class="btn btn-small btn-secondary" onclick="clearCalendarEventMoveSelection()">선택 해제</button>` : ''}
-                  <button class="event-open-btn" onclick="openCalendarEventDetail('${event.id}')">자세히 보기</button>
-                </div>
-              </div>
-            `;
-          }).join('')}</div>` : `<div class="empty" style="margin-top:12px;">아직 입력된 운영 일정이 없다.</div>`}
-        </div>
-
-        <div class="detail-card">
-          <div class="detail-title">그날 공부 타임라인</div>
-          <div class="detail-sub">실습 일정과 분리해서, 오늘 밤/주말 공부 블록을 같이 본다.</div>
-          ${tasks.length ? `<div class="event-list">${tasks.map(task => {
-            const stage = getStage(task.stageId);
-            const subject = getSubject(task.subjectId);
-            return `
-              <div class="event-item">
-                <div class="event-time">${taskRangeLabel(task)}</div>
-                <div>
-                  <div class="badge-row"><span class="calendar-mini-chip">${subject?.name || '-'}</span><span class="calendar-mini-chip">${stage?.label || '-'}</span></div>
-                  <div class="item-title" style="margin-top:6px;">${escapeHtml(task.title)}</div>
-                  ${task.memo ? `<div class="item-meta">${escapeHtml(task.memo)}</div>` : ''}
-                </div>
-                <div class="event-actions"><input type="checkbox" ${task.completed ? 'checked' : ''} onchange="toggleTask('${task.id}')" aria-label="${task.title} 완료" /></div>
-              </div>
-            `;
-          }).join('')}</div>` : `<div class="empty" style="margin-top:12px;">등록된 공부 블록이 없다.</div>`}
-        </div>
-      `;
+      el.innerHTML = '';
     }
 
     function openCalendarEventDetail(eventId) {
+      activeCalendarSlotDetail = null;
+      activeCalendarSummaryDetail = null;
       activeCalendarEventId = eventId;
       renderCalendarEventDetailScreen();
     }
 
     function closeCalendarEventDetail() {
-      activeCalendarEventId = null;
-      renderCalendarEventDetailScreen();
+      closeCalendarDetailScreen();
     }
 
     function plannerFilteredTasks() {
@@ -3914,6 +5572,7 @@
       renderDashboardSubjects();
       renderStageBreakdown();
       renderReviewAndOverdue();
+      renderCalendarEditToolbar();
       renderCalendarBoard();
       renderCalendarDetail();
       renderCalendarEventDetailScreen();
@@ -3948,23 +5607,81 @@
       saveState();
     }
 
+    function setCalendarEventColor(eventId, color) {
+      const event = (state.calendarEvents || []).find(item => item.id === eventId);
+      if (!event) return;
+      event.displayColor = color || '';
+      renderAll();
+    }
+
+    function setCalendarEventDisplayState(eventId, displayState) {
+      const event = (state.calendarEvents || []).find(item => item.id === eventId);
+      if (!event) return;
+      event.displayState = displayState === 'cancelled' ? 'cancelled' : 'normal';
+      renderAll();
+    }
+
+    function setCalendarEventSignalOverride(eventId, signalKey, mode) {
+      const event = (state.calendarEvents || []).find(item => item.id === eventId);
+      if (!event) return;
+      if (!event.boardSignalOverrides) event.boardSignalOverrides = { assignment: 'auto', presentation: 'auto', exam: 'auto' };
+      event.boardSignalOverrides[signalKey] = ['show', 'hide'].includes(mode) ? mode : 'auto';
+      renderAll();
+    }
+
+    function setCalendarEventDifficultyOverride(eventId, rawValue) {
+      const event = (state.calendarEvents || []).find(item => item.id === eventId);
+      if (!event) return;
+      const value = String(rawValue ?? '').trim();
+      if (!value) {
+        event.boardDifficultyOverride = null;
+      } else {
+        const num = Math.max(0, Math.min(10, Number(value)));
+        event.boardDifficultyOverride = Number.isFinite(num) ? num : null;
+      }
+      renderAll();
+    }
+
+    function toggleCalendarEventMoveMode(eventId) {
+      const event = findCalendarEventById(eventId);
+      if (!event || !canMoveCalendarEvent(event)) return;
+      activeCalendarEditEventId = eventId;
+      activeCalendarMoveEventId = activeCalendarMoveEventId === eventId ? null : eventId;
+      if (activeCalendarMoveEventId === eventId) {
+        activeCalendarEventId = null;
+        activeCalendarSlotDetail = null;
+        activeCalendarSummaryDetail = null;
+      }
+      renderCalendarEditToolbar();
+      renderCalendarBoard();
+      renderCalendarEventDetailScreen();
+    }
+
     function applyCalendarEventScheduleOverride(eventId) {
       const event = (state.calendarEvents || []).find(item => item.id === eventId);
       if (!event) return;
       const dateInput = byId(`event-date-input-${eventId}`);
-      const timeInput = byId(`event-time-input-${eventId}`);
+      const startInput = byId(`event-start-input-${eventId}`);
+      const endInput = byId(`event-end-input-${eventId}`);
       const nextDate = dateInput?.value || event.baseDate || event.date;
-      const nextTime = timeInput?.value || event.baseTime || event.time;
+      const startValue = normalizeClockTime(startInput?.value || event.startTime || extractClockRange(event.time || '').start || '');
+      const endValue = normalizeClockTime(endInput?.value || event.endTime || extractClockRange(event.time || '').end || '');
+      const nextTime = startValue && endValue ? `${startValue}–${endValue}` : (startValue || event.baseTime || event.time);
+      const range = extractClockRange(nextTime);
 
       event.userDateOverride = nextDate !== (event.baseDate || event.date) ? nextDate : '';
       event.userTimeOverride = nextTime !== (event.baseTime || event.time) ? nextTime : '';
       event.date = nextDate;
       event.time = nextTime;
-      event.startTime = normalizeClockTime(nextTime);
+      event.startTime = startValue || normalizeClockTime(nextTime) || range.start;
+      event.endTime = endValue || range.end || '';
 
-      if (selectedCalendarScope === 'day') {
+      if (selectedCalendarScope === 'slot') {
         selectedCalendarDate = nextDate;
+        selectedCalendarSlotKey = calendarEventSlotKey(event);
       }
+      selectedWeekKey = weekKeyFromDate(nextDate);
+      calendarMonthCursor = startOfWeek(parseIsoDate(nextDate));
 
       renderAll();
     }
@@ -3976,7 +5693,15 @@
       event.userTimeOverride = '';
       event.date = event.baseDate || event.date;
       event.time = event.baseTime || event.time;
-      event.startTime = normalizeClockTime(event.time);
+      const range = extractClockRange(event.time);
+      event.startTime = normalizeClockTime(event.time) || range.start;
+      event.endTime = range.end || event.endTime || '';
+      if (selectedCalendarScope === 'slot') {
+        selectedCalendarDate = event.date;
+        selectedCalendarSlotKey = calendarEventSlotKey(event);
+      }
+      selectedWeekKey = weekKeyFromDate(event.date);
+      calendarMonthCursor = startOfWeek(parseIsoDate(event.date));
       renderAll();
     }
 
@@ -3992,21 +5717,35 @@
       renderSubjectDetail();
     }
 
-    function selectCalendarDate(isoDate) {
+    function selectCalendarSlot(isoDate, slotKey) {
       if (activeCalendarMoveEventId) {
         moveCalendarEventToDate(activeCalendarMoveEventId, isoDate);
         activeCalendarMoveEventId = null;
-        selectedCalendarScope = 'day';
-        selectedWeekKey = null;
-        selectedCalendarDate = isoDate;
-        renderCalendarBoard();
-        renderCalendarDetail();
-        renderCalendarEventDetailScreen();
+      }
+      selectedCalendarDate = isoDate;
+      selectedCalendarScope = 'slot';
+      selectedCalendarSlotKey = slotKey;
+      selectedWeekKey = weekKeyFromDate(isoDate);
+      calendarMonthCursor = startOfWeek(parseIsoDate(isoDate));
+      activeCalendarEventId = null;
+      renderCalendarBoard();
+      renderCalendarDetail();
+      renderCalendarEventDetailScreen();
+    }
+
+    function selectCalendarDate(isoDate) {
+      const weekDays = buildCalendarWeekDays(parseIsoDate(isoDate));
+      const slots = buildCalendarWeekSlots(weekDays);
+      const firstSlot = slots.find(slot => eventsForCalendarSlot(isoDate, slot.key).length > 0) || slots[0] || null;
+      if (firstSlot) {
+        selectCalendarSlot(isoDate, firstSlot.key);
         return;
       }
       selectedCalendarDate = isoDate;
-      selectedCalendarScope = 'day';
-      selectedWeekKey = null;
+      selectedCalendarScope = 'summary';
+      selectedCalendarSlotKey = '';
+      selectedWeekKey = weekKeyFromDate(isoDate);
+      calendarMonthCursor = startOfWeek(parseIsoDate(isoDate));
       activeCalendarEventId = null;
       renderCalendarBoard();
       renderCalendarDetail();
@@ -4015,8 +5754,10 @@
 
     function selectCalendarWeek(weekKey) {
       clearCalendarEventLongPressTimer();
-      selectedCalendarScope = 'week';
+      selectedCalendarScope = 'summary';
       selectedWeekKey = weekKey;
+      selectedCalendarSlotKey = '';
+      calendarMonthCursor = startOfWeek(parseIsoDate(weekKey));
       activeCalendarEventId = null;
       renderCalendarBoard();
       renderCalendarDetail();
@@ -4127,7 +5868,18 @@
         document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
         button.classList.add('active');
         byId(`tab-${button.dataset.tab}`).classList.add('active');
+        if (button.dataset.tab === 'calendar') {
+          renderCalendarEditToolbar();
+          renderCalendarBoard();
+          renderCalendarEventDetailScreen();
+        }
       });
+    });
+
+    window.addEventListener('resize', () => {
+      if (!byId('tab-calendar')?.classList.contains('active')) return;
+      calendarTimelineHourHeight = CALENDAR_TIMELINE_BASE_HOUR_HEIGHT;
+      renderCalendarBoard();
     });
 
     byId('taskForm').addEventListener('submit', (event) => {
@@ -4183,7 +5935,10 @@
           state = buildCanaryState();
           selectedSubjectId = state.subjects[0]?.id || null;
           selectedCalendarDate = formatDateInput(new Date());
-          calendarMonthCursor = new Date(today.getFullYear(), today.getMonth(), 1);
+          selectedCalendarScope = 'slot';
+          selectedCalendarSlotKey = '';
+          selectedWeekKey = weekKeyFromDate(selectedCalendarDate);
+          calendarMonthCursor = startOfWeek(today);
           renderAll();
         }
       }
@@ -4195,7 +5950,10 @@
       state = buildCanaryState();
       selectedSubjectId = state.subjects[0]?.id || null;
       selectedCalendarDate = formatDateInput(new Date());
-      calendarMonthCursor = new Date(today.getFullYear(), today.getMonth(), 1);
+      selectedCalendarScope = 'slot';
+      selectedCalendarSlotKey = '';
+      selectedWeekKey = weekKeyFromDate(selectedCalendarDate);
+      calendarMonthCursor = startOfWeek(today);
       renderAll();
       activateTodayFlow();
       alert('4월 canary 세팅을 불러왔어. 바로 오늘 플래너로 이동했어. TODAY_START_GUIDE.md와 CANARY_TRACKER_APRIL.md를 같이 열어두면 좋아.');
@@ -4216,15 +5974,36 @@
     });
 
     byId('calendarPrevBtn').addEventListener('click', () => {
-      calendarMonthCursor = new Date(calendarMonthCursor.getFullYear(), calendarMonthCursor.getMonth() - 1, 1);
+      calendarMonthCursor = offsetDate(startOfWeek(calendarMonthCursor), -7);
+      selectedWeekKey = weekKeyFromDate(calendarMonthCursor);
+      selectedCalendarSlotKey = '';
+      renderCalendarEditToolbar();
       renderCalendarBoard();
       renderCalendarDetail();
+      renderCalendarEventDetailScreen();
+    });
+
+    byId('calendarTodayBtn').addEventListener('click', () => {
+      const now = new Date();
+      selectedCalendarDate = formatDateInput(now);
+      selectedCalendarScope = 'slot';
+      selectedCalendarSlotKey = '';
+      selectedWeekKey = weekKeyFromDate(now);
+      calendarMonthCursor = startOfWeek(now);
+      renderCalendarEditToolbar();
+      renderCalendarBoard();
+      renderCalendarDetail();
+      renderCalendarEventDetailScreen();
     });
 
     byId('calendarNextBtn').addEventListener('click', () => {
-      calendarMonthCursor = new Date(calendarMonthCursor.getFullYear(), calendarMonthCursor.getMonth() + 1, 1);
+      calendarMonthCursor = offsetDate(startOfWeek(calendarMonthCursor), 7);
+      selectedWeekKey = weekKeyFromDate(calendarMonthCursor);
+      selectedCalendarSlotKey = '';
+      renderCalendarEditToolbar();
       renderCalendarBoard();
       renderCalendarDetail();
+      renderCalendarEventDetailScreen();
     });
 
     byId('exportBtn').addEventListener('click', () => {
@@ -4249,14 +6028,21 @@
           state = mergePlannerBundleIntoState(parsed, state);
           selectedSubjectId = ensureSubjectForBundle(state, parsed).id;
           selectedCalendarDate = parsed.sessions?.[0]?.date || formatDateInput(new Date());
+          selectedCalendarScope = 'slot';
+          selectedCalendarSlotKey = '';
           const baseDate = parseIsoDate(selectedCalendarDate);
-          calendarMonthCursor = new Date(baseDate.getFullYear(), baseDate.getMonth(), 1);
+          selectedWeekKey = weekKeyFromDate(baseDate);
+          calendarMonthCursor = startOfWeek(baseDate);
         } else {
           const data = normalizeState(parsed);
           if (!data.subjects || !data.tasks) throw new Error('invalid backup');
           state = data;
           selectedSubjectId = state.subjects[0]?.id || null;
           selectedCalendarDate = formatDateInput(new Date());
+          selectedCalendarScope = 'slot';
+          selectedCalendarSlotKey = '';
+          selectedWeekKey = weekKeyFromDate(selectedCalendarDate);
+          calendarMonthCursor = startOfWeek(today);
         }
         renderAll();
       } catch (error) {
@@ -4267,7 +6053,11 @@
     });
 
     byId('reloadForUpdateBtn').addEventListener('click', () => {
-      window.location.reload();
+      void softRefreshPlannerApp();
+    });
+
+    byId('hardRefreshForUpdateBtn').addEventListener('click', () => {
+      void hardRefreshPlannerApp();
     });
 
     byId('resetDemoBtn').addEventListener('click', openResetModal);
@@ -4280,13 +6070,27 @@
     window.__kmlePlannerState = state;
     renderAll();
     void ensureRespiratoryBundlePresent();
-    void checkForAppUpdate();
+    void checkForAppUpdate({ silent: !plannerStandaloneMode() });
     window.setInterval(() => { void checkForAppUpdate(); }, 60000);
 
     window.toggleTask = toggleTask;
     window.toggleCalendarEvent = toggleCalendarEvent;
+    window.setCalendarEventColor = setCalendarEventColor;
+    window.setCalendarEventDisplayState = setCalendarEventDisplayState;
+    window.setCalendarEventSignalOverride = setCalendarEventSignalOverride;
+    window.setCalendarEventDifficultyOverride = setCalendarEventDifficultyOverride;
+    window.toggleCalendarEventMoveMode = toggleCalendarEventMoveMode;
     window.beginCalendarEventLongPress = beginCalendarEventLongPress;
     window.cancelCalendarEventLongPress = cancelCalendarEventLongPress;
+    window.handleCalendarEventCardClick = handleCalendarEventCardClick;
+    window.beginCalendarSlotLongPress = beginCalendarSlotLongPress;
+    window.cancelCalendarSlotLongPress = cancelCalendarSlotLongPress;
+    window.handleCalendarSlotClick = handleCalendarSlotClick;
+    window.handleCalendarTimelineCanvasClick = handleCalendarTimelineCanvasClick;
+    window.openCalendarSummaryDetail = openCalendarSummaryDetail;
+    window.openCalendarSlotDetail = openCalendarSlotDetail;
+    window.closeCalendarDetailScreen = closeCalendarDetailScreen;
+    window.clearCalendarEditEvent = clearCalendarEditEvent;
     window.clearCalendarEventMoveSelection = clearCalendarEventMoveSelection;
     window.shiftCalendarEventTime = shiftCalendarEventTime;
     window.updateCalendarEventUserNote = updateCalendarEventUserNote;
@@ -4295,7 +6099,16 @@
     window.openCalendarEventDetail = openCalendarEventDetail;
     window.closeCalendarEventDetail = closeCalendarEventDetail;
     window.deleteTask = deleteTask;
+    window.__kmlePlannerSoftRefresh = softRefreshPlannerApp;
+    window.__kmlePlannerHardRefresh = hardRefreshPlannerApp;
+    window.__kmlePlannerAppInfo = () => ({
+      version: APP_VERSION,
+      versionLabel: APP_VERSION_LABEL,
+      standalone: plannerStandaloneMode(),
+      modeLabel: plannerStandaloneMode() ? '홈화면 앱' : '브라우저 탭'
+    });
     window.selectSubject = selectSubject;
+    window.selectCalendarSlot = selectCalendarSlot;
     window.selectCalendarDate = selectCalendarDate;
     window.selectCalendarWeek = selectCalendarWeek;
     window.updateStage = updateStage;

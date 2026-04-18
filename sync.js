@@ -176,6 +176,8 @@ let supabase = null;
 let pollingTimer = null;
 let remoteTimer = null;
 let realtimeChannel = null;
+let immediateSyncTimer = null;
+let immediateSyncReason = '';
 let localHash = hashStateRaw(getRawPlannerState());
 let syncing = false;
 
@@ -290,7 +292,16 @@ function injectUI() {
         <div id="syncStatusText" class="sync-status-text"></div>
       </div>
 
-      <div class="sync-note">추천 사용 순서\n1. 맥에서 새 동기화 코드 생성\n2. 지금 밀어넣기\n3. iPad에서 같은 코드를 입력하고 설정 저장\n4. 지금 다시 받기\n\n초기 운영은 맥을 정본(primary writer)으로 두는 것이 안전하다.</div>
+      <div class="sync-block">
+        <div style="font-weight:700;">앱 새로받기 / 캐시 정리</div>
+        <div id="syncAppInfoText" class="sync-note"></div>
+        <div class="sync-actions" style="margin-top:10px;">
+          <button class="btn btn-ghost" id="syncSoftRefreshBtn">앱 새로고침</button>
+          <button class="btn btn-ghost" id="syncHardRefreshBtn">캐시 초기화 후 새로받기</button>
+        </div>
+      </div>
+
+      <div class="sync-note">추천 사용 순서\n1. 맥에서 새 동기화 코드 생성\n2. 지금 밀어넣기\n3. iPad에서 같은 코드를 입력하고 설정 저장\n4. 지금 다시 받기\n5. 홈화면 앱이면 안 바뀔 때 캐시 초기화 후 새로받기\n\n초기 운영은 맥을 정본(primary writer)으로 두는 것이 안전하다.</div>
     </div>
   `;
   document.body.appendChild(modal);
@@ -300,6 +311,7 @@ function injectUI() {
   ui.modal = modal;
   ui.statusText = modal.querySelector('#syncStatusText');
   ui.sessionText = modal.querySelector('#syncSessionText');
+  ui.appInfoText = modal.querySelector('#syncAppInfoText');
   ui.syncCodeInput = modal.querySelector('#syncCodeInput');
   ui.autoSyncInput = modal.querySelector('#syncAutoMode');
   ui.saveButton = modal.querySelector('#syncSaveBtn');
@@ -308,6 +320,8 @@ function injectUI() {
   ui.pushButton = modal.querySelector('#syncPushBtn');
   ui.pullButton = modal.querySelector('#syncPullBtn');
   ui.clearButton = modal.querySelector('#syncClearBtn');
+  ui.softRefreshButton = modal.querySelector('#syncSoftRefreshBtn');
+  ui.hardRefreshButton = modal.querySelector('#syncHardRefreshBtn');
 
   openButton.addEventListener('click', () => ui.modal.classList.add('show'));
   modal.querySelector('#syncCloseBtn').addEventListener('click', () => ui.modal.classList.remove('show'));
@@ -354,6 +368,18 @@ function injectUI() {
     }
   });
 
+  ui.softRefreshButton.addEventListener('click', () => {
+    if (typeof window.__kmlePlannerSoftRefresh === 'function') {
+      void window.__kmlePlannerSoftRefresh();
+    }
+  });
+
+  ui.hardRefreshButton.addEventListener('click', () => {
+    if (typeof window.__kmlePlannerHardRefresh === 'function') {
+      void window.__kmlePlannerHardRefresh();
+    }
+  });
+
   ui.pushButton.addEventListener('click', async () => {
     await pushLocalState('수동 업로드');
   });
@@ -382,6 +408,7 @@ function renderSessionText() {
   if (!ui.sessionText) return;
   const config = readConfig();
   const meta = readMeta();
+  const appInfo = typeof window.__kmlePlannerAppInfo === 'function' ? window.__kmlePlannerAppInfo() : null;
 
   ui.sessionText.textContent = [
     `user state: ${PLANNER_USER_ID}`,
@@ -391,6 +418,14 @@ function renderSessionText() {
     `마지막 user state 확인: ${formatDateTime(meta.lastUserStateSeenAt)}`,
     config.syncCode ? `legacy sync code: ${maskCode(config.syncCode)}` : 'legacy sync code: 없음'
   ].join('\n');
+
+  if (ui.appInfoText) {
+    ui.appInfoText.textContent = [
+      appInfo ? `앱 모드: ${appInfo.modeLabel}` : '앱 모드: 확인 불가',
+      appInfo ? `현재 버전: ${appInfo.versionLabel}` : '현재 버전: 확인 불가',
+      '홈화면 앱에서 변경이 늦게 반영되면 캐시 초기화 후 새로받기를 먼저 시도해줘.'
+    ].join('\n');
+  }
 }
 
 function setStatus(message, tone = 'default') {
@@ -522,6 +557,51 @@ async function checkLocalStateChange() {
   } else {
     setStatus('로컬 데이터가 바뀌었다. 자동 동기화는 꺼져 있으니 필요하면 수동 업로드를 눌러줘.', 'pending');
   }
+}
+
+async function flushImmediateSync(reason = '즉시 업로드') {
+  const config = readConfig();
+  const raw = getRawPlannerState();
+  const nextHash = hashStateRaw(raw);
+  if (nextHash !== localHash) {
+    localHash = nextHash;
+    const meta = readMeta();
+    meta.lastHash = nextHash;
+    meta.lastLocalChangeAt = nowIso();
+    saveMeta(meta);
+  }
+
+  if (config.autoSync === false) {
+    setStatus('로컬 데이터가 바뀌었다. 자동 동기화는 꺼져 있으니 필요하면 수동 업로드를 눌러줘.', 'pending');
+    return;
+  }
+
+  if (!supabase) {
+    await initializeSupabase();
+    if (!supabase) return;
+  }
+
+  await pushPlannerUserState(reason);
+  if (config.syncCode) await pushLocalState(`legacy ${reason}`);
+}
+
+function scheduleImmediateSync(reason = '즉시 업로드') {
+  const raw = getRawPlannerState();
+  const nextHash = hashStateRaw(raw);
+  if (nextHash === localHash) return;
+
+  const meta = readMeta();
+  meta.lastHash = nextHash;
+  meta.lastLocalChangeAt = nowIso();
+  saveMeta(meta);
+  localHash = nextHash;
+
+  immediateSyncReason = reason;
+  if (immediateSyncTimer) clearTimeout(immediateSyncTimer);
+  immediateSyncTimer = setTimeout(() => {
+    immediateSyncTimer = null;
+    void flushImmediateSync(immediateSyncReason || reason);
+  }, 250);
 }
 
 async function plannerSyncPull(syncCode) {
@@ -779,6 +859,14 @@ function bootstrapMetaFromCurrentState() {
 }
 
 window.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    if (immediateSyncTimer) {
+      clearTimeout(immediateSyncTimer);
+      immediateSyncTimer = null;
+      void flushImmediateSync(immediateSyncReason || '백그라운드 전환 업로드');
+    }
+    return;
+  }
   if (!document.hidden) {
     void initializeSupabase();
     void pullPlannerUserState({ reason: '포그라운드 복귀' });
@@ -794,6 +882,19 @@ window.addEventListener('storage', (event) => {
     renderSessionText();
   }
 });
+
+window.addEventListener('pagehide', () => {
+  if (immediateSyncTimer) {
+    clearTimeout(immediateSyncTimer);
+    immediateSyncTimer = null;
+    void flushImmediateSync(immediateSyncReason || '페이지 종료 직전 업로드');
+  }
+});
+
+window.__kmlePlannerNotifyLocalChange = function notifyPlannerLocalChange(reason = '앱 저장') {
+  scheduleImmediateSync(reason);
+  return true;
+};
 
 injectUI();
 bootstrapMetaFromCurrentState();
