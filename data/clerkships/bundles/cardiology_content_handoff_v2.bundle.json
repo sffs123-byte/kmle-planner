@@ -47,7 +47,194 @@
       "시간표는 1-1-2를 기준으로 두되, 각 상세 패널 문구는 대응하는 day/session 섹션 원문을 그대로 붙인다."
     ],
     "whole_handoff_reference": "/Users/sffs123gmail.com/Desktop/의학과 공부 파일/본3/심장내과/25/(0) 26년도 인계/심장내과 전체인계_2026_1학기(26.04.10 update).docx",
-    "ecg_reference": "/Users/sffs123gmail.com/Desktop/의학과 공부 파일/본3/심장내과/25/(0) 26년도 인계/2026 김준형 교수님 심전도 발표 인계 (26.04.10 update).docx"
+    "ecg_reference": "/Users/sffs123gmail.com/Desktop/의학과 공부 파일/본3/심장내과/25/(0) 26년도 인계/2026 김준형 교수님 심전도 발표 인계 (26.04.10 update).docx",
+    "location_guide": {
+      "title": "심장내과 장소 가이드",
+      "source_md": "/Users/sffs123gmail.com/Desktop/의학과 공부 파일/본3/심장내과/25/(0) 26년도 인계/심장내과 인계 정리용.md",
+      "intro": [
+        "장소 설명은 텍스트 블록으로 정리하고, 바로 아래에 해당 이미지 파일명을 순서대로 붙입니다.",
+        "실제 이미지 파일은 `심장내과_장소_이미지/본원/`, `심장내과_장소_이미지/세종/` 폴더에 따로 저장합니다.",
+        "나중에 HTML/PDF/캘린더 번들로 변환할 때는 이 섹션을 장소 사전(location guide)처럼 사용합니다."
+      ],
+      "entries": [
+        {
+          "campus": "본원",
+          "title": "교육실",
+          "summary": [
+            "대부분의 일정이 여기서 진행된다.",
+            "너무 일찍 도착했을 때 안에서 간호사 선생님이나 교수님이 회의 중일 수 있으니 먼저 기척을 확인하고, 조용하면 문을 열고 들어가면 된다.",
+            "보통은 열려 있지만 늦은 시간 치프 선생님 피드백 때는 잠겨 있을 수 있다.",
+            "문이 잠겨 있으면 비밀번호 `3410`을 누르고 불빛이 들어오는 숫자를 누르면 열린다.",
+            "위치는 본관 2층에서 의생명융합센터로 넘어가는 길, 심혈관조영실(PCI실) 옆 골목 쪽이다."
+          ],
+          "image_files": [
+            "심장내과_장소_이미지/본원/본원_교육실_01.png"
+          ],
+          "asset_urls": [
+            "./assets/cardiology-location-guide/본원/본원_교육실_01.png"
+          ]
+        },
+        {
+          "campus": "본원",
+          "title": "의국",
+          "summary": [
+            "교수연구동 2층에 있다.",
+            "보통 직원이 있어 문이 잠겨 있는 경우는 드물지만, 과거 인계상 비밀번호는 `8237`로 남아 있다.",
+            "진선아 교수님 고혈압 CPX는 의국에서 진행된다."
+          ],
+          "image_files": [
+            "심장내과_장소_이미지/본원/본원_의국_01.png"
+          ],
+          "asset_urls": [
+            "./assets/cardiology-location-guide/본원/본원_의국_01.png"
+          ]
+        },
+        {
+          "campus": "본원",
+          "title": "외래 / 심전도실",
+          "summary": [
+            "인계에 적힌 핵심 장소 정보는 심전도실 기준이다.",
+            "심전도실은 1층 노인센터 내 노인외래센터 왼쪽 11번 방이다.",
+            "심전도 촬영은 별도 예약 없이 11번 방 앞에서 번호표를 뽑고 차례가 되면 들어가면 된다.",
+            "심전도실 마감은 오후 6시다."
+          ],
+          "image_files": [
+            "심장내과_장소_이미지/본원/본원_외래_심전도실_01.png"
+          ],
+          "asset_urls": [
+            "./assets/cardiology-location-guide/본원/본원_외래_심전도실_01.png"
+          ]
+        },
+        {
+          "campus": "본원",
+          "title": "심장초음파실",
+          "summary": [
+            "노인센터 옆에 있다.",
+            "심초음파를 찍을 때는 인계받을 때나 늦어도 월요일 오전에는 데스크 간호사 선생님께 미리 말씀드려야 한다.",
+            "예약 여부보다도 데스크에 사전 전달하는 것이 핵심이다."
+          ],
+          "image_files": [
+            "심장내과_장소_이미지/본원/본원_심장초음파실_01.png"
+          ],
+          "asset_urls": [
+            "./assets/cardiology-location-guide/본원/본원_심장초음파실_01.png"
+          ]
+        },
+        {
+          "campus": "본원",
+          "title": "심혈관조영실3",
+          "summary": [
+            "PCI 참관 장소이며, 교육실 가는 길에 있다.",
+            "심혈관조영실 `1, 2`가 아니라 반드시 `3`으로 들어가야 한다.",
+            "입구 옆 벨을 누르면 문을 열어준다.",
+            "들어가면 오른쪽에 탈의실이 있고, 기본적으로 탈의실에서 가운을 벗고 실내화로 갈아 신는다. (2025년에는 가운을 입고 그냥 들어간 경우도 있었다.)",
+            "이후 왼쪽의 기울어진 벽 사이에 있는 민트색 문으로 들어가야 시술실로 이어진다.",
+            "정면에 바로 보이는 들어가고 싶게 생긴 문은 시술 중인 공간이므로 절대 들어가면 안 된다."
+          ],
+          "image_files": [
+            "심장내과_장소_이미지/본원/본원_심혈관조영실3_01.png",
+            "심장내과_장소_이미지/본원/본원_심혈관조영실3_02.png"
+          ],
+          "asset_urls": [
+            "./assets/cardiology-location-guide/본원/본원_심혈관조영실3_01.png",
+            "./assets/cardiology-location-guide/본원/본원_심혈관조영실3_02.png"
+          ]
+        },
+        {
+          "campus": "세종",
+          "title": "4층 교육수련실",
+          "summary": [
+            "실습 시작 전 본관 4층 교육수련실에 먼저 들러 출입증을 받고 서명한다.",
+            "실습이 끝나면 설문조사를 하고 출입증을 반납한다."
+          ],
+          "image_files": [],
+          "asset_urls": []
+        },
+        {
+          "campus": "세종",
+          "title": "9층 임상실습실 / 9층 원격 강의실",
+          "summary": [
+            "외래 전날 EMR 확인하러 가는 공간이다.",
+            "전날 준비용 공간으로 이해하면 된다."
+          ],
+          "image_files": [
+            "심장내과_장소_이미지/세종/세종_임상실습실_원격강의실_01.png"
+          ],
+          "asset_urls": [
+            "./assets/cardiology-location-guide/세종/세종_임상실습실_원격강의실_01.png"
+          ]
+        },
+        {
+          "campus": "세종",
+          "title": "3층 의학도서관",
+          "summary": [
+            "9층 PK실보다 시설이 좋아 실제로 더 자주 쓰게 되는 공간이다.",
+            "심혈관조영실 바로 옆이라 이동이 편하고, 본관과 헬스케어센터 연결부라 교수님들이 자주 오간다.",
+            "3층 엘리베이터에서 내려 화장실을 바라보고 우회전하면 제2중환자실이 보이고, 제2중환자실을 바라본 상태에서 좌회전 후 직진하면 의학도서관이 나온다.",
+            "출입증을 찍고 들어가면 되며, 여기서도 EMR 사용이 가능하다."
+          ],
+          "image_files": [],
+          "asset_urls": []
+        },
+        {
+          "campus": "세종",
+          "title": "3층 심혈관 조영실",
+          "summary": [
+            "PCI 참관 시 1번이나 2번 벨 아무거나 누르면 문을 열어준다.",
+            "안으로 들어갈 때는 GUEST 신발로 갈아 신거나 덧신을 신고, 모자를 쓰면 된다.",
+            "본원과 달리 가운을 벗을 필요는 없다.",
+            "3층 엘리베이터에서 내려 화장실을 바라보고 우회전한 뒤, 제2중환자실을 보고 좌회전해서 직진하다가 오른쪽을 보면 조영실이 있다."
+          ],
+          "image_files": [],
+          "asset_urls": []
+        },
+        {
+          "campus": "세종",
+          "title": "6층 의국",
+          "summary": [
+            "수요일 김민수 교수님 수업이 여기서 진행된다.",
+            "6층에서 내려 병동 쪽으로 들어간 뒤, 의국 당직실 안으로 들어가 왼쪽을 보면 가장 안쪽에 의국1이 있다."
+          ],
+          "image_files": [
+            "심장내과_장소_이미지/세종/세종_의국_01.png"
+          ],
+          "asset_urls": [
+            "./assets/cardiology-location-guide/세종/세종_의국_01.png"
+          ]
+        },
+        {
+          "campus": "세종",
+          "title": "2층 심장내과 외래",
+          "summary": [
+            "심뇌혈관센터 안에 있다.",
+            "2층 엘리베이터에서 내린 뒤 쭉 나오면 찾을 수 있다."
+          ],
+          "image_files": [],
+          "asset_urls": []
+        },
+        {
+          "campus": "세종",
+          "title": "2층 심폐기능 검사실",
+          "summary": [
+            "심초음파 참관과 노재형 교수님 Q&A 수업이 여기서 진행된다.",
+            "수업은 가장 안쪽 판독실에서 진행된다.",
+            "2층 엘리베이터에서 내려 쭉 나온 뒤 오른쪽으로 가면 있다.",
+            "이 공간 안에 심초음파실도 있다."
+          ],
+          "image_files": [
+            "심장내과_장소_이미지/세종/세종_심폐기능검사실_01.jpeg"
+          ],
+          "asset_urls": [
+            "./assets/cardiology-location-guide/세종/세종_심폐기능검사실_01.jpeg"
+          ]
+        }
+      ],
+      "counts": {
+        "places": 12,
+        "images": 9,
+        "campuses": 2
+      }
+    }
   },
   "submission_rules": [
     {
@@ -671,7 +858,33 @@
       "linked_assignments": [
         "assign-onsite-cardiac-exam"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "packet_v3_source_refs": [
+        "1-3-6",
+        "1-1-4"
+      ],
+      "packet_v3_linked_assignment_ids": [
+        "assign-onsite-cardiac-exam-01"
+      ],
+      "packet_v3_session_assignment_links": [
+        {
+          "assignment_id": "assign-onsite-cardiac-exam-01",
+          "relation": "onsite_approval",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        }
+      ],
+      "packet_v3_approval_display": {
+        "card_badges": [
+          "현장승인"
+        ],
+        "detail_emphasis": [
+          "현장승인 필요"
+        ],
+        "show_assignment_count": true
+      }
     },
     {
       "id": "comm-2026-04-27-chief",
@@ -1000,7 +1213,33 @@
         "assign-nayekkum-scan-seongsukwoo",
         "assign-onsite-heartsound"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "packet_v3_source_refs": [
+        "1-4-2",
+        "1-1-4"
+      ],
+      "packet_v3_linked_assignment_ids": [
+        "assign-onsite-heartsound-01"
+      ],
+      "packet_v3_session_assignment_links": [
+        {
+          "assignment_id": "assign-onsite-heartsound-01",
+          "relation": "onsite_approval",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        }
+      ],
+      "packet_v3_approval_display": {
+        "card_badges": [
+          "현장승인"
+        ],
+        "detail_emphasis": [
+          "현장승인 필요"
+        ],
+        "show_assignment_count": true
+      }
     },
     {
       "id": "s-2026-04-28-1000-abc-pci",
@@ -1114,7 +1353,54 @@
       "linked_assignments": [
         "assign-onsite-pci-20260428-abc"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "packet_v3_source_refs": [
+        "1-4-3",
+        "1-1-4",
+        "3-1-1",
+        "3-1-3",
+        "3-2-2"
+      ],
+      "packet_v3_linked_assignment_ids": [
+        "assign-onsite-pci-01",
+        "assign-onsite-pci-02",
+        "assign-onsite-pci-03"
+      ],
+      "packet_v3_session_assignment_links": [
+        {
+          "assignment_id": "assign-onsite-pci-01",
+          "relation": "eligible_pool",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        },
+        {
+          "assignment_id": "assign-onsite-pci-02",
+          "relation": "eligible_pool",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        },
+        {
+          "assignment_id": "assign-onsite-pci-03",
+          "relation": "eligible_pool",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        }
+      ],
+      "packet_v3_approval_display": {
+        "card_badges": [
+          "현장승인"
+        ],
+        "detail_emphasis": [
+          "현장승인 필요"
+        ],
+        "show_assignment_count": true
+      }
     },
     {
       "id": "s-2026-04-28-1000-def-outpatient",
@@ -1219,7 +1505,64 @@
         "assign-outpatient-record-2",
         "assign-onsite-outpatient-20260428-def"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "packet_v3_source_refs": [
+        "1-4-3",
+        "1-1-4",
+        "3-3-1",
+        "3-3-2",
+        "3-4-9",
+        "3-4-8"
+      ],
+      "packet_v3_linked_assignment_ids": [
+        "assign-onsite-outpatient-01",
+        "assign-onsite-outpatient-02",
+        "assign-outpatient-record-01",
+        "assign-outpatient-record-02"
+      ],
+      "packet_v3_session_assignment_links": [
+        {
+          "assignment_id": "assign-onsite-outpatient-01",
+          "relation": "eligible_pool",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        },
+        {
+          "assignment_id": "assign-onsite-outpatient-02",
+          "relation": "eligible_pool",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        },
+        {
+          "assignment_id": "assign-outpatient-record-01",
+          "relation": "eligible_pool",
+          "display_label": "제출/준비",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        },
+        {
+          "assignment_id": "assign-outpatient-record-02",
+          "relation": "eligible_pool",
+          "display_label": "제출/준비",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        }
+      ],
+      "packet_v3_approval_display": {
+        "card_badges": [
+          "현장승인"
+        ],
+        "detail_emphasis": [
+          "현장승인 필요"
+        ],
+        "show_assignment_count": true
+      }
     },
     {
       "id": "s-2026-04-28-1200-echoecg",
@@ -1416,7 +1759,33 @@
       "linked_assignments": [
         "assign-onsite-htn-cpx"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "packet_v3_source_refs": [
+        "1-4-5",
+        "1-1-4"
+      ],
+      "packet_v3_linked_assignment_ids": [
+        "assign-onsite-cpx-htn-01"
+      ],
+      "packet_v3_session_assignment_links": [
+        {
+          "assignment_id": "assign-onsite-cpx-htn-01",
+          "relation": "onsite_approval",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        }
+      ],
+      "packet_v3_approval_display": {
+        "card_badges": [
+          "현장승인"
+        ],
+        "detail_emphasis": [
+          "현장승인 필요"
+        ],
+        "show_assignment_count": true
+      }
     },
     {
       "id": "s-2026-04-28-1600-selfstudy",
@@ -1766,7 +2135,38 @@
       "linked_assignments": [
         "assign-pomr-case-ab",
         "assign-pomr-upload"
-      ]
+      ],
+      "packet_v3_source_refs": [
+        "1-5-2",
+        "1-1-4"
+      ],
+      "packet_v3_linked_assignment_ids": [
+        "assign-submit-pomr-01",
+        "assign-pomr-ecg-case"
+      ],
+      "packet_v3_session_assignment_links": [
+        {
+          "assignment_id": "assign-submit-pomr-01",
+          "relation": "submit_or_prepare",
+          "display_label": "제출/준비",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        },
+        {
+          "assignment_id": "assign-pomr-ecg-case",
+          "relation": "submit_or_prepare",
+          "display_label": "제출/준비",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        }
+      ],
+      "packet_v3_approval_display": {
+        "card_badges": [],
+        "detail_emphasis": [],
+        "show_assignment_count": true
+      }
     },
     {
       "id": "s-2026-04-29-1200-mi",
@@ -2256,7 +2656,45 @@
         "assign-pomr-case-ab",
         "assign-onsite-ecg-a"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "packet_v3_source_refs": [
+        "1-6-1",
+        "1-1-5",
+        "4-1",
+        "4-8",
+        "1-1-4"
+      ],
+      "packet_v3_linked_assignment_ids": [
+        "assign-onsite-ecg-a-01",
+        "assign-pomr-ecg-case"
+      ],
+      "packet_v3_session_assignment_links": [
+        {
+          "assignment_id": "assign-onsite-ecg-a-01",
+          "relation": "onsite_approval",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        },
+        {
+          "assignment_id": "assign-pomr-ecg-case",
+          "relation": "submit_or_prepare",
+          "display_label": "제출/준비",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        }
+      ],
+      "packet_v3_approval_display": {
+        "card_badges": [
+          "현장승인"
+        ],
+        "detail_emphasis": [
+          "현장승인 필요"
+        ],
+        "show_assignment_count": true
+      }
     },
     {
       "id": "s-2026-04-30-0840-abc-outpatient",
@@ -2365,7 +2803,65 @@
         "assign-outpatient-record-2",
         "assign-onsite-outpatient-20260430-abc"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "packet_v3_source_refs": [
+        "1-6-2",
+        "1-1-4",
+        "3-3-1",
+        "3-3-2",
+        "3-4-1",
+        "3-4-2",
+        "3-4-6"
+      ],
+      "packet_v3_linked_assignment_ids": [
+        "assign-onsite-outpatient-01",
+        "assign-onsite-outpatient-02",
+        "assign-outpatient-record-01",
+        "assign-outpatient-record-02"
+      ],
+      "packet_v3_session_assignment_links": [
+        {
+          "assignment_id": "assign-onsite-outpatient-01",
+          "relation": "eligible_pool",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        },
+        {
+          "assignment_id": "assign-onsite-outpatient-02",
+          "relation": "eligible_pool",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        },
+        {
+          "assignment_id": "assign-outpatient-record-01",
+          "relation": "eligible_pool",
+          "display_label": "제출/준비",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        },
+        {
+          "assignment_id": "assign-outpatient-record-02",
+          "relation": "eligible_pool",
+          "display_label": "제출/준비",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        }
+      ],
+      "packet_v3_approval_display": {
+        "card_badges": [
+          "현장승인"
+        ],
+        "detail_emphasis": [
+          "현장승인 필요"
+        ],
+        "show_assignment_count": true
+      }
     },
     {
       "id": "s-2026-04-30-0840-def-pci",
@@ -2478,7 +2974,54 @@
       "linked_assignments": [
         "assign-onsite-pci-20260430-def"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "packet_v3_source_refs": [
+        "1-6-2",
+        "1-1-4",
+        "3-1-1",
+        "3-1-3",
+        "3-2-1"
+      ],
+      "packet_v3_linked_assignment_ids": [
+        "assign-onsite-pci-01",
+        "assign-onsite-pci-02",
+        "assign-onsite-pci-03"
+      ],
+      "packet_v3_session_assignment_links": [
+        {
+          "assignment_id": "assign-onsite-pci-01",
+          "relation": "eligible_pool",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        },
+        {
+          "assignment_id": "assign-onsite-pci-02",
+          "relation": "eligible_pool",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        },
+        {
+          "assignment_id": "assign-onsite-pci-03",
+          "relation": "eligible_pool",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        }
+      ],
+      "packet_v3_approval_display": {
+        "card_badges": [
+          "현장승인"
+        ],
+        "detail_emphasis": [
+          "현장승인 필요"
+        ],
+        "show_assignment_count": true
+      }
     },
     {
       "id": "s-2026-04-30-1200-selfstudy",
@@ -2616,7 +3159,33 @@
       "linked_assignments": [
         "assign-onsite-palpit-cpx"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "packet_v3_source_refs": [
+        "1-6-3",
+        "1-1-4"
+      ],
+      "packet_v3_linked_assignment_ids": [
+        "assign-onsite-cpx-palpit-01"
+      ],
+      "packet_v3_session_assignment_links": [
+        {
+          "assignment_id": "assign-onsite-cpx-palpit-01",
+          "relation": "onsite_approval",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        }
+      ],
+      "packet_v3_approval_display": {
+        "card_badges": [
+          "현장승인"
+        ],
+        "detail_emphasis": [
+          "현장승인 필요"
+        ],
+        "show_assignment_count": true
+      }
     },
     {
       "id": "s-2026-04-30-1600-selfstudy",
@@ -2902,7 +3471,45 @@
         "assign-pomr-case-ab",
         "assign-onsite-ecg-b"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "packet_v3_source_refs": [
+        "1-7-1",
+        "1-1-5",
+        "4-1",
+        "4-9",
+        "1-1-4"
+      ],
+      "packet_v3_linked_assignment_ids": [
+        "assign-onsite-ecg-b-01",
+        "assign-pomr-ecg-case"
+      ],
+      "packet_v3_session_assignment_links": [
+        {
+          "assignment_id": "assign-onsite-ecg-b-01",
+          "relation": "onsite_approval",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        },
+        {
+          "assignment_id": "assign-pomr-ecg-case",
+          "relation": "submit_or_prepare",
+          "display_label": "제출/준비",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        }
+      ],
+      "packet_v3_approval_display": {
+        "card_badges": [
+          "현장승인"
+        ],
+        "detail_emphasis": [
+          "현장승인 필요"
+        ],
+        "show_assignment_count": true
+      }
     },
     {
       "id": "s-2026-05-01-0840-osce",
@@ -2994,7 +3601,33 @@
       "linked_assignments": [
         "assign-onsite-osce"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "packet_v3_source_refs": [
+        "1-7-2",
+        "1-1-4"
+      ],
+      "packet_v3_linked_assignment_ids": [
+        "assign-onsite-osce-01"
+      ],
+      "packet_v3_session_assignment_links": [
+        {
+          "assignment_id": "assign-onsite-osce-01",
+          "relation": "onsite_approval",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        }
+      ],
+      "packet_v3_approval_display": {
+        "card_badges": [
+          "현장승인"
+        ],
+        "detail_emphasis": [
+          "현장승인 필요"
+        ],
+        "show_assignment_count": true
+      }
     },
     {
       "id": "s-2026-05-01-1200-selfstudy",
@@ -4393,7 +5026,45 @@
       "linked_assignments": [
         "assign-onsite-ecg-cd"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "packet_v3_source_refs": [
+        "1-12-2",
+        "1-1-5",
+        "4-1",
+        "4-10",
+        "1-1-4"
+      ],
+      "packet_v3_linked_assignment_ids": [
+        "assign-onsite-ecg-cd-01",
+        "assign-pomr-ecg-case"
+      ],
+      "packet_v3_session_assignment_links": [
+        {
+          "assignment_id": "assign-onsite-ecg-cd-01",
+          "relation": "onsite_approval",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        },
+        {
+          "assignment_id": "assign-pomr-ecg-case",
+          "relation": "submit_or_prepare",
+          "display_label": "제출/준비",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        }
+      ],
+      "packet_v3_approval_display": {
+        "card_badges": [
+          "현장승인"
+        ],
+        "detail_emphasis": [
+          "현장승인 필요"
+        ],
+        "show_assignment_count": true
+      }
     },
     {
       "id": "s-2026-05-07-0900-dyspnea",
@@ -4488,7 +5159,33 @@
       "linked_assignments": [
         "assign-onsite-dyspnea-cpx"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "packet_v3_source_refs": [
+        "1-12-3",
+        "1-1-4"
+      ],
+      "packet_v3_linked_assignment_ids": [
+        "assign-onsite-cpx-dyspnea-01"
+      ],
+      "packet_v3_session_assignment_links": [
+        {
+          "assignment_id": "assign-onsite-cpx-dyspnea-01",
+          "relation": "onsite_approval",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        }
+      ],
+      "packet_v3_approval_display": {
+        "card_badges": [
+          "현장승인"
+        ],
+        "detail_emphasis": [
+          "현장승인 필요"
+        ],
+        "show_assignment_count": true
+      }
     },
     {
       "id": "s-2026-05-07-1100-selfstudy",
@@ -4933,7 +5630,45 @@
       "linked_assignments": [
         "assign-onsite-ecg-ef"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "packet_v3_source_refs": [
+        "1-13-1",
+        "1-1-5",
+        "4-1",
+        "4-11",
+        "1-1-4"
+      ],
+      "packet_v3_linked_assignment_ids": [
+        "assign-onsite-ecg-ef-01",
+        "assign-pomr-ecg-case"
+      ],
+      "packet_v3_session_assignment_links": [
+        {
+          "assignment_id": "assign-onsite-ecg-ef-01",
+          "relation": "onsite_approval",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        },
+        {
+          "assignment_id": "assign-pomr-ecg-case",
+          "relation": "submit_or_prepare",
+          "display_label": "제출/준비",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        }
+      ],
+      "packet_v3_approval_display": {
+        "card_badges": [
+          "현장승인"
+        ],
+        "detail_emphasis": [
+          "현장승인 필요"
+        ],
+        "show_assignment_count": true
+      }
     },
     {
       "id": "s-2026-05-08-1000-selfstudy",
@@ -5079,7 +5814,33 @@
       "linked_assignments": [
         "assign-onsite-valvular"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "packet_v3_source_refs": [
+        "1-13-2",
+        "1-1-4"
+      ],
+      "packet_v3_linked_assignment_ids": [
+        "assign-onsite-valvular-01"
+      ],
+      "packet_v3_session_assignment_links": [
+        {
+          "assignment_id": "assign-onsite-valvular-01",
+          "relation": "onsite_approval",
+          "display_label": "현장승인",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        }
+      ],
+      "packet_v3_approval_display": {
+        "card_badges": [
+          "현장승인"
+        ],
+        "detail_emphasis": [
+          "현장승인 필요"
+        ],
+        "show_assignment_count": true
+      }
     },
     {
       "id": "s-2026-05-08-1500-selfstudy",
@@ -5806,7 +6567,29 @@
         "1-9-4"
       ],
       "windowType": "clerkship-overlay",
-      "sourceKind": "overlay"
+      "sourceKind": "overlay",
+      "packet_v3_source_refs": [
+        "1-9-4",
+        "1-1-4"
+      ],
+      "packet_v3_linked_assignment_ids": [
+        "assign-submit-qna-nojaehyung"
+      ],
+      "packet_v3_session_assignment_links": [
+        {
+          "assignment_id": "assign-submit-qna-nojaehyung",
+          "relation": "submit_or_prepare",
+          "display_label": "제출/준비",
+          "counts_in_summary": true,
+          "counts_in_assignment_list": true,
+          "count_reason": "개별 현장승인/제출 항목으로 분리해야 종합(summary)에서 세션별 개수가 보인다."
+        }
+      ],
+      "packet_v3_approval_display": {
+        "card_badges": [],
+        "detail_emphasis": [],
+        "show_assignment_count": true
+      }
     },
     {
       "id": "overlay-2026-05-05-quota",
@@ -9919,7 +10702,580 @@
       "summary": "coarse 7 assignments를 수업별 과제 + 유폴 현장승인 opportunity 단위로 재구성함",
       "assignment_count": 41,
       "onsite_assignment_count": 22
-    }
+    },
+    "verbatim_session_patch_packet_v3": {
+      "meta": {
+        "packet_id": "cardiology-verbatim-session-patch-v3",
+        "type": "session_patch_packet",
+        "created_at": "2026-04-19T15:58:00+09:00",
+        "bundle_target": "cardiology-2026-04-chief-draft-v2",
+        "source_of_truth": "/Users/sffs123gmail.com/Desktop/의학과 공부 파일/본3/심장내과/25/(0) 26년도 인계/심장내과 인계 정리용.md",
+        "goal": "심장내과 인계 정리용.md 원문 보존형으로 session detail/assignment 연결/현장승인 count 구조를 복구"
+      },
+      "priority_refs": [
+        "1-1-4",
+        "1-4-2",
+        "1-4-5",
+        "1-5-2",
+        "1-6-1",
+        "1-6-2",
+        "1-6-3"
+      ],
+      "session_patch_count": 17,
+      "assignment_def_count": 21,
+      "split_rules": {
+        "supersede_assignments": [
+          {
+            "old_assignment_id": "assign-uportfolio-onsite",
+            "replace_with": [
+              "assign-onsite-heartsound-01",
+              "assign-onsite-cpx-htn-01",
+              "assign-onsite-ecg-a-01",
+              "assign-onsite-ecg-b-01",
+              "assign-onsite-ecg-cd-01",
+              "assign-onsite-ecg-ef-01",
+              "assign-onsite-pci-01",
+              "assign-onsite-pci-02",
+              "assign-onsite-pci-03",
+              "assign-onsite-cpx-palpit-01",
+              "assign-onsite-cardiac-exam-01",
+              "assign-onsite-osce-01",
+              "assign-onsite-outpatient-01",
+              "assign-onsite-outpatient-02",
+              "assign-onsite-cpx-dyspnea-01",
+              "assign-onsite-valvular-01"
+            ],
+            "reason": "유폴 현장승인을 한 덩어리로 두면 카드/종합에서 개별 count가 안 보임"
+          },
+          {
+            "old_assignment_id": "assign-outpatient-records",
+            "replace_with": [
+              "assign-onsite-outpatient-01",
+              "assign-onsite-outpatient-02",
+              "assign-outpatient-record-01",
+              "assign-outpatient-record-02"
+            ],
+            "reason": "외래 예진기록지와 외래 현장승인을 분리해야 준비/제출/승인 단계가 세션에 맞게 보임"
+          },
+          {
+            "old_assignment_id": "assign-pomr-ecg-case",
+            "replace_with": [
+              "assign-submit-pomr-01",
+              "assign-onsite-ecg-a-01",
+              "assign-onsite-ecg-b-01",
+              "assign-onsite-ecg-cd-01",
+              "assign-onsite-ecg-ef-01"
+            ],
+            "reason": "POMR 제출과 심전도 발표 현장승인을 분리해야 session별 연결이 선명해짐"
+          }
+        ],
+        "counting_rule": "onsite_approval / deliverable 각각을 개별 assignment-summary/event/task로 생성한다.",
+        "display_rule": "현장승인 assignment는 카드와 과제 목록에서 `현장승인` 텍스트가 직접 보이도록 한다."
+      },
+      "notes": [
+        "이번 packet은 v2의 일정 spine은 유지하되, 세션 상세는 md 원문 block을 다시 실어 넣는 방향이다.",
+        "summary 2~3줄이 아니라 sections/note/linked note 계층에서 원문이 그대로 살아 있어야 한다.",
+        "현장승인 항목은 assignment summary에서 개별 개수로 세도록 분리한다."
+      ]
+    },
+    "verbatim_session_patch_packet_v3_path": "/Users/sffs123gmail.com/.openclaw/workspace/kmle-planner/data/clerkships/packets/cardiology/2026-04-19_verbatim_session_patch_packet_v3.json",
+    "packet_v3_assignment_defs": [
+      {
+        "id": "assign-onsite-heartsound-01",
+        "name": "현장승인 · 심음청진",
+        "kind": "onsite_approval",
+        "countable": true,
+        "display_label": "현장승인",
+        "approval_kind": "유폴 자유기록 · 심음청진",
+        "approval_highlight": "approval-special",
+        "source_refs": [
+          "1-1-4",
+          "1-4-2"
+        ],
+        "linked_session_ids": [
+          "s-2026-04-28-0840-heartsound"
+        ],
+        "completion_rule": "심음청진 수업 직후 박재형 교수님께 유폴 승인 받으면 1개 완료",
+        "pre_submit_rule": "핫스팟/아이패드로 유폴 접속 후 점(.)만 찍어 미리 제출해두기",
+        "supersedes": [
+          "assign-uportfolio-onsite"
+        ]
+      },
+      {
+        "id": "assign-onsite-cpx-htn-01",
+        "name": "현장승인 · CPX 고혈압",
+        "kind": "onsite_approval",
+        "countable": true,
+        "display_label": "현장승인",
+        "approval_kind": "유폴 자유기록 · CPX HTN",
+        "approval_highlight": "approval-special",
+        "source_refs": [
+          "1-1-4",
+          "1-4-5"
+        ],
+        "linked_session_ids": [
+          "s-2026-04-28-1400-htn-cpx"
+        ],
+        "completion_rule": "CPX HTN 종료 후 진선아 교수님 승인 시 1개 완료",
+        "pre_submit_rule": "자유기록 항목을 미리 점(.)만 제출해두기",
+        "supersedes": [
+          "assign-uportfolio-onsite"
+        ]
+      },
+      {
+        "id": "assign-submit-pomr-01",
+        "name": "제출 · POMR 발표",
+        "kind": "deliverable",
+        "countable": true,
+        "display_label": "제출형",
+        "source_refs": [
+          "1-1-4",
+          "1-5-2"
+        ],
+        "linked_session_ids": [
+          "s-2026-04-29-1000-pomr"
+        ],
+        "completion_rule": "이재환 교수님 POMR 발표 후 피드백 반영본 업로드 시 완료",
+        "pre_submit_rule": "심전도 발표 케이스를 POMR 형식으로 수정해 준비",
+        "supersedes": [
+          "assign-pomr-ecg-case"
+        ]
+      },
+      {
+        "id": "assign-onsite-ecg-a-01",
+        "name": "현장승인 · 심전도 발표 A",
+        "kind": "onsite_approval",
+        "countable": true,
+        "display_label": "현장승인",
+        "approval_kind": "유폴 자유기록 · 심전도 발표 (A)",
+        "approval_highlight": "approval-special",
+        "source_refs": [
+          "1-1-4",
+          "1-6-1",
+          "1-1-5",
+          "4-1",
+          "4-8"
+        ],
+        "linked_session_ids": [
+          "s-2026-04-30-0800-ecg-a"
+        ],
+        "completion_rule": "A 발표 종료 직후 김준형 교수님께 유폴 현장평가 받으면 완료",
+        "pre_submit_rule": "발표 전 유폴 자유기록 항목을 미리 제출해두기",
+        "supersedes": [
+          "assign-uportfolio-onsite",
+          "assign-pomr-ecg-case"
+        ]
+      },
+      {
+        "id": "assign-onsite-ecg-b-01",
+        "name": "현장승인 · 심전도 발표 B",
+        "kind": "onsite_approval",
+        "countable": true,
+        "display_label": "현장승인",
+        "approval_kind": "유폴 자유기록 · 심전도 발표 (B)",
+        "approval_highlight": "approval-special",
+        "source_refs": [
+          "1-1-4",
+          "1-7-1",
+          "1-1-5",
+          "4-1",
+          "4-9"
+        ],
+        "linked_session_ids": [
+          "s-2026-05-01-0800-ecg-b"
+        ],
+        "completion_rule": "B 발표 종료 직후 김준형 교수님께 유폴 현장평가 받으면 완료",
+        "pre_submit_rule": "발표 전 유폴 자유기록 항목을 미리 제출해두기",
+        "supersedes": [
+          "assign-uportfolio-onsite",
+          "assign-pomr-ecg-case"
+        ]
+      },
+      {
+        "id": "assign-onsite-ecg-cd-01",
+        "name": "현장승인 · 심전도 발표 C,D",
+        "kind": "onsite_approval",
+        "countable": true,
+        "display_label": "현장승인",
+        "approval_kind": "유폴 자유기록 · 심전도 발표 (C,D)",
+        "approval_highlight": "approval-special",
+        "source_refs": [
+          "1-1-4",
+          "1-12-2",
+          "1-1-5",
+          "4-1",
+          "4-10"
+        ],
+        "linked_session_ids": [
+          "s-2026-05-07-0800-ecg-cd"
+        ],
+        "completion_rule": "C,D 발표 종료 직후 김준형 교수님께 유폴 현장평가 받으면 완료",
+        "pre_submit_rule": "발표 전 유폴 자유기록 항목을 미리 제출해두기",
+        "supersedes": [
+          "assign-uportfolio-onsite",
+          "assign-pomr-ecg-case"
+        ]
+      },
+      {
+        "id": "assign-onsite-ecg-ef-01",
+        "name": "현장승인 · 심전도 발표 E,F",
+        "kind": "onsite_approval",
+        "countable": true,
+        "display_label": "현장승인",
+        "approval_kind": "유폴 자유기록 · 심전도 발표 (E,F)",
+        "approval_highlight": "approval-special",
+        "source_refs": [
+          "1-1-4",
+          "1-13-1",
+          "1-1-5",
+          "4-1",
+          "4-11"
+        ],
+        "linked_session_ids": [
+          "s-2026-05-08-0800-ecg-ef"
+        ],
+        "completion_rule": "E,F 발표 종료 직후 김준형 교수님께 유폴 현장평가 받으면 완료",
+        "pre_submit_rule": "발표 전 유폴 자유기록 항목을 미리 제출해두기",
+        "supersedes": [
+          "assign-uportfolio-onsite",
+          "assign-pomr-ecg-case"
+        ]
+      },
+      {
+        "id": "assign-onsite-pci-01",
+        "name": "현장승인 · 심혈관조영실 PCI 1/3",
+        "kind": "onsite_approval",
+        "countable": true,
+        "display_label": "현장승인",
+        "approval_kind": "유폴 자유기록 · 심혈관조영실 PCI (1/3)",
+        "approval_highlight": "approval-special",
+        "source_refs": [
+          "1-1-4",
+          "1-4-3",
+          "1-6-2",
+          "3-1-1",
+          "3-1-3"
+        ],
+        "eligible_session_ids": [
+          "s-2026-04-28-1000-abc-pci",
+          "s-2026-04-30-0840-def-pci",
+          "s-2026-05-05-1000-abc-pci-sejong",
+          "s-2026-05-05-1100-def-pci-sejong",
+          "s-2026-05-05-1330-def-arrhyproc",
+          "s-2026-05-06-1000-abc-arrhyproc"
+        ],
+        "completion_rule": "PCI/부정맥 시술 참관 후 담당 교수님 승인 1회",
+        "pre_submit_rule": "자유기록 항목을 미리 점(.)만 제출",
+        "supersedes": [
+          "assign-uportfolio-onsite"
+        ]
+      },
+      {
+        "id": "assign-onsite-pci-02",
+        "name": "현장승인 · 심혈관조영실 PCI 2/3",
+        "kind": "onsite_approval",
+        "countable": true,
+        "display_label": "현장승인",
+        "approval_kind": "유폴 자유기록 · 심혈관조영실 PCI (2/3)",
+        "approval_highlight": "approval-special",
+        "source_refs": [
+          "1-1-4",
+          "1-4-3",
+          "1-6-2",
+          "3-1-1",
+          "3-1-3"
+        ],
+        "eligible_session_ids": [
+          "s-2026-04-28-1000-abc-pci",
+          "s-2026-04-30-0840-def-pci",
+          "s-2026-05-05-1000-abc-pci-sejong",
+          "s-2026-05-05-1100-def-pci-sejong",
+          "s-2026-05-05-1330-def-arrhyproc",
+          "s-2026-05-06-1000-abc-arrhyproc"
+        ],
+        "completion_rule": "다른 PCI/부정맥 시술 참관 후 담당 교수님 승인 1회",
+        "pre_submit_rule": "자유기록 항목을 미리 점(.)만 제출",
+        "supersedes": [
+          "assign-uportfolio-onsite"
+        ]
+      },
+      {
+        "id": "assign-onsite-pci-03",
+        "name": "현장승인 · 심혈관조영실 PCI 3/3",
+        "kind": "onsite_approval",
+        "countable": true,
+        "display_label": "현장승인",
+        "approval_kind": "유폴 자유기록 · 심혈관조영실 PCI (3/3)",
+        "approval_highlight": "approval-special",
+        "source_refs": [
+          "1-1-4",
+          "1-4-3",
+          "1-6-2",
+          "3-1-1",
+          "3-1-3"
+        ],
+        "eligible_session_ids": [
+          "s-2026-04-28-1000-abc-pci",
+          "s-2026-04-30-0840-def-pci",
+          "s-2026-05-05-1000-abc-pci-sejong",
+          "s-2026-05-05-1100-def-pci-sejong",
+          "s-2026-05-05-1330-def-arrhyproc",
+          "s-2026-05-06-1000-abc-arrhyproc"
+        ],
+        "completion_rule": "세 번째 PCI/부정맥 시술 참관 후 담당 교수님 승인 1회",
+        "pre_submit_rule": "자유기록 항목을 미리 점(.)만 제출",
+        "supersedes": [
+          "assign-uportfolio-onsite"
+        ]
+      },
+      {
+        "id": "assign-onsite-cpx-palpit-01",
+        "name": "현장승인 · CPX 두근거림/실신",
+        "kind": "onsite_approval",
+        "countable": true,
+        "display_label": "현장승인",
+        "approval_kind": "유폴 자유기록 · CPX 두근거림/실신",
+        "approval_highlight": "approval-special",
+        "source_refs": [
+          "1-1-4",
+          "1-6-3"
+        ],
+        "linked_session_ids": [
+          "s-2026-04-30-1400-palpit"
+        ],
+        "completion_rule": "권희진 교수님 CPX 종료 후 승인 시 완료",
+        "pre_submit_rule": "자유기록 항목을 미리 점(.)만 제출",
+        "supersedes": [
+          "assign-uportfolio-onsite"
+        ]
+      },
+      {
+        "id": "assign-onsite-cardiac-exam-01",
+        "name": "현장승인 · 심장진찰",
+        "kind": "onsite_approval",
+        "countable": true,
+        "display_label": "현장승인",
+        "approval_kind": "유폴 자유기록 · 심장진찰",
+        "approval_highlight": "approval-special",
+        "source_refs": [
+          "1-1-4",
+          "1-3-6"
+        ],
+        "linked_session_ids": [
+          "s-2026-04-27-1600-physical"
+        ],
+        "completion_rule": "복영남/성석우 교수님 심장진찰 승인 시 완료",
+        "pre_submit_rule": "자유기록 항목을 미리 점(.)만 제출",
+        "supersedes": [
+          "assign-uportfolio-onsite"
+        ]
+      },
+      {
+        "id": "assign-onsite-osce-01",
+        "name": "현장승인 · 임상술기(OSCE)",
+        "kind": "onsite_approval",
+        "countable": true,
+        "display_label": "현장승인",
+        "approval_kind": "유폴 임상술기(척도평가) · OSCE",
+        "approval_highlight": "approval-special",
+        "source_refs": [
+          "1-1-4",
+          "1-7-2"
+        ],
+        "linked_session_ids": [
+          "s-2026-05-01-0840-osce"
+        ],
+        "completion_rule": "안계택 교수님 OSCE 현장평가 승인 시 완료",
+        "pre_submit_rule": "유폴 임상술기 화면을 미리 열어두기",
+        "supersedes": [
+          "assign-uportfolio-onsite"
+        ]
+      },
+      {
+        "id": "assign-onsite-outpatient-01",
+        "name": "현장승인 · 외래 참관 1/2",
+        "kind": "onsite_approval",
+        "countable": true,
+        "display_label": "현장승인",
+        "approval_kind": "유폴 외래 참관 1/2",
+        "approval_highlight": "approval-special",
+        "source_refs": [
+          "1-1-4",
+          "1-4-3",
+          "1-6-2",
+          "3-3-1",
+          "3-3-2"
+        ],
+        "eligible_session_ids": [
+          "s-2026-04-28-1000-def-outpatient",
+          "s-2026-04-29-1400-def-outpatient",
+          "s-2026-04-30-0840-abc-outpatient",
+          "s-2026-05-04-1000-abc-outpatient-sejong",
+          "s-2026-05-04-1330-def-outpatient-sejong",
+          "s-2026-05-07-1330-abc-outpatient"
+        ],
+        "completion_rule": "외래 참관 후 해당 교수님께 외래 참관 현장승인 1회 받으면 완료",
+        "pre_submit_rule": "유폴 외래 참관 화면과 예진기록지 준비",
+        "supersedes": [
+          "assign-uportfolio-onsite",
+          "assign-outpatient-records"
+        ]
+      },
+      {
+        "id": "assign-onsite-outpatient-02",
+        "name": "현장승인 · 외래 참관 2/2",
+        "kind": "onsite_approval",
+        "countable": true,
+        "display_label": "현장승인",
+        "approval_kind": "유폴 외래 참관 2/2",
+        "approval_highlight": "approval-special",
+        "source_refs": [
+          "1-1-4",
+          "1-4-3",
+          "1-6-2",
+          "3-3-1",
+          "3-3-2"
+        ],
+        "eligible_session_ids": [
+          "s-2026-04-28-1000-def-outpatient",
+          "s-2026-04-29-1400-def-outpatient",
+          "s-2026-04-30-0840-abc-outpatient",
+          "s-2026-05-04-1000-abc-outpatient-sejong",
+          "s-2026-05-04-1330-def-outpatient-sejong",
+          "s-2026-05-07-1330-abc-outpatient"
+        ],
+        "completion_rule": "다른 외래 참관 후 외래 참관 현장승인 1회 추가",
+        "pre_submit_rule": "유폴 외래 참관 화면과 예진기록지 준비",
+        "supersedes": [
+          "assign-uportfolio-onsite",
+          "assign-outpatient-records"
+        ]
+      },
+      {
+        "id": "assign-outpatient-record-01",
+        "name": "제출 · 외래 예진기록지 1/2",
+        "kind": "deliverable",
+        "countable": true,
+        "display_label": "예진기록지",
+        "source_refs": [
+          "1-1-4",
+          "3-3-2"
+        ],
+        "eligible_session_ids": [
+          "s-2026-04-28-1000-def-outpatient",
+          "s-2026-04-29-1400-def-outpatient",
+          "s-2026-04-30-0840-abc-outpatient",
+          "s-2026-05-04-1000-abc-outpatient-sejong",
+          "s-2026-05-04-1330-def-outpatient-sejong",
+          "s-2026-05-07-1330-abc-outpatient"
+        ],
+        "completion_rule": "외래 예진 1회 후 유폴 SOAP 입력 + 종이 PDF 첨부 + 현장승인 연동",
+        "pre_submit_rule": "내분비 때처럼 점(.)만 찍지 말고 양식을 채워서 제출",
+        "supersedes": [
+          "assign-outpatient-records"
+        ]
+      },
+      {
+        "id": "assign-outpatient-record-02",
+        "name": "제출 · 외래 예진기록지 2/2",
+        "kind": "deliverable",
+        "countable": true,
+        "display_label": "예진기록지",
+        "source_refs": [
+          "1-1-4",
+          "3-3-2"
+        ],
+        "eligible_session_ids": [
+          "s-2026-04-28-1000-def-outpatient",
+          "s-2026-04-29-1400-def-outpatient",
+          "s-2026-04-30-0840-abc-outpatient",
+          "s-2026-05-04-1000-abc-outpatient-sejong",
+          "s-2026-05-04-1330-def-outpatient-sejong",
+          "s-2026-05-07-1330-abc-outpatient"
+        ],
+        "completion_rule": "외래 예진 2회차 후 유폴 SOAP 입력 + 종이 PDF 첨부 + 현장승인 연동",
+        "pre_submit_rule": "내분비 때처럼 점(.)만 찍지 말고 양식을 채워서 제출",
+        "supersedes": [
+          "assign-outpatient-records"
+        ]
+      },
+      {
+        "id": "assign-onsite-cpx-dyspnea-01",
+        "name": "현장승인 · CPX 호흡곤란",
+        "kind": "onsite_approval",
+        "countable": true,
+        "display_label": "현장승인",
+        "approval_kind": "유폴 자유기록 · CPX 호흡곤란",
+        "approval_highlight": "approval-special",
+        "source_refs": [
+          "1-1-4",
+          "1-12-3"
+        ],
+        "linked_session_ids": [
+          "s-2026-05-07-0900-dyspnea"
+        ],
+        "completion_rule": "김미주 교수님 CPX 종료 후 승인 시 완료",
+        "pre_submit_rule": "자유기록 항목을 미리 점(.)만 제출",
+        "supersedes": [
+          "assign-uportfolio-onsite"
+        ]
+      },
+      {
+        "id": "assign-onsite-valvular-01",
+        "name": "현장승인 · 심장판막질환",
+        "kind": "onsite_approval",
+        "countable": true,
+        "display_label": "현장승인",
+        "approval_kind": "유폴 자유기록 · 심장판막질환",
+        "approval_highlight": "approval-special",
+        "source_refs": [
+          "1-1-4",
+          "1-13-2"
+        ],
+        "linked_session_ids": [
+          "s-2026-05-08-1330-valvular"
+        ],
+        "completion_rule": "심장판막질환 수업 후 양유진/복영남 교수님 승인 시 완료",
+        "pre_submit_rule": "자유기록 항목을 미리 점(.)만 제출",
+        "supersedes": [
+          "assign-uportfolio-onsite"
+        ]
+      },
+      {
+        "id": "assign-submit-pretest-free-record",
+        "name": "제출 · Pretest 자유기록",
+        "kind": "deliverable",
+        "countable": true,
+        "display_label": "제출형",
+        "source_refs": [
+          "1-1-4",
+          "1-3-5"
+        ],
+        "linked_session_ids": [
+          "s-2026-04-27-1400-pretest"
+        ],
+        "completion_rule": "pretest 당일 유폴 자유기록 업로드 시 완료",
+        "pre_submit_rule": "오늘 프테를 봤다 / 무엇을 했다 / 틀렸다 / 속상했다 / 공부해야겠다 정도로 짧게 작성",
+        "supersedes": []
+      },
+      {
+        "id": "assign-submit-qna-nojaehyung",
+        "name": "제출 · 심혈관질환 Q&A",
+        "kind": "deliverable",
+        "countable": true,
+        "display_label": "제출형",
+        "source_refs": [
+          "1-1-4",
+          "1-9-4"
+        ],
+        "linked_session_ids": [
+          "overlay-2026-05-04-q-a"
+        ],
+        "completion_rule": "노재형 교수님이 제시한 stable angina 관련 주제를 유폴에 직접 작성하면 완료",
+        "pre_submit_rule": "워드 첨부 말고 유폴리오 본문에 직접 작성",
+        "supersedes": []
+      }
+    ]
   },
   "audit": {
     "bundle_id": "cardiology-2026-04-chief-draft-v2",

@@ -794,6 +794,39 @@
       border: 1px solid rgba(220,226,238,0.92);
     }
 
+    .calendar-summary-row-button {
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+      text-align: left;
+      transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+    }
+
+    .calendar-summary-row-button:hover {
+      transform: translateY(-1px);
+      border-color: rgba(148, 163, 184, 0.8);
+      box-shadow: 0 10px 18px rgba(15, 23, 42, 0.06);
+    }
+
+    .calendar-summary-row-button.active {
+      background: rgba(239, 246, 255, 0.98);
+      border-color: rgba(96, 165, 250, 0.85);
+      box-shadow: inset 3px 0 0 #2563eb;
+    }
+
+    .calendar-summary-row-button.toggle-active {
+      background: rgba(254, 249, 195, 0.92);
+      border-color: rgba(250, 204, 21, 0.8);
+      box-shadow: inset 3px 0 0 #ca8a04;
+    }
+
+    .detail-filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
     .calendar-summary-row-label {
       display: grid;
       gap: 2px;
@@ -1324,6 +1357,66 @@
       display: grid;
       gap: 8px;
       line-height: 1.65;
+    }
+
+    .location-guide-grid {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .location-guide-card {
+      border: 1px solid rgba(220,226,238,0.95);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.86);
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .location-guide-card ul {
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 8px;
+      line-height: 1.6;
+    }
+
+    .location-guide-thumb-grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .location-guide-thumb {
+      margin: 0;
+      display: grid;
+      gap: 6px;
+    }
+
+    .location-guide-thumb img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid rgba(220,226,238,0.95);
+      background: rgba(241,245,249,0.92);
+    }
+
+    .location-guide-thumb figcaption {
+      font-size: 12px;
+      color: var(--muted);
+      word-break: break-all;
+      line-height: 1.45;
+    }
+
+    .location-guide-empty {
+      border: 1px dashed rgba(203,213,225,0.95);
+      border-radius: 14px;
+      padding: 12px;
+      color: var(--muted);
+      font-size: 13px;
+      background: rgba(248,250,252,0.9);
     }
 
     .hero-side {
@@ -2400,6 +2493,7 @@
     let activeCalendarEventId = null;
     let activeCalendarSlotDetail = null;
     let activeCalendarSummaryDetail = null;
+    let activeCalendarLocationGuideWeek = null;
     let activeCalendarMoveEventId = null;
     let calendarEventLongPressTimer = null;
     let calendarEventLongPressConsumed = false;
@@ -2410,6 +2504,8 @@
     let selectedCalendarScope = 'slot';
     let selectedWeekKey = formatDateInput(startOfWeek(today));
     let selectedCalendarSlotKey = '';
+    let activeCalendarSummaryFilter = 'all';
+    let activeCalendarSummaryIncompleteFirst = false;
 
     const CALENDAR_COLOR_PRESETS = [
       { key: '', label: '기본', color: '#2563eb' },
@@ -3522,6 +3618,20 @@
       return null;
     }
 
+    function bundleLocationGuide(bundle) {
+      return bundle?.fixed_info?.location_guide || null;
+    }
+
+    function locationGuideForWeek(weekDays) {
+      const bundleId = bundleIdForWeek(weekDays);
+      if (!bundleId) return null;
+      return bundleLocationGuide(state.clerkshipBundles?.[bundleId]);
+    }
+
+    function pathBasename(value) {
+      return String(value || '').split('/').pop() || '';
+    }
+
     function isWeeklySummaryEvent(event) {
       if (!event) return false;
       if (event.sourceSessionId || event.sourceKind === 'session' || event.windowType === 'clerkship-session') return false;
@@ -3554,6 +3664,46 @@
         if (event.type !== 'exam' && boardConfig.exam.visible) counts.exam += 1;
       });
       return counts;
+    }
+
+    function calendarSummaryCategoryForEvent(event) {
+      if (!event) return 'other';
+      const session = findBundleSessionForEvent(event);
+      const relatedAssignments = session ? findRelatedAssignmentsForSession(event, session) : [];
+      const boardConfig = calendarEventBoardConfig(event, session, relatedAssignments);
+      if (event.type === 'assignment' || event.sourceKind === 'assignment') return 'assignment';
+      if (event.type === 'chief' || event.type === 'admin') return 'chief_admin';
+      if (event.type === 'presentation' || event.type === 'exam' || boardConfig.presentation.visible || boardConfig.exam.visible) return 'presentation_exam';
+      return 'other';
+    }
+
+    function summaryCategoryCounts(summaryEvents) {
+      return summaryEvents.reduce((acc, event) => {
+        const key = calendarSummaryCategoryForEvent(event);
+        acc[key] = (acc[key] || 0) + 1;
+        return acc;
+      }, { assignment: 0, presentation_exam: 0, chief_admin: 0, other: 0 });
+    }
+
+    function filterSummaryEventsByCategory(summaryEvents, filterKey) {
+      if (!filterKey || filterKey === 'all') return [...summaryEvents];
+      return summaryEvents.filter(event => calendarSummaryCategoryForEvent(event) === filterKey);
+    }
+
+    function sortSummaryEvents(summaryEvents, { incompleteFirst = false } = {}) {
+      return [...summaryEvents].sort((a, b) => {
+        if (incompleteFirst && Boolean(a?.completed) !== Boolean(b?.completed)) {
+          return a?.completed ? 1 : -1;
+        }
+        return compareEventChronology(a, b);
+      });
+    }
+
+    function summaryFilterLabel(filterKey) {
+      if (filterKey === 'assignment') return '과제';
+      if (filterKey === 'presentation_exam') return '발표·시험';
+      if (filterKey === 'chief_admin') return '조장·행정';
+      return '전체';
     }
 
     function timeSortValue(value) {
@@ -3591,6 +3741,32 @@
       return calendarEventsForDate(dateIso)
         .filter(event => !bundleId || event.bundleId === bundleId)
         .filter(event => !isWeeklySummaryEvent(event))
+        .sort(compareEventChronology);
+    }
+
+    function isSummaryPrimaryCandidate(event) {
+      if (!event) return false;
+      const session = findBundleSessionForEvent(event);
+      const relatedAssignments = session ? findRelatedAssignmentsForSession(event, session) : [];
+      const boardConfig = calendarEventBoardConfig(event, session, relatedAssignments);
+      return event.type === 'chief'
+        || event.type === 'admin'
+        || event.type === 'presentation'
+        || event.type === 'exam'
+        || boardConfig.presentation.visible
+        || boardConfig.exam.visible;
+    }
+
+    function weekSummaryDetailEvents(weekDays) {
+      const summary = weekSummaryEvents(weekDays);
+      const primary = weekAllPrimaryEvents(weekDays).filter(isSummaryPrimaryCandidate);
+      const seen = new Set();
+      return [...summary, ...primary]
+        .filter(event => {
+          if (!event?.id || seen.has(event.id)) return false;
+          seen.add(event.id);
+          return true;
+        })
         .sort(compareEventChronology);
     }
 
@@ -3657,14 +3833,14 @@
     }
 
     function weekSummarySignals(weekDays) {
-      const summaryEvents = weekSummaryEvents(weekDays);
+      const detailEvents = weekSummaryDetailEvents(weekDays);
       const primaryEvents = weekAllPrimaryEvents(weekDays);
       return {
-        total: summaryEvents.length,
-        completed: summaryEvents.filter(event => event.completed).length,
-        pending: summaryEvents.filter(event => !event.completed).length,
-        changed: [...summaryEvents, ...primaryEvents].filter(calendarEventHasCustomSchedule).length,
-        needsConfirmation: summaryEvents.filter(event => findBundleAssignmentForEvent(event)?.needs_confirmation).length
+        total: detailEvents.length,
+        completed: detailEvents.filter(event => event.completed).length,
+        pending: detailEvents.filter(event => !event.completed).length,
+        changed: [...detailEvents, ...primaryEvents].filter(calendarEventHasCustomSchedule).length,
+        needsConfirmation: detailEvents.filter(event => findBundleAssignmentForEvent(event)?.needs_confirmation).length
       };
     }
 
@@ -4296,9 +4472,10 @@
       const weekDays = buildCalendarWeekDays(calendarMonthCursor);
       ensureCalendarSelectionForWeek(weekDays);
       const weekKey = weekKeyFromDate(weekDays[0]);
-      const summaryEvents = weekSummaryEvents(weekDays);
-      const counts = weeklySummaryCounts(weekDays, summaryEvents);
+      const summaryEvents = weekSummaryDetailEvents(weekDays);
+      const counts = summaryCategoryCounts(summaryEvents);
       const signals = weekSummarySignals(weekDays);
+      const locationGuide = locationGuideForWeek(weekDays);
       const hourMarks = calendarTimelineHourMarks();
 
       label.textContent = calendarBoardRangeLabel(weekDays);
@@ -4320,7 +4497,7 @@
             </div>
           `;
         }).join('')}
-        <button class="calendar-summary-rail ${(activeCalendarSummaryDetail === weekKey || selectedCalendarScope === 'summary') ? 'selected' : ''}" onclick="openCalendarSummaryDetail('${weekKey}')">
+        <div class="calendar-summary-rail ${(activeCalendarSummaryDetail === weekKey || activeCalendarLocationGuideWeek === weekKey || selectedCalendarScope === 'summary') ? 'selected' : ''}" role="button" tabindex="0" onclick="openCalendarSummaryDetailWithFilter('${weekKey}', 'all')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCalendarSummaryDetailWithFilter('${weekKey}', 'all');}">
           <div class="calendar-summary-kicker">
             <span>종합</span>
             <span>${signals.total}개</span>
@@ -4332,22 +4509,26 @@
           </div>
           <div class="calendar-summary-section-title">이번 주 체크리스트</div>
           <div class="calendar-summary-list">
-            <div class="calendar-summary-row">
+            <button type="button" class="calendar-summary-row calendar-summary-row-button ${(activeCalendarSummaryDetail === weekKey && activeCalendarSummaryFilter === 'assignment') ? 'active' : ''}" onclick="event.stopPropagation();openCalendarSummaryDetailWithFilter('${weekKey}', 'assignment');">
               <div class="calendar-summary-row-label"><strong>과제</strong><span>제출/확인할 문서와 체크</span></div>
               <div class="calendar-summary-row-value">${counts.assignment || 0}</div>
-            </div>
-            <div class="calendar-summary-row">
+            </button>
+            <button type="button" class="calendar-summary-row calendar-summary-row-button ${(activeCalendarSummaryDetail === weekKey && activeCalendarSummaryFilter === 'presentation_exam') ? 'active' : ''}" onclick="event.stopPropagation();openCalendarSummaryDetailWithFilter('${weekKey}', 'presentation_exam');">
               <div class="calendar-summary-row-label"><strong>발표·시험</strong><span>발표 준비와 평가 일정</span></div>
-              <div class="calendar-summary-row-value">${(counts.presentation || 0) + (counts.exam || 0)}</div>
-            </div>
-            <div class="calendar-summary-row">
+              <div class="calendar-summary-row-value">${counts.presentation_exam || 0}</div>
+            </button>
+            <button type="button" class="calendar-summary-row calendar-summary-row-button ${(activeCalendarSummaryDetail === weekKey && activeCalendarSummaryFilter === 'chief_admin') ? 'active' : ''}" onclick="event.stopPropagation();openCalendarSummaryDetailWithFilter('${weekKey}', 'chief_admin');">
               <div class="calendar-summary-row-label"><strong>조장·행정</strong><span>운영, 연락, 세팅 업무</span></div>
-              <div class="calendar-summary-row-value">${(counts.chief || 0) + (counts.admin || 0)}</div>
-            </div>
-            <div class="calendar-summary-row">
+              <div class="calendar-summary-row-value">${counts.chief_admin || 0}</div>
+            </button>
+            <button type="button" class="calendar-summary-row calendar-summary-row-button ${activeCalendarSummaryDetail === weekKey && activeCalendarSummaryIncompleteFirst ? 'toggle-active' : ''}" onclick="event.stopPropagation(); if (activeCalendarSummaryDetail !== '${weekKey}') { activeCalendarSummaryFilter = 'all'; openCalendarSummaryDetail('${weekKey}'); } toggleCalendarSummaryIncompleteFirst();">
               <div class="calendar-summary-row-label"><strong>미완</strong><span>아직 체크되지 않은 항목</span></div>
               <div class="calendar-summary-row-value">${signals.pending}</div>
-            </div>
+            </button>
+            ${locationGuide ? `<button type="button" class="calendar-summary-row calendar-summary-row-button ${activeCalendarLocationGuideWeek === weekKey ? 'active' : ''}" onclick="event.stopPropagation();openCalendarLocationGuide('${weekKey}');">
+              <div class="calendar-summary-row-label"><strong>지도</strong><span>본원·세종 장소 가이드</span></div>
+              <div class="calendar-summary-row-value">${locationGuide.counts?.places || 0}</div>
+            </button>` : ''}
             <div class="calendar-summary-row">
               <div class="calendar-summary-row-label"><strong>확인 필요</strong><span>교수님/시간/형식 재확인 필요</span></div>
               <div class="calendar-summary-row-value">${signals.needsConfirmation}</div>
@@ -4358,7 +4539,7 @@
             </div>
           </div>
           <div class="calendar-summary-note">클릭하면 종합 상세가 전체 화면으로 열리고, 과제 체크·진행도 관리는 거기서 이어서 할 수 있다.</div>
-        </button>
+        </div>
       `;
 
       const bodyCells = `
@@ -4460,6 +4641,7 @@
 
     function openCalendarSlotDetail(dateIso, slotKey, { editMode = false } = {}) {
       activeCalendarSummaryDetail = null;
+      activeCalendarLocationGuideWeek = null;
       activeCalendarEventId = null;
       activeCalendarSlotDetail = { date: dateIso, slotKey, editMode };
       selectedCalendarDate = dateIso;
@@ -4473,9 +4655,38 @@
     function openCalendarSummaryDetail(weekKey) {
       activeCalendarEventId = null;
       activeCalendarSlotDetail = null;
+      activeCalendarLocationGuideWeek = null;
       activeCalendarSummaryDetail = weekKey;
       selectedCalendarScope = 'summary';
       selectedWeekKey = weekKey;
+      renderCalendarBoard();
+      renderCalendarEventDetailScreen();
+    }
+
+    function openCalendarLocationGuide(weekKey) {
+      activeCalendarEventId = null;
+      activeCalendarSlotDetail = null;
+      activeCalendarSummaryDetail = null;
+      activeCalendarLocationGuideWeek = weekKey;
+      selectedCalendarScope = 'summary';
+      selectedWeekKey = weekKey;
+      renderCalendarBoard();
+      renderCalendarEventDetailScreen();
+    }
+
+    function openCalendarSummaryDetailWithFilter(weekKey, filterKey) {
+      activeCalendarSummaryFilter = filterKey || 'all';
+      openCalendarSummaryDetail(weekKey);
+    }
+
+    function setCalendarSummaryFilter(filterKey) {
+      activeCalendarSummaryFilter = filterKey || 'all';
+      renderCalendarBoard();
+      renderCalendarEventDetailScreen();
+    }
+
+    function toggleCalendarSummaryIncompleteFirst() {
+      activeCalendarSummaryIncompleteFirst = !activeCalendarSummaryIncompleteFirst;
       renderCalendarBoard();
       renderCalendarEventDetailScreen();
     }
@@ -4484,7 +4695,10 @@
       activeCalendarEventId = null;
       activeCalendarSlotDetail = null;
       activeCalendarSummaryDetail = null;
+      activeCalendarLocationGuideWeek = null;
       activeCalendarMoveEventId = null;
+      activeCalendarSummaryFilter = 'all';
+      activeCalendarSummaryIncompleteFirst = false;
       renderCalendarBoard();
       renderCalendarEventDetailScreen();
     }
@@ -5126,8 +5340,11 @@
 
     function renderCalendarSummaryDetailHtml(weekKey) {
       const weekDays = buildCalendarWeekDays(parseIsoDate(weekKey));
-      const summaryEvents = weekSummaryEvents(weekDays);
+      const allSummaryEvents = weekSummaryDetailEvents(weekDays);
+      const categoryCounts = summaryCategoryCounts(allSummaryEvents);
+      const summaryEvents = sortSummaryEvents(filterSummaryEventsByCategory(allSummaryEvents, activeCalendarSummaryFilter), { incompleteFirst: activeCalendarSummaryIncompleteFirst });
       const signals = weekSummarySignals(weekDays);
+      const locationGuide = locationGuideForWeek(weekDays);
       return `
         <div class="detail-screen-panel">
           <div class="detail-screen-head">
@@ -5138,11 +5355,20 @@
             <div class="detail-screen-hero">
               <div class="badge-row">
                 <span class="calendar-mini-chip">총 ${signals.total}개</span>
+                <span class="calendar-mini-chip">표시 ${summaryEvents.length}개</span>
                 <span class="calendar-mini-chip">미완 ${signals.pending}개</span>
                 <span class="calendar-mini-chip">확인 필요 ${signals.needsConfirmation}개</span>
               </div>
               <div class="detail-screen-title">이번 주 종합</div>
-              <div class="detail-screen-summary">${calendarBoardRangeLabel(weekDays)} · 종합 칸은 요약만, 실제 체크와 세부 확인은 여기서 한다.</div>
+              <div class="detail-screen-summary">${calendarBoardRangeLabel(weekDays)} · 현재 보기: ${summaryFilterLabel(activeCalendarSummaryFilter)}${activeCalendarSummaryIncompleteFirst ? ' · 미완 우선 정렬' : ''}</div>
+              <div class="detail-filter-row">
+                <button class="btn btn-small ${activeCalendarSummaryFilter === 'all' ? 'btn-secondary' : 'btn-ghost'}" onclick="setCalendarSummaryFilter('all')">전체 ${signals.total}</button>
+                <button class="btn btn-small ${activeCalendarSummaryFilter === 'assignment' ? 'btn-secondary' : 'btn-ghost'}" onclick="setCalendarSummaryFilter('assignment')">과제 ${categoryCounts.assignment || 0}</button>
+                <button class="btn btn-small ${activeCalendarSummaryFilter === 'presentation_exam' ? 'btn-secondary' : 'btn-ghost'}" onclick="setCalendarSummaryFilter('presentation_exam')">발표·시험 ${categoryCounts.presentation_exam || 0}</button>
+                <button class="btn btn-small ${activeCalendarSummaryFilter === 'chief_admin' ? 'btn-secondary' : 'btn-ghost'}" onclick="setCalendarSummaryFilter('chief_admin')">조장·행정 ${categoryCounts.chief_admin || 0}</button>
+                ${locationGuide ? `<button class="btn btn-small btn-ghost" onclick="openCalendarLocationGuide('${weekKey}')">장소 지도 ${locationGuide.counts?.places || 0}</button>` : ''}
+                <button class="btn btn-small ${activeCalendarSummaryIncompleteFirst ? 'btn-secondary' : 'btn-ghost'}" onclick="toggleCalendarSummaryIncompleteFirst()">${activeCalendarSummaryIncompleteFirst ? '기본 순서로 보기' : '안 한 것 먼저 보기'}</button>
+              </div>
             </div>
             <div class="detail-screen-section">
               <h4>주간 종합 일정</h4>
@@ -5173,7 +5399,84 @@
                     </div>
                   </div>
                 `;
-              }).join('')}</div>` : `<div class="empty">이번 주 종합 일정이 아직 없다.</div>`}
+              }).join('')}</div>` : `<div class="empty">현재 필터에서 보일 종합 항목이 없다.</div>`}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderCalendarLocationGuideHtml(weekKey) {
+      const weekDays = buildCalendarWeekDays(parseIsoDate(weekKey));
+      const locationGuide = locationGuideForWeek(weekDays);
+      if (!locationGuide) {
+        return `
+          <div class="detail-screen-panel">
+            <div class="detail-screen-head">
+              <button class="detail-screen-back" onclick="openCalendarSummaryDetail('${weekKey}')">← 종합으로</button>
+              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
+            </div>
+            <div class="detail-screen-body">
+              <div class="detail-screen-hero">
+                <div class="detail-screen-title">장소 지도</div>
+                <div class="detail-screen-summary">이 주차에는 불러올 장소 가이드가 아직 없다.</div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      const grouped = (locationGuide.entries || []).reduce((acc, entry) => {
+        const key = entry.campus || '기타';
+        if (!acc[key]) acc[key] = [];
+        acc[key].push(entry);
+        return acc;
+      }, {});
+
+      return `
+        <div class="detail-screen-panel">
+          <div class="detail-screen-head">
+            <button class="detail-screen-back" onclick="openCalendarSummaryDetail('${weekKey}')">← 종합으로</button>
+            <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
+          </div>
+          <div class="detail-screen-body">
+            <div class="detail-screen-hero">
+              <div class="badge-row">
+                <span class="calendar-mini-chip">장소 ${locationGuide.counts?.places || 0}</span>
+                <span class="calendar-mini-chip">이미지 ${locationGuide.counts?.images || 0}</span>
+                <span class="calendar-mini-chip">캠퍼스 ${locationGuide.counts?.campuses || 0}</span>
+              </div>
+              <div class="detail-screen-title">심장내과 장소 지도</div>
+              <div class="detail-screen-summary">${calendarBoardRangeLabel(weekDays)} · 본원/세종 장소 설명과 이미지 파일을 한 화면에서 본다.</div>
+            </div>
+            <div class="detail-screen-stack">
+              <div class="detail-screen-section">
+                <h4>장소 가이드 운영 방식</h4>
+                <ul>${(locationGuide.intro || []).map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+              </div>
+              ${Object.entries(grouped).map(([campus, entries]) => `
+                <div class="detail-screen-section">
+                  <h4>${escapeHtml(campus)}</h4>
+                  <div class="location-guide-grid">
+                    ${entries.map(entry => `
+                      <article class="location-guide-card">
+                        <div class="badge-row">
+                          <span class="calendar-mini-chip">${escapeHtml(entry.campus || '기타')}</span>
+                          <span class="calendar-mini-chip">이미지 ${entry.asset_urls?.length || 0}</span>
+                        </div>
+                        <div class="item-title">${escapeHtml(entry.title || '')}</div>
+                        <ul>${(entry.summary || []).map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+                        ${(entry.asset_urls || []).length ? `<div class="location-guide-thumb-grid">${(entry.asset_urls || []).map((url, index) => `
+                          <figure class="location-guide-thumb">
+                            <img src="${encodeURI(url)}" alt="${escapeHtml(`${entry.title} ${index + 1}`)}" loading="lazy" />
+                            <figcaption>${escapeHtml(pathBasename((entry.image_files || [])[index] || url))}</figcaption>
+                          </figure>
+                        `).join('')}</div>` : `<div class="location-guide-empty">이미지 없음 (원본 문서 기준)</div>`}
+                      </article>
+                    `).join('')}
+                  </div>
+                </div>
+              `).join('')}
             </div>
           </div>
         </div>
@@ -5183,7 +5486,7 @@
     function renderCalendarEventDetailScreen() {
       const el = byId('eventDetailScreen');
       if (!el) return;
-      if (!activeCalendarEventId && !activeCalendarSlotDetail && !activeCalendarSummaryDetail) {
+      if (!activeCalendarEventId && !activeCalendarSlotDetail && !activeCalendarSummaryDetail && !activeCalendarLocationGuideWeek) {
         el.classList.remove('open');
         el.setAttribute('aria-hidden', 'true');
         el.innerHTML = '';
@@ -5201,6 +5504,13 @@
         el.classList.add('open');
         el.setAttribute('aria-hidden', 'false');
         el.innerHTML = renderCalendarSummaryDetailHtml(activeCalendarSummaryDetail);
+        return;
+      }
+
+      if (activeCalendarLocationGuideWeek) {
+        el.classList.add('open');
+        el.setAttribute('aria-hidden', 'false');
+        el.innerHTML = renderCalendarLocationGuideHtml(activeCalendarLocationGuideWeek);
         return;
       }
 
@@ -5273,6 +5583,7 @@
     function openCalendarEventDetail(eventId) {
       activeCalendarSlotDetail = null;
       activeCalendarSummaryDetail = null;
+      activeCalendarLocationGuideWeek = null;
       activeCalendarEventId = eventId;
       renderCalendarEventDetailScreen();
     }
@@ -6157,6 +6468,7 @@
     window.handleCalendarSlotClick = handleCalendarSlotClick;
     window.handleCalendarTimelineCanvasClick = handleCalendarTimelineCanvasClick;
     window.openCalendarSummaryDetail = openCalendarSummaryDetail;
+    window.openCalendarLocationGuide = openCalendarLocationGuide;
     window.openCalendarSlotDetail = openCalendarSlotDetail;
     window.closeCalendarDetailScreen = closeCalendarDetailScreen;
     window.clearCalendarEditEvent = clearCalendarEditEvent;
