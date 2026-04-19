@@ -827,6 +827,106 @@
       margin-top: 14px;
     }
 
+    .reference-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .reference-info-card {
+      border: 1px solid rgba(203, 213, 225, 0.9);
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,250,252,0.96));
+      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.05);
+      padding: 16px 16px 14px;
+    }
+
+    .reference-info-card h5 {
+      margin: 0 0 10px;
+      font-size: 14px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .reference-info-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .reference-info-line {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #334155;
+    }
+
+    .reference-info-line strong {
+      color: #0f172a;
+    }
+
+    .professor-directory-table {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .professor-directory-row {
+      display: grid;
+      grid-template-columns: 56px minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1.2fr);
+      gap: 12px;
+      align-items: start;
+      padding: 12px 0;
+      border-top: 1px solid rgba(226, 232, 240, 0.9);
+    }
+
+    .professor-directory-row:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .professor-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+      font-weight: 800;
+      color: #0f172a;
+      background: linear-gradient(135deg, rgba(219, 234, 254, 0.95), rgba(191, 219, 254, 0.92));
+      border: 1px solid rgba(96, 165, 250, 0.45);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.75);
+    }
+
+    .professor-name {
+      font-size: 14px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.4;
+    }
+
+    .professor-meta {
+      margin-top: 4px;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #475569;
+    }
+
+    .professor-column-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #64748b;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 760px) {
+      .professor-directory-row {
+        grid-template-columns: 56px minmax(0, 1fr);
+      }
+    }
+
     .calendar-summary-row-label {
       display: grid;
       gap: 2px;
@@ -2584,6 +2684,8 @@
     let activeCalendarSlotDetail = null;
     let activeCalendarSummaryDetail = null;
     let activeCalendarLocationGuideWeek = null;
+    let activeCalendarReferencePanel = null;
+    let activeCalendarReferenceWeek = null;
     let activeImageLightbox = null;
     let activeCalendarMoveEventId = null;
     let calendarEventLongPressTimer = null;
@@ -3719,8 +3821,139 @@
       return bundleLocationGuide(state.clerkshipBundles?.[bundleId]);
     }
 
+    function bundleForWeek(weekDays) {
+      const bundleId = bundleIdForWeek(weekDays);
+      if (!bundleId) return null;
+      return state.clerkshipBundles?.[bundleId] || null;
+    }
+
+    function normalizeProfessorName(name) {
+      return String(name || '').replace(/\s*교수님\s*$/u, '').trim();
+    }
+
+    function professorAvatarText(name) {
+      const clean = normalizeProfessorName(name);
+      return clean.slice(-2) || clean.slice(0, 2) || '교수';
+    }
+
+    function professorDirectoryForBundle(bundle) {
+      if (!bundle) return [];
+      const map = new Map();
+      const fixedInfo = bundle.fixed_info || {};
+      const sessionList = bundle.sessions || [];
+
+      const ensure = (name, patch = {}) => {
+        const clean = normalizeProfessorName(name);
+        if (!clean) return null;
+        if (!map.has(clean)) {
+          map.set(clean, {
+            key: clean,
+            name: clean,
+            site: '',
+            modes: [],
+            roles: [],
+            relatedSessions: [],
+            sourceRefs: [],
+            contactHint: '개별 연락은 해당 일정의 확인 문자/조장 공지 흐름을 우선 참고',
+          });
+        }
+        const row = map.get(clean);
+        if (patch.site && !row.site) row.site = patch.site;
+        (patch.modes || []).forEach(mode => { if (mode && !row.modes.includes(mode)) row.modes.push(mode); });
+        (patch.roles || []).forEach(role => { if (role && !row.roles.includes(role)) row.roles.push(role); });
+        (patch.relatedSessions || []).forEach(item => {
+          if (item && !row.relatedSessions.some(existing => existing.id === item.id)) row.relatedSessions.push(item);
+        });
+        (patch.sourceRefs || []).forEach(ref => { if (ref && !row.sourceRefs.includes(ref)) row.sourceRefs.push(ref); });
+        if (patch.contactHint && row.contactHint === '개별 연락은 해당 일정의 확인 문자/조장 공지 흐름을 우선 참고') {
+          row.contactHint = patch.contactHint;
+        }
+        return row;
+      };
+
+      if (fixedInfo['책임교수']) {
+        ensure(fixedInfo['책임교수'], { roles: ['책임교수'], site: '본원' });
+      }
+      (fixedInfo['부책임교수'] || []).forEach(name => ensure(name, { roles: ['부책임교수'], site: '본원' }));
+
+      (bundle.outpatient_professors || []).forEach(item => {
+        ensure(item.name, {
+          site: item.site || '',
+          modes: [item.mode || '외래'],
+          sourceRefs: item.source_md_heading ? [item.source_md_heading.replace(/\.$/, '')] : [],
+        });
+      });
+
+      sessionList.forEach(session => {
+        const professor = normalizeProfessorName(session.professor || '');
+        if (!professor) return;
+        const role = session.title?.includes('발표') ? '발표/평가' : (session.title?.includes('CPX') ? 'CPX/수업' : (session.title?.includes('외래') ? '외래' : (session.title?.includes('PCI') || session.title?.includes('시술') ? '시술/참관' : '수업')));
+        ensure(professor, {
+          site: session.site || '',
+          modes: [role],
+          relatedSessions: [{ id: session.id, title: session.title, date: session.date }],
+          sourceRefs: session.source_refs || [],
+        });
+      });
+
+      return [...map.values()]
+        .map(item => ({
+          ...item,
+          site: item.site || '본원',
+          relatedSessions: item.relatedSessions.slice(0, 4),
+          sourceRefs: item.sourceRefs.slice(0, 6),
+        }))
+        .sort((a, b) => {
+          const siteCmp = String(a.site).localeCompare(String(b.site), 'ko');
+          if (siteCmp !== 0) return siteCmp;
+          return a.name.localeCompare(b.name, 'ko');
+        });
+    }
+
     function pathBasename(value) {
       return String(value || '').split('/').pop() || '';
+    }
+
+    function renderReferenceInlineText(text) {
+      let html = escapeHtml(String(text || ''));
+      html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+      html = html.replace(/`([^`]+)`/g, '<code style="padding:1px 4px; border-radius:4px; background:rgba(15,23,42,0.06); font-size:12px;">$1</code>');
+      return html;
+    }
+
+    function renderReferenceLinesHtml(items) {
+      let subsectionIndex = 0;
+      return (items || []).map(raw => {
+        const line = String(raw ?? '');
+        const trimmed = line.trim();
+        if (!trimmed) return '<div style="height:6px;"></div>';
+
+        const h4Match = trimmed.match(/^####\s+(.+)$/);
+        if (h4Match) {
+          subsectionIndex = 0;
+          return `<div class="item-title" style="font-size:15px; font-weight:700; color:#0f172a; margin:6px 0 10px;">${renderReferenceInlineText(h4Match[1])}</div>`;
+        }
+
+        const h5Match = trimmed.match(/^#####\s+(.+)$/);
+        if (h5Match) {
+          subsectionIndex += 1;
+          return `<div style="display:flex; gap:8px; align-items:flex-start; margin:12px 0 6px; color:#1e293b; font-weight:700;"><span style="min-width:18px;">${subsectionIndex}.</span><span>${renderReferenceInlineText(h5Match[1])}</span></div>`;
+        }
+
+        const numberedMatch = trimmed.match(/^(\(?\d+\)|\d+[.)])\s+(.+)$/) || trimmed.match(/^([①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳])\s*(.+)$/);
+        if (numberedMatch) {
+          return `<div style="display:flex; gap:8px; align-items:flex-start; margin:6px 0; color:#334155; line-height:1.6;"><span style="min-width:22px; font-weight:600; color:#475569;">${renderReferenceInlineText(numberedMatch[1])}</span><span>${renderReferenceInlineText(numberedMatch[2])}</span></div>`;
+        }
+
+        const bulletMatch = line.match(/^(\s*)-\s+(.+)$/);
+        if (bulletMatch) {
+          const indentRaw = (bulletMatch[1] || '').replace(/\t/g, '    ').length;
+          const indentPx = Math.min(36, Math.floor(indentRaw / 2) * 12);
+          return `<div style="margin:0 0 6px ${indentPx}px; color:#334155; line-height:1.6;">${renderReferenceInlineText(bulletMatch[2])}</div>`;
+        }
+
+        return `<div style="margin:0 0 6px 0; color:#334155; line-height:1.6;">${renderReferenceInlineText(trimmed)}</div>`;
+      }).join('');
     }
 
     function renderImageLightbox() {
@@ -3759,6 +3992,78 @@
     function closeImageLightbox() {
       activeImageLightbox = null;
       renderImageLightbox();
+    }
+
+    async function copyTextToClipboard(text, label = '문구') {
+      const value = String(text || '').trim();
+      if (!value) {
+        alert(`${label}가 비어 있어 복사할 내용이 없다.`);
+        return;
+      }
+      try {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(value);
+        } else {
+          const textarea = document.createElement('textarea');
+          textarea.value = value;
+          textarea.setAttribute('readonly', '');
+          textarea.style.position = 'fixed';
+          textarea.style.opacity = '0';
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          textarea.remove();
+        }
+        alert(`${label} 복사 완료`);
+      } catch (error) {
+        console.error(error);
+        alert(`${label} 복사에 실패했다. 브라우저 권한을 확인해줘.`);
+      }
+    }
+
+    function cleanCopiedLine(text) {
+      return String(text || '')
+        .replace(/^\s*[-*]\s+/, '')
+        .replace(/^\s*\d+[.)]\s+/, '')
+        .replace(/^\s*[①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳]\s*/, '')
+        .replace(/\*\*(.*?)\*\*/g, '$1')
+        .replace(/`([^`]+)`/g, '$1')
+        .replace(/^"|"$/g, '')
+        .trim();
+    }
+
+    function extractSessionCopyTargets(session) {
+      const lines = Array.isArray(session?.sections?.['원문 문자 / 공지']) ? session.sections['원문 문자 / 공지'] : [];
+      if (!lines.length) return [];
+      const targets = [];
+      let currentLabel = '';
+      const normalizedLines = [];
+      lines.forEach(raw => {
+        const line = String(raw || '');
+        const trimmed = line.trim();
+        if (!trimmed) return;
+        const labelMatch = trimmed.match(/^[-*]\s+\*\*(.+?)\*\*:?$/);
+        if (labelMatch) {
+          currentLabel = cleanCopiedLine(labelMatch[1]);
+          return;
+        }
+        const quotedMatch = trimmed.match(/^"([\s\S]+)"$/);
+        if (quotedMatch) {
+          targets.push({
+            label: currentLabel || `문구 ${targets.length + 1}`,
+            text: cleanCopiedLine(quotedMatch[1])
+          });
+          return;
+        }
+        normalizedLines.push(cleanCopiedLine(trimmed));
+      });
+      if (!targets.length && normalizedLines.length) {
+        targets.push({
+          label: /chief_admin|comm-/.test(String(session?.id || '')) ? '공지 복사' : '내용 복사',
+          text: normalizedLines.filter(Boolean).join('\n')
+        });
+      }
+      return targets.filter(target => target.text);
     }
 
     function isWeeklySummaryEvent(event) {
@@ -4802,6 +5107,8 @@
       activeCalendarEventId = null;
       activeCalendarSlotDetail = null;
       activeCalendarLocationGuideWeek = null;
+      activeCalendarReferencePanel = null;
+      activeCalendarReferenceWeek = null;
       activeCalendarSummaryDetail = weekKey;
       selectedCalendarScope = 'summary';
       selectedWeekKey = weekKey;
@@ -4813,7 +5120,22 @@
       activeCalendarEventId = null;
       activeCalendarSlotDetail = null;
       activeCalendarSummaryDetail = null;
+      activeCalendarReferencePanel = null;
+      activeCalendarReferenceWeek = null;
       activeCalendarLocationGuideWeek = weekKey;
+      selectedCalendarScope = 'summary';
+      selectedWeekKey = weekKey;
+      renderCalendarBoard();
+      renderCalendarEventDetailScreen();
+    }
+
+    function openCalendarReferencePanel(weekKey, panelKey) {
+      activeCalendarEventId = null;
+      activeCalendarSlotDetail = null;
+      activeCalendarSummaryDetail = null;
+      activeCalendarLocationGuideWeek = null;
+      activeCalendarReferencePanel = panelKey;
+      activeCalendarReferenceWeek = weekKey;
       selectedCalendarScope = 'summary';
       selectedWeekKey = weekKey;
       renderCalendarBoard();
@@ -4842,6 +5164,8 @@
       activeCalendarSlotDetail = null;
       activeCalendarSummaryDetail = null;
       activeCalendarLocationGuideWeek = null;
+      activeCalendarReferencePanel = null;
+      activeCalendarReferenceWeek = null;
       activeImageLightbox = null;
       renderImageLightbox();
       activeCalendarMoveEventId = null;
@@ -5202,6 +5526,16 @@
             <p class="item-meta" style="margin-top:4px;">※ 이 과제는 '종합' 칸에서 진행도를 관리하세요.</p>
            </div>`
         : '';
+      const copyTargets = extractSessionCopyTargets(session);
+      const copyHtml = copyTargets.length > 0
+        ? `<div class="detail-screen-section">
+            <h4>📋 문구 복사</h4>
+            <div class="badge-row" style="margin-top:8px; gap:8px;">
+              ${copyTargets.map(target => `<button type="button" class="btn btn-small btn-secondary" data-copy="${escapeHtml(target.text)}" data-label="${escapeHtml(target.label)}" onclick="copyTextToClipboard(this.dataset.copy, this.dataset.label)">${escapeHtml(target.label)}</button>`).join('')}
+            </div>
+            <p class="item-meta" style="margin-top:8px;">※ 문자 예시/공지 문구를 바로 복사해 사용할 수 있다.</p>
+          </div>`
+        : '';
 
       const renderDetailInlineText = (text) => {
         let html = escapeHtml(String(text || ''));
@@ -5249,10 +5583,11 @@
         }).join('');
       };
 
-      if (!sections.length && !relationHtml) return '';
+      if (!sections.length && !relationHtml && !copyHtml) return '';
       return `
         <div class="detail-screen-stack">
           ${relationHtml}
+          ${copyHtml}
           ${sections.map(([title, items]) => `
             <div class="detail-screen-section">
               <h4>${escapeHtml(title)}</h4>
@@ -5529,6 +5864,9 @@
                 <button class="btn btn-small ${activeCalendarSummaryFilter === 'presentation_exam' ? 'btn-secondary' : 'btn-ghost'}" onclick="setCalendarSummaryFilter('presentation_exam')">발표·시험 ${categoryCounts.presentation_exam || 0}</button>
                 <button class="btn btn-small ${activeCalendarSummaryFilter === 'chief_admin' ? 'btn-secondary' : 'btn-ghost'}" onclick="setCalendarSummaryFilter('chief_admin')">조장·행정 ${categoryCounts.chief_admin || 0}</button>
                 ${locationGuide ? `<button class="btn btn-small btn-ghost" onclick="openCalendarLocationGuide('${weekKey}')">장소 지도 ${locationGuide.counts?.places || 0}</button>` : ''}
+                <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'basic_info')">심장내과 기본정보</button>
+                <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'professors')">교수님</button>
+                <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'group_rules')">조 운영 규칙</button>
                 <button class="btn btn-small ${activeCalendarSummaryIncompleteFirst ? 'btn-secondary' : 'btn-ghost'}" onclick="toggleCalendarSummaryIncompleteFirst()">${activeCalendarSummaryIncompleteFirst ? '기본 순서로 보기' : '안 한 것 먼저 보기'}</button>
               </div>
             </div>
@@ -5562,6 +5900,189 @@
                   </div>
                 `;
               }).join('')}</div>` : `<div class="empty">현재 필터에서 보일 종합 항목이 없다.</div>`}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderCalendarReferencePanelHtml(weekKey, panelKey) {
+      const weekDays = buildCalendarWeekDays(parseIsoDate(weekKey));
+      const bundle = bundleForWeek(weekDays);
+      const fixedInfo = bundle?.fixed_info || {};
+      const professorDirectory = professorDirectoryForBundle(bundle);
+      const referenceBlocks = bundle?.analysis_appendix?.reference_blocks || [];
+      const findReferenceBlock = (ref) => referenceBlocks.find(item => item.ref === ref) || null;
+      if (panelKey === 'professors') {
+        const grouped = professorDirectory.reduce((acc, item) => {
+          const key = item.site || '기타';
+          if (!acc[key]) acc[key] = [];
+          acc[key].push(item);
+          return acc;
+        }, {});
+        return `
+          <div class="detail-screen-panel">
+            <div class="detail-screen-head">
+              <button class="detail-screen-back" onclick="openCalendarSummaryDetail('${weekKey}')">← 종합으로</button>
+              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
+            </div>
+            <div class="detail-screen-body">
+              <div class="detail-screen-hero">
+                <div class="badge-row">
+                  <span class="calendar-mini-chip">교수님 ${professorDirectory.length}</span>
+                  <span class="calendar-mini-chip">본원 ${(grouped['본원'] || []).length}</span>
+                  <span class="calendar-mini-chip">세종 ${(grouped['세종'] || []).length}</span>
+                </div>
+                <div class="detail-screen-title">교수님</div>
+                <div class="detail-screen-summary">이름, 운영 위치, 연결 수업, 연락 경로를 표처럼 정돈해서 본다.</div>
+              </div>
+              <div class="detail-screen-stack">
+                ${Object.entries(grouped).map(([site, rows]) => `
+                  <div class="detail-screen-section">
+                    <h4>${escapeHtml(site)}</h4>
+                    <div class="professor-directory-table">
+                      ${rows.map(item => `
+                        <div class="professor-directory-row">
+                          <div class="professor-avatar">${escapeHtml(professorAvatarText(item.name))}</div>
+                          <div>
+                            <div class="professor-name">${escapeHtml(item.name)} 교수님</div>
+                            <div class="professor-meta">${escapeHtml(item.roles.join(' · ') || item.modes.join(' · ') || '실습 운영 참고')}</div>
+                          </div>
+                          <div>
+                            <div class="professor-column-label">담당/연결 수업</div>
+                            <div class="reference-info-list">
+                              ${item.relatedSessions.length ? item.relatedSessions.map(session => `<div class="reference-info-line">${escapeHtml(session.title)}</div>`).join('') : `<div class="reference-info-line">연결 세션 정리 중</div>`}
+                            </div>
+                          </div>
+                          <div>
+                            <div class="professor-column-label">연락 / 참고</div>
+                            <div class="reference-info-line">${escapeHtml(item.contactHint)}</div>
+                            ${item.sourceRefs.length ? `<div class="reference-info-line"><strong>ref</strong>: ${escapeHtml(item.sourceRefs.join(', '))}</div>` : ''}
+                          </div>
+                        </div>
+                      `).join('')}
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      if (panelKey === 'group_rules') {
+        const roleBlock = findReferenceBlock('1-2-2');
+        const alphaBlock = findReferenceBlock('1-1-3');
+        const roleLines = roleBlock?.raw_md_excerpt ? roleBlock.raw_md_excerpt.split('\n') : [];
+        const alphaLines = alphaBlock?.raw_md_excerpt ? alphaBlock.raw_md_excerpt.split('\n') : [];
+        return `
+          <div class="detail-screen-panel">
+            <div class="detail-screen-head">
+              <button class="detail-screen-back" onclick="openCalendarSummaryDetail('${weekKey}')">← 종합으로</button>
+              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
+            </div>
+            <div class="detail-screen-body">
+              <div class="detail-screen-hero">
+                <div class="badge-row">
+                  <span class="calendar-mini-chip">6명조</span>
+                  <span class="calendar-mini-chip">알파벳 분담</span>
+                  <span class="calendar-mini-chip">발표/병력청취 분산</span>
+                </div>
+                <div class="detail-screen-title">조 운영 규칙</div>
+                <div class="detail-screen-summary">조장 업무 전체가 아니라, 6명조 역할 분담과 알파벳별 운영 원칙만 따로 정리해서 본다.</div>
+              </div>
+              <div class="detail-screen-stack">
+                <div class="detail-screen-section">
+                  <h4>6명인 조 역할</h4>
+                  <div>${roleLines.length ? renderReferenceLinesHtml(roleLines) : `<div class="empty">관련 원문이 아직 없다.</div>`}</div>
+                </div>
+                <div class="detail-screen-section">
+                  <h4>알파벳별 개인 일정</h4>
+                  <div>${alphaLines.length ? renderReferenceLinesHtml(alphaLines) : `<div class="empty">관련 원문이 아직 없다.</div>`}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      if (panelKey !== 'basic_info') {
+        return `
+          <div class="detail-screen-panel">
+            <div class="detail-screen-head">
+              <button class="detail-screen-back" onclick="openCalendarSummaryDetail('${weekKey}')">← 종합으로</button>
+              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
+            </div>
+            <div class="detail-screen-body">
+              <div class="detail-screen-hero">
+                <div class="detail-screen-title">참고 정보</div>
+                <div class="detail-screen-summary">아직 준비 중인 패널이다.</div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      const contacts = [
+        fixedInfo['심장내과 의국'] ? { label: '심장내과 의국', value: fixedInfo['심장내과 의국'] } : null,
+        fixedInfo['오스키 센터'] ? { label: '오스키센터', value: fixedInfo['오스키 센터'] } : null,
+      ].filter(Boolean);
+      const principals = [
+        fixedInfo['책임교수'] ? `책임교수: ${fixedInfo['책임교수']}` : null,
+        Array.isArray(fixedInfo['부책임교수']) && fixedInfo['부책임교수'].length ? `부책임교수: ${fixedInfo['부책임교수'].join(', ')}` : null,
+      ].filter(Boolean);
+      const memoLines = Array.isArray(fixedInfo['핵심 메모']) ? fixedInfo['핵심 메모'] : [];
+
+      return `
+        <div class="detail-screen-panel">
+          <div class="detail-screen-head">
+            <button class="detail-screen-back" onclick="openCalendarSummaryDetail('${weekKey}')">← 종합으로</button>
+            <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
+          </div>
+          <div class="detail-screen-body">
+            <div class="detail-screen-hero">
+              <div class="badge-row">
+                <span class="calendar-mini-chip">기본정보</span>
+                ${contacts.length ? `<span class="calendar-mini-chip">연락처 ${contacts.length}</span>` : ''}
+                ${principals.length ? `<span class="calendar-mini-chip">교수진 ${principals.length}</span>` : ''}
+              </div>
+              <div class="detail-screen-title">심장내과 기본정보</div>
+              <div class="detail-screen-summary">${calendarBoardRangeLabel(weekDays)} · 실습 중 자주 찾는 연락처와 기본 운영 정보를 한곳에 묶어둔다.</div>
+              <div class="detail-filter-row">
+                ${bundleLocationGuide(bundle) ? `<button class="btn btn-small btn-ghost" onclick="openCalendarLocationGuide('${weekKey}')">장소 지도 보기</button>` : ''}
+              </div>
+            </div>
+            <div class="reference-info-grid">
+              <div class="reference-info-card">
+                <h5>담당 교수진</h5>
+                <div class="reference-info-list">
+                  ${principals.length ? principals.map(line => {
+                    const [head, ...tail] = line.split(':');
+                    return `<div class="reference-info-line"><strong>${escapeHtml(head)}</strong>: ${escapeHtml(tail.join(':').trim())}</div>`;
+                  }).join('') : `<div class="reference-info-line">등록된 정보가 아직 없다.</div>`}
+                </div>
+              </div>
+              <div class="reference-info-card">
+                <h5>핵심 연락처</h5>
+                <div class="reference-info-list">
+                  ${contacts.length ? contacts.map(item => `<div class="reference-info-line"><strong>${escapeHtml(item.label)}</strong>: ${escapeHtml(item.value)}</div>`).join('') : `<div class="reference-info-line">등록된 연락처가 없다.</div>`}
+                </div>
+              </div>
+            </div>
+            <div class="detail-screen-stack">
+              <div class="detail-screen-section">
+                <h4>기본 운영 메모</h4>
+                ${memoLines.length ? `<div>${memoLines.map(item => `<div class="reference-info-line">${escapeHtml(item)}</div>`).join('')}</div>` : `<div class="empty">기본 운영 메모가 아직 없다.</div>`}
+              </div>
+              <div class="detail-screen-section">
+                <h4>원문 / 참고 경로</h4>
+                <div class="reference-info-list">
+                  ${fixedInfo.source_title ? `<div class="reference-info-line"><strong>source</strong>: ${escapeHtml(fixedInfo.source_title)}</div>` : ''}
+                  ${fixedInfo.primary_source ? `<div class="reference-info-line"><strong>md</strong>: ${escapeHtml(pathBasename(fixedInfo.primary_source))}</div>` : ''}
+                  ${fixedInfo.notice_reference ? `<div class="reference-info-line"><strong>공지/문자</strong>: ${escapeHtml(pathBasename(fixedInfo.notice_reference))}</div>` : ''}
+                  ${fixedInfo.pci_outpatient_reference ? `<div class="reference-info-line"><strong>PCI/외래</strong>: ${escapeHtml(pathBasename(fixedInfo.pci_outpatient_reference))}</div>` : ''}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -5651,7 +6172,7 @@
     function renderCalendarEventDetailScreen() {
       const el = byId('eventDetailScreen');
       if (!el) return;
-      if (!activeCalendarEventId && !activeCalendarSlotDetail && !activeCalendarSummaryDetail && !activeCalendarLocationGuideWeek) {
+      if (!activeCalendarEventId && !activeCalendarSlotDetail && !activeCalendarSummaryDetail && !activeCalendarLocationGuideWeek && !activeCalendarReferencePanel) {
         el.classList.remove('open');
         el.setAttribute('aria-hidden', 'true');
         el.innerHTML = '';
@@ -5676,6 +6197,13 @@
         el.classList.add('open');
         el.setAttribute('aria-hidden', 'false');
         el.innerHTML = renderCalendarLocationGuideHtml(activeCalendarLocationGuideWeek);
+        return;
+      }
+
+      if (activeCalendarReferencePanel && activeCalendarReferenceWeek) {
+        el.classList.add('open');
+        el.setAttribute('aria-hidden', 'false');
+        el.innerHTML = renderCalendarReferencePanelHtml(activeCalendarReferenceWeek, activeCalendarReferencePanel);
         return;
       }
 
@@ -6639,6 +7167,7 @@
     window.handleCalendarTimelineCanvasClick = handleCalendarTimelineCanvasClick;
     window.openCalendarSummaryDetail = openCalendarSummaryDetail;
     window.openCalendarLocationGuide = openCalendarLocationGuide;
+    window.openCalendarReferencePanel = openCalendarReferencePanel;
     window.openImageLightbox = openImageLightbox;
     window.closeImageLightbox = closeImageLightbox;
     window.openCalendarSlotDetail = openCalendarSlotDetail;
