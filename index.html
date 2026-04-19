@@ -1078,19 +1078,30 @@
       height: var(--timeline-total-height, 540px);
       border-radius: 20px;
       border: 1px solid rgba(220,226,238,0.92);
-      background:
-        repeating-linear-gradient(
-          to bottom,
-          rgba(148,163,184,0.22) 0,
-          rgba(148,163,184,0.22) 1px,
-          transparent 1px,
-          transparent calc(var(--timeline-half-hour-height, 27px) - 1px),
-          rgba(148,163,184,0.10) calc(var(--timeline-half-hour-height, 27px) - 1px),
-          rgba(148,163,184,0.10) var(--timeline-half-hour-height, 27px),
-          transparent var(--timeline-half-hour-height, 27px),
-          transparent var(--timeline-hour-height, 54px)
-        );
       background-color: rgba(244,247,251,0.96);
+    }
+
+    .calendar-timeline-lines {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .calendar-timeline-line {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px;
+      pointer-events: none;
+    }
+
+    .calendar-timeline-line.hour {
+      background: rgba(148,163,184,0.24);
+    }
+
+    .calendar-timeline-line.half {
+      background: rgba(148,163,184,0.12);
     }
 
     .calendar-time-mark {
@@ -1104,23 +1115,12 @@
       color: color-mix(in srgb, var(--muted) 92%, white);
       letter-spacing: -0.01em;
       pointer-events: none;
+      z-index: 1;
     }
 
     .calendar-day-canvas {
       position: relative;
       height: var(--timeline-total-height, 540px);
-      background:
-        repeating-linear-gradient(
-          to bottom,
-          rgba(148,163,184,0.22) 0,
-          rgba(148,163,184,0.22) 1px,
-          transparent 1px,
-          transparent calc(var(--timeline-half-hour-height, 27px) - 1px),
-          rgba(148,163,184,0.10) calc(var(--timeline-half-hour-height, 27px) - 1px),
-          rgba(148,163,184,0.10) var(--timeline-half-hour-height, 27px),
-          transparent var(--timeline-half-hour-height, 27px),
-          transparent var(--timeline-hour-height, 54px)
-        );
       background-color: rgba(255,255,255,0.98);
       cursor: pointer;
     }
@@ -1179,6 +1179,7 @@
 
     .calendar-event-card {
       position: absolute;
+      z-index: 1;
       border-radius: 14px;
       border: 1px solid color-mix(in srgb, var(--event-border, var(--line)) 24%, var(--line));
       border-left: 3px solid var(--event-border, var(--primary));
@@ -2729,13 +2730,18 @@
     const CALENDAR_TIMELINE_START_MINUTES = CALENDAR_TIMELINE_START_HOUR * 60;
     const CALENDAR_TIMELINE_END_MINUTES = CALENDAR_TIMELINE_END_HOUR * 60;
     const CALENDAR_TIMELINE_TOTAL_MINUTES = CALENDAR_TIMELINE_END_MINUTES - CALENDAR_TIMELINE_START_MINUTES;
+    const CALENDAR_TIMELINE_HOUR_COUNT = CALENDAR_TIMELINE_END_HOUR - CALENDAR_TIMELINE_START_HOUR;
     const CALENDAR_TIMELINE_DEFAULT_DURATION = 60;
     const CALENDAR_TIMELINE_MIN_CARD_HEIGHT = 34;
+
+    function createCalendarTimelineHourHeightMap(baseHeight = CALENDAR_TIMELINE_BASE_HOUR_HEIGHT) {
+      return Array.from({ length: CALENDAR_TIMELINE_HOUR_COUNT }, () => baseHeight);
+    }
 
     const byId = (id) => document.getElementById(id);
     const today = new Date();
     let updateBannerVisible = false;
-    let calendarTimelineHourHeight = CALENDAR_TIMELINE_BASE_HOUR_HEIGHT;
+    let calendarTimelineHourHeights = createCalendarTimelineHourHeightMap();
     let calendarAxisColumnWidth = 88;
     let calendarDayColumnMinWidth = 168;
     let calendarSummaryColumnWidth = 320;
@@ -3899,6 +3905,11 @@
       return bundle?.fixed_info?.presentation_guide || null;
     }
 
+    function uportfolioGuideForWeek(weekDays) {
+      const bundle = bundleForWeek(weekDays);
+      return bundle?.fixed_info?.uportfolio_guide || null;
+    }
+
     function normalizeProfessorName(name) {
       return String(name || '').replace(/\s*교수님\s*$/u, '').trim();
     }
@@ -3967,7 +3978,6 @@
           contactLabel: item.contact_label || '연락처',
           contactMode: item.contact_mode || '',
           imagePath: item.image_path || '',
-          sourceRefs: item.source_refs || [],
         });
       });
 
@@ -4021,55 +4031,8 @@
       return bundle?.analysis_appendix?.reference_blocks || [];
     }
 
-    function normalizeReferenceId(value) {
-      const match = String(value || '').trim().match(/^\d+-\d+(?:-\d+)?/);
-      return match ? match[0] : String(value || '').trim();
-    }
-
     function findBundleReferenceBlock(bundle, ref) {
-      const normalized = normalizeReferenceId(ref);
-      return referenceBlocksForBundle(bundle).find(item => item.ref === normalized) || null;
-    }
-
-    function chiefReferenceBlocksForBundle(bundle) {
-      return [
-        {
-          title: '실습 시작 전 조장 준비',
-          refs: ['1-2-1', '1-8-1']
-        },
-        {
-          title: '실습 전 / 주말 공지',
-          refs: ['2-1-1', '2-1-7']
-        },
-        {
-          title: '사전 문자 템플릿',
-          refs: ['2-4-1', '2-4-2', '2-5-1', '2-5-2', '2-5-3', '2-5-4', '2-5-5', '2-6-1', '2-6-2']
-        }
-      ].map(section => ({
-        ...section,
-        blocks: section.refs.map(ref => findBundleReferenceBlock(bundle, ref)).filter(Boolean)
-      })).filter(section => section.blocks.length);
-    }
-
-    function crewReferenceBlocksForBundle(bundle) {
-      return ['1-2-4']
-        .map(ref => findBundleReferenceBlock(bundle, ref))
-        .filter(Boolean);
-    }
-
-    function sourceOverviewBlocksForBundle(bundle) {
-      return ['0-1', '0-2', '0-3', '0-4']
-        .map(ref => findBundleReferenceBlock(bundle, ref))
-        .filter(Boolean);
-    }
-
-    function professorReferenceBlocksForRow(bundle, item) {
-      if (!bundle || !item) return [];
-      const seen = new Set();
-      return (item.sourceRefs || [])
-        .filter(ref => /^3-(1|2|3|4|5)-/.test(normalizeReferenceId(ref)))
-        .map(ref => findBundleReferenceBlock(bundle, ref))
-        .filter(block => block && !seen.has(block.ref) && seen.add(block.ref));
+      return referenceBlocksForBundle(bundle).find(item => item.ref === ref) || null;
     }
 
     function ecgReferenceGroupsForSession(bundle, session) {
@@ -4163,7 +4126,7 @@
       container.style.display = 'flex';
       container.innerHTML = `
         <div class="calendar-reference-hub-title">${escapeHtml(sourceTitle)}</div>
-        <div class="calendar-reference-hub-note">실습캘린더에서 바로 기본정보로 들어가고, 그 안에서 교수님·조장·조원·원문 안내·조 운영 규칙·세종 메모까지 이어서 본다.</div>
+        <div class="calendar-reference-hub-note">실습캘린더에서 바로 기본정보로 들어가고, 그 안에서 교수님·조 운영 규칙·세종 메모까지 이어서 본다.</div>
         <button class="btn btn-small btn-secondary" onclick="openCalendarReferencePanel('${weekKey}', 'basic_info')">기본정보 열기</button>
         ${hasSejongContext ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'sejong_notes')">세종 운영 메모</button>` : ''}
       `;
@@ -4623,12 +4586,73 @@
       };
     }
 
-    function calendarTimelineHeightPx() {
-      return (CALENDAR_TIMELINE_TOTAL_MINUTES / 60) * calendarTimelineHourHeight;
+    function calendarTimelineHourHeightAt(index, heights = calendarTimelineHourHeights) {
+      return heights[index] ?? CALENDAR_TIMELINE_BASE_HOUR_HEIGHT;
     }
 
-    function calendarTimelinePercentFromMinutes(minutes) {
-      return ((minutes - CALENDAR_TIMELINE_START_MINUTES) / CALENDAR_TIMELINE_TOTAL_MINUTES) * 100;
+    function calendarTimelineHeightPx(heights = calendarTimelineHourHeights) {
+      return heights.reduce((sum, height) => sum + height, 0);
+    }
+
+    function clampCalendarTimelineMinutes(minutes) {
+      return Math.max(CALENDAR_TIMELINE_START_MINUTES, Math.min(minutes, CALENDAR_TIMELINE_END_MINUTES));
+    }
+
+    function calendarTimelinePxFromMinutes(minutes, heights = calendarTimelineHourHeights) {
+      const clamped = clampCalendarTimelineMinutes(minutes);
+      let px = 0;
+      for (let hourIndex = 0; hourIndex < CALENDAR_TIMELINE_HOUR_COUNT; hourIndex += 1) {
+        const bandStart = CALENDAR_TIMELINE_START_MINUTES + (hourIndex * 60);
+        const bandEnd = bandStart + 60;
+        if (clamped <= bandStart) break;
+        const usedMinutes = Math.min(clamped, bandEnd) - bandStart;
+        px += (usedMinutes / 60) * calendarTimelineHourHeightAt(hourIndex, heights);
+        if (clamped < bandEnd) break;
+      }
+      return px;
+    }
+
+    function calendarTimelineMinutesFromPx(px, heights = calendarTimelineHourHeights) {
+      const totalHeight = calendarTimelineHeightPx(heights);
+      let remaining = Math.max(0, Math.min(px, totalHeight));
+      for (let hourIndex = 0; hourIndex < CALENDAR_TIMELINE_HOUR_COUNT; hourIndex += 1) {
+        const hourHeight = calendarTimelineHourHeightAt(hourIndex, heights);
+        if (remaining <= hourHeight || hourIndex === CALENDAR_TIMELINE_HOUR_COUNT - 1) {
+          const minuteOffset = hourHeight > 0 ? (remaining / hourHeight) * 60 : 0;
+          return clampCalendarTimelineMinutes(CALENDAR_TIMELINE_START_MINUTES + (hourIndex * 60) + minuteOffset);
+        }
+        remaining -= hourHeight;
+      }
+      return CALENDAR_TIMELINE_END_MINUTES;
+    }
+
+    function calendarTimelinePercentFromMinutes(minutes, heights = calendarTimelineHourHeights) {
+      const totalHeight = calendarTimelineHeightPx(heights);
+      if (!totalHeight) return 0;
+      return (calendarTimelinePxFromMinutes(minutes, heights) / totalHeight) * 100;
+    }
+
+    function calendarTimelineHourOverlapMinutes(startMinutes, endMinutes, hourIndex) {
+      const bandStart = CALENDAR_TIMELINE_START_MINUTES + (hourIndex * 60);
+      const bandEnd = bandStart + 60;
+      return Math.max(0, Math.min(endMinutes, bandEnd) - Math.max(startMinutes, bandStart));
+    }
+
+    function calendarTimelineLineMarks() {
+      const marks = [];
+      for (let hour = CALENDAR_TIMELINE_START_HOUR; hour <= CALENDAR_TIMELINE_END_HOUR; hour += 1) {
+        const hourMinutes = hour * 60;
+        marks.push({ kind: 'hour', top: calendarTimelinePercentFromMinutes(hourMinutes) });
+        if (hour < CALENDAR_TIMELINE_END_HOUR) {
+          marks.push({ kind: 'half', top: calendarTimelinePercentFromMinutes(hourMinutes + 30) });
+        }
+      }
+      return marks;
+    }
+
+    function calendarTimelineHeightMapsEqual(left, right) {
+      if (!Array.isArray(left) || !Array.isArray(right) || left.length !== right.length) return false;
+      return left.every((value, index) => Math.abs(value - right[index]) < 2);
     }
 
     function layoutCalendarDayEvents(dateIso) {
@@ -4683,8 +4707,8 @@
         });
         const laneCount = Math.max(1, laneEnds.length);
         cluster.forEach(entry => {
-          const top = (entry.timeline.layoutStart - CALENDAR_TIMELINE_START_MINUTES) / CALENDAR_TIMELINE_TOTAL_MINUTES * calendarTimelineHeightPx();
-          const height = Math.max(((entry.timeline.layoutEnd - entry.timeline.layoutStart) / 60) * calendarTimelineHourHeight, CALENDAR_TIMELINE_MIN_CARD_HEIGHT);
+          const top = calendarTimelinePxFromMinutes(entry.timeline.layoutStart);
+          const height = Math.max(calendarTimelinePxFromMinutes(entry.timeline.layoutEnd) - calendarTimelinePxFromMinutes(entry.timeline.layoutStart), CALENDAR_TIMELINE_MIN_CARD_HEIGHT);
           const widthPercent = 100 / laneCount;
           const width = `calc(${widthPercent.toFixed(4)}% - ${((laneCount - 1) * gapPx) / laneCount}px)`;
           const left = `calc(${(entry.laneIndex * widthPercent).toFixed(4)}% + ${entry.laneIndex * gapPx}px)`;
@@ -4709,37 +4733,52 @@
 
     function calendarTimelineStyleVars() {
       const totalHeight = calendarTimelineHeightPx();
-      return `--timeline-hour-height:${calendarTimelineHourHeight}px; --timeline-half-hour-height:${calendarTimelineHourHeight / 2}px; --timeline-total-height:${totalHeight}px; --timeline-axis-width:${calendarAxisColumnWidth}px; --timeline-day-min-width:${calendarDayColumnMinWidth}px; --timeline-summary-width:${calendarSummaryColumnWidth}px;`;
+      return `--timeline-total-height:${totalHeight}px; --timeline-axis-width:${calendarAxisColumnWidth}px; --timeline-day-min-width:${calendarDayColumnMinWidth}px; --timeline-summary-width:${calendarSummaryColumnWidth}px;`;
     }
 
     function fitCalendarTimelineDensity() {
       const grid = byId('calendarGrid');
       if (!grid) return false;
       const cards = [...grid.querySelectorAll('.calendar-event-card[data-duration-minutes]')];
+      const baseMap = createCalendarTimelineHourHeightMap();
       if (!cards.length) {
-        if (calendarTimelineHourHeight !== CALENDAR_TIMELINE_BASE_HOUR_HEIGHT) {
-          calendarTimelineHourHeight = CALENDAR_TIMELINE_BASE_HOUR_HEIGHT;
+        if (!calendarTimelineHeightMapsEqual(calendarTimelineHourHeights, baseMap)) {
+          calendarTimelineHourHeights = baseMap;
           renderCalendarBoard();
           return true;
         }
         return false;
       }
 
-      let requiredHourHeight = CALENDAR_TIMELINE_BASE_HOUR_HEIGHT;
-      cards.forEach(card => {
-        const duration = Number(card.dataset.durationMinutes || 0);
-        if (!duration) return;
-        const content = card.querySelector('.calendar-event-content');
-        const requiredContentHeight = Math.max((content?.scrollHeight || card.scrollHeight) + 18, CALENDAR_TIMELINE_MIN_CARD_HEIGHT);
-        const neededHourHeight = (requiredContentHeight * 60) / duration;
-        if (Number.isFinite(neededHourHeight)) {
-          requiredHourHeight = Math.max(requiredHourHeight, neededHourHeight);
-        }
-      });
+      const nextHeights = [...baseMap];
+      for (let pass = 0; pass < 4; pass += 1) {
+        let passChanged = false;
+        cards.forEach(card => {
+          const startMinutes = Number(card.dataset.layoutStartMinutes || 0);
+          const endMinutes = Number(card.dataset.layoutEndMinutes || 0);
+          if (!Number.isFinite(startMinutes) || !Number.isFinite(endMinutes) || endMinutes <= startMinutes) return;
+          const duration = Math.max(endMinutes - startMinutes, 15);
+          const content = card.querySelector('.calendar-event-content');
+          const requiredContentHeight = Math.max((content?.scrollHeight || card.scrollHeight) + 18, CALENDAR_TIMELINE_MIN_CARD_HEIGHT);
+          const currentSpanHeight = calendarTimelinePxFromMinutes(endMinutes, nextHeights) - calendarTimelinePxFromMinutes(startMinutes, nextHeights);
+          if (requiredContentHeight <= currentSpanHeight + 1) return;
+          const deficit = requiredContentHeight - currentSpanHeight;
+          const hourDelta = deficit * 60 / duration;
+          for (let hourIndex = 0; hourIndex < CALENDAR_TIMELINE_HOUR_COUNT; hourIndex += 1) {
+            if (calendarTimelineHourOverlapMinutes(startMinutes, endMinutes, hourIndex) <= 0) continue;
+            const grown = nextHeights[hourIndex] + hourDelta;
+            const rounded = Math.min(220, Math.max(CALENDAR_TIMELINE_BASE_HOUR_HEIGHT, Math.ceil(grown / 2) * 2));
+            if (rounded - nextHeights[hourIndex] >= 2) {
+              nextHeights[hourIndex] = rounded;
+              passChanged = true;
+            }
+          }
+        });
+        if (!passChanged) break;
+      }
 
-      const roundedHourHeight = Math.min(220, Math.max(CALENDAR_TIMELINE_BASE_HOUR_HEIGHT, Math.ceil(requiredHourHeight / 2) * 2));
-      if (Math.abs(roundedHourHeight - calendarTimelineHourHeight) >= 2) {
-        calendarTimelineHourHeight = roundedHourHeight;
+      if (!calendarTimelineHeightMapsEqual(calendarTimelineHourHeights, nextHeights)) {
+        calendarTimelineHourHeights = nextHeights;
         renderCalendarBoard();
         return true;
       }
@@ -4806,8 +4845,7 @@
       const rect = canvas.getBoundingClientRect();
       if (!rect.height) return null;
       const rawY = Math.max(0, Math.min(domEvent.clientY - rect.top, rect.height));
-      const ratio = rawY / rect.height;
-      const minutes = CALENDAR_TIMELINE_START_MINUTES + (ratio * CALENDAR_TIMELINE_TOTAL_MINUTES);
+      const minutes = calendarTimelineMinutesFromPx(rawY);
       const rounded = roundCalendarMinutes(minutes);
       return Math.max(CALENDAR_TIMELINE_START_MINUTES, Math.min(rounded, CALENDAR_TIMELINE_END_MINUTES));
     }
@@ -5141,6 +5179,7 @@
       const signals = weekSummarySignals(weekDays);
       const locationGuide = locationGuideForWeek(weekDays);
       const hourMarks = calendarTimelineHourMarks();
+      const lineMarks = calendarTimelineLineMarks();
 
       label.textContent = calendarBoardRangeLabel(weekDays);
       renderCalendarReferenceHub(weekDays);
@@ -5209,6 +5248,9 @@
 
       const bodyCells = `
         <div class="calendar-time-axis">
+          <div class="calendar-timeline-lines">
+            ${lineMarks.map(mark => `<div class="calendar-timeline-line ${mark.kind}" style="top:${mark.top}%;"></div>`).join('')}
+          </div>
           ${hourMarks.map(mark => `<div class="calendar-time-mark" style="top:${mark.top}%;">${mark.label}</div>`).join('')}
         </div>
         ${weekDays.map(day => {
@@ -5218,6 +5260,9 @@
           return `
             <div class="calendar-day-column" style="grid-column:${weekDays.indexOf(day) + 2};">
               <div class="calendar-day-canvas ${isMoveReady ? 'move-ready' : ''}" onclick="handleCalendarTimelineCanvasClick(event, '${iso}')">
+                <div class="calendar-timeline-lines">
+                  ${lineMarks.map(mark => `<div class="calendar-timeline-line ${mark.kind}" style="top:${mark.top}%;"></div>`).join('')}
+                </div>
                 ${timedEntries.map(entry => {
                   const event = entry.event;
                   const session = findBundleSessionForEvent(event);
@@ -5232,6 +5277,8 @@
                     <button
                       class="calendar-event-card ${activeCalendarEditEventId === event.id || activeCalendarMoveEventId === event.id ? 'is-active' : ''} ${calendarEventIsCancelled(event) ? 'is-cancelled' : ''}"
                       data-duration-minutes="${Math.max(calendarEventDurationMinutes(event, { forLayout: true }), 15)}"
+                      data-layout-start-minutes="${entry.timeline.layoutStart}"
+                      data-layout-end-minutes="${entry.timeline.layoutEnd}"
                       style="top:${entry.top}px; height:${entry.height}px; left:${entry.left}; width:${entry.width}; --event-surface:${surfaceColor}; --event-border:${borderColor};"
                       onclick="handleCalendarEventCardClick(event, '${event.id}')"
                       onpointerdown="beginCalendarEventLongPress('${event.id}', event)"
@@ -5352,20 +5399,6 @@
       activeCalendarReferencePanel = panelKey;
       activeCalendarReferenceWeek = weekKey;
       activeCalendarReferenceMeta = null;
-      selectedCalendarScope = 'summary';
-      selectedWeekKey = weekKey;
-      renderCalendarBoard();
-      renderCalendarEventDetailScreen();
-    }
-
-    function openCalendarProfessorReference(weekKey, professorName) {
-      activeCalendarEventId = null;
-      activeCalendarSlotDetail = null;
-      activeCalendarSummaryDetail = null;
-      activeCalendarLocationGuideWeek = null;
-      activeCalendarReferencePanel = 'professor_reference';
-      activeCalendarReferenceWeek = weekKey;
-      activeCalendarReferenceMeta = { professorName };
       selectedCalendarScope = 'summary';
       selectedWeekKey = weekKey;
       renderCalendarBoard();
@@ -6088,8 +6121,10 @@
       const signals = weekSummarySignals(weekDays);
       const locationGuide = locationGuideForWeek(weekDays);
       const presentationGuide = presentationGuideForWeek(weekDays);
+      const uportfolioGuide = uportfolioGuideForWeek(weekDays);
       const hasSejongContext = hasSejongContextForWeek(weekDays);
       const showPresentationGuide = activeCalendarSummaryFilter === 'presentation_exam' && presentationGuide;
+      const showUportfolioGuide = activeCalendarSummaryFilter === 'assignment' && uportfolioGuide;
       return `
         <div class="detail-screen-panel">
           <div class="detail-screen-head">
@@ -6137,6 +6172,48 @@
                   ${(presentationGuide.asset_urls || []).length ? `<div class="location-guide-thumb-grid" style="margin-top:12px;">${(presentationGuide.asset_urls || []).map((url, index) => {
                     const fileName = pathBasename((presentationGuide.image_files || [])[index] || url);
                     const caption = `발표 준비 · ${index === 0 ? '자동실행/반복재생' : 'HDMI 연결'}`;
+                    return `<button type="button" class="location-guide-thumb" data-src="${escapeHtml(url)}" data-caption="${escapeHtml(caption)}" data-file-name="${escapeHtml(fileName)}" onclick="openImageLightbox(this.dataset.src, this.dataset.caption, this.dataset.fileName)">
+                      <img src="${encodeURI(url)}" alt="${escapeHtml(caption)}" loading="lazy" />
+                      <span>${escapeHtml(fileName)}</span>
+                    </button>`;
+                  }).join('')}</div>` : ''}
+                </div>
+                ${(presentationGuide.adult_professor || []).length ? `<div class="detail-screen-section" style="margin-top:0; background:rgba(255,255,255,0.6);">
+                  <h4>성인환 교수님 수업</h4>
+                  <ul>${(presentationGuide.adult_professor || []).map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+                </div>` : ''}
+                ${(presentationGuide.ecg_presentation || []).length ? `<div class="detail-screen-section" style="margin-top:0; background:rgba(255,255,255,0.6);">
+                  <h4>김준형 교수님 심전도 발표</h4>
+                  <ul>${(presentationGuide.ecg_presentation || []).map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+                  ${(presentationGuide.ecg_asset_urls || []).length ? `<div class="location-guide-thumb-grid" style="margin-top:12px;">${(presentationGuide.ecg_asset_urls || []).map((url, index) => {
+                    const fileName = pathBasename((presentationGuide.ecg_image_files || [])[index] || url);
+                    const caption = `김준형 교수님 심전도 발표 · ${index === 0 ? '집담회 용지' : '마우스 배치'}`;
+                    return `<button type="button" class="location-guide-thumb" data-src="${escapeHtml(url)}" data-caption="${escapeHtml(caption)}" data-file-name="${escapeHtml(fileName)}" onclick="openImageLightbox(this.dataset.src, this.dataset.caption, this.dataset.fileName)">
+                      <img src="${encodeURI(url)}" alt="${escapeHtml(caption)}" loading="lazy" />
+                      <span>${escapeHtml(fileName)}</span>
+                    </button>`;
+                  }).join('')}</div>` : ''}
+                </div>` : ''}
+              </div>
+            </div>` : ''}
+            ${showUportfolioGuide ? `<div class="detail-screen-section">
+              <h4>유폴리오 현장승인 기본 가이드</h4>
+              <div class="badge-row" style="margin-top:8px; margin-bottom:10px;">
+                <span class="calendar-mini-chip">기본 원칙 ${uportfolioGuide.counts?.basic_principles || 0}</span>
+                <span class="calendar-mini-chip">자유기록 ${uportfolioGuide.counts?.free_record_onsite || 0}</span>
+                <span class="calendar-mini-chip">이미지 ${uportfolioGuide.counts?.images || 0}</span>
+              </div>
+              <div class="detail-screen-stack" style="margin-top:0;">
+                <div class="detail-screen-section" style="margin-top:0; background:rgba(255,255,255,0.6);">
+                  <h4>현장승인 기본 원칙</h4>
+                  <ul>${(uportfolioGuide.basic_principles || []).map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+                </div>
+                <div class="detail-screen-section" style="margin-top:0; background:rgba(255,255,255,0.6);">
+                  <h4>자유기록(현장승인)</h4>
+                  <ul>${(uportfolioGuide.free_record_onsite || []).map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+                  ${(uportfolioGuide.asset_urls || []).length ? `<div class="location-guide-thumb-grid" style="margin-top:12px;">${(uportfolioGuide.asset_urls || []).map((url, index) => {
+                    const fileName = pathBasename((uportfolioGuide.image_files || [])[index] || url);
+                    const caption = `유폴리오 현장승인 · 자유기록 ${index + 1}`;
                     return `<button type="button" class="location-guide-thumb" data-src="${escapeHtml(url)}" data-caption="${escapeHtml(caption)}" data-file-name="${escapeHtml(fileName)}" onclick="openImageLightbox(this.dataset.src, this.dataset.caption, this.dataset.fileName)">
                       <img src="${encodeURI(url)}" alt="${escapeHtml(caption)}" loading="lazy" />
                       <span>${escapeHtml(fileName)}</span>
@@ -6221,105 +6298,6 @@
         `;
       }
 
-      if (panelKey === 'chief_notes') {
-        const sections = chiefReferenceBlocksForBundle(bundle);
-        return `
-          <div class="detail-screen-panel">
-            <div class="detail-screen-head">
-              <button class="detail-screen-back" onclick="openCalendarReferencePanel('${weekKey}', 'basic_info')">← 기본정보로</button>
-              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
-            </div>
-            <div class="detail-screen-body">
-              <div class="detail-screen-hero">
-                <div class="badge-row">
-                  <span class="calendar-mini-chip">조장</span>
-                  <span class="calendar-mini-chip">실습 전·주말·세종 준비</span>
-                  <span class="calendar-mini-chip">원문 ${sections.reduce((sum, section) => sum + section.blocks.length, 0)}</span>
-                </div>
-                <div class="detail-screen-title">조장 준비 / 공지 / 문자</div>
-                <div class="detail-screen-summary">실습 시작 전 준비, 세종 이동 전 체크, 주말/사전 공지와 문자 원문을 md block 그대로 본다.</div>
-              </div>
-              <div class="detail-screen-stack">
-                ${sections.map(section => `
-                  <div class="detail-screen-section">
-                    <h4>${escapeHtml(section.title)}</h4>
-                    <div class="detail-screen-stack" style="margin-top:12px;">
-                      ${section.blocks.map(block => `
-                        <div class="detail-screen-section" style="margin-top:0; background:rgba(255,255,255,0.6);">
-                          <h4>${escapeHtml(block.ref)}. ${escapeHtml(block.title)}</h4>
-                          <div>${renderReferenceLinesHtml(block.raw_md_excerpt.split('\n'))}</div>
-                        </div>
-                      `).join('')}
-                    </div>
-                  </div>
-                `).join('')}
-              </div>
-            </div>
-          </div>
-        `;
-      }
-
-      if (panelKey === 'crew_notes') {
-        const blocks = crewReferenceBlocksForBundle(bundle);
-        return `
-          <div class="detail-screen-panel">
-            <div class="detail-screen-head">
-              <button class="detail-screen-back" onclick="openCalendarReferencePanel('${weekKey}', 'basic_info')">← 기본정보로</button>
-              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
-            </div>
-            <div class="detail-screen-body">
-              <div class="detail-screen-hero">
-                <div class="badge-row">
-                  <span class="calendar-mini-chip">조원</span>
-                  <span class="calendar-mini-chip">준비물 / 과제</span>
-                  <span class="calendar-mini-chip">원문 ${blocks.length}</span>
-                </div>
-                <div class="detail-screen-title">조원 준비</div>
-                <div class="detail-screen-summary">조원들이 실습 전후로 챙겨야 하는 준비물과 과제 메모를 원문 block 그대로 본다.</div>
-              </div>
-              <div class="detail-screen-stack">
-                ${blocks.map(block => `
-                  <div class="detail-screen-section">
-                    <h4>${escapeHtml(block.ref)}. ${escapeHtml(block.title)}</h4>
-                    <div>${renderReferenceLinesHtml(block.raw_md_excerpt.split('\n'))}</div>
-                  </div>
-                `).join('')}
-              </div>
-            </div>
-          </div>
-        `;
-      }
-
-      if (panelKey === 'source_overview') {
-        const blocks = sourceOverviewBlocksForBundle(bundle);
-        return `
-          <div class="detail-screen-panel">
-            <div class="detail-screen-head">
-              <button class="detail-screen-back" onclick="openCalendarReferencePanel('${weekKey}', 'basic_info')">← 기본정보로</button>
-              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
-            </div>
-            <div class="detail-screen-body">
-              <div class="detail-screen-hero">
-                <div class="badge-row">
-                  <span class="calendar-mini-chip">원문 안내</span>
-                  <span class="calendar-mini-chip">source route ${blocks.length}</span>
-                </div>
-                <div class="detail-screen-title">원문 안내</div>
-                <div class="detail-screen-summary">md / 공지·문자 / 외래·PCI / 심전도 발표 인계가 현재 UI에서 어떤 역할을 맡는지 원문 소개 block 그대로 본다.</div>
-              </div>
-              <div class="detail-screen-stack">
-                ${blocks.map(block => `
-                  <div class="detail-screen-section">
-                    <h4>${escapeHtml(block.ref)}. ${escapeHtml(block.title)}</h4>
-                    <div>${renderReferenceLinesHtml(block.raw_md_excerpt.split('\n'))}</div>
-                  </div>
-                `).join('')}
-              </div>
-            </div>
-          </div>
-        `;
-      }
-
       if (panelKey === 'professors') {
         const grouped = professorDirectory.reduce((acc, item) => {
           const key = item.site || '기타';
@@ -6369,51 +6347,12 @@
                             ${item.contactMode === 'forbidden' ? `<div class="reference-info-line"><strong>${escapeHtml(item.contactLabel || '연락 정책')}</strong>: 연락 금지</div>` : item.phone ? `<div class="reference-info-line"><strong>${escapeHtml(item.contactLabel || '전화')}</strong>: ${escapeHtml(item.phone)}</div>` : ''}
                             ${item.contactHint ? `<div class="reference-info-line">${escapeHtml(item.contactHint)}</div>` : ''}
                             ${item.sourceRefs.length ? `<div class="reference-info-line"><strong>ref</strong>: ${escapeHtml(item.sourceRefs.join(', '))}</div>` : ''}
-                            ${(() => {
-                              const detailBlocks = professorReferenceBlocksForRow(bundle, item);
-                              return detailBlocks.length
-                                ? `<div class="badge-row" style="margin-top:8px; gap:8px; flex-wrap:wrap;"><button type="button" class="btn btn-small btn-ghost" onclick='openCalendarProfessorReference(${JSON.stringify(weekKey)}, ${JSON.stringify(item.name)})'>원문 메모 ${detailBlocks.length}</button></div>`
-                                : '';
-                            })()}
                           </div>
                         </div>
                       `).join('')}
                     </div>
                   </div>
                 `).join('')}
-              </div>
-            </div>
-          </div>
-        `;
-      }
-
-      if (panelKey === 'professor_reference') {
-        const professorName = normalizeProfessorName(activeCalendarReferenceMeta?.professorName || '');
-        const row = professorDirectory.find(item => normalizeProfessorName(item.name) === professorName) || null;
-        const blocks = professorReferenceBlocksForRow(bundle, row);
-        return `
-          <div class="detail-screen-panel">
-            <div class="detail-screen-head">
-              <button class="detail-screen-back" onclick="openCalendarReferencePanel('${weekKey}', 'professors')">← 교수님으로</button>
-              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
-            </div>
-            <div class="detail-screen-body">
-              <div class="detail-screen-hero">
-                <div class="badge-row">
-                  <span class="calendar-mini-chip">교수님 원문 메모</span>
-                  ${row?.site ? `<span class="calendar-mini-chip">${escapeHtml(row.site)}</span>` : ''}
-                  <span class="calendar-mini-chip">block ${blocks.length}</span>
-                </div>
-                <div class="detail-screen-title">${escapeHtml(row?.name || '교수님')} 교수님 · 원문 메모</div>
-                <div class="detail-screen-summary">외래/세종/참고용 교수님 디테일을 md 원문 block 그대로 본다.</div>
-              </div>
-              <div class="detail-screen-stack">
-                ${blocks.length ? blocks.map(block => `
-                  <div class="detail-screen-section">
-                    <h4>${escapeHtml(block.ref)}. ${escapeHtml(block.title)}</h4>
-                    <div>${renderReferenceLinesHtml(block.raw_md_excerpt.split('\n'))}</div>
-                  </div>
-                `).join('') : `<div class="detail-screen-section"><div class="empty">표시할 원문 메모가 아직 없다.</div></div>`}
               </div>
             </div>
           </div>
@@ -6532,10 +6471,7 @@
               <div class="detail-screen-summary">${calendarBoardRangeLabel(weekDays)} · 실습 중 자주 찾는 연락처와 기본 운영 정보를 한곳에 묶어둔다.</div>
               <div class="detail-filter-row">
                 ${bundleLocationGuide(bundle) ? `<button class="btn btn-small btn-ghost" onclick="openCalendarLocationGuide('${weekKey}')">장소 지도 보기</button>` : ''}
-                <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'chief_notes')">조장</button>
-                <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'crew_notes')">조원</button>
                 <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'professors')">교수님</button>
-                <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'source_overview')">원문 안내</button>
                 <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'group_rules')">조 운영 규칙</button>
                 ${hasSejongContextForWeek(weekDays) ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'sejong_notes')">세종 운영 메모</button>` : ''}
               </div>
@@ -7435,7 +7371,7 @@
 
     window.addEventListener('resize', () => {
       if (!byId('tab-calendar')?.classList.contains('active')) return;
-      calendarTimelineHourHeight = CALENDAR_TIMELINE_BASE_HOUR_HEIGHT;
+      calendarTimelineHourHeights = createCalendarTimelineHourHeightMap();
       renderCalendarBoard();
     });
 
