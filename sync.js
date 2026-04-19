@@ -726,12 +726,14 @@ async function pullPlannerUserState({ force = false, reason = '수동 새로받�
     const remoteUpdatedAt = row.updated_at || nowIso();
     const localRaw = getRawPlannerState();
     const localCurrentHash = hashStateRaw(localRaw);
+    const localUpdatedAt = meta.lastLocalChangeAt || 0;
+    const remoteIsNewer = !localUpdatedAt || new Date(remoteUpdatedAt).getTime() > new Date(localUpdatedAt).getTime();
     const localIsDirty = Boolean(meta.lastLocalChangeAt) && (!meta.lastUserStateUploadedAt || new Date(meta.lastLocalChangeAt).getTime() > new Date(meta.lastUserStateUploadedAt).getTime());
     const firstSync = !meta.lastUserStateUploadedAt && !meta.lastUserStateAppliedAt;
 
     meta.lastUserStateSeenAt = remoteUpdatedAt;
 
-    if (force || (remoteHash !== localCurrentHash && (!localIsDirty || firstSync))) {
+    if (force || (remoteHash !== localCurrentHash && (remoteIsNewer || !localIsDirty || firstSync))) {
       setRawPlannerState(remoteRaw);
       localHash = remoteHash;
       meta.lastHash = remoteHash;
@@ -852,7 +854,6 @@ function bootstrapMetaFromCurrentState() {
   const currentHash = hashStateRaw(raw);
   if (!meta.lastHash) {
     meta.lastHash = currentHash;
-    meta.lastLocalChangeAt = nowIso();
     saveMeta(meta);
   }
   localHash = currentHash;
