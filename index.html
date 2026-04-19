@@ -4755,9 +4755,12 @@
       const signature = [event?.title || '', session?.title || ''].join(' ');
       const presentationRegex = /(발표|presentation)/i;
       const examRegex = /(시험|test|pretest|cpx|osce|평가)/i;
+      const assignmentMeta = findBundleAssignmentForEvent(event);
+      const onsiteAssignments = relatedAssignments.filter(assignment => assignment?.onsite_required || /현장승인/.test([assignment?.name || '', assignment?.format || '', assignment?.content_summary || ''].join(' ')));
       const assignmentAuto = Boolean(relatedAssignments.length || event?.type === 'assignment' || event?.sourceKind === 'assignment');
       const presentationAuto = Boolean(event?.type === 'presentation' || presentationRegex.test(signature));
       const examAuto = Boolean(event?.type === 'exam' || examRegex.test(signature));
+      const onsiteAuto = Boolean(onsiteAssignments.length || assignmentMeta?.onsite_required || session?.approval_required);
 
       const assignmentMode = calendarEventSignalOverrideMode(event, 'assignment');
       const presentationMode = calendarEventSignalOverrideMode(event, 'presentation');
@@ -4776,9 +4779,12 @@
       const assignmentVisible = assignmentMode === 'show' ? true : assignmentMode === 'hide' ? false : assignmentAuto;
       const presentationVisible = presentationMode === 'show' ? true : presentationMode === 'hide' ? false : presentationAuto;
       const examVisible = examMode === 'show' ? true : examMode === 'hide' ? false : examAuto;
+      const onsiteCount = onsiteAssignments.length || (assignmentMeta?.onsite_required ? 1 : 0) || (session?.approval_required ? 1 : 0);
+      const onsiteVisible = onsiteAuto;
 
       const flags = [];
       if (assignmentVisible) flags.push(assignmentCount > 1 ? `과제 ${assignmentCount}` : '과제');
+      if (onsiteVisible) flags.push(onsiteCount > 1 ? `현장승인 ${onsiteCount}` : '현장승인');
       if (presentationVisible) flags.push('발표');
       if (examVisible) flags.push('시험');
       if (displayDifficulty) flags.push(`난이도 ${displayDifficulty}/10`);
@@ -4788,6 +4794,7 @@
 
       return {
         assignment: { visible: assignmentVisible, auto: assignmentAuto, mode: assignmentMode, count: assignmentCount },
+        onsite: { visible: onsiteVisible, auto: onsiteAuto, count: onsiteCount },
         presentation: { visible: presentationVisible, auto: presentationAuto, mode: presentationMode },
         exam: { visible: examVisible, auto: examAuto, mode: examMode },
         difficulty: { value: displayDifficulty, autoValue: autoDifficulty, overridden: Number.isFinite(Number(event?.boardDifficultyOverride)) && String(event?.boardDifficultyOverride) !== '' },
@@ -4820,6 +4827,52 @@
            </div>`
         : '';
 
+      const renderDetailInlineText = (text) => {
+        let html = escapeHtml(String(text || ''));
+        html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+        html = html.replace(/`([^`]+)`/g, '<code style="padding:1px 4px; border-radius:4px; background:rgba(15,23,42,0.06); font-size:12px;">$1</code>');
+        return html;
+      };
+
+      const renderDetailLinesHtml = (items) => {
+        let subsectionIndex = 0;
+        return items.map(raw => {
+          const line = String(raw ?? '');
+          const trimmed = line.trim();
+          if (!trimmed) {
+            return '<div style="height:6px;"></div>';
+          }
+
+          const h4Match = trimmed.match(/^####\s+(.+)$/);
+          if (h4Match) {
+            subsectionIndex = 0;
+            return `<div class="item-title" style="font-size:15px; font-weight:700; color:#0f172a; margin:6px 0 10px;">${renderDetailInlineText(h4Match[1])}</div>`;
+          }
+
+          const h5Match = trimmed.match(/^#####\s+(.+)$/);
+          if (h5Match) {
+            subsectionIndex += 1;
+            return `<div style="display:flex; gap:8px; align-items:flex-start; margin:12px 0 6px; color:#1e293b; font-weight:700;"><span style="min-width:18px;">${subsectionIndex}.</span><span>${renderDetailInlineText(h5Match[1])}</span></div>`;
+          }
+
+          const numberedMatch = trimmed.match(/^(\(?\d+\)|\d+[.)])\s+(.+)$/) || trimmed.match(/^([①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳])\s*(.+)$/);
+          if (numberedMatch) {
+            const lead = numberedMatch[1];
+            const body = numberedMatch[2];
+            return `<div style="display:flex; gap:8px; align-items:flex-start; margin:6px 0; color:#334155; line-height:1.6;"><span style="min-width:22px; font-weight:600; color:#475569;">${renderDetailInlineText(lead)}</span><span>${renderDetailInlineText(body)}</span></div>`;
+          }
+
+          const bulletMatch = line.match(/^(\s*)-\s+(.+)$/);
+          if (bulletMatch) {
+            const indentRaw = (bulletMatch[1] || '').replace(/\t/g, '    ').length;
+            const indentPx = Math.min(36, Math.floor(indentRaw / 2) * 12);
+            return `<div style="margin:0 0 6px ${indentPx}px; color:#334155; line-height:1.6;">${renderDetailInlineText(bulletMatch[2])}</div>`;
+          }
+
+          return `<div style="margin:0 0 6px 0; color:#334155; line-height:1.6;">${renderDetailInlineText(trimmed)}</div>`;
+        }).join('');
+      };
+
       if (!sections.length && !relationHtml) return '';
       return `
         <div class="detail-screen-stack">
@@ -4827,7 +4880,7 @@
           ${sections.map(([title, items]) => `
             <div class="detail-screen-section">
               <h4>${escapeHtml(title)}</h4>
-              <ul>${items.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+              <div>${renderDetailLinesHtml(items)}</div>
             </div>
           `).join('')}
         </div>
@@ -5192,6 +5245,7 @@
                 ${calendarEventHasCustomSchedule(event) ? `<span class="calendar-mini-chip">시간/날짜 수정됨</span>` : ''}
                 ${event.professor ? `<span class="calendar-mini-chip">${escapeHtml(event.professor)}</span>` : ''}
                 ${boardConfig.assignment.visible ? `<span class="calendar-mini-chip">${boardConfig.assignment.count > 1 ? `과제 ${boardConfig.assignment.count}` : '과제'}</span>` : ''}
+                ${boardConfig.onsite?.visible ? `<span class="calendar-mini-chip" style="background:#fff7ed; color:#9a3412; border-color:#fdba74;">${boardConfig.onsite.count > 1 ? `현장승인 ${boardConfig.onsite.count}` : '현장승인'}</span>` : ''}
                 ${boardConfig.presentation.visible ? `<span class="calendar-mini-chip">발표</span>` : ''}
                 ${boardConfig.exam.visible ? `<span class="calendar-mini-chip">시험</span>` : ''}
                 ${boardConfig.difficulty.value ? `<span class="calendar-mini-chip">난이도 ${boardConfig.difficulty.value}/10</span>` : ''}
