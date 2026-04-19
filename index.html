@@ -5179,15 +5179,19 @@
       const heroSummary = session.summary || '';
       const relatedAssignments = findRelatedAssignmentsForSession(event, session);
       const ordered = ['intro', '핵심 정리', '준비 / 운영 포인트', '질문 / 예시 포인트', '조사 / 보강 내용'];
-      const sections = ordered
-        .map(key => {
+      const knownSections = new Set(ordered);
+      const sections = [
+        ...ordered.map(key => {
           let items = Array.isArray(session.sections[key]) ? [...session.sections[key]] : [];
           if (key === 'intro' && heroSummary) {
             items = items.filter(item => item !== heroSummary);
           }
           return [key, items];
-        })
-        .filter(([, items]) => items.length > 0);
+        }),
+        ...Object.entries(session.sections)
+          .filter(([key]) => !knownSections.has(key))
+          .map(([key, value]) => [key, Array.isArray(value) ? [...value] : []])
+      ].filter(([, items]) => items.length > 0);
 
       const relationHtml = relatedAssignments.length > 0
         ? `<div class="detail-screen-section">

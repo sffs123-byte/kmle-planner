@@ -431,7 +431,7 @@
           "note": ""
         }
       ],
-      "note": "심장내과는 조장 예외 과목. 순환기는 파트 기반으로 운영하고, 일요일엔 인계/운영 분석을 우선한다.\n\n[심장내과 bundle 적용] chief-draft 기준 · sessions 73 · assignments 41",
+      "note": "심장내과는 조장 예외 과목. 순환기는 파트 기반으로 운영하고, 일요일엔 인계/운영 분석을 우선한다.\n\n[심장내과 bundle 적용] chief-draft 기준 · sessions 73 · assignments 43",
       "recentHistory": [
         "2026-04-19 · 심장내과 bundle 적용",
         "4/11 (토) · 4월 canary 세팅 적용"
@@ -533,7 +533,7 @@
       "title": "My Echo & ECG 발표 준비 시작",
       "memo": "운영 6 / 10 · 본인 심전도 출력본 + Cardiology 심초음파 mp4 + 발표 PPT",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839250"
+      "createdAt": "2026-04-19T17:15:57.411819"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-heartsound-handwrite",
@@ -545,7 +545,7 @@
       "title": "박재형 자필과제 제출 시작",
       "memo": "운영 5 / 10 · `나의 꿈` A4 1장 + `심음청진의 방법` 4쪽",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839223"
+      "createdAt": "2026-04-19T17:15:57.411791"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-pretest-reflection",
@@ -557,7 +557,7 @@
       "title": "Pretest 자유기록(과제) 제출 시작",
       "memo": "운영 3 / 10 · 유폴 자유기록(과제) / 당일 제출",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839282"
+      "createdAt": "2026-04-19T17:15:57.411856"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-cardiac-exam",
@@ -569,7 +569,7 @@
       "title": "유폴 현장승인 · 심장진찰 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839409"
+      "createdAt": "2026-04-19T17:15:57.411987"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-mi-case",
@@ -581,7 +581,7 @@
       "title": "MI case 발표 준비 시작",
       "memo": "운영 7 / 10 · 병력청취 + 영상/녹음 + 발표 PPT",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839275"
+      "createdAt": "2026-04-19T17:15:57.411848"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-pomr-case-ab",
@@ -593,7 +593,7 @@
       "title": "POMR 발표 케이스 준비 (A/B) 시작",
       "memo": "운영 7 / 10 · 같은 케이스를 POMR과 심전도 발표로 이어서 준비",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839267"
+      "createdAt": "2026-04-19T17:15:57.411841"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-nayekkum-scan-seongsukwoo",
@@ -605,7 +605,7 @@
       "title": "성석우 교수님용 `나의 꿈` 스캔본 시작",
       "memo": "운영 4 / 10 · `나의 꿈`만 스캔해서 대면환자 증례보고서 시간에 제출",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839238"
+      "createdAt": "2026-04-19T17:15:57.411807"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-ihd-topic-presentation",
@@ -617,7 +617,7 @@
       "title": "허혈성 심질환 주제 발표 준비 시작",
       "memo": "운영 5 / 10 · 5~10분 미니 발표 / 진단·치료 중심 정리",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839259"
+      "createdAt": "2026-04-19T17:15:57.411832"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-facecase-report",
@@ -629,7 +629,7 @@
       "title": "대면증례보고서 제출 시작",
       "memo": "운영 6 / 10 · 교수님과 함께 본 동일 환자를 기준으로 EKG/PCI 중심 작성",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839293"
+      "createdAt": "2026-04-19T17:15:57.411866"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-heartsound",
@@ -641,7 +641,7 @@
       "title": "유폴 현장승인 · 심음청진 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839402"
+      "createdAt": "2026-04-19T17:15:57.411980"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-outpatient-record-1",
@@ -653,7 +653,7 @@
       "title": "외래 예진기록지 1회차 시작",
       "memo": "운영 7 / 10 · SOAP 칸을 채우고 예진기록지 PDF도 함께 첨부",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839346"
+      "createdAt": "2026-04-19T17:15:57.411927"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-pci-20260428-abc",
@@ -665,7 +665,7 @@
       "title": "유폴 현장승인 · 1주차 화 ABC PCI 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인 (PCI)",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839482"
+      "createdAt": "2026-04-19T17:15:57.412066"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-outpatient-20260428-def",
@@ -677,7 +677,7 @@
       "title": "유폴 현장승인 · 1주차 화 DEF 외래참관 시작",
       "memo": "운영 5 / 10 · 유폴 외래참관 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839516"
+      "createdAt": "2026-04-19T17:15:57.412104"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-htn-cpx",
@@ -689,7 +689,7 @@
       "title": "유폴 현장승인 · CPX HTN 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839417"
+      "createdAt": "2026-04-19T17:15:57.411995"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-outpatient-record-2",
@@ -701,7 +701,7 @@
       "title": "외래 예진기록지 2회차 시작",
       "memo": "운영 7 / 10 · SOAP 칸 작성 + 예진기록지 PDF 첨부",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839360"
+      "createdAt": "2026-04-19T17:15:57.411940"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-pomr-upload",
@@ -713,7 +713,7 @@
       "title": "POMR 수정본 업로드 시작",
       "memo": "운영 6 / 10 · 발표 PPT를 교수님 피드백 반영본으로 수정해 업로드",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839302"
+      "createdAt": "2026-04-19T17:15:57.411875"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-outpatient-20260429-def",
@@ -725,7 +725,7 @@
       "title": "유폴 현장승인 · 1주차 수 DEF 외래참관 시작",
       "memo": "운영 5 / 10 · 유폴 외래참관 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839525"
+      "createdAt": "2026-04-19T17:15:57.412111"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-cpx-chestpain-report",
@@ -737,7 +737,7 @@
       "title": "CPX 흉통 제출 시작",
       "memo": "운영 4 / 10 · 유폴 자유기록(과제)",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839336"
+      "createdAt": "2026-04-19T17:15:57.411917"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-ecg-a",
@@ -749,7 +749,7 @@
       "title": "유폴 현장승인 · A 심전도 발표 시작",
       "memo": "운영 6 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839453"
+      "createdAt": "2026-04-19T17:15:57.412036"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-outpatient-20260430-abc",
@@ -761,7 +761,7 @@
       "title": "유폴 현장승인 · 1주차 목 ABC 외래참관 시작",
       "memo": "운영 5 / 10 · 유폴 외래참관 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839532"
+      "createdAt": "2026-04-19T17:15:57.412118"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-pci-20260430-def",
@@ -773,7 +773,7 @@
       "title": "유폴 현장승인 · 1주차 목 DEF PCI 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인 (PCI)",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839491"
+      "createdAt": "2026-04-19T17:15:57.412074"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-palpit-cpx",
@@ -785,7 +785,7 @@
       "title": "유폴 현장승인 · CPX 두근거림/실신 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839424"
+      "createdAt": "2026-04-19T17:15:57.412007"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-ecg-b",
@@ -797,7 +797,7 @@
       "title": "유폴 현장승인 · B 심전도 발표 시작",
       "memo": "운영 6 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839460"
+      "createdAt": "2026-04-19T17:15:57.412043"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-osce",
@@ -809,7 +809,7 @@
       "title": "유폴 현장승인 · 임상술기(척도평가) OSCE 시작",
       "memo": "운영 6 / 10 · 유폴 임상술기(척도평가) 현장평가",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839439"
+      "createdAt": "2026-04-19T17:15:57.412022"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-weekly-reflection-w1",
@@ -821,7 +821,7 @@
       "title": "주간실습계획과 성찰 1주차 시작",
       "memo": "운영 4 / 10 · 복영남 교수님 항목 / 금요일 자정 전 제출",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839371"
+      "createdAt": "2026-04-19T17:15:57.411950"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-qna-stable-angina",
@@ -833,7 +833,7 @@
       "title": "심혈관질환 Q&A 제출 시작",
       "memo": "운영 5 / 10 · 워드 첨부 없이 유폴에 직접 작성",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839310"
+      "createdAt": "2026-04-19T17:15:57.411883"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-outpatient-20260504-abc",
@@ -845,7 +845,7 @@
       "title": "유폴 현장승인 · 2주차 월 ABC 외래참관 시작",
       "memo": "운영 5 / 10 · 유폴 외래참관 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839540"
+      "createdAt": "2026-04-19T17:15:57.412126"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-outpatient-20260504-def",
@@ -857,7 +857,7 @@
       "title": "유폴 현장승인 · 2주차 월 DEF 외래참관 시작",
       "memo": "운영 5 / 10 · 유폴 외래참관 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839547"
+      "createdAt": "2026-04-19T17:15:57.412133"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-milestone-assign-outpatient-record-1-1",
@@ -869,7 +869,7 @@
       "title": "외래 예진기록지 1회차 확보",
       "memo": "외래 예진기록지 1회차",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839346"
+      "createdAt": "2026-04-19T17:15:57.411927"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-pci-20260505-abc",
@@ -881,7 +881,7 @@
       "title": "유폴 현장승인 · 2주차 화 ABC PCI 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인 (PCI)",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839499"
+      "createdAt": "2026-04-19T17:15:57.412088"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-pci-20260505-def",
@@ -893,7 +893,31 @@
       "title": "유폴 현장승인 · 2주차 화 DEF PCI 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인 (PCI)",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839506"
+      "createdAt": "2026-04-19T17:15:57.412096"
+    },
+    {
+      "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-arrhyproc-20260505-def",
+      "date": "2026-05-05",
+      "startTime": "13:30",
+      "duration": 45,
+      "subjectId": "subject-canary-circ",
+      "stageId": "framework",
+      "title": "유폴 현장승인 · 2주차 화 DEF 부정맥 시술 참관 시작",
+      "memo": "운영 5 / 10 · 유폴 자유기록 현장승인 (부정맥 시술 참관)",
+      "completed": false,
+      "createdAt": "2026-04-19T17:15:57.412155"
+    },
+    {
+      "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-arrhyproc-20260506-abc",
+      "date": "2026-05-06",
+      "startTime": "10:00",
+      "duration": 45,
+      "subjectId": "subject-canary-circ",
+      "stageId": "framework",
+      "title": "유폴 현장승인 · 2주차 수 ABC 부정맥 시술 참관 시작",
+      "memo": "운영 5 / 10 · 유폴 자유기록 현장승인 (부정맥 시술 참관)",
+      "completed": false,
+      "createdAt": "2026-04-19T17:15:57.412162"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-ecg-group-discussion",
@@ -905,7 +929,7 @@
       "title": "심전도 조별 토의 제출 시작",
       "memo": "운영 3 / 10 · 배운 내용과 느낀점 2~3줄",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839318"
+      "createdAt": "2026-04-19T17:15:57.411894"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-outpatient-makeup-20260506",
@@ -917,7 +941,7 @@
       "title": "유폴 현장승인 · 예진 미충족자 외래 보충 시작",
       "memo": "운영 5 / 10 · 유폴 외래참관 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839562"
+      "createdAt": "2026-04-19T17:15:57.412148"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-echo-understanding",
@@ -929,7 +953,7 @@
       "title": "심초음파 검사의 이해 제출 시작",
       "memo": "운영 5 / 10 · My Echo & EKG 파일 뒷장에 설명을 붙여 제출",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839326"
+      "createdAt": "2026-04-19T17:15:57.411902"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-ecg-cd",
@@ -941,7 +965,7 @@
       "title": "유폴 현장승인 · C,D 심전도 발표 시작",
       "memo": "운영 6 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839468"
+      "createdAt": "2026-04-19T17:15:57.412050"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-dyspnea-cpx",
@@ -953,7 +977,7 @@
       "title": "유폴 현장승인 · CPX 호흡곤란 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839432"
+      "createdAt": "2026-04-19T17:15:57.412014"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-outpatient-20260507-abc",
@@ -965,7 +989,7 @@
       "title": "유폴 현장승인 · 2주차 목 ABC 외래참관 시작",
       "memo": "운영 5 / 10 · 유폴 외래참관 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839554"
+      "createdAt": "2026-04-19T17:15:57.412140"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-ecg-ef",
@@ -977,7 +1001,7 @@
       "title": "유폴 현장승인 · E,F 심전도 발표 시작",
       "memo": "운영 6 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839475"
+      "createdAt": "2026-04-19T17:15:57.412057"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-valvular",
@@ -989,7 +1013,7 @@
       "title": "유폴 현장승인 · 심장판막질환 시작",
       "memo": "운영 4 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839446"
+      "createdAt": "2026-04-19T17:15:57.412029"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-clinical-skill-selfeval",
@@ -1001,7 +1025,7 @@
       "title": "임상술기 계획과 자기평가 2개 시작",
       "memo": "운영 5 / 10 · 임상술기 계획과 자기평가 항목별 개별 업로드",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839395"
+      "createdAt": "2026-04-19T17:15:57.411973"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-clinical-expression-selfeval",
@@ -1013,7 +1037,7 @@
       "title": "임상표현 계획과 자기평가 6개 시작",
       "memo": "운영 6 / 10 · 임상표현 계획과 자기평가 항목별 개별 업로드",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839387"
+      "createdAt": "2026-04-19T17:15:57.411965"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-weekly-reflection-w2",
@@ -1025,7 +1049,7 @@
       "title": "주간실습계획과 성찰 2주차 시작",
       "memo": "운영 4 / 10 · 복영남 교수님 항목 / 금요일 자정 전 제출",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839379"
+      "createdAt": "2026-04-19T17:15:57.411958"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-milestone-assign-outpatient-record-2-1",
@@ -1037,7 +1061,7 @@
       "title": "외래 예진기록지 2회차 확보",
       "memo": "외래 예진기록지 2회차",
       "completed": false,
-      "createdAt": "2026-04-19T16:19:26.839360"
+      "createdAt": "2026-04-19T17:15:57.411940"
     }
   ],
   "calendarEvents": [
@@ -1046,10 +1070,10 @@
       "date": "2026-04-24",
       "type": "admin",
       "title": "교수님 확인 문자 · 박재형",
-      "time": "시간 미정",
+      "time": "금 13:00–14:00",
       "startTime": "",
       "endTime": "",
-      "note": "\"교수님 안녕하세요. 다음 주부터 2주간 심장내과 실습 예정인 PK 0,0조 조장 000입니다. 다음 주 화요일 오전 9시부터 OSCE센터에서 심음청진 시험이 예정되어 있다고 전달 받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\"",
+      "note": "보내기 기한: 전주 금요일 13:00~14:00 권장 / 박재형 교수님은 금요일에 한 번만 연락하고, 답장이 없어도 추가 연락하지 않는다.",
       "completed": false,
       "professor": "",
       "difficulty": 4,
@@ -1065,10 +1089,10 @@
       "date": "2026-04-24",
       "type": "chief",
       "title": "조원 공지 · 실습 전주 준비",
-      "time": "시간 미정",
+      "time": "주말 내",
       "startTime": "",
       "endTime": "",
-      "note": "심장내과 공지",
+      "note": "보내기 기한: 전주 일요일 밤 전 / 실습 첫 주 준비물, 발표 준비, ABCDEF 분배를 주말 안에 미리 공지한다.",
       "completed": false,
       "professor": "",
       "difficulty": 5,
@@ -1084,10 +1108,10 @@
       "date": "2026-04-26",
       "type": "admin",
       "title": "교수님 확인 문자 · OT / 성인환",
-      "time": "시간 미정",
+      "time": "일 13:00–14:00",
       "startTime": "",
       "endTime": "",
-      "note": "\"교수님 안녕하세요. 내일부터 2주간 실습 예정인 PK 0,0조 조장 000입니다. 내일 의국 회의 후 오전 8시 40분부터 교육실에서 오리엔테이션이 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 성실히 배우겠습니다. 감사합니다.\"",
+      "note": "보내기 기한: 전주 일요일 13:00~14:00 권장 / 월요일 첫 일정 관련 확인 문자를 일요일 오후에 정리해 보낸다.",
       "completed": false,
       "professor": "",
       "difficulty": 4,
@@ -1353,10 +1377,10 @@
       "date": "2026-04-27",
       "type": "admin",
       "title": "교수님 확인 문자 · 화/수 일정",
-      "time": "시간 미정",
+      "time": "월 13:00–14:00",
       "startTime": "",
       "endTime": "",
-      "note": "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 8시 교육실에서 대면증례보고서 OT가 있는 것으로 전달받았는데, 변동 사항 있는지 확인 부탁드립니다. 감사합니다.\"",
+      "note": "보내기 기한: 월요일 13:00~14:00 권장 / 화요일/수요일 일정 확인 문자를 한 번에 정리해 보낸다.",
       "completed": false,
       "professor": "",
       "difficulty": 4,
@@ -1372,10 +1396,10 @@
       "date": "2026-04-27",
       "type": "chief",
       "title": "조원 공지 · 일정 종료 후",
-      "time": "시간 미정",
+      "time": "종료 직후",
       "startTime": "",
       "endTime": "",
-      "note": "일정 종료 후 공지",
+      "note": "보내기 기한: 월요일 일정 종료 직후 / EKG/Echo, MI case, POMR, Pretest 유폴, 화요일 준비물을 이날 바로 공지한다.",
       "completed": false,
       "professor": "",
       "difficulty": 5,
@@ -1622,33 +1646,14 @@
       "sourceKind": "session"
     },
     {
-      "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-04-28-admin",
-      "date": "2026-04-28",
-      "type": "admin",
-      "title": "교수님 확인 문자 · 전공의 / 정진옥",
-      "time": "시간 미정",
-      "startTime": "",
-      "endTime": "",
-      "note": "\"선생님 안녕하세요. PK 0,0조 조장 000입니다. 이번 주 및 다음 주 심전도 발표 전 피드백을 부탁드리고자 연락드렸습니다. 편하신 시간에 피드백 가능할지 여쭙고 싶습니다. 감사합니다.\" (이후 환자 명단: 환자번호-이름-발표학생 알파벳 순으로 송부)",
-      "completed": false,
-      "professor": "",
-      "difficulty": 4,
-      "track": "chief-draft",
-      "windowType": "clerkship-session",
-      "bundleId": "cardiology-2026-04-chief-draft-v2",
-      "sourceSessionId": "comm-2026-04-28-admin",
-      "sourceAssignmentId": "",
-      "sourceKind": "session"
-    },
-    {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-04-28-chief",
       "date": "2026-04-28",
       "type": "chief",
       "title": "조원 공지 · 일정 종료 후",
-      "time": "시간 미정",
+      "time": "종료 직후",
       "startTime": "",
       "endTime": "",
-      "note": "일정 종료 후 공지",
+      "note": "보내기 기한: 화요일 일정 종료 직후 / 수요일 발표/외래/흉통 CPX 준비를 바로 공지한다.",
       "completed": false,
       "professor": "",
       "difficulty": 5,
@@ -1656,6 +1661,25 @@
       "windowType": "clerkship-session",
       "bundleId": "cardiology-2026-04-chief-draft-v2",
       "sourceSessionId": "comm-2026-04-28-chief",
+      "sourceAssignmentId": "",
+      "sourceKind": "session"
+    },
+    {
+      "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-04-28-admin",
+      "date": "2026-04-28",
+      "type": "admin",
+      "title": "교수님 확인 문자 · 전공의 / 정진옥",
+      "time": "화 13:00–14:00",
+      "startTime": "",
+      "endTime": "",
+      "note": "보내기 기한: 화요일 13:00~14:00 권장 / 전공의 피드백 요청과 정진옥 교수님 수업 확인을 같은 날 정리한다.",
+      "completed": false,
+      "professor": "",
+      "difficulty": 4,
+      "track": "chief-draft",
+      "windowType": "clerkship-session",
+      "bundleId": "cardiology-2026-04-chief-draft-v2",
+      "sourceSessionId": "comm-2026-04-28-admin",
       "sourceAssignmentId": "",
       "sourceKind": "session"
     },
@@ -1823,6 +1847,25 @@
       "sourceKind": "session"
     },
     {
+      "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-04-29-admin",
+      "date": "2026-04-29",
+      "type": "admin",
+      "title": "교수님 확인 문자 · 권희진 / 김준형",
+      "time": "수 13:00–14:00",
+      "startTime": "",
+      "endTime": "",
+      "note": "보내기 기한: 수요일 13:00~14:00 권장 / 권희진 교수님과 김준형 교수님 리마인드 문자를 보낸다.",
+      "completed": false,
+      "professor": "",
+      "difficulty": 4,
+      "track": "chief-draft",
+      "windowType": "clerkship-session",
+      "bundleId": "cardiology-2026-04-chief-draft-v2",
+      "sourceSessionId": "comm-2026-04-29-admin",
+      "sourceAssignmentId": "",
+      "sourceKind": "session"
+    },
+    {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-overlay-2026-04-29-cpx",
       "date": "2026-04-29",
       "type": "admin",
@@ -1842,33 +1885,14 @@
       "sourceKind": "session"
     },
     {
-      "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-04-29-admin",
-      "date": "2026-04-29",
-      "type": "admin",
-      "title": "교수님 확인 문자 · 권희진 / 김준형",
-      "time": "시간 미정",
-      "startTime": "",
-      "endTime": "",
-      "note": "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 목요일 오후 2시에 교육실에서 두근거림, 실신 CPX가 진행된다고 전달받아, 혹시 일정에 변동사항이 있는지 여쭙고자 연락드렸습니다. 조원은 총 O명입니다. 감사합니다.\"",
-      "completed": false,
-      "professor": "",
-      "difficulty": 4,
-      "track": "chief-draft",
-      "windowType": "clerkship-session",
-      "bundleId": "cardiology-2026-04-chief-draft-v2",
-      "sourceSessionId": "comm-2026-04-29-admin",
-      "sourceAssignmentId": "",
-      "sourceKind": "session"
-    },
-    {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-04-29-chief",
       "date": "2026-04-29",
       "type": "chief",
       "title": "조원 공지 · 일정 종료 후",
-      "time": "시간 미정",
+      "time": "종료 직후",
       "startTime": "",
       "endTime": "",
-      "note": "일정 종료 후 공지",
+      "note": "보내기 기한: 수요일 일정 종료 직후 / A 심전도 발표 출근 시각과 목요일 CPX 준비를 공지한다.",
       "completed": false,
       "professor": "",
       "difficulty": 5,
@@ -2066,10 +2090,10 @@
       "date": "2026-04-30",
       "type": "admin",
       "title": "교수님 확인 문자 · 안계택",
-      "time": "시간 미정",
+      "time": "목 13:00–14:00",
       "startTime": "",
       "endTime": "",
-      "note": "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 금요일 오전 8시 40분 교육실 OT 및 10시 반 OSCE 시험 일정에 변동사항 있는지 여쭙고자 연락드립니다. 감사합니다.\"",
+      "note": "보내기 기한: 목요일 13:00~14:00 권장 / 안계택 교수님 일정 확인은 외래 학생을 통한 확인이 되면 생략 가능하다.",
       "completed": false,
       "professor": "",
       "difficulty": 4,
@@ -2085,10 +2109,10 @@
       "date": "2026-04-30",
       "type": "chief",
       "title": "조원 공지 · 일정 종료 후",
-      "time": "시간 미정",
+      "time": "종료 직후",
       "startTime": "",
       "endTime": "",
-      "note": "일정 종료 후 공지",
+      "note": "보내기 기한: 목요일 일정 종료 직후 / 금요일 심전도 발표, OSCE 연습, 제세동/심폐소생술 준비를 공지한다.",
       "completed": false,
       "professor": "",
       "difficulty": 5,
@@ -2231,10 +2255,10 @@
       "date": "2026-05-01",
       "type": "chief",
       "title": "조원 공지 · 세종 준비 / 다음주 준비",
-      "time": "시간 미정",
+      "time": "종료 직후",
       "startTime": "",
       "endTime": "",
-      "note": "일정 종료 후 공지",
+      "note": "보내기 기한: 금요일 일정 종료 직후 / 세종 집합, 다음 주 발표 준비, 1주차 주간성찰을 이날 바로 공지한다.",
       "completed": false,
       "professor": "",
       "difficulty": 5,
@@ -2250,10 +2274,10 @@
       "date": "2026-05-03",
       "type": "admin",
       "title": "교수님 확인 문자 · 김민수",
-      "time": "시간 미정",
+      "time": "일 13:00–14:00",
       "startTime": "",
       "endTime": "",
-      "note": "\"교수님 안녕하세요. 내일부터 사흘간 세종 실습 예정인 PK 0,0조 조장 000입니다. 오전 10시까지 병원으로 가면 될지 확인드리고자 연락드립니다. 감사합니다.\"",
+      "note": "보내기 기한: 일요일 13:00~14:00 권장 / 세종 첫날 집합 시각과 변동사항을 김민수 교수님께 확인한다.",
       "completed": false,
       "professor": "",
       "difficulty": 4,
@@ -2269,10 +2293,10 @@
       "date": "2026-05-03",
       "type": "chief",
       "title": "주말 공지 · 세종 집합 안내",
-      "time": "시간 미정",
+      "time": "일 저녁 전",
       "startTime": "",
       "endTime": "",
-      "note": "일정 공지",
+      "note": "보내기 기한: 일요일 밤 전 / 세종 집합 시각과 시작 시간을 짧게 한 번 더 리마인드한다.",
       "completed": false,
       "professor": "",
       "difficulty": 5,
@@ -2500,10 +2524,10 @@
       "date": "2026-05-04",
       "type": "admin",
       "title": "교수님 확인 문자 · 김미주 / 박재형 / 전공의",
-      "time": "시간 미정",
+      "time": "월 13:00–14:00",
       "startTime": "",
       "endTime": "",
-      "note": "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 이번 주 목요일 9시에 교육실에서 호흡곤란 CPX 진행 예정인데 변동사항 확인 부탁드립니다. 조원은 총 O명입니다. 감사합니다.\"",
+      "note": "보내기 기한: 월요일 13:00~14:00 권장 / 호흡곤란 CPX, 박재형 수업, 전공의 ECG 피드백 요청을 같은 날 정리한다.",
       "completed": false,
       "professor": "",
       "difficulty": 4,
@@ -2545,6 +2569,23 @@
       "bundleId": "cardiology-2026-04-chief-draft-v2",
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-pci-20260505-def",
+      "sourceKind": "assignment",
+      "baseDate": "2026-05-05"
+    },
+    {
+      "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-onsite-arrhyproc-20260505-def-1",
+      "date": "2026-05-05",
+      "type": "assignment",
+      "title": "유폴 현장승인 · 2주차 화 DEF 부정맥 시술 참관",
+      "time": "05-05",
+      "note": "DEF 부정맥 시술 참관 후 유폴 현장승인을 받는 기회다.",
+      "completed": false,
+      "difficulty": 5,
+      "track": "chief-draft",
+      "windowType": "assignment-summary",
+      "bundleId": "cardiology-2026-04-chief-draft-v2",
+      "sourceSessionId": "",
+      "sourceAssignmentId": "assign-onsite-arrhyproc-20260505-def",
       "sourceKind": "assignment",
       "baseDate": "2026-05-05"
     },
@@ -2629,10 +2670,10 @@
       "date": "2026-05-05",
       "type": "admin",
       "title": "교수님 확인 문자 · 오진경",
-      "time": "시간 미정",
+      "time": "화 13:00–14:00",
       "startTime": "",
       "endTime": "",
-      "note": "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 오후 1시 30분에 심초음파실에서 '심초음파의 이해' 강의 예정인데 변동 사항 확인드리고자 연락드립니다. 감사합니다.\"",
+      "note": "보내기 기한: 화요일 13:00~14:00 권장 / 오진경 교수님 강의는 수요일 오후 일정 확인용으로 화요일에 보낸다.",
       "completed": false,
       "professor": "",
       "difficulty": 4,
@@ -2642,6 +2683,23 @@
       "sourceSessionId": "comm-2026-05-05-admin",
       "sourceAssignmentId": "",
       "sourceKind": "session"
+    },
+    {
+      "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-onsite-arrhyproc-20260506-abc-1",
+      "date": "2026-05-06",
+      "type": "assignment",
+      "title": "유폴 현장승인 · 2주차 수 ABC 부정맥 시술 참관",
+      "time": "05-06",
+      "note": "ABC 부정맥 시술 참관 후 유폴 현장승인을 받는 기회다.",
+      "completed": false,
+      "difficulty": 5,
+      "track": "chief-draft",
+      "windowType": "assignment-summary",
+      "bundleId": "cardiology-2026-04-chief-draft-v2",
+      "sourceSessionId": "",
+      "sourceAssignmentId": "assign-onsite-arrhyproc-20260506-abc",
+      "sourceKind": "assignment",
+      "baseDate": "2026-05-06"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-onsite-outpatient-makeup-20260506-1",
@@ -2752,6 +2810,25 @@
       "sourceKind": "session"
     },
     {
+      "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-05-06-admin",
+      "date": "2026-05-06",
+      "type": "admin",
+      "title": "교수님 확인 문자 · 김준형",
+      "time": "수 13:00–14:00",
+      "startTime": "",
+      "endTime": "",
+      "note": "보내기 기한: 수요일 13:00~14:00 권장 / 김준형 교수님 발표 전날 리마인드 문자를 보낸다.",
+      "completed": false,
+      "professor": "",
+      "difficulty": 4,
+      "track": "chief-draft",
+      "windowType": "clerkship-session",
+      "bundleId": "cardiology-2026-04-chief-draft-v2",
+      "sourceSessionId": "comm-2026-05-06-admin",
+      "sourceAssignmentId": "",
+      "sourceKind": "session"
+    },
+    {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-overlay-2026-05-06-item1",
       "date": "2026-05-06",
       "type": "admin",
@@ -2809,33 +2886,14 @@
       "sourceKind": "session"
     },
     {
-      "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-05-06-admin",
-      "date": "2026-05-06",
-      "type": "admin",
-      "title": "교수님 확인 문자 · 김준형",
-      "time": "시간 미정",
-      "startTime": "",
-      "endTime": "",
-      "note": "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 오전 7시 50분 교육실 심전도 발표 때 뵙겠습니다. 혹시 변동 사항 있으면 말씀 부탁드립니다. 감사합니다.\"",
-      "completed": false,
-      "professor": "",
-      "difficulty": 4,
-      "track": "chief-draft",
-      "windowType": "clerkship-session",
-      "bundleId": "cardiology-2026-04-chief-draft-v2",
-      "sourceSessionId": "comm-2026-05-06-admin",
-      "sourceAssignmentId": "",
-      "sourceKind": "session"
-    },
-    {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-05-06-chief",
       "date": "2026-05-06",
       "type": "chief",
       "title": "조원 공지 · 일정 종료 후",
-      "time": "시간 미정",
+      "time": "종료 직후",
       "startTime": "",
       "endTime": "",
-      "note": "일정 종료 후 공지",
+      "note": "보내기 기한: 수요일 일정 종료 직후 / 세종 추가 공지, ECG 피드백, CD 발표, 호흡곤란 CPX 준비를 함께 정리한다.",
       "completed": false,
       "professor": "",
       "difficulty": 5,
@@ -2997,10 +3055,10 @@
       "date": "2026-05-07",
       "type": "admin",
       "title": "교수님 확인 문자 · 양유진",
-      "time": "시간 미정",
+      "time": "목 13:00–14:00",
       "startTime": "",
       "endTime": "",
-      "note": "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 금요일 오후 1시 30분 '심장판막질환' 강의 예정인데 변동사항 확인드리고자 연락드립니다. 감사합니다.\" (※ 양유진 교수님 04.27 복귀 전까지는 복영남 교수님께 연락)",
+      "note": "보내기 기한: 목요일 13:00~14:00 권장 / 양유진/복영남 교수님 판막질환 일정 확인 문자를 보낸다.",
       "completed": false,
       "professor": "",
       "difficulty": 4,
@@ -3016,10 +3074,10 @@
       "date": "2026-05-07",
       "type": "chief",
       "title": "조원 공지 · 일정 종료 후",
-      "time": "시간 미정",
+      "time": "종료 직후",
       "startTime": "",
       "endTime": "",
-      "note": "일정 종료 후 공지",
+      "note": "보내기 기한: 목요일 일정 종료 직후 / EF 발표 준비와 판막 강의 준비를 공지한다.",
       "completed": false,
       "professor": "",
       "difficulty": 5,
@@ -3196,10 +3254,10 @@
       "date": "2026-05-08",
       "type": "chief",
       "title": "과제 checklist · 최종 제출 / 인계파일 회수",
-      "time": "시간 미정",
+      "time": "금 저녁–토",
       "startTime": "",
       "endTime": "",
-      "note": "과제 Checklist (금요일 내)",
+      "note": "보내기 기한: 금요일 실습 종료 직후부터 밤까지 / 금요일 마감 과제는 이날 정리하고, 토요일 마감 과제/파일 회수는 밤에 한 번 더 확인한다.",
       "completed": false,
       "professor": "",
       "difficulty": 5,
@@ -3637,6 +3695,9 @@
             "조사 / 보강 내용",
             "교수님 스타일 장문 서술",
             "후기성 예외 사례"
+          ],
+          "related_chief_admin_ids": [
+            "comm-2026-04-26-admin"
           ]
         },
         {
@@ -3909,6 +3970,10 @@
             "조사 / 보강 내용",
             "교수님 스타일 장문 서술",
             "후기성 예외 사례"
+          ],
+          "related_chief_admin_ids": [
+            "comm-2026-04-24-chief",
+            "comm-2026-04-26-admin"
           ]
         },
         {
@@ -3989,6 +4054,10 @@
           ],
           "linked_assignments": [
             "assign-pretest-reflection"
+          ],
+          "related_chief_admin_ids": [
+            "comm-2026-04-26-admin",
+            "comm-2026-04-27-chief"
           ]
         },
         {
@@ -4098,7 +4167,11 @@
               "현장승인 필요"
             ],
             "show_assignment_count": true
-          }
+          },
+          "related_chief_admin_ids": [
+            "comm-2026-04-24-chief",
+            "comm-2026-04-26-admin"
+          ]
         },
         {
           "id": "comm-2026-04-27-chief",
@@ -4106,8 +4179,8 @@
           "week": "1주차",
           "day": "월요일",
           "date": "2026-04-27",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "종료 직후",
+          "time_raw": "종료 직후",
           "start_time": "",
           "end_time": "",
           "title": "조원 공지 · 일정 종료 후",
@@ -4117,30 +4190,38 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "일정 종료 후 공지",
+          "summary": "월요일 일정 종료 직후",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-1-2. 월요일 공지",
-              "- 일정 종료 후 공지",
-              "  - 4시~4시 반쯤 EKG -> Echo 순으로 촬영 가기.",
-              "  - DEF: MI case 환자 문진 및 녹화.",
-              "  - AB: 심전도 발표 및 수요일 POMR 발표 준비.",
-              "  - 전원: Pretest 유폴리오 과제 업로드 (세 줄 정도).",
-              "  - 전원: 화요일 성인환 교수님 My Echo/ECG PPT 발표 준비.",
-              "  - 전원: 화요일 고혈압 CPX, 심음청진 준비."
+            "intro": [
+              "보내기 기한: **월요일 일정 종료 직후**",
+              "EKG/Echo, MI case, POMR, Pretest 유폴, 화요일 준비물을 이날 바로 공지한다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- Pretest",
+              "- My Echo & ECG 발표",
+              "- CPX HTN",
+              "- 심음 청진",
+              "- POMR 증례발표",
+              "- MI case 발표"
+            ],
+            "원문 문자 / 공지": [
+              "- **일정 종료 후 공지**",
+              "  - **4시~4시 반쯤에 EKG -> Echo 순으로 찍으러 가기**",
+              "  - **DEF**: MI case 환자 문진 및 녹화.",
+              "  - **AB**: 심전도 발표 미리 준비하기.",
+              "  - **AB**: 수요일 이재환 교수님 POMR 발표 준비하기. 아무나 해도 되는데 목요일 발표 미리 연습하는 겸, EKG 케이스 환자로 그대로 하면 됨. 김준형 교수님과는 스타일이 많이 다르니 야마 참고.",
+              "  - **전원**: Pretest 유폴리오 과제 업로드 (세 줄 정도 작성).",
+              "  - **전원**: 화요일 성인환 교수님 My Echo & ECG PPT 발표 준비.",
+              "  - **전원**: 화요일 고혈압 CPX, 심음청진 준비."
+            ]
           },
           "raw_md_sources": [
             "2-1-2. 월요일 공지"
           ],
           "raw_md_excerpt": "#### 2-1-2. 월요일 공지\n- 일정 종료 후 공지\n  - 4시~4시 반쯤 EKG -> Echo 순으로 촬영 가기.\n  - DEF: MI case 환자 문진 및 녹화.\n  - AB: 심전도 발표 및 수요일 POMR 발표 준비.\n  - 전원: Pretest 유폴리오 과제 업로드 (세 줄 정도).\n  - 전원: 화요일 성인환 교수님 My Echo/ECG PPT 발표 준비.\n  - 전원: 화요일 고혈압 CPX, 심음청진 준비.",
-          "calendar_body_short": "chief->all",
+          "calendar_body_short": "보내기 기한: 월요일 일정 종료 직후",
           "prep_tasks": [],
           "core_points": [
             "일정 종료 후 공지",
@@ -4166,6 +4247,15 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 월요일 일정 종료 직후 / EKG/Echo, MI case, POMR, Pretest 유폴, 화요일 준비물을 이날 바로 공지한다.",
+          "related_session_ids": [
+            "s-2026-04-27-1400-pretest",
+            "s-2026-04-28-1200-echoecg",
+            "s-2026-04-28-1400-htn-cpx",
+            "s-2026-04-28-0840-heartsound",
+            "s-2026-04-29-1000-pomr",
+            "s-2026-04-29-1200-mi"
           ]
         },
         {
@@ -4174,8 +4264,8 @@
           "week": "1주차",
           "day": "월요일",
           "date": "2026-04-27",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "월 13:00–14:00",
+          "time_raw": "월 13:00–14:00",
           "start_time": "",
           "end_time": "",
           "title": "교수님 확인 문자 · 화/수 일정",
@@ -4185,26 +4275,48 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 8시 교육실에서 대면증례보고서 OT가 있는 것으로 전달받았는데, 변동 사항 있는지 확인 부탁드립니다. 감사합니다.\"",
+          "summary": "월요일 13:00~14:00 권장",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-6-1. 성석우 교수님",
-              "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 8시 교육실에서 대면증례보고서 OT가 있는 것으로 전달받았는데, 변동 사항 있는지 확인 부탁드립니다. 감사합니다.\"",
-              "#### 2-6-2. 진선아 교수님",
-              "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 화요일 오후 2시에 의국에서 고혈압 CPX가 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\"",
-              "#### 2-6-3. 박현웅 교수님",
-              "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 이번 주 수요일 오전 11시에 교육실에서 흉통 CPX 시험이 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\"",
-              "#### 2-6-4. 이재환 교수님",
-              "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 이번 주 수요일 오전 10시에 교육실에서 POMR 발표가 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\"",
-              "#### 2-6-5. 김준형 교수님",
-              "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 이번 주 목요일 1명, 금요일 1명, 다음 주 목요일 2명, 금요일 2명이 심전도 발표 예정인데, 변동사항 있는지 확인드리고자 연락드립니다. 감사합니다.\""
+            "intro": [
+              "보내기 기한: **월요일 13:00~14:00 권장**",
+              "화요일/수요일 일정 확인 문자를 한 번에 정리해 보낸다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- 대면환자 증례보고서 OT",
+              "- CPX HTN",
+              "- 가변/숨은 일정 · 흉통 CPX",
+              "- POMR 증례발표",
+              "- A 심전도 발표",
+              "- B 심전도 발표",
+              "- C,D 심전도 발표",
+              "- E,F 심전도 발표"
+            ],
+            "원문 문자 / 공지": [
+              "- **성석우 교수님**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 8시 교육실에서 대면증례보고서 OT가 있는 것으로 전달받았는데, 변동 사항 있는지 확인 부탁드립니다. 감사합니다.\"",
+              "- **진선아 교수님 (OT 하면서 여쭤봐도 됨)**:",
+              "  \"교수님 안녕하세요. 이번 주부터 2주 간 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 화요일 오후 2시에 의국에서 고혈압 CPX가 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 2주 간 성실히 배우겠습니다. 감사합니다.\"",
+              "- **박현웅 교수님**:",
+              "  \"교수님 안녕하세요. 이번 주부터 2주 간 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 이번 주 수요일 오전 11시에 교육실에서 흉통 CPX 시험이 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 2주 간 성실히 배우겠습니다. 감사합니다.\"",
+              "- **이재환 교수님**:",
+              "  \"교수님 안녕하세요. 이번 주부터 2주 간 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 이번 주 수요일 오전 10시에 교육실에서 POMR 발표가 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 2주 간 성실히 배우겠습니다. 감사합니다.\"",
+              "- **김준형 교수님 (인원수에 따라 수 조정)**:",
+              "  \"교수님 안녕하세요. 이번 주부터 2주 간 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 이번 주 목요일 1명, 이번 주 금요일 1명, 다음 주 목요일 2명, 다음 주 금요일 2명이 심전도 발표를 하는 것으로 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 2주 간 성실히 배우겠습니다. 감사합니다.\""
+            ],
+            "문자 기본 원칙": [
+              "- **연락 금지 교수님**: 노재형 교수님 (연락 보낼 필요 없음).",
+              "- **연락 주의 교수님**:",
+              "  - **박재형 교수님**: 전주 금요일 연락 보내고 답장 없어도 심음청진 위치랑 시간 고정이니 추가 연락 하지 말 것.",
+              "  - **김준형 교수님**: 월요일에 심전도 발표 총정리해서 리마인드 문자, 매주 수요일에 다음날 심전도 발표 있다는 문자 연락.",
+              "  - **성인환 교수님**: 제일 첫 연락 빼고는 안 보냄.",
+              "  - **성석우 교수님**",
+              "- **연락 시간**: 가급적 오후 1시~2시 사이.",
+              "- **연락 성격**: 기본적으로 강의 1~2일 전 미리 리마인드 문자를 보낸다는 느낌. 외래는 기본적으로 연락 필요 없음.",
+              "- **기본 문자 템플릿**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 오전 0시 0분 OO에서 ~ 예정되어 있는 것으로 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락 드렸습니다. 감사합니다.\""
+            ]
           },
           "raw_md_sources": [
             "2-6-1. 성석우 교수님",
@@ -4214,7 +4326,7 @@
             "2-6-5. 김준형 교수님"
           ],
           "raw_md_excerpt": "#### 2-6-1. 성석우 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 8시 교육실에서 대면증례보고서 OT가 있는 것으로 전달받았는데, 변동 사항 있는지 확인 부탁드립니다. 감사합니다.\"\n\n#### 2-6-2. 진선아 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 화요일 오후 2시에 의국에서 고혈압 CPX가 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\"\n\n#### 2-6-3. 박현웅 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 이번 주 수요일 오전 11시에 교육실에서 흉통 CPX 시험이 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\"\n\n#### 2-6-4. 이재환 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 이번 주 수요일 오전 10시에 교육실에서 POMR 발표가 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\"\n\n#### 2-6-5. 김준형 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 이번 주 목요일 1명, 금요일 1명, 다음 주 목요일 2명, 금요일 2명이 심전도 발표 예정인데, 변동사항 있는지 확인드리고자 연락드립니다. 감사합니다.\"",
-          "calendar_body_short": "chief/admin",
+          "calendar_body_short": "보내기 기한: 월요일 13:00~14:00 권장",
           "prep_tasks": [],
           "core_points": [
             "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 8시 교육실에서 대면증례보고서 OT가 있는 것으로 전달받았는데, 변동 사항 있는지 확인 부탁드립니다. 감사합니다.\"",
@@ -4228,12 +4340,8 @@
           "participants_scope": "chief/admin",
           "site": "본원",
           "source_refs": [
-            "2-6-1",
-            "2-6-2",
-            "2-6-3",
-            "2-6-4",
-            "2-6-5",
-            "2-3"
+            "2-3",
+            "2-5-1"
           ],
           "note_only_keep": [
             "문자 예시 원문",
@@ -4245,6 +4353,17 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 월요일 13:00~14:00 권장 / 화요일/수요일 일정 확인 문자를 한 번에 정리해 보낸다.",
+          "related_session_ids": [
+            "s-2026-04-28-0800-facecase",
+            "s-2026-04-28-1400-htn-cpx",
+            "overlay-2026-04-29-cpx",
+            "s-2026-04-29-1000-pomr",
+            "s-2026-04-30-0800-ecg-a",
+            "s-2026-05-01-0800-ecg-b",
+            "s-2026-05-07-0800-ecg-cd",
+            "s-2026-05-08-0800-ecg-ef"
           ]
         },
         {
@@ -4322,6 +4441,9 @@
           "linked_assignments": [
             "assign-nayekkum-scan-seongsukwoo",
             "assign-facecase-report"
+          ],
+          "related_chief_admin_ids": [
+            "comm-2026-04-27-admin"
           ]
         },
         {
@@ -4453,7 +4575,12 @@
               "현장승인 필요"
             ],
             "show_assignment_count": true
-          }
+          },
+          "related_chief_admin_ids": [
+            "comm-2026-04-24-chief",
+            "comm-2026-04-24-admin",
+            "comm-2026-04-27-chief"
+          ]
         },
         {
           "id": "s-2026-04-28-1000-abc-pci",
@@ -4861,6 +4988,9 @@
           ],
           "linked_assignments": [
             "assign-my-echo-ecg"
+          ],
+          "related_chief_admin_ids": [
+            "comm-2026-04-27-chief"
           ]
         },
         {
@@ -4999,7 +5129,12 @@
               "현장승인 필요"
             ],
             "show_assignment_count": true
-          }
+          },
+          "related_chief_admin_ids": [
+            "comm-2026-04-24-chief",
+            "comm-2026-04-27-chief",
+            "comm-2026-04-27-admin"
+          ]
         },
         {
           "id": "s-2026-04-28-1600-selfstudy",
@@ -5058,8 +5193,8 @@
           "week": "1주차",
           "day": "화요일",
           "date": "2026-04-28",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "종료 직후",
+          "time_raw": "종료 직후",
           "start_time": "",
           "end_time": "",
           "title": "조원 공지 · 일정 종료 후",
@@ -5069,27 +5204,32 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "일정 종료 후 공지",
+          "summary": "화요일 일정 종료 직후",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-1-3. 화요일 공지",
-              "- 일정 종료 후 공지",
-              "  - DEF: MI case 발표 자료 완성.",
-              "  - AB: POMR 증례발표 및 전공의 피드백용 PPT 완성.",
-              "  - 전원: 흉통 CPX 준비 (증례토의 형식)."
+            "intro": [
+              "보내기 기한: **화요일 일정 종료 직후**",
+              "수요일 발표/외래/흉통 CPX 준비를 바로 공지한다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- 허혈성 심질환 주제 발표",
+              "- POMR 증례발표",
+              "- MI case 발표",
+              "- 가변/숨은 일정 · 흉통 CPX"
+            ],
+            "원문 문자 / 공지": [
+              "- **일정 종료 후 공지**",
+              "  - **DEF**: MI case 발표 자료 완성.",
+              "  - **AB**: POMR 증례발표 PPT 준비 + 전공의 선생님 피드백받을 PPT도 완성.",
+              "  - **전원**: 흉통 CPX 준비 (증례토의 느낌)."
+            ]
           },
           "raw_md_sources": [
             "2-1-3. 화요일 공지"
           ],
           "raw_md_excerpt": "#### 2-1-3. 화요일 공지\n- 일정 종료 후 공지\n  - DEF: MI case 발표 자료 완성.\n  - AB: POMR 증례발표 및 전공의 피드백용 PPT 완성.\n  - 전원: 흉통 CPX 준비 (증례토의 형식).",
-          "calendar_body_short": "chief->all",
+          "calendar_body_short": "보내기 기한: 화요일 일정 종료 직후",
           "prep_tasks": [],
           "core_points": [
             "일정 종료 후 공지",
@@ -5115,6 +5255,13 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 화요일 일정 종료 직후 / 수요일 발표/외래/흉통 CPX 준비를 바로 공지한다.",
+          "related_session_ids": [
+            "s-2026-04-29-0840-ihd-topic",
+            "s-2026-04-29-1000-pomr",
+            "s-2026-04-29-1200-mi",
+            "overlay-2026-04-29-cpx"
           ]
         },
         {
@@ -5123,8 +5270,8 @@
           "week": "1주차",
           "day": "화요일",
           "date": "2026-04-28",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "화 13:00–14:00",
+          "time_raw": "화 13:00–14:00",
           "start_time": "",
           "end_time": "",
           "title": "교수님 확인 문자 · 전공의 / 정진옥",
@@ -5134,27 +5281,45 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "\"선생님 안녕하세요. PK 0,0조 조장 000입니다. 이번 주 및 다음 주 심전도 발표 전 피드백을 부탁드리고자 연락드렸습니다. 편하신 시간에 피드백 가능할지 여쭙고 싶습니다. 감사합니다.\" (이후 환자 명단: 환자번호-이름-발표학생 알파벳 순으로 송부)",
+          "summary": "화요일 13:00~14:00 권장",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-7-1. 전공의 선생님",
-              "\"선생님 안녕하세요. PK 0,0조 조장 000입니다. 이번 주 및 다음 주 심전도 발표 전 피드백을 부탁드리고자 연락드렸습니다. 편하신 시간에 피드백 가능할지 여쭙고 싶습니다. 감사합니다.\" (이후 환자 명단: 환자번호-이름-발표학생 알파벳 순으로 송부)",
-              "#### 2-7-2. 정진옥 교수님",
-              "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 수요일 8시 40분에 교육실에서 허혈성 심질환 수업을 진행하며 7개 주제를 발표하는 것으로 인계받았는데, 전 조와 변동 없이 준비하면 될지 여쭙고자 연락드립니다. 감사합니다.\""
+            "intro": [
+              "보내기 기한: **화요일 13:00~14:00 권장**",
+              "전공의 피드백 요청과 정진옥 교수님 수업 확인을 같은 날 정리한다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- 허혈성 심질환 주제 발표",
+              "- A 심전도 발표",
+              "- B 심전도 발표"
+            ],
+            "원문 문자 / 공지": [
+              "- **전공의 선생님 (인원수에 따라 수 조정)**:",
+              "  \"선생님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 다름이 아니라 이번 주 목요일 1명, 이번 주 금요일 1명, 다음 주 목요일 2명, 다음 주 금요일 2명이 김준형 교수님 심전도 발표를 앞두고 있어, 사전에 피드백을 부탁드리고자 연락드렸습니다. 선생님께서 편하신 시간에 이번 주 발표 예정인 2명에 대해 피드백을 받을 수 있을지 여쭙고 싶습니다. 바쁘신 와중에 번거롭게 해드려 죄송합니다. 감사합니다.\"",
+              "  (※ 이후 심전도 케이스 환자 명단 송부: 환자번호 - 환자이름 - 발표학생 알파벳 순)",
+              "- **정진옥 교수님 (당일 외래 들어가는 조원에게 부탁하는 것이 나을 수도 있음)**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 수요일 8시 40분에 교육실에서 허혈성 심질환 수업을 진행하며 7개 주제를 발표하는 것으로 인계받았는데, 전 조와 변동 없이 준비해오면 될지 여쭙고자 연락드립니다. 2주 간 성실히 배우겠습니다. 감사합니다.\""
+            ],
+            "문자 기본 원칙": [
+              "- **연락 금지 교수님**: 노재형 교수님 (연락 보낼 필요 없음).",
+              "- **연락 주의 교수님**:",
+              "  - **박재형 교수님**: 전주 금요일 연락 보내고 답장 없어도 심음청진 위치랑 시간 고정이니 추가 연락 하지 말 것.",
+              "  - **김준형 교수님**: 월요일에 심전도 발표 총정리해서 리마인드 문자, 매주 수요일에 다음날 심전도 발표 있다는 문자 연락.",
+              "  - **성인환 교수님**: 제일 첫 연락 빼고는 안 보냄.",
+              "  - **성석우 교수님**",
+              "- **연락 시간**: 가급적 오후 1시~2시 사이.",
+              "- **연락 성격**: 기본적으로 강의 1~2일 전 미리 리마인드 문자를 보낸다는 느낌. 외래는 기본적으로 연락 필요 없음.",
+              "- **기본 문자 템플릿**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 오전 0시 0분 OO에서 ~ 예정되어 있는 것으로 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락 드렸습니다. 감사합니다.\""
+            ]
           },
           "raw_md_sources": [
             "2-7-1. 전공의 선생님",
             "2-7-2. 정진옥 교수님"
           ],
           "raw_md_excerpt": "#### 2-7-1. 전공의 선생님\n\"선생님 안녕하세요. PK 0,0조 조장 000입니다. 이번 주 및 다음 주 심전도 발표 전 피드백을 부탁드리고자 연락드렸습니다. 편하신 시간에 피드백 가능할지 여쭙고 싶습니다. 감사합니다.\" (이후 환자 명단: 환자번호-이름-발표학생 알파벳 순으로 송부)\n\n#### 2-7-2. 정진옥 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 수요일 8시 40분에 교육실에서 허혈성 심질환 수업을 진행하며 7개 주제를 발표하는 것으로 인계받았는데, 전 조와 변동 없이 준비하면 될지 여쭙고자 연락드립니다. 감사합니다.\"",
-          "calendar_body_short": "chief/admin",
+          "calendar_body_short": "보내기 기한: 화요일 13:00~14:00 권장",
           "prep_tasks": [],
           "core_points": [
             "\"선생님 안녕하세요. PK 0,0조 조장 000입니다. 이번 주 및 다음 주 심전도 발표 전 피드백을 부탁드리고자 연락드렸습니다. 편하신 시간에 피드백 가능할지 여쭙고 싶습니다. 감사합니다.\" (이후 환자 명단: 환자번호-이름-발표학생 알파벳 순으로 송부)",
@@ -5167,9 +5332,8 @@
           "participants_scope": "chief/admin",
           "site": "본원",
           "source_refs": [
-            "2-7-1",
-            "2-7-2",
-            "2-3"
+            "2-3",
+            "2-5-2"
           ],
           "note_only_keep": [
             "문자 예시 원문",
@@ -5181,6 +5345,12 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 화요일 13:00~14:00 권장 / 전공의 피드백 요청과 정진옥 교수님 수업 확인을 같은 날 정리한다.",
+          "related_session_ids": [
+            "s-2026-04-29-0840-ihd-topic",
+            "s-2026-04-30-0800-ecg-a",
+            "s-2026-05-01-0800-ecg-b"
           ]
         },
         {
@@ -5269,6 +5439,11 @@
           ],
           "linked_assignments": [
             "assign-ihd-topic-presentation"
+          ],
+          "related_chief_admin_ids": [
+            "comm-2026-04-24-chief",
+            "comm-2026-04-28-chief",
+            "comm-2026-04-28-admin"
           ]
         },
         {
@@ -5380,7 +5555,12 @@
             "card_badges": [],
             "detail_emphasis": [],
             "show_assignment_count": true
-          }
+          },
+          "related_chief_admin_ids": [
+            "comm-2026-04-27-chief",
+            "comm-2026-04-27-admin",
+            "comm-2026-04-28-chief"
+          ]
         },
         {
           "id": "s-2026-04-29-1200-mi",
@@ -5461,6 +5641,10 @@
           ],
           "linked_assignments": [
             "assign-mi-case"
+          ],
+          "related_chief_admin_ids": [
+            "comm-2026-04-27-chief",
+            "comm-2026-04-28-chief"
           ]
         },
         {
@@ -5636,8 +5820,8 @@
           "week": "1주차",
           "day": "수요일",
           "date": "2026-04-29",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "종료 직후",
+          "time_raw": "종료 직후",
           "start_time": "",
           "end_time": "",
           "title": "조원 공지 · 일정 종료 후",
@@ -5647,26 +5831,29 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "일정 종료 후 공지",
+          "summary": "수요일 일정 종료 직후",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-1-4. 수요일 공지",
-              "- 일정 종료 후 공지",
-              "  - A: 목요일 심전도 발표 준비 (발표자/조장 7:20까지, 그 외 7:40까지 출근).",
-              "  - 전원: 권희진 교수님 두근거림/실신 CPX 준비 (2인 1조 롤플레잉, 감별진단 숙지)."
+            "intro": [
+              "보내기 기한: **수요일 일정 종료 직후**",
+              "A 심전도 발표 출근 시각과 목요일 CPX 준비를 공지한다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- A 심전도 발표",
+              "- CPX 두근거림 / 실신"
+            ],
+            "원문 문자 / 공지": [
+              "- **일정 종료 후 공지**",
+              "  - **A**: 목요일 심전도 발표 준비 (조장, 발표자 7:20까지, 그 외 7:30~40 전까지 출근).",
+              "  - **전원**: 권희진 교수님 두근거림/실신 CPX 준비. 두 명씩 나누어서 두근거림, 실신 롤플레잉 준비하기. 감별진단들의 임상적 특징, 진단 및 치료 방법들에 대해서도 알아가기."
+            ]
           },
           "raw_md_sources": [
             "2-1-4. 수요일 공지"
           ],
           "raw_md_excerpt": "#### 2-1-4. 수요일 공지\n- 일정 종료 후 공지\n  - A: 목요일 심전도 발표 준비 (발표자/조장 7:20까지, 그 외 7:40까지 출근).\n  - 전원: 권희진 교수님 두근거림/실신 CPX 준비 (2인 1조 롤플레잉, 감별진단 숙지).",
-          "calendar_body_short": "chief->all",
+          "calendar_body_short": "보내기 기한: 수요일 일정 종료 직후",
           "prep_tasks": [],
           "core_points": [
             "일정 종료 후 공지",
@@ -5692,6 +5879,11 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 수요일 일정 종료 직후 / A 심전도 발표 출근 시각과 목요일 CPX 준비를 공지한다.",
+          "related_session_ids": [
+            "s-2026-04-30-0800-ecg-a",
+            "s-2026-04-30-1400-palpit"
           ]
         },
         {
@@ -5700,8 +5892,8 @@
           "week": "1주차",
           "day": "수요일",
           "date": "2026-04-29",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "수 13:00–14:00",
+          "time_raw": "수 13:00–14:00",
           "start_time": "",
           "end_time": "",
           "title": "교수님 확인 문자 · 권희진 / 김준형",
@@ -5711,27 +5903,43 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 목요일 오후 2시에 교육실에서 두근거림, 실신 CPX가 진행된다고 전달받아, 혹시 일정에 변동사항이 있는지 여쭙고자 연락드렸습니다. 조원은 총 O명입니다. 감사합니다.\"",
+          "summary": "수요일 13:00~14:00 권장",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-8-1. 권희진 교수님",
-              "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 목요일 오후 2시에 교육실에서 두근거림, 실신 CPX가 진행된다고 전달받아, 혹시 일정에 변동사항이 있는지 여쭙고자 연락드렸습니다. 조원은 총 O명입니다. 감사합니다.\"",
-              "#### 2-8-2. 김준형 교수님",
-              "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 오전 7시 50분 교육실에서 심전도 발표를 진행하는 것으로 전달받았는데, 혹시 일정에 변동 사항이 있다면 말씀 부탁드립니다. 감사합니다.\""
+            "intro": [
+              "보내기 기한: **수요일 13:00~14:00 권장**",
+              "권희진 교수님과 김준형 교수님 리마인드 문자를 보낸다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- CPX 두근거림 / 실신",
+              "- A 심전도 발표"
+            ],
+            "원문 문자 / 공지": [
+              "- **권희진 교수님**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 목요일 오후 2시에 교육실에서 두근거림, 실신 CPX가 진행된다고 전달받아, 혹시 일정에 변동사항이 있는지 여쭙고자 연락드렸습니다. 조원은 총 O명입니다. 2주 간 성실히 배우겠습니다. 감사합니다.\"",
+              "- **김준형 교수님 (발표 전날 리마인드)**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 오전 7시 50분 교육실에서 심전도 발표를 진행하는 것으로 전달받았는데, 혹시 일정에 변동 사항이 있다면 말씀 부탁드립니다. 감사합니다!\""
+            ],
+            "문자 기본 원칙": [
+              "- **연락 금지 교수님**: 노재형 교수님 (연락 보낼 필요 없음).",
+              "- **연락 주의 교수님**:",
+              "  - **박재형 교수님**: 전주 금요일 연락 보내고 답장 없어도 심음청진 위치랑 시간 고정이니 추가 연락 하지 말 것.",
+              "  - **김준형 교수님**: 월요일에 심전도 발표 총정리해서 리마인드 문자, 매주 수요일에 다음날 심전도 발표 있다는 문자 연락.",
+              "  - **성인환 교수님**: 제일 첫 연락 빼고는 안 보냄.",
+              "  - **성석우 교수님**",
+              "- **연락 시간**: 가급적 오후 1시~2시 사이.",
+              "- **연락 성격**: 기본적으로 강의 1~2일 전 미리 리마인드 문자를 보낸다는 느낌. 외래는 기본적으로 연락 필요 없음.",
+              "- **기본 문자 템플릿**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 오전 0시 0분 OO에서 ~ 예정되어 있는 것으로 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락 드렸습니다. 감사합니다.\""
+            ]
           },
           "raw_md_sources": [
             "2-8-1. 권희진 교수님",
             "2-8-2. 김준형 교수님"
           ],
           "raw_md_excerpt": "#### 2-8-1. 권희진 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 목요일 오후 2시에 교육실에서 두근거림, 실신 CPX가 진행된다고 전달받아, 혹시 일정에 변동사항이 있는지 여쭙고자 연락드렸습니다. 조원은 총 O명입니다. 감사합니다.\"\n\n#### 2-8-2. 김준형 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 오전 7시 50분 교육실에서 심전도 발표를 진행하는 것으로 전달받았는데, 혹시 일정에 변동 사항이 있다면 말씀 부탁드립니다. 감사합니다.\"",
-          "calendar_body_short": "chief/admin",
+          "calendar_body_short": "보내기 기한: 수요일 13:00~14:00 권장",
           "prep_tasks": [],
           "core_points": [
             "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 목요일 오후 2시에 교육실에서 두근거림, 실신 CPX가 진행된다고 전달받아, 혹시 일정에 변동사항이 있는지 여쭙고자 연락드렸습니다. 조원은 총 O명입니다. 감사합니다.\"",
@@ -5744,9 +5952,8 @@
           "participants_scope": "chief/admin",
           "site": "본원",
           "source_refs": [
-            "2-8-1",
-            "2-8-2",
-            "2-3"
+            "2-3",
+            "2-5-3"
           ],
           "note_only_keep": [
             "문자 예시 원문",
@@ -5758,6 +5965,11 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 수요일 13:00~14:00 권장 / 권희진 교수님과 김준형 교수님 리마인드 문자를 보낸다.",
+          "related_session_ids": [
+            "s-2026-04-30-1400-palpit",
+            "s-2026-04-30-0800-ecg-a"
           ]
         },
         {
@@ -5908,7 +6120,13 @@
               "현장승인 필요"
             ],
             "show_assignment_count": true
-          }
+          },
+          "related_chief_admin_ids": [
+            "comm-2026-04-27-admin",
+            "comm-2026-04-28-admin",
+            "comm-2026-04-29-chief",
+            "comm-2026-04-29-admin"
+          ]
         },
         {
           "id": "s-2026-04-30-0840-abc-outpatient",
@@ -6399,7 +6617,11 @@
               "현장승인 필요"
             ],
             "show_assignment_count": true
-          }
+          },
+          "related_chief_admin_ids": [
+            "comm-2026-04-29-chief",
+            "comm-2026-04-29-admin"
+          ]
         },
         {
           "id": "s-2026-04-30-1600-selfstudy",
@@ -6458,8 +6680,8 @@
           "week": "1주차",
           "day": "목요일",
           "date": "2026-04-30",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "종료 직후",
+          "time_raw": "종료 직후",
           "start_time": "",
           "end_time": "",
           "title": "조원 공지 · 일정 종료 후",
@@ -6469,27 +6691,30 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "일정 종료 후 공지",
+          "summary": "목요일 일정 종료 직후",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-1-5. 목요일 공지",
-              "- 일정 종료 후 공지",
-              "  - B: 금요일 심전도 발표 준비 (발표자/조장 7:10까지, 그 외 7:30까지 출근).",
-              "  - OSCE 센터 제세동/심폐소생술 연습.",
-              "  - 전원: 금요일 안계택 교수님 OSCE 준비."
+            "intro": [
+              "보내기 기한: **목요일 일정 종료 직후**",
+              "금요일 심전도 발표, OSCE 연습, 제세동/심폐소생술 준비를 공지한다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- B 심전도 발표",
+              "- 제세동 / 심폐소생술 OT 및 OSCE"
+            ],
+            "원문 문자 / 공지": [
+              "- **일정 종료 후 공지**",
+              "  - **B**: 금요일 심전도 발표 준비 (조장, 발표자 7:10까지, 그 외 7:30까지 출근).",
+              "  - **OSCE 연습**: (연습 일정 잡았다면) 일정 종료 후 OSCE 센터에서 제세동/심폐소생술 OSCE 연습.",
+              "  - **전원**: 금요일 안계택 교수님 제세동/심폐소생술 OSCE 준비."
+            ]
           },
           "raw_md_sources": [
             "2-1-5. 목요일 공지"
           ],
           "raw_md_excerpt": "#### 2-1-5. 목요일 공지\n- 일정 종료 후 공지\n  - B: 금요일 심전도 발표 준비 (발표자/조장 7:10까지, 그 외 7:30까지 출근).\n  - OSCE 센터 제세동/심폐소생술 연습.\n  - 전원: 금요일 안계택 교수님 OSCE 준비.",
-          "calendar_body_short": "chief->all",
+          "calendar_body_short": "보내기 기한: 목요일 일정 종료 직후",
           "prep_tasks": [],
           "core_points": [
             "일정 종료 후 공지",
@@ -6515,6 +6740,11 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 목요일 일정 종료 직후 / 금요일 심전도 발표, OSCE 연습, 제세동/심폐소생술 준비를 공지한다.",
+          "related_session_ids": [
+            "s-2026-05-01-0800-ecg-b",
+            "s-2026-05-01-0840-osce"
           ]
         },
         {
@@ -6523,8 +6753,8 @@
           "week": "1주차",
           "day": "목요일",
           "date": "2026-04-30",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "목 13:00–14:00",
+          "time_raw": "목 13:00–14:00",
           "start_time": "",
           "end_time": "",
           "title": "교수님 확인 문자 · 안계택",
@@ -6534,24 +6764,39 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 금요일 오전 8시 40분 교육실 OT 및 10시 반 OSCE 시험 일정에 변동사항 있는지 여쭙고자 연락드립니다. 감사합니다.\"",
+          "summary": "목요일 13:00~14:00 권장",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-9-1. 안계택 교수님",
-              "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 금요일 오전 8시 40분 교육실 OT 및 10시 반 OSCE 시험 일정에 변동사항 있는지 여쭙고자 연락드립니다. 감사합니다.\""
+            "intro": [
+              "보내기 기한: **목요일 13:00~14:00 권장**",
+              "안계택 교수님 일정 확인은 외래 학생을 통한 확인이 되면 생략 가능하다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- 제세동 / 심폐소생술 OT 및 OSCE"
+            ],
+            "원문 문자 / 공지": [
+              "- **안계택 교수님 (외래 갔던 학생 통해 확인 가능하면 생략 가능)**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 금요일 오전 8시 40분부터 교육실에서 제세동/심폐소생술 OT 진행하고, 10시 반부터 OSCE센터에서 OSCE 진행하는 것으로 알고 있어서, 혹시 일정에 변동사항이 있는지 여쭙고자 연락드립니다. 2주 간 성실히 배우겠습니다. 감사합니다.\""
+            ],
+            "문자 기본 원칙": [
+              "- **연락 금지 교수님**: 노재형 교수님 (연락 보낼 필요 없음).",
+              "- **연락 주의 교수님**:",
+              "  - **박재형 교수님**: 전주 금요일 연락 보내고 답장 없어도 심음청진 위치랑 시간 고정이니 추가 연락 하지 말 것.",
+              "  - **김준형 교수님**: 월요일에 심전도 발표 총정리해서 리마인드 문자, 매주 수요일에 다음날 심전도 발표 있다는 문자 연락.",
+              "  - **성인환 교수님**: 제일 첫 연락 빼고는 안 보냄.",
+              "  - **성석우 교수님**",
+              "- **연락 시간**: 가급적 오후 1시~2시 사이.",
+              "- **연락 성격**: 기본적으로 강의 1~2일 전 미리 리마인드 문자를 보낸다는 느낌. 외래는 기본적으로 연락 필요 없음.",
+              "- **기본 문자 템플릿**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 오전 0시 0분 OO에서 ~ 예정되어 있는 것으로 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락 드렸습니다. 감사합니다.\""
+            ]
           },
           "raw_md_sources": [
             "2-9-1. 안계택 교수님"
           ],
           "raw_md_excerpt": "#### 2-9-1. 안계택 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 금요일 오전 8시 40분 교육실 OT 및 10시 반 OSCE 시험 일정에 변동사항 있는지 여쭙고자 연락드립니다. 감사합니다.\"",
-          "calendar_body_short": "chief/admin",
+          "calendar_body_short": "보내기 기한: 목요일 13:00~14:00 권장",
           "prep_tasks": [],
           "core_points": [
             "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 금요일 오전 8시 40분 교육실 OT 및 10시 반 OSCE 시험 일정에 변동사항 있는지 여쭙고자 연락드립니다. 감사합니다.\""
@@ -6563,8 +6808,8 @@
           "participants_scope": "chief/admin",
           "site": "본원",
           "source_refs": [
-            "2-9-1",
-            "2-3"
+            "2-3",
+            "2-5-4"
           ],
           "note_only_keep": [
             "문자 예시 원문",
@@ -6576,6 +6821,10 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 목요일 13:00~14:00 권장 / 안계택 교수님 일정 확인은 외래 학생을 통한 확인이 되면 생략 가능하다.",
+          "related_session_ids": [
+            "s-2026-05-01-0840-osce"
           ]
         },
         {
@@ -6723,7 +6972,12 @@
               "현장승인 필요"
             ],
             "show_assignment_count": true
-          }
+          },
+          "related_chief_admin_ids": [
+            "comm-2026-04-27-admin",
+            "comm-2026-04-28-admin",
+            "comm-2026-04-30-chief"
+          ]
         },
         {
           "id": "s-2026-05-01-0840-osce",
@@ -6841,7 +7095,11 @@
               "현장승인 필요"
             ],
             "show_assignment_count": true
-          }
+          },
+          "related_chief_admin_ids": [
+            "comm-2026-04-30-chief",
+            "comm-2026-04-30-admin"
+          ]
         },
         {
           "id": "s-2026-05-01-1200-selfstudy",
@@ -6954,8 +7212,8 @@
           "week": "1주차",
           "day": "금요일",
           "date": "2026-05-01",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "종료 직후",
+          "time_raw": "종료 직후",
           "start_time": "",
           "end_time": "",
           "title": "조원 공지 · 세종 준비 / 다음주 준비",
@@ -6965,27 +7223,32 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "일정 종료 후 공지",
+          "summary": "금요일 일정 종료 직후",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-1-6. 금요일 공지",
-              "- 일정 종료 후 공지",
-              "  - 다음 주 세종 9:30 집합 후 명찰 수령 (10시 일정 시작).",
-              "  - ABC: 목금 심전도 발표 준비 리마인드.",
-              "  - 1주차 주간성찰 유폴리오 작성."
+            "intro": [
+              "보내기 기한: **금요일 일정 종료 직후**",
+              "세종 집합, 다음 주 발표 준비, 1주차 주간성찰을 이날 바로 공지한다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- ABC 외래 참관",
+              "- DEF 외래 참관",
+              "- C,D 심전도 발표",
+              "- E,F 심전도 발표"
+            ],
+            "원문 문자 / 공지": [
+              "- **일정 종료 후 공지**",
+              "  - **세종 이동**: 다음 주 세종 9:30까지 집합 후 세종 명찰 받고 10시부터 일정 시작. 김민수 교수님 연락대로 진행하기. 일정 없거나 외래 등 유폴 다 채웠어도 심혈관 조영실 가서 참관하기.",
+              "  - **ABC**: 목금 심전도 발표 준비할 수 있도록 얘기해두기.",
+              "  - **1주차 주간성찰 유폴리오 작성**"
+            ]
           },
           "raw_md_sources": [
             "2-1-6. 금요일 공지"
           ],
           "raw_md_excerpt": "#### 2-1-6. 금요일 공지\n- 일정 종료 후 공지\n  - 다음 주 세종 9:30 집합 후 명찰 수령 (10시 일정 시작).\n  - ABC: 목금 심전도 발표 준비 리마인드.\n  - 1주차 주간성찰 유폴리오 작성.",
-          "calendar_body_short": "chief->all",
+          "calendar_body_short": "보내기 기한: 금요일 일정 종료 직후",
           "prep_tasks": [],
           "core_points": [
             "일정 종료 후 공지",
@@ -7014,6 +7277,13 @@
           ],
           "linked_assignments": [
             "assign-weekly-reflection-w1"
+          ],
+          "note": "보내기 기한: 금요일 일정 종료 직후 / 세종 집합, 다음 주 발표 준비, 1주차 주간성찰을 이날 바로 공지한다.",
+          "related_session_ids": [
+            "s-2026-05-04-1000-abc-outpatient-sejong",
+            "s-2026-05-04-1330-def-outpatient-sejong",
+            "s-2026-05-07-0800-ecg-cd",
+            "s-2026-05-08-0800-ecg-ef"
           ]
         },
         {
@@ -7120,7 +7390,12 @@
             "assign-outpatient-record-2",
             "assign-onsite-outpatient-20260504-abc"
           ],
-          "approval_highlight": "현장승인"
+          "approval_highlight": "현장승인",
+          "related_chief_admin_ids": [
+            "comm-2026-05-01-chief",
+            "comm-2026-05-03-chief",
+            "comm-2026-05-03-admin"
+          ]
         },
         {
           "id": "s-2026-05-04-1330-def-outpatient-sejong",
@@ -7226,7 +7501,12 @@
             "assign-outpatient-record-2",
             "assign-onsite-outpatient-20260504-def"
           ],
-          "approval_highlight": "현장승인"
+          "approval_highlight": "현장승인",
+          "related_chief_admin_ids": [
+            "comm-2026-05-01-chief",
+            "comm-2026-05-03-chief",
+            "comm-2026-05-03-admin"
+          ]
         },
         {
           "id": "comm-2026-05-04-admin",
@@ -7234,8 +7514,8 @@
           "week": "2주차",
           "day": "월요일",
           "date": "2026-05-04",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "월 13:00–14:00",
+          "time_raw": "월 13:00–14:00",
           "start_time": "",
           "end_time": "",
           "title": "교수님 확인 문자 · 김미주 / 박재형 / 전공의",
@@ -7245,22 +7525,41 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 이번 주 목요일 9시에 교육실에서 호흡곤란 CPX 진행 예정인데 변동사항 확인 부탁드립니다. 조원은 총 O명입니다. 감사합니다.\"",
+          "summary": "월요일 13:00~14:00 권장",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-11-1. 김미주 교수님",
-              "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 이번 주 목요일 9시에 교육실에서 호흡곤란 CPX 진행 예정인데 변동사항 확인 부탁드립니다. 조원은 총 O명입니다. 감사합니다.\"",
-              "#### 2-11-2. 박재형 교수님",
-              "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 세종 실습 중인데 심장 초음파 강의를 교수님 편하신 시간대에 받고자 연락드렸습니다. 감사합니다.\"",
-              "#### 2-11-3. 전공의 선생님",
-              "\"선생님 안녕하세요. 이번 주 발표 예정인 C, D, E, F 4명에 대해 편하신 시간에 피드백을 받을 수 있을지 여쭙고 싶습니다. 감사합니다.\""
+            "intro": [
+              "보내기 기한: **월요일 13:00~14:00 권장**",
+              "호흡곤란 CPX, 박재형 수업, 전공의 ECG 피드백 요청을 같은 날 정리한다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- CPX 호흡곤란",
+              "- 가변/숨은 일정 · 박재형 심장초음파 수업",
+              "- C,D 심전도 발표",
+              "- E,F 심전도 발표"
+            ],
+            "원문 문자 / 공지": [
+              "- **김미주 교수님**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 이번 주 목요일 9시에 교육실에서 호흡곤란 CPX가 진행된다고 전달받아, 혹시 일정에 변동사항이 있는지 확인 부탁드립니다. 조원은 총 O명입니다. 감사합니다.\"",
+              "- **박재형 교수님 (시간표에는 없으나 진행하는 수업)**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 다름이 아니라, 오늘부터 수요일까지 세종에서 실습을 진행 중인데 심장 초음파 강의가 예정되어 있는 것으로 알고 있어, 교수님께 편하신 시간대가 언제인지 여쭙고자 연락드렸습니다. 감사합니다!\"",
+              "  (※ 10시 이전에 진행될 경우 김민수 교수님께도 해당 일정 미리 연락드릴 것.)",
+              "- **전공의 선생님**:",
+              "  \"선생님 안녕하세요. 다름이 아니라 이번 주 목요일 2명, 이번 주 금요일 2명이 김준형 교수님 심전도 발표를 앞두고 있어, 사전에 피드백을 부탁드리고자 연락드렸습니다. 선생님께서 편하신 시간에 이번 주 발표 예정인 C, D, E, F 4명에 대해 피드백을 받을 수 있을지 여쭙고 싶습니다. 바쁘신 와중에 번거롭게 해드려 죄송합니다. 감사합니다.\""
+            ],
+            "문자 기본 원칙": [
+              "- **연락 금지 교수님**: 노재형 교수님 (연락 보낼 필요 없음).",
+              "- **연락 주의 교수님**:",
+              "  - **박재형 교수님**: 전주 금요일 연락 보내고 답장 없어도 심음청진 위치랑 시간 고정이니 추가 연락 하지 말 것.",
+              "  - **김준형 교수님**: 월요일에 심전도 발표 총정리해서 리마인드 문자, 매주 수요일에 다음날 심전도 발표 있다는 문자 연락.",
+              "  - **성인환 교수님**: 제일 첫 연락 빼고는 안 보냄.",
+              "  - **성석우 교수님**",
+              "- **연락 시간**: 가급적 오후 1시~2시 사이.",
+              "- **연락 성격**: 기본적으로 강의 1~2일 전 미리 리마인드 문자를 보낸다는 느낌. 외래는 기본적으로 연락 필요 없음.",
+              "- **기본 문자 템플릿**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 오전 0시 0분 OO에서 ~ 예정되어 있는 것으로 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락 드렸습니다. 감사합니다.\""
+            ]
           },
           "raw_md_sources": [
             "2-11-1. 김미주 교수님",
@@ -7268,7 +7567,7 @@
             "2-11-3. 전공의 선생님"
           ],
           "raw_md_excerpt": "#### 2-11-1. 김미주 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 이번 주 목요일 9시에 교육실에서 호흡곤란 CPX 진행 예정인데 변동사항 확인 부탁드립니다. 조원은 총 O명입니다. 감사합니다.\"\n\n#### 2-11-2. 박재형 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 세종 실습 중인데 심장 초음파 강의를 교수님 편하신 시간대에 받고자 연락드렸습니다. 감사합니다.\"\n\n#### 2-11-3. 전공의 선생님\n\"선생님 안녕하세요. 이번 주 발표 예정인 C, D, E, F 4명에 대해 편하신 시간에 피드백을 받을 수 있을지 여쭙고 싶습니다. 감사합니다.\"",
-          "calendar_body_short": "chief/admin",
+          "calendar_body_short": "보내기 기한: 월요일 13:00~14:00 권장",
           "prep_tasks": [],
           "core_points": [
             "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 이번 주 목요일 9시에 교육실에서 호흡곤란 CPX 진행 예정인데 변동사항 확인 부탁드립니다. 조원은 총 O명입니다. 감사합니다.\"",
@@ -7282,10 +7581,8 @@
           "participants_scope": "chief/admin",
           "site": "세종",
           "source_refs": [
-            "2-11-1",
-            "2-11-2",
-            "2-11-3",
-            "2-3"
+            "2-3",
+            "2-6-1"
           ],
           "note_only_keep": [
             "문자 예시 원문",
@@ -7297,6 +7594,13 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 월요일 13:00~14:00 권장 / 호흡곤란 CPX, 박재형 수업, 전공의 ECG 피드백 요청을 같은 날 정리한다.",
+          "related_session_ids": [
+            "s-2026-05-07-0900-dyspnea",
+            "overlay-2026-05-06-item1",
+            "s-2026-05-07-0800-ecg-cd",
+            "s-2026-05-08-0800-ecg-ef"
           ]
         },
         {
@@ -7646,6 +7950,12 @@
             "조사 / 보강 내용",
             "교수님 스타일 장문 서술",
             "후기성 예외 사례"
+          ],
+          "linked_assignments": [
+            "assign-onsite-arrhyproc-20260505-def"
+          ],
+          "linked_assignment_ids": [
+            "assign-onsite-arrhyproc-20260505-def"
           ]
         },
         {
@@ -7654,8 +7964,8 @@
           "week": "2주차",
           "day": "화요일",
           "date": "2026-05-05",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "화 13:00–14:00",
+          "time_raw": "화 13:00–14:00",
           "start_time": "",
           "end_time": "",
           "title": "교수님 확인 문자 · 오진경",
@@ -7665,24 +7975,39 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 오후 1시 30분에 심초음파실에서 '심초음파의 이해' 강의 예정인데 변동 사항 확인드리고자 연락드립니다. 감사합니다.\"",
+          "summary": "화요일 13:00~14:00 권장",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-12-1. 오진경 교수님",
-              "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 오후 1시 30분에 심초음파실에서 '심초음파의 이해' 강의 예정인데 변동 사항 확인드리고자 연락드립니다. 감사합니다.\""
+            "intro": [
+              "보내기 기한: **화요일 13:00~14:00 권장**",
+              "오진경 교수님 강의는 수요일 오후 일정 확인용으로 화요일에 보낸다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- 심초음파의 이해"
+            ],
+            "원문 문자 / 공지": [
+              "- **오진경 교수님**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 오후 1시 30분에 심초음파실에서 '심초음파의 이해' 강의가 예정되어 있는 것으로 알고 있는데, 혹시 변동 사항이 있는지 확인드리고자 연락드립니다. 실습에 성실히 임하겠습니다! 감사합니다.\""
+            ],
+            "문자 기본 원칙": [
+              "- **연락 금지 교수님**: 노재형 교수님 (연락 보낼 필요 없음).",
+              "- **연락 주의 교수님**:",
+              "  - **박재형 교수님**: 전주 금요일 연락 보내고 답장 없어도 심음청진 위치랑 시간 고정이니 추가 연락 하지 말 것.",
+              "  - **김준형 교수님**: 월요일에 심전도 발표 총정리해서 리마인드 문자, 매주 수요일에 다음날 심전도 발표 있다는 문자 연락.",
+              "  - **성인환 교수님**: 제일 첫 연락 빼고는 안 보냄.",
+              "  - **성석우 교수님**",
+              "- **연락 시간**: 가급적 오후 1시~2시 사이.",
+              "- **연락 성격**: 기본적으로 강의 1~2일 전 미리 리마인드 문자를 보낸다는 느낌. 외래는 기본적으로 연락 필요 없음.",
+              "- **기본 문자 템플릿**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 오전 0시 0분 OO에서 ~ 예정되어 있는 것으로 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락 드렸습니다. 감사합니다.\""
+            ]
           },
           "raw_md_sources": [
             "2-12-1. 오진경 교수님"
           ],
           "raw_md_excerpt": "#### 2-12-1. 오진경 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 오후 1시 30분에 심초음파실에서 '심초음파의 이해' 강의 예정인데 변동 사항 확인드리고자 연락드립니다. 감사합니다.\"",
-          "calendar_body_short": "chief/admin",
+          "calendar_body_short": "보내기 기한: 화요일 13:00~14:00 권장",
           "prep_tasks": [],
           "core_points": [
             "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 오후 1시 30분에 심초음파실에서 '심초음파의 이해' 강의 예정인데 변동 사항 확인드리고자 연락드립니다. 감사합니다.\""
@@ -7694,8 +8019,8 @@
           "participants_scope": "chief/admin",
           "site": "세종",
           "source_refs": [
-            "2-12-1",
-            "2-3"
+            "2-3",
+            "2-6-2"
           ],
           "note_only_keep": [
             "문자 예시 원문",
@@ -7707,6 +8032,10 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 화요일 13:00~14:00 권장 / 오진경 교수님 강의는 수요일 오후 일정 확인용으로 화요일에 보낸다.",
+          "related_session_ids": [
+            "s-2026-05-06-1330-echo-understanding"
           ]
         },
         {
@@ -7826,6 +8155,12 @@
             "조사 / 보강 내용",
             "교수님 스타일 장문 서술",
             "후기성 예외 사례"
+          ],
+          "linked_assignments": [
+            "assign-onsite-arrhyproc-20260506-abc"
+          ],
+          "linked_assignment_ids": [
+            "assign-onsite-arrhyproc-20260506-abc"
           ]
         },
         {
@@ -8009,6 +8344,9 @@
           ],
           "linked_assignments": [
             "assign-echo-understanding"
+          ],
+          "related_chief_admin_ids": [
+            "comm-2026-05-05-admin"
           ]
         },
         {
@@ -8017,8 +8355,8 @@
           "week": "2주차",
           "day": "수요일",
           "date": "2026-05-06",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "종료 직후",
+          "time_raw": "종료 직후",
           "start_time": "",
           "end_time": "",
           "title": "조원 공지 · 일정 종료 후",
@@ -8028,26 +8366,33 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "일정 종료 후 공지",
+          "summary": "수요일 일정 종료 직후",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-1-8. 2주차 수요일 공지",
-              "- 일정 종료 후 공지",
-              "  - CD: 목요일 심전도 발표 준비 (발표자/조장 7:20까지, 그 외 7:40까지 출근).",
-              "  - 김미주 교수님 호흡곤란 CPX 준비 (2인 1조 가상환자 대본 작성 및 암기, 신체진찰 포함)."
+            "intro": [
+              "보내기 기한: **수요일 일정 종료 직후**",
+              "세종 추가 공지, ECG 피드백, CD 발표, 호흡곤란 CPX 준비를 함께 정리한다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- C,D 심전도 발표",
+              "- CPX 호흡곤란"
+            ],
+            "원문 문자 / 공지": [
+              "- 세종 관련 공지는 각자 조 상황, 교수님 연락 맞춰서 알아서 하기.",
+              "- 전공의 선생님 ECG 발표 피드백은 CD 화요일, EF 수요일에 할 가능성 높음. 그 전에 각자 PPT 완성시키기.",
+              "- 화요일에 노재형 교수님 심혈관질환에 대한 Q&A 유폴 제출 — 자세한 건 드박 참고.",
+              "",
+              "- **일정 종료 후 공지**",
+              "  - **CD**: 목요일 심전도 발표 준비하기 (조장, 발표자 7:20까지, 그 외 7:30~40 전까지 출근).",
+              "  - **김미주 교수님 호흡곤란 CPX 준비**: 2명씩 짝지어서 교수님이 제시한 설정에 맞게 가상환자 대본 작성. 의사/환자는 랜덤이니 대본 다 외워가기. 신체진찰 있음."
+            ]
           },
           "raw_md_sources": [
             "2-1-8. 2주차 수요일 공지"
           ],
           "raw_md_excerpt": "#### 2-1-8. 2주차 수요일 공지\n- 일정 종료 후 공지\n  - CD: 목요일 심전도 발표 준비 (발표자/조장 7:20까지, 그 외 7:40까지 출근).\n  - 김미주 교수님 호흡곤란 CPX 준비 (2인 1조 가상환자 대본 작성 및 암기, 신체진찰 포함).",
-          "calendar_body_short": "chief->all",
+          "calendar_body_short": "보내기 기한: 수요일 일정 종료 직후",
           "prep_tasks": [],
           "core_points": [
             "일정 종료 후 공지",
@@ -8061,7 +8406,8 @@
           "participants_scope": "chief->all",
           "site": "세종",
           "source_refs": [
-            "2-1-8"
+            "2-1-8",
+            "2-1-9"
           ],
           "note_only_keep": [
             "복붙용 공지 원문",
@@ -8073,6 +8419,11 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 수요일 일정 종료 직후 / 세종 추가 공지, ECG 피드백, CD 발표, 호흡곤란 CPX 준비를 함께 정리한다.",
+          "related_session_ids": [
+            "s-2026-05-07-0800-ecg-cd",
+            "s-2026-05-07-0900-dyspnea"
           ]
         },
         {
@@ -8081,8 +8432,8 @@
           "week": "2주차",
           "day": "수요일",
           "date": "2026-05-06",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "수 13:00–14:00",
+          "time_raw": "수 13:00–14:00",
           "start_time": "",
           "end_time": "",
           "title": "교수님 확인 문자 · 김준형",
@@ -8092,24 +8443,39 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 오전 7시 50분 교육실 심전도 발표 때 뵙겠습니다. 혹시 변동 사항 있으면 말씀 부탁드립니다. 감사합니다.\"",
+          "summary": "수요일 13:00~14:00 권장",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-13-1. 김준형 교수님",
-              "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 오전 7시 50분 교육실 심전도 발표 때 뵙겠습니다. 혹시 변동 사항 있으면 말씀 부탁드립니다. 감사합니다.\""
+            "intro": [
+              "보내기 기한: **수요일 13:00~14:00 권장**",
+              "김준형 교수님 발표 전날 리마인드 문자를 보낸다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- C,D 심전도 발표"
+            ],
+            "원문 문자 / 공지": [
+              "- **김준형 교수님 (발표 전날 리마인드)**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 오전 7시 50분 교육실에서 진행되는 심전도 발표 때 뵙겠습니다. 혹시 일정에 변동 사항이 있다면 말씀 부탁드립니다. 감사합니다!\""
+            ],
+            "문자 기본 원칙": [
+              "- **연락 금지 교수님**: 노재형 교수님 (연락 보낼 필요 없음).",
+              "- **연락 주의 교수님**:",
+              "  - **박재형 교수님**: 전주 금요일 연락 보내고 답장 없어도 심음청진 위치랑 시간 고정이니 추가 연락 하지 말 것.",
+              "  - **김준형 교수님**: 월요일에 심전도 발표 총정리해서 리마인드 문자, 매주 수요일에 다음날 심전도 발표 있다는 문자 연락.",
+              "  - **성인환 교수님**: 제일 첫 연락 빼고는 안 보냄.",
+              "  - **성석우 교수님**",
+              "- **연락 시간**: 가급적 오후 1시~2시 사이.",
+              "- **연락 성격**: 기본적으로 강의 1~2일 전 미리 리마인드 문자를 보낸다는 느낌. 외래는 기본적으로 연락 필요 없음.",
+              "- **기본 문자 템플릿**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 오전 0시 0분 OO에서 ~ 예정되어 있는 것으로 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락 드렸습니다. 감사합니다.\""
+            ]
           },
           "raw_md_sources": [
             "2-13-1. 김준형 교수님"
           ],
           "raw_md_excerpt": "#### 2-13-1. 김준형 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 오전 7시 50분 교육실 심전도 발표 때 뵙겠습니다. 혹시 변동 사항 있으면 말씀 부탁드립니다. 감사합니다.\"",
-          "calendar_body_short": "chief/admin",
+          "calendar_body_short": "보내기 기한: 수요일 13:00~14:00 권장",
           "prep_tasks": [],
           "core_points": [
             "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 오전 7시 50분 교육실 심전도 발표 때 뵙겠습니다. 혹시 변동 사항 있으면 말씀 부탁드립니다. 감사합니다.\""
@@ -8121,8 +8487,8 @@
           "participants_scope": "chief/admin",
           "site": "세종",
           "source_refs": [
-            "2-13-1",
-            "2-3"
+            "2-3",
+            "2-6-3"
           ],
           "note_only_keep": [
             "문자 예시 원문",
@@ -8134,6 +8500,10 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 수요일 13:00~14:00 권장 / 김준형 교수님 발표 전날 리마인드 문자를 보낸다.",
+          "related_session_ids": [
+            "s-2026-05-07-0800-ecg-cd"
           ]
         },
         {
@@ -8278,7 +8648,14 @@
               "현장승인 필요"
             ],
             "show_assignment_count": true
-          }
+          },
+          "related_chief_admin_ids": [
+            "comm-2026-04-27-admin",
+            "comm-2026-05-01-chief",
+            "comm-2026-05-04-admin",
+            "comm-2026-05-06-chief",
+            "comm-2026-05-06-admin"
+          ]
         },
         {
           "id": "s-2026-05-07-0900-dyspnea",
@@ -8399,7 +8776,11 @@
               "현장승인 필요"
             ],
             "show_assignment_count": true
-          }
+          },
+          "related_chief_admin_ids": [
+            "comm-2026-05-04-admin",
+            "comm-2026-05-06-chief"
+          ]
         },
         {
           "id": "s-2026-05-07-1100-selfstudy",
@@ -8618,8 +8999,8 @@
           "week": "2주차",
           "day": "목요일",
           "date": "2026-05-07",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "종료 직후",
+          "time_raw": "종료 직후",
           "start_time": "",
           "end_time": "",
           "title": "조원 공지 · 일정 종료 후",
@@ -8629,26 +9010,29 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "일정 종료 후 공지",
+          "summary": "목요일 일정 종료 직후",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-1-9. 2주차 목요일 공지",
-              "- 일정 종료 후 공지",
-              "  - EF: 금요일 심전도 발표 준비 (발표자/조장 7:20까지, 그 외 7:40까지 출근).",
-              "  - 양유진 교수님 심장판막 강의 준비 (야마 확인)."
+            "intro": [
+              "보내기 기한: **목요일 일정 종료 직후**",
+              "EF 발표 준비와 판막 강의 준비를 공지한다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- E,F 심전도 발표",
+              "- 심장판막질환"
+            ],
+            "원문 문자 / 공지": [
+              "- **일정 종료 후 공지**",
+              "  - **EF**: 금요일 심전도 발표 준비하기 (조장, 발표자 7:20까지, 그 외 7:30~40 전까지 출근).",
+              "  - **양유진 교수님 심장판막 강의 준비**: 돌아가면서 질문 던지심. 야마만 보면 됨. 부담 없음."
+            ]
           },
           "raw_md_sources": [
             "2-1-9. 2주차 목요일 공지"
           ],
           "raw_md_excerpt": "#### 2-1-9. 2주차 목요일 공지\n- 일정 종료 후 공지\n  - EF: 금요일 심전도 발표 준비 (발표자/조장 7:20까지, 그 외 7:40까지 출근).\n  - 양유진 교수님 심장판막 강의 준비 (야마 확인).",
-          "calendar_body_short": "chief->all",
+          "calendar_body_short": "보내기 기한: 목요일 일정 종료 직후",
           "prep_tasks": [],
           "core_points": [
             "일정 종료 후 공지",
@@ -8662,7 +9046,7 @@
           "participants_scope": "chief->all",
           "site": "본원",
           "source_refs": [
-            "2-1-9"
+            "2-1-10"
           ],
           "note_only_keep": [
             "복붙용 공지 원문",
@@ -8674,6 +9058,11 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 목요일 일정 종료 직후 / EF 발표 준비와 판막 강의 준비를 공지한다.",
+          "related_session_ids": [
+            "s-2026-05-08-0800-ecg-ef",
+            "s-2026-05-08-1330-valvular"
           ]
         },
         {
@@ -8682,8 +9071,8 @@
           "week": "2주차",
           "day": "목요일",
           "date": "2026-05-07",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "목 13:00–14:00",
+          "time_raw": "목 13:00–14:00",
           "start_time": "",
           "end_time": "",
           "title": "교수님 확인 문자 · 양유진",
@@ -8693,27 +9082,42 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 금요일 오후 1시 30분 '심장판막질환' 강의 예정인데 변동사항 확인드리고자 연락드립니다. 감사합니다.\" (※ 양유진 교수님 04.27 복귀 전까지는 복영남 교수님께 연락)",
+          "summary": "목요일 13:00~14:00 권장",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-14-1. 양유진 교수님",
-              "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 금요일 오후 1시 30분 '심장판막질환' 강의 예정인데 변동사항 확인드리고자 연락드립니다. 감사합니다.\" (※ 양유진 교수님 04.27 복귀 전까지는 복영남 교수님께 연락)",
-              "#### 2-14-2. 복영남 교수님",
-              "(양유진 교수님 부재 시) \"교수님 안녕하세요. 내일 금요일 오후 1시 30분 예정된 심장판막질환 강의 변동사항 확인드리고자 연락드립니다. 감사합니다.\""
+            "intro": [
+              "보내기 기한: **목요일 13:00~14:00 권장**",
+              "양유진/복영남 교수님 판막질환 일정 확인 문자를 보낸다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- 심장판막질환"
+            ],
+            "원문 문자 / 공지": [
+              "- **양유진 교수님 (26.04.27 이후 복귀 시)**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 금요일 오후 1시 30분에 심초음파실에서 '심장판막질환' 강의가 예정되어 있다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\"",
+              "- **복영남 교수님 (양유진 교수님 부재 시)**:",
+              "  \"교수님 안녕하세요. 내일 금요일 오후 1시 30분 예정된 심장판막질환 강의 변동사항 확인드리고자 연락드립니다. 감사합니다.\""
+            ],
+            "문자 기본 원칙": [
+              "- **연락 금지 교수님**: 노재형 교수님 (연락 보낼 필요 없음).",
+              "- **연락 주의 교수님**:",
+              "  - **박재형 교수님**: 전주 금요일 연락 보내고 답장 없어도 심음청진 위치랑 시간 고정이니 추가 연락 하지 말 것.",
+              "  - **김준형 교수님**: 월요일에 심전도 발표 총정리해서 리마인드 문자, 매주 수요일에 다음날 심전도 발표 있다는 문자 연락.",
+              "  - **성인환 교수님**: 제일 첫 연락 빼고는 안 보냄.",
+              "  - **성석우 교수님**",
+              "- **연락 시간**: 가급적 오후 1시~2시 사이.",
+              "- **연락 성격**: 기본적으로 강의 1~2일 전 미리 리마인드 문자를 보낸다는 느낌. 외래는 기본적으로 연락 필요 없음.",
+              "- **기본 문자 템플릿**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 오전 0시 0분 OO에서 ~ 예정되어 있는 것으로 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락 드렸습니다. 감사합니다.\""
+            ]
           },
           "raw_md_sources": [
             "2-14-1. 양유진 교수님",
             "2-14-2. 복영남 교수님"
           ],
           "raw_md_excerpt": "#### 2-14-1. 양유진 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 금요일 오후 1시 30분 '심장판막질환' 강의 예정인데 변동사항 확인드리고자 연락드립니다. 감사합니다.\" (※ 양유진 교수님 04.27 복귀 전까지는 복영남 교수님께 연락)\n\n#### 2-14-2. 복영남 교수님\n(양유진 교수님 부재 시) \"교수님 안녕하세요. 내일 금요일 오후 1시 30분 예정된 심장판막질환 강의 변동사항 확인드리고자 연락드립니다. 감사합니다.\"",
-          "calendar_body_short": "chief/admin",
+          "calendar_body_short": "보내기 기한: 목요일 13:00~14:00 권장",
           "prep_tasks": [],
           "core_points": [
             "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 금요일 오후 1시 30분 '심장판막질환' 강의 예정인데 변동사항 확인드리고자 연락드립니다. 감사합니다.\" (※ 양유진 교수님 04.27 복귀 전까지는 복영남 교수님께 연락)",
@@ -8726,9 +9130,8 @@
           "participants_scope": "chief/admin",
           "site": "본원",
           "source_refs": [
-            "2-14-1",
-            "2-14-2",
-            "2-3"
+            "2-3",
+            "2-6-4"
           ],
           "note_only_keep": [
             "문자 예시 원문",
@@ -8740,6 +9143,10 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 목요일 13:00~14:00 권장 / 양유진/복영남 교수님 판막질환 일정 확인 문자를 보낸다.",
+          "related_session_ids": [
+            "s-2026-05-08-1330-valvular"
           ]
         },
         {
@@ -8882,7 +9289,13 @@
               "현장승인 필요"
             ],
             "show_assignment_count": true
-          }
+          },
+          "related_chief_admin_ids": [
+            "comm-2026-04-27-admin",
+            "comm-2026-05-01-chief",
+            "comm-2026-05-04-admin",
+            "comm-2026-05-07-chief"
+          ]
         },
         {
           "id": "s-2026-05-08-1000-selfstudy",
@@ -9054,7 +9467,11 @@
               "현장승인 필요"
             ],
             "show_assignment_count": true
-          }
+          },
+          "related_chief_admin_ids": [
+            "comm-2026-05-07-chief",
+            "comm-2026-05-07-admin"
+          ]
         },
         {
           "id": "s-2026-05-08-1500-selfstudy",
@@ -9108,6 +9525,9 @@
           ],
           "linked_assignments": [
             "assign-weekly-reflection-w2"
+          ],
+          "related_chief_admin_ids": [
+            "comm-2026-05-08-chief"
           ]
         },
         {
@@ -9116,8 +9536,8 @@
           "week": "2주차",
           "day": "금요일",
           "date": "2026-05-08",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "금 저녁–토",
+          "time_raw": "금 저녁–토",
           "start_time": "",
           "end_time": "",
           "title": "과제 checklist · 최종 제출 / 인계파일 회수",
@@ -9127,31 +9547,36 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "과제 Checklist (금요일 내)",
+          "summary": "금요일 실습 종료 직후부터 밤까지",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-1-10. 2주차 금요일 공지",
-              "- 과제 Checklist (금요일 내)",
-              "  - 이재환 교수님 POMR",
-              "  - 2주차 주간성찰 및 최종성찰",
-              "- 과제 Checklist (토요일 내)",
-              "  - 대면증례보고서",
-              "  - 김민수 교수님 심전도 조별 토의",
-              "  - 임상표현/임상술기 계획과 자기평가 (총 8개)",
-              "  - 오진경 교수님 심초음파 검사의 이해",
-              "#### 2-2-1. 과제 checklist",
-              "- 1주차 주간성찰 (금요일)",
-              "- Pretest 유폴리오 (당일)",
-              "- 2주차 주간/최종성찰 (금요일)",
-              "- 이재환 교수님 POMR (금요일)",
-              "- 대면증례보고서 (토요일)",
-              "- 심전도 조별 토의 (토요일)",
-              "- 임상표현/임상술기 계획/자기평가 (토요일, 총 8개)",
-              "- 심초음파 검사의 이해 (토요일)",
-              "#### 2-2-2. 인계용 과제",
+            "intro": [
+              "보내기 기한: **금요일 실습 종료 직후부터 밤까지**",
+              "금요일 마감 과제는 이날 정리하고, 토요일 마감 과제/파일 회수는 밤에 한 번 더 확인한다."
+            ],
+            "연관 수업": [
+              "- 자율실습 및 보충학습"
+            ],
+            "원문 문자 / 공지": [
+              "- **과제 Checklist (금요일 내 제출)**",
+              "  1. 이재환 교수님 POMR",
+              "  2. 2주차 주간성찰, 최종성찰",
+              "- **과제 Checklist (토요일 내 제출)**",
+              "  1. 송필상 교수님 대면증례보고서",
+              "  2. 김민수 교수님 심전도 조별 토의",
+              "  3. 임상표현 계획과 자기평가 (각 항목별로 따로 업로드해서 제출, 6+2 총 8개)",
+              "  4. 오진경 교수님 심초음파 검사의 이해",
+              "",
+              "- **1주차 주간성찰** (금요일)",
+              "- **Pretest 유폴리오** (당일)",
+              "- **2주차 주간/최종성찰** (금요일)",
+              "- **이재환 교수님 POMR** (금요일)",
+              "- **대면증례보고서** (토요일)",
+              "- **심전도 조별 토의** (토요일)",
+              "- **임상표현/임상술기 계획 및 자기평가** (토요일, 총 8개)",
+              "- **심초음파 검사의 이해** (토요일)",
+              "",
               "- 개인 ECG, Echo PPT",
               "- 대면증례보고서",
               "- 정진옥 교수님 IHD 발표 PPT",
@@ -9160,9 +9585,10 @@
               "- MI 발표 PPT",
               "- POMR"
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "마감 체크": [
+              "- **금요일 내 제출**: 이재환 교수님 POMR / 2주차 주간성찰 / 최종성찰",
+              "- **토요일 내 제출**: 대면증례보고서 / 심전도 조별 토의 / 임상표현·임상술기 계획 및 자기평가 / 심초음파 검사의 이해"
+            ]
           },
           "raw_md_sources": [
             "2-1-10. 2주차 금요일 공지",
@@ -9170,7 +9596,7 @@
             "2-2-2. 인계용 과제"
           ],
           "raw_md_excerpt": "#### 2-1-10. 2주차 금요일 공지\n- 과제 Checklist (금요일 내)\n  - 이재환 교수님 POMR\n  - 2주차 주간성찰 및 최종성찰\n- 과제 Checklist (토요일 내)\n  - 대면증례보고서\n  - 김민수 교수님 심전도 조별 토의\n  - 임상표현/임상술기 계획과 자기평가 (총 8개)\n  - 오진경 교수님 심초음파 검사의 이해\n\n#### 2-2-1. 과제 checklist\n- 1주차 주간성찰 (금요일)\n- Pretest 유폴리오 (당일)\n- 2주차 주간/최종성찰 (금요일)\n- 이재환 교수님 POMR (금요일)\n- 대면증례보고서 (토요일)\n- 심전도 조별 토의 (토요일)\n- 임상표현/임상술기 계획/자기평가 (토요일, 총 8개)\n- 심초음파 검사의 이해 (토요일)\n\n#### 2-2-2. 인계용 과제\n- 개인 ECG, Echo PPT\n- 대면증례보고서\n- 정진옥 교수님 IHD 발표 PPT\n- 예진기록지\n- ECG 발표 PPT\n- MI 발표 PPT\n- POMR",
-          "calendar_body_short": "chief->all",
+          "calendar_body_short": "보내기 기한: 금요일 실습 종료 직후부터 밤까지",
           "prep_tasks": [],
           "core_points": [
             "과제 Checklist (금요일 내)",
@@ -9184,7 +9610,7 @@
           "participants_scope": "chief->all",
           "site": "본원",
           "source_refs": [
-            "2-1-10",
+            "2-1-11",
             "2-2-1",
             "2-2-2"
           ],
@@ -9211,6 +9637,10 @@
             "assign-weekly-reflection-w2",
             "assign-clinical-expression-selfeval",
             "assign-clinical-skill-selfeval"
+          ],
+          "note": "보내기 기한: 금요일 실습 종료 직후부터 밤까지 / 금요일 마감 과제는 이날 정리하고, 토요일 마감 과제/파일 회수는 밤에 한 번 더 확인한다.",
+          "related_session_ids": [
+            "s-2026-05-08-1500-selfstudy"
           ]
         },
         {
@@ -9219,8 +9649,8 @@
           "week": "준비주간",
           "day": "전주 금요일",
           "date": "2026-04-24",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "주말 내",
+          "time_raw": "주말 내",
           "start_time": "",
           "end_time": "",
           "title": "조원 공지 · 실습 전주 준비",
@@ -9230,32 +9660,39 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "심장내과 공지",
+          "summary": "전주 일요일 밤 전",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-1-1. 실습 전주 공지",
-              "- 심장내과 공지",
-              "  - ABCDEF 분배: C는 조장 고정(조장 스케줄 배려용), 나머지 ABDEF 5명이서 사다리타기로 분배.",
-              "  - 프린트: 월요일 아침에 배부 예정 (예진기록지 2부).",
-              "  - 프리테스트 준비.",
-              "  - 성인환 교수님 월요일 IHD 수업 질문 준비: 답변까지 작성 후 질문자-답변자 분배 (1인 1질문/1답변).",
-              "  - 성석우 교수님 월요일 심장진찰 준비: 남자 두 명 환자역할 선정 (안에 흰 티 입고 오기).",
-              "  - 박재형 교수님 자필 과제: \"나의 꿈\" 1p, \"심음청진의 방법\" 4p (총 5p).",
-              "  - 화요일 심음청진 시험 및 고혈압 CPX 준비.",
-              "  - 정진옥 교수님 IHD 발표 준비."
+            "intro": [
+              "보내기 기한: **전주 일요일 밤 전**",
+              "실습 첫 주 준비물, 발표 준비, ABCDEF 분배를 주말 안에 미리 공지한다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- IHD Q&A / 성인환 교수님 수업",
+              "- 심장 신체진찰",
+              "- 심음 청진",
+              "- CPX HTN",
+              "- 허혈성 심질환 주제 발표"
+            ],
+            "원문 문자 / 공지": [
+              "- **심장내과 공지**",
+              "  - **ABCDEF 분배**: C는 조장 고정(조장 스케줄 배려용), 나머지 ABDEF 5명이서 사다리타기로 분배(인원수가 더 많거나 적을 경우 알파벳 추가 후 돌리기).",
+              "  - **프린트**: 월요일 아침에 배부 예정 (예진기록지 2부).",
+              "  - **프리테스트 준비**",
+              "  - **성인환 교수님 월요일 IHD 수업 질문 준비**: 드박이나 이것저것 참고해서 답변까지 작성 후 질문자-답변자 구성해서 1인 1질문/1답변 가능하도록 분배.",
+              "  - **성석우 교수님 월요일 심장진찰 준비**: 드박, 이러닝 컨소시엄 등 참고. 남자 두 명 환자 역할로 미리 뽑아두기. 환자 역할은 안에 흰 티 입고 오기.",
+              "  - **박재형 교수님 자필 과제**: \"나의 꿈\" 1페이지, \"심음청진의 방법\" 4페이지(양면 2장) — 총 5페이지.",
+              "  - **화요일 심음청진 시험 준비**",
+              "  - **화요일 고혈압 CPX 준비**: 교수님이 환자 기본 설정, 질환명을 주면 현장에서 환자가 직접 케이스를 가상 설정해서 하는 방식. 미리 모든 종류의 질환 의사/환자 준비해둘 것.",
+              "  - **정진옥 교수님 IHD 발표 준비**"
+            ]
           },
           "raw_md_sources": [
             "2-1-1. 실습 전주 공지"
           ],
           "raw_md_excerpt": "#### 2-1-1. 실습 전주 공지\n- 심장내과 공지\n  - ABCDEF 분배: C는 조장 고정(조장 스케줄 배려용), 나머지 ABDEF 5명이서 사다리타기로 분배.\n  - 프린트: 월요일 아침에 배부 예정 (예진기록지 2부).\n  - 프리테스트 준비.\n  - 성인환 교수님 월요일 IHD 수업 질문 준비: 답변까지 작성 후 질문자-답변자 분배 (1인 1질문/1답변).\n  - 성석우 교수님 월요일 심장진찰 준비: 남자 두 명 환자역할 선정 (안에 흰 티 입고 오기).\n  - 박재형 교수님 자필 과제: \"나의 꿈\" 1p, \"심음청진의 방법\" 4p (총 5p).\n  - 화요일 심음청진 시험 및 고혈압 CPX 준비.\n  - 정진옥 교수님 IHD 발표 준비.",
-          "calendar_body_short": "chief->all",
+          "calendar_body_short": "보내기 기한: 전주 일요일 밤 전",
           "prep_tasks": [],
           "core_points": [
             "심장내과 공지",
@@ -9281,6 +9718,14 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 전주 일요일 밤 전 / 실습 첫 주 준비물, 발표 준비, ABCDEF 분배를 주말 안에 미리 공지한다.",
+          "related_session_ids": [
+            "s-2026-04-27-1200-ihd",
+            "s-2026-04-27-1600-physical",
+            "s-2026-04-28-0840-heartsound",
+            "s-2026-04-28-1400-htn-cpx",
+            "s-2026-04-29-0840-ihd-topic"
           ]
         },
         {
@@ -9289,8 +9734,8 @@
           "week": "준비주간",
           "day": "전주 금요일",
           "date": "2026-04-24",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "금 13:00–14:00",
+          "time_raw": "금 13:00–14:00",
           "start_time": "",
           "end_time": "",
           "title": "교수님 확인 문자 · 박재형",
@@ -9300,24 +9745,40 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "\"교수님 안녕하세요. 다음 주부터 2주간 심장내과 실습 예정인 PK 0,0조 조장 000입니다. 다음 주 화요일 오전 9시부터 OSCE센터에서 심음청진 시험이 예정되어 있다고 전달 받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\"",
+          "summary": "전주 금요일 13:00~14:00 권장",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-4-1. 박재형 교수님",
-              "\"교수님 안녕하세요. 다음 주부터 2주간 심장내과 실습 예정인 PK 0,0조 조장 000입니다. 다음 주 화요일 오전 9시부터 OSCE센터에서 심음청진 시험이 예정되어 있다고 전달 받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\""
+            "intro": [
+              "보내기 기한: **전주 금요일 13:00~14:00 권장**",
+              "박재형 교수님은 금요일에 한 번만 연락하고, 답장이 없어도 추가 연락하지 않는다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- 심음 청진"
+            ],
+            "원문 문자 / 공지": [
+              "- **준비할 것**: 이름 명단표(15장), 사진 명단표(5장) 정도 넉넉하게 준비. 예진기록지 1인당 2부씩 프린트해서 주기.",
+              "- **박재형 교수님 문자**:",
+              "  \"교수님 안녕하세요. 다음 주부터 2주간 심장내과 실습 예정인 PK 3,4조 조장 배강렬입니다. 다음 주 17일 화요일 오전 9시부터 OSCE센터에서 심음청진 시험이 예정되어 있다고 전달 받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\""
+            ],
+            "문자 기본 원칙": [
+              "- **연락 금지 교수님**: 노재형 교수님 (연락 보낼 필요 없음).",
+              "- **연락 주의 교수님**:",
+              "  - **박재형 교수님**: 전주 금요일 연락 보내고 답장 없어도 심음청진 위치랑 시간 고정이니 추가 연락 하지 말 것.",
+              "  - **김준형 교수님**: 월요일에 심전도 발표 총정리해서 리마인드 문자, 매주 수요일에 다음날 심전도 발표 있다는 문자 연락.",
+              "  - **성인환 교수님**: 제일 첫 연락 빼고는 안 보냄.",
+              "  - **성석우 교수님**",
+              "- **연락 시간**: 가급적 오후 1시~2시 사이.",
+              "- **연락 성격**: 기본적으로 강의 1~2일 전 미리 리마인드 문자를 보낸다는 느낌. 외래는 기본적으로 연락 필요 없음.",
+              "- **기본 문자 템플릿**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 오전 0시 0분 OO에서 ~ 예정되어 있는 것으로 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락 드렸습니다. 감사합니다.\""
+            ]
           },
           "raw_md_sources": [
             "2-4-1. 박재형 교수님"
           ],
           "raw_md_excerpt": "#### 2-4-1. 박재형 교수님\n\"교수님 안녕하세요. 다음 주부터 2주간 심장내과 실습 예정인 PK 0,0조 조장 000입니다. 다음 주 화요일 오전 9시부터 OSCE센터에서 심음청진 시험이 예정되어 있다고 전달 받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\"",
-          "calendar_body_short": "chief/admin",
+          "calendar_body_short": "보내기 기한: 전주 금요일 13:00~14:00 권장",
           "prep_tasks": [],
           "core_points": [
             "\"교수님 안녕하세요. 다음 주부터 2주간 심장내과 실습 예정인 PK 0,0조 조장 000입니다. 다음 주 화요일 오전 9시부터 OSCE센터에서 심음청진 시험이 예정되어 있다고 전달 받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\""
@@ -9329,8 +9790,8 @@
           "participants_scope": "chief/admin",
           "site": "본원",
           "source_refs": [
-            "2-4-1",
-            "2-3"
+            "2-3",
+            "2-4-1"
           ],
           "note_only_keep": [
             "문자 예시 원문",
@@ -9342,6 +9803,10 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 전주 금요일 13:00~14:00 권장 / 박재형 교수님은 금요일에 한 번만 연락하고, 답장이 없어도 추가 연락하지 않는다.",
+          "related_session_ids": [
+            "s-2026-04-28-0840-heartsound"
           ]
         },
         {
@@ -9350,8 +9815,8 @@
           "week": "준비주간",
           "day": "전주 일요일",
           "date": "2026-04-26",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "일 13:00–14:00",
+          "time_raw": "일 13:00–14:00",
           "start_time": "",
           "end_time": "",
           "title": "교수님 확인 문자 · OT / 성인환",
@@ -9361,24 +9826,42 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "\"교수님 안녕하세요. 내일부터 2주간 실습 예정인 PK 0,0조 조장 000입니다. 내일 의국 회의 후 오전 8시 40분부터 교육실에서 오리엔테이션이 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 성실히 배우겠습니다. 감사합니다.\"",
+          "summary": "전주 일요일 13:00~14:00 권장",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-5-1. 진선아 교수님",
-              "\"교수님 안녕하세요. 내일부터 2주간 실습 예정인 PK 0,0조 조장 000입니다. 내일 의국 회의 후 오전 8시 40분부터 교육실에서 오리엔테이션이 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 성실히 배우겠습니다. 감사합니다.\"",
-              "#### 2-5-2. 성인환 교수님",
-              "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 주말에 연락드려 죄송합니다. 다름이 아니라, 내일 12시부터 교육실에서 증례발표 수업이 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\"",
-              "#### 2-5-3. 복영남 교수님",
-              "\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 주말에 연락드려 죄송합니다. 내일 오후 4시부터 심초음파실에서 심장 진찰 수업이 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\"",
-              "#### 2-5-4. 치프 선생님",
-              "\"선생님 안녕하세요. PK 0,0조 조장 000입니다. 주말에 연락드려 죄송합니다. 내일 12시부터 교육실에서 Pretest가 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\""
+            "intro": [
+              "보내기 기한: **전주 일요일 13:00~14:00 권장**",
+              "월요일 첫 일정 관련 확인 문자를 일요일 오후에 정리해 보낸다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- OT",
+              "- IHD Q&A / 성인환 교수님 수업",
+              "- Pretest",
+              "- 심장 신체진찰"
+            ],
+            "원문 문자 / 공지": [
+              "- **진선아 교수님**:",
+              "  \"교수님 안녕하세요. 내일부터 2주간 심장내과 실습 예정인 PK 3,4조 조장 배강렬입니다. 내일 의국 회의 후 오전 8시 40분부터 교육실에서 오리엔테이션이 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 2주간 성실히 배우겠습니다. 감사합니다.\"",
+              "- **성인환 교수님**:",
+              "  \"교수님 안녕하세요. 내일부터 2주간 심장내과 실습 예정인 PK 3,4조 조장 배강렬입니다. 주말에 연락드려 죄송합니다. 다름이 아니라, 내일 12시부터 교육실에서 증례발표 수업이 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 2주간 성실히 배우겠습니다. 감사합니다.\"",
+              "- **복영남 교수님**:",
+              "  \"교수님 안녕하세요. 내일부터 2주간 심장내과 실습 예정인 PK 3,4조 조장 배강렬입니다. 주말에 연락드려 죄송합니다. 다름이 아니라, 내일 오후 4시부터 심초음파실에서 심장 진찰 수업이 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 2주간 성실히 배우겠습니다. 감사합니다.\"",
+              "- **치프 선생님**:",
+              "  \"선생님 안녕하세요. 내일부터 2주간 심장내과 실습 예정인 PK 3,4조 조장 배강렬입니다. 주말에 연락드려 죄송합니다. 다름이 아니라, 내일 12시부터 교육실에서 pretest가 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\""
+            ],
+            "문자 기본 원칙": [
+              "- **연락 금지 교수님**: 노재형 교수님 (연락 보낼 필요 없음).",
+              "- **연락 주의 교수님**:",
+              "  - **박재형 교수님**: 전주 금요일 연락 보내고 답장 없어도 심음청진 위치랑 시간 고정이니 추가 연락 하지 말 것.",
+              "  - **김준형 교수님**: 월요일에 심전도 발표 총정리해서 리마인드 문자, 매주 수요일에 다음날 심전도 발표 있다는 문자 연락.",
+              "  - **성인환 교수님**: 제일 첫 연락 빼고는 안 보냄.",
+              "  - **성석우 교수님**",
+              "- **연락 시간**: 가급적 오후 1시~2시 사이.",
+              "- **연락 성격**: 기본적으로 강의 1~2일 전 미리 리마인드 문자를 보낸다는 느낌. 외래는 기본적으로 연락 필요 없음.",
+              "- **기본 문자 템플릿**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 오전 0시 0분 OO에서 ~ 예정되어 있는 것으로 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락 드렸습니다. 감사합니다.\""
+            ]
           },
           "raw_md_sources": [
             "2-5-1. 진선아 교수님",
@@ -9387,7 +9870,7 @@
             "2-5-4. 치프 선생님"
           ],
           "raw_md_excerpt": "#### 2-5-1. 진선아 교수님\n\"교수님 안녕하세요. 내일부터 2주간 실습 예정인 PK 0,0조 조장 000입니다. 내일 의국 회의 후 오전 8시 40분부터 교육실에서 오리엔테이션이 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 성실히 배우겠습니다. 감사합니다.\"\n\n#### 2-5-2. 성인환 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 주말에 연락드려 죄송합니다. 다름이 아니라, 내일 12시부터 교육실에서 증례발표 수업이 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\"\n\n#### 2-5-3. 복영남 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 주말에 연락드려 죄송합니다. 내일 오후 4시부터 심초음파실에서 심장 진찰 수업이 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\"\n\n#### 2-5-4. 치프 선생님\n\"선생님 안녕하세요. PK 0,0조 조장 000입니다. 주말에 연락드려 죄송합니다. 내일 12시부터 교육실에서 Pretest가 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\"",
-          "calendar_body_short": "chief/admin",
+          "calendar_body_short": "보내기 기한: 전주 일요일 13:00~14:00 권장",
           "prep_tasks": [],
           "core_points": [
             "\"교수님 안녕하세요. 내일부터 2주간 실습 예정인 PK 0,0조 조장 000입니다. 내일 의국 회의 후 오전 8시 40분부터 교육실에서 오리엔테이션이 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 성실히 배우겠습니다. 감사합니다.\"",
@@ -9401,11 +9884,8 @@
           "participants_scope": "chief/admin",
           "site": "본원",
           "source_refs": [
-            "2-5-1",
-            "2-5-2",
-            "2-5-3",
-            "2-5-4",
-            "2-3"
+            "2-3",
+            "2-4-2"
           ],
           "note_only_keep": [
             "문자 예시 원문",
@@ -9417,6 +9897,13 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 전주 일요일 13:00~14:00 권장 / 월요일 첫 일정 관련 확인 문자를 일요일 오후에 정리해 보낸다.",
+          "related_session_ids": [
+            "s-2026-04-27-0840-ot",
+            "s-2026-04-27-1200-ihd",
+            "s-2026-04-27-1400-pretest",
+            "s-2026-04-27-1600-physical"
           ]
         },
         {
@@ -9425,8 +9912,8 @@
           "week": "2주차 준비",
           "day": "1주차 일요일",
           "date": "2026-05-03",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "일 저녁 전",
+          "time_raw": "일 저녁 전",
           "start_time": "",
           "end_time": "",
           "title": "주말 공지 · 세종 집합 안내",
@@ -9436,25 +9923,28 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "일정 공지",
+          "summary": "일요일 밤 전",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-1-7. 일요일 공지",
-              "- 일정 공지",
-              "  - 내일 세종 9:30 집합 후 10시 일정 시작."
+            "intro": [
+              "보내기 기한: **일요일 밤 전**",
+              "세종 집합 시각과 시작 시간을 짧게 한 번 더 리마인드한다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- ABC 외래 참관",
+              "- DEF 외래 참관"
+            ],
+            "원문 문자 / 공지": [
+              "- **일정 공지**",
+              "  - 내일 세종 9:30까지 집합 후 세종 명찰 받고 10시부터 각자 일정 진행 시작."
+            ]
           },
           "raw_md_sources": [
             "2-1-7. 일요일 공지"
           ],
           "raw_md_excerpt": "#### 2-1-7. 일요일 공지\n- 일정 공지\n  - 내일 세종 9:30 집합 후 10시 일정 시작.",
-          "calendar_body_short": "chief->all",
+          "calendar_body_short": "보내기 기한: 일요일 밤 전",
           "prep_tasks": [],
           "core_points": [
             "일정 공지",
@@ -9479,6 +9969,11 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 일요일 밤 전 / 세종 집합 시각과 시작 시간을 짧게 한 번 더 리마인드한다.",
+          "related_session_ids": [
+            "s-2026-05-04-1000-abc-outpatient-sejong",
+            "s-2026-05-04-1330-def-outpatient-sejong"
           ]
         },
         {
@@ -9487,8 +9982,8 @@
           "week": "2주차 준비",
           "day": "1주차 일요일",
           "date": "2026-05-03",
-          "time_label": "시간 미정",
-          "time_raw": "시간 미정",
+          "time_label": "일 13:00–14:00",
+          "time_raw": "일 13:00–14:00",
           "start_time": "",
           "end_time": "",
           "title": "교수님 확인 문자 · 김민수",
@@ -9498,24 +9993,40 @@
           "status": "draft",
           "kind": "operations",
           "needs_confirmation": false,
-          "summary": "\"교수님 안녕하세요. 내일부터 사흘간 세종 실습 예정인 PK 0,0조 조장 000입니다. 오전 10시까지 병원으로 가면 될지 확인드리고자 연락드립니다. 감사합니다.\"",
+          "summary": "일요일 13:00~14:00 권장",
           "location": "",
           "guide_pack_ids": [],
           "sections": {
-            "intro": [],
-            "핵심 정리": [
-              "#### 2-10-1. 김민수 교수님",
-              "\"교수님 안녕하세요. 내일부터 사흘간 세종 실습 예정인 PK 0,0조 조장 000입니다. 오전 10시까지 병원으로 가면 될지 확인드리고자 연락드립니다. 감사합니다.\""
+            "intro": [
+              "보내기 기한: **일요일 13:00~14:00 권장**",
+              "세종 첫날 집합 시각과 변동사항을 김민수 교수님께 확인한다."
             ],
-            "준비 / 운영 포인트": [],
-            "질문 / 예시 포인트": [],
-            "조사 / 보강 내용": []
+            "연관 수업": [
+              "- ABC 외래 참관",
+              "- DEF 외래 참관"
+            ],
+            "원문 문자 / 공지": [
+              "- **김민수 교수님**:",
+              "  \"교수님 안녕하세요. 내일 월요일부터 사흘간 세종충남대병원 심장내과 실습 예정인 PK 3,4조 조장 배강렬입니다. 시간표대로 오전 10시까지 병원으로 가면 될지, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. 감사합니다.\""
+            ],
+            "문자 기본 원칙": [
+              "- **연락 금지 교수님**: 노재형 교수님 (연락 보낼 필요 없음).",
+              "- **연락 주의 교수님**:",
+              "  - **박재형 교수님**: 전주 금요일 연락 보내고 답장 없어도 심음청진 위치랑 시간 고정이니 추가 연락 하지 말 것.",
+              "  - **김준형 교수님**: 월요일에 심전도 발표 총정리해서 리마인드 문자, 매주 수요일에 다음날 심전도 발표 있다는 문자 연락.",
+              "  - **성인환 교수님**: 제일 첫 연락 빼고는 안 보냄.",
+              "  - **성석우 교수님**",
+              "- **연락 시간**: 가급적 오후 1시~2시 사이.",
+              "- **연락 성격**: 기본적으로 강의 1~2일 전 미리 리마인드 문자를 보낸다는 느낌. 외래는 기본적으로 연락 필요 없음.",
+              "- **기본 문자 템플릿**:",
+              "  \"교수님 안녕하세요. 현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. 내일 오전 0시 0분 OO에서 ~ 예정되어 있는 것으로 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락 드렸습니다. 감사합니다.\""
+            ]
           },
           "raw_md_sources": [
             "2-10-1. 김민수 교수님"
           ],
           "raw_md_excerpt": "#### 2-10-1. 김민수 교수님\n\"교수님 안녕하세요. 내일부터 사흘간 세종 실습 예정인 PK 0,0조 조장 000입니다. 오전 10시까지 병원으로 가면 될지 확인드리고자 연락드립니다. 감사합니다.\"",
-          "calendar_body_short": "chief/admin",
+          "calendar_body_short": "보내기 기한: 일요일 13:00~14:00 권장",
           "prep_tasks": [],
           "core_points": [
             "\"교수님 안녕하세요. 내일부터 사흘간 세종 실습 예정인 PK 0,0조 조장 000입니다. 오전 10시까지 병원으로 가면 될지 확인드리고자 연락드립니다. 감사합니다.\""
@@ -9527,8 +10038,8 @@
           "participants_scope": "chief/admin",
           "site": "세종",
           "source_refs": [
-            "2-10-1",
-            "2-3"
+            "2-3",
+            "2-5-5"
           ],
           "note_only_keep": [
             "문자 예시 원문",
@@ -9540,6 +10051,11 @@
             "교수님 스타일 장문 서술",
             "후기성 예외 사례",
             "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 일요일 13:00~14:00 권장 / 세종 첫날 집합 시각과 변동사항을 김민수 교수님께 확인한다.",
+          "related_session_ids": [
+            "s-2026-05-04-1000-abc-outpatient-sejong",
+            "s-2026-05-04-1330-def-outpatient-sejong"
           ]
         },
         {
@@ -9625,7 +10141,11 @@
             "2-6-3"
           ],
           "windowType": "clerkship-overlay",
-          "sourceKind": "overlay"
+          "sourceKind": "overlay",
+          "related_chief_admin_ids": [
+            "comm-2026-04-27-admin",
+            "comm-2026-04-28-chief"
+          ]
         },
         {
           "id": "overlay-2026-05-04-pci-split",
@@ -9947,7 +10467,10 @@
             "2-11-2"
           ],
           "windowType": "clerkship-overlay",
-          "sourceKind": "overlay"
+          "sourceKind": "overlay",
+          "related_chief_admin_ids": [
+            "comm-2026-05-04-admin"
+          ]
         },
         {
           "id": "overlay-2026-05-06-item3",
@@ -11097,6 +11620,69 @@
           ],
           "milestones": [],
           "onsite_required": true
+        },
+        {
+          "id": "assign-onsite-arrhyproc-20260505-def",
+          "name": "유폴 현장승인 · 2주차 화 DEF 부정맥 시술 참관",
+          "priority_label": "현장승인",
+          "priority_score": 7,
+          "format": "유폴 자유기록 현장승인 (부정맥 시술 참관)",
+          "start_when": "부정맥 시술 참관 시작 전 유폴리오 화면을 미리 띄워둔 상태로 들어가기",
+          "start_at": "2026-05-05T13:30:00",
+          "hard_deadline": "2026-05-05T17:00:00",
+          "follow_up": null,
+          "needs_confirmation": false,
+          "difficulty_total": 5,
+          "content_summary": "DEF 부정맥 시술 참관 후 유폴 현장승인을 받는 기회다.",
+          "linked_session_ids": [
+            "s-2026-05-05-1330-def-arrhyproc"
+          ],
+          "linked_professors": [
+            "김민수 교수님"
+          ],
+          "notes": [
+            "1-10-4, 1-1-4 기준. 부정맥 시술 참관도 자유기록 현장승인 카운트에서 개별 단위로 센다."
+          ],
+          "milestones": [],
+          "onsite_required": true,
+          "source_refs": [
+            "1-10-4",
+            "1-1-4",
+            "3-1-1",
+            "3-1-3"
+          ]
+        },
+        {
+          "id": "assign-onsite-arrhyproc-20260506-abc",
+          "name": "유폴 현장승인 · 2주차 수 ABC 부정맥 시술 참관",
+          "priority_label": "현장승인",
+          "priority_score": 7,
+          "format": "유폴 자유기록 현장승인 (부정맥 시술 참관)",
+          "start_when": "부정맥 시술 참관 시작 전 유폴리오 화면을 미리 띄워둔 상태로 들어가기",
+          "start_at": "2026-05-06T10:00:00",
+          "hard_deadline": "2026-05-06T13:00:00",
+          "follow_up": null,
+          "needs_confirmation": false,
+          "difficulty_total": 5,
+          "content_summary": "ABC 부정맥 시술 참관 후 유폴 현장승인을 받는 기회다.",
+          "linked_session_ids": [
+            "s-2026-05-06-1000-abc-arrhyproc"
+          ],
+          "linked_professors": [
+            "김민수 교수님"
+          ],
+          "notes": [
+            "1-11-5, 1-1-4 기준. 수요일 추가 참관이 생기면 별도 현장승인 단위로 센다."
+          ],
+          "milestones": [],
+          "onsite_required": true,
+          "source_refs": [
+            "1-11-5",
+            "1-1-4",
+            "3-1-1",
+            "3-1-3",
+            "3-2-3"
+          ]
         }
       ],
       "daily_briefing_seed": [
@@ -14489,7 +15075,12 @@
             "pre_submit_rule": "워드 첨부 말고 유폴리오 본문에 직접 작성",
             "supersedes": []
           }
-        ]
+        ],
+        "chief_admin_layer_v1": {
+          "updated_sessions": 21,
+          "identity_replaced_with": "PK 3,4조 조장 배강렬입니다.",
+          "notes": "조장 공지/교수님 확인 문자에 보내기 기한과 원문 템플릿을 추가함"
+        }
       },
       "audit": {
         "bundle_id": "cardiology-2026-04-chief-draft-v2",
@@ -14523,7 +15114,8 @@
         ],
         "notes": [
           "심장내과 v2는 일정 spine 유지 + md 원문 보존 복구 방향으로 다시 빌드했다.",
-          "이후 leaf audit 기준으로 누락/변형이 얼마나 줄었는지 다시 확인한다."
+          "이후 leaf audit 기준으로 누락/변형이 얼마나 줄었는지 다시 확인한다.",
+          "2026-04-19 patch: DEF/ABC 부정맥 시술 참관 2개에 개별 현장승인 assignment 연결 추가."
         ],
         "warnings": [
           "calendar ingest packet v2를 비서 레이어에 채택해 approval flag / split group / hidden overlay 정보를 bundle과 import state에 반영했다."
