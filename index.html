@@ -1392,6 +1392,11 @@
       margin: 0;
       display: grid;
       gap: 6px;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      text-align: left;
+      cursor: zoom-in;
     }
 
     .location-guide-thumb img {
@@ -1401,13 +1406,97 @@
       border-radius: 12px;
       border: 1px solid rgba(220,226,238,0.95);
       background: rgba(241,245,249,0.92);
+      transition: transform 160ms ease, box-shadow 160ms ease;
     }
 
-    .location-guide-thumb figcaption {
+    .location-guide-thumb:hover img {
+      transform: scale(1.02);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);
+    }
+
+    .location-guide-thumb span {
       font-size: 12px;
       color: var(--muted);
       word-break: break-all;
       line-height: 1.45;
+    }
+
+    .image-lightbox {
+      position: fixed;
+      inset: 0;
+      display: none;
+      place-items: center;
+      padding: 24px;
+      background: rgba(15, 23, 42, 0.72);
+      backdrop-filter: blur(6px);
+      z-index: 90;
+    }
+
+    .image-lightbox.open {
+      display: grid;
+    }
+
+    .image-lightbox-panel {
+      width: min(96vw, 1100px);
+      max-height: 92vh;
+      background: rgba(255,255,255,0.98);
+      border: 1px solid rgba(220,226,238,0.95);
+      border-radius: 24px;
+      padding: 18px;
+      display: grid;
+      gap: 14px;
+      box-shadow: 0 32px 80px rgba(15, 23, 42, 0.28);
+    }
+
+    .image-lightbox-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .image-lightbox-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.5;
+      word-break: break-word;
+    }
+
+    .image-lightbox-close {
+      border: 0;
+      background: rgba(226,232,240,0.92);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 10px 14px;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .image-lightbox-figure {
+      margin: 0;
+      display: grid;
+      gap: 10px;
+      justify-items: center;
+    }
+
+    .image-lightbox-figure img {
+      max-width: 100%;
+      max-height: 74vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 18px;
+      background: rgba(241,245,249,0.92);
+      border: 1px solid rgba(220,226,238,0.95);
+    }
+
+    .image-lightbox-figure figcaption {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+      text-align: center;
+      word-break: break-word;
     }
 
     .location-guide-empty {
@@ -2353,6 +2442,7 @@
     </section>
 
     <div class="detail-screen" id="eventDetailScreen" aria-hidden="true"></div>
+    <div class="image-lightbox" id="imageLightbox" aria-hidden="true"></div>
 
     <div class="footer-note">
       국시 준비 흐름에 맞춰 <strong>강의 듣기 → 개념 틀 짜기 → 문제 풀기 → 오답노트/개념틀 수정 → 복습하기</strong>
@@ -2494,6 +2584,7 @@
     let activeCalendarSlotDetail = null;
     let activeCalendarSummaryDetail = null;
     let activeCalendarLocationGuideWeek = null;
+    let activeImageLightbox = null;
     let activeCalendarMoveEventId = null;
     let calendarEventLongPressTimer = null;
     let calendarEventLongPressConsumed = false;
@@ -3632,6 +3723,44 @@
       return String(value || '').split('/').pop() || '';
     }
 
+    function renderImageLightbox() {
+      const el = byId('imageLightbox');
+      if (!el) return;
+      if (!activeImageLightbox) {
+        el.classList.remove('open');
+        el.setAttribute('aria-hidden', 'true');
+        el.innerHTML = '';
+        return;
+      }
+      el.classList.add('open');
+      el.setAttribute('aria-hidden', 'false');
+      el.innerHTML = `
+        <div class="image-lightbox-panel" role="dialog" aria-modal="true" aria-label="이미지 확대 보기">
+          <div class="image-lightbox-head">
+            <div class="image-lightbox-title">${escapeHtml(activeImageLightbox.caption || '장소 이미지')}</div>
+            <button type="button" class="image-lightbox-close" onclick="closeImageLightbox()">닫기</button>
+          </div>
+          <figure class="image-lightbox-figure">
+            <img src="${encodeURI(activeImageLightbox.src)}" alt="${escapeHtml(activeImageLightbox.caption || '장소 이미지')}" />
+            ${activeImageLightbox.fileName ? `<figcaption>${escapeHtml(activeImageLightbox.fileName)}</figcaption>` : ''}
+          </figure>
+        </div>
+      `;
+      el.onclick = event => {
+        if (event.target === el) closeImageLightbox();
+      };
+    }
+
+    function openImageLightbox(src, caption = '', fileName = '') {
+      activeImageLightbox = { src, caption, fileName };
+      renderImageLightbox();
+    }
+
+    function closeImageLightbox() {
+      activeImageLightbox = null;
+      renderImageLightbox();
+    }
+
     function isWeeklySummaryEvent(event) {
       if (!event) return false;
       if (event.sourceSessionId || event.sourceKind === 'session' || event.windowType === 'clerkship-session') return false;
@@ -3704,6 +3833,23 @@
       if (filterKey === 'presentation_exam') return '발표·시험';
       if (filterKey === 'chief_admin') return '조장·행정';
       return '전체';
+    }
+
+    function eventNeedsConfirmation(event) {
+      if (!event) return false;
+      const assignment = findBundleAssignmentForEvent(event);
+      const session = findBundleSessionForEvent(event);
+      const confirmLevel = String(session?.confirm_level || '');
+      return Boolean(
+        assignment?.needs_confirmation
+        || session?.needs_confirmation
+        || confirmLevel === 'required'
+        || confirmLevel === 'recommended'
+      );
+    }
+
+    function summaryEventCanToggle(event) {
+      return calendarSummaryCategoryForEvent(event) !== 'other';
     }
 
     function timeSortValue(value) {
@@ -3840,7 +3986,7 @@
         completed: detailEvents.filter(event => event.completed).length,
         pending: detailEvents.filter(event => !event.completed).length,
         changed: [...detailEvents, ...primaryEvents].filter(calendarEventHasCustomSchedule).length,
-        needsConfirmation: detailEvents.filter(event => findBundleAssignmentForEvent(event)?.needs_confirmation).length
+        needsConfirmation: detailEvents.filter(eventNeedsConfirmation).length
       };
     }
 
@@ -4696,6 +4842,8 @@
       activeCalendarSlotDetail = null;
       activeCalendarSummaryDetail = null;
       activeCalendarLocationGuideWeek = null;
+      activeImageLightbox = null;
+      renderImageLightbox();
       activeCalendarMoveEventId = null;
       activeCalendarSummaryFilter = 'all';
       activeCalendarSummaryIncompleteFirst = false;
@@ -4937,7 +5085,17 @@
       if (!event?.bundleId || !session?.id) return [];
       const bundle = state.clerkshipBundles?.[event.bundleId];
       if (!bundle?.assignments) return [];
-      return bundle.assignments.filter(assignment => (assignment.linked_session_ids || []).includes(session.id));
+      const explicitIds = [...(session.linked_assignments || []), ...(session.linked_assignment_ids || [])].filter(Boolean);
+      const byAssignment = bundle.assignments.filter(assignment => (assignment.linked_session_ids || []).includes(session.id));
+      const bySession = explicitIds
+        .map(assignmentId => bundle.assignments.find(assignment => assignment.id === assignmentId) || null)
+        .filter(Boolean);
+      const seen = new Set();
+      return [...byAssignment, ...bySession].filter(assignment => {
+        if (!assignment?.id || seen.has(assignment.id)) return false;
+        seen.add(assignment.id);
+        return true;
+      });
     }
 
     function findRelatedSessionsForAssignment(event, assignment) {
@@ -5380,21 +5538,21 @@
                 const boardConfig = calendarEventBoardConfig(event, session, relatedAssignments);
                 const surfaceColor = calendarEventSurfaceColor(event, boardConfig);
                 const borderColor = calendarEventBorderColor(event, boardConfig);
-                const isAssignmentEvent = event.type === 'assignment' || event.sourceKind === 'assignment';
+                const canToggleSummaryEvent = summaryEventCanToggle(event);
                 return `
                   <div class="event-item ${event.completed ? 'completed' : ''}">
                     <div class="event-time">${escapeHtml(event.date.slice(5))}<br/>${escapeHtml(event.time || '종일')}</div>
                     <div>
                       <div class="badge-row">
                         <span class="detail-chip" style="background:${surfaceColor}; color:white; box-shadow: inset 3px 0 0 ${borderColor};">${meta.label}</span>
-                        ${assignment?.needs_confirmation ? `<span class="calendar-mini-chip" style="background:#fff7ed; color:#9a3412; border-color:#fdba74;">확인 필요</span>` : ''}
+                        ${eventNeedsConfirmation(event) ? `<span class="calendar-mini-chip" style="background:#fff7ed; color:#9a3412; border-color:#fdba74;">확인 필요</span>` : ''}
                         ${event.completed ? `<span class="calendar-mini-chip" style="background:#dcfce7; color:#166534; border-color:#86efac;">완료</span>` : ''}
                       </div>
                       <div class="item-title" style="margin-top:6px; ${event.completed ? 'text-decoration:line-through;' : ''}">${escapeHtml(event.title)}</div>
                       <div class="item-meta">${escapeHtml(weekSummaryMeta(event))}</div>
                     </div>
                     <div class="event-actions">
-                      ${isAssignmentEvent ? `<button class="btn btn-small ${event.completed ? 'btn-ghost' : 'btn-secondary'}" onclick="toggleCalendarEvent('${event.id}')">${event.completed ? '완료 해제' : '완료 체크'}</button>` : ''}
+                      ${canToggleSummaryEvent ? `<button class="btn btn-small ${event.completed ? 'btn-ghost' : 'btn-secondary'}" onclick="toggleCalendarEvent('${event.id}')">${event.completed ? '완료 해제' : '완료 체크'}</button>` : ''}
                       <button class="event-open-btn" onclick="openCalendarEventDetail('${event.id}')">자세히 보기</button>
                     </div>
                   </div>
@@ -5466,12 +5624,15 @@
                         </div>
                         <div class="item-title">${escapeHtml(entry.title || '')}</div>
                         <ul>${(entry.summary || []).map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
-                        ${(entry.asset_urls || []).length ? `<div class="location-guide-thumb-grid">${(entry.asset_urls || []).map((url, index) => `
-                          <figure class="location-guide-thumb">
+                        ${(entry.asset_urls || []).length ? `<div class="location-guide-thumb-grid">${(entry.asset_urls || []).map((url, index) => {
+                          const fileName = pathBasename((entry.image_files || [])[index] || url);
+                          const caption = `${entry.campus || ''} · ${entry.title || ''}`;
+                          return `
+                          <button type="button" class="location-guide-thumb" data-src="${escapeHtml(url)}" data-caption="${escapeHtml(caption)}" data-file-name="${escapeHtml(fileName)}" onclick="openImageLightbox(this.dataset.src, this.dataset.caption, this.dataset.fileName)">
                             <img src="${encodeURI(url)}" alt="${escapeHtml(`${entry.title} ${index + 1}`)}" loading="lazy" />
-                            <figcaption>${escapeHtml(pathBasename((entry.image_files || [])[index] || url))}</figcaption>
-                          </figure>
-                        `).join('')}</div>` : `<div class="location-guide-empty">이미지 없음 (원본 문서 기준)</div>`}
+                            <span>${escapeHtml(fileName)}</span>
+                          </button>
+                        `;}).join('')}</div>` : `<div class="location-guide-empty">이미지 없음 (원본 문서 기준)</div>`}
                       </article>
                     `).join('')}
                   </div>
@@ -5530,6 +5691,8 @@
       const surfaceColor = calendarEventSurfaceColor(event, boardConfig);
       const borderColor = calendarEventBorderColor(event, boardConfig);
       const isAssignmentEvent = event.type === 'assignment' || event.sourceKind === 'assignment';
+      const canToggleEvent = isAssignmentEvent || summaryEventCanToggle(event);
+      const needsConfirmation = eventNeedsConfirmation(event);
       const groupMeta = EVENT_TYPE_META[event.type] || { label: '일정', color: '#2f6df6' };
       const summaryText = session?.summary || assignment?.content_summary || event.note || '';
       const contentHtml = session
@@ -5550,6 +5713,7 @@
               <div class="badge-row">
                 <span class="detail-chip" style="background:${surfaceColor}; color:white; box-shadow: inset 3px 0 0 ${borderColor};">${groupMeta.label}</span>
                 ${event.completed ? `<span class="calendar-mini-chip" style="background:#dcfce7; color:#166534; border-color:#86efac;">완료</span>` : ''}
+                ${needsConfirmation ? `<span class="calendar-mini-chip" style="background:#fff7ed; color:#9a3412; border-color:#fdba74;">확인 필요</span>` : ''}
                 ${calendarEventIsCancelled(event) ? `<span class="calendar-mini-chip">X표</span>` : ''}
                 ${event.userNote ? `<span class="calendar-mini-chip">메모 있음</span>` : ''}
                 ${calendarEventHasCustomSchedule(event) ? `<span class="calendar-mini-chip">시간/날짜 수정됨</span>` : ''}
@@ -5563,7 +5727,7 @@
                 <span class="calendar-mini-chip">${escapeHtml(event.time || '종일')}</span>
               </div>
               <div class="detail-screen-title" style="${event.completed || calendarEventIsCancelled(event) ? 'text-decoration:line-through; opacity:0.72;' : ''}">${escapeHtml(event.title)}</div>
-              ${isAssignmentEvent ? `<div style="margin-top:12px;"><button class="btn btn-small ${event.completed ? 'btn-ghost' : 'btn-secondary'}" onclick="toggleCalendarEvent('${event.id}')">${event.completed ? '완료 해제' : '완료 체크'}</button></div>` : ''}
+              ${canToggleEvent ? `<div style="margin-top:12px;"><button class="btn btn-small ${event.completed ? 'btn-ghost' : 'btn-secondary'}" onclick="toggleCalendarEvent('${event.id}')">${event.completed ? '완료 해제' : '완료 체크'}</button></div>` : ''}
               ${summaryText ? `<div class="detail-screen-summary">${escapeHtml(summaryText)}</div>` : ''}
               ${activeCalendarMoveEventId === event.id ? `<div class="calendar-edit-pill">이동 모드 켜짐 · 다른 시간표 칸을 누르면 여기로 이동한다.</div>` : ''}
             </div>
@@ -5584,6 +5748,8 @@
       activeCalendarSlotDetail = null;
       activeCalendarSummaryDetail = null;
       activeCalendarLocationGuideWeek = null;
+      activeImageLightbox = null;
+      renderImageLightbox();
       activeCalendarEventId = eventId;
       renderCalendarEventDetailScreen();
     }
@@ -6469,6 +6635,8 @@
     window.handleCalendarTimelineCanvasClick = handleCalendarTimelineCanvasClick;
     window.openCalendarSummaryDetail = openCalendarSummaryDetail;
     window.openCalendarLocationGuide = openCalendarLocationGuide;
+    window.openImageLightbox = openImageLightbox;
+    window.closeImageLightbox = closeImageLightbox;
     window.openCalendarSlotDetail = openCalendarSlotDetail;
     window.closeCalendarDetailScreen = closeCalendarDetailScreen;
     window.clearCalendarEditEvent = clearCalendarEditEvent;
