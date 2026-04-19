@@ -534,7 +534,7 @@
       "title": "예진 평가(기존 CP 포트폴리오 대체) 시작",
       "memo": "운영 8 / 10 · 첫 피드백 때 적어도 하나씩 프린트, 환자 겹치지 않게",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.225997"
+      "createdAt": "2026-04-19T22:09:15.420651"
     },
     {
       "id": "clerkship-respiratory-2026-04-track-b-task-start-assignment-b-202604242359-8",
@@ -546,7 +546,7 @@
       "title": "병동 경과기록지 (주당 3개) 시작",
       "memo": "운영 7 / 10 · 2p 정도로 조원들 모두 통일, 파일 안에 학번/이름 포함",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226023"
+      "createdAt": "2026-04-19T22:09:15.420676"
     },
     {
       "id": "clerkship-respiratory-2026-04-track-b-task-start-assignment-b-10-10",
@@ -558,7 +558,7 @@
       "title": "CXR 과제 시작",
       "memo": "운영 4 / 10 · 정재욱 교수님 발표자료만 이메일 제출",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226093"
+      "createdAt": "2026-04-19T22:09:15.420741"
     },
     {
       "id": "clerkship-respiratory-2026-04-track-b-task-start-assignment-b-202604242359-2",
@@ -570,7 +570,7 @@
       "title": "PFT, SPT 시작",
       "memo": "운영 4 / 10 · 수업 내용 및 본인 PFT, SPT 결과 분석하는 레포트",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226050"
+      "createdAt": "2026-04-19T22:09:15.420702"
     },
     {
       "id": "clerkship-respiratory-2026-04-track-b-task-start-assignment-b-202604222359-3",
@@ -582,7 +582,7 @@
       "title": "중환자실 케이스 시작",
       "memo": "운영 6 / 10 · 케이스 발표 자료/수정본 업로드",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.225984"
+      "createdAt": "2026-04-19T22:09:15.420640"
     },
     {
       "id": "clerkship-respiratory-2026-04-track-b-task-start-assignment-b-202604142359-13",
@@ -594,7 +594,7 @@
       "title": "폐진찰 피드백 시작",
       "memo": "운영 5 / 10 · 피드백2 종이 스캔해서 pdf 제출",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.225944"
+      "createdAt": "2026-04-19T22:09:15.420608"
     },
     {
       "id": "clerkship-respiratory-2026-04-track-b-task-start-assignment-b-202604242359-9",
@@ -606,7 +606,7 @@
       "title": "외래 예진 (2개) 시작",
       "memo": "운영 7 / 10 · PDF로 제출함 / 당일 오후 6시까지 의국 제출 후 스캔 업로드",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226037"
+      "createdAt": "2026-04-19T22:09:15.420689"
     },
     {
       "id": "clerkship-respiratory-2026-04-track-b-task-milestone-assignment-b-202604242359-7-1",
@@ -618,7 +618,7 @@
       "title": "예진용 환자/케이스 확보 시작",
       "memo": "예진 평가(기존 CP 포트폴리오 대체)",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.225997"
+      "createdAt": "2026-04-19T22:09:15.420651"
     },
     {
       "id": "clerkship-respiratory-2026-04-track-b-task-start-assignment-b-202604162359-5",
@@ -630,7 +630,7 @@
       "title": "실습 면담 평행차트 (word 첨부) 시작",
       "memo": "운영 5 / 10 · 수업 전에 미리 써감",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.225966"
+      "createdAt": "2026-04-19T22:09:15.420626"
     },
     {
       "id": "clerkship-respiratory-2026-04-track-b-task-start-assignment-b-202604262359-4",
@@ -642,7 +642,7 @@
       "title": "알레르기 질환 케이스 시작",
       "memo": "운영 5 / 10 · skin to prick test한 팔과 본인 명찰 나오게 사진 찍어서 분석하기",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226060"
+      "createdAt": "2026-04-19T22:09:15.420711"
     },
     {
       "id": "clerkship-respiratory-2026-04-track-b-task-milestone-assignment-b-202604242359-8-1",
@@ -654,7 +654,7 @@
       "title": "병동 경과기록지 1주차 3개 진행",
       "memo": "병동 경과기록지 (주당 3개)",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226023"
+      "createdAt": "2026-04-19T22:09:15.420676"
     },
     {
       "id": "clerkship-respiratory-2026-04-track-b-task-milestone-assignment-b-202604242359-9-1",
@@ -666,7 +666,7 @@
       "title": "외래 예진 1개 확보",
       "memo": "외래 예진 (2개)",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226037"
+      "createdAt": "2026-04-19T22:09:15.420689"
     },
     {
       "id": "clerkship-respiratory-2026-04-track-b-task-start-assignment-b-12-12",
@@ -678,7 +678,7 @@
       "title": "Mini CEX 시작",
       "memo": "운영 7 / 10 · 아무도 제출 안했다",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226085"
+      "createdAt": "2026-04-19T22:09:15.420734"
     },
     {
       "id": "clerkship-respiratory-2026-04-track-b-task-start-assignment-b-202604242359-6",
@@ -690,7 +690,7 @@
       "title": "임상추론평가 시작",
       "memo": "운영 8 / 10 · 임추평 피드백 때까지 웬만하면 작성, 발표자 1명은 반드시 다 써가기",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226012"
+      "createdAt": "2026-04-19T22:09:15.420665"
     },
     {
       "id": "clerkship-respiratory-2026-04-track-b-task-start-assignment-b-202604262359-1",
@@ -702,7 +702,7 @@
       "title": "임상윤리수업 시작",
       "memo": "운영 5 / 10 · 수업 내용 및 느낀점 A4 한장 정도로 쓰기",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226069"
+      "createdAt": "2026-04-19T22:09:15.420718"
     },
     {
       "id": "clerkship-respiratory-2026-04-track-b-task-milestone-assignment-b-202604242359-7-2",
@@ -714,7 +714,7 @@
       "title": "예진평가 제출본 1개 확보",
       "memo": "예진 평가(기존 CP 포트폴리오 대체)",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.225997"
+      "createdAt": "2026-04-19T22:09:15.420651"
     },
     {
       "id": "clerkship-respiratory-2026-04-track-b-task-start-assignment-b-202604262359-11",
@@ -726,7 +726,7 @@
       "title": "기관지내시경 참관 (word 첨부) 시작",
       "memo": "운영 4 / 10 · 참관한 case 정보만 써서 제출",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226077"
+      "createdAt": "2026-04-19T22:09:15.420726"
     },
     {
       "id": "clerkship-respiratory-2026-04-track-b-task-milestone-assignment-b-202604242359-9-2",
@@ -738,7 +738,7 @@
       "title": "외래 예진 2개 + 스캔 준비",
       "memo": "외래 예진 (2개)",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226037"
+      "createdAt": "2026-04-19T22:09:15.420689"
     },
     {
       "id": "clerkship-respiratory-2026-04-track-b-task-milestone-assignment-b-202604242359-8-2",
@@ -750,7 +750,7 @@
       "title": "병동 경과기록지 2주차 3개 마감",
       "memo": "병동 경과기록지 (주당 3개)",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226023"
+      "createdAt": "2026-04-19T22:09:15.420676"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-my-echo-ecg",
@@ -762,7 +762,7 @@
       "title": "My Echo & ECG 발표 준비 시작",
       "memo": "운영 6 / 10 · 본인 심전도 출력본 + Cardiology 심초음파 mp4 + 발표 PPT",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226345"
+      "createdAt": "2026-04-19T22:09:15.420964"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-heartsound-handwrite",
@@ -774,7 +774,7 @@
       "title": "박재형 자필과제 제출 시작",
       "memo": "운영 5 / 10 · `나의 꿈` A4 1장 + `심음청진의 방법` 4쪽",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226327"
+      "createdAt": "2026-04-19T22:09:15.420947"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-pretest-reflection",
@@ -786,7 +786,7 @@
       "title": "Pretest 자유기록(과제) 제출 시작",
       "memo": "운영 3 / 10 · 유폴 자유기록(과제) / 당일 제출",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226376"
+      "createdAt": "2026-04-19T22:09:15.420994"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-cardiac-exam",
@@ -798,7 +798,7 @@
       "title": "유폴 현장승인 · 심장진찰 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226512"
+      "createdAt": "2026-04-19T22:09:15.421122"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-mi-case",
@@ -810,7 +810,7 @@
       "title": "MI case 발표 준비 시작",
       "memo": "운영 7 / 10 · 병력청취 + 영상/녹음 + 발표 PPT",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226368"
+      "createdAt": "2026-04-19T22:09:15.420987"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-pomr-case-ab",
@@ -822,7 +822,7 @@
       "title": "POMR 발표 케이스 준비 (A/B) 시작",
       "memo": "운영 7 / 10 · 같은 케이스를 POMR과 심전도 발표로 이어서 준비",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226360"
+      "createdAt": "2026-04-19T22:09:15.420979"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-nayekkum-scan-seongsukwoo",
@@ -834,7 +834,7 @@
       "title": "성석우 교수님용 `나의 꿈` 스캔본 시작",
       "memo": "운영 4 / 10 · `나의 꿈`만 스캔해서 대면환자 증례보고서 시간에 제출",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226337"
+      "createdAt": "2026-04-19T22:09:15.420956"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-ihd-topic-presentation",
@@ -846,7 +846,7 @@
       "title": "허혈성 심질환 주제 발표 준비 시작",
       "memo": "운영 5 / 10 · 5~10분 미니 발표 / 진단·치료 중심 정리",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226353"
+      "createdAt": "2026-04-19T22:09:15.420972"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-facecase-report",
@@ -858,7 +858,7 @@
       "title": "대면증례보고서 제출 시작",
       "memo": "운영 6 / 10 · 교수님과 함께 본 동일 환자를 기준으로 EKG/PCI 중심 작성",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226385"
+      "createdAt": "2026-04-19T22:09:15.421003"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-heartsound",
@@ -870,7 +870,7 @@
       "title": "유폴 현장승인 · 심음청진 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226504"
+      "createdAt": "2026-04-19T22:09:15.421114"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-outpatient-record-1",
@@ -882,7 +882,7 @@
       "title": "외래 예진기록지 1회차 시작",
       "memo": "운영 7 / 10 · SOAP 칸을 채우고 예진기록지 PDF도 함께 첨부",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226448"
+      "createdAt": "2026-04-19T22:09:15.421060"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-pci-20260428-abc",
@@ -894,7 +894,7 @@
       "title": "유폴 현장승인 · 1주차 화 ABC PCI 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인 (PCI)",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226586"
+      "createdAt": "2026-04-19T22:09:15.421195"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-outpatient-20260428-def",
@@ -906,7 +906,7 @@
       "title": "유폴 현장승인 · 1주차 화 DEF 외래참관 시작",
       "memo": "운영 5 / 10 · 유폴 외래참관 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226624"
+      "createdAt": "2026-04-19T22:09:15.421229"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-htn-cpx",
@@ -918,7 +918,7 @@
       "title": "유폴 현장승인 · CPX HTN 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226520"
+      "createdAt": "2026-04-19T22:09:15.421129"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-outpatient-record-2",
@@ -930,7 +930,7 @@
       "title": "외래 예진기록지 2회차 시작",
       "memo": "운영 7 / 10 · SOAP 칸 작성 + 예진기록지 PDF 첨부",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226459"
+      "createdAt": "2026-04-19T22:09:15.421071"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-pomr-upload",
@@ -942,7 +942,7 @@
       "title": "POMR 수정본 업로드 시작",
       "memo": "운영 6 / 10 · 발표 PPT를 교수님 피드백 반영본으로 수정해 업로드",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226395"
+      "createdAt": "2026-04-19T22:09:15.421013"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-outpatient-20260429-def",
@@ -954,7 +954,7 @@
       "title": "유폴 현장승인 · 1주차 수 DEF 외래참관 시작",
       "memo": "운영 5 / 10 · 유폴 외래참관 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226633"
+      "createdAt": "2026-04-19T22:09:15.421238"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-cpx-chestpain-report",
@@ -966,7 +966,7 @@
       "title": "CPX 흉통 제출 시작",
       "memo": "운영 4 / 10 · 유폴 자유기록(과제)",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226436"
+      "createdAt": "2026-04-19T22:09:15.421050"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-ecg-a",
@@ -978,7 +978,7 @@
       "title": "유폴 현장승인 · A 심전도 발표 시작",
       "memo": "운영 6 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226557"
+      "createdAt": "2026-04-19T22:09:15.421166"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-outpatient-20260430-abc",
@@ -990,7 +990,7 @@
       "title": "유폴 현장승인 · 1주차 목 ABC 외래참관 시작",
       "memo": "운영 5 / 10 · 유폴 외래참관 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226641"
+      "createdAt": "2026-04-19T22:09:15.421246"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-pci-20260430-def",
@@ -1002,7 +1002,7 @@
       "title": "유폴 현장승인 · 1주차 목 DEF PCI 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인 (PCI)",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226595"
+      "createdAt": "2026-04-19T22:09:15.421203"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-palpit-cpx",
@@ -1014,7 +1014,7 @@
       "title": "유폴 현장승인 · CPX 두근거림/실신 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226527"
+      "createdAt": "2026-04-19T22:09:15.421137"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-ecg-b",
@@ -1026,7 +1026,7 @@
       "title": "유폴 현장승인 · B 심전도 발표 시작",
       "memo": "운영 6 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226564"
+      "createdAt": "2026-04-19T22:09:15.421173"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-osce",
@@ -1038,7 +1038,7 @@
       "title": "유폴 현장승인 · 임상술기(척도평가) OSCE 시작",
       "memo": "운영 6 / 10 · 유폴 임상술기(척도평가) 현장평가",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226542"
+      "createdAt": "2026-04-19T22:09:15.421152"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-weekly-reflection-w1",
@@ -1050,7 +1050,7 @@
       "title": "주간실습계획과 성찰 1주차 시작",
       "memo": "운영 4 / 10 · 복영남 교수님 항목 / 금요일 자정 전 제출",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226468"
+      "createdAt": "2026-04-19T22:09:15.421081"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-qna-stable-angina",
@@ -1062,7 +1062,7 @@
       "title": "심혈관질환 Q&A 제출 시작",
       "memo": "운영 5 / 10 · 워드 첨부 없이 유폴에 직접 작성",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226403"
+      "createdAt": "2026-04-19T22:09:15.421020"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-outpatient-20260504-abc",
@@ -1074,7 +1074,7 @@
       "title": "유폴 현장승인 · 2주차 월 ABC 외래참관 시작",
       "memo": "운영 5 / 10 · 유폴 외래참관 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226649"
+      "createdAt": "2026-04-19T22:09:15.421254"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-outpatient-20260504-def",
@@ -1086,7 +1086,7 @@
       "title": "유폴 현장승인 · 2주차 월 DEF 외래참관 시작",
       "memo": "운영 5 / 10 · 유폴 외래참관 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226657"
+      "createdAt": "2026-04-19T22:09:15.421261"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-milestone-assign-outpatient-record-1-1",
@@ -1098,7 +1098,7 @@
       "title": "외래 예진기록지 1회차 확보",
       "memo": "외래 예진기록지 1회차",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226448"
+      "createdAt": "2026-04-19T22:09:15.421060"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-pci-20260505-abc",
@@ -1110,7 +1110,7 @@
       "title": "유폴 현장승인 · 2주차 화 ABC PCI 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인 (PCI)",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226606"
+      "createdAt": "2026-04-19T22:09:15.421213"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-pci-20260505-def",
@@ -1122,7 +1122,7 @@
       "title": "유폴 현장승인 · 2주차 화 DEF PCI 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인 (PCI)",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226616"
+      "createdAt": "2026-04-19T22:09:15.421222"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-arrhyproc-20260505-def",
@@ -1134,7 +1134,7 @@
       "title": "유폴 현장승인 · 2주차 화 DEF 부정맥 시술 참관 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인 (부정맥 시술 참관)",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226681"
+      "createdAt": "2026-04-19T22:09:15.421286"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-arrhyproc-20260506-abc",
@@ -1146,7 +1146,7 @@
       "title": "유폴 현장승인 · 2주차 수 ABC 부정맥 시술 참관 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인 (부정맥 시술 참관)",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226689"
+      "createdAt": "2026-04-19T22:09:15.421293"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-ecg-group-discussion",
@@ -1158,7 +1158,7 @@
       "title": "심전도 조별 토의 제출 시작",
       "memo": "운영 3 / 10 · 배운 내용과 느낀점 2~3줄",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226410"
+      "createdAt": "2026-04-19T22:09:15.421033"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-outpatient-makeup-20260506",
@@ -1170,7 +1170,7 @@
       "title": "유폴 현장승인 · 예진 미충족자 외래 보충 시작",
       "memo": "운영 5 / 10 · 유폴 외래참관 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226673"
+      "createdAt": "2026-04-19T22:09:15.421277"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-echo-understanding",
@@ -1182,7 +1182,7 @@
       "title": "심초음파 검사의 이해 제출 시작",
       "memo": "운영 5 / 10 · My Echo & EKG 파일 뒷장에 설명을 붙여 제출",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226418"
+      "createdAt": "2026-04-19T22:09:15.421040"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-ecg-cd",
@@ -1194,7 +1194,7 @@
       "title": "유폴 현장승인 · C,D 심전도 발표 시작",
       "memo": "운영 6 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226571"
+      "createdAt": "2026-04-19T22:09:15.421180"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-dyspnea-cpx",
@@ -1206,7 +1206,7 @@
       "title": "유폴 현장승인 · CPX 호흡곤란 시작",
       "memo": "운영 5 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226535"
+      "createdAt": "2026-04-19T22:09:15.421144"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-outpatient-20260507-abc",
@@ -1218,7 +1218,7 @@
       "title": "유폴 현장승인 · 2주차 목 ABC 외래참관 시작",
       "memo": "운영 5 / 10 · 유폴 외래참관 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226665"
+      "createdAt": "2026-04-19T22:09:15.421269"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-ecg-ef",
@@ -1230,7 +1230,7 @@
       "title": "유폴 현장승인 · E,F 심전도 발표 시작",
       "memo": "운영 6 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226579"
+      "createdAt": "2026-04-19T22:09:15.421188"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-onsite-valvular",
@@ -1242,7 +1242,7 @@
       "title": "유폴 현장승인 · 심장판막질환 시작",
       "memo": "운영 4 / 10 · 유폴 자유기록 현장승인",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226549"
+      "createdAt": "2026-04-19T22:09:15.421159"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-clinical-skill-selfeval",
@@ -1254,7 +1254,7 @@
       "title": "임상술기 계획과 자기평가 2개 시작",
       "memo": "운영 5 / 10 · 임상술기 계획과 자기평가 항목별 개별 업로드",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226496"
+      "createdAt": "2026-04-19T22:09:15.421107"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-clinical-expression-selfeval",
@@ -1266,7 +1266,7 @@
       "title": "임상표현 계획과 자기평가 6개 시작",
       "memo": "운영 6 / 10 · 임상표현 계획과 자기평가 항목별 개별 업로드",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226485"
+      "createdAt": "2026-04-19T22:09:15.421098"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-start-assign-weekly-reflection-w2",
@@ -1278,7 +1278,7 @@
       "title": "주간실습계획과 성찰 2주차 시작",
       "memo": "운영 4 / 10 · 복영남 교수님 항목 / 금요일 자정 전 제출",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226477"
+      "createdAt": "2026-04-19T22:09:15.421089"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-milestone-assign-outpatient-record-2-1",
@@ -1290,7 +1290,7 @@
       "title": "외래 예진기록지 2회차 확보",
       "memo": "외래 예진기록지 2회차",
       "completed": false,
-      "createdAt": "2026-04-19T22:01:47.226459"
+      "createdAt": "2026-04-19T22:09:15.421071"
     }
   ],
   "calendarEvents": [
@@ -7821,6 +7821,32 @@
             "adult_professor": 5,
             "ecg_presentation": 11,
             "images": 4
+          }
+        },
+        "uportfolio_guide": {
+          "title": "유폴리오 현장승인 기본 가이드",
+          "source_ref": "1-1-4",
+          "source_md": "/Users/sffs123gmail.com/Desktop/의학과 공부 파일/본3/심장내과/25/(0) 26년도 인계/심장내과 인계 정리용.md",
+          "basic_principles": [
+            "현장승인이 필요한 항목은 미리 준비한 상태로 수업에 들어가야 한다.",
+            "핫스팟을 이용해 아이패드로 유폴리오에 접속한 뒤, `.`만 찍어서 제출해두고 교수님께 승인만 받으면 되게 준비해두는 것이 좋다."
+          ],
+          "free_record_onsite": [
+            "총 10개 항목이며, 실습내용과 느낀점은 모두 `.`만 찍어서 제출한 뒤 현장승인을 받으면 된다.",
+            "일정 전에 미리 제출해두는 것이 편하고, 시간은 아무렇게나 넣어도 무방하다."
+          ],
+          "image_files": [
+            "심장내과_유폴리오_이미지/유폴리오_자유기록_현장승인_01.png",
+            "심장내과_유폴리오_이미지/유폴리오_자유기록_현장승인_02.png"
+          ],
+          "asset_urls": [
+            "./assets/cardiology-uportfolio-guide/유폴리오_자유기록_현장승인_01.png",
+            "./assets/cardiology-uportfolio-guide/유폴리오_자유기록_현장승인_02.png"
+          ],
+          "counts": {
+            "basic_principles": 2,
+            "free_record_onsite": 2,
+            "images": 2
           }
         }
       },

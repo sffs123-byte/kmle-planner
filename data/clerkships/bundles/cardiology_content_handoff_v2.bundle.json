@@ -455,6 +455,32 @@
         "ecg_presentation": 11,
         "images": 4
       }
+    },
+    "uportfolio_guide": {
+      "title": "유폴리오 현장승인 기본 가이드",
+      "source_ref": "1-1-4",
+      "source_md": "/Users/sffs123gmail.com/Desktop/의학과 공부 파일/본3/심장내과/25/(0) 26년도 인계/심장내과 인계 정리용.md",
+      "basic_principles": [
+        "현장승인이 필요한 항목은 미리 준비한 상태로 수업에 들어가야 한다.",
+        "핫스팟을 이용해 아이패드로 유폴리오에 접속한 뒤, `.`만 찍어서 제출해두고 교수님께 승인만 받으면 되게 준비해두는 것이 좋다."
+      ],
+      "free_record_onsite": [
+        "총 10개 항목이며, 실습내용과 느낀점은 모두 `.`만 찍어서 제출한 뒤 현장승인을 받으면 된다.",
+        "일정 전에 미리 제출해두는 것이 편하고, 시간은 아무렇게나 넣어도 무방하다."
+      ],
+      "image_files": [
+        "심장내과_유폴리오_이미지/유폴리오_자유기록_현장승인_01.png",
+        "심장내과_유폴리오_이미지/유폴리오_자유기록_현장승인_02.png"
+      ],
+      "asset_urls": [
+        "./assets/cardiology-uportfolio-guide/유폴리오_자유기록_현장승인_01.png",
+        "./assets/cardiology-uportfolio-guide/유폴리오_자유기록_현장승인_02.png"
+      ],
+      "counts": {
+        "basic_principles": 2,
+        "free_record_onsite": 2,
+        "images": 2
+      }
     }
   },
   "submission_rules": [
