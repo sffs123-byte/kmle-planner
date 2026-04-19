@@ -864,6 +864,33 @@
       color: #0f172a;
     }
 
+    .calendar-reference-hub {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin: 12px 0 14px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(219, 234, 254, 0.95);
+      background: linear-gradient(135deg, rgba(239, 246, 255, 0.96), rgba(248, 250, 252, 0.98));
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.05);
+    }
+
+    .calendar-reference-hub-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-right: 2px;
+    }
+
+    .calendar-reference-hub-note {
+      font-size: 12px;
+      color: #475569;
+      line-height: 1.5;
+      margin-right: auto;
+    }
+
     .professor-directory-table {
       display: grid;
       gap: 10px;
@@ -896,6 +923,44 @@
       background: linear-gradient(135deg, rgba(219, 234, 254, 0.95), rgba(191, 219, 254, 0.92));
       border: 1px solid rgba(96, 165, 250, 0.45);
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.75);
+    }
+
+    .professor-photo-button {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      padding: 0;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(241,245,249,0.95));
+      overflow: hidden;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      position: relative;
+      box-shadow: 0 8px 16px rgba(15, 23, 42, 0.08);
+    }
+
+    .professor-photo-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .professor-avatar-fallback {
+      display: none;
+      width: 100%;
+      height: 100%;
+      border-radius: 999px;
+      place-items: center;
+      font-size: 13px;
+      font-weight: 800;
+      color: #0f172a;
+      background: linear-gradient(135deg, rgba(219, 234, 254, 0.95), rgba(191, 219, 254, 0.92));
+    }
+
+    .professor-photo-button.is-missing .professor-avatar-fallback {
+      display: grid;
     }
 
     .professor-name {
@@ -2493,6 +2558,7 @@
               <button class="btn btn-small btn-ghost" id="calendarNextBtn">다음 주</button>
             </div>
           </div>
+          <div class="calendar-reference-hub" id="calendarReferenceHub"></div>
           <div class="calendar-edit-toolbar" id="calendarEditToolbar"></div>
           <div class="calendar-board-shell">
             <div class="calendar-board-grid" id="calendarGrid"></div>
@@ -2686,6 +2752,7 @@
     let activeCalendarLocationGuideWeek = null;
     let activeCalendarReferencePanel = null;
     let activeCalendarReferenceWeek = null;
+    let activeCalendarReferenceMeta = null;
     let activeImageLightbox = null;
     let activeCalendarMoveEventId = null;
     let calendarEventLongPressTimer = null;
@@ -3836,6 +3903,12 @@
       return clean.slice(-2) || clean.slice(0, 2) || '교수';
     }
 
+    function professorImageSrc(name) {
+      const clean = normalizeProfessorName(name);
+      if (!clean) return '';
+      return `./data/clerkships/professors/cardiology/${encodeURIComponent(`교수님_${clean}_01.jpeg`)}`;
+    }
+
     function professorDirectoryForBundle(bundle) {
       if (!bundle) return [];
       const map = new Map();
@@ -3910,6 +3983,50 @@
         });
     }
 
+    function hasSejongContextForWeek(weekDays) {
+      const bundle = bundleForWeek(weekDays);
+      if (!bundle) return false;
+      return (bundle.sessions || []).some(session => weekDays.some(day => session.date === formatDateInput(day)) && session.site === '세종');
+    }
+
+    function referenceBlocksForBundle(bundle) {
+      return bundle?.analysis_appendix?.reference_blocks || [];
+    }
+
+    function findBundleReferenceBlock(bundle, ref) {
+      return referenceBlocksForBundle(bundle).find(item => item.ref === ref) || null;
+    }
+
+    function ecgReferenceGroupsForSession(bundle, session) {
+      if (!bundle || !session?.title?.includes('심전도 발표')) return [];
+      const sourceRefs = session.source_refs || [];
+      const currentRefs = ['4-8', '4-9', '4-10', '4-11'].filter(ref => sourceRefs.includes(ref));
+      const groups = [
+        { key: 'common', label: '공통 유의사항', refs: ['4-1'] },
+        { key: 'history', label: '이전 조 후기', refs: ['4-2', '4-3', '4-4', '4-5', '4-6', '4-7'] },
+        ...(currentRefs.length ? [{ key: 'current', label: '해당 회차 인계', refs: currentRefs }] : []),
+      ];
+      return groups
+        .map(group => ({ ...group, refs: group.refs.filter(ref => Boolean(findBundleReferenceBlock(bundle, ref))) }))
+        .filter(group => group.refs.length);
+    }
+
+    function renderSessionReferenceLinksHtml(event, session) {
+      if (!event?.bundleId || !session) return '';
+      const bundle = state.clerkshipBundles?.[event.bundleId];
+      const groups = ecgReferenceGroupsForSession(bundle, session);
+      if (!groups.length) return '';
+      return `
+        <div class="detail-screen-section">
+          <h4>📚 참고자료</h4>
+          <div class="badge-row" style="margin-top:8px; flex-wrap:wrap; gap:8px;">
+            ${groups.map(group => `<button class="btn btn-small btn-ghost" onclick="openCalendarSessionReference('${event.id}', '${group.key}')">${escapeHtml(group.label)} ${group.refs.length}</button>`).join('')}
+          </div>
+          <p class="item-meta" style="margin-top:8px;">심전도 발표 상세 후기와 공통 유의사항을 필요할 때만 펼쳐서 본다.</p>
+        </div>
+      `;
+    }
+
     function pathBasename(value) {
       return String(value || '').split('/').pop() || '';
     }
@@ -3954,6 +4071,27 @@
 
         return `<div style="margin:0 0 6px 0; color:#334155; line-height:1.6;">${renderReferenceInlineText(trimmed)}</div>`;
       }).join('');
+    }
+
+    function renderCalendarReferenceHub(weekDays) {
+      const container = byId('calendarReferenceHub');
+      if (!container) return;
+      const bundle = bundleForWeek(weekDays);
+      if (!bundle?.fixed_info) {
+        container.style.display = 'none';
+        container.innerHTML = '';
+        return;
+      }
+      const weekKey = weekKeyFromDate(weekDays[0]);
+      const hasSejongContext = hasSejongContextForWeek(weekDays);
+      const sourceTitle = bundle.fixed_info?.source_title || '실습 기본정보';
+      container.style.display = 'flex';
+      container.innerHTML = `
+        <div class="calendar-reference-hub-title">${escapeHtml(sourceTitle)}</div>
+        <div class="calendar-reference-hub-note">실습캘린더에서 바로 기본정보로 들어가고, 그 안에서 교수님·조 운영 규칙·세종 메모까지 이어서 본다.</div>
+        <button class="btn btn-small btn-secondary" onclick="openCalendarReferencePanel('${weekKey}', 'basic_info')">기본정보 열기</button>
+        ${hasSejongContext ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'sejong_notes')">세종 운영 메모</button>` : ''}
+      `;
     }
 
     function renderImageLightbox() {
@@ -4930,6 +5068,7 @@
       const hourMarks = calendarTimelineHourMarks();
 
       label.textContent = calendarBoardRangeLabel(weekDays);
+      renderCalendarReferenceHub(weekDays);
 
       const headerCells = `
         <div class="calendar-time-corner">시간</div>
@@ -5122,6 +5261,7 @@
       activeCalendarSummaryDetail = null;
       activeCalendarReferencePanel = null;
       activeCalendarReferenceWeek = null;
+      activeCalendarReferenceMeta = null;
       activeCalendarLocationGuideWeek = weekKey;
       selectedCalendarScope = 'summary';
       selectedWeekKey = weekKey;
@@ -5136,8 +5276,23 @@
       activeCalendarLocationGuideWeek = null;
       activeCalendarReferencePanel = panelKey;
       activeCalendarReferenceWeek = weekKey;
+      activeCalendarReferenceMeta = null;
       selectedCalendarScope = 'summary';
       selectedWeekKey = weekKey;
+      renderCalendarBoard();
+      renderCalendarEventDetailScreen();
+    }
+
+    function openCalendarSessionReference(eventId, groupKey) {
+      const event = findCalendarEventById(eventId);
+      if (!event) return;
+      activeCalendarEventId = null;
+      activeCalendarSlotDetail = null;
+      activeCalendarSummaryDetail = null;
+      activeCalendarLocationGuideWeek = null;
+      activeCalendarReferencePanel = 'session_reference';
+      activeCalendarReferenceWeek = weekKeyFromDate(event.date);
+      activeCalendarReferenceMeta = { eventId, groupKey };
       renderCalendarBoard();
       renderCalendarEventDetailScreen();
     }
@@ -5166,6 +5321,7 @@
       activeCalendarLocationGuideWeek = null;
       activeCalendarReferencePanel = null;
       activeCalendarReferenceWeek = null;
+      activeCalendarReferenceMeta = null;
       activeImageLightbox = null;
       renderImageLightbox();
       activeCalendarMoveEventId = null;
@@ -5842,6 +5998,7 @@
       const summaryEvents = sortSummaryEvents(filterSummaryEventsByCategory(allSummaryEvents, activeCalendarSummaryFilter), { incompleteFirst: activeCalendarSummaryIncompleteFirst });
       const signals = weekSummarySignals(weekDays);
       const locationGuide = locationGuideForWeek(weekDays);
+      const hasSejongContext = hasSejongContextForWeek(weekDays);
       return `
         <div class="detail-screen-panel">
           <div class="detail-screen-head">
@@ -5867,6 +6024,7 @@
                 <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'basic_info')">심장내과 기본정보</button>
                 <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'professors')">교수님</button>
                 <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'group_rules')">조 운영 규칙</button>
+                ${hasSejongContext ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'sejong_notes')">세종 운영 메모</button>` : ''}
                 <button class="btn btn-small ${activeCalendarSummaryIncompleteFirst ? 'btn-secondary' : 'btn-ghost'}" onclick="toggleCalendarSummaryIncompleteFirst()">${activeCalendarSummaryIncompleteFirst ? '기본 순서로 보기' : '안 한 것 먼저 보기'}</button>
               </div>
             </div>
@@ -5913,6 +6071,39 @@
       const professorDirectory = professorDirectoryForBundle(bundle);
       const referenceBlocks = bundle?.analysis_appendix?.reference_blocks || [];
       const findReferenceBlock = (ref) => referenceBlocks.find(item => item.ref === ref) || null;
+      if (panelKey === 'session_reference') {
+        const event = activeCalendarReferenceMeta?.eventId ? findCalendarEventById(activeCalendarReferenceMeta.eventId) : null;
+        const session = event ? findBundleSessionForEvent(event) : null;
+        const groups = ecgReferenceGroupsForSession(bundle, session);
+        const selectedGroup = groups.find(group => group.key === activeCalendarReferenceMeta?.groupKey) || groups[0] || null;
+        const blocks = selectedGroup ? selectedGroup.refs.map(findReferenceBlock).filter(Boolean) : [];
+        return `
+          <div class="detail-screen-panel">
+            <div class="detail-screen-head">
+              <button class="detail-screen-back" onclick="openCalendarEventDetail('${event?.id || ''}')">← ${escapeHtml(session?.title || '세션')}로 돌아가기</button>
+              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
+            </div>
+            <div class="detail-screen-body">
+              <div class="detail-screen-hero">
+                <div class="badge-row">
+                  ${groups.map(group => `<button class="btn btn-small ${selectedGroup?.key === group.key ? 'btn-secondary' : 'btn-ghost'}" onclick="openCalendarSessionReference('${event?.id || ''}', '${group.key}')">${escapeHtml(group.label)} ${group.refs.length}</button>`).join('')}
+                </div>
+                <div class="detail-screen-title">${escapeHtml(session?.title || '심전도 발표')} · 참고자료</div>
+                <div class="detail-screen-summary">${escapeHtml(selectedGroup?.label || '참고자료')} 원문 block을 그대로 본다.</div>
+              </div>
+              <div class="detail-screen-stack">
+                ${blocks.map(block => `
+                  <div class="detail-screen-section">
+                    <h4>${escapeHtml(block.ref)}. ${escapeHtml(block.title)}</h4>
+                    <div>${renderReferenceLinesHtml(block.raw_md_excerpt.split('\n'))}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
       if (panelKey === 'professors') {
         const grouped = professorDirectory.reduce((acc, item) => {
           const key = item.site || '기타';
@@ -5943,7 +6134,10 @@
                     <div class="professor-directory-table">
                       ${rows.map(item => `
                         <div class="professor-directory-row">
-                          <div class="professor-avatar">${escapeHtml(professorAvatarText(item.name))}</div>
+                          <button type="button" class="professor-photo-button" onclick="openImageLightbox('${professorImageSrc(item.name)}', '${escapeHtml(item.name)} 교수님', '교수님_${escapeHtml(item.name)}_01.jpeg')">
+                            <img src="${professorImageSrc(item.name)}" alt="${escapeHtml(item.name)} 교수님" onerror="this.style.display='none'; this.parentElement.classList.add('is-missing');" />
+                            <span class="professor-avatar-fallback">${escapeHtml(professorAvatarText(item.name))}</span>
+                          </button>
                           <div>
                             <div class="professor-name">${escapeHtml(item.name)} 교수님</div>
                             <div class="professor-meta">${escapeHtml(item.roles.join(' · ') || item.modes.join(' · ') || '실습 운영 참고')}</div>
@@ -6006,6 +6200,38 @@
         `;
       }
 
+      if (panelKey === 'sejong_notes') {
+        const refs = ['1-8-2', '1-9-1', '1-9-5', '1-10-3', '1-10-5', '1-11-1', '1-11-7', '1-12-1'];
+        const blocks = refs.map(findReferenceBlock).filter(Boolean);
+        return `
+          <div class="detail-screen-panel">
+            <div class="detail-screen-head">
+              <button class="detail-screen-back" onclick="openCalendarSummaryDetail('${weekKey}')">← 종합으로</button>
+              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
+            </div>
+            <div class="detail-screen-body">
+              <div class="detail-screen-hero">
+                <div class="badge-row">
+                  <span class="calendar-mini-chip">세종</span>
+                  <span class="calendar-mini-chip">운영 메모 ${blocks.length}</span>
+                  <span class="calendar-mini-chip">보조 패널</span>
+                </div>
+                <div class="detail-screen-title">세종 운영 메모</div>
+                <div class="detail-screen-summary">세종 주간에만 자주 찾는 이동/점심/조장 후속 메모를 모아둔다.</div>
+              </div>
+              <div class="detail-screen-stack">
+                ${blocks.map(block => `
+                  <div class="detail-screen-section">
+                    <h4>${escapeHtml(block.ref)}. ${escapeHtml(block.title)}</h4>
+                    <div>${renderReferenceLinesHtml(block.raw_md_excerpt.split('\n'))}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
       if (panelKey !== 'basic_info') {
         return `
           <div class="detail-screen-panel">
@@ -6050,6 +6276,9 @@
               <div class="detail-screen-summary">${calendarBoardRangeLabel(weekDays)} · 실습 중 자주 찾는 연락처와 기본 운영 정보를 한곳에 묶어둔다.</div>
               <div class="detail-filter-row">
                 ${bundleLocationGuide(bundle) ? `<button class="btn btn-small btn-ghost" onclick="openCalendarLocationGuide('${weekKey}')">장소 지도 보기</button>` : ''}
+                <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'professors')">교수님</button>
+                <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'group_rules')">조 운영 규칙</button>
+                ${hasSejongContextForWeek(weekDays) ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'sejong_notes')">세종 운영 메모</button>` : ''}
               </div>
             </div>
             <div class="reference-info-grid">
@@ -6230,6 +6459,7 @@
       const contentHtml = session
         ? renderSessionSectionsHtml(session, event)
         : renderAssignmentSectionsHtml(assignment, event);
+      const referenceLinksHtml = session ? renderSessionReferenceLinksHtml(event, session) : '';
       const controlsHtml = renderCalendarEventControlsHtml(event);
 
       el.classList.add('open');
@@ -6264,6 +6494,7 @@
               ${activeCalendarMoveEventId === event.id ? `<div class="calendar-edit-pill">이동 모드 켜짐 · 다른 시간표 칸을 누르면 여기로 이동한다.</div>` : ''}
             </div>
             ${contentHtml || `<div class="detail-screen-section"><h4>요약</h4><ul><li>추가 설명이 아직 없다.</li></ul></div>`}
+            ${referenceLinksHtml}
             ${controlsHtml}
           </div>
         </div>
@@ -6280,6 +6511,9 @@
       activeCalendarSlotDetail = null;
       activeCalendarSummaryDetail = null;
       activeCalendarLocationGuideWeek = null;
+      activeCalendarReferencePanel = null;
+      activeCalendarReferenceWeek = null;
+      activeCalendarReferenceMeta = null;
       activeImageLightbox = null;
       renderImageLightbox();
       activeCalendarEventId = eventId;
@@ -7168,6 +7402,7 @@
     window.openCalendarSummaryDetail = openCalendarSummaryDetail;
     window.openCalendarLocationGuide = openCalendarLocationGuide;
     window.openCalendarReferencePanel = openCalendarReferencePanel;
+    window.openCalendarSessionReference = openCalendarSessionReference;
     window.openImageLightbox = openImageLightbox;
     window.closeImageLightbox = closeImageLightbox;
     window.openCalendarSlotDetail = openCalendarSlotDetail;
