@@ -234,7 +234,166 @@
         "images": 9,
         "campuses": 2
       }
-    }
+    },
+    "professor_directory": [
+      {
+        "name": "성인환",
+        "site": "본원",
+        "contact_label": "개별 연락처",
+        "phone": "010-5454-7129",
+        "contact_mode": "direct",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_성인환_01.jpeg"
+      },
+      {
+        "name": "정진옥",
+        "site": "본원",
+        "contact_label": "개별 연락처",
+        "phone": "010-3401-9962",
+        "contact_mode": "direct",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_정진옥_01.jpeg"
+      },
+      {
+        "name": "이재환",
+        "site": "본원",
+        "contact_label": "개별 연락처",
+        "phone": "010-9213-8237",
+        "contact_mode": "direct",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_이재환_01.jpeg"
+      },
+      {
+        "name": "김준형",
+        "site": "본원",
+        "contact_label": "연락 정책",
+        "phone": "",
+        "contact_mode": "forbidden",
+        "contact_note": "연락 금지 교수님",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_김준형_01.jpeg"
+      },
+      {
+        "name": "안계택",
+        "site": "본원",
+        "contact_label": "개별 연락처",
+        "phone": "010-5457-0330",
+        "contact_mode": "direct",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_안계택_01.jpeg"
+      },
+      {
+        "name": "진선아",
+        "site": "본원",
+        "contact_label": "개별 연락처",
+        "phone": "010-8646-2386",
+        "contact_mode": "direct",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_진선아_01.jpeg"
+      },
+      {
+        "name": "송필상",
+        "site": "본원",
+        "contact_label": "심장내과 의국",
+        "phone": "042-280-8796",
+        "contact_mode": "office",
+        "contact_note": "개별 번호 미확인, 본원 심장내과 의국 경유",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_송필상_01.jpeg"
+      },
+      {
+        "name": "박현웅",
+        "site": "본원",
+        "contact_label": "개별 연락처",
+        "phone": "010-5292-5459",
+        "contact_mode": "direct",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_박현웅_01.jpeg"
+      },
+      {
+        "name": "성석우",
+        "site": "본원",
+        "contact_label": "개별 연락처",
+        "phone": "010-3424-6150",
+        "contact_mode": "direct",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_성석우_01.jpeg"
+      },
+      {
+        "name": "김미주",
+        "site": "본원",
+        "contact_label": "개별 연락처",
+        "phone": "010-4850-4659",
+        "contact_mode": "direct",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_김미주_01.jpeg"
+      },
+      {
+        "name": "권희진",
+        "site": "본원",
+        "contact_label": "개별 연락처",
+        "phone": "010-2818-3643",
+        "contact_mode": "direct",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_권희진_01.jpeg"
+      },
+      {
+        "name": "양유진",
+        "site": "본원",
+        "contact_label": "심장내과 의국",
+        "phone": "042-280-8796",
+        "contact_mode": "office",
+        "contact_note": "개별 번호 미확인, 본원 심장내과 의국 경유",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_양유진_01.jpeg"
+      },
+      {
+        "name": "복영남",
+        "site": "본원",
+        "contact_label": "개별 연락처",
+        "phone": "010-2025-8577",
+        "contact_mode": "direct",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_복영남_01.jpeg"
+      },
+      {
+        "name": "박재형",
+        "site": "본원",
+        "contact_label": "개별 연락처",
+        "phone": "010-4538-9210",
+        "contact_mode": "direct",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_박재형_01.jpeg"
+      },
+      {
+        "name": "김민수",
+        "site": "세종",
+        "contact_label": "개별 연락처",
+        "phone": "010-3446-4479",
+        "contact_mode": "direct",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_김민수_01.jpeg"
+      },
+      {
+        "name": "노재형",
+        "site": "세종",
+        "contact_label": "연락 정책",
+        "phone": "",
+        "contact_mode": "forbidden",
+        "contact_note": "먼저 연락하지 않는 교수님",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_노재형_01.jpeg"
+      },
+      {
+        "name": "오진경",
+        "site": "세종",
+        "contact_label": "개별 연락처",
+        "phone": "010-9370-4761",
+        "contact_mode": "direct",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_오진경_01.jpeg"
+      },
+      {
+        "name": "김태석",
+        "site": "세종",
+        "contact_label": "개별 연락처",
+        "phone": "010-5463-0870",
+        "contact_mode": "direct",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_김태석_01.jpeg"
+      },
+      {
+        "name": "황원묵",
+        "site": "세종",
+        "contact_label": "세종 대표전화",
+        "phone": "1800-3114",
+        "contact_mode": "representative",
+        "contact_note": "개별 번호 미확인, 세종충남대병원 대표전화 경유",
+        "image_path": "./data/clerkships/professors/cardiology/교수님_황원묵_01.jpeg"
+      }
+    ]
   },
   "submission_rules": [
     {

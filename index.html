@@ -3903,9 +3903,12 @@
       return clean.slice(-2) || clean.slice(0, 2) || '교수';
     }
 
-    function professorImageSrc(name) {
+    function professorImageSrc(name, bundle = null) {
       const clean = normalizeProfessorName(name);
       if (!clean) return '';
+      const directory = bundle?.fixed_info?.professor_directory || [];
+      const meta = directory.find(item => normalizeProfessorName(item.name) === clean);
+      if (meta?.image_path) return meta.image_path;
       return `./data/clerkships/professors/cardiology/${encodeURIComponent(`교수님_${clean}_01.jpeg`)}`;
     }
 
@@ -3914,6 +3917,7 @@
       const map = new Map();
       const fixedInfo = bundle.fixed_info || {};
       const sessionList = bundle.sessions || [];
+      const splitNames = (value) => String(value || '').split(/[\/,]|·/g).map(name => normalizeProfessorName(name)).filter(Boolean);
 
       const ensure = (name, patch = {}) => {
         const clean = normalizeProfessorName(name);
@@ -3928,6 +3932,10 @@
             relatedSessions: [],
             sourceRefs: [],
             contactHint: '개별 연락은 해당 일정의 확인 문자/조장 공지 흐름을 우선 참고',
+            phone: '',
+            contactLabel: '연락 경로',
+            contactMode: '',
+            imagePath: '',
           });
         }
         const row = map.get(clean);
@@ -3938,11 +3946,24 @@
           if (item && !row.relatedSessions.some(existing => existing.id === item.id)) row.relatedSessions.push(item);
         });
         (patch.sourceRefs || []).forEach(ref => { if (ref && !row.sourceRefs.includes(ref)) row.sourceRefs.push(ref); });
-        if (patch.contactHint && row.contactHint === '개별 연락은 해당 일정의 확인 문자/조장 공지 흐름을 우선 참고') {
-          row.contactHint = patch.contactHint;
-        }
+        if (patch.contactHint) row.contactHint = patch.contactHint;
+        if (patch.phone) row.phone = patch.phone;
+        if (patch.contactLabel) row.contactLabel = patch.contactLabel;
+        if (patch.contactMode) row.contactMode = patch.contactMode;
+        if (patch.imagePath) row.imagePath = patch.imagePath;
         return row;
       };
+
+      (fixedInfo.professor_directory || []).forEach(item => {
+        ensure(item.name, {
+          site: item.site || '',
+          contactHint: item.contact_note || '개별 연락은 해당 일정의 확인 문자/조장 공지 흐름을 우선 참고',
+          phone: item.phone || '',
+          contactLabel: item.contact_label || '연락처',
+          contactMode: item.contact_mode || '',
+          imagePath: item.image_path || '',
+        });
+      });
 
       if (fixedInfo['책임교수']) {
         ensure(fixedInfo['책임교수'], { roles: ['책임교수'], site: '본원' });
@@ -3958,14 +3979,14 @@
       });
 
       sessionList.forEach(session => {
-        const professor = normalizeProfessorName(session.professor || '');
-        if (!professor) return;
-        const role = session.title?.includes('발표') ? '발표/평가' : (session.title?.includes('CPX') ? 'CPX/수업' : (session.title?.includes('외래') ? '외래' : (session.title?.includes('PCI') || session.title?.includes('시술') ? '시술/참관' : '수업')));
-        ensure(professor, {
-          site: session.site || '',
-          modes: [role],
-          relatedSessions: [{ id: session.id, title: session.title, date: session.date }],
-          sourceRefs: session.source_refs || [],
+        splitNames(session.professor || '').forEach(professor => {
+          const role = session.title?.includes('발표') ? '발표/평가' : (session.title?.includes('CPX') ? 'CPX/수업' : (session.title?.includes('외래') ? '외래' : (session.title?.includes('PCI') || session.title?.includes('시술') ? '시술/참관' : '수업')));
+          ensure(professor, {
+            site: session.site || '',
+            modes: [role],
+            relatedSessions: [{ id: session.id, title: session.title, date: session.date }],
+            sourceRefs: session.source_refs || [],
+          });
         });
       });
 
@@ -3975,6 +3996,7 @@
           site: item.site || '본원',
           relatedSessions: item.relatedSessions.slice(0, 4),
           sourceRefs: item.sourceRefs.slice(0, 6),
+          imagePath: item.imagePath || professorImageSrc(item.name),
         }))
         .sort((a, b) => {
           const siteCmp = String(a.site).localeCompare(String(b.site), 'ko');
@@ -6134,8 +6156,8 @@
                     <div class="professor-directory-table">
                       ${rows.map(item => `
                         <div class="professor-directory-row">
-                          <button type="button" class="professor-photo-button" onclick="openImageLightbox('${professorImageSrc(item.name)}', '${escapeHtml(item.name)} 교수님', '교수님_${escapeHtml(item.name)}_01.jpeg')">
-                            <img src="${professorImageSrc(item.name)}" alt="${escapeHtml(item.name)} 교수님" onerror="this.style.display='none'; this.parentElement.classList.add('is-missing');" />
+                          <button type="button" class="professor-photo-button" onclick="openImageLightbox('${item.imagePath || professorImageSrc(item.name, bundle)}', '${escapeHtml(item.name)} 교수님', '${escapeHtml((item.imagePath || professorImageSrc(item.name, bundle)).split('/').pop() || '')}')">
+                            <img src="${item.imagePath || professorImageSrc(item.name, bundle)}" alt="${escapeHtml(item.name)} 교수님" onerror="this.style.display='none'; this.parentElement.classList.add('is-missing');" />
                             <span class="professor-avatar-fallback">${escapeHtml(professorAvatarText(item.name))}</span>
                           </button>
                           <div>
@@ -6150,7 +6172,8 @@
                           </div>
                           <div>
                             <div class="professor-column-label">연락 / 참고</div>
-                            <div class="reference-info-line">${escapeHtml(item.contactHint)}</div>
+                            ${item.contactMode === 'forbidden' ? `<div class="reference-info-line"><strong>${escapeHtml(item.contactLabel || '연락 정책')}</strong>: 연락 금지</div>` : item.phone ? `<div class="reference-info-line"><strong>${escapeHtml(item.contactLabel || '전화')}</strong>: ${escapeHtml(item.phone)}</div>` : ''}
+                            ${item.contactHint ? `<div class="reference-info-line">${escapeHtml(item.contactHint)}</div>` : ''}
                             ${item.sourceRefs.length ? `<div class="reference-info-line"><strong>ref</strong>: ${escapeHtml(item.sourceRefs.join(', '))}</div>` : ''}
                           </div>
                         </div>
