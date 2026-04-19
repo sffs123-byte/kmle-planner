@@ -2638,8 +2638,8 @@
 
   <script>
     const STORAGE_KEY = 'kmlePlannerState.v2';
-    const APP_VERSION = '20260419T120554Z';
-    const APP_VERSION_LABEL = '2026-04-19 21:05 KST';
+    const APP_VERSION = '20260418T194500Z';
+    const APP_VERSION_LABEL = '2026-04-19 04:45 KST';
     const STAGES = [
       { id: 'lecture', label: '강의 듣기', short: '강의', note: '강의/팟캐스트/기본 인강 소화' },
       { id: 'framework', label: '개념 틀 짜기', short: '개념틀', note: '총정리 구조, 도식, 로직 프레임 정리' },
@@ -3892,6 +3892,11 @@
       const bundleId = bundleIdForWeek(weekDays);
       if (!bundleId) return null;
       return state.clerkshipBundles?.[bundleId] || null;
+    }
+
+    function presentationGuideForWeek(weekDays) {
+      const bundle = bundleForWeek(weekDays);
+      return bundle?.fixed_info?.presentation_guide || null;
     }
 
     function normalizeProfessorName(name) {
@@ -6020,7 +6025,9 @@
       const summaryEvents = sortSummaryEvents(filterSummaryEventsByCategory(allSummaryEvents, activeCalendarSummaryFilter), { incompleteFirst: activeCalendarSummaryIncompleteFirst });
       const signals = weekSummarySignals(weekDays);
       const locationGuide = locationGuideForWeek(weekDays);
+      const presentationGuide = presentationGuideForWeek(weekDays);
       const hasSejongContext = hasSejongContextForWeek(weekDays);
+      const showPresentationGuide = activeCalendarSummaryFilter === 'presentation_exam' && presentationGuide;
       return `
         <div class="detail-screen-panel">
           <div class="detail-screen-head">
@@ -6050,6 +6057,32 @@
                 <button class="btn btn-small ${activeCalendarSummaryIncompleteFirst ? 'btn-secondary' : 'btn-ghost'}" onclick="toggleCalendarSummaryIncompleteFirst()">${activeCalendarSummaryIncompleteFirst ? '기본 순서로 보기' : '안 한 것 먼저 보기'}</button>
               </div>
             </div>
+            ${showPresentationGuide ? `<div class="detail-screen-section">
+              <h4>발표 준비 공통 가이드</h4>
+              <div class="badge-row" style="margin-top:8px; margin-bottom:10px;">
+                <span class="calendar-mini-chip">공통 원칙 ${presentationGuide.counts?.principles || 0}</span>
+                <span class="calendar-mini-chip">장비·세팅 ${presentationGuide.counts?.equipment || 0}</span>
+                <span class="calendar-mini-chip">이미지 ${presentationGuide.counts?.images || 0}</span>
+              </div>
+              <div class="detail-screen-stack" style="margin-top:0;">
+                <div class="detail-screen-section" style="margin-top:0; background:rgba(255,255,255,0.6);">
+                  <h4>발표 공통 원칙</h4>
+                  <ul>${(presentationGuide.principles || []).map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+                </div>
+                <div class="detail-screen-section" style="margin-top:0; background:rgba(255,255,255,0.6);">
+                  <h4>발표 장비 및 세팅</h4>
+                  <ul>${(presentationGuide.equipment || []).map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+                  ${(presentationGuide.asset_urls || []).length ? `<div class="location-guide-thumb-grid" style="margin-top:12px;">${(presentationGuide.asset_urls || []).map((url, index) => {
+                    const fileName = pathBasename((presentationGuide.image_files || [])[index] || url);
+                    const caption = `발표 준비 · ${index === 0 ? '자동실행/반복재생' : 'HDMI 연결'}`;
+                    return `<button type="button" class="location-guide-thumb" data-src="${escapeHtml(url)}" data-caption="${escapeHtml(caption)}" data-file-name="${escapeHtml(fileName)}" onclick="openImageLightbox(this.dataset.src, this.dataset.caption, this.dataset.fileName)">
+                      <img src="${encodeURI(url)}" alt="${escapeHtml(caption)}" loading="lazy" />
+                      <span>${escapeHtml(fileName)}</span>
+                    </button>`;
+                  }).join('')}</div>` : ''}
+                </div>
+              </div>
+            </div>` : ''}
             <div class="detail-screen-section">
               <h4>주간 종합 일정</h4>
               ${summaryEvents.length ? `<div class="event-list">${summaryEvents.map(event => {
