@@ -1,0 +1,51 @@
+{
+  "bundle_id": "cardiology-2026-04-chief-draft-v2",
+  "generated_at": "2026-04-19T13:35:00+09:00",
+  "paths": {
+    "bundle": "/Users/sffs123gmail.com/.openclaw/workspace/kmle-planner/data/clerkships/bundles/cardiology_content_handoff_v2.bundle.json",
+    "briefing": "/Users/sffs123gmail.com/.openclaw/workspace/kmle-planner/data/clerkships/briefings/cardiology_content_handoff_v2.daily_briefing.json",
+    "reminders": "/Users/sffs123gmail.com/.openclaw/workspace/kmle-planner/data/clerkships/reminders/cardiology_content_handoff_v2.day_reminders.json",
+    "audit": "/Users/sffs123gmail.com/.openclaw/workspace/kmle-planner/data/clerkships/audit/cardiology_content_handoff_v2.audit.json",
+    "planner_import": "/Users/sffs123gmail.com/.openclaw/workspace/kmle-planner-deploy/data/planner_state_cardiology_content_handoff_v2_import.json"
+  },
+  "counts": {
+    "sessions": 73,
+    "assignments": 7,
+    "overlay_sessions": 7,
+    "day_reminders": 10,
+    "daily_briefing_seed": 10
+  },
+  "semantics_preserved": [
+    "stable session/assignment id 유지",
+    "approval_required 유지",
+    "confirm_level 유지",
+    "split_group 유지",
+    "source_refs 유지",
+    "overlay semantics를 session object로 유지"
+  ],
+  "simplifications_applied": [
+    "verbatim source blocks를 bundle 본문에서 제거했다.",
+    "sections를 intro/핵심 정리/준비·운영 포인트 중심으로 축소했다.",
+    "summary, calendar_body_short, prep_tasks, core_points를 짧게 유지했다.",
+    "overlay semantics를 별도 session object로 유지했다."
+  ],
+  "notes": [
+    "GitHub/live 반영용으로 단순화했지만, confirm/approval/split/source semantics는 유지했다.",
+    "bundle / briefing / reminders / audit 4개를 같은 v2 세트로 다시 잠갔다."
+  ],
+  "warnings": [
+    "calendar ingest packet v2를 비서 레이어에 채택해 approval flag / split group / hidden overlay 정보를 bundle과 import state에 반영했다."
+  ],
+  "import_validation": {
+    "validated_on": "2026-04-19T13:53:00+09:00",
+    "local_http_validation": true,
+    "bundle_id": "cardiology-2026-04-chief-draft-v2",
+    "calendar_events_loaded": 83,
+    "bundle_present_in_localStorage": true,
+    "first_loaded_title": "교수님 확인 문자 · 박재형",
+    "notes": [
+      "kmle-planner와 kmle-planner-deploy 둘 다 로컬 http server에서 cardiology v2 bundle fetch/import 검증 통과.",
+      "HTML 셸 수정 없이 bundle 경로만으로 import되는 것 확인."
+    ]
+  }
+}

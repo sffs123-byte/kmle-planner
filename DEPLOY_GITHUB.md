@@ -9,6 +9,22 @@
 - GitHub Pages 워크플로우 (`.github/workflows/deploy-pages.yml`)
 - 별도 git repo 초기화 완료 (`main` 브랜치)
 
+## 현재 live 진입점
+- 상단 버튼으로 바로 불러올 수 있는 bundle:
+  - `호흡기 실습 불러오기`
+  - `심장내과 실습 불러오기`
+- cardiology live bundle id: `cardiology-2026-04-chief-draft-v2`
+- cardiology live files:
+  - `data/clerkships/bundles/cardiology_content_handoff_v2.bundle.json`
+  - `data/clerkships/briefings/cardiology_content_handoff_v2.daily_briefing.json`
+  - `data/clerkships/reminders/cardiology_content_handoff_v2.day_reminders.json`
+  - `data/planner_state_cardiology_content_handoff_v2_import.json`
+
+### 다른 기기에서 쓰는 권장 순서
+1. GitHub Pages 주소를 연다.
+2. 상단 `심장내과 실습 불러오기` 버튼을 눌러 cardiology bundle을 현재 기기에 import한다.
+3. 같은 상태를 Mac ↔ iPad/iPhone 사이에서 유지하려면 `자동 동기화`에서 sync code를 연결한다.
+
 ## GitHub에 올리는 순서
 ### 1) 새 GitHub repo 만들기
 예시 이름:
