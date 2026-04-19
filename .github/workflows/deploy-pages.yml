@@ -24,6 +24,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Stamp deploy version
+        run: python3 scripts/stamp_version.py
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
