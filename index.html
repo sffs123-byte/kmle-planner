@@ -1674,6 +1674,81 @@
       background: rgba(248,250,252,0.9);
     }
 
+    .assignment-checklist-wrap {
+      display: grid;
+      gap: 14px;
+    }
+
+    .assignment-checklist-group {
+      border: 1px solid rgba(220,226,238,0.95);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.78);
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .assignment-checklist-subtitle {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0;
+    }
+
+    .assignment-checklist-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .assignment-checklist-item {
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      gap: 10px;
+      align-items: start;
+      border: 1px solid rgba(226,232,240,0.95);
+      border-radius: 14px;
+      padding: 10px 12px;
+      background: rgba(248,250,252,0.9);
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .assignment-checklist-item.done {
+      background: rgba(236,253,245,0.92);
+      border-color: rgba(134,239,172,0.95);
+    }
+
+    .assignment-checklist-box {
+      width: 18px;
+      height: 18px;
+      border-radius: 6px;
+      border: 1.5px solid rgba(148,163,184,0.95);
+      background: rgba(255,255,255,0.96);
+      display: grid;
+      place-items: center;
+      color: transparent;
+      font-size: 12px;
+      margin-top: 1px;
+    }
+
+    .assignment-checklist-item.done .assignment-checklist-box {
+      background: #16a34a;
+      border-color: #16a34a;
+      color: white;
+    }
+
+    .assignment-checklist-label {
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--text);
+      word-break: keep-all;
+    }
+
+    .assignment-checklist-meta {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
     .hero-side {
       padding: 24px;
       display: grid;
@@ -3910,6 +3985,33 @@
       return bundle?.fixed_info?.uportfolio_guide || null;
     }
 
+    function assignmentChecklistForWeek(weekDays) {
+      const bundle = bundleForWeek(weekDays);
+      return bundle?.fixed_info?.assignment_checklist || null;
+    }
+
+    function checklistStateBucket(bundleId) {
+      if (!state.bundleChecklistState) state.bundleChecklistState = {};
+      if (!state.bundleChecklistState[bundleId]) state.bundleChecklistState[bundleId] = {};
+      return state.bundleChecklistState[bundleId];
+    }
+
+    function toggleChecklistItem(bundleId, itemId) {
+      const bucket = checklistStateBucket(bundleId);
+      bucket[itemId] = !bucket[itemId];
+      saveState();
+      renderCalendarBoard();
+      renderCalendarEventDetailScreen();
+    }
+
+    function checklistProgress(bundleId, checklist) {
+      const bucket = checklistStateBucket(bundleId);
+      const items = (checklist?.sections || []).flatMap(section => (section.subsections || []).flatMap(sub => sub.items || []));
+      const total = items.length;
+      const done = items.filter(item => bucket[item.id]).length;
+      return { total, done };
+    }
+
     function normalizeProfessorName(name) {
       return String(name || '').replace(/\s*교수님\s*$/u, '').trim();
     }
@@ -3978,7 +4080,6 @@
           contactLabel: item.contact_label || '연락처',
           contactMode: item.contact_mode || '',
           imagePath: item.image_path || '',
-          sourceRefs: item.source_refs || [],
         });
       });
 
@@ -4032,55 +4133,8 @@
       return bundle?.analysis_appendix?.reference_blocks || [];
     }
 
-    function normalizeReferenceId(value) {
-      const match = String(value || '').trim().match(/^\d+-\d+(?:-\d+)?/);
-      return match ? match[0] : String(value || '').trim();
-    }
-
     function findBundleReferenceBlock(bundle, ref) {
-      const normalized = normalizeReferenceId(ref);
-      return referenceBlocksForBundle(bundle).find(item => item.ref === normalized) || null;
-    }
-
-    function chiefReferenceBlocksForBundle(bundle) {
-      return [
-        {
-          title: '실습 시작 전 조장 준비',
-          refs: ['1-2-1', '1-8-1']
-        },
-        {
-          title: '실습 전 / 주말 공지',
-          refs: ['2-1-1', '2-1-7']
-        },
-        {
-          title: '사전 문자 템플릿',
-          refs: ['2-4-1', '2-4-2', '2-5-1', '2-5-2', '2-5-3', '2-5-4', '2-5-5', '2-6-1', '2-6-2']
-        }
-      ].map(section => ({
-        ...section,
-        blocks: section.refs.map(ref => findBundleReferenceBlock(bundle, ref)).filter(Boolean)
-      })).filter(section => section.blocks.length);
-    }
-
-    function crewReferenceBlocksForBundle(bundle) {
-      return ['1-2-4']
-        .map(ref => findBundleReferenceBlock(bundle, ref))
-        .filter(Boolean);
-    }
-
-    function sourceOverviewBlocksForBundle(bundle) {
-      return ['0-1', '0-2', '0-3', '0-4']
-        .map(ref => findBundleReferenceBlock(bundle, ref))
-        .filter(Boolean);
-    }
-
-    function professorReferenceBlocksForRow(bundle, item) {
-      if (!bundle || !item) return [];
-      const seen = new Set();
-      return (item.sourceRefs || [])
-        .filter(ref => /^3-(1|2|3|4|5)-/.test(normalizeReferenceId(ref)))
-        .map(ref => findBundleReferenceBlock(bundle, ref))
-        .filter(block => block && !seen.has(block.ref) && seen.add(block.ref));
+      return referenceBlocksForBundle(bundle).find(item => item.ref === ref) || null;
     }
 
     function ecgReferenceGroupsForSession(bundle, session) {
@@ -4174,7 +4228,7 @@
       container.style.display = 'flex';
       container.innerHTML = `
         <div class="calendar-reference-hub-title">${escapeHtml(sourceTitle)}</div>
-        <div class="calendar-reference-hub-note">실습캘린더에서 바로 기본정보로 들어가고, 그 안에서 교수님·조장·조원·원문 안내·조 운영 규칙·세종 메모까지 이어서 본다.</div>
+        <div class="calendar-reference-hub-note">실습캘린더에서 바로 기본정보로 들어가고, 그 안에서 교수님·조 운영 규칙·세종 메모까지 이어서 본다.</div>
         <button class="btn btn-small btn-secondary" onclick="openCalendarReferencePanel('${weekKey}', 'basic_info')">기본정보 열기</button>
         ${hasSejongContext ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'sejong_notes')">세종 운영 메모</button>` : ''}
       `;
@@ -5453,20 +5507,6 @@
       renderCalendarEventDetailScreen();
     }
 
-    function openCalendarProfessorReference(weekKey, professorName) {
-      activeCalendarEventId = null;
-      activeCalendarSlotDetail = null;
-      activeCalendarSummaryDetail = null;
-      activeCalendarLocationGuideWeek = null;
-      activeCalendarReferencePanel = 'professor_reference';
-      activeCalendarReferenceWeek = weekKey;
-      activeCalendarReferenceMeta = { professorName };
-      selectedCalendarScope = 'summary';
-      selectedWeekKey = weekKey;
-      renderCalendarBoard();
-      renderCalendarEventDetailScreen();
-    }
-
     function openCalendarSessionReference(eventId, groupKey) {
       const event = findCalendarEventById(eventId);
       if (!event) return;
@@ -5876,6 +5916,18 @@
             <p class="item-meta" style="margin-top:8px;">※ 문자 예시/공지 문구를 바로 복사해 사용할 수 있다.</p>
           </div>`
         : '';
+      const detailGuideImages = Array.isArray(session?.detail_guide_images) ? session.detail_guide_images : [];
+      const detailGuideHtml = detailGuideImages.length > 0
+        ? `<div class="detail-screen-section">
+            <h4>🖼️ 관련 이미지</h4>
+            <div class="location-guide-thumb-grid" style="margin-top:12px;">
+              ${detailGuideImages.map(image => `<button type="button" class="location-guide-thumb" data-src="${escapeHtml(image.src || '')}" data-caption="${escapeHtml(image.caption || '')}" data-file-name="${escapeHtml(image.fileName || '')}" onclick="openImageLightbox(this.dataset.src, this.dataset.caption, this.dataset.fileName)">
+                <img src="${encodeURI(image.src || '')}" alt="${escapeHtml(image.caption || '가이드 이미지')}" loading="lazy" />
+                <span>${escapeHtml(pathBasename(image.fileName || image.src || ''))}</span>
+              </button>`).join('')}
+            </div>
+          </div>`
+        : '';
 
       const renderDetailInlineText = (text) => {
         let html = escapeHtml(String(text || ''));
@@ -5923,11 +5975,12 @@
         }).join('');
       };
 
-      if (!sections.length && !relationHtml && !copyHtml) return '';
+      if (!sections.length && !relationHtml && !copyHtml && !detailGuideHtml) return '';
       return `
         <div class="detail-screen-stack">
           ${relationHtml}
           ${copyHtml}
+          ${detailGuideHtml}
           ${sections.map(([title, items]) => `
             <div class="detail-screen-section">
               <h4>${escapeHtml(title)}</h4>
@@ -6184,9 +6237,14 @@
       const locationGuide = locationGuideForWeek(weekDays);
       const presentationGuide = presentationGuideForWeek(weekDays);
       const uportfolioGuide = uportfolioGuideForWeek(weekDays);
+      const assignmentChecklist = assignmentChecklistForWeek(weekDays);
+      const bundle = bundleForWeek(weekDays);
+      const checklistBundleId = bundle?.meta?.clerkship_id || '';
+      const checklistSummary = assignmentChecklist ? checklistProgress(checklistBundleId, assignmentChecklist) : { total: 0, done: 0 };
       const hasSejongContext = hasSejongContextForWeek(weekDays);
       const showPresentationGuide = activeCalendarSummaryFilter === 'presentation_exam' && presentationGuide;
       const showUportfolioGuide = activeCalendarSummaryFilter === 'assignment' && uportfolioGuide;
+      const showAssignmentChecklist = activeCalendarSummaryFilter === 'assignment' && assignmentChecklist;
       return `
         <div class="detail-screen-panel">
           <div class="detail-screen-head">
@@ -6216,6 +6274,35 @@
                 <button class="btn btn-small ${activeCalendarSummaryIncompleteFirst ? 'btn-secondary' : 'btn-ghost'}" onclick="toggleCalendarSummaryIncompleteFirst()">${activeCalendarSummaryIncompleteFirst ? '기본 순서로 보기' : '안 한 것 먼저 보기'}</button>
               </div>
             </div>
+            ${showAssignmentChecklist ? `<div class="detail-screen-section">
+              <h4>심장실습 과제 체크리스트</h4>
+              <div class="badge-row" style="margin-top:8px; margin-bottom:10px;">
+                <span class="calendar-mini-chip">완료 ${checklistSummary.done}/${checklistSummary.total}</span>
+                <span class="calendar-mini-chip">순서 고정</span>
+                <span class="calendar-mini-chip">개별 체크 가능</span>
+              </div>
+              <div class="assignment-checklist-wrap">
+                ${(assignmentChecklist.sections || []).map(section => `
+                  <div class="assignment-checklist-group">
+                    <h4>${escapeHtml(section.title || '')}</h4>
+                    ${((section.subsections || []).map(sub => `
+                      <div class="detail-screen-stack" style="margin-top:0; gap:10px;">
+                        <p class="assignment-checklist-subtitle">[${escapeHtml(sub.title || '')}]</p>
+                        <div class="assignment-checklist-list">
+                          ${(sub.items || []).map(item => {
+                            const done = !!checklistStateBucket(checklistBundleId)[item.id];
+                            return `<button type="button" class="assignment-checklist-item ${done ? 'done' : ''}" onclick="toggleChecklistItem('${checklistBundleId}', '${item.id}')">
+                              <span class="assignment-checklist-box">✓</span>
+                              <span class="assignment-checklist-label">${escapeHtml(item.label || '')}</span>
+                            </button>`;
+                          }).join('')}
+                        </div>
+                      </div>
+                    `).join(''))}
+                  </div>
+                `).join('')}
+              </div>
+            </div>` : ''}
             ${showPresentationGuide ? `<div class="detail-screen-section">
               <h4>발표 준비 공통 가이드</h4>
               <div class="badge-row" style="margin-top:8px; margin-bottom:10px;">
@@ -6360,105 +6447,6 @@
         `;
       }
 
-      if (panelKey === 'chief_notes') {
-        const sections = chiefReferenceBlocksForBundle(bundle);
-        return `
-          <div class="detail-screen-panel">
-            <div class="detail-screen-head">
-              <button class="detail-screen-back" onclick="openCalendarReferencePanel('${weekKey}', 'basic_info')">← 기본정보로</button>
-              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
-            </div>
-            <div class="detail-screen-body">
-              <div class="detail-screen-hero">
-                <div class="badge-row">
-                  <span class="calendar-mini-chip">조장</span>
-                  <span class="calendar-mini-chip">실습 전·주말·세종 준비</span>
-                  <span class="calendar-mini-chip">원문 ${sections.reduce((sum, section) => sum + section.blocks.length, 0)}</span>
-                </div>
-                <div class="detail-screen-title">조장 준비 / 공지 / 문자</div>
-                <div class="detail-screen-summary">실습 시작 전 준비, 세종 이동 전 체크, 주말/사전 공지와 문자 원문을 md block 그대로 본다.</div>
-              </div>
-              <div class="detail-screen-stack">
-                ${sections.map(section => `
-                  <div class="detail-screen-section">
-                    <h4>${escapeHtml(section.title)}</h4>
-                    <div class="detail-screen-stack" style="margin-top:12px;">
-                      ${section.blocks.map(block => `
-                        <div class="detail-screen-section" style="margin-top:0; background:rgba(255,255,255,0.6);">
-                          <h4>${escapeHtml(block.ref)}. ${escapeHtml(block.title)}</h4>
-                          <div>${renderReferenceLinesHtml(block.raw_md_excerpt.split('\n'))}</div>
-                        </div>
-                      `).join('')}
-                    </div>
-                  </div>
-                `).join('')}
-              </div>
-            </div>
-          </div>
-        `;
-      }
-
-      if (panelKey === 'crew_notes') {
-        const blocks = crewReferenceBlocksForBundle(bundle);
-        return `
-          <div class="detail-screen-panel">
-            <div class="detail-screen-head">
-              <button class="detail-screen-back" onclick="openCalendarReferencePanel('${weekKey}', 'basic_info')">← 기본정보로</button>
-              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
-            </div>
-            <div class="detail-screen-body">
-              <div class="detail-screen-hero">
-                <div class="badge-row">
-                  <span class="calendar-mini-chip">조원</span>
-                  <span class="calendar-mini-chip">준비물 / 과제</span>
-                  <span class="calendar-mini-chip">원문 ${blocks.length}</span>
-                </div>
-                <div class="detail-screen-title">조원 준비</div>
-                <div class="detail-screen-summary">조원들이 실습 전후로 챙겨야 하는 준비물과 과제 메모를 원문 block 그대로 본다.</div>
-              </div>
-              <div class="detail-screen-stack">
-                ${blocks.map(block => `
-                  <div class="detail-screen-section">
-                    <h4>${escapeHtml(block.ref)}. ${escapeHtml(block.title)}</h4>
-                    <div>${renderReferenceLinesHtml(block.raw_md_excerpt.split('\n'))}</div>
-                  </div>
-                `).join('')}
-              </div>
-            </div>
-          </div>
-        `;
-      }
-
-      if (panelKey === 'source_overview') {
-        const blocks = sourceOverviewBlocksForBundle(bundle);
-        return `
-          <div class="detail-screen-panel">
-            <div class="detail-screen-head">
-              <button class="detail-screen-back" onclick="openCalendarReferencePanel('${weekKey}', 'basic_info')">← 기본정보로</button>
-              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
-            </div>
-            <div class="detail-screen-body">
-              <div class="detail-screen-hero">
-                <div class="badge-row">
-                  <span class="calendar-mini-chip">원문 안내</span>
-                  <span class="calendar-mini-chip">source route ${blocks.length}</span>
-                </div>
-                <div class="detail-screen-title">원문 안내</div>
-                <div class="detail-screen-summary">md / 공지·문자 / 외래·PCI / 심전도 발표 인계가 현재 UI에서 어떤 역할을 맡는지 원문 소개 block 그대로 본다.</div>
-              </div>
-              <div class="detail-screen-stack">
-                ${blocks.map(block => `
-                  <div class="detail-screen-section">
-                    <h4>${escapeHtml(block.ref)}. ${escapeHtml(block.title)}</h4>
-                    <div>${renderReferenceLinesHtml(block.raw_md_excerpt.split('\n'))}</div>
-                  </div>
-                `).join('')}
-              </div>
-            </div>
-          </div>
-        `;
-      }
-
       if (panelKey === 'professors') {
         const grouped = professorDirectory.reduce((acc, item) => {
           const key = item.site || '기타';
@@ -6508,51 +6496,12 @@
                             ${item.contactMode === 'forbidden' ? `<div class="reference-info-line"><strong>${escapeHtml(item.contactLabel || '연락 정책')}</strong>: 연락 금지</div>` : item.phone ? `<div class="reference-info-line"><strong>${escapeHtml(item.contactLabel || '전화')}</strong>: ${escapeHtml(item.phone)}</div>` : ''}
                             ${item.contactHint ? `<div class="reference-info-line">${escapeHtml(item.contactHint)}</div>` : ''}
                             ${item.sourceRefs.length ? `<div class="reference-info-line"><strong>ref</strong>: ${escapeHtml(item.sourceRefs.join(', '))}</div>` : ''}
-                            ${(() => {
-                              const detailBlocks = professorReferenceBlocksForRow(bundle, item);
-                              return detailBlocks.length
-                                ? `<div class="badge-row" style="margin-top:8px; gap:8px; flex-wrap:wrap;"><button type="button" class="btn btn-small btn-ghost" onclick='openCalendarProfessorReference(${JSON.stringify(weekKey)}, ${JSON.stringify(item.name)})'>원문 메모 ${detailBlocks.length}</button></div>`
-                                : '';
-                            })()}
                           </div>
                         </div>
                       `).join('')}
                     </div>
                   </div>
                 `).join('')}
-              </div>
-            </div>
-          </div>
-        `;
-      }
-
-      if (panelKey === 'professor_reference') {
-        const professorName = normalizeProfessorName(activeCalendarReferenceMeta?.professorName || '');
-        const row = professorDirectory.find(item => normalizeProfessorName(item.name) === professorName) || null;
-        const blocks = professorReferenceBlocksForRow(bundle, row);
-        return `
-          <div class="detail-screen-panel">
-            <div class="detail-screen-head">
-              <button class="detail-screen-back" onclick="openCalendarReferencePanel('${weekKey}', 'professors')">← 교수님으로</button>
-              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
-            </div>
-            <div class="detail-screen-body">
-              <div class="detail-screen-hero">
-                <div class="badge-row">
-                  <span class="calendar-mini-chip">교수님 원문 메모</span>
-                  ${row?.site ? `<span class="calendar-mini-chip">${escapeHtml(row.site)}</span>` : ''}
-                  <span class="calendar-mini-chip">block ${blocks.length}</span>
-                </div>
-                <div class="detail-screen-title">${escapeHtml(row?.name || '교수님')} 교수님 · 원문 메모</div>
-                <div class="detail-screen-summary">외래/세종/참고용 교수님 디테일을 md 원문 block 그대로 본다.</div>
-              </div>
-              <div class="detail-screen-stack">
-                ${blocks.length ? blocks.map(block => `
-                  <div class="detail-screen-section">
-                    <h4>${escapeHtml(block.ref)}. ${escapeHtml(block.title)}</h4>
-                    <div>${renderReferenceLinesHtml(block.raw_md_excerpt.split('\n'))}</div>
-                  </div>
-                `).join('') : `<div class="detail-screen-section"><div class="empty">표시할 원문 메모가 아직 없다.</div></div>`}
               </div>
             </div>
           </div>
@@ -6671,10 +6620,7 @@
               <div class="detail-screen-summary">${calendarBoardRangeLabel(weekDays)} · 실습 중 자주 찾는 연락처와 기본 운영 정보를 한곳에 묶어둔다.</div>
               <div class="detail-filter-row">
                 ${bundleLocationGuide(bundle) ? `<button class="btn btn-small btn-ghost" onclick="openCalendarLocationGuide('${weekKey}')">장소 지도 보기</button>` : ''}
-                <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'chief_notes')">조장</button>
-                <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'crew_notes')">조원</button>
                 <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'professors')">교수님</button>
-                <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'source_overview')">원문 안내</button>
                 <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'group_rules')">조 운영 규칙</button>
                 ${hasSejongContextForWeek(weekDays) ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'sejong_notes')">세종 운영 메모</button>` : ''}
               </div>
@@ -6878,6 +6824,7 @@
                 ${event.userNote ? `<span class="calendar-mini-chip">메모 있음</span>` : ''}
                 ${calendarEventHasCustomSchedule(event) ? `<span class="calendar-mini-chip">시간/날짜 수정됨</span>` : ''}
                 ${event.professor ? `<span class="calendar-mini-chip">${escapeHtml(event.professor)}</span>` : ''}
+                ${session?.detail_guide_tag ? `<span class="calendar-mini-chip" style="background:#eff6ff; color:#1d4ed8; border-color:#93c5fd;">${escapeHtml(session.detail_guide_tag)}</span>` : ''}
                 ${boardConfig.assignment.visible ? `<span class="calendar-mini-chip">${boardConfig.assignment.count > 1 ? `과제 ${boardConfig.assignment.count}` : '과제'}</span>` : ''}
                 ${boardConfig.onsite?.visible ? `<span class="calendar-mini-chip" style="background:#fff7ed; color:#9a3412; border-color:#fdba74;">${boardConfig.onsite.count > 1 ? `현장승인 ${boardConfig.onsite.count}` : '현장승인'}</span>` : ''}
                 ${boardConfig.presentation.visible ? `<span class="calendar-mini-chip">발표</span>` : ''}

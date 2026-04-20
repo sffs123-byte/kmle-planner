@@ -509,6 +509,190 @@
         "free_record_onsite": 2,
         "images": 2
       }
+    },
+    "assignment_checklist": {
+      "title": "심장실습 과제 체크리스트",
+      "source": "user-custom-order-2026-04-19",
+      "sections": [
+        {
+          "title": "U-polio 현장승인 받아야 할 것",
+          "subsections": [
+            {
+              "title": "자유기록(현장승인)",
+              "items": [
+                {
+                  "id": "onsite-ecg-presentation",
+                  "label": "심전도 발표"
+                },
+                {
+                  "id": "onsite-pci-1",
+                  "label": "심혈관조영실 PCI 1회차"
+                },
+                {
+                  "id": "onsite-pci-2",
+                  "label": "심혈관조영실 PCI 2회차"
+                },
+                {
+                  "id": "onsite-pci-3",
+                  "label": "심혈관조영실 PCI 3회차"
+                },
+                {
+                  "id": "onsite-heartsound",
+                  "label": "심음청진"
+                },
+                {
+                  "id": "onsite-cardiac-exam",
+                  "label": "심장진찰 · 복영남 교수님"
+                },
+                {
+                  "id": "onsite-valvular",
+                  "label": "심장판막질환 · 양유진 교수님 (3월 출산 휴가로 복영남 교수님께서 수업 함)"
+                },
+                {
+                  "id": "onsite-cpx-htn",
+                  "label": "CPX · 고혈압"
+                },
+                {
+                  "id": "onsite-cpx-palpit",
+                  "label": "CPX · 두근거림/실신"
+                },
+                {
+                  "id": "onsite-cpx-dyspnea",
+                  "label": "CPX · 호흡곤란"
+                }
+              ]
+            },
+            {
+              "title": "임상술기(척도평가)",
+              "items": [
+                {
+                  "id": "onsite-osce",
+                  "label": "OSCE · 안계택 교수님"
+                }
+              ]
+            },
+            {
+              "title": "외래 참관",
+              "items": [
+                {
+                  "id": "onsite-outpatient-1",
+                  "label": "외래 참관 1회차"
+                },
+                {
+                  "id": "onsite-outpatient-2",
+                  "label": "외래 참관 2회차"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "과제 제출 필요한 것",
+          "subsections": [
+            {
+              "title": "자유기록(과제)",
+              "items": [
+                {
+                  "id": "task-facecase-report",
+                  "label": "대면증례보고서 · 성석우pf (교수님 바뀜)"
+                },
+                {
+                  "id": "task-pomr",
+                  "label": "POMR 발표 · 이재환pf (2금 제출)"
+                },
+                {
+                  "id": "task-ecg-discussion",
+                  "label": "심전도 조별 토의 · 김민수pf"
+                },
+                {
+                  "id": "task-cv-qna",
+                  "label": "심혈관질환에 대한 Q&A · 노재형pf (2화 제출)"
+                },
+                {
+                  "id": "task-echo-understanding",
+                  "label": "심초음파 검사의 이해 · 오진경pf"
+                },
+                {
+                  "id": "task-cpx-chestpain",
+                  "label": "CPX 흉통 · 박현웅pf"
+                },
+                {
+                  "id": "task-pretest",
+                  "label": "pretest · 복영남pf (당일 제출)"
+                }
+              ]
+            },
+            {
+              "title": "외래 예진기록지",
+              "items": [
+                {
+                  "id": "task-outpatient-record-1",
+                  "label": "외래 예진기록지 1회차 (당일 제출)"
+                },
+                {
+                  "id": "task-outpatient-record-2",
+                  "label": "외래 예진기록지 2회차 (당일 제출)"
+                }
+              ]
+            },
+            {
+              "title": "주간실습계획과 성찰",
+              "items": [
+                {
+                  "id": "task-reflection-w1",
+                  "label": "주간실습계획과 성찰 1주차 · 복영남pf (2금 제출)"
+                },
+                {
+                  "id": "task-reflection-w2",
+                  "label": "주간실습계획과 성찰 2주차 · 복영남pf (2금 제출)"
+                }
+              ]
+            },
+            {
+              "title": "임상표현 계획과 자기평가",
+              "items": [
+                {
+                  "id": "task-clinical-expression-1",
+                  "label": "임상표현 계획과 자기평가 1번 업로드"
+                },
+                {
+                  "id": "task-clinical-expression-2",
+                  "label": "임상표현 계획과 자기평가 2번 업로드"
+                },
+                {
+                  "id": "task-clinical-expression-3",
+                  "label": "임상표현 계획과 자기평가 3번 업로드"
+                },
+                {
+                  "id": "task-clinical-expression-4",
+                  "label": "임상표현 계획과 자기평가 4번 업로드"
+                },
+                {
+                  "id": "task-clinical-expression-5",
+                  "label": "임상표현 계획과 자기평가 5번 업로드"
+                },
+                {
+                  "id": "task-clinical-expression-6",
+                  "label": "임상표현 계획과 자기평가 6번 업로드"
+                }
+              ]
+            },
+            {
+              "title": "임상술기 계획과 자기평가",
+              "items": [
+                {
+                  "id": "task-clinical-skill-1",
+                  "label": "임상술기 계획과 자기평가 1번 업로드"
+                },
+                {
+                  "id": "task-clinical-skill-2",
+                  "label": "임상술기 계획과 자기평가 2번 업로드"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   },
   "submission_rules": [
