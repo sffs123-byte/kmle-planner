@@ -3161,7 +3161,15 @@
         subjects: Array.isArray(data?.subjects) ? data.subjects.map(normalizeSubject) : [],
         tasks: Array.isArray(data?.tasks) ? data.tasks.map(normalizeTask) : [],
         calendarEvents: Array.isArray(data?.calendarEvents) ? data.calendarEvents.map(normalizeCalendarEvent) : buildCalendarSeedEvents(),
-        clerkshipBundles: data?.clerkshipBundles && typeof data.clerkshipBundles === 'object' ? data.clerkshipBundles : {}
+        clerkshipBundles: data?.clerkshipBundles && typeof data.clerkshipBundles === 'object' ? data.clerkshipBundles : {},
+        bundleChecklistState: data?.bundleChecklistState && typeof data.bundleChecklistState === 'object'
+          ? Object.fromEntries(Object.entries(data.bundleChecklistState).map(([bundleId, bucket]) => [
+              bundleId,
+              bucket && typeof bucket === 'object'
+                ? Object.fromEntries(Object.entries(bucket).map(([itemId, done]) => [itemId, Boolean(done)]))
+                : {}
+            ]))
+          : {}
       };
       upsertSeedCalendarEvents(normalized);
       normalized.subjects.forEach(recomputeSubjectFromParts);
@@ -3614,7 +3622,8 @@
       return {
         subjects: [respiratory, circulation],
         tasks,
-        calendarEvents: buildCalendarSeedEvents()
+        calendarEvents: buildCalendarSeedEvents(),
+        bundleChecklistState: {}
       };
     }
 
@@ -3996,12 +4005,30 @@
       return state.bundleChecklistState[bundleId];
     }
 
+    function captureDetailScreenScroll() {
+      const body = byId('eventDetailScreen')?.querySelector('.detail-screen-body');
+      if (!body) return null;
+      return { top: body.scrollTop, left: body.scrollLeft };
+    }
+
+    function restoreDetailScreenScroll(snapshot) {
+      if (!snapshot) return;
+      window.requestAnimationFrame(() => {
+        const body = byId('eventDetailScreen')?.querySelector('.detail-screen-body');
+        if (!body) return;
+        body.scrollTop = snapshot.top || 0;
+        body.scrollLeft = snapshot.left || 0;
+      });
+    }
+
     function toggleChecklistItem(bundleId, itemId) {
       const bucket = checklistStateBucket(bundleId);
       bucket[itemId] = !bucket[itemId];
-      saveState();
+      const detailScroll = captureDetailScreenScroll();
+      saveState('과제 체크리스트 저장');
       renderCalendarBoard();
       renderCalendarEventDetailScreen();
+      restoreDetailScreenScroll(detailScroll);
     }
 
     function checklistProgress(bundleId, checklist) {
@@ -4010,6 +4037,20 @@
       const total = items.length;
       const done = items.filter(item => bucket[item.id]).length;
       return { total, done };
+    }
+
+    function weekAssignmentProgress(weekDays) {
+      const checklist = assignmentChecklistForWeek(weekDays);
+      const bundle = bundleForWeek(weekDays);
+      const bundleId = bundle?.meta?.clerkship_id || '';
+      if (checklist && bundleId) {
+        const { total, done } = checklistProgress(bundleId, checklist);
+        return { total, done, pending: Math.max(total - done, 0), usesChecklist: true };
+      }
+      const assignmentEvents = filterSummaryEventsByCategory(weekSummaryDetailEvents(weekDays), 'assignment');
+      const total = assignmentEvents.length;
+      const done = assignmentEvents.filter(event => event.completed).length;
+      return { total, done, pending: Math.max(total - done, 0), usesChecklist: false };
     }
 
     function normalizeProfessorName(name) {
@@ -5279,6 +5320,7 @@
       const summaryEvents = weekSummaryDetailEvents(weekDays);
       const counts = summaryCategoryCounts(summaryEvents);
       const signals = weekSummarySignals(weekDays);
+      const assignmentProgress = weekAssignmentProgress(weekDays);
       const locationGuide = locationGuideForWeek(weekDays);
       const hourMarks = calendarTimelineHourMarks();
       const lineMarks = calendarTimelineLineMarks();
@@ -5317,7 +5359,7 @@
           <div class="calendar-summary-list">
             <button type="button" class="calendar-summary-row calendar-summary-row-button ${(activeCalendarSummaryDetail === weekKey && activeCalendarSummaryFilter === 'assignment') ? 'active' : ''}" onclick="event.stopPropagation();openCalendarSummaryDetailWithFilter('${weekKey}', 'assignment');">
               <div class="calendar-summary-row-label"><strong>과제</strong><span>제출/확인할 문서와 체크</span></div>
-              <div class="calendar-summary-row-value">${counts.assignment || 0}</div>
+              <div class="calendar-summary-row-value">${assignmentProgress.pending}/${assignmentProgress.total}</div>
             </button>
             <button type="button" class="calendar-summary-row calendar-summary-row-button ${(activeCalendarSummaryDetail === weekKey && activeCalendarSummaryFilter === 'presentation_exam') ? 'active' : ''}" onclick="event.stopPropagation();openCalendarSummaryDetailWithFilter('${weekKey}', 'presentation_exam');">
               <div class="calendar-summary-row-label"><strong>발표·시험</strong><span>발표 준비와 평가 일정</span></div>
@@ -6275,7 +6317,7 @@
               </div>
             </div>
             ${showAssignmentChecklist ? `<div class="detail-screen-section">
-              <h4>심장실습 과제 체크리스트</h4>
+              <h4>${escapeHtml(assignmentChecklist.title || '과제 체크리스트')}</h4>
               <div class="badge-row" style="margin-top:8px; margin-bottom:10px;">
                 <span class="calendar-mini-chip">완료 ${checklistSummary.done}/${checklistSummary.total}</span>
                 <span class="calendar-mini-chip">순서 고정</span>
