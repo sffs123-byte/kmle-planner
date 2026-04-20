@@ -3685,6 +3685,39 @@
       }
     }
 
+    async function refreshLoadedBundleIfMissingChecklist(clerkshipId, url) {
+      if (location.protocol === 'file:') return false;
+      const loaded = state.clerkshipBundles?.[clerkshipId];
+      if (!loaded) return false;
+      if (loaded?.fixed_info?.assignment_checklist) return false;
+      try {
+        await loadPlannerBundleFromUrl(`${url}${url.includes('?') ? '&' : '?'}ts=${Date.now()}`, {
+          switchToCalendar: false,
+          jumpToBundleDate: false
+        });
+        return true;
+      } catch (error) {
+        console.error(`bundle refresh failed for ${clerkshipId}`, error);
+        return false;
+      }
+    }
+
+    async function ensureLoadedBundlesHaveLatestChecklist() {
+      const refreshedResp = await refreshLoadedBundleIfMissingChecklist(
+        'respiratory-2026-04-track-b',
+        './data/clerkships/bundles/respiratory_content_handoff_v2.bundle.json'
+      );
+      const refreshedCardio = await refreshLoadedBundleIfMissingChecklist(
+        'cardiology-2026-04-chief-draft-v2',
+        './data/clerkships/bundles/cardiology_content_handoff_v2.bundle.json'
+      );
+      if (refreshedResp || refreshedCardio) {
+        renderCalendarBoard();
+        renderCalendarEventDetailScreen();
+      }
+      return refreshedResp || refreshedCardio;
+    }
+
     function loadState() {
       try {
         const raw = localStorage.getItem(STORAGE_KEY);
@@ -3737,6 +3770,7 @@
     window.__kmlePlannerApplyRemoteState = function applyRemoteStateBridge(remoteState) {
       try {
         applyExternalState(remoteState, { preserveSelection: true });
+        void ensureLoadedBundlesHaveLatestChecklist();
         return true;
       } catch (error) {
         console.error('failed to apply remote state', error);
@@ -7769,6 +7803,7 @@
     window.__kmlePlannerState = state;
     renderAll();
     void ensureRespiratoryBundlePresent();
+    void ensureLoadedBundlesHaveLatestChecklist();
     void checkForAppUpdate({ silent: !plannerStandaloneMode() });
     window.setInterval(() => { void checkForAppUpdate(); }, 60000);
 
