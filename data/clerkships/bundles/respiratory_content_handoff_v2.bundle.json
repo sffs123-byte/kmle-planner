@@ -55,7 +55,137 @@
     "의국": "내과 의국 : 혈종 옆",
     "의국_비번": "의국 비번 : 0706 – 학생한테는 안 알려줄거라고 하셨음. 일단 모른척 ㄱ",
     "의국_wifi": "의국 wifi : 06070607",
-    "외래": "외래 : 암센터 가는 길 바로 앞, 신장내과 옆 (투썸쪽 2층)"
+    "외래": "외래 : 암센터 가는 길 바로 앞, 신장내과 옆 (투썸쪽 2층)",
+    "assignment_checklist": {
+      "title": "호흡기내과 과제 체크리스트",
+      "source": "respiratory-content-handoff-v2 + latest-task-handoff-2026-04-20",
+      "sections": [
+        {
+          "title": "반복 제출 과제",
+          "subsections": [
+            {
+              "title": "예진 평가(기존 CP 포트폴리오 대체)",
+              "items": [
+                {
+                  "id": "resp-cp-1",
+                  "label": "예진 평가 1차 제출본 확보"
+                },
+                {
+                  "id": "resp-cp-2",
+                  "label": "예진 평가 2차 제출본 확보"
+                }
+              ]
+            },
+            {
+              "title": "병동 경과기록지 (주당 3개)",
+              "items": [
+                {
+                  "id": "resp-progress-note-w1-1",
+                  "label": "병동 경과기록지 1주차 1개차"
+                },
+                {
+                  "id": "resp-progress-note-w1-2",
+                  "label": "병동 경과기록지 1주차 2개차"
+                },
+                {
+                  "id": "resp-progress-note-w1-3",
+                  "label": "병동 경과기록지 1주차 3개차"
+                },
+                {
+                  "id": "resp-progress-note-w2-1",
+                  "label": "병동 경과기록지 2주차 1개차"
+                },
+                {
+                  "id": "resp-progress-note-w2-2",
+                  "label": "병동 경과기록지 2주차 2개차"
+                },
+                {
+                  "id": "resp-progress-note-w2-3",
+                  "label": "병동 경과기록지 2주차 3개차"
+                }
+              ]
+            },
+            {
+              "title": "외래 예진 (2개)",
+              "items": [
+                {
+                  "id": "resp-outpatient-1",
+                  "label": "외래 예진 1회차 + 스캔 준비"
+                },
+                {
+                  "id": "resp-outpatient-2",
+                  "label": "외래 예진 2회차 + 스캔 준비"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "개별 제출 과제",
+          "subsections": [
+            {
+              "title": "단일 제출",
+              "items": [
+                {
+                  "id": "resp-ethics",
+                  "label": "임상윤리수업"
+                },
+                {
+                  "id": "resp-pft-spt",
+                  "label": "PFT, SPT"
+                },
+                {
+                  "id": "resp-icu-case-pre",
+                  "label": "중환자실 케이스 발표본 제출"
+                },
+                {
+                  "id": "resp-icu-case-post",
+                  "label": "중환자실 케이스 수정본 업로드"
+                },
+                {
+                  "id": "resp-allergy-case",
+                  "label": "알레르기 질환 케이스"
+                },
+                {
+                  "id": "resp-parallel-chart",
+                  "label": "실습 면담 평행차트 (word 첨부)"
+                },
+                {
+                  "id": "resp-clinical-reasoning",
+                  "label": "임상추론평가"
+                },
+                {
+                  "id": "resp-bronchoscopy",
+                  "label": "기관지내시경 참관 (word 첨부)"
+                },
+                {
+                  "id": "resp-cxr",
+                  "label": "CXR 과제"
+                },
+                {
+                  "id": "resp-lung-exam-feedback",
+                  "label": "폐진찰 피드백"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "확인 필요 / 옵션",
+          "subsections": [
+            {
+              "title": "최신 공지 다시 보기",
+              "items": [
+                {
+                  "id": "resp-mini-cex",
+                  "label": "Mini CEX (최신 인계상 제출 요구 불분명)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   "submission_rules": [
     {
