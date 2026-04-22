@@ -42,6 +42,8 @@ function defaultMeta() {
     deviceId: getOrCreateDeviceId(),
     lastHash: '',
     lastLocalChangeAt: 0,
+    pendingUserStateHash: '',
+    pendingLegacyHash: '',
     lastUploadedAt: 0,
     lastRemoteAppliedAt: 0,
     lastRemoteSeenAt: 0,
@@ -413,9 +415,12 @@ function renderSessionText() {
   ui.sessionText.textContent = [
     `user state: ${PLANNER_USER_ID}`,
     `device: ${meta.deviceId}`,
+    `마지막 로컬 변경: ${formatDateTime(meta.lastLocalChangeAt)}`,
     `마지막 user state 업로드: ${formatDateTime(meta.lastUserStateUploadedAt)}`,
     `마지막 user state 반영: ${formatDateTime(meta.lastUserStateAppliedAt)}`,
     `마지막 user state 확인: ${formatDateTime(meta.lastUserStateSeenAt)}`,
+    `user state 업로드 대기: ${meta.pendingUserStateHash ? '있음' : '없음'}`,
+    `legacy 업로드 대기: ${meta.pendingLegacyHash ? '있음' : '없음'}`,
     config.syncCode ? `legacy sync code: ${maskCode(config.syncCode)}` : 'legacy sync code: 없음'
   ].join('\n');
 
@@ -515,7 +520,7 @@ function kickOffLoops() {
 
   pollingTimer = setInterval(() => {
     void checkLocalStateChange();
-  }, 1500);
+  }, 1000);
 
   startRealtimeSubscription();
 
@@ -523,7 +528,7 @@ function kickOffLoops() {
     remoteTimer = setInterval(() => {
       void pullPlannerUserState({ reason: '백업 폴링' });
       if (config.syncCode) void pullRemoteState({ reason: 'legacy 자동 폴링' });
-    }, 60000);
+    }, 15000);
   }
 }
 
@@ -540,20 +545,26 @@ function stopLoops() {
 
 async function checkLocalStateChange() {
   const config = readConfig();
-
   const raw = getRawPlannerState();
   const nextHash = hashStateRaw(raw);
-  if (nextHash === localHash) return;
 
-  localHash = nextHash;
+  if (nextHash !== localHash) {
+    markLocalStateDirty(nextHash, { includeLegacy: Boolean(config.syncCode) });
+    if (config.autoSync === false) {
+      setStatus('로컬 데이터가 바뀌었다. 자동 동기화는 꺼져 있으니 필요하면 수동 업로드를 눌러줘.', 'pending');
+      return;
+    }
+    await retryPendingSync('자동 업로드');
+    return;
+  }
+
   const meta = readMeta();
-  meta.lastHash = nextHash;
-  meta.lastLocalChangeAt = nowIso();
-  saveMeta(meta);
+  const needsUserStatePush = Boolean(meta.pendingUserStateHash) && meta.pendingUserStateHash === nextHash;
+  const needsLegacyPush = Boolean(config.syncCode && meta.pendingLegacyHash) && meta.pendingLegacyHash === nextHash;
+  if (!needsUserStatePush && !needsLegacyPush) return;
 
   if (config.autoSync !== false) {
-    await pushPlannerUserState('자동 업로드');
-    if (config.syncCode) await pushLocalState('legacy 자동 업로드');
+    await retryPendingSync('자동 재시도 업로드');
   } else {
     setStatus('로컬 데이터가 바뀌었다. 자동 동기화는 꺼져 있으니 필요하면 수동 업로드를 눌러줘.', 'pending');
   }
@@ -563,12 +574,9 @@ async function flushImmediateSync(reason = '즉시 업로드') {
   const config = readConfig();
   const raw = getRawPlannerState();
   const nextHash = hashStateRaw(raw);
-  if (nextHash !== localHash) {
-    localHash = nextHash;
-    const meta = readMeta();
-    meta.lastHash = nextHash;
-    meta.lastLocalChangeAt = nowIso();
-    saveMeta(meta);
+  const changed = nextHash !== localHash;
+  if (changed) {
+    markLocalStateDirty(nextHash, { includeLegacy: Boolean(config.syncCode) });
   }
 
   if (config.autoSync === false) {
@@ -581,20 +589,21 @@ async function flushImmediateSync(reason = '즉시 업로드') {
     if (!supabase) return;
   }
 
-  await pushPlannerUserState(reason);
-  if (config.syncCode) await pushLocalState(`legacy ${reason}`);
+  await retryPendingSync(changed ? reason : `${reason} 재시도`);
 }
 
 function scheduleImmediateSync(reason = '즉시 업로드') {
+  const config = readConfig();
   const raw = getRawPlannerState();
   const nextHash = hashStateRaw(raw);
-  if (nextHash === localHash) return;
-
   const meta = readMeta();
-  meta.lastHash = nextHash;
-  meta.lastLocalChangeAt = nowIso();
-  saveMeta(meta);
-  localHash = nextHash;
+  const hasPendingPush = (Boolean(meta.pendingUserStateHash) && meta.pendingUserStateHash === nextHash)
+    || (Boolean(config.syncCode && meta.pendingLegacyHash) && meta.pendingLegacyHash === nextHash);
+  if (nextHash === localHash && !hasPendingPush) return;
+
+  if (nextHash !== localHash) {
+    markLocalStateDirty(nextHash, { includeLegacy: Boolean(config.syncCode) });
+  }
 
   immediateSyncReason = reason;
   if (immediateSyncTimer) clearTimeout(immediateSyncTimer);
@@ -640,6 +649,41 @@ async function plannerUserStatePush(payload, updatedAt, deviceId, userId = PLANN
   return Array.isArray(data) ? data[0] : data;
 }
 
+function markLocalStateDirty(nextHash, { includeLegacy = false } = {}) {
+  localHash = nextHash;
+  const meta = readMeta();
+  meta.lastHash = nextHash;
+  meta.lastLocalChangeAt = nowIso();
+  meta.pendingUserStateHash = nextHash;
+  if (includeLegacy) {
+    meta.pendingLegacyHash = nextHash;
+  } else if (!readConfig().syncCode) {
+    meta.pendingLegacyHash = '';
+  }
+  saveMeta(meta);
+  renderSessionText();
+  return meta;
+}
+
+async function retryPendingSync(reason = '자동 재시도 업로드') {
+  const config = readConfig();
+  const raw = getRawPlannerState();
+  const currentHash = hashStateRaw(raw);
+  const meta = readMeta();
+  const needsUserStatePush = Boolean(meta.pendingUserStateHash) && meta.pendingUserStateHash === currentHash;
+  const needsLegacyPush = Boolean(config.syncCode && meta.pendingLegacyHash) && meta.pendingLegacyHash === currentHash;
+  if (!needsUserStatePush && !needsLegacyPush) return false;
+
+  if (!supabase) {
+    await initializeSupabase();
+    if (!supabase) return false;
+  }
+
+  if (needsUserStatePush) await pushPlannerUserState(reason);
+  if (needsLegacyPush) await pushLocalState(`legacy ${reason}`);
+  return true;
+}
+
 async function pushPlannerUserState(reason = '수동 업로드') {
   if (syncing) return;
   if (!supabase) {
@@ -656,11 +700,15 @@ async function pushPlannerUserState(reason = '수동 업로드') {
   syncing = true;
   try {
     const payload = JSON.parse(raw);
+    const currentHash = hashStateObject(payload);
     const meta = readMeta();
     const updatedAt = meta.lastLocalChangeAt || nowIso();
     await plannerUserStatePush(payload, updatedAt, meta.deviceId);
     meta.lastUserStateUploadedAt = updatedAt;
     meta.lastUserStateSeenAt = updatedAt;
+    if (meta.pendingUserStateHash === currentHash) {
+      meta.pendingUserStateHash = '';
+    }
     saveMeta(meta);
     setStatus(`${reason} 완료 — planner_user_state에 현재 상태를 저장했다.`, 'connected');
     renderSessionText();
@@ -692,11 +740,15 @@ async function pushLocalState(reason = '수동 업로드') {
   syncing = true;
   try {
     const payload = JSON.parse(raw);
+    const currentHash = hashStateObject(payload);
     const meta = readMeta();
     const updatedAt = meta.lastLocalChangeAt || nowIso();
     await plannerSyncPush(config.syncCode, payload, updatedAt, meta.deviceId);
     meta.lastUploadedAt = updatedAt;
     meta.lastRemoteSeenAt = updatedAt;
+    if (meta.pendingLegacyHash === currentHash) {
+      meta.pendingLegacyHash = '';
+    }
     saveMeta(meta);
     setStatus(`${reason} 완료 — 같은 동기화 코드를 가진 다른 기기에서 바로 가져올 수 있다.`, 'connected');
     renderSessionText();
@@ -859,6 +911,15 @@ function bootstrapMetaFromCurrentState() {
   localHash = currentHash;
 }
 
+function resumeAggressiveSync(reason = '포그라운드 복귀') {
+  void initializeSupabase();
+  void flushImmediateSync(`${reason} 업로드`);
+  void pullPlannerUserState({ reason });
+  if (readConfig().syncCode) {
+    void pullRemoteState({ reason: `legacy ${reason}` });
+  }
+}
+
 window.addEventListener('visibilitychange', () => {
   if (document.hidden) {
     if (immediateSyncTimer) {
@@ -869,12 +930,20 @@ window.addEventListener('visibilitychange', () => {
     return;
   }
   if (!document.hidden) {
-    void initializeSupabase();
-    void pullPlannerUserState({ reason: '포그라운드 복귀' });
-    if (readConfig().syncCode) {
-      void pullRemoteState({ reason: 'legacy 포그라운드 복귀' });
-    }
+    resumeAggressiveSync('포그라운드 복귀');
   }
+});
+
+window.addEventListener('focus', () => {
+  resumeAggressiveSync('창 포커스 복귀');
+});
+
+window.addEventListener('pageshow', () => {
+  resumeAggressiveSync('페이지 복귀');
+});
+
+window.addEventListener('online', () => {
+  resumeAggressiveSync('온라인 복귀');
 });
 
 window.addEventListener('storage', (event) => {
