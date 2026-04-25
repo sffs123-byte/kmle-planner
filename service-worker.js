@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kmle-planner-2026-04-26-cardiology-live-overrides-full';
+const CACHE_NAME = 'kmle-planner-2026-04-26-cardiology-evaluation-weights';
 const ASSETS = [
   './',
   './index.html',

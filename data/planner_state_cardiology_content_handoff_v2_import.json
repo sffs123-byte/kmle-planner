@@ -2322,7 +2322,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-cardiac-exam",
       "sourceKind": "assignment",
-      "baseDate": "2026-04-27"
+      "baseDate": "2026-04-27",
+      "evaluation_items": [
+        {
+          "id": "eval-cardiac-physical-exam",
+          "label": "심장진찰",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-my-echo-ecg-1",
@@ -2339,7 +2347,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-my-echo-ecg",
       "sourceKind": "assignment",
-      "baseDate": "2026-04-27"
+      "baseDate": "2026-04-27",
+      "evaluation_items": [
+        {
+          "id": "eval-echo-understanding",
+          "label": "심초음파 검사의 이해",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-heartsound-handwrite-1",
@@ -2390,7 +2406,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-mi-case",
       "sourceKind": "assignment",
-      "baseDate": "2026-04-27"
+      "baseDate": "2026-04-27",
+      "evaluation_items": [
+        {
+          "id": "eval-cardiovascular-qna",
+          "label": "심혈관 질환에 대한 Q&A",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-pomr-case-ab-1",
@@ -2407,7 +2431,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-pomr-case-ab",
       "sourceKind": "assignment",
-      "baseDate": "2026-04-27"
+      "baseDate": "2026-04-27",
+      "evaluation_items": [
+        {
+          "id": "eval-pomr-presentation",
+          "label": "POMR 발표",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-ihd-topic-presentation-1",
@@ -2424,7 +2456,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-ihd-topic-presentation",
       "sourceKind": "assignment",
-      "baseDate": "2026-04-27"
+      "baseDate": "2026-04-27",
+      "evaluation_items": [
+        {
+          "id": "eval-cardiovascular-qna",
+          "label": "심혈관 질환에 대한 Q&A",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-04-27-0800-resident",
@@ -2508,7 +2548,15 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-cardiovascular-qna",
+          "label": "심혈관 질환에 대한 Q&A",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-04-27-1400-pretest",
@@ -2536,7 +2584,15 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-pretest",
+          "label": "실습 시험(Pre-test/Post-Test)",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-04-27-1600-physical",
@@ -2564,7 +2620,15 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-cardiac-physical-exam",
+          "label": "심장진찰",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-04-27-admin",
@@ -2654,7 +2718,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-outpatient-20260428-def",
       "sourceKind": "assignment",
-      "baseDate": "2026-04-28"
+      "baseDate": "2026-04-28",
+      "evaluation_items": [
+        {
+          "id": "eval-outpatient-observation",
+          "label": "외래 참관",
+          "points": 2,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-onsite-htn-cpx-1",
@@ -2671,7 +2743,17 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-htn-cpx",
       "sourceKind": "assignment",
-      "baseDate": "2026-04-28"
+      "baseDate": "2026-04-28",
+      "evaluation_items": [
+        {
+          "id": "eval-cpx-htn",
+          "label": "CPX 고혈압",
+          "points": 6,
+          "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+          "parentPoints": 24,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-onsite-heartsound-1",
@@ -2688,7 +2770,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-heartsound",
       "sourceKind": "assignment",
-      "baseDate": "2026-04-28"
+      "baseDate": "2026-04-28",
+      "evaluation_items": [
+        {
+          "id": "eval-heart-sound",
+          "label": "심음청진",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-outpatient-record-1-1",
@@ -2705,7 +2795,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-outpatient-record-1",
       "sourceKind": "assignment",
-      "baseDate": "2026-04-28"
+      "baseDate": "2026-04-28",
+      "evaluation_items": [
+        {
+          "id": "eval-outpatient-previsit-record",
+          "label": "외래 예진 기록",
+          "points": 3,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-facecase-report-1",
@@ -2722,7 +2820,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-facecase-report",
       "sourceKind": "assignment",
-      "baseDate": "2026-04-28"
+      "baseDate": "2026-04-28",
+      "evaluation_items": [
+        {
+          "id": "eval-facecase-report",
+          "label": "대면진료증례보고서",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-04-28-0800-facecase",
@@ -2750,7 +2856,15 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-facecase-report",
+          "label": "대면진료증례보고서",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-04-28-0840-heartsound",
@@ -2778,7 +2892,15 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-heart-sound",
+          "label": "심음청진",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-04-28-1000-abc-pci",
@@ -2834,7 +2956,21 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-outpatient-observation",
+          "label": "외래 참관",
+          "points": 2,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        },
+        {
+          "id": "eval-outpatient-previsit-record",
+          "label": "외래 예진 기록",
+          "points": 3,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-04-28-1200-echoecg",
@@ -2862,7 +2998,15 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-echo-understanding",
+          "label": "심초음파 검사의 이해",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-04-28-1400-htn-cpx",
@@ -2890,7 +3034,17 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-cpx-htn",
+          "label": "CPX 고혈압",
+          "points": 6,
+          "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+          "parentPoints": 24,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-04-28-chief",
@@ -2963,7 +3117,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-outpatient-20260429-def",
       "sourceKind": "assignment",
-      "baseDate": "2026-04-29"
+      "baseDate": "2026-04-29",
+      "evaluation_items": [
+        {
+          "id": "eval-outpatient-observation",
+          "label": "외래 참관",
+          "points": 2,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-pomr-upload-1",
@@ -2980,7 +3142,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-pomr-upload",
       "sourceKind": "assignment",
-      "baseDate": "2026-04-29"
+      "baseDate": "2026-04-29",
+      "evaluation_items": [
+        {
+          "id": "eval-pomr-presentation",
+          "label": "POMR 발표",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-outpatient-record-2-1",
@@ -2997,7 +3167,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-outpatient-record-2",
       "sourceKind": "assignment",
-      "baseDate": "2026-04-29"
+      "baseDate": "2026-04-29",
+      "evaluation_items": [
+        {
+          "id": "eval-outpatient-previsit-record",
+          "label": "외래 예진 기록",
+          "points": 3,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-cpx-chestpain-report-1",
@@ -3014,7 +3192,17 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-cpx-chestpain-report",
       "sourceKind": "assignment",
-      "baseDate": "2026-04-29"
+      "baseDate": "2026-04-29",
+      "evaluation_items": [
+        {
+          "id": "eval-cpx-chestpain",
+          "label": "CPX 가슴통증",
+          "points": 6,
+          "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+          "parentPoints": 24,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-04-29-0840-ihd-topic",
@@ -3071,7 +3259,15 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-pomr-presentation",
+          "label": "POMR 발표",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-04-29-1200-mi",
@@ -3127,7 +3323,21 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-outpatient-observation",
+          "label": "외래 참관",
+          "points": 2,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        },
+        {
+          "id": "eval-outpatient-previsit-record",
+          "label": "외래 예진 기록",
+          "points": 3,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-04-29-admin",
@@ -3185,7 +3395,17 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-cpx-chestpain",
+          "label": "CPX 가슴통증",
+          "points": 6,
+          "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+          "parentPoints": 24,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-04-29-chief",
@@ -3230,7 +3450,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-outpatient-20260430-abc",
       "sourceKind": "assignment",
-      "baseDate": "2026-04-30"
+      "baseDate": "2026-04-30",
+      "evaluation_items": [
+        {
+          "id": "eval-outpatient-observation",
+          "label": "외래 참관",
+          "points": 2,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-onsite-pci-20260430-def-1",
@@ -3264,7 +3492,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-ecg-a",
       "sourceKind": "assignment",
-      "baseDate": "2026-04-30"
+      "baseDate": "2026-04-30",
+      "evaluation_items": [
+        {
+          "id": "eval-ecg-group-discussion",
+          "label": "심전도 조별 토의",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-onsite-palpit-cpx-1",
@@ -3281,7 +3517,17 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-palpit-cpx",
       "sourceKind": "assignment",
-      "baseDate": "2026-04-30"
+      "baseDate": "2026-04-30",
+      "evaluation_items": [
+        {
+          "id": "eval-cpx-palpit-syncope",
+          "label": "CPX 두근거림/실신",
+          "points": 6,
+          "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+          "parentPoints": 24,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-04-30-0800-ecg-a",
@@ -3309,7 +3555,15 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-ecg-group-discussion",
+          "label": "심전도 조별 토의",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-04-30-0840-abc-outpatient",
@@ -3337,7 +3591,21 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-outpatient-observation",
+          "label": "외래 참관",
+          "points": 2,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        },
+        {
+          "id": "eval-outpatient-previsit-record",
+          "label": "외래 예진 기록",
+          "points": 3,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-04-30-0840-def-pci",
@@ -3393,7 +3661,17 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-cpx-palpit-syncope",
+          "label": "CPX 두근거림/실신",
+          "points": 6,
+          "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+          "parentPoints": 24,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-04-30-admin",
@@ -3466,7 +3744,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-ecg-b",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-01"
+      "baseDate": "2026-05-01",
+      "evaluation_items": [
+        {
+          "id": "eval-ecg-group-discussion",
+          "label": "심전도 조별 토의",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-onsite-osce-1",
@@ -3483,7 +3769,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-osce",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-01"
+      "baseDate": "2026-05-01",
+      "evaluation_items": [
+        {
+          "id": "eval-osce",
+          "label": "OSCE",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-weekly-reflection-w1-1",
@@ -3500,7 +3794,21 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-weekly-reflection-w1",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-01"
+      "baseDate": "2026-05-01",
+      "evaluation_items": [
+        {
+          "id": "eval-plan-reflection",
+          "label": "실습 계획과 성찰",
+          "points": 7,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        },
+        {
+          "id": "eval-weekly-practice-record",
+          "label": "주간 실습 기록",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-05-01-0800-ecg-b",
@@ -3528,7 +3836,15 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-ecg-group-discussion",
+          "label": "심전도 조별 토의",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-05-01-0840-osce",
@@ -3556,7 +3872,15 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-osce",
+          "label": "OSCE",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-05-01-chief",
@@ -3657,7 +3981,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-outpatient-record-1",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-04"
+      "baseDate": "2026-05-04",
+      "evaluation_items": [
+        {
+          "id": "eval-outpatient-previsit-record",
+          "label": "외래 예진 기록",
+          "points": 3,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-facecase-report-2",
@@ -3674,7 +4006,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-facecase-report",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-04"
+      "baseDate": "2026-05-04",
+      "evaluation_items": [
+        {
+          "id": "eval-facecase-report",
+          "label": "대면진료증례보고서",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-pomr-upload-2",
@@ -3691,7 +4031,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-pomr-upload",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-04"
+      "baseDate": "2026-05-04",
+      "evaluation_items": [
+        {
+          "id": "eval-pomr-presentation",
+          "label": "POMR 발표",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-outpatient-record-2-2",
@@ -3708,7 +4056,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-outpatient-record-2",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-04"
+      "baseDate": "2026-05-04",
+      "evaluation_items": [
+        {
+          "id": "eval-outpatient-previsit-record",
+          "label": "외래 예진 기록",
+          "points": 3,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-cpx-chestpain-report-2",
@@ -3725,7 +4081,17 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-cpx-chestpain-report",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-04"
+      "baseDate": "2026-05-04",
+      "evaluation_items": [
+        {
+          "id": "eval-cpx-chestpain",
+          "label": "CPX 가슴통증",
+          "points": 6,
+          "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+          "parentPoints": 24,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-onsite-outpatient-20260504-abc-1",
@@ -3742,7 +4108,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-outpatient-20260504-abc",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-04"
+      "baseDate": "2026-05-04",
+      "evaluation_items": [
+        {
+          "id": "eval-outpatient-observation",
+          "label": "외래 참관",
+          "points": 2,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-onsite-outpatient-20260504-def-1",
@@ -3759,7 +4133,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-outpatient-20260504-def",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-04"
+      "baseDate": "2026-05-04",
+      "evaluation_items": [
+        {
+          "id": "eval-outpatient-observation",
+          "label": "외래 참관",
+          "points": 2,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-qna-stable-angina-1",
@@ -3776,7 +4158,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-qna-stable-angina",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-04"
+      "baseDate": "2026-05-04",
+      "evaluation_items": [
+        {
+          "id": "eval-cardiovascular-qna",
+          "label": "심혈관 질환에 대한 Q&A",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-05-04-1000-abc-outpatient-sejong",
@@ -3804,7 +4194,21 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-outpatient-observation",
+          "label": "외래 참관",
+          "points": 2,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        },
+        {
+          "id": "eval-outpatient-previsit-record",
+          "label": "외래 예진 기록",
+          "points": 3,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-05-04-1330-def-outpatient-sejong",
@@ -3832,7 +4236,21 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-outpatient-observation",
+          "label": "외래 참관",
+          "points": 2,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        },
+        {
+          "id": "eval-outpatient-previsit-record",
+          "label": "외래 예진 기록",
+          "points": 3,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-overlay-2026-05-04-pci-split",
@@ -3888,7 +4306,15 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-cardiovascular-qna",
+          "label": "심혈관 질환에 대한 Q&A",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-05-04-admin",
@@ -4141,7 +4567,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-outpatient-makeup-20260506",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-06"
+      "baseDate": "2026-05-06",
+      "evaluation_items": [
+        {
+          "id": "eval-outpatient-observation",
+          "label": "외래 참관",
+          "points": 2,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-ecg-group-discussion-1",
@@ -4158,7 +4592,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-ecg-group-discussion",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-06"
+      "baseDate": "2026-05-06",
+      "evaluation_items": [
+        {
+          "id": "eval-ecg-group-discussion",
+          "label": "심전도 조별 토의",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-echo-understanding-1",
@@ -4175,7 +4617,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-echo-understanding",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-06"
+      "baseDate": "2026-05-06",
+      "evaluation_items": [
+        {
+          "id": "eval-echo-understanding",
+          "label": "심초음파 검사의 이해",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-05-06-1000-abc-arrhyproc",
@@ -4231,7 +4681,15 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-ecg-group-discussion",
+          "label": "심전도 조별 토의",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-05-06-1330-echo-understanding",
@@ -4259,7 +4717,15 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-echo-understanding",
+          "label": "심초음파 검사의 이해",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-05-06-admin",
@@ -4315,7 +4781,15 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-echo-understanding",
+          "label": "심초음파 검사의 이해",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-overlay-2026-05-06-item3",
@@ -4371,7 +4845,21 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-outpatient-observation",
+          "label": "외래 참관",
+          "points": 2,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        },
+        {
+          "id": "eval-outpatient-previsit-record",
+          "label": "외래 예진 기록",
+          "points": 3,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-05-06-chief",
@@ -4416,7 +4904,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-outpatient-20260507-abc",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-07"
+      "baseDate": "2026-05-07",
+      "evaluation_items": [
+        {
+          "id": "eval-outpatient-observation",
+          "label": "외래 참관",
+          "points": 2,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-onsite-ecg-cd-1",
@@ -4433,7 +4929,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-ecg-cd",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-07"
+      "baseDate": "2026-05-07",
+      "evaluation_items": [
+        {
+          "id": "eval-ecg-group-discussion",
+          "label": "심전도 조별 토의",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-onsite-dyspnea-cpx-1",
@@ -4450,7 +4954,17 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-dyspnea-cpx",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-07"
+      "baseDate": "2026-05-07",
+      "evaluation_items": [
+        {
+          "id": "eval-cpx-dyspnea",
+          "label": "CPX 호흡곤란",
+          "points": 6,
+          "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+          "parentPoints": 24,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-05-07-0800-ecg-cd",
@@ -4478,7 +4992,15 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-ecg-group-discussion",
+          "label": "심전도 조별 토의",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-05-07-0900-dyspnea",
@@ -4506,7 +5028,17 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-cpx-dyspnea",
+          "label": "CPX 호흡곤란",
+          "points": 6,
+          "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+          "parentPoints": 24,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-05-07-1330-abc-outpatient",
@@ -4534,7 +5066,21 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-outpatient-observation",
+          "label": "외래 참관",
+          "points": 2,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        },
+        {
+          "id": "eval-outpatient-previsit-record",
+          "label": "외래 예진 기록",
+          "points": 3,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-05-07-admin",
@@ -4607,7 +5153,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-ecg-ef",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-08"
+      "baseDate": "2026-05-08",
+      "evaluation_items": [
+        {
+          "id": "eval-ecg-group-discussion",
+          "label": "심전도 조별 토의",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-onsite-valvular-1",
@@ -4624,7 +5178,15 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-onsite-valvular",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-08"
+      "baseDate": "2026-05-08",
+      "evaluation_items": [
+        {
+          "id": "eval-valvular-disease",
+          "label": "심장판막질환",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-weekly-reflection-w2-1",
@@ -4641,7 +5203,21 @@
       "sourceSessionId": "",
       "sourceAssignmentId": "assign-weekly-reflection-w2",
       "sourceKind": "assignment",
-      "baseDate": "2026-05-08"
+      "baseDate": "2026-05-08",
+      "evaluation_items": [
+        {
+          "id": "eval-plan-reflection",
+          "label": "실습 계획과 성찰",
+          "points": 7,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        },
+        {
+          "id": "eval-weekly-practice-record",
+          "label": "주간 실습 기록",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-clinical-skill-selfeval-1",
@@ -4703,7 +5279,15 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-ecg-group-discussion",
+          "label": "심전도 조별 토의",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-05-08-1330-valvular",
@@ -4731,7 +5315,15 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "evaluation_items": [
+        {
+          "id": "eval-valvular-disease",
+          "label": "심장판막질환",
+          "points": 6,
+          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ]
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-05-08-chief",
@@ -8598,8 +9190,116 @@
           "카드 표시 난이도와 사용자 메모는 공유용 live state의 boardDifficultyOverride/userNote를 source of truth로 둔다.",
           "원 bundle difficulty는 상세/원자료 난이도로 남기고, 캘린더 카드에는 user override를 우선 표시한다.",
           "사용자 확인으로 별도 보존된 수정: 심음청진 볼펜 점 메모, 흉통 CPX 수요일 10:00~11:00, POMR 증례발표 수요일 11:00~12:00.",
-          "2026-04-26: 공유 앱 live state의 cardiology 전체 boardDifficultyOverride/userNote를 정적 bundle/state에 재동기화했다."
-        ]
+          "2026-04-26: 공유 앱 live state의 cardiology 전체 boardDifficultyOverride/userNote를 정적 bundle/state에 재동기화했다.",
+          "2026-04-26: 1-6. 심장내과.pdf p.2 평가 비율표를 fixed_info.evaluation_score_weights 및 세션/과제 evaluation_items에 반영했다."
+        ],
+        "evaluation_score_weights": {
+          "title": "심장내과 평가 비중",
+          "source_pdf": "1-6. 심장내과.pdf",
+          "source_page": 2,
+          "source_note": "p.2 평가항목 표의 비율(%) 숫자만 사용. 지식/술기/태도 세부 점수는 제외.",
+          "total_points": 100,
+          "items": [
+            {
+              "id": "eval-plan-reflection",
+              "label": "실습 계획과 성찰",
+              "points": 7
+            },
+            {
+              "id": "eval-pretest",
+              "label": "실습 시험(Pre-test/Post-Test)",
+              "points": 6
+            },
+            {
+              "id": "eval-cpx-total",
+              "label": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+              "points": 24,
+              "display_note": "4개 CPX 각각 6점"
+            },
+            {
+              "id": "eval-osce",
+              "label": "OSCE",
+              "points": 6
+            },
+            {
+              "id": "eval-facecase-report",
+              "label": "대면진료증례보고서",
+              "points": 6
+            },
+            {
+              "id": "eval-outpatient-observation",
+              "label": "외래 참관",
+              "points": 2
+            },
+            {
+              "id": "eval-outpatient-previsit-record",
+              "label": "외래 예진 기록",
+              "points": 3
+            },
+            {
+              "id": "eval-pomr-presentation",
+              "label": "POMR 발표",
+              "points": 6
+            },
+            {
+              "id": "eval-ecg-group-discussion",
+              "label": "심전도 조별 토의",
+              "points": 6
+            },
+            {
+              "id": "eval-echo-understanding",
+              "label": "심초음파 검사의 이해",
+              "points": 6
+            },
+            {
+              "id": "eval-cardiovascular-qna",
+              "label": "심혈관 질환에 대한 Q&A",
+              "points": 6
+            },
+            {
+              "id": "eval-heart-sound",
+              "label": "심음청진",
+              "points": 6
+            },
+            {
+              "id": "eval-valvular-disease",
+              "label": "심장판막질환",
+              "points": 6
+            },
+            {
+              "id": "eval-cardiac-physical-exam",
+              "label": "심장진찰",
+              "points": 6
+            },
+            {
+              "id": "eval-weekly-practice-record",
+              "label": "주간 실습 기록",
+              "points": 6
+            }
+          ],
+          "cpx_breakdown": [
+            {
+              "id": "eval-cpx-chestpain",
+              "label": "CPX 가슴통증",
+              "points": 6
+            },
+            {
+              "id": "eval-cpx-palpit-syncope",
+              "label": "CPX 두근거림/실신",
+              "points": 6
+            },
+            {
+              "id": "eval-cpx-htn",
+              "label": "CPX 고혈압",
+              "points": 6
+            },
+            {
+              "id": "eval-cpx-dyspnea",
+              "label": "CPX 호흡곤란",
+              "points": 6
+            }
+          ]
+        }
       },
       "submission_rules": [
         {
@@ -8900,7 +9600,15 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-cardiovascular-qna",
+              "label": "심혈관 질환에 대한 Q&A",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "s-2026-04-27-1400-pretest",
@@ -9001,7 +9709,15 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-pretest",
+              "label": "실습 시험(Pre-test/Post-Test)",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "s-2026-04-27-1600-physical",
@@ -9123,7 +9839,15 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-cardiac-physical-exam",
+              "label": "심장진찰",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "comm-2026-04-27-chief",
@@ -9423,7 +10147,15 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-facecase-report",
+              "label": "대면진료증례보고서",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "s-2026-04-28-0840-heartsound",
@@ -9578,7 +10310,15 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-heart-sound",
+              "label": "심음청진",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "s-2026-04-28-1000-abc-pci",
@@ -9919,7 +10659,21 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-outpatient-observation",
+              "label": "외래 참관",
+              "points": 2,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            },
+            {
+              "id": "eval-outpatient-previsit-record",
+              "label": "외래 예진 기록",
+              "points": 3,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "s-2026-04-28-1200-echoecg",
@@ -10026,7 +10780,15 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-echo-understanding",
+              "label": "심초음파 검사의 이해",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "s-2026-04-28-1400-htn-cpx",
@@ -10178,7 +10940,17 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-cpx-htn",
+              "label": "CPX 고혈압",
+              "points": 6,
+              "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+              "parentPoints": 24,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "comm-2026-04-28-chief",
@@ -10596,7 +11368,15 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-pomr-presentation",
+              "label": "POMR 발표",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "s-2026-04-29-1200-mi",
@@ -10821,7 +11601,21 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-outpatient-observation",
+              "label": "외래 참관",
+              "points": 2,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            },
+            {
+              "id": "eval-outpatient-previsit-record",
+              "label": "외래 예진 기록",
+              "points": 3,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "comm-2026-04-29-chief",
@@ -11189,7 +11983,15 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-ecg-group-discussion",
+              "label": "심전도 조별 토의",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "s-2026-04-30-0840-abc-outpatient",
@@ -11365,7 +12167,21 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-outpatient-observation",
+              "label": "외래 참관",
+              "points": 2,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            },
+            {
+              "id": "eval-outpatient-previsit-record",
+              "label": "외래 예진 기록",
+              "points": 3,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "s-2026-04-30-0840-def-pci",
@@ -11660,7 +12476,17 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-cpx-palpit-syncope",
+              "label": "CPX 두근거림/실신",
+              "points": 6,
+              "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+              "parentPoints": 24,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "comm-2026-04-30-chief",
@@ -12019,7 +12845,15 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-ecg-group-discussion",
+              "label": "심전도 조별 토의",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "s-2026-05-01-0840-osce",
@@ -12150,7 +12984,15 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-osce",
+              "label": "OSCE",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "comm-2026-05-01-chief",
@@ -12359,7 +13201,21 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-outpatient-observation",
+              "label": "외래 참관",
+              "points": 2,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            },
+            {
+              "id": "eval-outpatient-previsit-record",
+              "label": "외래 예진 기록",
+              "points": 3,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "s-2026-05-04-1330-def-outpatient-sejong",
@@ -12479,7 +13335,21 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-outpatient-observation",
+              "label": "외래 참관",
+              "points": 2,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            },
+            {
+              "id": "eval-outpatient-previsit-record",
+              "label": "외래 예진 기록",
+              "points": 3,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "comm-2026-05-04-admin",
@@ -13275,7 +14145,15 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-ecg-group-discussion",
+              "label": "심전도 조별 토의",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "s-2026-05-06-1330-echo-understanding",
@@ -13392,7 +14270,15 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-echo-understanding",
+              "label": "심초음파 검사의 이해",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "comm-2026-05-06-chief",
@@ -13754,7 +14640,15 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-ecg-group-discussion",
+              "label": "심전도 조별 토의",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "s-2026-05-07-0900-dyspnea",
@@ -13888,7 +14782,17 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-cpx-dyspnea",
+              "label": "CPX 호흡곤란",
+              "points": 6,
+              "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+              "parentPoints": 24,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "s-2026-05-07-1330-abc-outpatient",
@@ -14002,7 +14906,21 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-outpatient-observation",
+              "label": "외래 참관",
+              "points": 2,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            },
+            {
+              "id": "eval-outpatient-previsit-record",
+              "label": "외래 예진 기록",
+              "points": 3,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "comm-2026-05-07-chief",
@@ -14360,7 +15278,15 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-ecg-group-discussion",
+              "label": "심전도 조별 토의",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "s-2026-05-08-1330-valvular",
@@ -14494,7 +15420,15 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-valvular-disease",
+              "label": "심장판막질환",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "comm-2026-05-08-chief",
@@ -15180,7 +16114,17 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-cpx-chestpain",
+              "label": "CPX 가슴통증",
+              "points": 6,
+              "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+              "parentPoints": 24,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "overlay-2026-05-04-pci-split",
@@ -15376,7 +16320,15 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-cardiovascular-qna",
+              "label": "심혈관 질환에 대한 Q&A",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "overlay-2026-05-05-quota",
@@ -15541,7 +16493,15 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-echo-understanding",
+              "label": "심초음파 검사의 이해",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "overlay-2026-05-06-item3",
@@ -15690,7 +16650,21 @@
             "exam": "auto"
           },
           "displayColor": "",
-          "displayState": "normal"
+          "displayState": "normal",
+          "evaluation_items": [
+            {
+              "id": "eval-outpatient-observation",
+              "label": "외래 참관",
+              "points": 2,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            },
+            {
+              "id": "eval-outpatient-previsit-record",
+              "label": "외래 예진 기록",
+              "points": 3,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         }
       ],
       "assignments": [
@@ -15767,7 +16741,15 @@
             "Cardiology는 자동 로그아웃이 잦아 발표 직전 다시 로그인 상태를 확인한다."
           ],
           "milestones": [],
-          "onsite_required": false
+          "onsite_required": false,
+          "evaluation_items": [
+            {
+              "id": "eval-echo-understanding",
+              "label": "심초음파 검사의 이해",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-ihd-topic-presentation",
@@ -15790,7 +16772,15 @@
           ],
           "notes": [],
           "milestones": [],
-          "onsite_required": false
+          "onsite_required": false,
+          "evaluation_items": [
+            {
+              "id": "eval-cardiovascular-qna",
+              "label": "심혈관 질환에 대한 Q&A",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-pomr-case-ab",
@@ -15818,7 +16808,15 @@
             "발표 시간 안에 끝낼 수 있도록 POMR 기준점을 먼저 잡는다."
           ],
           "milestones": [],
-          "onsite_required": false
+          "onsite_required": false,
+          "evaluation_items": [
+            {
+              "id": "eval-pomr-presentation",
+              "label": "POMR 발표",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-mi-case",
@@ -15843,7 +16841,15 @@
             "가능하면 영상, 최소 녹음이라도 확보해 첫 페이지에 첨부한다."
           ],
           "milestones": [],
-          "onsite_required": false
+          "onsite_required": false,
+          "evaluation_items": [
+            {
+              "id": "eval-cardiovascular-qna",
+              "label": "심혈관 질환에 대한 Q&A",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-pretest-reflection",
@@ -15890,7 +16896,15 @@
           ],
           "notes": [],
           "milestones": [],
-          "onsite_required": false
+          "onsite_required": false,
+          "evaluation_items": [
+            {
+              "id": "eval-facecase-report",
+              "label": "대면진료증례보고서",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-pomr-upload",
@@ -15914,7 +16928,15 @@
           ],
           "notes": [],
           "milestones": [],
-          "onsite_required": false
+          "onsite_required": false,
+          "evaluation_items": [
+            {
+              "id": "eval-pomr-presentation",
+              "label": "POMR 발표",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-qna-stable-angina",
@@ -15938,7 +16960,15 @@
             "같은 주제로 계속 진행한다고 하니 따로 연락해 다시 묻지 않는다."
           ],
           "milestones": [],
-          "onsite_required": false
+          "onsite_required": false,
+          "evaluation_items": [
+            {
+              "id": "eval-cardiovascular-qna",
+              "label": "심혈관 질환에 대한 Q&A",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-ecg-group-discussion",
@@ -15962,7 +16992,15 @@
           ],
           "notes": [],
           "milestones": [],
-          "onsite_required": false
+          "onsite_required": false,
+          "evaluation_items": [
+            {
+              "id": "eval-ecg-group-discussion",
+              "label": "심전도 조별 토의",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-echo-understanding",
@@ -15986,7 +17024,15 @@
           ],
           "notes": [],
           "milestones": [],
-          "onsite_required": false
+          "onsite_required": false,
+          "evaluation_items": [
+            {
+              "id": "eval-echo-understanding",
+              "label": "심초음파 검사의 이해",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-cpx-chestpain-report",
@@ -16008,7 +17054,17 @@
           "linked_professors": [],
           "notes": [],
           "milestones": [],
-          "onsite_required": false
+          "onsite_required": false,
+          "evaluation_items": [
+            {
+              "id": "eval-cpx-chestpain",
+              "label": "CPX 가슴통증",
+              "points": 6,
+              "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+              "parentPoints": 24,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-outpatient-record-1",
@@ -16050,7 +17106,15 @@
               "due": "2026-05-04T23:59:00"
             }
           ],
-          "onsite_required": false
+          "onsite_required": false,
+          "evaluation_items": [
+            {
+              "id": "eval-outpatient-previsit-record",
+              "label": "외래 예진 기록",
+              "points": 3,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-outpatient-record-2",
@@ -16090,7 +17154,15 @@
               "due": "2026-05-08T18:00:00"
             }
           ],
-          "onsite_required": false
+          "onsite_required": false,
+          "evaluation_items": [
+            {
+              "id": "eval-outpatient-previsit-record",
+              "label": "외래 예진 기록",
+              "points": 3,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-weekly-reflection-w1",
@@ -16111,7 +17183,21 @@
           "linked_professors": [],
           "notes": [],
           "milestones": [],
-          "onsite_required": false
+          "onsite_required": false,
+          "evaluation_items": [
+            {
+              "id": "eval-plan-reflection",
+              "label": "실습 계획과 성찰",
+              "points": 7,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            },
+            {
+              "id": "eval-weekly-practice-record",
+              "label": "주간 실습 기록",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-weekly-reflection-w2",
@@ -16132,7 +17218,21 @@
           "linked_professors": [],
           "notes": [],
           "milestones": [],
-          "onsite_required": false
+          "onsite_required": false,
+          "evaluation_items": [
+            {
+              "id": "eval-plan-reflection",
+              "label": "실습 계획과 성찰",
+              "points": 7,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            },
+            {
+              "id": "eval-weekly-practice-record",
+              "label": "주간 실습 기록",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-clinical-expression-selfeval",
@@ -16201,7 +17301,15 @@
             "미리 `.` 제출해두고 시험 종료 후 아이패드로 바로 보여드린다."
           ],
           "milestones": [],
-          "onsite_required": true
+          "onsite_required": true,
+          "evaluation_items": [
+            {
+              "id": "eval-heart-sound",
+              "label": "심음청진",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-onsite-cardiac-exam",
@@ -16226,7 +17334,15 @@
             "복영남 교수님 항목과 안계택 교수님 OSCE 항목을 헷갈리지 않도록 구분한다."
           ],
           "milestones": [],
-          "onsite_required": true
+          "onsite_required": true,
+          "evaluation_items": [
+            {
+              "id": "eval-cardiac-physical-exam",
+              "label": "심장진찰",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-onsite-htn-cpx",
@@ -16251,7 +17367,17 @@
             "유폴 화면을 미리 띄워두고 들어간다."
           ],
           "milestones": [],
-          "onsite_required": true
+          "onsite_required": true,
+          "evaluation_items": [
+            {
+              "id": "eval-cpx-htn",
+              "label": "CPX 고혈압",
+              "points": 6,
+              "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+              "parentPoints": 24,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-onsite-palpit-cpx",
@@ -16276,7 +17402,17 @@
             "전날 일정 확인 문자와 함께 유폴 준비 여부도 점검한다."
           ],
           "milestones": [],
-          "onsite_required": true
+          "onsite_required": true,
+          "evaluation_items": [
+            {
+              "id": "eval-cpx-palpit-syncope",
+              "label": "CPX 두근거림/실신",
+              "points": 6,
+              "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+              "parentPoints": 24,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-onsite-dyspnea-cpx",
@@ -16301,7 +17437,17 @@
             "케이스 대본 준비와 별개로 유폴 화면도 같이 준비한다."
           ],
           "milestones": [],
-          "onsite_required": true
+          "onsite_required": true,
+          "evaluation_items": [
+            {
+              "id": "eval-cpx-dyspnea",
+              "label": "CPX 호흡곤란",
+              "points": 6,
+              "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+              "parentPoints": 24,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-onsite-osce",
@@ -16326,7 +17472,15 @@
             "심장진찰 항목과 혼동하지 않도록 항목명을 확인한다."
           ],
           "milestones": [],
-          "onsite_required": true
+          "onsite_required": true,
+          "evaluation_items": [
+            {
+              "id": "eval-osce",
+              "label": "OSCE",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-onsite-valvular",
@@ -16349,7 +17503,15 @@
           ],
           "notes": [],
           "milestones": [],
-          "onsite_required": true
+          "onsite_required": true,
+          "evaluation_items": [
+            {
+              "id": "eval-valvular-disease",
+              "label": "심장판막질환",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-onsite-ecg-a",
@@ -16374,7 +17536,15 @@
             "첫 발표가 끝난 뒤 다음 발표 PPT를 켜는 사이에 바로 보여드리는 방식이 편하다."
           ],
           "milestones": [],
-          "onsite_required": true
+          "onsite_required": true,
+          "evaluation_items": [
+            {
+              "id": "eval-ecg-group-discussion",
+              "label": "심전도 조별 토의",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-onsite-ecg-b",
@@ -16397,7 +17567,15 @@
           ],
           "notes": [],
           "milestones": [],
-          "onsite_required": true
+          "onsite_required": true,
+          "evaluation_items": [
+            {
+              "id": "eval-ecg-group-discussion",
+              "label": "심전도 조별 토의",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-onsite-ecg-cd",
@@ -16420,7 +17598,15 @@
           ],
           "notes": [],
           "milestones": [],
-          "onsite_required": true
+          "onsite_required": true,
+          "evaluation_items": [
+            {
+              "id": "eval-ecg-group-discussion",
+              "label": "심전도 조별 토의",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-onsite-ecg-ef",
@@ -16443,7 +17629,15 @@
           ],
           "notes": [],
           "milestones": [],
-          "onsite_required": true
+          "onsite_required": true,
+          "evaluation_items": [
+            {
+              "id": "eval-ecg-group-discussion",
+              "label": "심전도 조별 토의",
+              "points": 6,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-onsite-pci-20260428-abc",
@@ -16564,7 +17758,15 @@
             "교수님별 승인 타이밍이 달라 인계를 잘 읽고 대기하고 있다가 바로 보여드린다."
           ],
           "milestones": [],
-          "onsite_required": true
+          "onsite_required": true,
+          "evaluation_items": [
+            {
+              "id": "eval-outpatient-observation",
+              "label": "외래 참관",
+              "points": 2,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-onsite-outpatient-20260429-def",
@@ -16587,7 +17789,15 @@
           ],
           "notes": [],
           "milestones": [],
-          "onsite_required": true
+          "onsite_required": true,
+          "evaluation_items": [
+            {
+              "id": "eval-outpatient-observation",
+              "label": "외래 참관",
+              "points": 2,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-onsite-outpatient-20260430-abc",
@@ -16610,7 +17820,15 @@
           ],
           "notes": [],
           "milestones": [],
-          "onsite_required": true
+          "onsite_required": true,
+          "evaluation_items": [
+            {
+              "id": "eval-outpatient-observation",
+              "label": "외래 참관",
+              "points": 2,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-onsite-outpatient-20260504-abc",
@@ -16633,7 +17851,15 @@
           ],
           "notes": [],
           "milestones": [],
-          "onsite_required": true
+          "onsite_required": true,
+          "evaluation_items": [
+            {
+              "id": "eval-outpatient-observation",
+              "label": "외래 참관",
+              "points": 2,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-onsite-outpatient-20260504-def",
@@ -16656,7 +17882,15 @@
           ],
           "notes": [],
           "milestones": [],
-          "onsite_required": true
+          "onsite_required": true,
+          "evaluation_items": [
+            {
+              "id": "eval-outpatient-observation",
+              "label": "외래 참관",
+              "points": 2,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-onsite-outpatient-20260507-abc",
@@ -16679,7 +17913,15 @@
           ],
           "notes": [],
           "milestones": [],
-          "onsite_required": true
+          "onsite_required": true,
+          "evaluation_items": [
+            {
+              "id": "eval-outpatient-observation",
+              "label": "외래 참관",
+              "points": 2,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-onsite-outpatient-makeup-20260506",
@@ -16702,7 +17944,15 @@
             "현장승인과 예진기록지 2회 미충족자를 같이 보충하는 용도로 본다."
           ],
           "milestones": [],
-          "onsite_required": true
+          "onsite_required": true,
+          "evaluation_items": [
+            {
+              "id": "eval-outpatient-observation",
+              "label": "외래 참관",
+              "points": 2,
+              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+            }
+          ]
         },
         {
           "id": "assign-onsite-arrhyproc-20260505-def",
@@ -16818,7 +18068,15 @@
                 "시간표상 증례발표로 적혀 있지만, 실제로는 성인환 교수님과 IHD 관련 질문을 가지고 토의하는 시간이다.",
                 "IHD 전반을 공부해가고, 조원들끼리 질문과 답을 미리 공유한 뒤 질문자와 답변자를 정해 들어가면 편하다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-cardiovascular-qna",
+                  "label": "심혈관 질환에 대한 Q&A",
+                  "points": 6,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "14:00~16:00",
@@ -16830,7 +18088,15 @@
                 "치프 선생님이 없는 경우라면 이때 교수님께 ECG 케이스와 MI 케이스도 함께 요청하고, `나의 꿈` 스캔본도 드리면 된다."
               ],
               "prepare_points": [],
-              "boardDifficultyOverride": 5
+              "boardDifficultyOverride": 5,
+              "evaluation_items": [
+                {
+                  "id": "eval-pretest",
+                  "label": "실습 시험(Pre-test/Post-Test)",
+                  "points": 6,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "16:00~18:00",
@@ -16841,7 +18107,15 @@
                 "2026년부터는 심장 신체진찰 담당이 성석우 교수님에서 복영남 교수님으로 변경되었다.",
                 "연락드렸을 때 월요일 오후 5시에 심장초음파실에서 보자고 하셨다는 인계가 있다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-cardiac-physical-exam",
+                  "label": "심장진찰",
+                  "points": 6,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             }
           ],
           "assignment_start_today": [
@@ -16877,7 +18151,15 @@
                 "성석우 교수님이 진행한다. (50분 정도)",
                 "2026년에는 한 환자에 여러 학생이 문진을 가면 환자가 너무 힘들 수 있어, 서로 겹치지 않도록 각자 환자를 골라 대면증례보고서를 쓰라고 하셨다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-facecase-report",
+                  "label": "대면진료증례보고서",
+                  "points": 6,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "08:40~10:00",
@@ -16890,7 +18172,15 @@
                 "청진하는 자리에 볼펜으로점찍어둠."
               ],
               "prepare_points": [],
-              "boardDifficultyOverride": 4
+              "boardDifficultyOverride": 4,
+              "evaluation_items": [
+                {
+                  "id": "eval-heart-sound",
+                  "label": "심음청진",
+                  "points": 6,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "10:00~12:00",
@@ -16912,7 +18202,21 @@
                 "유폴리오, 초진기록지, Patient log 3개 사인을 받아야 한다.",
                 "간호사 선생님께 실습학생이라고 말씀드리고 초진환자를 부탁하면 된다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-outpatient-observation",
+                  "label": "외래 참관",
+                  "points": 2,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                },
+                {
+                  "id": "eval-outpatient-previsit-record",
+                  "label": "외래 예진 기록",
+                  "points": 3,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "12:00~13:00",
@@ -16923,7 +18227,15 @@
                 "PPT 대본에 적힌 질문들을 꼭 읽어보고 간다.",
                 "관상동맥과 벽의 위치도 파악하고 가야 한다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-echo-understanding",
+                  "label": "심초음파 검사의 이해",
+                  "points": 6,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "14:00~16:00",
@@ -16934,7 +18246,17 @@
                 "진선아 교수님이 **의국**에서 진행한다.",
                 "인계파일 `CPX HTN`에 있는 야마와 피드백을 다 보면 부족한 것은 없다고 한다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-cpx-htn",
+                  "label": "CPX 고혈압",
+                  "points": 6,
+                  "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+                  "parentPoints": 24,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "16:00~18:00",
@@ -16995,6 +18317,16 @@
               ],
               "prepare_points": [
                 "한끝 CPX 흉통 틀어두고 읽으면 됨"
+              ],
+              "evaluation_items": [
+                {
+                  "id": "eval-cpx-chestpain",
+                  "label": "CPX 가슴통증",
+                  "points": 6,
+                  "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+                  "parentPoints": 24,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
               ]
             },
             {
@@ -17007,7 +18339,15 @@
                 "조장은 교육실 컴퓨터에 미리 발표자 2명의 PPT를 띄워두는 것이 좋다. (USB 가능)"
               ],
               "prepare_points": [],
-              "boardDifficultyOverride": 0
+              "boardDifficultyOverride": 0,
+              "evaluation_items": [
+                {
+                  "id": "eval-pomr-presentation",
+                  "label": "POMR 발표",
+                  "points": 6,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "12:00~13:00",
@@ -17037,7 +18377,21 @@
                 "김준형, 진선아, 복영남 교수님 외래를 들어가는 흐름으로 이해하면 된다.",
                 "공휴일이나 교수님 휴가 때문에 외래 구성이 바뀌는 경우가 있었다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-outpatient-observation",
+                  "label": "외래 참관",
+                  "points": 2,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                },
+                {
+                  "id": "eval-outpatient-previsit-record",
+                  "label": "외래 예진 기록",
+                  "points": 3,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             }
           ],
           "assignment_start_today": [
@@ -17071,7 +18425,15 @@
                 "7시 50분 발표 시작이다.",
                 "조장과 조원은 7시 10분, 나머지 인원은 7시 35분까지 교육실 도착을 기준으로 움직인다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-ecg-group-discussion",
+                  "label": "심전도 조별 토의",
+                  "points": 6,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "08:40~12:00",
@@ -17082,7 +18444,21 @@
                 "교수님별 인계는 별도 파일을 확인하고 들어가면 된다.",
                 "목요일에도 외래와 PCI 참관 일정이 같이 있을 수 있으니, 본인 교수님 인계를 미리 읽고 움직이는 것이 중요하다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-outpatient-observation",
+                  "label": "외래 참관",
+                  "points": 2,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                },
+                {
+                  "id": "eval-outpatient-previsit-record",
+                  "label": "외래 예진 기록",
+                  "points": 3,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "08:40~12:00",
@@ -17112,7 +18488,17 @@
                 "권희진 교수님이 진행한다.",
                 "2026년에는 전날 교수님께 연락드렸더니 조원 수를 물어보시고, 2명씩 짝을 지어 두근거림이나 실신 중 하나에 대해 롤플레잉을 준비해오라고 하셨다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-cpx-palpit-syncope",
+                  "label": "CPX 두근거림/실신",
+                  "points": 6,
+                  "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+                  "parentPoints": 24,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "16:00~18:00",
@@ -17154,7 +18540,15 @@
                 "7시 50분 발표 시작이다.",
                 "조장과 조원은 7시 10분, 나머지 인원은 7시 35분까지 교육실 도착을 기준으로 움직인다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-ecg-group-discussion",
+                  "label": "심전도 조별 토의",
+                  "points": 6,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "08:40~12:00",
@@ -17165,7 +18559,15 @@
                 "안계택 교수님이 진행한다.",
                 "2026년에는 **앞으로 계속 3시 반에 하는 걸로 인계하라**고 하셨다는 인계가 있다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-osce",
+                  "label": "OSCE",
+                  "points": 6,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "12:00~13:00",
@@ -17210,7 +18612,21 @@
               "professor": "김민수 교수님 / 노재형 교수님",
               "difficulty": 6,
               "intro": [],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-outpatient-observation",
+                  "label": "외래 참관",
+                  "points": 2,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                },
+                {
+                  "id": "eval-outpatient-previsit-record",
+                  "label": "외래 예진 기록",
+                  "points": 3,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "13:30~16:00",
@@ -17218,7 +18634,21 @@
               "professor": "황원묵 교수님",
               "difficulty": 6,
               "intro": [],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-outpatient-observation",
+                  "label": "외래 참관",
+                  "points": 2,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                },
+                {
+                  "id": "eval-outpatient-previsit-record",
+                  "label": "외래 예진 기록",
+                  "points": 3,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             }
           ],
           "assignment_start_today": [
@@ -17313,7 +18743,15 @@
                 "2026년에는 전날 시술 참관 중 의국 선생님이 와서 `12시 의국에서 수업하고 점심 도시락 사주신다`고 알려주셨다고 한다.",
                 "즉 **12시 의국 고정**으로 생각하면 되고, 밥을 사주시니 안 먹고 가는 것이 낫다는 인계가 있다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-ecg-group-discussion",
+                  "label": "심전도 조별 토의",
+                  "points": 6,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "13:30~16:00",
@@ -17324,7 +18762,15 @@
                 "박재형 교수님이 진행한다.",
                 "**시간표에 없어도 있는 일정**이라는 인계가 있다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-echo-understanding",
+                  "label": "심초음파 검사의 이해",
+                  "points": 6,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             }
           ],
           "assignment_start_today": [
@@ -17354,7 +18800,15 @@
                 "7시 50분 발표 시작이다.",
                 "조장과 조원은 7시 10분, 나머지 인원은 7시 35분까지 교육실 도착을 기준으로 움직인다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-ecg-group-discussion",
+                  "label": "심전도 조별 토의",
+                  "points": 6,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "09:00~11:00",
@@ -17365,7 +18819,17 @@
                 "JVP 측정 자를 준비한다.",
                 "김미주 교수님이 case를 배정해주시고, 그 case에 맞는 대본을 준비하면 된다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-cpx-dyspnea",
+                  "label": "CPX 호흡곤란",
+                  "points": 6,
+                  "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+                  "parentPoints": 24,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "11:00~12:00",
@@ -17384,7 +18848,21 @@
                 "외래와 초진을 모두 채웠더라도 들어가야 한다.",
                 "인계를 잘 보고 들어가면 된다는 인계가 있다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-outpatient-observation",
+                  "label": "외래 참관",
+                  "points": 2,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                },
+                {
+                  "id": "eval-outpatient-previsit-record",
+                  "label": "외래 예진 기록",
+                  "points": 3,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "13:30~16:00",
@@ -17424,7 +18902,15 @@
                 "7시 50분 발표 시작이다.",
                 "조장과 조원은 7시 10분, 나머지 인원은 7시 35분까지 교육실 도착을 기준으로 움직인다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-ecg-group-discussion",
+                  "label": "심전도 조별 토의",
+                  "points": 6,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "10:00~12:00",
@@ -17443,7 +18929,15 @@
                 "양유진 교수님은 2026.04.27에 복귀 예정이고, 그 전까지는 복영남 교수님이 진행하신다는 인계가 있다.",
                 "실제로는 1월 심장 진찰 때 복영남 교수님이 언제 진행할지 말씀해주셨다고 한다."
               ],
-              "prepare_points": []
+              "prepare_points": [],
+              "evaluation_items": [
+                {
+                  "id": "eval-valvular-disease",
+                  "label": "심장판막질환",
+                  "points": 6,
+                  "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+                }
+              ]
             },
             {
               "time": "15:00~18:00",
@@ -20246,5 +21740,9 @@
   "_cardiology_live_user_override_source": {
     "source": "local shared/live override state copied from kmle-planner working tree 2026-04-26",
     "note": "All cardiology boardDifficultyOverride/userNote/display fields synced, not only selected sentinel sessions."
+  },
+  "_cardiology_evaluation_score_source": {
+    "source": "1-6. 심장내과.pdf page 2",
+    "note": "Only 평가항목 label + 비율(%) points are used; 지식/술기/태도 split is intentionally ignored."
   }
 }

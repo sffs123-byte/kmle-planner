@@ -48,7 +48,15 @@
           "시간표상 증례발표로 적혀 있지만, 실제로는 성인환 교수님과 IHD 관련 질문을 가지고 토의하는 시간이다.",
           "IHD 전반을 공부해가고, 조원들끼리 질문과 답을 미리 공유한 뒤 질문자와 답변자를 정해 들어가면 편하다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-cardiovascular-qna",
+            "label": "심혈관 질환에 대한 Q&A",
+            "points": 6,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "14:00~16:00",
@@ -59,7 +67,16 @@
           "치프 선생님이 없는 경우에는 성석우 교수님께 월요일 오전에 연락해 Pretest 일정을 확인했다는 인계가 있다.",
           "치프 선생님이 없는 경우라면 이때 교수님께 ECG 케이스와 MI 케이스도 함께 요청하고, `나의 꿈` 스캔본도 드리면 된다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "boardDifficultyOverride": 5,
+        "evaluation_items": [
+          {
+            "id": "eval-pretest",
+            "label": "실습 시험(Pre-test/Post-Test)",
+            "points": 6,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "16:00~18:00",
@@ -70,7 +87,15 @@
           "2026년부터는 심장 신체진찰 담당이 성석우 교수님에서 복영남 교수님으로 변경되었다.",
           "연락드렸을 때 월요일 오후 5시에 심장초음파실에서 보자고 하셨다는 인계가 있다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-cardiac-physical-exam",
+            "label": "심장진찰",
+            "points": 6,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       }
     ],
     "assignment_start_today": [
@@ -106,7 +131,15 @@
           "성석우 교수님이 진행한다. (50분 정도)",
           "2026년에는 한 환자에 여러 학생이 문진을 가면 환자가 너무 힘들 수 있어, 서로 겹치지 않도록 각자 환자를 골라 대면증례보고서를 쓰라고 하셨다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-facecase-report",
+            "label": "대면진료증례보고서",
+            "points": 6,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "08:40~10:00",
@@ -116,9 +149,18 @@
         "intro": [
           "OSCE센터 B그룹 안 ICU룸에서 진행한다.",
           "조장은 수업 전에 조원들 `심음청진` 과제와 `나의 꿈` 자필과제를 전부 모아두고, 시험이 끝난 뒤 바로 교수님께 제출한다.",
-          "청진하는 자리에 볼펜으로 점찍어둠."
+          "청진하는 자리에 볼펜으로점찍어둠."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "boardDifficultyOverride": 4,
+        "evaluation_items": [
+          {
+            "id": "eval-heart-sound",
+            "label": "심음청진",
+            "points": 6,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "10:00~12:00",
@@ -140,7 +182,21 @@
           "유폴리오, 초진기록지, Patient log 3개 사인을 받아야 한다.",
           "간호사 선생님께 실습학생이라고 말씀드리고 초진환자를 부탁하면 된다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-outpatient-observation",
+            "label": "외래 참관",
+            "points": 2,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          },
+          {
+            "id": "eval-outpatient-previsit-record",
+            "label": "외래 예진 기록",
+            "points": 3,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "12:00~13:00",
@@ -151,7 +207,15 @@
           "PPT 대본에 적힌 질문들을 꼭 읽어보고 간다.",
           "관상동맥과 벽의 위치도 파악하고 가야 한다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-echo-understanding",
+            "label": "심초음파 검사의 이해",
+            "points": 6,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "14:00~16:00",
@@ -162,7 +226,17 @@
           "진선아 교수님이 **의국**에서 진행한다.",
           "인계파일 `CPX HTN`에 있는 야마와 피드백을 다 보면 부족한 것은 없다고 한다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-cpx-htn",
+            "label": "CPX 고혈압",
+            "points": 6,
+            "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+            "parentPoints": 24,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "16:00~18:00",
@@ -216,11 +290,24 @@
         "title": "흉통 CPX",
         "professor": "박현웅 교수님",
         "difficulty": 4,
+        "boardDifficultyOverride": 2,
         "intro": [
           "사용자 확인 기준: 수요일 10:00~11:00.",
           "이름은 CPX지만 실제로는 증례토의에 가깝다는 인계가 있다."
         ],
-        "prepare_points": []
+        "prepare_points": [
+          "한끝 CPX 흉통 틀어두고 읽으면 됨"
+        ],
+        "evaluation_items": [
+          {
+            "id": "eval-cpx-chestpain",
+            "label": "CPX 가슴통증",
+            "points": 6,
+            "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+            "parentPoints": 24,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "11:00~12:00",
@@ -231,7 +318,16 @@
           "이재환 교수님이 진행한다.",
           "조장은 교육실 컴퓨터에 미리 발표자 2명의 PPT를 띄워두는 것이 좋다. (USB 가능)"
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "boardDifficultyOverride": 0,
+        "evaluation_items": [
+          {
+            "id": "eval-pomr-presentation",
+            "label": "POMR 발표",
+            "points": 6,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "12:00~13:00",
@@ -261,7 +357,21 @@
           "김준형, 진선아, 복영남 교수님 외래를 들어가는 흐름으로 이해하면 된다.",
           "공휴일이나 교수님 휴가 때문에 외래 구성이 바뀌는 경우가 있었다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-outpatient-observation",
+            "label": "외래 참관",
+            "points": 2,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          },
+          {
+            "id": "eval-outpatient-previsit-record",
+            "label": "외래 예진 기록",
+            "points": 3,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       }
     ],
     "assignment_start_today": [
@@ -295,7 +405,15 @@
           "7시 50분 발표 시작이다.",
           "조장과 조원은 7시 10분, 나머지 인원은 7시 35분까지 교육실 도착을 기준으로 움직인다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-ecg-group-discussion",
+            "label": "심전도 조별 토의",
+            "points": 6,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "08:40~12:00",
@@ -306,7 +424,21 @@
           "교수님별 인계는 별도 파일을 확인하고 들어가면 된다.",
           "목요일에도 외래와 PCI 참관 일정이 같이 있을 수 있으니, 본인 교수님 인계를 미리 읽고 움직이는 것이 중요하다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-outpatient-observation",
+            "label": "외래 참관",
+            "points": 2,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          },
+          {
+            "id": "eval-outpatient-previsit-record",
+            "label": "외래 예진 기록",
+            "points": 3,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "08:40~12:00",
@@ -336,7 +468,17 @@
           "권희진 교수님이 진행한다.",
           "2026년에는 전날 교수님께 연락드렸더니 조원 수를 물어보시고, 2명씩 짝을 지어 두근거림이나 실신 중 하나에 대해 롤플레잉을 준비해오라고 하셨다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-cpx-palpit-syncope",
+            "label": "CPX 두근거림/실신",
+            "points": 6,
+            "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+            "parentPoints": 24,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "16:00~18:00",
@@ -378,7 +520,15 @@
           "7시 50분 발표 시작이다.",
           "조장과 조원은 7시 10분, 나머지 인원은 7시 35분까지 교육실 도착을 기준으로 움직인다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-ecg-group-discussion",
+            "label": "심전도 조별 토의",
+            "points": 6,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "08:40~12:00",
@@ -389,7 +539,15 @@
           "안계택 교수님이 진행한다.",
           "2026년에는 **앞으로 계속 3시 반에 하는 걸로 인계하라**고 하셨다는 인계가 있다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-osce",
+            "label": "OSCE",
+            "points": 6,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "12:00~13:00",
@@ -434,7 +592,21 @@
         "professor": "김민수 교수님 / 노재형 교수님",
         "difficulty": 6,
         "intro": [],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-outpatient-observation",
+            "label": "외래 참관",
+            "points": 2,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          },
+          {
+            "id": "eval-outpatient-previsit-record",
+            "label": "외래 예진 기록",
+            "points": 3,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "13:30~16:00",
@@ -442,7 +614,21 @@
         "professor": "황원묵 교수님",
         "difficulty": 6,
         "intro": [],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-outpatient-observation",
+            "label": "외래 참관",
+            "points": 2,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          },
+          {
+            "id": "eval-outpatient-previsit-record",
+            "label": "외래 예진 기록",
+            "points": 3,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       }
     ],
     "assignment_start_today": [
@@ -537,7 +723,15 @@
           "2026년에는 전날 시술 참관 중 의국 선생님이 와서 `12시 의국에서 수업하고 점심 도시락 사주신다`고 알려주셨다고 한다.",
           "즉 **12시 의국 고정**으로 생각하면 되고, 밥을 사주시니 안 먹고 가는 것이 낫다는 인계가 있다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-ecg-group-discussion",
+            "label": "심전도 조별 토의",
+            "points": 6,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "13:30~16:00",
@@ -548,7 +742,15 @@
           "박재형 교수님이 진행한다.",
           "**시간표에 없어도 있는 일정**이라는 인계가 있다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-echo-understanding",
+            "label": "심초음파 검사의 이해",
+            "points": 6,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       }
     ],
     "assignment_start_today": [
@@ -578,7 +780,15 @@
           "7시 50분 발표 시작이다.",
           "조장과 조원은 7시 10분, 나머지 인원은 7시 35분까지 교육실 도착을 기준으로 움직인다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-ecg-group-discussion",
+            "label": "심전도 조별 토의",
+            "points": 6,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "09:00~11:00",
@@ -589,7 +799,17 @@
           "JVP 측정 자를 준비한다.",
           "김미주 교수님이 case를 배정해주시고, 그 case에 맞는 대본을 준비하면 된다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-cpx-dyspnea",
+            "label": "CPX 호흡곤란",
+            "points": 6,
+            "parentLabel": "CPX(가슴통증, 두근거림/실신, 고혈압, 호흡곤란)",
+            "parentPoints": 24,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "11:00~12:00",
@@ -608,7 +828,21 @@
           "외래와 초진을 모두 채웠더라도 들어가야 한다.",
           "인계를 잘 보고 들어가면 된다는 인계가 있다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-outpatient-observation",
+            "label": "외래 참관",
+            "points": 2,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          },
+          {
+            "id": "eval-outpatient-previsit-record",
+            "label": "외래 예진 기록",
+            "points": 3,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "13:30~16:00",
@@ -648,7 +882,15 @@
           "7시 50분 발표 시작이다.",
           "조장과 조원은 7시 10분, 나머지 인원은 7시 35분까지 교육실 도착을 기준으로 움직인다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-ecg-group-discussion",
+            "label": "심전도 조별 토의",
+            "points": 6,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "10:00~12:00",
@@ -667,7 +909,15 @@
           "양유진 교수님은 2026.04.27에 복귀 예정이고, 그 전까지는 복영남 교수님이 진행하신다는 인계가 있다.",
           "실제로는 1월 심장 진찰 때 복영남 교수님이 언제 진행할지 말씀해주셨다고 한다."
         ],
-        "prepare_points": []
+        "prepare_points": [],
+        "evaluation_items": [
+          {
+            "id": "eval-valvular-disease",
+            "label": "심장판막질환",
+            "points": 6,
+            "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+          }
+        ]
       },
       {
         "time": "15:00~18:00",
