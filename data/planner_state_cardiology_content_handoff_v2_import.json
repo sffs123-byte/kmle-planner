@@ -8827,7 +8827,7 @@
             "phone": "010-3401-9962",
             "contact_mode": "direct",
             "image_path": "./data/clerkships/professors/cardiology/교수님_정진옥_01.jpeg",
-            "contact_note": "문자보다 당일 외래 들어가는 조원에게 부탁하는 방식이 더 나을 수 있음."
+            "contact_note": "문자보다 당일 외래 들어가는 조원에게 다음날 IHD 발표 진행을 여쭤보게 하는 편이 더 낫다는 인계 있음."
           },
           {
             "name": "이재환",
@@ -8843,7 +8843,7 @@
             "contact_label": "연락 정책",
             "phone": "",
             "contact_mode": "forbidden",
-            "contact_note": "기본 연락 금지. 단, 심전도 발표 관련 전날/당일 확인 문자는 인계 예시가 있음.",
+            "contact_note": "일반 연락 금지. 단, 심전도 발표 일정 관련 리마인드 문자는 발표 전날/월요일 정리 문자 기준으로 전송.",
             "image_path": "./data/clerkships/professors/cardiology/교수님_김준형_01.jpeg"
           },
           {
@@ -8853,7 +8853,7 @@
             "phone": "010-5457-0330",
             "contact_mode": "direct",
             "image_path": "./data/clerkships/professors/cardiology/교수님_안계택_01.jpeg",
-            "contact_note": "외래 갔던 학생 통해 전달되면 별도 문자 안 보내도 됨."
+            "contact_note": "외래 갔던 학생을 통해 전달되면 별도 연락을 안 보내도 된다는 인계 있음."
           },
           {
             "name": "진선아",
@@ -8887,7 +8887,7 @@
             "phone": "010-3424-6150",
             "contact_mode": "direct",
             "image_path": "./data/clerkships/professors/cardiology/교수님_성석우_01.jpeg",
-            "contact_note": "원문 메모: 전주 연락은 굳이 하지 말고, 월요일 전원 가면 그때 여쭤보기."
+            "contact_note": "평일 일과 중 연락은 가능하나 휴일/퇴근 후 연락 금지. 전주 연락은 굳이 하지 말라고 한 인계 있음. 월요일 pre-test는 치프 선생님에게 확인."
           },
           {
             "name": "김미주",
@@ -8904,7 +8904,7 @@
             "phone": "010-2818-3643",
             "contact_mode": "direct",
             "image_path": "./data/clerkships/professors/cardiology/교수님_권희진_01.jpeg",
-            "contact_note": "전날 조장이 연락해서 CPX 일정 컨펌."
+            "contact_note": "전날 조장이 CPX 일정 컨펌 문자. 1~2시쯤 보내고 답장 없으면 6~7시쯤 한 번 더 연락."
           },
           {
             "name": "양유진",
@@ -8945,7 +8945,7 @@
             "contact_label": "연락 정책",
             "phone": "",
             "contact_mode": "forbidden",
-            "contact_note": "연락금지/먼저 연락하지 않는 교수님. Q&A 과제와 세종 일정은 김민수 교수님 중심으로 확인.",
+            "contact_note": "연락금지. 심혈관질환 Q&A는 별도 과제 안내 기준으로 처리하고 먼저 연락하지 않는다.",
             "image_path": "./data/clerkships/professors/cardiology/교수님_노재형_01.jpeg"
           },
           {
@@ -9008,7 +9008,14 @@
             "교수님이 마우스를 건드리는 순간 노트북 화면이 아니라 TV 화면 기준으로 마우스가 움직이므로, 발표 자료를 가리킬 때는 당황하지 말고 TV 화면을 보면서 조정해야 한다. 발표 전에 한 번 연습해보는 것이 좋다.",
             "TV는 교육실 컴퓨터 모니터와 연결되어 있는 HDMI 선을 교육실 컴퓨터 모니터에서 뽑아 개인 노트북에 연결하면 된다. 김준형 교수님 발표 때는 본체 쪽을 따로 건드릴 필요는 없었다.",
             "발표 시작 전에는 마우스와 실습 명단표를 올려두고, 조장이 `심장내과 집담회` 용지를 직접 작성해서 세팅해두면 된다. 작성자에는 조장 이름, 회의 내용에는 발표자 이름을 적는다.",
-            "심장내과 집담회` 용지는 교육실 문 바로 옆 책상 위에 놓여 있으며, 따로 인쇄해서 가져갈 필요는 없다."
+            "심장내과 집담회` 용지는 교육실 문 바로 옆 책상 위에 놓여 있으며, 따로 인쇄해서 가져갈 필요는 없다.",
+            "발표할 때 마우스 포인터는 항상 보이도록 설정해둔다.",
+            "대본을 읽는 느낌이 나지 않게 연습하고, 슬라이드 노트가 보이면 최하점으로 처리될 수 있다.",
+            "발표 문구에서 `환자`는 `몇세 남자/여자`로, `ECG 케이스`는 `ECG 발표`로 바꿔 말한다.",
+            "사진·영상에서는 환자정보와 기계 판독 부분을 삭제하고, ECG 모눈은 정사각형 비율이 깨지지 않았는지 확인한다.",
+            "Present illness에 심전도 진단명을 미리 넣으면 해석할 것이 없어지므로 피한다.",
+            "Irregular rhythm은 10초 동안 R파 개수로 HR을 구하고, regular rhythm은 RR 간격/칸수로 HR을 계산한다.",
+            "소견은 간결하고 빠르게 말한다. 말이 느리면 교수님이 빨리 진행하라고 지적할 수 있다."
           ],
           "image_files": [
             "심장내과_발표준비_이미지/발표준비_자동실행_반복재생_01.png",
@@ -9032,7 +9039,7 @@
             "principles": 3,
             "equipment": 5,
             "adult_professor": 5,
-            "ecg_presentation": 11,
+            "ecg_presentation": 18,
             "images": 4
           }
         },
@@ -9042,7 +9049,8 @@
           "source_md": "/Users/sffs123gmail.com/Desktop/의학과 공부 파일/본3/심장내과/25/(0) 26년도 인계/심장내과 인계 정리용.md",
           "basic_principles": [
             "현장승인이 필요한 항목은 미리 준비한 상태로 수업에 들어가야 한다.",
-            "핫스팟을 이용해 아이패드로 유폴리오에 접속한 뒤, `.`만 찍어서 제출해두고 교수님께 승인만 받으면 되게 준비해두는 것이 좋다."
+            "핫스팟을 이용해 아이패드로 유폴리오에 접속한 뒤, `.`만 찍어서 제출해두고 교수님께 승인만 받으면 되게 준비해두는 것이 좋다.",
+            "현장승인은 핫스팟으로 연결한 아이패드를 미리 준비해 보여드린다. 연결이 제대로 안 되거나 핸드폰으로 내밀면 승인해주지 않을 수 있다."
           ],
           "free_record_onsite": [
             "총 10개 항목이며, 실습내용과 느낀점은 모두 `.`만 찍어서 제출한 뒤 현장승인을 받으면 된다.",
@@ -9057,7 +9065,7 @@
             "./assets/cardiology-uportfolio-guide/유폴리오_자유기록_현장승인_02.png"
           ],
           "counts": {
-            "basic_principles": 2,
+            "basic_principles": 3,
             "free_record_onsite": 2,
             "images": 2
           }
@@ -9146,7 +9154,7 @@
                   "items": [
                     {
                       "id": "task-facecase-report",
-                      "label": "대면증례보고서 · 성석우pf (교수님 바뀜)"
+                      "label": "대면증례보고서 · 성석우pf (교수님 바뀜, 2주차 주말/가급적 토요일 제출)"
                     },
                     {
                       "id": "task-pomr",
@@ -9154,7 +9162,7 @@
                     },
                     {
                       "id": "task-ecg-discussion",
-                      "label": "심전도 조별 토의 · 김민수pf"
+                      "label": "심전도 조별 토의 · 김민수pf (토요일 내 제출)"
                     },
                     {
                       "id": "task-cv-qna",
@@ -9205,27 +9213,27 @@
                   "items": [
                     {
                       "id": "task-clinical-expression-1",
-                      "label": "임상표현 계획과 자기평가 1번 업로드"
+                      "label": "임상표현 계획과 자기평가 (2주차 주말, 6개 개별 업로드)"
                     },
                     {
                       "id": "task-clinical-expression-2",
-                      "label": "임상표현 계획과 자기평가 2번 업로드"
+                      "label": "임상표현 계획과 자기평가 (2주차 주말, 6개 개별 업로드)"
                     },
                     {
                       "id": "task-clinical-expression-3",
-                      "label": "임상표현 계획과 자기평가 3번 업로드"
+                      "label": "임상표현 계획과 자기평가 (2주차 주말, 6개 개별 업로드)"
                     },
                     {
                       "id": "task-clinical-expression-4",
-                      "label": "임상표현 계획과 자기평가 4번 업로드"
+                      "label": "임상표현 계획과 자기평가 (2주차 주말, 6개 개별 업로드)"
                     },
                     {
                       "id": "task-clinical-expression-5",
-                      "label": "임상표현 계획과 자기평가 5번 업로드"
+                      "label": "임상표현 계획과 자기평가 (2주차 주말, 6개 개별 업로드)"
                     },
                     {
                       "id": "task-clinical-expression-6",
-                      "label": "임상표현 계획과 자기평가 6번 업로드"
+                      "label": "임상표현 계획과 자기평가 (2주차 주말, 6개 개별 업로드)"
                     }
                   ]
                 },
@@ -9234,11 +9242,11 @@
                   "items": [
                     {
                       "id": "task-clinical-skill-1",
-                      "label": "임상술기 계획과 자기평가 1번 업로드"
+                      "label": "임상술기 계획과 자기평가 (2주차 주말, 2개 개별 업로드)"
                     },
                     {
                       "id": "task-clinical-skill-2",
-                      "label": "임상술기 계획과 자기평가 2번 업로드"
+                      "label": "임상술기 계획과 자기평가 (2주차 주말, 2개 개별 업로드)"
                     }
                   ]
                 }
