@@ -8826,7 +8826,8 @@
             "contact_label": "개별 연락처",
             "phone": "010-3401-9962",
             "contact_mode": "direct",
-            "image_path": "./data/clerkships/professors/cardiology/교수님_정진옥_01.jpeg"
+            "image_path": "./data/clerkships/professors/cardiology/교수님_정진옥_01.jpeg",
+            "contact_note": "문자보다 당일 외래 들어가는 조원에게 부탁하는 방식이 더 나을 수 있음."
           },
           {
             "name": "이재환",
@@ -8842,7 +8843,7 @@
             "contact_label": "연락 정책",
             "phone": "",
             "contact_mode": "forbidden",
-            "contact_note": "연락 금지 교수님",
+            "contact_note": "기본 연락 금지. 단, 심전도 발표 관련 전날/당일 확인 문자는 인계 예시가 있음.",
             "image_path": "./data/clerkships/professors/cardiology/교수님_김준형_01.jpeg"
           },
           {
@@ -8851,7 +8852,8 @@
             "contact_label": "개별 연락처",
             "phone": "010-5457-0330",
             "contact_mode": "direct",
-            "image_path": "./data/clerkships/professors/cardiology/교수님_안계택_01.jpeg"
+            "image_path": "./data/clerkships/professors/cardiology/교수님_안계택_01.jpeg",
+            "contact_note": "외래 갔던 학생 통해 전달되면 별도 문자 안 보내도 됨."
           },
           {
             "name": "진선아",
@@ -8884,7 +8886,8 @@
             "contact_label": "개별 연락처",
             "phone": "010-3424-6150",
             "contact_mode": "direct",
-            "image_path": "./data/clerkships/professors/cardiology/교수님_성석우_01.jpeg"
+            "image_path": "./data/clerkships/professors/cardiology/교수님_성석우_01.jpeg",
+            "contact_note": "원문 메모: 전주 연락은 굳이 하지 말고, 월요일 전원 가면 그때 여쭤보기."
           },
           {
             "name": "김미주",
@@ -8900,7 +8903,8 @@
             "contact_label": "개별 연락처",
             "phone": "010-2818-3643",
             "contact_mode": "direct",
-            "image_path": "./data/clerkships/professors/cardiology/교수님_권희진_01.jpeg"
+            "image_path": "./data/clerkships/professors/cardiology/교수님_권희진_01.jpeg",
+            "contact_note": "전날 조장이 연락해서 CPX 일정 컨펌."
           },
           {
             "name": "양유진",
@@ -8908,7 +8912,7 @@
             "contact_label": "심장내과 의국",
             "phone": "042-280-8796",
             "contact_mode": "office",
-            "contact_note": "개별 번호 미확인, 본원 심장내과 의국 경유",
+            "contact_note": "양유진 교수님 26.04.27 이후 복귀 기준. 부재/복귀 전이면 복영남 교수님께 연락.",
             "image_path": "./data/clerkships/professors/cardiology/교수님_양유진_01.jpeg"
           },
           {
@@ -8941,7 +8945,7 @@
             "contact_label": "연락 정책",
             "phone": "",
             "contact_mode": "forbidden",
-            "contact_note": "먼저 연락하지 않는 교수님",
+            "contact_note": "연락금지/먼저 연락하지 않는 교수님. Q&A 과제와 세종 일정은 김민수 교수님 중심으로 확인.",
             "image_path": "./data/clerkships/professors/cardiology/교수님_노재형_01.jpeg"
           },
           {
