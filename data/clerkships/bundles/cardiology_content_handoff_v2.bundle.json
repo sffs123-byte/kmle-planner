@@ -834,7 +834,7 @@
       "title": "조장용 공지·문자 복사 가이드",
       "source_docx": "/Users/sffs123gmail.com/Desktop/의학과 공부 파일/본3/심장내과/25/(0) 26년도 인계/심장내과 조장용 공지, 문자 예시(26.04.10 update).docx",
       "identity_applied": "PK 3,4조 조장 배강렬",
-      "notice_style": "강렬 확정 공지 스타일: 상단 요약 박스 + 번호별 행동 지시 + 실제 조장 취합 기준",
+      "notice_style": "강렬 확정 공지 스타일: 상단 요약 박스 + 번호별 행동 지시 + 실제 조장 취합 기준. 원문 전제: 심장내과 시간표가 바뀌지 않았을 경우 기준이므로, 실제 일정 변경 시 교수님/치프 확인을 우선한다.",
       "day_notices": [
         {
           "id": "notice-preweek-weekend-prep",
@@ -953,7 +953,7 @@
           "group": "진선아 교수님",
           "recipient": "진선아 교수님",
           "timing": "전주 일요일",
-          "title": "전주 일요일 · 진선아 교수님",
+          "title": "1주차 월요일 · 진선아 교수님",
           "note": "",
           "copy_label": "진선아 교수님 문자 복사",
           "body": "교수님 안녕하세요.\n내일부터 2주간 심장내과 실습 예정인 PK 3,4조 조장 배강렬입니다.\n\n내일 의국 회의 후 오전 8시 40분부터 교육실에서 오리엔테이션이 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다.\n\n2주간 성실히 배우겠습니다.\n감사합니다."
@@ -993,7 +993,7 @@
           "group": "성석우 교수님",
           "recipient": "성석우 교수님",
           "timing": "전주 일요일",
-          "title": "전주 일요일 · 성석우 교수님",
+          "title": "1주차 월요일 · 성석우 교수님",
           "note": "",
           "copy_label": "성석우 교수님 문자 복사",
           "body": "교수님 안녕하세요.\n현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. \n내일 8시 교육실에서 대면증례보고서 OT가 있는 것으로 전달받았는데, 변동 사항 있는지 확인 부탁드립니다. \n\n감사합니다."
@@ -1003,7 +1003,7 @@
           "group": "진선아 교수님",
           "recipient": "진선아 교수님",
           "timing": "전주 일요일",
-          "title": "전주 일요일 · 진선아 교수님",
+          "title": "1주차 월요일 · 진선아 교수님",
           "note": "OT 하면서 여쭤보면 될 듯",
           "copy_label": "진선아 교수님 문자 복사",
           "body": "교수님 안녕하세요.\n이번 주부터 2주 간 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. \n내일 화요일 오후 2시에 의국에서 고혈압 CPX가 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. \n\n2주 간 성실히 배우겠습니다. \n감사합니다."
@@ -1013,7 +1013,7 @@
           "group": "박현웅 교수님",
           "recipient": "박현웅 교수님",
           "timing": "전주 일요일",
-          "title": "전주 일요일 · 박현웅 교수님",
+          "title": "1주차 월요일 · 박현웅 교수님",
           "note": "",
           "copy_label": "박현웅 교수님 문자 복사",
           "body": "교수님 안녕하세요.\n이번 주부터 2주 간 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다. \n이번 주 수요일 오전 11시에 교육실에서 흉통 CPX 시험이 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다. \n\n2주 간 성실히 배우겠습니다. 감사합니다."
@@ -1023,7 +1023,7 @@
           "group": "이재환 교수님",
           "recipient": "이재환 교수님",
           "timing": "전주 일요일",
-          "title": "전주 일요일 · 이재환 교수님",
+          "title": "1주차 월요일 · 이재환 교수님",
           "note": "",
           "copy_label": "이재환 교수님 문자 복사",
           "body": "교수님 안녕하세요. \n이번 주부터 2주 간 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다.\n이번 주 수요일 오전 10시에 교육실에서 POMR 발표가 진행된다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다.\n\n2주 간 성실히 배우겠습니다. 감사합니다."
@@ -1033,7 +1033,7 @@
           "group": "김준형 교수님",
           "recipient": "김준형 교수님",
           "timing": "전주 일요일",
-          "title": "전주 일요일 · 김준형 교수님",
+          "title": "1주차 월요일 · 김준형 교수님",
           "note": "(인원수에 따라 수 조정할것)",
           "copy_label": "김준형 교수님 문자 복사",
           "body": "교수님 안녕하세요. \n이번 주부터 2주 간 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다.\n이번 주 목요일 1명, 이번 주 금요일 1명, 다음 주 목요일 2명, 다음 주 금요일 2명이 심전도 발표를 하는 것으로 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다.\n\n2주 간 성실히 배우겠습니다. 감사합니다."
@@ -1154,7 +1154,7 @@
           "recipient": "양유진 교수님",
           "timing": "2주차 목요일",
           "title": "2주차 목요일 · 양유진 교수님",
-          "note": "",
+          "note": "양유진 교수님 26.04.27 이후 복귀 기준. 부재/복귀 전이면 복영남 교수님께 연락.",
           "copy_label": "양유진 교수님 문자 복사",
           "body": "교수님 안녕하세요. \n현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다.\n내일 금요일 오후 1시 30분에 심초음파실에서 '심장판막질환' 강의가 예정되어 있다고 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락드립니다.\n\n감사합니다.\n\n\n양유진 교수님 26.04.27 이후에 복귀하신다. 복영남 교수님께 연락드리자"
         }
@@ -5524,19 +5524,8 @@
       },
       "displayColor": "",
       "displayState": "normal",
-      "detail_guide_tag": "PCI 입실 이미지",
-      "detail_guide_images": [
-        {
-          "src": "./assets/cardiology-pci-outpatient-guide/PCI_입실동선_01.png",
-          "fileName": "심장내과_PCI_외래_이미지/PCI_입실동선_01.png",
-          "caption": "PCI 입실 동선"
-        },
-        {
-          "src": "./assets/cardiology-pci-outpatient-guide/PCI_민트색문_01.png",
-          "fileName": "심장내과_PCI_외래_이미지/PCI_민트색문_01.png",
-          "caption": "PCI 민트색 문"
-        }
-      ]
+      "detail_guide_tag": "세종 PCI/부정맥: 장소 가이드 참고",
+      "detail_guide_images": []
     },
     {
       "id": "s-2026-05-05-1100-def-pci-sejong",
@@ -5664,19 +5653,8 @@
       },
       "displayColor": "",
       "displayState": "normal",
-      "detail_guide_tag": "PCI 입실 이미지",
-      "detail_guide_images": [
-        {
-          "src": "./assets/cardiology-pci-outpatient-guide/PCI_입실동선_01.png",
-          "fileName": "심장내과_PCI_외래_이미지/PCI_입실동선_01.png",
-          "caption": "PCI 입실 동선"
-        },
-        {
-          "src": "./assets/cardiology-pci-outpatient-guide/PCI_민트색문_01.png",
-          "fileName": "심장내과_PCI_외래_이미지/PCI_민트색문_01.png",
-          "caption": "PCI 민트색 문"
-        }
-      ]
+      "detail_guide_tag": "세종 PCI/부정맥: 장소 가이드 참고",
+      "detail_guide_images": []
     },
     {
       "id": "s-2026-05-05-1330-def-arrhyproc",
@@ -5805,19 +5783,8 @@
       },
       "displayColor": "",
       "displayState": "normal",
-      "detail_guide_tag": "PCI 입실 이미지",
-      "detail_guide_images": [
-        {
-          "src": "./assets/cardiology-pci-outpatient-guide/PCI_입실동선_01.png",
-          "fileName": "심장내과_PCI_외래_이미지/PCI_입실동선_01.png",
-          "caption": "PCI 입실 동선"
-        },
-        {
-          "src": "./assets/cardiology-pci-outpatient-guide/PCI_민트색문_01.png",
-          "fileName": "심장내과_PCI_외래_이미지/PCI_민트색문_01.png",
-          "caption": "PCI 민트색 문"
-        }
-      ]
+      "detail_guide_tag": "세종 PCI/부정맥: 장소 가이드 참고",
+      "detail_guide_images": []
     },
     {
       "id": "comm-2026-05-05-admin",
@@ -6041,19 +6008,8 @@
       },
       "displayColor": "",
       "displayState": "normal",
-      "detail_guide_tag": "PCI 입실 이미지",
-      "detail_guide_images": [
-        {
-          "src": "./assets/cardiology-pci-outpatient-guide/PCI_입실동선_01.png",
-          "fileName": "심장내과_PCI_외래_이미지/PCI_입실동선_01.png",
-          "caption": "PCI 입실 동선"
-        },
-        {
-          "src": "./assets/cardiology-pci-outpatient-guide/PCI_민트색문_01.png",
-          "fileName": "심장내과_PCI_외래_이미지/PCI_민트색문_01.png",
-          "caption": "PCI 민트색 문"
-        }
-      ]
+      "detail_guide_tag": "세종 PCI/부정맥: 장소 가이드 참고",
+      "detail_guide_images": []
     },
     {
       "id": "s-2026-05-06-1100-arrhy-lecture",
@@ -8230,19 +8186,8 @@
       },
       "displayColor": "",
       "displayState": "normal",
-      "detail_guide_tag": "PCI 입실 이미지",
-      "detail_guide_images": [
-        {
-          "src": "./assets/cardiology-pci-outpatient-guide/PCI_입실동선_01.png",
-          "fileName": "심장내과_PCI_외래_이미지/PCI_입실동선_01.png",
-          "caption": "PCI 입실 동선"
-        },
-        {
-          "src": "./assets/cardiology-pci-outpatient-guide/PCI_민트색문_01.png",
-          "fileName": "심장내과_PCI_외래_이미지/PCI_민트색문_01.png",
-          "caption": "PCI 민트색 문"
-        }
-      ]
+      "detail_guide_tag": "세종 PCI/부정맥: 장소 가이드 참고",
+      "detail_guide_images": []
     },
     {
       "id": "overlay-2026-05-04-q-a",
