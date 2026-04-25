@@ -4426,6 +4426,43 @@
       return targets.filter(target => target.text);
     }
 
+
+    function communicationGuideForBundle(bundle) {
+      return bundle?.fixed_info?.communication_guide || bundle?.analysis_appendix?.communication_guide_v2 || null;
+    }
+
+    function pciOutpatientGuideForBundle(bundle) {
+      return bundle?.fixed_info?.pci_outpatient_guide || bundle?.analysis_appendix?.pci_outpatient_assets_v1 || null;
+    }
+
+    function renderCopyableCardListHtml(entries, emptyMessage = '복사할 문구가 아직 없다.') {
+      if (!Array.isArray(entries) || !entries.length) {
+        return `<div class="empty">${escapeHtml(emptyMessage)}</div>`;
+      }
+      return `<div class="detail-screen-stack">
+        ${entries.map(entry => {
+          const body = String(entry.body || '').trim();
+          const preview = body.split('\n').map(line => line.trim()).filter(Boolean).slice(0, 2).join(' / ');
+          const chips = [entry.week, entry.day, entry.timing, entry.recipient].filter(Boolean);
+          return `<article class="detail-screen-section" style="border-left:4px solid #2563eb;">
+            <div class="badge-row" style="margin-bottom:8px; gap:6px;">
+              ${chips.slice(0, 4).map(chip => `<span class="calendar-mini-chip">${escapeHtml(chip)}</span>`).join('')}
+            </div>
+            <div class="item-title" style="font-size:16px; margin-bottom:4px;">${escapeHtml(entry.title || entry.recipient || '문구')}</div>
+            ${entry.note ? `<div class="item-meta" style="margin-bottom:6px;">${escapeHtml(entry.note)}</div>` : ''}
+            ${preview ? `<div class="reference-info-line" style="color:#475569; margin-bottom:10px;">${escapeHtml(preview)}</div>` : ''}
+            <div class="badge-row" style="gap:8px; margin-bottom:10px;">
+              <button type="button" class="btn btn-small btn-secondary" data-copy="${escapeHtml(body)}" data-label="${escapeHtml(entry.copy_label || entry.title || '문구')}" onclick="copyTextToClipboard(this.dataset.copy, this.dataset.label)">${escapeHtml(entry.copy_label || '복사하기')}</button>
+            </div>
+            <details>
+              <summary style="cursor:pointer; font-weight:700; color:#1d4ed8;">자세히 보기</summary>
+              <pre style="white-space:pre-wrap; word-break:keep-all; overflow:auto; background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:12px; line-height:1.65; color:#0f172a; font-family:inherit; font-size:13px; margin-top:10px;">${escapeHtml(body)}</pre>
+            </details>
+          </article>`;
+        }).join('')}
+      </div>`;
+    }
+
     function isWeeklySummaryEvent(event) {
       if (!event) return false;
       if (event.sourceSessionId || event.sourceKind === 'session' || event.windowType === 'clerkship-session') return false;
@@ -6400,6 +6437,9 @@
                 ${locationGuide ? `<button class="btn btn-small btn-ghost" onclick="openCalendarLocationGuide('${weekKey}')">장소 지도 ${locationGuide.counts?.places || 0}</button>` : ''}
                 <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'basic_info')">심장내과 기본정보</button>
                 ${fixedInfo.evaluation_score_weights ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'evaluation_scores')">평가 비중</button>` : ''}
+                ${pciOutpatientGuideForBundle(bundle) ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'pci_outpatient')">PCI/외래 가이드</button>` : ''}
+                ${communicationGuideForBundle(bundle)?.day_notices?.length ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'day_notices')">요일별 공지</button>` : ''}
+                ${communicationGuideForBundle(bundle)?.professor_messages?.length ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'professor_messages')">교수님 문자</button>` : ''}
                 <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'professors')">교수님</button>
                 <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'group_rules')">조 운영 규칙</button>
                 ${hasSejongContext ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'sejong_notes')">세종 운영 메모</button>` : ''}
@@ -6574,6 +6614,100 @@
                   </div>
                 `).join('')}
               </div>
+            </div>
+          </div>
+        `;
+      }
+
+
+      if (panelKey === 'pci_outpatient') {
+        const guide = pciOutpatientGuideForBundle(bundle);
+        const guidePacks = (bundle?.analysis_appendix?.guide_packs || []).filter(pack => String(pack.type || '').includes('pci') || String(pack.id || '').includes('pci') || String(pack.name || '').includes('외래'));
+        return `
+          <div class="detail-screen-panel">
+            <div class="detail-screen-head">
+              <button class="detail-screen-back" onclick="openCalendarSummaryDetail('${weekKey}')">← 종합으로</button>
+              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
+            </div>
+            <div class="detail-screen-body">
+              <div class="detail-screen-hero">
+                <div class="badge-row">
+                  <span class="calendar-mini-chip">PCI/외래</span>
+                  <span class="calendar-mini-chip">이미지 ${guide?.counts?.images || guide?.asset_urls?.length || 0}</span>
+                  <span class="calendar-mini-chip">가이드 ${guidePacks.length}</span>
+                </div>
+                <div class="detail-screen-title">PCI 및 외래 가이드</div>
+                <div class="detail-screen-summary">심혈관조영실 입실 동선 이미지를 바로 보고, PCI/외래 인계는 필요할 때만 펼쳐서 확인한다.</div>
+              </div>
+              <div class="detail-screen-stack">
+                <div class="detail-screen-section">
+                  <h4>PCI 입실 이미지</h4>
+                  ${(guide?.asset_urls || []).length ? `<div class="location-guide-thumb-grid" style="margin-top:12px;">${(guide.asset_urls || []).map((url, index) => {
+                    const fileName = pathBasename((guide.image_files || [])[index] || url);
+                    const caption = index === 0 ? 'PCI 입실 동선' : 'PCI 민트색 문';
+                    return `<button type="button" class="location-guide-thumb" data-src="${escapeHtml(url)}" data-caption="${escapeHtml(caption)}" data-file-name="${escapeHtml(fileName)}" onclick="openImageLightbox(this.dataset.src, this.dataset.caption, this.dataset.fileName)">
+                      <img src="${encodeURI(url)}" alt="${escapeHtml(caption)}" loading="lazy" />
+                      <span>${escapeHtml(fileName)}</span>
+                    </button>`;
+                  }).join('')}</div>` : `<div class="empty">연결된 PCI 이미지가 아직 없다.</div>`}
+                </div>
+                ${guidePacks.map(pack => `
+                  <div class="detail-screen-section">
+                    <h4>${escapeHtml(pack.name || pack.id || 'PCI/외래 가이드')}</h4>
+                    <div>${renderReferenceLinesHtml([...(pack.core_points || []), ...(pack.watchouts || [])])}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      if (panelKey === 'day_notices') {
+        const guide = communicationGuideForBundle(bundle);
+        const notices = guide?.day_notices || [];
+        return `
+          <div class="detail-screen-panel">
+            <div class="detail-screen-head">
+              <button class="detail-screen-back" onclick="openCalendarSummaryDetail('${weekKey}')">← 종합으로</button>
+              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
+            </div>
+            <div class="detail-screen-body">
+              <div class="detail-screen-hero">
+                <div class="badge-row">
+                  <span class="calendar-mini-chip">공지 ${notices.length}</span>
+                  <span class="calendar-mini-chip">복사 가능</span>
+                  <span class="calendar-mini-chip">조장 실전형</span>
+                </div>
+                <div class="detail-screen-title">요일별 조원 공지</div>
+                <div class="detail-screen-summary">상단 요약 박스와 번호별 행동 지시가 들어간, 바로 복사해서 단톡에 올리는 공지 모음이다.</div>
+              </div>
+              ${renderCopyableCardListHtml(notices, '요일별 공지가 아직 없다.')}
+            </div>
+          </div>
+        `;
+      }
+
+      if (panelKey === 'professor_messages') {
+        const guide = communicationGuideForBundle(bundle);
+        const messages = guide?.professor_messages || [];
+        return `
+          <div class="detail-screen-panel">
+            <div class="detail-screen-head">
+              <button class="detail-screen-back" onclick="openCalendarSummaryDetail('${weekKey}')">← 종합으로</button>
+              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
+            </div>
+            <div class="detail-screen-body">
+              <div class="detail-screen-hero">
+                <div class="badge-row">
+                  <span class="calendar-mini-chip">문자 ${messages.length}</span>
+                  <span class="calendar-mini-chip">원문 유지</span>
+                  <span class="calendar-mini-chip">PK 3,4조 조장 배강렬</span>
+                </div>
+                <div class="detail-screen-title">교수님별 문자</div>
+                <div class="detail-screen-summary">원본 문자 예시에서 이름과 조만 채운 문구다. 자세히 보기를 열어 확인하고, 복사하기로 그대로 보낸다.</div>
+              </div>
+              ${renderCopyableCardListHtml(messages, '교수님 문자 예시가 아직 없다.')}
             </div>
           </div>
         `;

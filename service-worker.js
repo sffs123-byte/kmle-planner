@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kmle-planner-2026-04-26-cardiology-evaluation-weights';
+const CACHE_NAME = 'kmle-planner-2026-04-26-cardiology-pci-notices-messages';
 const ASSETS = [
   './',
   './index.html',

@@ -3006,7 +3006,9 @@
           "points": 6,
           "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
         }
-      ]
+      ],
+      "detail_guide_tag": "성인환 가이드",
+      "detail_guide_images": []
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-04-28-1400-htn-cpx",
@@ -3295,7 +3297,9 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "detail_guide_tag": "성인환 가이드",
+      "detail_guide_images": []
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-s-2026-04-29-1400-def-outpatient",
@@ -3562,6 +3566,19 @@
           "label": "심전도 조별 토의",
           "points": 6,
           "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ],
+      "detail_guide_tag": "ECG 발표 가이드",
+      "detail_guide_images": [
+        {
+          "src": "./assets/cardiology-presentation-guide/발표준비_심장내과_집담회_01.jpeg",
+          "fileName": "심장내과_발표준비_이미지/발표준비_심장내과_집담회_01.jpeg",
+          "caption": "김준형 교수님 심전도 발표 · 집담회 용지"
+        },
+        {
+          "src": "./assets/cardiology-presentation-guide/발표준비_심장내과_집담회_02.jpeg",
+          "fileName": "심장내과 집담회 용지 예시",
+          "caption": "김준형 교수님 심전도 발표 · 마우스 배치"
         }
       ]
     },
@@ -3843,6 +3860,19 @@
           "label": "심전도 조별 토의",
           "points": 6,
           "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ],
+      "detail_guide_tag": "ECG 발표 가이드",
+      "detail_guide_images": [
+        {
+          "src": "./assets/cardiology-presentation-guide/발표준비_심장내과_집담회_01.jpeg",
+          "fileName": "심장내과_발표준비_이미지/발표준비_심장내과_집담회_01.jpeg",
+          "caption": "김준형 교수님 심전도 발표 · 집담회 용지"
+        },
+        {
+          "src": "./assets/cardiology-presentation-guide/발표준비_심장내과_집담회_02.jpeg",
+          "fileName": "심장내과 집담회 용지 예시",
+          "caption": "김준형 교수님 심전도 발표 · 마우스 배치"
         }
       ]
     },
@@ -5000,6 +5030,19 @@
           "points": 6,
           "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
         }
+      ],
+      "detail_guide_tag": "ECG 발표 가이드",
+      "detail_guide_images": [
+        {
+          "src": "./assets/cardiology-presentation-guide/발표준비_심장내과_집담회_01.jpeg",
+          "fileName": "심장내과_발표준비_이미지/발표준비_심장내과_집담회_01.jpeg",
+          "caption": "김준형 교수님 심전도 발표 · 집담회 용지"
+        },
+        {
+          "src": "./assets/cardiology-presentation-guide/발표준비_심장내과_집담회_02.jpeg",
+          "fileName": "심장내과 집담회 용지 예시",
+          "caption": "김준형 교수님 심전도 발표 · 마우스 배치"
+        }
       ]
     },
     {
@@ -5286,6 +5329,19 @@
           "label": "심전도 조별 토의",
           "points": 6,
           "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
+        }
+      ],
+      "detail_guide_tag": "ECG 발표 가이드",
+      "detail_guide_images": [
+        {
+          "src": "./assets/cardiology-presentation-guide/발표준비_심장내과_집담회_01.jpeg",
+          "fileName": "심장내과_발표준비_이미지/발표준비_심장내과_집담회_01.jpeg",
+          "caption": "김준형 교수님 심전도 발표 · 집담회 용지"
+        },
+        {
+          "src": "./assets/cardiology-presentation-guide/발표준비_심장내과_집담회_02.jpeg",
+          "fileName": "심장내과 집담회 용지 예시",
+          "caption": "김준형 교수님 심전도 발표 · 마우스 배치"
         }
       ]
     },
@@ -9191,7 +9247,9 @@
           "원 bundle difficulty는 상세/원자료 난이도로 남기고, 캘린더 카드에는 user override를 우선 표시한다.",
           "사용자 확인으로 별도 보존된 수정: 심음청진 볼펜 점 메모, 흉통 CPX 수요일 10:00~11:00, POMR 증례발표 수요일 11:00~12:00.",
           "2026-04-26: 공유 앱 live state의 cardiology 전체 boardDifficultyOverride/userNote를 정적 bundle/state에 재동기화했다.",
-          "2026-04-26: 1-6. 심장내과.pdf p.2 평가 비율표를 fixed_info.evaluation_score_weights 및 세션/과제 evaluation_items에 반영했다."
+          "2026-04-26: 1-6. 심장내과.pdf p.2 평가 비율표를 fixed_info.evaluation_score_weights 및 세션/과제 evaluation_items에 반영했다.",
+          "2026-04-26: PCI/외래 가이드, 요일별 공지, 교수님 문자 패널을 GitHub 배포본에 재반영했다.",
+          "communication_guide의 교수님 문자는 PK 3,4조 조장 배강렬 기준으로 치환된 복사용 문구다."
         ],
         "evaluation_score_weights": {
           "title": "심장내과 평가 비중",
