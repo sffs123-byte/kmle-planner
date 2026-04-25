@@ -59,8 +59,7 @@
           "치프 선생님이 없는 경우에는 성석우 교수님께 월요일 오전에 연락해 Pretest 일정을 확인했다는 인계가 있다.",
           "치프 선생님이 없는 경우라면 이때 교수님께 ECG 케이스와 MI 케이스도 함께 요청하고, `나의 꿈` 스캔본도 드리면 된다."
         ],
-        "prepare_points": [],
-        "boardDifficultyOverride": 5
+        "prepare_points": []
       },
       {
         "time": "16:00~18:00",
@@ -117,10 +116,9 @@
         "intro": [
           "OSCE센터 B그룹 안 ICU룸에서 진행한다.",
           "조장은 수업 전에 조원들 `심음청진` 과제와 `나의 꿈` 자필과제를 전부 모아두고, 시험이 끝난 뒤 바로 교수님께 제출한다.",
-          "청진하는 자리에 볼펜으로점찍어둠."
+          "청진하는 자리에 볼펜으로 점찍어둠."
         ],
-        "prepare_points": [],
-        "boardDifficultyOverride": 4
+        "prepare_points": []
       },
       {
         "time": "10:00~12:00",
@@ -218,14 +216,11 @@
         "title": "흉통 CPX",
         "professor": "박현웅 교수님",
         "difficulty": 4,
-        "boardDifficultyOverride": 2,
         "intro": [
           "사용자 확인 기준: 수요일 10:00~11:00.",
           "이름은 CPX지만 실제로는 증례토의에 가깝다는 인계가 있다."
         ],
-        "prepare_points": [
-          "한끝 CPX 흉통 틀어두고 읽으면 됨"
-        ]
+        "prepare_points": []
       },
       {
         "time": "11:00~12:00",
@@ -236,8 +231,7 @@
           "이재환 교수님이 진행한다.",
           "조장은 교육실 컴퓨터에 미리 발표자 2명의 PPT를 띄워두는 것이 좋다. (USB 가능)"
         ],
-        "prepare_points": [],
-        "boardDifficultyOverride": 0
+        "prepare_points": []
       },
       {
         "time": "12:00~13:00",

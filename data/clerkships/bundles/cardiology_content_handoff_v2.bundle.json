@@ -697,7 +697,8 @@
     "front_chief_handoff_preserve_notes": [
       "카드 표시 난이도와 사용자 메모는 공유용 live state의 boardDifficultyOverride/userNote를 source of truth로 둔다.",
       "원 bundle difficulty는 상세/원자료 난이도로 남기고, 캘린더 카드에는 user override를 우선 표시한다.",
-      "사용자 확인으로 별도 보존된 수정: 심음청진 볼펜 점 메모, 흉통 CPX 수요일 10:00~11:00, POMR 증례발표 수요일 11:00~12:00."
+      "사용자 확인으로 별도 보존된 수정: 심음청진 볼펜 점 메모, 흉통 CPX 수요일 10:00~11:00, POMR 증례발표 수요일 11:00~12:00.",
+      "2026-04-26: 공유 앱 live state의 cardiology 전체 boardDifficultyOverride/userNote를 정적 bundle/state에 재동기화했다."
     ]
   },
   "submission_rules": [
@@ -814,7 +815,16 @@
         "조사 / 보강 내용",
         "교수님 스타일 장문 서술",
         "후기성 예외 사례"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-04-27-0840-ot",
@@ -890,7 +900,16 @@
       ],
       "related_chief_admin_ids": [
         "comm-2026-04-26-admin"
-      ]
+      ],
+      "boardDifficultyOverride": 1,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-04-27-1200-ihd",
@@ -972,7 +991,16 @@
       "related_chief_admin_ids": [
         "comm-2026-04-24-chief",
         "comm-2026-04-26-admin"
-      ]
+      ],
+      "boardDifficultyOverride": 4,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-04-27-1400-pretest",
@@ -1065,7 +1093,15 @@
         "comm-2026-04-27-chief"
       ],
       "boardDifficultyOverride": 5,
-      "difficulty_source_note": "원 bundle difficulty 8, 공유 앱 카드 표시 난이도 5 보존"
+      "difficulty_source_note": "원 bundle difficulty 8, 공유 앱 카드 표시 난이도 5 보존",
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-04-27-1600-physical",
@@ -1186,7 +1222,16 @@
       "related_chief_admin_ids": [
         "comm-2026-04-24-chief",
         "comm-2026-04-26-admin"
-      ]
+      ],
+      "boardDifficultyOverride": 4,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-04-27-chief",
@@ -1295,7 +1340,16 @@
         "s-2026-04-28-0840-heartsound",
         "s-2026-04-29-1100-pomr",
         "s-2026-04-29-1200-mi"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-04-27-admin",
@@ -1403,7 +1457,16 @@
         "s-2026-05-01-0800-ecg-b",
         "s-2026-05-07-0800-ecg-cd",
         "s-2026-05-08-0800-ecg-ef"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-04-28-0800-facecase",
@@ -1483,7 +1546,16 @@
       ],
       "related_chief_admin_ids": [
         "comm-2026-04-27-admin"
-      ]
+      ],
+      "boardDifficultyOverride": 2,
+      "userNote": "성석우 교수님이 환자를 주는 시간\n\n관상동맥의 분지와 걔네가 담당하는 wall들",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-04-28-0840-heartsound",
@@ -1631,7 +1703,14 @@
       ],
       "boardDifficultyOverride": 4,
       "userNote": "청진하는 자리에 볼펜으로점찍어둠",
-      "difficulty_source_note": "원 bundle difficulty 7, 공유 앱 카드 표시 난이도 4 보존"
+      "difficulty_source_note": "원 bundle difficulty 7, 공유 앱 카드 표시 난이도 4 보존",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-04-28-1000-abc-pci",
@@ -1792,7 +1871,16 @@
           "현장승인 필요"
         ],
         "show_assignment_count": true
-      }
+      },
+      "boardDifficultyOverride": 3,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-04-28-1000-def-outpatient",
@@ -1954,7 +2042,16 @@
           "현장승인 필요"
         ],
         "show_assignment_count": true
-      }
+      },
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-04-28-1200-echoecg",
@@ -2052,7 +2149,16 @@
       ],
       "detail_guide_tag": "성인환 가이드",
       "detail_guide_type": "adult-presentation",
-      "detail_guide_images": []
+      "detail_guide_images": [],
+      "boardDifficultyOverride": 5,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-04-28-1400-htn-cpx",
@@ -2195,7 +2301,16 @@
         "comm-2026-04-24-chief",
         "comm-2026-04-27-chief",
         "comm-2026-04-27-admin"
-      ]
+      ],
+      "boardDifficultyOverride": 4,
+      "userNote": "신체진찰 없고,\nD-P, T-P도 알아야..\n고혈압 약에 대한 공부\n\n임산부도 나오는데\n약을 다르게\n\n환자든 의사든 1번만 한다",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-04-28-chief",
@@ -2272,7 +2387,16 @@
         "s-2026-04-29-1100-pomr",
         "s-2026-04-29-1200-mi",
         "overlay-2026-04-29-cpx"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-04-28-admin",
@@ -2361,7 +2485,16 @@
         "s-2026-04-29-0840-ihd-topic",
         "s-2026-04-30-0800-ecg-a",
         "s-2026-05-01-0800-ecg-b"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-04-29-0840-ihd-topic",
@@ -2454,7 +2587,16 @@
         "comm-2026-04-24-chief",
         "comm-2026-04-28-chief",
         "comm-2026-04-28-admin"
-      ]
+      ],
+      "boardDifficultyOverride": 3,
+      "userNote": "대본 없이 앞조가 한것 공부해서 말하디",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-04-29-1100-pomr",
@@ -2578,7 +2720,15 @@
         "comm-2026-04-27-admin",
         "comm-2026-04-28-chief"
       ],
-      "boardDifficultyOverride": 0
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-04-29-1200-mi",
@@ -2673,7 +2823,16 @@
       ],
       "detail_guide_tag": "성인환 가이드",
       "detail_guide_type": "adult-presentation",
-      "detail_guide_images": []
+      "detail_guide_images": [],
+      "boardDifficultyOverride": 2,
+      "userNote": "대본도 봐도 되고\n\n원래 D,E가 디펜스를 하고\n영상도 다 하는 것",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-04-29-1400-def-outpatient",
@@ -2785,7 +2944,16 @@
         "assign-outpatient-record-2",
         "assign-onsite-outpatient-20260429-def"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-04-29-chief",
@@ -2877,7 +3045,16 @@
       "related_session_ids": [
         "s-2026-04-30-0800-ecg-a",
         "s-2026-04-30-1400-palpit"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-04-29-admin",
@@ -2963,7 +3140,16 @@
       "related_session_ids": [
         "s-2026-04-30-1400-palpit",
         "s-2026-04-30-0800-ecg-a"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-04-30-0800-ecg-a",
@@ -3146,7 +3332,16 @@
           "fileName": "심장내과 집담회 용지 예시",
           "caption": "김준형 교수님 심전도 발표 · 마우스 배치"
         }
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-04-30-0840-abc-outpatient",
@@ -3313,7 +3508,16 @@
           "현장승인 필요"
         ],
         "show_assignment_count": true
-      }
+      },
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-04-30-0840-def-pci",
@@ -3473,7 +3677,16 @@
           "현장승인 필요"
         ],
         "show_assignment_count": true
-      }
+      },
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-04-30-1400-palpit",
@@ -3590,7 +3803,16 @@
       "related_chief_admin_ids": [
         "comm-2026-04-29-chief",
         "comm-2026-04-29-admin"
-      ]
+      ],
+      "boardDifficultyOverride": 3,
+      "userNote": "2주차 목요일로 미뤄지는게 야마입니다.\n\n미리 대본을 짜서 간다.",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-04-30-chief",
@@ -3663,7 +3885,16 @@
       "related_session_ids": [
         "s-2026-05-01-0800-ecg-b",
         "s-2026-05-01-0840-osce"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-04-30-admin",
@@ -3743,7 +3974,16 @@
       "note": "보내기 기한: 목요일 13:00~14:00 권장 / 안계택 교수님 일정 확인은 외래 학생을 통한 확인이 되면 생략 가능하다.",
       "related_session_ids": [
         "s-2026-05-01-0840-osce"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-05-01-0800-ecg-b",
@@ -3922,7 +4162,16 @@
           "fileName": "심장내과 집담회 용지 예시",
           "caption": "김준형 교수님 심전도 발표 · 마우스 배치"
         }
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-05-01-0840-osce",
@@ -4044,7 +4293,16 @@
       "related_chief_admin_ids": [
         "comm-2026-04-30-chief",
         "comm-2026-04-30-admin"
-      ]
+      ],
+      "boardDifficultyOverride": 2,
+      "userNote": "시험보기전에 기기체크 하기",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-05-01-chief",
@@ -4124,7 +4382,16 @@
         "s-2026-05-04-1330-def-outpatient-sejong",
         "s-2026-05-07-0800-ecg-cd",
         "s-2026-05-08-0800-ecg-ef"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-05-04-1000-abc-outpatient-sejong",
@@ -4235,7 +4502,16 @@
         "comm-2026-05-01-chief",
         "comm-2026-05-03-chief",
         "comm-2026-05-03-admin"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-05-04-1330-def-outpatient-sejong",
@@ -4346,7 +4622,16 @@
         "comm-2026-05-01-chief",
         "comm-2026-05-03-chief",
         "comm-2026-05-03-admin"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-05-04-admin",
@@ -4441,7 +4726,16 @@
         "overlay-2026-05-06-item1",
         "s-2026-05-07-0800-ecg-cd",
         "s-2026-05-08-0800-ecg-ef"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-05-05-1000-abc-pci-sejong",
@@ -4559,7 +4853,16 @@
       "linked_assignments": [
         "assign-onsite-pci-20260505-abc"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-05-05-1100-def-pci-sejong",
@@ -4677,7 +4980,16 @@
       "linked_assignments": [
         "assign-onsite-pci-20260505-def"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-05-05-1330-def-arrhyproc",
@@ -4796,7 +5108,16 @@
       ],
       "linked_assignment_ids": [
         "assign-onsite-arrhyproc-20260505-def"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-05-05-admin",
@@ -4876,7 +5197,16 @@
       "note": "보내기 기한: 화요일 13:00~14:00 권장 / 오진경 교수님 강의는 수요일 오후 일정 확인용으로 화요일에 보낸다.",
       "related_session_ids": [
         "s-2026-05-06-1330-echo-understanding"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-05-06-1000-abc-arrhyproc",
@@ -5001,7 +5331,16 @@
       ],
       "linked_assignment_ids": [
         "assign-onsite-arrhyproc-20260506-abc"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-05-06-1100-arrhy-lecture",
@@ -5079,7 +5418,16 @@
       ],
       "linked_assignments": [
         "assign-ecg-group-discussion"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-05-06-1330-echo-understanding",
@@ -5187,7 +5535,16 @@
       ],
       "related_chief_admin_ids": [
         "comm-2026-05-05-admin"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-05-06-chief",
@@ -5264,7 +5621,16 @@
       "related_session_ids": [
         "s-2026-05-07-0800-ecg-cd",
         "s-2026-05-07-0900-dyspnea"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-05-06-admin",
@@ -5344,7 +5710,16 @@
       "note": "보내기 기한: 수요일 13:00~14:00 권장 / 김준형 교수님 발표 전날 리마인드 문자를 보낸다.",
       "related_session_ids": [
         "s-2026-05-07-0800-ecg-cd"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-05-07-0800-ecg-cd",
@@ -5522,7 +5897,16 @@
           "fileName": "심장내과 집담회 용지 예시",
           "caption": "김준형 교수님 심전도 발표 · 마우스 배치"
         }
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-05-07-0900-dyspnea",
@@ -5647,7 +6031,16 @@
       "related_chief_admin_ids": [
         "comm-2026-05-04-admin",
         "comm-2026-05-06-chief"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-05-07-1330-abc-outpatient",
@@ -5752,7 +6145,16 @@
         "assign-outpatient-record-2",
         "assign-onsite-outpatient-20260507-abc"
       ],
-      "approval_highlight": "현장승인"
+      "approval_highlight": "현장승인",
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-05-07-chief",
@@ -5833,7 +6235,16 @@
       "related_session_ids": [
         "s-2026-05-08-0800-ecg-ef",
         "s-2026-05-08-1330-valvular"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-05-07-admin",
@@ -5917,7 +6328,16 @@
       "note": "보내기 기한: 목요일 13:00~14:00 권장 / 양유진/복영남 교수님 판막질환 일정 확인 문자를 보낸다.",
       "related_session_ids": [
         "s-2026-05-08-1330-valvular"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-05-08-0800-ecg-ef",
@@ -6092,7 +6512,16 @@
           "fileName": "심장내과 집담회 용지 예시",
           "caption": "김준형 교수님 심전도 발표 · 마우스 배치"
         }
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "s-2026-05-08-1330-valvular",
@@ -6217,7 +6646,16 @@
       "related_chief_admin_ids": [
         "comm-2026-05-07-chief",
         "comm-2026-05-07-admin"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-05-08-chief",
@@ -6328,7 +6766,16 @@
         "assign-clinical-skill-selfeval"
       ],
       "note": "보내기 기한: 금요일 실습 종료 직후부터 밤까지 / 금요일 마감 과제는 이날 정리하고, 토요일 마감 과제/파일 회수는 밤에 한 번 더 확인한다.",
-      "related_session_ids": []
+      "related_session_ids": [],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-04-24-chief",
@@ -6413,7 +6860,16 @@
         "s-2026-04-28-0840-heartsound",
         "s-2026-04-28-1400-htn-cpx",
         "s-2026-04-29-0840-ihd-topic"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-04-24-admin",
@@ -6494,7 +6950,16 @@
       "note": "보내기 기한: 전주 금요일 13:00~14:00 권장 / 박재형 교수님은 금요일에 한 번만 연락하고, 답장이 없어도 추가 연락하지 않는다.",
       "related_session_ids": [
         "s-2026-04-28-0840-heartsound"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-04-26-admin",
@@ -6591,7 +7056,16 @@
         "s-2026-04-27-1200-ihd",
         "s-2026-04-27-1400-pretest",
         "s-2026-04-27-1600-physical"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-05-03-chief",
@@ -6661,7 +7135,16 @@
       "related_session_ids": [
         "s-2026-05-04-1000-abc-outpatient-sejong",
         "s-2026-05-04-1330-def-outpatient-sejong"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "comm-2026-05-03-admin",
@@ -6743,7 +7226,16 @@
       "related_session_ids": [
         "s-2026-05-04-1000-abc-outpatient-sejong",
         "s-2026-05-04-1330-def-outpatient-sejong"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "overlay-2026-04-29-cpx",
@@ -6842,7 +7334,14 @@
         "comm-2026-04-28-chief"
       ],
       "boardDifficultyOverride": 2,
-      "userNote": "한끝 CPX 흉통 틀어두고 읽으면 됨"
+      "userNote": "한끝 CPX 흉통 틀어두고 읽으면 됨",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "overlay-2026-05-04-pci-split",
@@ -6933,7 +7432,16 @@
         "1-9-3"
       ],
       "windowType": "clerkship-overlay",
-      "sourceKind": "overlay"
+      "sourceKind": "overlay",
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "overlay-2026-05-04-q-a",
@@ -7020,7 +7528,16 @@
         "card_badges": [],
         "detail_emphasis": [],
         "show_assignment_count": true
-      }
+      },
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "overlay-2026-05-05-quota",
@@ -7089,7 +7606,16 @@
         "1-10-1"
       ],
       "windowType": "clerkship-overlay",
-      "sourceKind": "overlay"
+      "sourceKind": "overlay",
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "overlay-2026-05-06-item1",
@@ -7167,7 +7693,16 @@
       "sourceKind": "overlay",
       "related_chief_admin_ids": [
         "comm-2026-05-04-admin"
-      ]
+      ],
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "overlay-2026-05-06-item3",
@@ -7231,7 +7766,16 @@
         "1-11-5"
       ],
       "windowType": "clerkship-overlay",
-      "sourceKind": "overlay"
+      "sourceKind": "overlay",
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "overlay-2026-05-06-item2",
@@ -7298,7 +7842,16 @@
         "1-11-3"
       ],
       "windowType": "clerkship-overlay",
-      "sourceKind": "overlay"
+      "sourceKind": "overlay",
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "overlay-2026-04-27-chief-prep",
@@ -11880,7 +12433,8 @@
     "front_chief_handoff_preserve_notes_v1": [
       "카드 표시 난이도와 사용자 메모는 공유용 live state의 boardDifficultyOverride/userNote를 source of truth로 둔다.",
       "원 bundle difficulty는 상세/원자료 난이도로 남기고, 캘린더 카드에는 user override를 우선 표시한다.",
-      "사용자 확인으로 별도 보존된 수정: 심음청진 볼펜 점 메모, 흉통 CPX 수요일 10:00~11:00, POMR 증례발표 수요일 11:00~12:00."
+      "사용자 확인으로 별도 보존된 수정: 심음청진 볼펜 점 메모, 흉통 CPX 수요일 10:00~11:00, POMR 증례발표 수요일 11:00~12:00.",
+      "2026-04-26: 공유 앱 live state의 cardiology 전체 boardDifficultyOverride/userNote를 정적 bundle/state에 재동기화했다."
     ]
   },
   "audit": {
