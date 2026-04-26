@@ -1514,17 +1514,11 @@
       },
       "displayColor": "",
       "displayState": "normal",
-      "evaluation_items": [
-        {
-          "id": "eval-cardiovascular-qna",
-          "label": "심혈관 질환에 대한 Q&A",
-          "points": 6,
-          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
-        }
-      ],
+      "evaluation_items": [],
       "ihd_qa_prepared_at": "2026-04-26",
       "ihd_qa_owner_note": "강렬 제외 조원 5명 Q&A + 강렬 본인 Q&A 1개. 강렬 질문은 Harrison 22e 기준 V7–V9/right-sided precordial leads 적응증.",
-      "ihd_qa_reference": "Harrison 22e fulltext: Fig. 247-5 additional posterior leads V7–V9 for acute posterolateral infarction; right chest leads V3R–V6R for RV involvement in inferior infarction; RV infarction section notes right-sided precordial leads esp. V4R ST elevation in first 24h."
+      "ihd_qa_reference": "Harrison 22e fulltext: Fig. 247-5 additional posterior leads V7–V9 for acute posterolateral infarction; right chest leads V3R–V6R for RV involvement in inferior infarction; RV infarction section notes right-sided precordial leads esp. V4R ST elevation in first 24h.",
+      "score_mapping_note": "2026-04-26 강렬 확인: 성인환 교수님/정진옥 교수님은 실제 채점하지 않는다고 하여 이 일정/연결 과제의 평가점수 표시는 제거."
     },
     {
       "id": "s-2026-04-27-1400-pretest",
@@ -2621,21 +2615,9 @@
       },
       "displayColor": "",
       "displayState": "normal",
-      "evaluation_items": [
-        {
-          "id": "eval-outpatient-observation",
-          "label": "외래 참관",
-          "points": 2,
-          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
-        },
-        {
-          "id": "eval-outpatient-previsit-record",
-          "label": "외래 예진 기록",
-          "points": 3,
-          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
-        }
-      ],
-      "detail_guide_tag": "외래 인계"
+      "evaluation_items": [],
+      "detail_guide_tag": "외래 인계",
+      "score_mapping_note": "2026-04-26 강렬 확인: 정진옥 교수님은 실제 채점하지 않는다고 하여 이 외래 블록에서는 평가점수 표시를 제거. 외래 참관/예진 점수 자체는 다른 채점 교수님 블록에 유지."
     },
     {
       "id": "s-2026-04-28-1200-echoecg",
@@ -2743,14 +2725,8 @@
       },
       "displayColor": "",
       "displayState": "normal",
-      "evaluation_items": [
-        {
-          "id": "eval-echo-understanding",
-          "label": "심초음파 검사의 이해",
-          "points": 6,
-          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
-        }
-      ]
+      "evaluation_items": [],
+      "score_mapping_note": "2026-04-26 강렬 확인: 성인환 교수님/정진옥 교수님은 실제 채점하지 않는다고 하여 이 일정/연결 과제의 평가점수 표시는 제거."
     },
     {
       "id": "s-2026-04-28-1400-htn-cpx",
@@ -3198,7 +3174,8 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "score_mapping_note": "2026-04-26 강렬 확인: 성인환 교수님/정진옥 교수님은 실제 채점하지 않는다고 하여 이 일정/연결 과제의 평가점수 표시는 제거."
     },
     {
       "id": "s-2026-04-29-1100-pomr",
@@ -3442,7 +3419,8 @@
         "exam": "auto"
       },
       "displayColor": "",
-      "displayState": "normal"
+      "displayState": "normal",
+      "score_mapping_note": "2026-04-26 강렬 확인: 성인환 교수님/정진옥 교수님은 실제 채점하지 않는다고 하여 이 일정/연결 과제의 평가점수 표시는 제거."
     },
     {
       "id": "s-2026-04-29-1400-def-outpatient",
@@ -8791,14 +8769,8 @@
       ],
       "milestones": [],
       "onsite_required": false,
-      "evaluation_items": [
-        {
-          "id": "eval-echo-understanding",
-          "label": "심초음파 검사의 이해",
-          "points": 6,
-          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
-        }
-      ]
+      "evaluation_items": [],
+      "score_mapping_note": "2026-04-26 강렬 확인: 성인환 교수님/정진옥 교수님은 실제 채점하지 않는다고 하여 이 일정/연결 과제의 평가점수 표시는 제거."
     },
     {
       "id": "assign-ihd-topic-presentation",
@@ -8822,14 +8794,8 @@
       "notes": [],
       "milestones": [],
       "onsite_required": false,
-      "evaluation_items": [
-        {
-          "id": "eval-cardiovascular-qna",
-          "label": "심혈관 질환에 대한 Q&A",
-          "points": 6,
-          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
-        }
-      ]
+      "evaluation_items": [],
+      "score_mapping_note": "2026-04-26 강렬 확인: 성인환 교수님/정진옥 교수님은 실제 채점하지 않는다고 하여 이 일정/연결 과제의 평가점수 표시는 제거."
     },
     {
       "id": "assign-pomr-case-ab",
@@ -8890,14 +8856,8 @@
       ],
       "milestones": [],
       "onsite_required": false,
-      "evaluation_items": [
-        {
-          "id": "eval-cardiovascular-qna",
-          "label": "심혈관 질환에 대한 Q&A",
-          "points": 6,
-          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
-        }
-      ]
+      "evaluation_items": [],
+      "score_mapping_note": "2026-04-26 강렬 확인: 성인환 교수님/정진옥 교수님은 실제 채점하지 않는다고 하여 이 일정/연결 과제의 평가점수 표시는 제거."
     },
     {
       "id": "assign-pretest-reflection",
@@ -9122,7 +9082,6 @@
       "difficulty_total": 7,
       "content_summary": "유폴 외래 예진기록지는 2회가 필요하며, 첫 번째 제출본을 가능한 빨리 확보한다.",
       "linked_session_ids": [
-        "s-2026-04-28-1000-def-outpatient",
         "s-2026-04-29-1400-def-outpatient",
         "s-2026-04-30-0840-abc-outpatient",
         "s-2026-05-04-1000-abc-outpatient-sejong",
@@ -9156,7 +9115,8 @@
           "points": 3,
           "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
         }
-      ]
+      ],
+      "score_mapping_note": "2026-04-26 강렬 확인: 정진옥 교수님은 실제 채점하지 않는다고 하여 이 외래 블록에서는 평가점수 표시를 제거. 외래 참관/예진 점수 자체는 다른 채점 교수님 블록에 유지."
     },
     {
       "id": "assign-outpatient-record-2",
@@ -9172,7 +9132,6 @@
       "difficulty_total": 7,
       "content_summary": "두 번째 예진기록지까지 채워야 과제 수량이 맞는다.",
       "linked_session_ids": [
-        "s-2026-04-28-1000-def-outpatient",
         "s-2026-04-29-1400-def-outpatient",
         "s-2026-04-30-0840-abc-outpatient",
         "s-2026-05-04-1000-abc-outpatient-sejong",
@@ -9204,7 +9163,8 @@
           "points": 3,
           "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
         }
-      ]
+      ],
+      "score_mapping_note": "2026-04-26 강렬 확인: 정진옥 교수님은 실제 채점하지 않는다고 하여 이 외래 블록에서는 평가점수 표시를 제거. 외래 참관/예진 점수 자체는 다른 채점 교수님 블록에 유지."
     },
     {
       "id": "assign-weekly-reflection-w1",
@@ -9801,14 +9761,8 @@
       ],
       "milestones": [],
       "onsite_required": true,
-      "evaluation_items": [
-        {
-          "id": "eval-outpatient-observation",
-          "label": "외래 참관",
-          "points": 2,
-          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
-        }
-      ]
+      "evaluation_items": [],
+      "score_mapping_note": "2026-04-26 강렬 확인: 정진옥 교수님은 실제 채점하지 않는다고 하여 이 외래 블록에서는 평가점수 표시를 제거. 외래 참관/예진 점수 자체는 다른 채점 교수님 블록에 유지."
     },
     {
       "id": "assign-onsite-outpatient-20260429-def",
