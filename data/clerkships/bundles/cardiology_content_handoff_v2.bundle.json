@@ -1435,7 +1435,33 @@
           "- NSTEMI는 `[논 스테미]`로 읽는다. `[엔 스테미]`가 아니다."
         ],
         "준비 / 운영 포인트": [],
-        "질문 / 예시 포인트": [],
+        "질문 / 예시 포인트": [
+          "#### 실제 준비 Q&A (2026-04-27)",
+          "",
+          "##### 김단아 — RV infarction에서 nitrate 금기",
+          "- **질문**: 허혈성 심질환에서 치료제로 nitrate가 많이 사용되는데, RV infarction 때는 왜 금기인가요?",
+          "- **답변 요지**: nitrate는 정맥 확장을 통해 preload를 낮추고 관상동맥 확장으로 허혈 완화에 도움을 준다. 그러나 RV infarction에서는 우심실 수축 기능이 떨어져 좌심실로 넘겨줄 혈액량이 preload에 크게 의존한다. 이때 nitrate를 투여하면 venous return이 감소해 RV output이 급격히 줄고, 이어 LV filling과 cardiac output도 떨어져 심한 저혈압과 쇼크가 발생할 수 있다. 따라서 RV infarction이 의심되면 nitrate를 피하고 preload 유지를 위해 수액을 우선 고려한다. 주의 상황: 저혈압, RV infarction, 최근 sildenafil 사용, 서맥.",
+          "",
+          "##### 이서현 — RCA infarct에서 수액이 중요한 이유",
+          "- **질문**: RCA infarct에서는 왜 다른 부위 infarct와 다르게 첫 처치에서 수액 치료가 중요하게 언급되나요?",
+          "- **답변 요지**: RCA는 RV와 SA/AV node를 공급하는 경우가 많다. Proximal RCA 폐색이 생기면 RV ischemia/failure와 bradyarrhythmia가 함께 나타날 수 있고, RV가 LV로 혈액을 충분히 넘기지 못해 LV preload가 감소한다. 이 상태에서 혈압이 떨어지면 우선 수액으로 preload를 보충해 RV output과 LV filling을 유지하는 것이 중요하다. 다만 definitive treatment는 reperfusion이며, 수액은 RV infarct에서 hemodynamic support의 의미로 이해한다.",
+          "",
+          "##### 김민재 — Variant angina에서 beta blocker 주의",
+          "- **질문**: Variant angina에서는 다른 angina와 다르게 beta blocker가 금기인가요?",
+          "- **답변 요지**: Variant angina는 fixed stenosis보다 coronary vasospasm이 핵심이다. 비선택적 beta blocker를 쓰면 β2-mediated vasodilation이 막히고 α-mediated vasoconstriction이 상대적으로 두드러지는 unopposed alpha effect가 생겨 vasospasm이 악화될 수 있다. 따라서 variant angina에서는 beta blocker보다 CCB와 long-acting nitrate가 기본 치료가 된다.",
+          "",
+          "##### 김신유 — Acute MI 48시간 이내 VF가 많은 이유",
+          "- **질문**: MI 발생 후 48시간 이내에 VF에 의한 급사가 특히 많은 이유는 무엇인가요?",
+          "- **답변 요지**: 급성 허혈 초기에는 심근 전기적 불안정성이 최고조에 이른다. ATP 고갈로 Na/K pump 기능이 저하되고, 세포 내 Na/Ca 축적과 세포 외 K 증가가 생겨 resting membrane potential과 action potential이 불안정해진다. 허혈 부위와 정상 부위 사이 border zone에서는 conduction velocity와 refractory period가 달라져 unidirectional block, slow conduction, reentry circuit이 만들어지기 쉽다. 여기에 catecholamine 상승이 겹치면서 premature beat 하나가 VF로 진행할 수 있다. 48시간 이후에는 급성 전기 불안정성은 줄지만, 만성기에는 scar 기반 monomorphic VT가 문제가 된다.",
+          "",
+          "##### 신건우 — Troponin negative ischemia와 imaging",
+          "- **질문**: Troponin elevation이 없는 ischemia 상황에서도 장기적으로 myocardial damage가 누적될 수 있는지, 그리고 stress echo나 cardiac MRI 같은 imaging은 언제 고려하나요?",
+          "- **답변 요지**: Troponin은 주로 myocardial necrosis가 있을 때 상승하므로, troponin이 정상이라고 ischemia가 없다는 뜻은 아니다. 반복적인 ischemia, microvascular dysfunction, supply-demand mismatch가 있으면 명확한 necrosis 없이도 subclinical dysfunction이나 remodeling이 누적될 수 있다. 증상이 지속되거나 위험도가 높거나 resting evaluation만으로 설명이 부족하면 functional assessment가 필요하다. Stress echo는 inducible wall motion abnormality로 ischemia를 보고, cardiac MRI는 perfusion, viability, fibrosis까지 평가할 수 있어 더 정밀한 risk stratification에 도움이 된다.",
+          "",
+          "##### 배강렬 — Unstable angina는 troponin 정상인데 왜 ACS로 다루나",
+          "- **질문**: Unstable angina는 troponin이 정상이라 심근괴사가 증명되지 않는데, 왜 stable angina처럼 외래 추적하지 않고 NSTEMI와 비슷하게 ACS로 입원 치료하나요?",
+          "- **답변 요지**: Troponin 정상은 ‘괴사가 아직 없거나 검출 한계 이하’라는 뜻이지 plaque가 안정적이라는 뜻은 아니다. Unstable angina는 보통 plaque rupture/erosion과 non-occlusive thrombus가 생긴 상태라, 병태생리상 stable angina보다 NSTEMI 쪽에 더 가깝다. Stable angina가 predictable exertional chest pain이라면, unstable angina는 새로 생긴 흉통, 악화되는 흉통, 안정 시 흉통처럼 plaque가 불안정하다는 신호다. 그래서 antiplatelet, anticoagulation, statin 등 ACS 기본 치료를 시작하고, recurrent pain, dynamic ST-T change, hemodynamic instability, arrhythmia, GRACE risk 등을 보고 early invasive strategy를 결정한다. 핵심은 ‘troponin이 정상이라 안전하다’가 아니라 ‘아직 infarction으로 넘어가기 전의 ACS일 수 있다’는 점이다."
+        ],
         "조사 / 보강 내용": []
       },
       "raw_md_sources": [
@@ -1443,11 +1469,16 @@
       ],
       "raw_md_excerpt": "#### 1-3-4. IHD Q&A\n##### 수업 성격\n- 시간표상 증례발표로 적혀 있지만, 실제로는 성인환 교수님과 IHD 관련 질문을 가지고 토의하는 시간이다.\n- IHD 전반을 공부해가고, 조원들끼리 질문과 답을 미리 공유한 뒤 질문자와 답변자를 정해 들어가면 편하다.\n##### 질문 준비 방식\n- 질문은 서로 겹치지 않게 준비하는 것이 좋다.\n- 토의 과정에서 이미 다룬 내용을 다시 질문하면 교수님이 좋게 보지 않으신다는 인계가 있다.\n- 질문은 짧고 간결하게, 국시 수준에서 중요한 포인트 위주로 준비하는 것이 좋다.\n- 너무 사소하거나 지엽적인 질문은 선호하지 않으시는 분위기다.\n- 질문자는 본인이 던지는 질문의 답을 이미 알고 있다는 느낌으로 들어가야 한다. 모르는 내용을 그냥 물어보는 식으로 보이면 좋지 않다고 한다.\n##### 진행 분위기\n- 아이패드를 보면서 질문해도 괜찮았다는 인계가 있다.\n- 다만 타이핑을 너무 많이 하면 그냥 들으라고 하실 수 있다.\n- 실습 번호 순으로 앉았고, 화요일과 수요일에도 같은 순서로 앉으라고 하셨다는 인계가 있다.\n- 점수에 들어가는 수업은 아니며, 학생들에게 조금이라도 더 알려주시려는 취지의 수업이라 너무 쫄 필요는 없다.\n##### 용어 메모\n- NSTEMI는 `[논 스테미]`로 읽는다. `[엔 스테미]`가 아니다.",
       "calendar_body_short": "교육실 · 성인환 교수님",
-      "prep_tasks": [],
+      "prep_tasks": [
+        "조원별 IHD Q&A 질문/답변 확인",
+        "질문이 서로 겹치지 않는지 확인",
+        "본인 질문은 unstable angina가 troponin 정상이어도 ACS로 다뤄지는 이유로 준비"
+      ],
       "core_points": [
         "시간표상 증례발표로 적혀 있지만, 실제로는 성인환 교수님과 IHD 관련 질문을 가지고 토의하는 시간이다.",
         "IHD 전반을 공부해가고, 조원들끼리 질문과 답을 미리 공유한 뒤 질문자와 답변자를 정해 들어가면 편하다.",
-        "질문은 서로 겹치지 않게 준비하는 것이 좋다."
+        "질문은 서로 겹치지 않게 준비하는 것이 좋다.",
+        "조원 6명 IHD Q&A 실제 질문/답변을 정리해두었다: RV infarction nitrate 금기, RCA infarct 수액, variant angina beta blocker 주의, acute MI early VF, troponin-negative ischemia imaging, unstable angina가 ACS로 다뤄지는 이유."
       ],
       "approval_required": false,
       "approval_kind": null,
@@ -1490,7 +1521,9 @@
           "points": 6,
           "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
         }
-      ]
+      ],
+      "ihd_qa_prepared_at": "2026-04-26",
+      "ihd_qa_owner_note": "강렬 제외 조원 5명 Q&A + 강렬 본인 Q&A 1개. 이름 포함 내부 조장용 정리."
     },
     {
       "id": "s-2026-04-27-1400-pretest",
