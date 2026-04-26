@@ -2433,6 +2433,7 @@
       <button class="nav-tab" data-tab="planner">주간 플래너</button>
       <button class="nav-tab" data-tab="calendar">실습 캘린더</button>
       <button class="nav-tab" data-tab="subjects">과목 관리</button>
+      <button class="nav-tab" data-tab="quizzes">퀴즈 모음</button>
     </nav>
 
     <section class="tab-content active" id="tab-dashboard">
@@ -2680,6 +2681,33 @@
         </aside>
 
         <section class="subject-detail" id="subjectDetail"></section>
+      </div>
+    </section>
+
+    <section class="tab-content" id="tab-quizzes">
+      <div class="panel" style="padding:28px;">
+        <div class="panel-header">
+          <div>
+            <div class="panel-title">퀴즈 모음</div>
+            <div class="panel-subtitle">Anki SRS 방식의 과목별 Pre-test 퀴즈</div>
+          </div>
+        </div>
+        <div id="quizGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:20px;">
+          <a href="./quizzes/심장내과_pretest_quiz.html" target="_blank" style="text-decoration:none;">
+            <div class="quiz-card" style="background:var(--surface-strong);border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px 20px;cursor:pointer;transition:box-shadow 0.18s,transform 0.18s;" onmouseover="this.style.boxShadow='0 8px 28px rgba(47,109,246,0.13)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='none';this.style.transform='none'">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+                <span style="font-size:1.5rem;">🫀</span>
+                <span style="font-weight:800;font-size:0.97rem;color:var(--text);">심장내과 Pre-test</span>
+              </div>
+              <div style="color:var(--muted);font-size:0.82rem;margin-bottom:10px;">EKG · Syncope · 고혈압 · AFib · Stress test · ACS · HF · VHD · PAD</div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span style="background:var(--primary-soft);color:var(--primary);font-size:0.76rem;font-weight:700;padding:3px 10px;border-radius:999px;">9문항</span>
+                <span style="background:#f0fdf4;color:var(--green);font-size:0.76rem;font-weight:700;padding:3px 10px;border-radius:999px;">SRS</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <p style="color:var(--muted);font-size:0.82rem;margin-top:24px;">새 과목 퀴즈는 quizzes/ 폴더에 HTML 추가 후 이 목록에 카드를 추가하세요.</p>
       </div>
     </section>
 
