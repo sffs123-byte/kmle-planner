@@ -1074,7 +1074,7 @@ function renderQuizCard(id) {{
                 <button class="edit-btn" onclick="toggleQuizEdit('${{id}}')" title="편집">✏️</button>
                 <button class="copy-btn" onclick="copyQA('${{id}}')" title="문제+답 복사">📋</button>
             </div>
-            <button class="show-answer-btn" id="showAnsBtn" onclick="showQuizAnswer()">정답 보기 ▼</button>
+            <button class="show-answer-btn" id="showAnsBtn" onclick="showQuizAnswer('${{id}}')">정답 보기 ▼</button>
             <div class="quiz-answer" id="quizAnswer">
                 <div class="draw-toolbar" id="draw-toolbar-quiz"></div>
                 <div style="position:relative;">
@@ -1094,11 +1094,12 @@ function renderQuizCard(id) {{
     updateStats();
 }}
 
-function showQuizAnswer() {{
+function showQuizAnswer(id) {{
     document.getElementById('quizAnswer').classList.add('visible');
     document.getElementById('showAnsBtn').style.display = 'none';
     const rr = document.getElementById('ratingBtns');
     if (rr) rr.style.display = 'flex';
+    setTimeout(() => showQuizStaticDraw(id), 30);
 }}
 
 function toggleQuizGuide() {{
@@ -1127,6 +1128,7 @@ function toggleQuizEdit(id) {{
         // Sync card view
         const cardContent = document.getElementById('ans-content-' + id);
         if (cardContent) cardContent.innerHTML = edits[id];
+        setTimeout(() => showQuizStaticDraw(id), 30);
     }} else {{
         if (!quizAnswer.classList.contains('visible')) quizAnswer.classList.add('visible');
         showEditToolbar(quizAnswer, content, 'quiz-' + id);
@@ -2522,13 +2524,13 @@ function eraseAt(px, py) {{
 }}
 
 // ── Show saved strokes as static (non-interactive) overlay ──
-function showStaticDraw(id) {{
-    const strokes = drawData[id];
-    if (!strokes || strokes.length === 0) return;
-    const canvas = document.getElementById('draw-canvas-' + id);
-    if (!canvas) return;
-    const content = document.getElementById('ans-content-' + id);
-    if (!content) return;
+function renderStaticDrawOnCanvas(canvas, content, strokes) {{
+    if (!canvas || !content) return false;
+    if (!strokes || strokes.length === 0) {{
+        canvas.style.display = 'none';
+        canvas.style.pointerEvents = 'none';
+        return false;
+    }}
     const rect = content.getBoundingClientRect();
     const parent = canvas.parentElement;
     const dpr = window.devicePixelRatio || 1;
@@ -2547,6 +2549,23 @@ function showStaticDraw(id) {{
     const ctx = canvas.getContext('2d');
     ctx.scale(dpr, dpr);
     renderStrokes(ctx, strokes, w, h);
+    return true;
+}}
+
+function showStaticDraw(id) {{
+    return renderStaticDrawOnCanvas(
+        document.getElementById('draw-canvas-' + id),
+        document.getElementById('ans-content-' + id),
+        drawData[id]
+    );
+}}
+
+function showQuizStaticDraw(id) {{
+    return renderStaticDrawOnCanvas(
+        document.getElementById('draw-canvas-quiz'),
+        document.getElementById('quizAnsContent'),
+        drawData[id]
+    );
 }}
 
 // ── Quiz draw ──
@@ -2555,7 +2574,7 @@ function toggleQuizDraw(id) {{
     const canvas = document.getElementById('draw-canvas-quiz');
     const toolbar = document.getElementById('draw-toolbar-quiz');
 
-    if (canvas.style.display === 'none' || !canvas.style.display) {{
+    if (canvas.style.display === 'none' || !canvas.style.display || canvas.style.pointerEvents === 'none') {{
         quizDrawCardId = id;
         activeDrawId = 'quiz';
         buildDrawToolbar('draw-toolbar-quiz');
@@ -2575,8 +2594,10 @@ function toggleQuizDraw(id) {{
         const quizAns = document.getElementById('quizAnswer');
         if (quizAns) quizAns.classList.remove('draw-active');
         document.body.classList.remove('drawing-active');
+        const finishedId = quizDrawCardId;
         activeDrawId = null;
         drawCtx = null;
+        if (finishedId) setTimeout(() => showQuizStaticDraw(finishedId), 30);
     }}
 }}
 
