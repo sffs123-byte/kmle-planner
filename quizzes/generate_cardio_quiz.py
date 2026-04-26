@@ -94,9 +94,11 @@ CARDS = [
 <h4>고혈압 약제</h4>
 <table>
 <tr><th>약제</th><th>적극적 적응</th><th>금기</th><th>부작용</th></tr>
-<tr><td><b>ACEi/ARB</b></td><td>심부전, DM with albuminuria, CKD</td><td>Hyperkalemia, Renal failure, bilateral RAS, 임신</td><td>Hyperkalemia, 마른기침(ACEi), 혈관부종(ACEi)</td></tr>
-<tr><td><b>BB</b></td><td>심부전, 협심증, 심근경색, 빈맥성 부정맥</td><td>천식, COPD, 심한 서맥, 말초혈관질환</td><td>천식 악화, 서맥, diabetogenic potential</td></tr>
-<tr><td><b>CCB</b></td><td>협심증, 수축기 단독 고혈압, 빈맥</td><td>서맥(non-DHP)</td><td>DHP: 홍조, 두통, 부종 / NDHP: AV block, 심근 수축력 저하</td></tr>
+<tr><td><b>ACE inhibitor</b></td><td>심부전, DM with albuminuria, CKD</td><td>Hyperkalemia, renal failure, bilateral RAS, 임신</td><td>Hyperkalemia, 마른기침, 혈관부종</td></tr>
+<tr><td><b>ARB</b></td><td>심부전, DM with albuminuria, CKD</td><td>Hyperkalemia, renal failure, bilateral RAS, 임신</td><td>Hyperkalemia, 혈관부종 드묾, 마른기침 드묾</td></tr>
+<tr><td><b>Beta blocker</b></td><td>심부전, 협심증, 심근경색, 빈맥성 부정맥</td><td>천식, COPD, 심한 서맥, 말초혈관질환</td><td>천식 악화, 서맥, diabetogenic potential</td></tr>
+<tr><td><b>DHP-CCB</b></td><td>협심증, 수축기 단독 고혈압</td><td>심한 저혈압</td><td>홍조, 두통, 말초부종</td></tr>
+<tr><td><b>Non-DHP CCB</b></td><td>협심증, 빈맥성 부정맥</td><td>서맥, AV block, HFrEF</td><td>AV block, 심근 수축력 저하, 서맥</td></tr>
 <tr><td><b>Thiazide</b></td><td>심부전, 수축기 단독 고혈압</td><td>통풍, 저칼륨혈증</td><td>Hypo NA, metabolic alkalosis, dyslipidemia, 인슐린 저항성 증가</td></tr>
 </table>""",
         "pages": [2],
