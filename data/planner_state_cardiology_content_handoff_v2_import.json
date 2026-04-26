@@ -9644,9 +9644,9 @@
               "- **질문**: Troponin elevation이 없는 ischemia 상황에서도 장기적으로 myocardial damage가 누적될 수 있는지, 그리고 stress echo나 cardiac MRI 같은 imaging은 언제 고려하나요?",
               "- **답변 요지**: Troponin은 주로 myocardial necrosis가 있을 때 상승하므로, troponin이 정상이라고 ischemia가 없다는 뜻은 아니다. 반복적인 ischemia, microvascular dysfunction, supply-demand mismatch가 있으면 명확한 necrosis 없이도 subclinical dysfunction이나 remodeling이 누적될 수 있다. 증상이 지속되거나 위험도가 높거나 resting evaluation만으로 설명이 부족하면 functional assessment가 필요하다. Stress echo는 inducible wall motion abnormality로 ischemia를 보고, cardiac MRI는 perfusion, viability, fibrosis까지 평가할 수 있어 더 정밀한 risk stratification에 도움이 된다.",
               "",
-              "##### 배강렬 — V7–V9와 V1–V4R lead는 언제, 왜 추가하나",
-              "- **질문**: 표준 12유도 ECG에서는 V1–V6까지만 보는데, V7–V9나 V1–V4R 같은 추가 lead는 언제 붙이나요? 특히 V1–V6만으로 불충분하다는 것은 어떤 단서로 알 수 있나요?",
-              "- **답변 요지**: 표준 12유도 ECG는 심장을 전면/측면 중심으로 보는 기본 창이라 posterior wall과 right ventricle은 직접 보기가 어렵다. 그래서 표준 ECG에서 특정 단서가 보이면 추가 lead로 숨은 infarction을 확인한다. V7–V9는 posterior MI가 의심될 때 붙인다. 단서는 V1–V3의 horizontal ST depression, tall R wave, upright T wave처럼 posterior ST elevation이 앞쪽 lead에 거울상으로 보이는 소견이다. 특히 ischemic chest pain이 있는데 ST elevation이 뚜렷하지 않거나, inferior/lateral MI와 함께 V1–V3 ST depression이 보이면 V7–V9를 붙여 posterior ST elevation을 확인한다. V1–V4R은 RV infarction이 의심될 때 붙인다. 단서는 inferior MI, 특히 ST elevation이 lead III에서 II보다 크거나, hypotension이 있는데 폐울혈은 뚜렷하지 않고 JVP 상승/서맥/AV block이 동반되는 상황이다. 이때 V4R ST elevation이 있으면 RV infarction 가능성이 커진다. 정리하면 표준 ECG가 불충분한 이유는 posterior wall과 RV가 표준 lead의 사각지대이기 때문이고, V1–V3 reciprocal pattern은 V7–V9, inferior MI + RV failure 소견은 V1–V4R을 붙이라는 신호다."
+              "##### 배강렬 — V7–V9와 right-sided precordial lead의 적응증",
+              "- **질문**: 표준 12유도 ECG 외에 V7–V9나 V1–V4R 같은 추가 lead를 붙이는 경우가 있던데, Harrison 기준으로 각각의 정확한 적응증은 무엇인가요?",
+              "- **답변 요지**: Harrison 22판 기준으로 V7–V9는 acute posterolateral infarction의 detection을 돕기 위해 추가하는 posterior leads다. V7은 midaxillary line, V8은 posterior axillary line, V9는 posterior scapular line에 붙이며, 모두 V4와 같은 horizontal plane에 놓는다. 즉 표준 12유도에서 posterior/posterolateral infarction이 충분히 직접 보이지 않을 수 있기 때문에 V7–V9를 추가한다. Right chest lead는 inferior infarction 상황에서 right ventricular involvement를 더 잘 보기 위해 추가한다. Harrison figure 설명에서는 V3R–V6R이 inferior infarction에서 RV involvement detection을 높일 수 있다고 되어 있고, RV infarction section에서는 right-sided precordial ECG leads, 특히 V4R의 ST-segment elevation이 RV infarction 첫 24시간에 흔하다고 설명한다. 그래서 실전적으로는 inferior MI에서 RV infarction 동반 여부를 확인하려고 right-sided leads, 특히 V4R을 본다. 이게 중요한 이유는 RV infarction이면 치료가 달라져서, nitrate처럼 preload를 떨어뜨리는 약은 피하고 hypotension이 있으면 volume expansion으로 RV preload를 유지해야 하기 때문이다."
             ],
             "조사 / 보강 내용": []
           },
@@ -9658,13 +9658,13 @@
           "prep_tasks": [
             "조원별 IHD Q&A 질문/답변 확인",
             "질문이 서로 겹치지 않는지 확인",
-            "본인 질문은 V7–V9/V1–V4R 추가 lead의 적응증과 표준 ECG 단서로 준비"
+            "본인 질문은 Harrison 기준 V7–V9와 right-sided precordial lead의 적응증으로 준비"
           ],
           "core_points": [
             "시간표상 증례발표로 적혀 있지만, 실제로는 성인환 교수님과 IHD 관련 질문을 가지고 토의하는 시간이다.",
             "IHD 전반을 공부해가고, 조원들끼리 질문과 답을 미리 공유한 뒤 질문자와 답변자를 정해 들어가면 편하다.",
             "질문은 서로 겹치지 않게 준비하는 것이 좋다.",
-            "조원 6명 IHD Q&A 실제 질문/답변을 정리해두었다: RV infarction nitrate 금기, RCA infarct 수액, variant angina beta blocker 주의, acute MI early VF, troponin-negative ischemia imaging, V7–V9 posterior lead와 V1–V4R right-sided lead의 적응증과 표준 ECG 단서."
+            "조원 6명 IHD Q&A 실제 질문/답변을 정리해두었다: RV infarction nitrate 금기, RCA infarct 수액, variant angina beta blocker 주의, acute MI early VF, troponin-negative ischemia imaging, Harrison 기준 V7–V9 posterior lead와 right-sided precordial lead의 적응증."
           ],
           "approval_required": false,
           "approval_kind": null,
@@ -9709,7 +9709,8 @@
             }
           ],
           "ihd_qa_prepared_at": "2026-04-26",
-          "ihd_qa_owner_note": "강렬 제외 조원 5명 Q&A + 강렬 본인 Q&A 1개. 강렬 질문은 V7–V9/V1–V4R 추가 lead 적응증과 표준 ECG 단서."
+          "ihd_qa_owner_note": "강렬 제외 조원 5명 Q&A + 강렬 본인 Q&A 1개. 강렬 질문은 Harrison 22e 기준 V7–V9/right-sided precordial leads 적응증.",
+          "ihd_qa_reference": "Harrison 22e fulltext: Fig. 247-5 additional posterior leads V7–V9 for acute posterolateral infarction; right chest leads V3R–V6R for RV involvement in inferior infarction; RV infarction section notes right-sided precordial leads esp. V4R ST elevation in first 24h."
         },
         {
           "id": "s-2026-04-27-1400-pretest",
