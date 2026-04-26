@@ -1482,6 +1482,87 @@ function applyStrokeStyle(ctx, s) {{
     }}
 }}
 
+function clampPressure(v) {{
+    return Math.max(0.08, Math.min(1, Number.isFinite(v) ? v : 0.55));
+}}
+
+function normalizePointerPressure(e) {{
+    let p = (typeof e.pressure === 'number') ? e.pressure : 0;
+    // iPad Safari/WKWebView may expose stylus force on touch-like events.
+    if ((!p || p < 0.01) && typeof e.webkitForce === 'number') p = Math.min(1, e.webkitForce);
+    // Mouse and some browsers report 0 on pointerdown; use a neutral pressure.
+    if (!p || p < 0.01) p = (e.pointerType === 'pen') ? 0.48 : 0.55;
+    return clampPressure(p);
+}}
+
+function pointPressure(pt) {{
+    return clampPressure(pt && typeof pt.p === 'number' ? pt.p : 0.55);
+}}
+
+function catmullRom(p0, p1, p2, p3, t, key) {{
+    const v0 = (p0 && typeof p0[key] === 'number') ? p0[key] : p1[key];
+    const v1 = (p1 && typeof p1[key] === 'number') ? p1[key] : 0;
+    const v2 = (p2 && typeof p2[key] === 'number') ? p2[key] : v1;
+    const v3 = (p3 && typeof p3[key] === 'number') ? p3[key] : v2;
+    const t2 = t * t;
+    const t3 = t2 * t;
+    return 0.5 * ((2 * v1) + (-v0 + v2) * t + (2*v0 - 5*v1 + 4*v2 - v3) * t2 + (-v0 + 3*v1 - 3*v2 + v3) * t3);
+}}
+
+function buildSmoothPenPoints(points) {{
+    if (!points || points.length <= 2) return (points || []).map(pt => ({{ x: pt.x, y: pt.y, p: pointPressure(pt) }}));
+    const steps = points.length > 180 ? 3 : 5;
+    const out = [];
+    for (let i = 0; i < points.length - 1; i++) {{
+        const p0 = points[Math.max(0, i - 1)];
+        const p1 = points[i];
+        const p2 = points[i + 1];
+        const p3 = points[Math.min(points.length - 1, i + 2)];
+        for (let s = 0; s < steps; s++) {{
+            const t = s / steps;
+            out.push({{
+                x: catmullRom(p0, p1, p2, p3, t, 'x'),
+                y: catmullRom(p0, p1, p2, p3, t, 'y'),
+                p: clampPressure(catmullRom(p0, {{...p1, p: pointPressure(p1)}}, {{...p2, p: pointPressure(p2)}}, p3 ? {{...p3, p: pointPressure(p3)}} : p3, t, 'p'))
+            }});
+        }}
+    }}
+    const last = points[points.length - 1];
+    out.push({{ x: last.x, y: last.y, p: pointPressure(last) }});
+    return out;
+}}
+
+function penBrushWidth(stroke, pt, idx, count) {{
+    const base = Math.max(1, stroke.size || 2);
+    const pressureWidth = base * (0.55 + pointPressure(pt) * 1.75);
+    if (count < 8) return pressureWidth;
+    const phase = idx / Math.max(1, count - 1);
+    const edge = Math.min(phase, 1 - phase);
+    const taper = Math.max(0.34, Math.min(1, edge / 0.10));
+    return Math.max(0.45, pressureWidth * taper);
+}}
+
+function drawSmoothedPenStroke(ctx, stroke) {{
+    if (!stroke.points || stroke.points.length < 2) return;
+    const pts = buildSmoothPenPoints(stroke.points);
+    if (pts.length < 2) return;
+    ctx.save();
+    ctx.strokeStyle = stroke.color;
+    ctx.globalAlpha = 1.0;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    for (let i = 1; i < pts.length; i++) {{
+        const a = pts[i - 1], b = pts[i];
+        if (Math.hypot(b.x - a.x, b.y - a.y) < 0.05) continue;
+        ctx.lineWidth = (penBrushWidth(stroke, a, i - 1, pts.length) + penBrushWidth(stroke, b, i, pts.length)) / 2;
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(b.x, b.y);
+        ctx.stroke();
+    }}
+    ctx.restore();
+}}
+
 // ── Render all strokes onto canvas ──
 function renderStrokes(ctx, strokes, w, h) {{
     ctx.clearRect(0, 0, w, h);
@@ -1502,14 +1583,18 @@ function renderStrokes(ctx, strokes, w, h) {{
             ctx.globalAlpha = 1.0;
         }} else {{
             if (!s.points || s.points.length < 2) continue;
-            ctx.beginPath();
-            ctx.moveTo(s.points[0].x, s.points[0].y);
-            for (let i = 1; i < s.points.length; i++) {{
-                ctx.lineTo(s.points[i].x, s.points[i].y);
+            if (s.mode === 'pen') {{
+                drawSmoothedPenStroke(ctx, s);
+            }} else {{
+                ctx.beginPath();
+                ctx.moveTo(s.points[0].x, s.points[0].y);
+                for (let i = 1; i < s.points.length; i++) {{
+                    ctx.lineTo(s.points[i].x, s.points[i].y);
+                }}
+                applyStrokeStyle(ctx, s);
+                ctx.stroke();
+                ctx.globalAlpha = 1.0;
             }}
-            applyStrokeStyle(ctx, s);
-            ctx.stroke();
-            ctx.globalAlpha = 1.0;
         }}
     }}
 }}
@@ -1542,7 +1627,7 @@ function pointInRect(pos, s) {{
 
 // ── Hit-test: is point (px,py) near any segment of stroke? ──
 function strokeHitTest(stroke, px, py, threshold) {{
-    const r = threshold + (stroke.mode === 'highlighter' ? stroke.size * 3 : stroke.size / 2);
+    const r = threshold + (stroke.mode === 'highlighter' ? stroke.size * 3 : (stroke.mode === 'pen' ? stroke.size * 1.25 : stroke.size / 2));
     if (stroke.type === 'rect') {{
         const x1 = stroke.x, y1 = stroke.y, x2 = stroke.x + stroke.w, y2 = stroke.y + stroke.h;
         if (distToSegment(px, py, x1, y1, x2, y1) < r) return true;
@@ -2013,7 +2098,8 @@ function getDrawPos(e) {{
     const scaleY = canvas.offsetHeight / rect.height;
     return {{
         x: (e.clientX - rect.left) * scaleX,
-        y: (e.clientY - rect.top) * scaleY
+        y: (e.clientY - rect.top) * scaleY,
+        p: normalizePointerPressure(e)
     }};
 }}
 
@@ -2401,6 +2487,10 @@ function drawEnd(e) {{
 
 function drawSingleStroke(ctx, s) {{
     if (!s.points || s.points.length < 2) return;
+    if (s.mode === 'pen') {{
+        drawSmoothedPenStroke(ctx, s);
+        return;
+    }}
     ctx.beginPath();
     ctx.moveTo(s.points[0].x, s.points[0].y);
     for (let i = 1; i < s.points.length; i++) ctx.lineTo(s.points[i].x, s.points[i].y);
