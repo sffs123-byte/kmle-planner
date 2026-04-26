@@ -3451,14 +3451,7 @@
       "sourceAssignmentId": "assign-onsite-ecg-a",
       "sourceKind": "assignment",
       "baseDate": "2026-04-30",
-      "evaluation_items": [
-        {
-          "id": "eval-ecg-group-discussion",
-          "label": "심전도 조별 토의",
-          "points": 6,
-          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
-        }
-      ]
+      "evaluation_items": []
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-onsite-palpit-cpx-1",
@@ -3716,14 +3709,7 @@
       "sourceAssignmentId": "assign-onsite-ecg-b",
       "sourceKind": "assignment",
       "baseDate": "2026-05-01",
-      "evaluation_items": [
-        {
-          "id": "eval-ecg-group-discussion",
-          "label": "심전도 조별 토의",
-          "points": 6,
-          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
-        }
-      ]
+      "evaluation_items": []
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-onsite-osce-1",
@@ -4902,14 +4888,7 @@
       "sourceAssignmentId": "assign-onsite-ecg-cd",
       "sourceKind": "assignment",
       "baseDate": "2026-05-07",
-      "evaluation_items": [
-        {
-          "id": "eval-ecg-group-discussion",
-          "label": "심전도 조별 토의",
-          "points": 6,
-          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
-        }
-      ]
+      "evaluation_items": []
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-onsite-dyspnea-cpx-1",
@@ -5139,14 +5118,7 @@
       "sourceAssignmentId": "assign-onsite-ecg-ef",
       "sourceKind": "assignment",
       "baseDate": "2026-05-08",
-      "evaluation_items": [
-        {
-          "id": "eval-ecg-group-discussion",
-          "label": "심전도 조별 토의",
-          "points": 6,
-          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
-        }
-      ]
+      "evaluation_items": []
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-assignment-summary-assign-onsite-valvular-1",
@@ -17504,14 +17476,7 @@
           ],
           "milestones": [],
           "onsite_required": true,
-          "evaluation_items": [
-            {
-              "id": "eval-ecg-group-discussion",
-              "label": "심전도 조별 토의",
-              "points": 6,
-              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
-            }
-          ]
+          "evaluation_items": []
         },
         {
           "id": "assign-onsite-ecg-b",
@@ -17535,14 +17500,7 @@
           "notes": [],
           "milestones": [],
           "onsite_required": true,
-          "evaluation_items": [
-            {
-              "id": "eval-ecg-group-discussion",
-              "label": "심전도 조별 토의",
-              "points": 6,
-              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
-            }
-          ]
+          "evaluation_items": []
         },
         {
           "id": "assign-onsite-ecg-cd",
@@ -17566,14 +17524,7 @@
           "notes": [],
           "milestones": [],
           "onsite_required": true,
-          "evaluation_items": [
-            {
-              "id": "eval-ecg-group-discussion",
-              "label": "심전도 조별 토의",
-              "points": 6,
-              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
-            }
-          ]
+          "evaluation_items": []
         },
         {
           "id": "assign-onsite-ecg-ef",
@@ -17597,14 +17548,7 @@
           "notes": [],
           "milestones": [],
           "onsite_required": true,
-          "evaluation_items": [
-            {
-              "id": "eval-ecg-group-discussion",
-              "label": "심전도 조별 토의",
-              "points": 6,
-              "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
-            }
-          ]
+          "evaluation_items": []
         },
         {
           "id": "assign-onsite-pci-20260428-abc",
