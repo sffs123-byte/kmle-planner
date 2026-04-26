@@ -396,6 +396,46 @@ body {{
     cursor: pointer;
 }}
 
+.self-grade-box {{
+    margin: 18px 0 10px;
+    padding: 16px;
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    background: rgba(30, 30, 46, 0.7);
+}}
+.self-grade-label {{
+    display: flex; justify-content: space-between; align-items: center; gap: 10px;
+    color: var(--text); font-weight: 700; font-size: 14px; margin-bottom: 8px;
+}}
+.self-grade-label small {{ color: var(--text-dim); font-weight: 500; }}
+.self-answer-input {{
+    width: 100%; min-height: 130px; resize: vertical;
+    border: 1px solid var(--card-border); border-radius: 12px;
+    background: #eff1f5; color: #4c4f69;
+    padding: 12px 14px; font-size: 15px; line-height: 1.7;
+    font-family: inherit;
+}}
+.self-answer-input:focus {{ outline: 2px solid var(--accent); outline-offset: 2px; }}
+.self-grade-actions {{ display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }}
+.self-grade-actions button {{
+    border: none; border-radius: 9px; padding: 9px 13px;
+    font-size: 13px; font-weight: 700; cursor: pointer;
+}}
+.grade-btn {{ background: var(--accent); color: #fff; }}
+.grade-clear-btn {{ background: transparent; color: var(--text-dim); border: 1px solid var(--card-border) !important; }}
+.grade-result {{
+    display: none; margin-top: 12px; padding: 12px 14px;
+    border-radius: 12px; background: #eff1f5; color: #4c4f69;
+    font-size: 13px; line-height: 1.65;
+}}
+.grade-result.visible {{ display: block; }}
+.grade-result.good {{ border-left: 5px solid #40a02b; }}
+.grade-result.partial {{ border-left: 5px solid #df8e1d; }}
+.grade-result.weak {{ border-left: 5px solid #d20f39; }}
+.grade-result h4 {{ margin: 0 0 6px; color: #1e66f5; font-size: 15px; }}
+.grade-result ul {{ margin: 6px 0 0 18px; padding: 0; }}
+.grade-result .muted {{ color: #6c6f85; font-size: 12px; margin-top: 8px; }}
+
 /* Rating buttons */
 .rating-btns {{
     display: flex; gap: 10px; justify-content: center;
@@ -740,11 +780,13 @@ const STORAGE_PREFIX = {storage_prefix_js};
 const SRS_KEY = STORAGE_PREFIX + 'srs_v1';
 const HIST_KEY = STORAGE_PREFIX + 'hist_v1';
 const EDITS_KEY = STORAGE_PREFIX + 'edits_v1';
+const USER_ANS_KEY = STORAGE_PREFIX + 'user_answers_v1';
 
 // ── SRS State ──
 let srs = JSON.parse(localStorage.getItem(SRS_KEY) || '{{}}');
 let history = JSON.parse(localStorage.getItem(HIST_KEY) || '[]');
 let edits = JSON.parse(localStorage.getItem(EDITS_KEY) || '{{}}');
+let userAnswers = JSON.parse(localStorage.getItem(USER_ANS_KEY) || '{{}}');
 let doneSet = new Set();
 let queue = [];
 let pending = [];
@@ -755,6 +797,7 @@ let waitTimer = null;
 function saveSrs() {{ localStorage.setItem(SRS_KEY, JSON.stringify(srs)); }}
 function saveHist() {{ localStorage.setItem(HIST_KEY, JSON.stringify(history)); }}
 function saveEdits() {{ localStorage.setItem(EDITS_KEY, JSON.stringify(edits)); }}
+function saveUserAnswers() {{ localStorage.setItem(USER_ANS_KEY, JSON.stringify(userAnswers)); }}
 
 // ── Card View Functions ──
 function toggleAnswer(id) {{
@@ -1118,6 +1161,18 @@ function renderQuizCard(id) {{
                 <button class="edit-btn" onclick="toggleQuizEdit('${{id}}')" title="편집">✏️</button>
                 <button class="copy-btn" onclick="copyQA('${{id}}')" title="문제+답 복사">📋</button>
             </div>
+            <div class="self-grade-box">
+                <div class="self-grade-label">
+                    <span>✍️ 내 답안 먼저 써보기</span>
+                    <small>자동저장 · 수정된 정답 기준 채점</small>
+                </div>
+                <textarea class="self-answer-input" id="quizUserAnswer" placeholder="정답 보기 전에 기억나는 대로 적어봐. 예: 핵심 진단 기준, 수치, 치료 순서..."></textarea>
+                <div class="self-grade-actions">
+                    <button class="grade-btn" onclick="gradeUserAnswer('${{id}}')">내 답 채점</button>
+                    <button class="grade-clear-btn" onclick="clearUserAnswer('${{id}}')">답안 지우기</button>
+                </div>
+                <div class="grade-result" id="gradeResult"></div>
+            </div>
             <button class="show-answer-btn" id="showAnsBtn" onclick="showQuizAnswer('${{id}}')">정답 보기 ▼</button>
             <div class="quiz-answer" id="quizAnswer">
                 <div class="draw-toolbar" id="draw-toolbar-quiz"></div>
@@ -1135,6 +1190,14 @@ function renderQuizCard(id) {{
             </div>
         </div>
     `;
+    const userAnswerEl = document.getElementById('quizUserAnswer');
+    if (userAnswerEl) {{
+        userAnswerEl.value = userAnswers[id] || '';
+        userAnswerEl.addEventListener('input', () => {{
+            userAnswers[id] = userAnswerEl.value;
+            saveUserAnswers();
+        }});
+    }}
     updateStats();
 }}
 
@@ -1157,6 +1220,166 @@ function toggleQuizGuide() {{
         g.style.display = 'none';
         if (btn) btn.textContent = '📖 Study Guide 보기';
     }}
+}}
+
+const GRADE_STOPWORDS = new Set([
+    '그리고','그러나','또는','혹은','대한','대해','설명','나열','정의','경우','대표','기준','치료','진단','소견','증상','환자','상태','검사','시행','사용','필요','있음','없음','이상','이하','미만','초과','관련','각각','각각의','대표적','흔한','이후','이전','통해','위해','한다','되는','있는','없는','으로','에서','에게','까지','부터','보다','만큼','같은','때문','중심','전체','기본','주요','가능','고려','확인','진행','유지','조절','추가','감소','증가','정답','수정','문제','and','or','with','without','the','of','in','to','for','as','by','is','are','be','on','at','from','than','then','that','this'
+]);
+const SUB_DIGITS = {{ '₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9' }};
+
+function escapeHtmlText(value) {{
+    return String(value || '').replace(/[&<>"']/g, ch => ({{
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }}[ch]));
+}}
+
+function normalizeGradeText(text) {{
+    return String(text || '')
+        .normalize('NFKC')
+        .replace(/[₀₁₂₃₄₅₆₇₈₉]/g, ch => SUB_DIGITS[ch] || ch)
+        .replace(/[≥]/g, '>=')
+        .replace(/[≤]/g, '<=')
+        .replace(/[–—]/g, '-')
+        .replace(/㎜/g, 'mm')
+        .replace(/㎎/g, 'mg')
+        .replace(/㎗/g, 'dl')
+        .replace(/\\s+/g, ' ')
+        .toLowerCase();
+}}
+
+function compactGradeText(text) {{
+    return normalizeGradeText(text).replace(/[^a-z0-9가-힣]/g, '');
+}}
+
+function extractGradeTokens(text) {{
+    const normalized = normalizeGradeText(text);
+    const tokens = normalized.match(/[a-z0-9가-힣][a-z0-9가-힣+/#%.-]*/g) || [];
+    return tokens.filter(token =>
+        token.length >= 2 &&
+        !GRADE_STOPWORDS.has(token) &&
+        !/^[0-9]+$/.test(token)
+    );
+}}
+
+function extractGradeTermsFromNode(node) {{
+    if (!node) return [];
+    const terms = [];
+    const seen = new Set();
+    function addToken(token) {{
+        const compact = compactGradeText(token);
+        if (!compact || compact.length < 2 || seen.has(compact)) return;
+        seen.add(compact);
+        terms.push(token);
+    }}
+
+    node.querySelectorAll('h4,h5,b,strong,th,td').forEach(el => {{
+        extractGradeTokens(el.textContent).forEach(addToken);
+    }});
+    if (terms.length === 0) {{
+        extractGradeTokens(node.textContent).forEach(addToken);
+    }}
+    return terms.slice(0, 32);
+}}
+
+function levenshteinDistance(a, b) {{
+    if (Math.abs(a.length - b.length) > 2) return 99;
+    const dp = Array.from({{ length: a.length + 1 }}, () => new Array(b.length + 1).fill(0));
+    for (let i = 0; i <= a.length; i++) dp[i][0] = i;
+    for (let j = 0; j <= b.length; j++) dp[0][j] = j;
+    for (let i = 1; i <= a.length; i++) {{
+        for (let j = 1; j <= b.length; j++) {{
+            const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+            dp[i][j] = Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + cost);
+        }}
+    }}
+    return dp[a.length][b.length];
+}}
+
+function findTypoHint(term, userTokens) {{
+    const target = compactGradeText(term);
+    if (target.length < 4) return null;
+    const threshold = target.length >= 8 ? 2 : 1;
+    let best = null;
+    let bestDist = 99;
+    for (const rawToken of userTokens) {{
+        const token = compactGradeText(rawToken);
+        if (!token || token === target || token[0] !== target[0]) continue;
+        const dist = levenshteinDistance(token, target);
+        if (dist < bestDist) {{ bestDist = dist; best = rawToken; }}
+    }}
+    return bestDist <= threshold ? best : null;
+}}
+
+function gradeUserAnswer(id) {{
+    const input = document.getElementById('quizUserAnswer');
+    const result = document.getElementById('gradeResult');
+    const answerNode = document.getElementById('quizAnsContent');
+    if (!input || !result) return;
+
+    const typed = input.value.trim();
+    userAnswers[id] = input.value;
+    saveUserAnswers();
+
+    if (!typed) {{
+        result.className = 'grade-result visible weak';
+        result.innerHTML = '<h4>먼저 답을 적어줘</h4><div>정답 보기 전에 네 답안을 2-3줄이라도 적으면 빠진 핵심을 잡아줄게.</div>';
+        return;
+    }}
+
+    const terms = extractGradeTermsFromNode(answerNode);
+    if (terms.length === 0) {{
+        result.className = 'grade-result visible partial';
+        result.innerHTML = '<h4>채점 기준을 읽지 못했어</h4><div>정답을 한 번 열거나, 정답 편집 내용을 저장한 뒤 다시 눌러줘.</div>';
+        return;
+    }}
+
+    const typedCompact = compactGradeText(typed);
+    const userTokens = Array.from(new Set(extractGradeTokens(typed)));
+    const covered = [];
+    const missing = [];
+    const typos = [];
+
+    terms.forEach(term => {{
+        const compact = compactGradeText(term);
+        if (!compact) return;
+        if (typedCompact.includes(compact)) {{
+            covered.push(term);
+            return;
+        }}
+        const typo = findTypoHint(term, userTokens);
+        if (typo) typos.push({{ expected: term, typed: typo }});
+        else missing.push(term);
+    }});
+
+    const effectiveHit = covered.length + typos.length * 0.5;
+    const score = terms.length ? effectiveHit / terms.length : 0;
+    const level = score >= 0.68 ? 'good' : (score >= 0.40 ? 'partial' : 'weak');
+    const title = level === 'good' ? '대체로 맞았어' : (level === 'partial' ? '방향은 맞는데 보완 필요' : '핵심이 많이 빠졌어');
+    const pct = Math.round(score * 100);
+
+    let html = '<h4>' + title + '</h4>';
+    html += '<div>핵심 커버율 약 <b>' + pct + '%</b> · 맞춘 핵심 ' + covered.length + '개 / 기준 ' + terms.length + '개</div>';
+    if (missing.length) {{
+        html += '<div style="margin-top:8px"><b>빠진 핵심</b></div><ul>' + missing.slice(0, 8).map(t => '<li>' + escapeHtmlText(t) + '</li>').join('') + '</ul>';
+    }}
+    if (typos.length) {{
+        html += '<div style="margin-top:8px"><b>오타/표기 의심</b></div><ul>' + typos.slice(0, 5).map(t => '<li>' + escapeHtmlText(t.typed) + ' → ' + escapeHtmlText(t.expected) + '</li>').join('') + '</ul>';
+    }}
+    if (!missing.length && !typos.length) {{
+        html += '<div style="margin-top:8px">큰 구멍은 안 보여. 이제 정답을 열어서 표현/수치만 최종 확인하면 돼.</div>';
+    }}
+    html += '<div class="muted">자동 채점은 수정된 정답 내용을 기준으로 핵심어·수치·용어 누락을 잡는 보조 기능이야. 틀린 주장 판정은 정답 확인으로 한 번 더 봐줘.</div>';
+    result.className = 'grade-result visible ' + level;
+    result.innerHTML = html;
+}}
+
+function clearUserAnswer(id) {{
+    const input = document.getElementById('quizUserAnswer');
+    const result = document.getElementById('gradeResult');
+    if (input) input.value = '';
+    delete userAnswers[id];
+    saveUserAnswers();
+    if (result) {{ result.className = 'grade-result'; result.innerHTML = ''; }}
 }}
 
 function toggleQuizEdit(id) {{
