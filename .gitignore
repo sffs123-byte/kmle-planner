@@ -1,7 +1,9 @@
 # Local test artifacts
 *.DS_Store
 *.log
+.tmp/
 
 # User-exported planner backups
 planner-backup-*.json
 kmle-planner-backup-*.json
+quizzes/__pycache__/

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 심장내과 Pre-test 퀴즈 HTML 생성기
-- Q1~Q9, 총 9문항
+- Q1~Q10, 총 10문항
 - PDF 페이지 이미지 포함
 """
 
@@ -9,10 +9,23 @@ import os, sys, io, base64
 from pdf2image import convert_from_path
 from anki_quiz_builder import QuizBuilder
 
-PDF_PATH = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)),
-    "..", "..", "심장내과_Pre_test_수정본---bfd59885-696e-444e-a0cc-7129311af477.pdf"
-)
+PDF_CANDIDATES = [
+    os.environ.get("CARDIO_PRETEST_PDF"),
+    os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        "..", "..", "심장내과_Pre_test_수정본.pdf"
+    ),
+]
+
+
+def resolve_pdf_path():
+    for candidate in PDF_CANDIDATES:
+        if candidate and os.path.exists(os.path.abspath(candidate)):
+            return os.path.abspath(candidate)
+    raise FileNotFoundError(
+        "심장내과 Pre-test PDF를 찾지 못했습니다. "
+        "CARDIO_PRETEST_PDF=/path/to/pdf 로 지정한 뒤 다시 실행하세요."
+    )
 
 # ── 카드 데이터 ──────────────────────────
 CARDS = [
@@ -215,6 +228,33 @@ CARDS = [
 4) 적극적인 통증 조절</p>""",
         "pages": [5],
     },
+    {
+        "id": "c10", "num": 10,
+        "q": "Pulmonary thromboembolism의 치료에 대해 설명하시오.",
+        "a": """<h4>PTE 치료: Risk Stratification</h4>
+<table>
+<tr><th>Risk</th><th>기준</th><th>치료 방향</th></tr>
+<tr><td><b>Low risk</b></td><td>Normotension + normal RV</td><td>Secondary prevention</td></tr>
+<tr><td><b>Moderate risk</b></td><td>Normotension + RV hypokinesis</td><td>Anticoagulant + individualized therapy</td></tr>
+<tr><td><b>High risk</b></td><td>Hypotension</td><td>Primary therapy</td></tr>
+</table>
+
+<h4>1) Low risk PTE</h4>
+<p><b>Normotension + normal RV</b> → secondary prevention</p>
+<p>- <b>Anticoagulant</b>: Heparin, DOAC, warfarin<br>
+- <b>IVC filter</b>: 항응고제 금기 시 또는 항응고제에 반응하지 않는 경우 삽입</p>
+<p><b>항응고제 금기</b>: 치명적인 현성 출혈, 심하게 높은 PT/aPTT, 심하게 낮은 Plt</p>
+
+<h4>2) Moderate risk PTE</h4>
+<p><b>Normotension + RV hypokinesis</b> → anticoagulant + individualized therapy</p>
+
+<h4>3) High risk PTE</h4>
+<p><b>Hypotension</b> → primary therapy</p>
+<p>- <b>Anticoagulant + thrombolysis</b> (TOC)<br>
+- <b>Anticoagulant + embolectomy</b> (catheter, surgical): thrombolysis 금기 시</p>
+<p><b>Thrombolysis 금기</b>: 뇌출혈 과거력, 6개월-1년 이내 뇌경색 과거력, CNS tumor, 현성 출혈, 대동맥 박리</p>""",
+        "pages": [6],
+    },
 ]
 
 
@@ -230,11 +270,7 @@ def generate_page_images(pdf_path):
 
 
 if __name__ == "__main__":
-    # Resolve PDF path
-    pdf = os.path.abspath(PDF_PATH)
-    if not os.path.exists(pdf):
-        # Try media inbound path
-        pdf = "/Users/sffs123gmail.com/.openclaw/media/inbound/심장내과_Pre_test_수정본---bfd59885-696e-444e-a0cc-7129311af477.pdf"
+    pdf = resolve_pdf_path()
 
     print(f"PDF: {pdf}")
     print("Generating page images...")

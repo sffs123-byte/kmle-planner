@@ -63,6 +63,8 @@ anki_quiz_builder.py — 재사용 가능한 Anki SRS 퀴즈 HTML 빌더
     builder.write("quiz.html")
 """
 
+import html as html_lib
+import json
 import os
 
 
@@ -75,10 +77,12 @@ def build_card_guide(card, page_images):
     return "\n".join(parts) if parts else "<p>해설 이미지 없음</p>"
 
 
-def build_html(cards, page_images):
+def build_html(cards, page_images, title="Anki 퀴즈", storage_prefix="quiz"):
     """최종 HTML 조립"""
 
     num_cards = len(cards)
+    title_html = html_lib.escape(title)
+    storage_prefix_js = json.dumps(f"{storage_prefix}_")
 
     # Build QUIZ_DATA JS object
     quiz_data_items = []
@@ -136,7 +140,7 @@ def build_html(cards, page_images):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>내분비내과 Pretest 퀴즈</title>
+<title>{title_html}</title>
 <style>
 :root {{
     --bg: #1e2030;
@@ -691,7 +695,7 @@ body.drawing-active * {{
 <div class="sidebar" id="sidebar">
     <button class="sb-toggle" onclick="toggleSidebar()">☰</button>
     <div class="sb-inner">
-        <div class="sb-title">내분비내과 Pretest</div>
+        <div class="sb-title">{title_html}</div>
         <div class="progress-wrap">
             <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
             <div class="progress-label" id="progressLabel">0 / {num_cards} 완료</div>
@@ -732,7 +736,7 @@ body.drawing-active * {{
 {quiz_data_js}
 {all_ids_js}
 
-const STORAGE_PREFIX = 'endo_';
+const STORAGE_PREFIX = {storage_prefix_js};
 const SRS_KEY = STORAGE_PREFIX + 'srs_v1';
 const HIST_KEY = STORAGE_PREFIX + 'hist_v1';
 const EDITS_KEY = STORAGE_PREFIX + 'edits_v1';
@@ -2793,7 +2797,7 @@ class QuizBuilder:
 
     def build(self) -> str:
         """완성된 HTML 문자열 반환"""
-        return build_html(self.cards, self.page_images)
+        return build_html(self.cards, self.page_images, self.title, self.storage_prefix)
 
     def write(self, path: str) -> None:
         """HTML을 파일로 저장"""
