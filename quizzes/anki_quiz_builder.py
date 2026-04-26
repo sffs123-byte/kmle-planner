@@ -942,12 +942,52 @@ function getSrs(id) {{
     return srs[id];
 }}
 
-function getReviewDue() {{
+function cardOrder(id) {{
+    const data = QUIZ_DATA[id] || {{}};
+    const n = Number(data.num);
+    return Number.isFinite(n) ? n : ALL_IDS.indexOf(id) + 1;
+}}
+
+function sortByDueThenOrder(a, b) {{
+    return a.dueTime - b.dueTime || cardOrder(a.id) - cardOrder(b.id);
+}}
+
+function getStudyPlan() {{
     const now = Date.now();
-    return ALL_IDS.filter(id => {{
+    const due = [];
+    const future = [];
+    const fresh = [];
+
+    ALL_IDS.forEach(id => {{
         const s = getSrs(id);
-        return s.nextReview && s.nextReview <= now && !s.mastered;
+        if (s.mastered) return;
+
+        const nextReview = Number(s.nextReview || 0);
+        const hasSchedule = Number.isFinite(nextReview) && nextReview > 0;
+        const hasSeen = Boolean(s.lastRating) || Number(s.redCount || 0) > 0 || Number(s.greenStreak || 0) > 0;
+
+        if (hasSchedule) {{
+            const item = {{ id, dueTime: nextReview }};
+            if (nextReview <= now) due.push(item);
+            else future.push(item);
+        }} else if (!hasSeen) {{
+            fresh.push(id);
+        }}
     }});
+
+    due.sort(sortByDueThenOrder);
+    future.sort(sortByDueThenOrder);
+    fresh.sort((a, b) => cardOrder(a) - cardOrder(b));
+
+    return {{
+        dueIds: due.map(item => item.id),
+        futurePending: future,
+        freshIds: fresh
+    }};
+}}
+
+function getReviewDue() {{
+    return getStudyPlan().dueIds;
 }}
 
 function updateReviewBtn() {{
@@ -956,13 +996,10 @@ function updateReviewBtn() {{
 }}
 
 function startReview() {{
-    const due = getReviewDue();
-    if (due.length === 0) {{
-        // Start with all cards
-        startQuizWith([...ALL_IDS]);
-    }} else {{
-        startQuizWith(due);
-    }}
+    const plan = getStudyPlan();
+    // Queue rule: due cards first, then unseen cards in original question order.
+    // Future scheduled cards stay in pending and jump ahead only when their time arrives.
+    startQuizWith([...plan.dueIds, ...plan.freshIds], {{ pending: plan.futurePending }});
 }}
 
 let _resetTaps = 0, _resetTimer = null;
@@ -995,15 +1032,22 @@ function doResetQuiz() {{
     startQuizWith([...ALL_IDS]);
 }}
 
-function startQuizWith(ids) {{
+function startQuizWith(ids, options = {{}}) {{
     bonusMode = false;
-    queue = [...ids];
+    const queued = new Set();
+    queue = [];
+    ids.forEach(id => {{
+        if (!QUIZ_DATA[id] || queued.has(id)) return;
+        queued.add(id);
+        queue.push(id);
+    }});
     pending = [];
-    // Shuffle
-    for (let i = queue.length - 1; i > 0; i--) {{
-        const j = Math.floor(Math.random() * (i + 1));
-        [queue[i], queue[j]] = [queue[j], queue[i]];
-    }}
+    (options.pending || []).forEach(item => {{
+        if (!item || !QUIZ_DATA[item.id] || queued.has(item.id)) return;
+        const dueTime = Number(item.dueTime || 0);
+        if (Number.isFinite(dueTime) && dueTime > 0) pending.push({{ id: item.id, dueTime }});
+    }});
+    pending.sort(sortByDueThenOrder);
     document.getElementById('quizOverlay').classList.add('active');
     showNextCard();
 }}
@@ -1019,7 +1063,7 @@ function showNextCard() {{
     const now = Date.now();
 
     // Move due pending cards to front of queue
-    const dueCards = pending.filter(p => p.dueTime <= now).sort((a, b) => a.dueTime - b.dueTime);
+    const dueCards = pending.filter(p => p.dueTime <= now).sort(sortByDueThenOrder);
     pending = pending.filter(p => p.dueTime > now);
 
     for (const dc of dueCards.reverse()) {{
@@ -1257,7 +1301,7 @@ function renderWaiting() {{
 function skipWait() {{
     if (waitTimer) {{ clearInterval(waitTimer); waitTimer = null; }}
     if (pending.length === 0) return;
-    pending.sort((a, b) => a.dueTime - b.dueTime);
+    pending.sort(sortByDueThenOrder);
     const next = pending.shift();
     if (next) {{ queue.unshift(next.id); showNextCard(); }}
 }}
