@@ -476,7 +476,7 @@ body {{
     -webkit-user-select: none;
     user-select: none;
     -webkit-touch-callout: none;
-    overflow: hidden;
+    overflow: visible;
 }}
 /* Block all selection in entire page when drawing */
 body.drawing-active {{
@@ -1359,6 +1359,8 @@ let drawSize = 2;
 let isDrawing = false;
 let currentStroke = null; // {{ mode, color, size, points }}
 let canvasW = 0, canvasH = 0; // logical (CSS) size for current canvas
+const DRAW_CANVAS_EXTRA_RIGHT = 24;
+const DRAW_CANVAS_EXTRA_BOTTOM = 96;
 let drawStartTime = 0;
 let activeResizeRect = null; // {{ cardId, strokeIdx }}
 let resizeDragHandle = null; // 'tl'|'tr'|'bl'|'br'
@@ -1616,6 +1618,36 @@ function strokeIntersectsPath(stroke, path) {{
         }}
     }}
     return false;
+}}
+
+function pointInPolygon(pt, poly) {{
+    if (!poly || poly.length < 3) return false;
+    let inside = false;
+    for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {{
+        const xi = poly[i].x, yi = poly[i].y;
+        const xj = poly[j].x, yj = poly[j].y;
+        const intersects = ((yi > pt.y) !== (yj > pt.y)) &&
+            (pt.x < (xj - xi) * (pt.y - yi) / ((yj - yi) || 0.000001) + xi);
+        if (intersects) inside = !inside;
+    }}
+    return inside;
+}}
+
+function strokeInsidePath(stroke, path) {{
+    const pts = [];
+    if (stroke.type === 'rect') {{
+        const x1 = stroke.x, y1 = stroke.y, x2 = stroke.x + stroke.w, y2 = stroke.y + stroke.h;
+        pts.push({{ x: x1, y: y1 }}, {{ x: x2, y: y1 }}, {{ x: x2, y: y2 }}, {{ x: x1, y: y2 }}, {{ x: (x1 + x2) / 2, y: (y1 + y2) / 2 }});
+    }} else if (stroke.points && stroke.points.length) {{
+        pts.push(...stroke.points);
+        const bbox = computeSelectionBBox([stroke], [0]);
+        pts.push({{ x: bbox.x + bbox.w / 2, y: bbox.y + bbox.h / 2 }});
+    }}
+    return pts.some(p => pointInPolygon(p, path));
+}}
+
+function strokeSelectedByLasso(stroke, path) {{
+    return strokeIntersectsPath(stroke, path) || strokeInsidePath(stroke, path);
 }}
 
 // ── Bounding box of selected strokes ──
@@ -1911,13 +1943,18 @@ function redrawCurrent() {{
 // ── Setup canvas helper ──
 function setupCanvas(canvas, contentEl) {{
     const rect = contentEl.getBoundingClientRect();
+    const parent = canvas.parentElement;
     const dpr = window.devicePixelRatio || 1;
-    canvasW = rect.width;
-    canvasH = rect.height;
+    canvasW = Math.ceil(rect.width + DRAW_CANVAS_EXTRA_RIGHT);
+    canvasH = Math.ceil(rect.height + DRAW_CANVAS_EXTRA_BOTTOM);
     canvas.width = canvasW * dpr;
     canvas.height = canvasH * dpr;
     canvas.style.width = canvasW + 'px';
     canvas.style.height = canvasH + 'px';
+    if (parent) {{
+        parent.style.position = 'relative';
+        parent.style.minHeight = canvasH + 'px';
+    }}
     canvas.style.display = 'block';
     drawCtx = canvas.getContext('2d');
     drawCtx.scale(dpr, dpr);
@@ -2292,7 +2329,7 @@ function drawEnd(e) {{
             const strokes = getStrokes(cid);
             const indices = [];
             for (let i = 0; i < strokes.length; i++) {{
-                if (strokeIntersectsPath(strokes[i], selectionPath)) indices.push(i);
+                if (strokeSelectedByLasso(strokes[i], selectionPath)) indices.push(i);
             }}
             if (indices.length > 0) {{
                 selectedStrokes = {{ cardId: cid, indices, bbox: computeSelectionBBox(strokes, indices) }};
@@ -2375,7 +2412,8 @@ function drawSingleStroke(ctx, s) {{
 function eraseAt(px, py) {{
     const cid = realDrawId();
     const strokes = getStrokes(cid);
-    const threshold = 12;
+    // Precise eraser: erase only strokes directly under the pen/mouse point.
+    const threshold = 0.75;
     for (let i = strokes.length - 1; i >= 0; i--) {{
         if (strokeHitTest(strokes[i], px, py, threshold)) {{
             pushDrawUndo(cid);
@@ -2402,16 +2440,23 @@ function showStaticDraw(id) {{
     const content = document.getElementById('ans-content-' + id);
     if (!content) return;
     const rect = content.getBoundingClientRect();
+    const parent = canvas.parentElement;
     const dpr = window.devicePixelRatio || 1;
-    canvas.width = rect.width * dpr;
-    canvas.height = rect.height * dpr;
-    canvas.style.width = rect.width + 'px';
-    canvas.style.height = rect.height + 'px';
+    const w = Math.ceil(rect.width + DRAW_CANVAS_EXTRA_RIGHT);
+    const h = Math.ceil(rect.height + DRAW_CANVAS_EXTRA_BOTTOM);
+    canvas.width = w * dpr;
+    canvas.height = h * dpr;
+    canvas.style.width = w + 'px';
+    canvas.style.height = h + 'px';
+    if (parent) {{
+        parent.style.position = 'relative';
+        parent.style.minHeight = h + 'px';
+    }}
     canvas.style.display = 'block';
     canvas.style.pointerEvents = 'none';
     const ctx = canvas.getContext('2d');
     ctx.scale(dpr, dpr);
-    renderStrokes(ctx, strokes, rect.width, rect.height);
+    renderStrokes(ctx, strokes, w, h);
 }}
 
 // ── Quiz draw ──

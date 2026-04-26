@@ -128,18 +128,19 @@ CARDS = [
     {
         "id": "c5", "num": 5,
         "q": "운동부하검사 treadmill stress test의 양성 소견에 대해 설명하시오.",
-        "a": """<h4>Treadmill exercise ECG</h4>
-<p><b>적응증</b>: resting ECG 정상이면서, digoxin 복용하지 않고, 운동할 수 있는 환자</p>
-<p><b>양성 소견</b>:</p>
-<p>1. <b>EKG 변화</b>: Horizontal or Down-sloping ST depression이 1mm 이상이며, 0.08초 이상 지속<br>
-&nbsp;&nbsp;- pathologic Q wave가 없는 lead(aVR, V1 제외)에서 1mm 이상 ST elevation</p>
-<p>2. <b>임상 증상</b>: Chest pain, tightness 등의 typical angina 증상이 유발되는 경우</p>
-<p>3. <b>hemodynamic change</b> (BP response): workload 증가해도 SBP가 오히려 기저치보다 10mmHg 이상 감소</p>
+        "a": """<h4>운동부하검사 양성 소견</h4>
+<p>이미지 기준으로 양성 소견은 세 축으로 정리한다.</p>
 
-<h4>기타 stress test</h4>
-<p>- <b>Stress echocardiography</b>: 허혈 발생한 심근벽의 운동 이상 측정<br>
-- <b>Stress myocardial reperfusion imaging</b>: 허혈 발생한 심근벽의 방사성 동위원소 uptake 측정<br>
-- 운동할 수 없으면 약물로 stress 부하: adenosine, dobutamine</p>""",
+<h4>1. EKG 변화</h4>
+<p>- <b>Horizontal/Down-sloping ST depression</b>이 <b>1mm 이상</b>이며 <b>0.08초 이상 지속</b><br>
+- <b>pathologic Q wave가 없는 lead</b>에서 <b>1mm 이상 ST elevation</b><br>
+&nbsp;&nbsp;단, <b>aVR, V1은 제외</b></p>
+
+<h4>2. 임상 증상</h4>
+<p>- <b>Chest pain, tightness</b> 등의 <b>typical angina</b> 증상이 유발되는 경우</p>
+
+<h4>3. Hemodynamic change, BP response</h4>
+<p>- workload가 증가하는데도 <b>SBP가 기저치보다 10mmHg 이상 감소</b>하는 경우</p>""",
         "pages": [3],
     },
     {
