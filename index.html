@@ -6075,7 +6075,7 @@
         ? `<div class="detail-screen-section">
             <h4>📋 문구 복사</h4>
             <div class="badge-row" style="margin-top:8px; gap:8px;">
-              ${copyTargets.map(target => `<button type="button" class="btn btn-small btn-secondary" data-copy="${escapeHtml(target.text)}" data-label="${escapeHtml(target.label)}" onclick="copyTextToClipboard(this.dataset.copy, this.dataset.label)">${escapeHtml(target.label)}</button>`).join('')}
+              ${copyTargets.map(target => `<button type="button" class="btn btn-small btn-secondary" data-copy="${escapeHtml(encodeURIComponent(target.text))}" data-label="${escapeHtml(target.label)}" onclick="copyTextToClipboard(decodeURIComponent(this.dataset.copy || ''), this.dataset.label)">${escapeHtml(target.label)}</button>`).join('')}
             </div>
             <p class="item-meta" style="margin-top:8px;">※ 문자 예시/공지 문구를 바로 복사해 사용할 수 있다.</p>
           </div>`
