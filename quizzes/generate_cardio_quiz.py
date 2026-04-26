@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 심장내과 Pre-test 퀴즈 HTML 생성기
-- Q1~Q10, 총 10문항
+- Q1~Q10 기반, 고혈압 약제 ABCD 분리 카드 포함
 - PDF 페이지 이미지 포함
 """
 
@@ -73,7 +73,7 @@ CARDS = [
     },
     {
         "id": "c3", "num": 3,
-        "q": "측정 방법에 따른 고혈압 진단 기준을 정의하고 대표적인 고혈압 약제의 적응증 및 흔한 부작용에 대해 설명하시오.",
+        "q": "측정 방법에 따른 고혈압 진단 기준과 혈압 분류를 설명하시오.",
         "a": """<h4>혈압 분류</h4>
 <table>
 <tr><th></th><th>SBP</th><th></th><th>DBP</th></tr>
@@ -89,17 +89,46 @@ CARDS = [
 <p>1) 진료실 혈압 ≥140/90<br>
 2) 가정 혈압 ≥135/85<br>
 3) 24시간 활동 혈압: 주간 ≥135/85, 야간 ≥120/70, 일일 ≥130/80<br>
-4) 진료실 자동 혈압 ≥135/85</p>
-
-<h4>고혈압 약제</h4>
+4) 진료실 자동 혈압 ≥135/85</p>""",
+        "pages": [2],
+    },
+    {
+        "id": "c3a", "num": "3-A",
+        "q": "고혈압 약제 A 계열(ACEi/ARB)의 적극적 적응증, 금기, 흔한 부작용을 설명하시오.",
+        "a": """<h4>A: ACEi/ARB</h4>
 <table>
 <tr><th>약제</th><th>적극적 적응</th><th>금기</th><th>부작용</th></tr>
-<tr><td><b>ACE inhibitor</b></td><td>심부전, DM with albuminuria, CKD</td><td>Hyperkalemia, renal failure, bilateral RAS, 임신</td><td>Hyperkalemia, 마른기침, 혈관부종</td></tr>
-<tr><td><b>ARB</b></td><td>심부전, DM with albuminuria, CKD</td><td>Hyperkalemia, renal failure, bilateral RAS, 임신</td><td>Hyperkalemia, 혈관부종 드묾, 마른기침 드묾</td></tr>
+<tr><td><b>ACEi/ARB</b></td><td>심부전, DM with albuminuria, CKD</td><td>Hyperkalemia, renal failure, bilateral RAS, 임신</td><td>Hyperkalemia, 마른기침(ACEi), 혈관부종(ACEi)</td></tr>
+</table>""",
+        "pages": [2],
+    },
+    {
+        "id": "c3b", "num": "3-B",
+        "q": "고혈압 약제 B 계열(Beta blocker)의 적극적 적응증, 금기, 흔한 부작용을 설명하시오.",
+        "a": """<h4>B: Beta blocker</h4>
+<table>
+<tr><th>약제</th><th>적극적 적응</th><th>금기</th><th>부작용</th></tr>
 <tr><td><b>Beta blocker</b></td><td>심부전, 협심증, 심근경색, 빈맥성 부정맥</td><td>천식, COPD, 심한 서맥, 말초혈관질환</td><td>천식 악화, 서맥, diabetogenic potential</td></tr>
-<tr><td><b>DHP-CCB</b></td><td>협심증, 수축기 단독 고혈압</td><td>심한 저혈압</td><td>홍조, 두통, 말초부종</td></tr>
-<tr><td><b>Non-DHP CCB</b></td><td>협심증, 빈맥성 부정맥</td><td>서맥, AV block, HFrEF</td><td>AV block, 심근 수축력 저하, 서맥</td></tr>
-<tr><td><b>Thiazide</b></td><td>심부전, 수축기 단독 고혈압</td><td>통풍, 저칼륨혈증</td><td>Hypo NA, metabolic alkalosis, dyslipidemia, 인슐린 저항성 증가</td></tr>
+</table>""",
+        "pages": [2],
+    },
+    {
+        "id": "c3c", "num": "3-C",
+        "q": "고혈압 약제 C 계열(CCB)의 적극적 적응증, 금기, 흔한 부작용을 설명하시오.",
+        "a": """<h4>C: Calcium channel blocker</h4>
+<table>
+<tr><th>약제</th><th>적극적 적응</th><th>금기</th><th>부작용</th></tr>
+<tr><td><b>CCB</b></td><td>협심증, 수축기 단독 고혈압, 빈맥</td><td>서맥(non-DHP)</td><td>DHP: 홍조, 두통, 부종 / Non-DHP: AV block, 심근 수축력 저하</td></tr>
+</table>""",
+        "pages": [2],
+    },
+    {
+        "id": "c3d", "num": "3-D",
+        "q": "고혈압 약제 D 계열(Diuretics/Thiazide)의 적극적 적응증, 금기, 흔한 부작용을 설명하시오.",
+        "a": """<h4>D: Diuretics, Thiazide</h4>
+<table>
+<tr><th>약제</th><th>적극적 적응</th><th>금기</th><th>부작용</th></tr>
+<tr><td><b>Thiazide</b></td><td>심부전, 수축기 단독 고혈압</td><td>통풍, 저칼륨혈증</td><td>Hypo Na, metabolic alkalosis, dyslipidemia, 인슐린 저항성 증가</td></tr>
 </table>""",
         "pages": [2],
     },
