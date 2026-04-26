@@ -1243,6 +1243,17 @@ function normalizeGradeText(text) {{
         .replace(/㎜/g, 'mm')
         .replace(/㎎/g, 'mg')
         .replace(/㎗/g, 'dl')
+        .replace(/\\bdepol\\b/g, 'depolarization')
+        .replace(/\\brepol\\b/g, 'repolarization')
+        .replace(/\\bvent\\b/g, 'ventricular')
+        .replace(/\\bventricle\\b/g, 'ventricular')
+        .replace(/\\batr\\b/g, 'atrial')
+        .replace(/\\bat\\b/g, 'atrial')
+        .replace(/심실/g, 'ventricular')
+        .replace(/심방/g, 'atrial')
+        .replace(/탈분극/g, 'depolarization')
+        .replace(/재분극/g, 'repolarization')
+        .replace(/포함하여|포함하는/g, '포함')
         .replace(/\\s+/g, ' ')
         .toLowerCase();
 }}
@@ -1251,34 +1262,30 @@ function compactGradeText(text) {{
     return normalizeGradeText(text).replace(/[^a-z0-9가-힣]/g, '');
 }}
 
+function normalizeGradeToken(token) {{
+    return String(token || '')
+        .replace(/(로의|에서의|에서|까지|부터|으로|로|와|과|을|를|은|는|이|가|의)$/g, '')
+        .replace(/포함하여|포함하는/g, '포함');
+}}
+
 function extractGradeTokens(text) {{
     const normalized = normalizeGradeText(text);
     const tokens = normalized.match(/[a-z0-9가-힣][a-z0-9가-힣+/#%.-]*/g) || [];
-    return tokens.filter(token =>
+    return tokens.map(normalizeGradeToken).filter(token =>
         token.length >= 2 &&
         !GRADE_STOPWORDS.has(token) &&
         !/^[0-9]+$/.test(token)
     );
 }}
 
-function extractGradeTermsFromNode(node) {{
-    if (!node) return [];
-    const terms = [];
-    const seen = new Set();
-    function addToken(token) {{
-        const compact = compactGradeText(token);
-        if (!compact || compact.length < 2 || seen.has(compact)) return;
-        seen.add(compact);
-        terms.push(token);
-    }}
-
-    node.querySelectorAll('h4,h5,b,strong,th,td').forEach(el => {{
-        extractGradeTokens(el.textContent).forEach(addToken);
-    }});
-    if (terms.length === 0) {{
-        extractGradeTokens(node.textContent).forEach(addToken);
-    }}
-    return terms.slice(0, 32);
+function extractGradeLabelTokens(text) {{
+    const normalized = normalizeGradeText(text);
+    const tokens = normalized.match(/[a-z0-9가-힣][a-z0-9가-힣+/#%.-]*/g) || [];
+    return tokens.map(normalizeGradeToken).filter(token =>
+        (token.length >= 2 || /^[pqrst]$/.test(token)) &&
+        !GRADE_STOPWORDS.has(token) &&
+        !/^[0-9]+$/.test(token)
+    );
 }}
 
 function levenshteinDistance(a, b) {{
@@ -1310,6 +1317,170 @@ function findTypoHint(term, userTokens) {{
     return bestDist <= threshold ? best : null;
 }}
 
+function cleanGradeLine(text) {{
+    return String(text || '')
+        .replace(/\u00a0/g, ' ')
+        .replace(/^[\\s\\-•·]+/, '')
+        .replace(/^\\(?\\d+[.)]\\s*/, '')
+        .replace(/\\s+/g, ' ')
+        .trim();
+}}
+
+function textWithLineBreaks(el) {{
+    const clone = el.cloneNode(true);
+    clone.querySelectorAll('br').forEach(br => br.replaceWith('\\n'));
+    return clone.textContent || '';
+}}
+
+function parseGradeItem(text) {{
+    const cleaned = cleanGradeLine(text);
+    if (!cleaned || cleaned.length < 3) return null;
+    const parts = cleaned.split(/[:：]/);
+    let label = '';
+    let detail = cleaned;
+    if (parts.length >= 2) {{
+        const candidate = cleanGradeLine(parts.shift());
+        const candidateTokens = extractGradeLabelTokens(candidate);
+        if (candidate.length <= 60 && candidateTokens.length > 0 && candidateTokens.length <= 10) {{
+            label = candidate;
+            detail = cleanGradeLine(parts.join(':'));
+        }}
+    }}
+    const labelTokens = extractGradeLabelTokens(label);
+    const detailTokens = extractGradeTokens(detail);
+    const allTokens = extractGradeTokens(cleaned);
+    if (labelTokens.length === 0 && allTokens.length < 2) return null;
+    return {{ text: cleaned, label, detail, labelTokens, detailTokens, allTokens }};
+}}
+
+function dedupeGradeItems(items) {{
+    const out = [];
+    const seen = new Set();
+    items.forEach(item => {{
+        if (!item) return;
+        const key = compactGradeText(item.label || item.text);
+        const detailKey = compactGradeText(item.detail || '');
+        const combined = key + '|' + detailKey;
+        if (!key || seen.has(combined)) return;
+        seen.add(combined);
+        out.push(item);
+    }});
+    return out;
+}}
+
+function extractGradeItemsFromNode(node) {{
+    if (!node) return [];
+    const raw = [];
+
+    node.querySelectorAll('tr').forEach(row => {{
+        const cells = Array.from(row.querySelectorAll('td,th')).map(cell => cleanGradeLine(textWithLineBreaks(cell))).filter(Boolean);
+        if (cells.length < 2 || row.querySelectorAll('td').length === 0) return;
+        raw.push(cells.join(': '));
+    }});
+
+    node.querySelectorAll('p,li').forEach(el => {{
+        textWithLineBreaks(el).split('\\n').map(cleanGradeLine).filter(Boolean).forEach(line => raw.push(line));
+    }});
+
+    let items = dedupeGradeItems(raw.map(parseGradeItem));
+    if (items.length === 0) {{
+        items = dedupeGradeItems(extractGradeTokens(node.textContent).map(token => parseGradeItem(token)));
+    }}
+    return items.slice(0, 48);
+}}
+
+function buildUserAnswerMap(text) {{
+    const lines = String(text || '').split(/\\n+/).map(cleanGradeLine).filter(Boolean);
+    const labeled = [];
+    let current = null;
+    lines.forEach(line => {{
+        const item = parseGradeItem(line);
+        if (item && item.labelTokens.length > 0 && /[:：]/.test(line)) {{
+            current = {{ label: item.label, labelTokens: item.labelTokens, detail: item.detail || '', detailTokens: extractGradeTokens(item.detail || '') }};
+            labeled.push(current);
+        }} else if (current) {{
+            current.detail = cleanGradeLine((current.detail ? current.detail + ' ' : '') + line);
+            current.detailTokens = extractGradeTokens(current.detail);
+        }}
+    }});
+    return labeled;
+}}
+
+function labelSimilarity(target, candidate) {{
+    const targetTokens = target.labelTokens || [];
+    const candidateTokens = candidate.labelTokens || [];
+    if (targetTokens.length === 0 || candidateTokens.length === 0) return 0;
+    const targetCompact = compactGradeText(target.label);
+    const candidateCompact = compactGradeText(candidate.label);
+    if (targetCompact && candidateCompact && targetCompact === candidateCompact) return 1;
+    if (targetCompact && candidateCompact && candidateCompact.includes(targetCompact)) return 0.95;
+    if (targetCompact && candidateCompact && targetCompact.startsWith(candidateCompact) && candidateTokens.length >= 2) return 0.98;
+    const targetText = targetTokens.map(compactGradeText).join(' ');
+    const candidateText = candidateTokens.map(compactGradeText).join(' ');
+    if (targetCompact && candidateCompact && targetCompact.includes(candidateCompact) && candidateTokens.length >= 2) {{
+        const candidateHits = candidateTokens.filter(token => targetText.includes(compactGradeText(token))).length;
+        if (candidateHits === candidateTokens.length) return 0.9;
+    }}
+    const hits = targetTokens.filter(token => candidateText.includes(compactGradeText(token))).length;
+    return hits / Math.max(1, targetTokens.length);
+}}
+
+function findBestUserItem(answerItem, userItems) {{
+    let best = null;
+    let score = 0;
+    userItems.forEach(item => {{
+        const s = labelSimilarity(answerItem, item);
+        if (s > score) {{ score = s; best = item; }}
+    }});
+    return score >= 0.67 ? best : null;
+}}
+
+function tokenCovered(token, contextCompact, contextTokens) {{
+    const compact = compactGradeText(token);
+    if (!compact) return false;
+    if (contextCompact.includes(compact)) return true;
+    return Boolean(findTypoHint(token, contextTokens || []));
+}}
+
+function specialItemCovered(answerItem, matched) {{
+    const label = compactGradeText(answerItem.label || '');
+    const detail = compactGradeText(matched && matched.detail || '');
+    if (label.includes('printerval')) {{
+        const hasPStart = detail.includes('pwave') && detail.includes('시작');
+        const hasQrsStart = detail.includes('qrscomplex') && detail.includes('시작');
+        return hasPStart && hasQrsStart;
+    }}
+    if (label.includes('qtinterval')) {{
+        const hasQrsStart = detail.includes('qrscomplex') && detail.includes('시작');
+        const hasTEnd = detail.includes('twave') && (detail.includes('끝') || detail.includes('종료'));
+        return hasQrsStart && hasTEnd;
+    }}
+    return false;
+}}
+
+function scoreGradeItem(answerItem, typedCompact, userTokens, userItems) {{
+    if (answerItem.labelTokens.length > 0) {{
+        const matched = findBestUserItem(answerItem, userItems);
+        if (!matched) {{
+            return {{ ok: false, reason: 'missing-label', item: answerItem, missingTokens: answerItem.detailTokens.slice(0, 4) }};
+        }}
+        if (specialItemCovered(answerItem, matched)) return {{ ok: true, reason: 'endpoint-equivalent', item: answerItem, missingTokens: [] }};
+        const detailTokens = answerItem.detailTokens.length ? answerItem.detailTokens : answerItem.allTokens.filter(t => !answerItem.labelTokens.map(compactGradeText).includes(compactGradeText(t)));
+        if (detailTokens.length === 0) return {{ ok: true, reason: 'label-only', item: answerItem, missingTokens: [] }};
+        const contextCompact = compactGradeText(matched.detail || '');
+        const contextTokens = extractGradeTokens(matched.detail || '');
+        const covered = detailTokens.filter(token => tokenCovered(token, contextCompact, contextTokens));
+        const ratio = covered.length / Math.max(1, detailTokens.length);
+        const threshold = detailTokens.length <= 2 ? 0.75 : 0.6;
+        return {{ ok: ratio >= threshold, reason: 'detail', item: answerItem, missingTokens: detailTokens.filter(token => !covered.includes(token)).slice(0, 4), ratio }};
+    }}
+
+    const tokens = answerItem.allTokens;
+    const covered = tokens.filter(token => tokenCovered(token, typedCompact, userTokens));
+    const ratio = covered.length / Math.max(1, tokens.length);
+    return {{ ok: ratio >= 0.65, reason: 'global', item: answerItem, missingTokens: tokens.filter(token => !covered.includes(token)).slice(0, 4), ratio }};
+}}
+
 function gradeUserAnswer(id) {{
     const input = document.getElementById('quizUserAnswer');
     const result = document.getElementById('gradeResult');
@@ -1326,8 +1497,8 @@ function gradeUserAnswer(id) {{
         return;
     }}
 
-    const terms = extractGradeTermsFromNode(answerNode);
-    if (terms.length === 0) {{
+    const items = extractGradeItemsFromNode(answerNode);
+    if (items.length === 0) {{
         result.className = 'grade-result visible partial';
         result.innerHTML = '<h4>채점 기준을 읽지 못했어</h4><div>정답을 한 번 열거나, 정답 편집 내용을 저장한 뒤 다시 눌러줘.</div>';
         return;
@@ -1335,40 +1506,38 @@ function gradeUserAnswer(id) {{
 
     const typedCompact = compactGradeText(typed);
     const userTokens = Array.from(new Set(extractGradeTokens(typed)));
-    const covered = [];
-    const missing = [];
-    const typos = [];
+    const userItems = buildUserAnswerMap(typed);
+    const scored = items.map(item => scoreGradeItem(item, typedCompact, userTokens, userItems));
+    const passed = scored.filter(s => s.ok);
+    const missingItems = scored.filter(s => !s.ok);
 
-    terms.forEach(term => {{
-        const compact = compactGradeText(term);
-        if (!compact) return;
-        if (typedCompact.includes(compact)) {{
-            covered.push(term);
-            return;
-        }}
-        const typo = findTypoHint(term, userTokens);
-        if (typo) typos.push({{ expected: term, typed: typo }});
-        else missing.push(term);
-    }});
-
-    const effectiveHit = covered.length + typos.length * 0.5;
-    const score = terms.length ? effectiveHit / terms.length : 0;
-    const level = score >= 0.68 ? 'good' : (score >= 0.40 ? 'partial' : 'weak');
+    const score = passed.length / Math.max(1, scored.length);
+    const level = score >= 0.85 ? 'good' : (score >= 0.65 ? 'partial' : 'weak');
     const title = level === 'good' ? '대체로 맞았어' : (level === 'partial' ? '방향은 맞는데 보완 필요' : '핵심이 많이 빠졌어');
     const pct = Math.round(score * 100);
 
     let html = '<h4>' + title + '</h4>';
-    html += '<div>핵심 커버율 약 <b>' + pct + '%</b> · 맞춘 핵심 ' + covered.length + '개 / 기준 ' + terms.length + '개</div>';
-    if (missing.length) {{
-        html += '<div style="margin-top:8px"><b>빠진 핵심</b></div><ul>' + missing.slice(0, 8).map(t => '<li>' + escapeHtmlText(t) + '</li>').join('') + '</ul>';
+    html += '<div>항목별 커버율 약 <b>' + pct + '%</b> · 맞춘 항목 ' + passed.length + '개 / 기준 ' + scored.length + '개</div>';
+    if (missingItems.length) {{
+        html += '<div style="margin-top:8px"><b>빠진 항목/정의</b></div><ul>' + missingItems.slice(0, 8).map(s => {{
+            const label = s.item.label || s.item.text;
+            const miss = s.missingTokens && s.missingTokens.length ? ' <span style="color:#6c6f85">(' + s.missingTokens.map(escapeHtmlText).join(', ') + ')</span>' : '';
+            return '<li>' + escapeHtmlText(label) + miss + '</li>';
+        }}).join('') + '</ul>';
     }}
-    if (typos.length) {{
-        html += '<div style="margin-top:8px"><b>오타/표기 의심</b></div><ul>' + typos.slice(0, 5).map(t => '<li>' + escapeHtmlText(t.typed) + ' → ' + escapeHtmlText(t.expected) + '</li>').join('') + '</ul>';
+
+    const typoHints = [];
+    items.forEach(item => item.allTokens.forEach(token => {{
+        const hint = findTypoHint(token, userTokens);
+        if (hint && compactGradeText(hint) !== compactGradeText(token)) typoHints.push({{ expected: token, typed: hint }});
+    }}));
+    if (typoHints.length) {{
+        html += '<div style="margin-top:8px"><b>오타/표기 의심</b></div><ul>' + typoHints.slice(0, 5).map(t => '<li>' + escapeHtmlText(t.typed) + ' → ' + escapeHtmlText(t.expected) + '</li>').join('') + '</ul>';
     }}
-    if (!missing.length && !typos.length) {{
+    if (!missingItems.length && !typoHints.length) {{
         html += '<div style="margin-top:8px">큰 구멍은 안 보여. 이제 정답을 열어서 표현/수치만 최종 확인하면 돼.</div>';
     }}
-    html += '<div class="muted">자동 채점은 수정된 정답 내용을 기준으로 핵심어·수치·용어 누락을 잡는 보조 기능이야. 틀린 주장 판정은 정답 확인으로 한 번 더 봐줘.</div>';
+    html += '<div class="muted">자동 채점은 정답의 항목별 정의 묶음을 기준으로 비교해. 수정한 정답도 즉시 반영돼.</div>';
     result.className = 'grade-result visible ' + level;
     result.innerHTML = html;
 }}
