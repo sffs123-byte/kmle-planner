@@ -735,7 +735,7 @@
         {
           "id": "eval-plan-reflection",
           "label": "실습 계획과 성찰",
-          "points": 7
+          "points": 5
         },
         {
           "id": "eval-pretest",
@@ -6079,14 +6079,8 @@
       },
       "displayColor": "",
       "displayState": "normal",
-      "evaluation_items": [
-        {
-          "id": "eval-ecg-group-discussion",
-          "label": "심전도 조별 토의",
-          "points": 6,
-          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
-        }
-      ]
+      "evaluation_items": [],
+      "score_mapping_note": "점수 매핑 정리: 공식 `심전도 조별 토의 6점`은 김준형 교수님 ECG 발표(A/B/C/D/E/F 각자 차례)에 귀속하고, 김민수 교수님 조별토의 제출은 제출 task로만 둔다. (2026-04-26 강렬 확인)"
     },
     {
       "id": "s-2026-05-06-1330-echo-understanding",
@@ -8817,9 +8811,7 @@
       "difficulty_total": 7,
       "content_summary": "A/B는 POMR과 심전도 발표 케이스를 연결해서 준비한다.",
       "linked_session_ids": [
-        "s-2026-04-29-1100-pomr",
-        "s-2026-04-30-0800-ecg-a",
-        "s-2026-05-01-0800-ecg-b"
+        "s-2026-04-29-1100-pomr"
       ],
       "linked_professors": [
         "이재환 교수님",
@@ -8837,7 +8829,8 @@
           "points": 6,
           "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
         }
-      ]
+      ],
+      "score_mapping_note": "김준형 ECG 발표와 같은 케이스를 활용할 수 있으나, POMR 6점은 이재환 교수님 POMR 발표/업로드 평가에만 귀속한다."
     },
     {
       "id": "assign-mi-case",
@@ -9014,14 +9007,8 @@
       "notes": [],
       "milestones": [],
       "onsite_required": false,
-      "evaluation_items": [
-        {
-          "id": "eval-ecg-group-discussion",
-          "label": "심전도 조별 토의",
-          "points": 6,
-          "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
-        }
-      ]
+      "evaluation_items": [],
+      "score_mapping_note": "점수 매핑 정리: 공식 `심전도 조별 토의 6점`은 김준형 교수님 ECG 발표(A/B/C/D/E/F 각자 차례)에 귀속하고, 김민수 교수님 조별토의 제출은 제출 task로만 둔다. (2026-04-26 강렬 확인)"
     },
     {
       "id": "assign-echo-understanding",
@@ -9209,7 +9196,7 @@
         {
           "id": "eval-plan-reflection",
           "label": "실습 계획과 성찰",
-          "points": 7,
+          "points": 5,
           "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
         },
         {
@@ -9244,7 +9231,7 @@
         {
           "id": "eval-plan-reflection",
           "label": "실습 계획과 성찰",
-          "points": 7,
+          "points": 5,
           "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
         },
         {
