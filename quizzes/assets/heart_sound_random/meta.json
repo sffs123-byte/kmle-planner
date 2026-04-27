@@ -17,7 +17,8 @@
         "A가 주 위치",
         "전 구역 systolic"
       ],
-      "tip": "A부터 systolic murmur가 들리고 PDA 기차소리가 아니면 AS/PS 후보. A가 주 위치면 AS 쪽으로 잡는다."
+      "tip": "A부터 systolic murmur가 들리고 PDA 기차소리가 아니면 AS/PS 후보. A가 주 위치면 AS 쪽으로 잡는다.",
+      "answer": "Aortic valve area에서 가장 크게 들리는 systolic murmur로, aortic stenosis입니다."
     },
     {
       "id": "AR",
@@ -35,7 +36,8 @@
         "diastolic",
         "M 거의 정상"
       ],
-      "tip": "A부터 들리는데 diastolic이면 AR로 확정에 가깝다. AR은 M에서 거의 정상으로 빠지는 흐름이 포인트."
+      "tip": "A부터 들리는데 diastolic이면 AR로 확정에 가깝다. AR은 M에서 거의 정상으로 빠지는 흐름이 포인트.",
+      "answer": "Aortic valve area에서 가장 크게 들리는 diastolic murmur로, aortic regurgitation입니다."
     },
     {
       "id": "MS",
@@ -54,7 +56,8 @@
         "M 두두두두",
         "opening snap"
       ],
-      "tip": "P까지 정상인데 T/M에서 diastolic rumbling이 나오고 M에서 두두두두가 주 위치면 MS."
+      "tip": "P까지 정상인데 T/M에서 diastolic rumbling이 나오고 M에서 두두두두가 주 위치면 MS.",
+      "answer": "Mitral valve area에서 가장 크게 들리는 diastolic murmur로, MS입니다."
     },
     {
       "id": "MR",
@@ -73,7 +76,8 @@
         "T에서 Dub 사라짐",
         "M pansystolic 주 위치"
       ],
-      "tip": "A 정상이고 P부터 이상이면 MR/ASD 후보. T에서 Dub가 사라지고 pansystolic으로 변하면 MR."
+      "tip": "A 정상이고 P부터 이상이면 MR/ASD 후보. T에서 Dub가 사라지고 pansystolic으로 변하면 MR.",
+      "answer": "Mitral valve area에서 가장 크게 들리는 systolic murmur로, MR입니다."
     },
     {
       "id": "TR",
@@ -92,7 +96,8 @@
         "LubDub 남아 있음",
         "T 주 위치"
       ],
-      "tip": "P까지 정상인 T-start 질환. LubDub가 남아 있는 끊기는 pansystolic이 T에서 제일 크면 TR."
+      "tip": "P까지 정상인 T-start 질환. LubDub가 남아 있는 끊기는 pansystolic이 T에서 제일 크면 TR.",
+      "answer": "Tricuspid valve area에서 가장 크게 들리는 pansystolic murmur로, TR입니다."
     },
     {
       "id": "PS",
@@ -111,7 +116,8 @@
         "P 주 위치",
         "M 정상에 가까움"
       ],
-      "tip": "A부터 systolic이면 AS/PS. P가 주 위치이고 mid-systolic이며 M은 Lub 크게 들리고 정상 쪽이면 PS."
+      "tip": "A부터 systolic이면 AS/PS. P가 주 위치이고 mid-systolic이며 M은 Lub 크게 들리고 정상 쪽이면 PS.",
+      "answer": "Pulmonic valve area에서 가장 크게 들리는 systolic murmur로, pulmonary stenosis입니다."
     },
     {
       "id": "PDA",
@@ -130,7 +136,8 @@
         "P 주 위치",
         "A부터 이상"
       ],
-      "tip": "기차소리/continuous가 보이면 PDA. 특히 P에서 최대다."
+      "tip": "기차소리/continuous가 보이면 PDA. 특히 P에서 최대다.",
+      "answer": "Pulmonic valve area에서 가장 크게 들리는 continuous murmur로, PDA입니다."
     },
     {
       "id": "ASD",
@@ -149,7 +156,8 @@
         "fixed S2 splitting",
         "M 정상"
       ],
-      "tip": "A 정상, P부터 이상이면 MR/ASD. fixed S2 splitting이 들리면 ASD로 간다."
+      "tip": "A 정상, P부터 이상이면 MR/ASD. fixed S2 splitting이 들리면 ASD로 간다.",
+      "answer": "Pulmonic valve area에서 가장 크게 들리는 pansystolic murmur로, ASD입니다."
     },
     {
       "id": "VSD",
@@ -168,7 +176,8 @@
         "Lub만 들림",
         "부우욱"
       ],
-      "tip": "P까지 정상이고 T에서 Lub만 들리는 holosystolic, 부우욱이면 VSD."
+      "tip": "P까지 정상이고 T에서 Lub만 들리는 holosystolic, 부우욱이면 VSD.",
+      "answer": "Tricuspid valve area에서 가장 크게 들리는 holosystolic murmur로, VSD입니다."
     }
   ],
   "order_tips": [

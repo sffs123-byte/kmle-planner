@@ -30,6 +30,7 @@ NORMAL_DISEASE = {
     },
     "keywords": ["정상 심음", "murmur 없음", "fixed S2 splitting 없음", "APTM 전체 정상"],
     "tip": "APTM 전 위치에서 특별한 murmur 없이 S1/S2만 들리면 정상 심음으로 본다.",
+    "answer": "APTM 전 위치에서 murmur 없이 정상 S1/S2만 들리는 정상 심음입니다.",
 }
 
 
@@ -249,6 +250,7 @@ function guess(id){{
   ab.className = 'answer-box show';
   document.getElementById('answer-inner').innerHTML =
     `<b>${{correct ? '✅' : '❌'}} 정답: ${{esc(current.id)}} · ${{esc(current.full)}}</b>` +
+    (current.answer ? `<div style="background:#dbeafe;color:#1e3a8a;border-radius:12px;padding:12px;margin-top:10px;font-size:14px;font-weight:700;line-height:1.6">🎤 ${{esc(current.answer)}}</div>` : '') +
     `<div class="chips">${{current.keywords.map(k => `<span class="chip">${{esc(k)}}</span>`).join('')}}</div>` +
     `<div class="tip-box">${{esc(current.tip)}}</div>`;
   quizIdx++;
