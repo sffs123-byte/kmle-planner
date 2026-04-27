@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kmle-planner-20260427T134432Z';
+const CACHE_NAME = 'kmle-planner-20260427T233500Z';
 const ASSETS = [
   './',
   './index.html',
@@ -71,8 +71,14 @@ self.addEventListener('fetch', (event) => {
 
   const url = new URL(event.request.url);
   const isLiveBundle = url.pathname.includes('/data/clerkships/bundles/');
+  const isProfessorAsset = url.pathname.includes('/data/clerkships/professors/');
   const isNavigation = event.request.mode === 'navigate';
   const isShellPath = NETWORK_FIRST_PATHS.has(url.pathname);
+
+  if (isProfessorAsset) {
+    event.respondWith(networkFirst(event.request));
+    return;
+  }
 
   if (isLiveBundle || isNavigation || isShellPath) {
     event.respondWith(networkFirst(event.request, './index.html'));
