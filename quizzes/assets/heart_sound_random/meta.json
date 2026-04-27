@@ -1,0 +1,368 @@
+{
+  "diseases": [
+    {
+      "id": "AS",
+      "name": "AS",
+      "full": "Aortic Stenosis",
+      "primary": "A",
+      "pattern": {
+        "A": "Systolic murmur, 주 위치",
+        "P": "Systolic murmur",
+        "T": "Systolic murmur",
+        "M": "Systolic murmur"
+      },
+      "keywords": [
+        "A부터 이상",
+        "systolic",
+        "A가 주 위치",
+        "전 구역 systolic"
+      ],
+      "tip": "A부터 systolic murmur가 들리고 PDA 기차소리가 아니면 AS/PS 후보. A가 주 위치면 AS 쪽으로 잡는다."
+    },
+    {
+      "id": "AR",
+      "name": "AR",
+      "full": "Aortic Regurgitation",
+      "primary": "A",
+      "pattern": {
+        "A": "Diastolic murmur, 주 위치",
+        "P": "Diastolic murmur",
+        "T": "Diastolic murmur",
+        "M": "거의 정상"
+      },
+      "keywords": [
+        "A부터 이상",
+        "diastolic",
+        "M 거의 정상"
+      ],
+      "tip": "A부터 들리는데 diastolic이면 AR로 확정에 가깝다. AR은 M에서 거의 정상으로 빠지는 흐름이 포인트."
+    },
+    {
+      "id": "MS",
+      "name": "MS",
+      "full": "Mitral Stenosis",
+      "primary": "M",
+      "pattern": {
+        "A": "정상",
+        "P": "정상",
+        "T": "Diastolic rumbling murmur, 작게 들림",
+        "M": "Opening snap + Mid-diastolic rumbling murmur, 주 위치, 두두두두"
+      },
+      "keywords": [
+        "P까지 정상",
+        "T부터 diastolic rumbling",
+        "M 두두두두",
+        "opening snap"
+      ],
+      "tip": "P까지 정상인데 T/M에서 diastolic rumbling이 나오고 M에서 두두두두가 주 위치면 MS."
+    },
+    {
+      "id": "MR",
+      "name": "MR",
+      "full": "Mitral Regurgitation",
+      "primary": "M",
+      "pattern": {
+        "A": "정상",
+        "P": "Systolic murmur, Dub 들림",
+        "T": "Pansystolic murmur, Dub 안 들리기 시작",
+        "M": "Pansystolic murmur, 주 위치"
+      },
+      "keywords": [
+        "A 정상",
+        "P부터 systolic",
+        "T에서 Dub 사라짐",
+        "M pansystolic 주 위치"
+      ],
+      "tip": "A 정상이고 P부터 이상이면 MR/ASD 후보. T에서 Dub가 사라지고 pansystolic으로 변하면 MR."
+    },
+    {
+      "id": "TR",
+      "name": "TR",
+      "full": "Tricuspid Regurgitation",
+      "primary": "T",
+      "pattern": {
+        "A": "정상",
+        "P": "정상",
+        "T": "LubDub 들리며 Pansystolic murmur, 주 위치",
+        "M": "LubDub 들리면서 Pansystolic murmur"
+      },
+      "keywords": [
+        "P까지 정상",
+        "T부터 pansystolic",
+        "LubDub 남아 있음",
+        "T 주 위치"
+      ],
+      "tip": "P까지 정상인 T-start 질환. LubDub가 남아 있는 끊기는 pansystolic이 T에서 제일 크면 TR."
+    },
+    {
+      "id": "PS",
+      "name": "PS",
+      "full": "Pulmonary Stenosis",
+      "primary": "P",
+      "pattern": {
+        "A": "Mid-systolic murmur",
+        "P": "Mid-systolic murmur, 주 위치이나 A와 비슷",
+        "T": "Mid-systolic murmur",
+        "M": "Lub 크게 들리고 정상"
+      },
+      "keywords": [
+        "A부터 이상",
+        "mid-systolic",
+        "P 주 위치",
+        "M 정상에 가까움"
+      ],
+      "tip": "A부터 systolic이면 AS/PS. P가 주 위치이고 mid-systolic이며 M은 Lub 크게 들리고 정상 쪽이면 PS."
+    },
+    {
+      "id": "PDA",
+      "name": "PDA",
+      "full": "Patent Ductus Arteriosus",
+      "primary": "P",
+      "pattern": {
+        "A": "기차소리",
+        "P": "Continuous murmur, 주 위치",
+        "T": "기차소리",
+        "M": "기차소리"
+      },
+      "keywords": [
+        "기차소리",
+        "continuous",
+        "P 주 위치",
+        "A부터 이상"
+      ],
+      "tip": "기차소리/continuous가 보이면 PDA. 특히 P에서 최대다."
+    },
+    {
+      "id": "ASD",
+      "name": "ASD",
+      "full": "Atrial Septal Defect",
+      "primary": "P",
+      "pattern": {
+        "A": "정상",
+        "P": "Pansystolic murmur with fixed S2 splitting, 주 위치",
+        "T": "Fixed S2 splitting이 더 뚜렷한 Systolic murmur",
+        "M": "정상"
+      },
+      "keywords": [
+        "A 정상",
+        "P부터 이상",
+        "fixed S2 splitting",
+        "M 정상"
+      ],
+      "tip": "A 정상, P부터 이상이면 MR/ASD. fixed S2 splitting이 들리면 ASD로 간다."
+    },
+    {
+      "id": "VSD",
+      "name": "VSD",
+      "full": "Ventricular Septal Defect",
+      "primary": "T",
+      "pattern": {
+        "A": "정상",
+        "P": "정상",
+        "T": "Lub만 들리는 Holosystolic murmur, 주 위치, 부우욱",
+        "M": "Holosystolic murmur"
+      },
+      "keywords": [
+        "P까지 정상",
+        "T부터 holosystolic",
+        "Lub만 들림",
+        "부우욱"
+      ],
+      "tip": "P까지 정상이고 T에서 Lub만 들리는 holosystolic, 부우욱이면 VSD."
+    }
+  ],
+  "order_tips": [
+    "A에서 이상 → AS, AR, PS, PDA",
+    "A 정상, P부터 이상 → MR 또는 ASD를 먼저 의심",
+    "P까지 정상, T부터 이상 → VSD, MS, TR",
+    "A부터 systolic → AS or PS. A 주 위치면 AS, P 주 위치면 PS",
+    "A부터 diastolic → AR",
+    "기차소리/continuous → PDA, 특히 P에서 최대",
+    "fixed S2 splitting → ASD",
+    "T에서 Lub만 들리는 holosystolic, 부우욱 → VSD",
+    "M에서 opening snap + mid-diastolic rumbling, 두두두두 → MS",
+    "LubDub 남아 있는 pansystolic이 T에서 최대 → TR"
+  ],
+  "timestamps": {
+    "AS": {
+      "A": [
+        0,
+        11
+      ],
+      "P": [
+        11,
+        21
+      ],
+      "T": [
+        21,
+        31
+      ],
+      "M": [
+        31,
+        null
+      ]
+    },
+    "AR": {
+      "A": [
+        0,
+        11
+      ],
+      "P": [
+        11,
+        21
+      ],
+      "T": [
+        21,
+        31
+      ],
+      "M": [
+        31,
+        null
+      ]
+    },
+    "MS": {
+      "A": [
+        0,
+        11
+      ],
+      "P": [
+        11,
+        21
+      ],
+      "T": [
+        21,
+        31
+      ],
+      "M": [
+        31,
+        null
+      ]
+    },
+    "ASD": {
+      "A": [
+        0,
+        11
+      ],
+      "P": [
+        11,
+        21
+      ],
+      "T": [
+        21,
+        31
+      ],
+      "M": [
+        31,
+        null
+      ]
+    },
+    "MR": {
+      "A": [
+        0,
+        11
+      ],
+      "P": [
+        11,
+        22
+      ],
+      "T": [
+        22,
+        32
+      ],
+      "M": [
+        32,
+        null
+      ]
+    },
+    "VSD": {
+      "A": [
+        0,
+        11
+      ],
+      "P": [
+        11,
+        22
+      ],
+      "T": [
+        22,
+        32
+      ],
+      "M": [
+        32,
+        null
+      ]
+    },
+    "PDA": {
+      "A": [
+        0,
+        12
+      ],
+      "P": [
+        12,
+        21
+      ],
+      "T": [
+        21,
+        31
+      ],
+      "M": [
+        31,
+        null
+      ]
+    },
+    "PS": {
+      "A": [
+        0,
+        11
+      ],
+      "P": [
+        11,
+        21
+      ],
+      "T": [
+        21,
+        31
+      ],
+      "M": [
+        31,
+        null
+      ]
+    },
+    "TR": {
+      "A": [
+        0,
+        11
+      ],
+      "P": [
+        11,
+        21
+      ],
+      "T": [
+        21,
+        31
+      ],
+      "M": [
+        31,
+        null
+      ]
+    },
+    "S2 split(-)": {
+      "A": [
+        0,
+        11
+      ],
+      "P": [
+        11,
+        21
+      ],
+      "T": [
+        21,
+        31
+      ],
+      "M": [
+        31,
+        null
+      ]
+    }
+  }
+}
