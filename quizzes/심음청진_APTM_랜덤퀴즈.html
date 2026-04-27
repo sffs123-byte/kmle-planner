@@ -32,15 +32,9 @@ body{margin:0;background:radial-gradient(circle at top left,#1e3a8a33,transparen
 .result-screen{display:none;padding:40px 20px;text-align:center}.result-screen.show{display:block}.result-big{font-size:56px;font-weight:950;margin-bottom:8px}.result-sub{font-size:18px;color:var(--muted);margin-bottom:28px}
 .study-wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px}.study-panel{padding:16px}.study-panel h3{margin:0 0 12px;font-size:15px;color:#bfdbfe;font-weight:800}.study-panel img{width:100%;border-radius:12px;display:block}.algo-row{background:#0f172a;border:1px solid #334155;border-radius:10px;padding:10px 14px;margin-bottom:8px;font-size:14px;line-height:1.5;color:#dbeafe}
 .disease-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 14px}.dtab{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:8px;padding:5px 12px;font-size:12px;font-weight:800;cursor:pointer}.dtab.active{background:var(--pri);color:#0f172a;border-color:var(--pri)}
-<<<<<<< Updated upstream
-.study-aptm{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.study-slot{background:#0f172a;border:1px solid #334155;border-radius:14px;padding:12px}.study-slot .pos{font-size:24px;font-weight:950;color:var(--pri);margin-bottom:6px}.study-slot .kw{font-size:13px;line-height:1.55;color:#cbd5e1}
-.study-summary{font-size:13px;color:#cbd5e1;line-height:1.7;padding:0 2px}
-@media(max-width:700px){.choices{grid-template-columns:repeat(2,1fr)}.aptm-row{gap:6px}.study-wrap{grid-template-columns:1fr}.circles{gap:5px}.circle{width:22px;height:22px;font-size:10px}}
-=======
 .study-aptm{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.study-slot{background:#0f172a;border:1px solid #334155;border-radius:14px;padding:12px}.study-slot .pos{font-size:24px;font-weight:950;color:var(--pri);margin-bottom:6px}.study-slot .kw{font-size:13px;line-height:1.55;color:#cbd5e1}.study-slot .study-play{margin-top:10px;width:100%;border:1px solid #334155;background:#1e293b;color:#e2e8f0;border-radius:10px;padding:9px 10px;font-size:12px;font-weight:800;cursor:pointer}.study-slot .study-play:hover{background:#334155}
 .study-summary{font-size:13px;color:#cbd5e1;line-height:1.7;padding:0 2px}.study-audio-toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}.study-audio-toolbar .study-mini{border:1px solid #334155;background:#1e293b;color:#e2e8f0;border-radius:10px;padding:9px 12px;font-size:12px;font-weight:800;cursor:pointer}.study-audio-toolbar .study-mini:hover{background:#334155}.study-now{font-size:12px;color:#93c5fd;margin-top:8px;min-height:18px}
 @media(max-width:700px){.choices{grid-template-columns:repeat(2,1fr)}.aptm-row{gap:6px}.study-wrap{grid-template-columns:1fr}.study-aptm{grid-template-columns:1fr 1fr}.circles{gap:5px}.circle{width:22px;height:22px;font-size:10px}}
->>>>>>> Stashed changes
 </style>
 </head>
 <body>
@@ -112,11 +106,8 @@ body{margin:0;background:radial-gradient(circle at top left,#1e3a8a33,transparen
         <h3>🩺 질환별 APTM 청진 키워드</h3>
         <div class="disease-tabs" id="dtabs"></div>
         <div class="study-summary" id="study-summary"></div>
-<<<<<<< Updated upstream
-=======
         <div class="study-audio-toolbar" id="study-audio-toolbar"></div>
         <div class="study-now" id="study-now"></div>
->>>>>>> Stashed changes
         <div class="study-aptm" id="study-aptm"></div>
       </div>
     </div>
@@ -140,21 +131,20 @@ let answered = false;
 let kwVisible = false;
 let audioLoop = null;
 let studyDis = DISEASES[0].id;
-<<<<<<< Updated upstream
-=======
 let studyPlayingPos = null;
->>>>>>> Stashed changes
 
-function shuffle(arr){return [...arr].sort(()=>Math.random()-.5);}
-function esc(s){return String(s??'').replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));}
-function currentAudioKey(disease){return disease.audioKey || disease.id;}
-function clearAudioLoop(){if(audioLoop){clearInterval(audioLoop); audioLoop = null;}}
-<<<<<<< Updated upstream
-function stopAudio(){clearAudioLoop(); const player = document.getElementById('player'); player.pause(); player.currentTime = 0;}
-
-function setMode(m){
-=======
-function stopAudio(){clearAudioLoop(); const player = document.getElementById('player'); player.pause(); player.currentTime = 0; player.removeAttribute('src'); player.load();}
+function shuffle(arr){ return [...arr].sort(() => Math.random() - 0.5); }
+function esc(s){ return String(s ?? '').replace(/[&<>]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[m])); }
+function currentAudioKey(disease){ return disease.audioKey || disease.id; }
+function clearAudioLoop(){ if(audioLoop){ clearInterval(audioLoop); audioLoop = null; } }
+function stopAudio(){
+  clearAudioLoop();
+  const player = document.getElementById('player');
+  player.pause();
+  player.currentTime = 0;
+  player.removeAttribute('src');
+  player.load();
+}
 function playAudioSegmentByKey(key, pos){
   const player = document.getElementById('player');
   clearAudioLoop();
@@ -167,12 +157,12 @@ function playAudioSegmentByKey(key, pos){
   const end = range[1];
   player.src = src;
   player.currentTime = start;
-  player.play().catch(()=>{});
+  player.play().catch(() => {});
   if(end !== null){
-    audioLoop = setInterval(()=>{
+    audioLoop = setInterval(() => {
       if(player.currentTime >= end){
         player.currentTime = start;
-        player.play().catch(()=>{});
+        player.play().catch(() => {});
       }
     }, 180);
   }
@@ -181,15 +171,14 @@ function playAudioSegmentByKey(key, pos){
 
 function setMode(m){
   stopAudio();
->>>>>>> Stashed changes
   mode = m;
-  document.getElementById('tab-quiz').className = 'modetab' + (m==='quiz'?' active':'');
-  document.getElementById('tab-study').className = 'modetab' + (m==='study'?' active':'');
-  document.getElementById('quiz-mode').style.display = m==='quiz'?'':'none';
-  document.getElementById('study-mode').style.display = m==='study'?'':'none';
-  document.getElementById('circles').style.display = m==='quiz'?'flex':'none';
-  if(m==='study'){ stopAudio(); renderStudy(); }
-  if(m==='quiz' && current) updatePosUI();
+  document.getElementById('tab-quiz').className = 'modetab' + (m === 'quiz' ? ' active' : '');
+  document.getElementById('tab-study').className = 'modetab' + (m === 'study' ? ' active' : '');
+  document.getElementById('quiz-mode').style.display = m === 'quiz' ? '' : 'none';
+  document.getElementById('study-mode').style.display = m === 'study' ? '' : 'none';
+  document.getElementById('circles').style.display = m === 'quiz' ? 'flex' : 'none';
+  if(m === 'study') renderStudy();
+  if(m === 'quiz' && current) updatePosUI();
 }
 
 function startQuiz(){
@@ -206,8 +195,8 @@ function startQuiz(){
 
 function renderCircles(){
   const el = document.getElementById('circles');
-  el.innerHTML = results.map((r,i)=>`<div class="circle ${r===true?'correct':'wrong'}">${i+1}</div>`).join('') +
-    Array.from({length:QUESTION_COUNT-results.length},(_,i)=>`<div class="circle">${results.length+i+1}</div>`).join('');
+  el.innerHTML = results.map((r, i) => `<div class="circle ${r ? 'correct' : 'wrong'}">${i+1}</div>`).join('') +
+    Array.from({length: QUESTION_COUNT - results.length}, (_, i) => `<div class="circle">${results.length + i + 1}</div>`).join('');
 }
 
 function renderQuestion(){
@@ -218,55 +207,25 @@ function renderQuestion(){
   kwVisible = false;
   document.getElementById('kw-reveal').className = 'kw-reveal';
   document.getElementById('answer-box').className = 'answer-box';
-  document.getElementById('q-qnum').textContent = `문제 ${quizIdx+1} / ${QUESTION_COUNT}`;
+  document.getElementById('q-qnum').textContent = `문제 ${quizIdx + 1} / ${QUESTION_COUNT}`;
   updatePosUI();
   renderChoices();
   playPos();
 }
 
 function updatePosUI(){
-  POSITIONS.forEach((p,i)=>{
-    const el = document.getElementById('pos-'+p);
-    const cls = i === curPos ? 'pos-btn active' : i < curPos ? 'pos-btn played' : 'pos-btn';
-    el.className = cls;
+  POSITIONS.forEach((p, i) => {
+    const el = document.getElementById('pos-' + p);
+    el.className = i === curPos ? 'pos-btn active' : i < curPos ? 'pos-btn played' : 'pos-btn';
   });
   document.getElementById('q-position-label').textContent = `${POSITIONS[curPos]} 위치 청진 중`;
-  const nextBtn = document.getElementById('btn-next-pos');
-  nextBtn.disabled = curPos >= POSITIONS.length - 1 || answered;
+  document.getElementById('btn-next-pos').disabled = curPos >= POSITIONS.length - 1 || answered;
   document.getElementById('btn-kw').disabled = answered;
 }
 
 function playPos(){
-<<<<<<< Updated upstream
-  const player = document.getElementById('player');
-  clearAudioLoop();
-  const key = currentAudioKey(current);
-  const src = AUDIO[key];
-  const ts = TS[key];
-  if(!src || !ts) return;
-  const pos = POSITIONS[curPos];
-  const range = ts[pos];
-  if(!range) return;
-  const start = range[0];
-  const end = range[1];
-  player.src = src;
-  player.currentTime = start;
-  player.play().catch(()=>{});
-  if(end !== null){
-    audioLoop = setInterval(()=>{
-      if(player.currentTime >= end){
-        player.currentTime = start;
-        player.play().catch(()=>{});
-      }
-    }, 180);
-  }
-=======
-  const key = currentAudioKey(current);
-  const pos = POSITIONS[curPos];
-  playAudioSegmentByKey(key, pos);
->>>>>>> Stashed changes
+  playAudioSegmentByKey(currentAudioKey(current), POSITIONS[curPos]);
 }
-
 function replayPos(){ if(!answered) playPos(); }
 function nextPos(){
   if(curPos < POSITIONS.length - 1 && !answered){
@@ -277,7 +236,6 @@ function nextPos(){
     playPos();
   }
 }
-
 function toggleKw(){
   if(answered) return;
   kwVisible = !kwVisible;
@@ -291,8 +249,8 @@ function toggleKw(){
 }
 
 function renderChoices(){
-  const choices = shuffle(DISEASES.map(d=>d.id));
-  document.getElementById('choices').innerHTML = choices.map(id=>`<button class="choice" data-id="${id}" onclick="guess('${id}')">${esc(id)}</button>`).join('');
+  const choices = shuffle(DISEASES.map(d => d.id));
+  document.getElementById('choices').innerHTML = choices.map(id => `<button class="choice" data-id="${id}" onclick="guess('${id}')">${esc(id)}</button>`).join('');
 }
 
 function guess(id){
@@ -302,19 +260,19 @@ function guess(id){
   const correct = id === current.id;
   results.push(correct);
   renderCircles();
-  document.querySelectorAll('.choice').forEach(b=>{
+  document.querySelectorAll('.choice').forEach((b) => {
     if(b.dataset.id === current.id) b.classList.add('correct');
     else if(b.dataset.id === id) b.classList.add('wrong');
     b.disabled = true;
   });
-  POSITIONS.forEach((p)=>{ document.getElementById('pos-'+p).className = 'pos-btn played'; });
+  POSITIONS.forEach((p) => { document.getElementById('pos-' + p).className = 'pos-btn played'; });
   document.getElementById('btn-next-pos').disabled = true;
   document.getElementById('btn-kw').disabled = true;
   const ab = document.getElementById('answer-box');
   ab.className = 'answer-box show';
   document.getElementById('answer-inner').innerHTML =
-    `<b>${correct?'✅':'❌'} 정답: ${esc(current.id)} · ${esc(current.full)}</b>` +
-    `<div class="chips">${current.keywords.map(k=>`<span class="chip">${esc(k)}</span>`).join('')}</div>` +
+    `<b>${correct ? '✅' : '❌'} 정답: ${esc(current.id)} · ${esc(current.full)}</b>` +
+    `<div class="chips">${current.keywords.map(k => `<span class="chip">${esc(k)}</span>`).join('')}</div>` +
     `<div class="tip-box">${esc(current.tip)}</div>`;
   quizIdx++;
   document.getElementById('next-question-btn').textContent = quizIdx >= QUESTION_COUNT ? '결과 보기 ▶' : '다음 문제 ▶';
@@ -339,16 +297,14 @@ function showResult(){
   document.getElementById('result-emoji').textContent = emoji;
   document.getElementById('result-score-text').textContent = `${ok} / ${QUESTION_COUNT}`;
   document.getElementById('result-sub').textContent = sub;
-  document.getElementById('result-circles').innerHTML = results.map((r,i)=>`<div class="circle ${r?'correct':'wrong'}">${i+1}</div>`).join('');
+  document.getElementById('result-circles').innerHTML = results.map((r, i) => `<div class="circle ${r ? 'correct' : 'wrong'}">${i+1}</div>`).join('');
   document.getElementById('result-screen').className = 'result-screen show';
   document.getElementById('q-position-label').textContent = '';
   document.getElementById('q-qnum').textContent = '결과';
 }
 
-<<<<<<< Updated upstream
-=======
 function playStudyPos(pos){
-  const disease = DISEASES.find(d=>d.id===studyDis) || DISEASES[0];
+  const disease = DISEASES.find(d => d.id === studyDis) || DISEASES[0];
   const ok = playAudioSegmentByKey(currentAudioKey(disease), pos);
   if(ok){
     studyPlayingPos = pos;
@@ -356,29 +312,27 @@ function playStudyPos(pos){
   }
 }
 
->>>>>>> Stashed changes
 function renderStudy(){
-  document.getElementById('algo-list').innerHTML = ORDER_TIPS.map(t=>`<div class="algo-row">${esc(t)}</div>`).join('');
-  document.getElementById('dtabs').innerHTML = DISEASES.map(d=>`<button class="dtab${d.id===studyDis?' active':''}" onclick="selectStudy('${d.id}')">${esc(d.id)}</button>`).join('');
-  const disease = DISEASES.find(d=>d.id===studyDis) || DISEASES[0];
+  document.getElementById('algo-list').innerHTML = ORDER_TIPS.map(t => `<div class="algo-row">${esc(t)}</div>`).join('');
+  document.getElementById('dtabs').innerHTML = DISEASES.map(d => `<button class="dtab${d.id === studyDis ? ' active' : ''}" onclick="selectStudy('${d.id}')">${esc(d.id)}</button>`).join('');
+  const disease = DISEASES.find(d => d.id === studyDis) || DISEASES[0];
   document.getElementById('study-summary').innerHTML = `<b>${esc(disease.id)}</b> · ${esc(disease.full)}<br>${esc(disease.tip)}`;
-<<<<<<< Updated upstream
-  document.getElementById('study-aptm').innerHTML = POSITIONS.map(p=>`<div class="study-slot"><div class="pos">${p}</div><div class="kw">${esc(disease.pattern[p])}</div></div>`).join('');
-}
-function selectStudy(id){ studyDis = id; renderStudy(); }
-=======
-  document.getElementById('study-audio-toolbar').innerHTML = POSITIONS.map(p=>`<button class="study-mini" onclick="playStudyPos('${p}')">🔊 ${p} 듣기</button>`).join('');
+  document.getElementById('study-audio-toolbar').innerHTML = POSITIONS.map(p => `<button class="study-mini" onclick="playStudyPos('${p}')">🔊 ${p} 듣기</button>`).join('');
   document.getElementById('study-now').textContent = studyPlayingPos ? `${studyPlayingPos} 위치 (${POS_NAMES[studyPlayingPos]}) 재생 준비됨` : '원하는 위치 버튼을 누르면 바로 재생됩니다.';
-  document.getElementById('study-aptm').innerHTML = POSITIONS.map(p=>`<div class="study-slot"><div class="pos">${p}</div><div class="kw">${esc(disease.pattern[p])}</div><button class="study-play" onclick="playStudyPos('${p}')">🔊 ${p} 위치 듣기</button></div>`).join('');
+  document.getElementById('study-aptm').innerHTML = POSITIONS.map(p => `<div class="study-slot"><div class="pos">${p}</div><div class="kw">${esc(disease.pattern[p])}</div><button class="study-play" onclick="playStudyPos('${p}')">🔊 ${p} 위치 듣기</button></div>`).join('');
 }
-function selectStudy(id){ studyDis = id; studyPlayingPos = null; stopAudio(); renderStudy(); }
->>>>>>> Stashed changes
+function selectStudy(id){
+  studyDis = id;
+  studyPlayingPos = null;
+  stopAudio();
+  renderStudy();
+}
 
-window.addEventListener('keydown', e=>{
+window.addEventListener('keydown', (e) => {
   if(mode !== 'quiz') return;
   if(e.key === ' '){ e.preventDefault(); nextPos(); }
-  if(e.key.toLowerCase() === 'k'){ toggleKw(); }
-  if(e.key.toLowerCase() === 'r'){ replayPos(); }
+  if(e.key.toLowerCase() === 'k') toggleKw();
+  if(e.key.toLowerCase() === 'r') replayPos();
 });
 
 renderStudy();
