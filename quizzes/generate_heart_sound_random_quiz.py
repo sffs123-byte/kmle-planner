@@ -87,11 +87,16 @@ body{margin:0;background:radial-gradient(circle at top left,#1e3a8a33,transparen
 .result-screen{display:none;padding:40px 20px;text-align:center}.result-screen.show{display:block}.result-big{font-size:56px;font-weight:950;margin-bottom:8px}.result-sub{font-size:18px;color:var(--muted);margin-bottom:28px}
 .study-wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px}.study-panel{padding:16px}.study-panel h3{margin:0 0 12px;font-size:15px;color:#bfdbfe;font-weight:800}.study-panel img{width:100%;border-radius:12px;display:block}.algo-row{background:#0f172a;border:1px solid #334155;border-radius:10px;padding:10px 14px;margin-bottom:8px;font-size:14px;line-height:1.5;color:#dbeafe}
 .disease-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 14px}.dtab{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:8px;padding:5px 12px;font-size:12px;font-weight:800;cursor:pointer}.dtab.active{background:var(--pri);color:#0f172a;border-color:var(--pri)}
+<<<<<<< Updated upstream
 .study-aptm{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.study-slot{background:#0f172a;border:1px solid #334155;border-radius:14px;padding:12px}.study-slot .pos{font-size:24px;font-weight:950;color:var(--pri);margin-bottom:6px}.study-slot .kw{font-size:13px;line-height:1.55;color:#cbd5e1}
 .study-summary{font-size:13px;color:#cbd5e1;line-height:1.7;padding:0 2px}
 @media(max-width:700px){.choices{grid-template-columns:repeat(2,1fr)}.aptm-row{gap:6px}.study-wrap{grid-template-columns:1fr}.circles{gap:5px}.circle{width:22px;height:22px;font-size:10px}}
+=======
+.study-aptm{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.study-slot{background:#0f172a;border:1px solid #334155;border-radius:14px;padding:12px}.study-slot .pos{font-size:24px;font-weight:950;color:var(--pri);margin-bottom:6px}.study-slot .kw{font-size:13px;line-height:1.55;color:#cbd5e1}.study-slot .study-play{margin-top:10px;width:100%;border:1px solid #334155;background:#1e293b;color:#e2e8f0;border-radius:10px;padding:9px 10px;font-size:12px;font-weight:800;cursor:pointer}.study-slot .study-play:hover{background:#334155}
+.study-summary{font-size:13px;color:#cbd5e1;line-height:1.7;padding:0 2px}.study-audio-toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}.study-audio-toolbar .study-mini{border:1px solid #334155;background:#1e293b;color:#e2e8f0;border-radius:10px;padding:9px 12px;font-size:12px;font-weight:800;cursor:pointer}.study-audio-toolbar .study-mini:hover{background:#334155}.study-now{font-size:12px;color:#93c5fd;margin-top:8px;min-height:18px}
+@media(max-width:700px){.choices{grid-template-columns:repeat(2,1fr)}.aptm-row{gap:6px}.study-wrap{grid-template-columns:1fr}.study-aptm{grid-template-columns:1fr 1fr}.circles{gap:5px}.circle{width:22px;height:22px;font-size:10px}}
+>>>>>>> Stashed changes
 '''
-<<<<<<< HEAD
 
     js = f'''
 const DISEASES = {json.dumps(diseases, ensure_ascii=False)};
@@ -105,29 +110,54 @@ let mode = 'quiz';
 let quizQueue = [];
 let quizIdx = 0;
 let results = [];
-=======
-    js = r'''
-const DISEASES = __DATA__;
-const ORDER_TIPS = __TIPS__;
-const SRC_IMG = '__IMG__';
-let queue = [];
-let queueIndex = 0;
->>>>>>> 6996112 (fix: implement shuffle-based random quiz queue for heart sound APTM quiz)
 let current = null;
 let curPos = 0;
 let answered = false;
-<<<<<<< HEAD
 let kwVisible = false;
 let audioLoop = null;
 let studyDis = DISEASES[0].id;
+<<<<<<< Updated upstream
+=======
+let studyPlayingPos = null;
+>>>>>>> Stashed changes
 
 function shuffle(arr){{return [...arr].sort(()=>Math.random()-.5);}}
 function esc(s){{return String(s??'').replace(/[&<>]/g,m=>({{'&':'&amp;','<':'&lt;','>':'&gt;'}}[m]));}}
 function currentAudioKey(disease){{return disease.audioKey || disease.id;}}
 function clearAudioLoop(){{if(audioLoop){{clearInterval(audioLoop); audioLoop = null;}}}}
+<<<<<<< Updated upstream
 function stopAudio(){{clearAudioLoop(); const player = document.getElementById('player'); player.pause(); player.currentTime = 0;}}
 
 function setMode(m){{
+=======
+function stopAudio(){{clearAudioLoop(); const player = document.getElementById('player'); player.pause(); player.currentTime = 0; player.removeAttribute('src'); player.load();}}
+function playAudioSegmentByKey(key, pos){{
+  const player = document.getElementById('player');
+  clearAudioLoop();
+  const src = AUDIO[key];
+  const ts = TS[key];
+  if(!src || !ts) return false;
+  const range = ts[pos];
+  if(!range) return false;
+  const start = range[0];
+  const end = range[1];
+  player.src = src;
+  player.currentTime = start;
+  player.play().catch(()=>{{}});
+  if(end !== null){{
+    audioLoop = setInterval(()=>{{
+      if(player.currentTime >= end){{
+        player.currentTime = start;
+        player.play().catch(()=>{{}});
+      }}
+    }}, 180);
+  }}
+  return true;
+}}
+
+function setMode(m){{
+  stopAudio();
+>>>>>>> Stashed changes
   mode = m;
   document.getElementById('tab-quiz').className = 'modetab' + (m==='quiz'?' active':'');
   document.getElementById('tab-study').className = 'modetab' + (m==='study'?' active':'');
@@ -183,6 +213,7 @@ function updatePosUI(){{
 }}
 
 function playPos(){{
+<<<<<<< Updated upstream
   const player = document.getElementById('player');
   clearAudioLoop();
   const key = currentAudioKey(current);
@@ -205,6 +236,11 @@ function playPos(){{
       }}
     }}, 180);
   }}
+=======
+  const key = currentAudioKey(current);
+  const pos = POSITIONS[curPos];
+  playAudioSegmentByKey(key, pos);
+>>>>>>> Stashed changes
 }}
 
 function replayPos(){{ if(!answered) playPos(); }}
@@ -285,14 +321,34 @@ function showResult(){{
   document.getElementById('q-qnum').textContent = '결과';
 }}
 
+<<<<<<< Updated upstream
+=======
+function playStudyPos(pos){{
+  const disease = DISEASES.find(d=>d.id===studyDis) || DISEASES[0];
+  const ok = playAudioSegmentByKey(currentAudioKey(disease), pos);
+  if(ok){{
+    studyPlayingPos = pos;
+    document.getElementById('study-now').textContent = `${{pos}} 위치 (${{POS_NAMES[pos]}}) 재생 중 · ${{disease.id}}`;
+  }}
+}}
+
+>>>>>>> Stashed changes
 function renderStudy(){{
   document.getElementById('algo-list').innerHTML = ORDER_TIPS.map(t=>`<div class="algo-row">${{esc(t)}}</div>`).join('');
   document.getElementById('dtabs').innerHTML = DISEASES.map(d=>`<button class="dtab${{d.id===studyDis?' active':''}}" onclick="selectStudy('${{d.id}}')">${{esc(d.id)}}</button>`).join('');
   const disease = DISEASES.find(d=>d.id===studyDis) || DISEASES[0];
   document.getElementById('study-summary').innerHTML = `<b>${{esc(disease.id)}}</b> · ${{esc(disease.full)}}<br>${{esc(disease.tip)}}`;
+<<<<<<< Updated upstream
   document.getElementById('study-aptm').innerHTML = POSITIONS.map(p=>`<div class="study-slot"><div class="pos">${{p}}</div><div class="kw">${{esc(disease.pattern[p])}}</div></div>`).join('');
 }}
 function selectStudy(id){{ studyDis = id; renderStudy(); }}
+=======
+  document.getElementById('study-audio-toolbar').innerHTML = POSITIONS.map(p=>`<button class="study-mini" onclick="playStudyPos('${{p}}')">🔊 ${{p}} 듣기</button>`).join('');
+  document.getElementById('study-now').textContent = studyPlayingPos ? `${{studyPlayingPos}} 위치 (${{POS_NAMES[studyPlayingPos]}}) 재생 준비됨` : '원하는 위치 버튼을 누르면 바로 재생됩니다.';
+  document.getElementById('study-aptm').innerHTML = POSITIONS.map(p=>`<div class="study-slot"><div class="pos">${{p}}</div><div class="kw">${{esc(disease.pattern[p])}}</div><button class="study-play" onclick="playStudyPos('${{p}}')">🔊 ${{p}} 위치 듣기</button></div>`).join('');
+}}
+function selectStudy(id){{ studyDis = id; studyPlayingPos = null; stopAudio(); renderStudy(); }}
+>>>>>>> Stashed changes
 
 window.addEventListener('keydown', e=>{{
   if(mode !== 'quiz') return;
@@ -382,6 +438,11 @@ startQuiz();
         <h3>🩺 질환별 APTM 청진 키워드</h3>
         <div class="disease-tabs" id="dtabs"></div>
         <div class="study-summary" id="study-summary"></div>
+<<<<<<< Updated upstream
+=======
+        <div class="study-audio-toolbar" id="study-audio-toolbar"></div>
+        <div class="study-now" id="study-now"></div>
+>>>>>>> Stashed changes
         <div class="study-aptm" id="study-aptm"></div>
       </div>
     </div>
@@ -391,25 +452,6 @@ startQuiz();
 </body>
 </html>
 '''
-=======
-let score = JSON.parse(localStorage.getItem('heart_sound_aptm_score_v1') || '{"ok":0,"total":0}');
-function esc(s){return String(s??'').replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));}
-function shuffle(arr){return [...arr].sort(()=>Math.random()-0.5);}
-function initQueue(){queue = shuffle(DISEASES); queueIndex = 0;}
-function pick(){if(queue.length===0) initQueue(); current = queue[queueIndex % queue.length]; queueIndex++; revealed = 0; answered = false; render();}
-function revealNext(){if(revealed<4) revealed++; render();}
-function revealAll(){revealed=4; render();}
-function clueHtml(){return ['A','P','T','M'].map((p,i)=>{const show=i<revealed; return `<div class="slot ${show?'revealed':''}"><div class="pos">${p}</div>${show?`<div class="kw">${esc(current.pattern[p])}</div>`:`<div class="hidden">${p} 위치 키워드 숨김</div>`}</div>`}).join('');}
-function choicesHtml(){const choices=shuffle(DISEASES.map(d=>d.id)); return choices.map(id=>`<button class="choice" data-id="${id}" onclick="guess('${id}')">${id}</button>`).join('');}
-function updateScore(){document.getElementById('score').textContent=`정답 ${score.ok} / ${score.total}`; localStorage.setItem('heart_sound_aptm_score_v1', JSON.stringify(score));}
-function guess(id){if(answered)return; answered=true; score.total++; if(id===current.id) score.ok++; document.querySelectorAll('.choice').forEach(b=>{if(b.dataset.id===current.id)b.classList.add('correct'); else if(b.dataset.id===id)b.classList.add('wrong');}); document.getElementById('answer').classList.add('visible'); updateScore();}
-function render(){if(!current) current=DISEASES[0]; document.getElementById('quiz').innerHTML=`<div class="head"><div><div class="h">APTM 랜덤 청진 퀴즈</div><div class="cue">A → P → T → M 순서로 키워드를 열고 질환명을 맞히기</div></div><div class="score" id="score"></div></div><div class="grid"><section class="panel"><h3>청진 위치 키워드</h3><div class="aptm">${clueHtml()}</div><div class="controls"><button class="primary" onclick="revealNext()">다음 위치 보기 (${Math.min(revealed+1,4)}/4)</button><button onclick="revealAll()">APTM 모두 보기</button><button onclick="pick()">랜덤 새 문제</button><button onclick="score={ok:0,total:0};updateScore()">점수 초기화</button></div><h3 style="margin-top:18px">정답 선택</h3><div class="choices">${choicesHtml()}</div><div class="answer" id="answer"><b>정답: ${current.id} · ${esc(current.full)}</b><div class="chips"><span class="chip">주 위치 ${current.primary}</span>${current.keywords.map(k=>`<span class="chip">${esc(k)}</span>`).join('')}</div><div class="tipBox">${esc(current.tip)}</div></div></section><section class="panel imageBox"><div class="imageLabel">원문 표 이미지</div><img src="data:image/jpeg;base64,${SRC_IMG}" alt="심음 청진 정리 원문 표"></section></div>`; updateScore();}
-function renderTips(){document.getElementById('tips').innerHTML=ORDER_TIPS.map(t=>`<div>${esc(t)}</div>`).join('');}
-window.addEventListener('keydown',e=>{if(e.key===' ') {e.preventDefault();revealNext();} if(e.key==='Enter') revealAll(); if(e.key.toLowerCase()==='n') pick();});
-initQueue(); pick(); renderTips();
-'''.replace('__DATA__', data_json).replace('__TIPS__', tips_json).replace('__IMG__', source_image)
-    return f"""<!doctype html><html lang=\"ko\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>심음청진 APTM 랜덤퀴즈</title><style>{css}</style></head><body><div class=\"app\"><aside class=\"side\"><div class=\"title\">심음청진 APTM 랜덤퀴즈</div><div class=\"sub\">A → P → T → M 순서로 키워드를 확인하고 질환을 맞히는 청진 위치 리허설.<br><b>Space</b>: 다음 위치 · <b>Enter</b>: 모두 보기 · <b>N</b>: 새 문제</div><div class=\"mode controls\"><button onclick=\"pick()\">랜덤 시작</button></div><div class=\"tips\" id=\"tips\"></div></aside><main class=\"main\"><div class=\"card\" id=\"quiz\"></div></main></div><script>{js}</script></body></html>"""
->>>>>>> 6996112 (fix: implement shuffle-based random quiz queue for heart sound APTM quiz)
 
 
 if __name__ == "__main__":
