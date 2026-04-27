@@ -3766,7 +3766,10 @@
       if (location.protocol === 'file:') return false;
       const loaded = state.clerkshipBundles?.[clerkshipId];
       if (!loaded) return false;
-      if (loaded?.fixed_info?.assignment_checklist) return false;
+      const hasChecklist = Boolean(loaded?.fixed_info?.assignment_checklist);
+      const professorDirectory = Array.isArray(loaded?.fixed_info?.professor_directory) ? loaded.fixed_info.professor_directory : [];
+      const hasAnyProfessorImage = professorDirectory.some(item => Boolean(item?.image_path));
+      if (hasChecklist && (professorDirectory.length === 0 || hasAnyProfessorImage)) return false;
       try {
         await loadPlannerBundleFromUrl(`${url}${url.includes('?') ? '&' : '?'}ts=${Date.now()}`, {
           switchToCalendar: false,
@@ -4178,7 +4181,7 @@
       if (!clean) return '';
       const directory = bundle?.fixed_info?.professor_directory || [];
       const meta = directory.find(item => normalizeProfessorName(item.name) === clean);
-      if (meta?.image_path) return meta.image_path;
+      if (meta) return meta.image_path || '';
       return `./data/clerkships/professors/cardiology/${encodeURIComponent(`교수님_${clean}_01.jpeg`)}`;
     }
 
@@ -4266,7 +4269,7 @@
           site: item.site || '본원',
           relatedSessions: item.relatedSessions.slice(0, 4),
           sourceRefs: item.sourceRefs.slice(0, 6),
-          imagePath: item.imagePath || professorImageSrc(item.name),
+          imagePath: item.imagePath || professorImageSrc(item.name, bundle),
         }))
         .sort((a, b) => {
           const siteCmp = String(a.site).localeCompare(String(b.site), 'ko');
@@ -6853,10 +6856,13 @@
                   <div class="detail-screen-section">
                     <h4>${escapeHtml(site)}</h4>
                     <div class="professor-directory-table">
-                      ${rows.map(item => `
+                      ${rows.map(item => {
+                        const photoSrc = item.imagePath || professorImageSrc(item.name, bundle) || '';
+                        const photoFileName = photoSrc ? (photoSrc.split('/').pop() || '') : '';
+                        return `
                         <div class="professor-directory-row">
-                          <button type="button" class="professor-photo-button" onclick="openImageLightbox('${item.imagePath || professorImageSrc(item.name, bundle)}', '${escapeHtml(item.name)} 교수님', '${escapeHtml((item.imagePath || professorImageSrc(item.name, bundle)).split('/').pop() || '')}')">
-                            <img src="${item.imagePath || professorImageSrc(item.name, bundle)}" alt="${escapeHtml(item.name)} 교수님" onerror="this.style.display='none'; this.parentElement.classList.add('is-missing');" />
+                          <button type="button" class="professor-photo-button${photoSrc ? '' : ' is-missing'}" ${photoSrc ? `onclick="openImageLightbox('${photoSrc}', '${escapeHtml(item.name)} 교수님', '${escapeHtml(photoFileName)}')"` : 'disabled aria-disabled="true"'}>
+                            ${photoSrc ? `<img src="${photoSrc}" alt="${escapeHtml(item.name)} 교수님" onerror="this.style.display='none'; this.parentElement.classList.add('is-missing'); this.parentElement.disabled = true; this.parentElement.setAttribute('aria-disabled', 'true');" />` : ''}
                             <span class="professor-avatar-fallback">${escapeHtml(professorAvatarText(item.name))}</span>
                           </button>
                           <div>
@@ -6876,7 +6882,7 @@
                             ${item.sourceRefs.length ? `<div class="reference-info-line"><strong>ref</strong>: ${escapeHtml(item.sourceRefs.join(', '))}</div>` : ''}
                           </div>
                         </div>
-                      `).join('')}
+                      `;}).join('')}
                     </div>
                   </div>
                 `).join('')}
