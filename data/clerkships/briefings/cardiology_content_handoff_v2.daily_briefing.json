@@ -918,6 +918,19 @@
         ]
       },
       {
+        "time": "15:00",
+        "title": "OSCE 예약하기",
+        "professor": "",
+        "difficulty": 5,
+        "intro": [
+          "강렬 TODO: 오후 3시 OSCE 예약해야 함. 예약 완료 아님.",
+          "오스키 센터 연락처 042-580-8390."
+        ],
+        "prepare_points": [
+          "예약 대상/방을 실제 필요한 OSCE 항목에 맞춰 확인"
+        ]
+      },
+      {
         "time": "15:00~18:00",
         "title": "자율실습 및 보충학습",
         "professor": "",
@@ -941,7 +954,8 @@
       "주간실습계획과 성찰 2주차",
       "유폴 현장승인 · 심장판막질환",
       "유폴 현장승인 · E,F 심전도 발표",
-      "유폴 현장승인 · CPX HTN"
+      "유폴 현장승인 · CPX HTN",
+      "OSCE 예약하기"
     ],
     "max_session_difficulty": 8,
     "max_professor_score": 0

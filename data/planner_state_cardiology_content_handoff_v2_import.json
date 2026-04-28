@@ -1291,6 +1291,18 @@
       "memo": "외래 예진기록지 2회차",
       "completed": false,
       "createdAt": "2026-04-20T15:55:37.869638"
+    },
+    {
+      "id": "clerkship-cardiology-2026-04-chief-draft-v2-task-admin-2026-05-08-1500-osce-booking",
+      "date": "2026-05-08",
+      "startTime": "15:00",
+      "duration": 10,
+      "subjectId": "subject-canary-circ",
+      "stageId": "admin",
+      "title": "OSCE 예약하기",
+      "memo": "오스키 센터 042-580-8390 · 예약 완료 아님",
+      "completed": false,
+      "createdAt": "2026-04-28T18:28:06.928542+00:00"
     }
   ],
   "calendarEvents": [
@@ -2936,34 +2948,6 @@
       "score_mapping_note": "2026-04-26 강렬 확인: 성인환 교수님/정진옥 교수님은 실제 채점하지 않는다고 하여 이 일정/연결 과제의 평가점수 표시는 제거."
     },
     {
-      "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-04-28-admin",
-      "date": "2026-04-28",
-      "type": "admin",
-      "title": "교수님 확인 문자 · 전공의 / 정진옥",
-      "time": "화 13:00–14:00",
-      "startTime": "",
-      "endTime": "",
-      "note": "보내기 기한: 화요일 13:00~14:00 권장 / 전공의 피드백 요청과 정진옥 교수님 수업 확인을 같은 날 정리한다.",
-      "completed": false,
-      "professor": "",
-      "difficulty": 4,
-      "track": "chief-draft",
-      "windowType": "clerkship-session",
-      "bundleId": "cardiology-2026-04-chief-draft-v2",
-      "sourceSessionId": "comm-2026-04-28-admin",
-      "sourceAssignmentId": "",
-      "sourceKind": "session",
-      "boardDifficultyOverride": 0,
-      "userNote": "",
-      "boardSignalOverrides": {
-        "assignment": "auto",
-        "presentation": "auto",
-        "exam": "auto"
-      },
-      "displayColor": "",
-      "displayState": "normal"
-    },
-    {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-04-28-chief",
       "date": "2026-04-28",
       "type": "chief",
@@ -2979,6 +2963,34 @@
       "windowType": "clerkship-session",
       "bundleId": "cardiology-2026-04-chief-draft-v2",
       "sourceSessionId": "comm-2026-04-28-chief",
+      "sourceAssignmentId": "",
+      "sourceKind": "session",
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
+    },
+    {
+      "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-04-28-admin",
+      "date": "2026-04-28",
+      "type": "admin",
+      "title": "교수님 확인 문자 · 전공의 / 정진옥",
+      "time": "화 13:00–14:00",
+      "startTime": "",
+      "endTime": "",
+      "note": "보내기 기한: 화요일 13:00~14:00 권장 / 전공의 피드백 요청과 정진옥 교수님 수업 확인을 같은 날 정리한다.",
+      "completed": false,
+      "professor": "",
+      "difficulty": 4,
+      "track": "chief-draft",
+      "windowType": "clerkship-session",
+      "bundleId": "cardiology-2026-04-chief-draft-v2",
+      "sourceSessionId": "comm-2026-04-28-admin",
       "sourceAssignmentId": "",
       "sourceKind": "session",
       "boardDifficultyOverride": 0,
@@ -4649,6 +4661,34 @@
       ]
     },
     {
+      "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-05-06-admin",
+      "date": "2026-05-06",
+      "type": "admin",
+      "title": "교수님 확인 문자 · 김준형",
+      "time": "수 13:00–14:00",
+      "startTime": "",
+      "endTime": "",
+      "note": "보내기 기한: 수요일 13:00~14:00 권장 / 김준형 교수님 발표 전날 리마인드 문자를 보낸다.",
+      "completed": false,
+      "professor": "",
+      "difficulty": 4,
+      "track": "chief-draft",
+      "windowType": "clerkship-session",
+      "bundleId": "cardiology-2026-04-chief-draft-v2",
+      "sourceSessionId": "comm-2026-05-06-admin",
+      "sourceAssignmentId": "",
+      "sourceKind": "session",
+      "boardDifficultyOverride": 0,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
+    },
+    {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-overlay-2026-05-06-item1",
       "date": "2026-05-06",
       "type": "admin",
@@ -4753,34 +4793,6 @@
           "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
         }
       ]
-    },
-    {
-      "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-05-06-admin",
-      "date": "2026-05-06",
-      "type": "admin",
-      "title": "교수님 확인 문자 · 김준형",
-      "time": "수 13:00–14:00",
-      "startTime": "",
-      "endTime": "",
-      "note": "보내기 기한: 수요일 13:00~14:00 권장 / 김준형 교수님 발표 전날 리마인드 문자를 보낸다.",
-      "completed": false,
-      "professor": "",
-      "difficulty": 4,
-      "track": "chief-draft",
-      "windowType": "clerkship-session",
-      "bundleId": "cardiology-2026-04-chief-draft-v2",
-      "sourceSessionId": "comm-2026-05-06-admin",
-      "sourceAssignmentId": "",
-      "sourceKind": "session",
-      "boardDifficultyOverride": 0,
-      "userNote": "",
-      "boardSignalOverrides": {
-        "assignment": "auto",
-        "presentation": "auto",
-        "exam": "auto"
-      },
-      "displayColor": "",
-      "displayState": "normal"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-05-06-chief",
@@ -5322,6 +5334,34 @@
           "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
         }
       ]
+    },
+    {
+      "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-admin-2026-05-08-1500-osce-booking",
+      "date": "2026-05-08",
+      "type": "admin",
+      "title": "OSCE 예약하기",
+      "time": "15:00",
+      "startTime": "15:00",
+      "endTime": "15:10",
+      "note": "강렬 TODO: 2026-05-08(금) 오후 3시 OSCE 예약해야 함. 예약 완료 아님. 오스키 센터 042-580-8390.",
+      "completed": false,
+      "professor": "",
+      "difficulty": 5,
+      "track": "chief-draft",
+      "windowType": "clerkship-session",
+      "bundleId": "cardiology-2026-04-chief-draft-v2",
+      "sourceSessionId": "admin-2026-05-08-1500-osce-booking",
+      "sourceAssignmentId": "",
+      "sourceKind": "session",
+      "boardDifficultyOverride": 3,
+      "userNote": "",
+      "boardSignalOverrides": {
+        "assignment": "auto",
+        "presentation": "auto",
+        "exam": "auto"
+      },
+      "displayColor": "",
+      "displayState": "normal"
     },
     {
       "id": "clerkship-cardiology-2026-04-chief-draft-v2-event-comm-2026-05-08-chief",
@@ -10576,124 +10616,6 @@
           ]
         },
         {
-          "id": "comm-2026-04-27-chief",
-          "clerkship": "cardiology-2026-04-chief-draft-v2",
-          "week": "1주차",
-          "day": "월요일",
-          "date": "2026-04-27",
-          "time_label": "종료 직후",
-          "time_raw": "종료 직후",
-          "start_time": "",
-          "end_time": "",
-          "title": "조원 공지 · 일정 종료 후",
-          "professor": "",
-          "event_type": "chief",
-          "difficulty": 5,
-          "status": "draft",
-          "kind": "operations",
-          "needs_confirmation": false,
-          "summary": "월요일 일정 종료 직후",
-          "location": "",
-          "guide_pack_ids": [],
-          "sections": {
-            "intro": [
-              "보내기 기한: **월요일 일정 종료 직후**",
-              "EKG/Echo, MI case, POMR, Pretest 유폴, 화요일 준비물을 이날 바로 공지한다."
-            ],
-            "연관 수업": [
-              "- Pretest",
-              "- My Echo & ECG 발표",
-              "- CPX HTN",
-              "- 심음 청진",
-              "- POMR 증례발표",
-              "- MI case 발표"
-            ],
-            "원문 문자 / 공지": [
-              "- **일정 종료 후 공지**",
-              "  - **4시~4시 반쯤에 EKG -> Echo 순으로 찍으러 가기**",
-              "  - **DEF**: MI case 환자 문진 및 녹화.",
-              "  - **AB**: 심전도 발표 미리 준비하기.",
-              "  - **AB**: 수요일 이재환 교수님 POMR 발표 준비하기. 아무나 해도 되는데 목요일 발표 미리 연습하는 겸, EKG 케이스 환자로 그대로 하면 됨. 김준형 교수님과는 스타일이 많이 다르니 야마 참고.",
-              "  - **전원**: Pretest 유폴리오 과제 업로드 (세 줄 정도 작성).",
-              "  - **전원**: 화요일 성인환 교수님 My Echo & ECG PPT 발표 준비.",
-              "  - **전원**: 화요일 고혈압 CPX, 심음청진 준비."
-            ],
-            "조장 / 다음날 준비": [
-              "#### 1-3-7. 일정 후 할 일",
-              "",
-              "##### 역할별 할 일",
-              "- A, B 학생은 POMR 발표 준비를 시작한다.",
-              "- 6명조 기준으로 D, E 학생은 MI 케이스 환자 병력청취를 한다.",
-              "- MI 환자는 퇴원이 빠르므로 병력청취를 최대한 바로 하는 것이 좋다.",
-              "- 영상 녹화가 가능하면 녹화하고, 부득이하게 거부하면 녹음이라도 해두는 것이 좋다.",
-              "- 이 영상 또는 녹음은 MI 발표 첫 페이지에 첨부해야 하므로, 환자에게 녹화 / 녹음 가능 여부와 문진 가능 여부를 묻는 동의 과정도 함께 담아두는 것이 좋다.",
-              "",
-              "##### 전원이 할 일",
-              "- Pretest 유폴리오 자유기록(과제)을 당일 제출한다.",
-              "- My Echo & EKG 발표 PPT를 만든다.",
-              "- 화요일 심음청진을 준비한다.",
-              "- 화요일 고혈압 CPX를 준비한다.",
-              "- 화요일 본인 일정에 해당하는 교수님 인계를 읽어둔다.",
-              "",
-              "##### 검사 관련 메모",
-              "- EKG는 예약 없이 Pretest 후 남는 시간에 찍으면 된다.",
-              "- 심초음파는 미리 예약하고 일정 확인 후 찍는 것이 좋다.",
-              "- 2026년 인계에서는 EKG는 오전에 오지 말라고 했고, 오후 4시 이후에 이용하라고 적혀 있다."
-            ]
-          },
-          "raw_md_sources": [
-            "2-1-2. 월요일 공지",
-            "1-3-7. 일정 후 할 일"
-          ],
-          "raw_md_excerpt": "#### 2-1-2. 월요일 공지\n- 일정 종료 후 공지\n  - 4시~4시 반쯤 EKG -> Echo 순으로 촬영 가기.\n  - DEF: MI case 환자 문진 및 녹화.\n  - AB: 심전도 발표 및 수요일 POMR 발표 준비.\n  - 전원: Pretest 유폴리오 과제 업로드 (세 줄 정도).\n  - 전원: 화요일 성인환 교수님 My Echo/ECG PPT 발표 준비.\n  - 전원: 화요일 고혈압 CPX, 심음청진 준비.",
-          "calendar_body_short": "보내기 기한: 월요일 일정 종료 직후",
-          "prep_tasks": [],
-          "core_points": [
-            "일정 종료 후 공지",
-            "4시~4시 반쯤 EKG -> Echo 순으로 촬영 가기.",
-            "DEF: MI case 환자 문진 및 녹화."
-          ],
-          "approval_required": false,
-          "approval_kind": null,
-          "confirm_level": "none",
-          "split_group": false,
-          "participants_scope": "chief->all",
-          "site": "본원",
-          "source_refs": [
-            "2-1-2",
-            "1-3-7"
-          ],
-          "note_only_keep": [
-            "복붙용 공지 원문",
-            "누락 방지용 체크 항목"
-          ],
-          "hide_from_calendar_body": [
-            "질문 / 예시 포인트",
-            "조사 / 보강 내용",
-            "교수님 스타일 장문 서술",
-            "후기성 예외 사례",
-            "문자 예시 전문"
-          ],
-          "note": "보내기 기한: 월요일 일정 종료 직후 / EKG/Echo, MI case, POMR, Pretest 유폴, 화요일 준비물을 이날 바로 공지한다.",
-          "related_session_ids": [
-            "s-2026-04-27-1400-pretest",
-            "s-2026-04-28-1200-echoecg",
-            "s-2026-04-28-1400-htn-cpx",
-            "s-2026-04-28-0840-heartsound",
-            "s-2026-04-29-1100-pomr",
-            "s-2026-04-29-1200-mi"
-          ],
-          "boardDifficultyOverride": 0,
-          "userNote": "",
-          "boardSignalOverrides": {
-            "assignment": "auto",
-            "presentation": "auto",
-            "exam": "auto"
-          },
-          "displayColor": "",
-          "displayState": "normal"
-        },
-        {
           "id": "overlay-2026-04-27-chief-prep",
           "clerkship": "cardiology-2026-04-chief-draft-v2",
           "week": "1주차",
@@ -10873,6 +10795,124 @@
             "s-2026-05-01-0800-ecg-b",
             "s-2026-05-07-0800-ecg-cd",
             "s-2026-05-08-0800-ecg-ef"
+          ],
+          "boardDifficultyOverride": 0,
+          "userNote": "",
+          "boardSignalOverrides": {
+            "assignment": "auto",
+            "presentation": "auto",
+            "exam": "auto"
+          },
+          "displayColor": "",
+          "displayState": "normal"
+        },
+        {
+          "id": "comm-2026-04-27-chief",
+          "clerkship": "cardiology-2026-04-chief-draft-v2",
+          "week": "1주차",
+          "day": "월요일",
+          "date": "2026-04-27",
+          "time_label": "종료 직후",
+          "time_raw": "종료 직후",
+          "start_time": "",
+          "end_time": "",
+          "title": "조원 공지 · 일정 종료 후",
+          "professor": "",
+          "event_type": "chief",
+          "difficulty": 5,
+          "status": "draft",
+          "kind": "operations",
+          "needs_confirmation": false,
+          "summary": "월요일 일정 종료 직후",
+          "location": "",
+          "guide_pack_ids": [],
+          "sections": {
+            "intro": [
+              "보내기 기한: **월요일 일정 종료 직후**",
+              "EKG/Echo, MI case, POMR, Pretest 유폴, 화요일 준비물을 이날 바로 공지한다."
+            ],
+            "연관 수업": [
+              "- Pretest",
+              "- My Echo & ECG 발표",
+              "- CPX HTN",
+              "- 심음 청진",
+              "- POMR 증례발표",
+              "- MI case 발표"
+            ],
+            "원문 문자 / 공지": [
+              "- **일정 종료 후 공지**",
+              "  - **4시~4시 반쯤에 EKG -> Echo 순으로 찍으러 가기**",
+              "  - **DEF**: MI case 환자 문진 및 녹화.",
+              "  - **AB**: 심전도 발표 미리 준비하기.",
+              "  - **AB**: 수요일 이재환 교수님 POMR 발표 준비하기. 아무나 해도 되는데 목요일 발표 미리 연습하는 겸, EKG 케이스 환자로 그대로 하면 됨. 김준형 교수님과는 스타일이 많이 다르니 야마 참고.",
+              "  - **전원**: Pretest 유폴리오 과제 업로드 (세 줄 정도 작성).",
+              "  - **전원**: 화요일 성인환 교수님 My Echo & ECG PPT 발표 준비.",
+              "  - **전원**: 화요일 고혈압 CPX, 심음청진 준비."
+            ],
+            "조장 / 다음날 준비": [
+              "#### 1-3-7. 일정 후 할 일",
+              "",
+              "##### 역할별 할 일",
+              "- A, B 학생은 POMR 발표 준비를 시작한다.",
+              "- 6명조 기준으로 D, E 학생은 MI 케이스 환자 병력청취를 한다.",
+              "- MI 환자는 퇴원이 빠르므로 병력청취를 최대한 바로 하는 것이 좋다.",
+              "- 영상 녹화가 가능하면 녹화하고, 부득이하게 거부하면 녹음이라도 해두는 것이 좋다.",
+              "- 이 영상 또는 녹음은 MI 발표 첫 페이지에 첨부해야 하므로, 환자에게 녹화 / 녹음 가능 여부와 문진 가능 여부를 묻는 동의 과정도 함께 담아두는 것이 좋다.",
+              "",
+              "##### 전원이 할 일",
+              "- Pretest 유폴리오 자유기록(과제)을 당일 제출한다.",
+              "- My Echo & EKG 발표 PPT를 만든다.",
+              "- 화요일 심음청진을 준비한다.",
+              "- 화요일 고혈압 CPX를 준비한다.",
+              "- 화요일 본인 일정에 해당하는 교수님 인계를 읽어둔다.",
+              "",
+              "##### 검사 관련 메모",
+              "- EKG는 예약 없이 Pretest 후 남는 시간에 찍으면 된다.",
+              "- 심초음파는 미리 예약하고 일정 확인 후 찍는 것이 좋다.",
+              "- 2026년 인계에서는 EKG는 오전에 오지 말라고 했고, 오후 4시 이후에 이용하라고 적혀 있다."
+            ]
+          },
+          "raw_md_sources": [
+            "2-1-2. 월요일 공지",
+            "1-3-7. 일정 후 할 일"
+          ],
+          "raw_md_excerpt": "#### 2-1-2. 월요일 공지\n- 일정 종료 후 공지\n  - 4시~4시 반쯤 EKG -> Echo 순으로 촬영 가기.\n  - DEF: MI case 환자 문진 및 녹화.\n  - AB: 심전도 발표 및 수요일 POMR 발표 준비.\n  - 전원: Pretest 유폴리오 과제 업로드 (세 줄 정도).\n  - 전원: 화요일 성인환 교수님 My Echo/ECG PPT 발표 준비.\n  - 전원: 화요일 고혈압 CPX, 심음청진 준비.",
+          "calendar_body_short": "보내기 기한: 월요일 일정 종료 직후",
+          "prep_tasks": [],
+          "core_points": [
+            "일정 종료 후 공지",
+            "4시~4시 반쯤 EKG -> Echo 순으로 촬영 가기.",
+            "DEF: MI case 환자 문진 및 녹화."
+          ],
+          "approval_required": false,
+          "approval_kind": null,
+          "confirm_level": "none",
+          "split_group": false,
+          "participants_scope": "chief->all",
+          "site": "본원",
+          "source_refs": [
+            "2-1-2",
+            "1-3-7"
+          ],
+          "note_only_keep": [
+            "복붙용 공지 원문",
+            "누락 방지용 체크 항목"
+          ],
+          "hide_from_calendar_body": [
+            "질문 / 예시 포인트",
+            "조사 / 보강 내용",
+            "교수님 스타일 장문 서술",
+            "후기성 예외 사례",
+            "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 월요일 일정 종료 직후 / EKG/Echo, MI case, POMR, Pretest 유폴, 화요일 준비물을 이날 바로 공지한다.",
+          "related_session_ids": [
+            "s-2026-04-27-1400-pretest",
+            "s-2026-04-28-1200-echoecg",
+            "s-2026-04-28-1400-htn-cpx",
+            "s-2026-04-28-0840-heartsound",
+            "s-2026-04-29-1100-pomr",
+            "s-2026-04-29-1200-mi"
           ],
           "boardDifficultyOverride": 0,
           "userNote": "",
@@ -12451,6 +12491,101 @@
           "detail_guide_tag": "외래 인계"
         },
         {
+          "id": "comm-2026-04-29-admin",
+          "clerkship": "cardiology-2026-04-chief-draft-v2",
+          "week": "1주차",
+          "day": "수요일",
+          "date": "2026-04-29",
+          "time_label": "수 13:00–14:00",
+          "time_raw": "수 13:00–14:00",
+          "start_time": "",
+          "end_time": "",
+          "title": "교수님 확인 문자 · 권희진 / 김준형",
+          "professor": "",
+          "event_type": "admin",
+          "difficulty": 4,
+          "status": "draft",
+          "kind": "operations",
+          "needs_confirmation": false,
+          "summary": "수요일 13:00~14:00 권장",
+          "location": "",
+          "guide_pack_ids": [],
+          "sections": {
+            "intro": [
+              "보내기 기한: **수요일 13:00~14:00 권장**",
+              "권희진 교수님과 김준형 교수님 리마인드 문자를 보낸다."
+            ],
+            "연관 수업": [
+              "- CPX 두근거림 / 실신",
+              "- A 심전도 발표"
+            ],
+            "원문 문자 / 공지": [
+              "- **권희진 교수님**:",
+              "\"교수님 안녕하세요.\n현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다.\n내일 목요일 오후 2시에 교육실에서 두근거림, 실신 CPX가 진행된다고 전달받아, 혹시 일정에 변동사항이 있는지 여쭙고자 연락드렸습니다.\n조원은 총 O명입니다.\n\n2주간 성실히 배우겠습니다.\n감사합니다.\"",
+              "- **김준형 교수님 (발표 전날 리마인드)**:",
+              "\"교수님 안녕하세요.\n현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다.\n내일 오전 7시 50분 교육실에서 심전도 발표를 진행하는 것으로 전달받았는데, 혹시 일정에 변동 사항이 있다면 말씀 부탁드립니다.\n감사합니다!\""
+            ],
+            "문자 기본 원칙": [
+              "- **연락 금지 교수님**: 노재형 교수님 (연락 보낼 필요 없음).",
+              "- **연락 주의 교수님**:",
+              "  - **박재형 교수님**: 전주 금요일 연락 보내고 답장 없어도 심음청진 위치랑 시간 고정이니 추가 연락 하지 말 것.",
+              "  - **김준형 교수님**: 월요일에 심전도 발표 총정리해서 리마인드 문자, 매주 수요일에 다음날 심전도 발표 있다는 문자 연락.",
+              "  - **성인환 교수님**: 제일 첫 연락 빼고는 안 보냄.",
+              "  - **성석우 교수님**",
+              "- **연락 시간**: 가급적 오후 1시~2시 사이.",
+              "- **연락 성격**: 기본적으로 강의 1~2일 전 미리 리마인드 문자를 보낸다는 느낌. 외래는 기본적으로 연락 필요 없음.",
+              "- **기본 문자 템플릿**:",
+              "\"교수님 안녕하세요.\n현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다.\n내일 오전 0시 0분 OO에서 ~ 예정되어 있는 것으로 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락 드렸습니다.\n감사합니다.\""
+            ]
+          },
+          "raw_md_sources": [
+            "2-8-1. 권희진 교수님",
+            "2-8-2. 김준형 교수님"
+          ],
+          "raw_md_excerpt": "#### 2-8-1. 권희진 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 목요일 오후 2시에 교육실에서 두근거림, 실신 CPX가 진행된다고 전달받아, 혹시 일정에 변동사항이 있는지 여쭙고자 연락드렸습니다. 조원은 총 O명입니다. 감사합니다.\"\n\n#### 2-8-2. 김준형 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 오전 7시 50분 교육실에서 심전도 발표를 진행하는 것으로 전달받았는데, 혹시 일정에 변동 사항이 있다면 말씀 부탁드립니다. 감사합니다.\"",
+          "calendar_body_short": "보내기 기한: 수요일 13:00~14:00 권장",
+          "prep_tasks": [],
+          "core_points": [
+            "\"교수님 안녕하세요.\nPK 0,0조 조장 000입니다.\n내일 목요일 오후 2시에 교육실에서 두근거림, 실신 CPX가 진행된다고 전달받아, 혹시 일정에 변동사항이 있는지 여쭙고자 연락드렸습니다.\n조원은 총 O명입니다.\n감사합니다.\"",
+            "\"교수님 안녕하세요.\nPK 0,0조 조장 000입니다.\n내일 오전 7시 50분 교육실에서 심전도 발표를 진행하는 것으로 전달받았는데, 혹시 일정에 변동 사항이 있다면 말씀 부탁드립니다.\n감사합니다.\""
+          ],
+          "approval_required": false,
+          "approval_kind": null,
+          "confirm_level": "none",
+          "split_group": false,
+          "participants_scope": "chief/admin",
+          "site": "본원",
+          "source_refs": [
+            "2-3",
+            "2-5-3"
+          ],
+          "note_only_keep": [
+            "문자 예시 원문",
+            "연락금지/예외 규칙"
+          ],
+          "hide_from_calendar_body": [
+            "질문 / 예시 포인트",
+            "조사 / 보강 내용",
+            "교수님 스타일 장문 서술",
+            "후기성 예외 사례",
+            "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 수요일 13:00~14:00 권장 / 권희진 교수님과 김준형 교수님 리마인드 문자를 보낸다.",
+          "related_session_ids": [
+            "s-2026-04-30-1400-palpit",
+            "s-2026-04-30-0800-ecg-a"
+          ],
+          "boardDifficultyOverride": 0,
+          "userNote": "",
+          "boardSignalOverrides": {
+            "assignment": "auto",
+            "presentation": "auto",
+            "exam": "auto"
+          },
+          "displayColor": "",
+          "displayState": "normal"
+        },
+        {
           "id": "comm-2026-04-29-chief",
           "clerkship": "cardiology-2026-04-chief-draft-v2",
           "week": "1주차",
@@ -12540,101 +12675,6 @@
           "related_session_ids": [
             "s-2026-04-30-0800-ecg-a",
             "s-2026-04-30-1400-palpit"
-          ],
-          "boardDifficultyOverride": 0,
-          "userNote": "",
-          "boardSignalOverrides": {
-            "assignment": "auto",
-            "presentation": "auto",
-            "exam": "auto"
-          },
-          "displayColor": "",
-          "displayState": "normal"
-        },
-        {
-          "id": "comm-2026-04-29-admin",
-          "clerkship": "cardiology-2026-04-chief-draft-v2",
-          "week": "1주차",
-          "day": "수요일",
-          "date": "2026-04-29",
-          "time_label": "수 13:00–14:00",
-          "time_raw": "수 13:00–14:00",
-          "start_time": "",
-          "end_time": "",
-          "title": "교수님 확인 문자 · 권희진 / 김준형",
-          "professor": "",
-          "event_type": "admin",
-          "difficulty": 4,
-          "status": "draft",
-          "kind": "operations",
-          "needs_confirmation": false,
-          "summary": "수요일 13:00~14:00 권장",
-          "location": "",
-          "guide_pack_ids": [],
-          "sections": {
-            "intro": [
-              "보내기 기한: **수요일 13:00~14:00 권장**",
-              "권희진 교수님과 김준형 교수님 리마인드 문자를 보낸다."
-            ],
-            "연관 수업": [
-              "- CPX 두근거림 / 실신",
-              "- A 심전도 발표"
-            ],
-            "원문 문자 / 공지": [
-              "- **권희진 교수님**:",
-              "\"교수님 안녕하세요.\n현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다.\n내일 목요일 오후 2시에 교육실에서 두근거림, 실신 CPX가 진행된다고 전달받아, 혹시 일정에 변동사항이 있는지 여쭙고자 연락드렸습니다.\n조원은 총 O명입니다.\n\n2주간 성실히 배우겠습니다.\n감사합니다.\"",
-              "- **김준형 교수님 (발표 전날 리마인드)**:",
-              "\"교수님 안녕하세요.\n현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다.\n내일 오전 7시 50분 교육실에서 심전도 발표를 진행하는 것으로 전달받았는데, 혹시 일정에 변동 사항이 있다면 말씀 부탁드립니다.\n감사합니다!\""
-            ],
-            "문자 기본 원칙": [
-              "- **연락 금지 교수님**: 노재형 교수님 (연락 보낼 필요 없음).",
-              "- **연락 주의 교수님**:",
-              "  - **박재형 교수님**: 전주 금요일 연락 보내고 답장 없어도 심음청진 위치랑 시간 고정이니 추가 연락 하지 말 것.",
-              "  - **김준형 교수님**: 월요일에 심전도 발표 총정리해서 리마인드 문자, 매주 수요일에 다음날 심전도 발표 있다는 문자 연락.",
-              "  - **성인환 교수님**: 제일 첫 연락 빼고는 안 보냄.",
-              "  - **성석우 교수님**",
-              "- **연락 시간**: 가급적 오후 1시~2시 사이.",
-              "- **연락 성격**: 기본적으로 강의 1~2일 전 미리 리마인드 문자를 보낸다는 느낌. 외래는 기본적으로 연락 필요 없음.",
-              "- **기본 문자 템플릿**:",
-              "\"교수님 안녕하세요.\n현재 심장내과 실습 중인 PK 3,4조 조장 배강렬입니다.\n내일 오전 0시 0분 OO에서 ~ 예정되어 있는 것으로 전달받았는데, 혹시 변동사항이 있는지 확인드리고자 연락 드렸습니다.\n감사합니다.\""
-            ]
-          },
-          "raw_md_sources": [
-            "2-8-1. 권희진 교수님",
-            "2-8-2. 김준형 교수님"
-          ],
-          "raw_md_excerpt": "#### 2-8-1. 권희진 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 목요일 오후 2시에 교육실에서 두근거림, 실신 CPX가 진행된다고 전달받아, 혹시 일정에 변동사항이 있는지 여쭙고자 연락드렸습니다. 조원은 총 O명입니다. 감사합니다.\"\n\n#### 2-8-2. 김준형 교수님\n\"교수님 안녕하세요. PK 0,0조 조장 000입니다. 내일 오전 7시 50분 교육실에서 심전도 발표를 진행하는 것으로 전달받았는데, 혹시 일정에 변동 사항이 있다면 말씀 부탁드립니다. 감사합니다.\"",
-          "calendar_body_short": "보내기 기한: 수요일 13:00~14:00 권장",
-          "prep_tasks": [],
-          "core_points": [
-            "\"교수님 안녕하세요.\nPK 0,0조 조장 000입니다.\n내일 목요일 오후 2시에 교육실에서 두근거림, 실신 CPX가 진행된다고 전달받아, 혹시 일정에 변동사항이 있는지 여쭙고자 연락드렸습니다.\n조원은 총 O명입니다.\n감사합니다.\"",
-            "\"교수님 안녕하세요.\nPK 0,0조 조장 000입니다.\n내일 오전 7시 50분 교육실에서 심전도 발표를 진행하는 것으로 전달받았는데, 혹시 일정에 변동 사항이 있다면 말씀 부탁드립니다.\n감사합니다.\""
-          ],
-          "approval_required": false,
-          "approval_kind": null,
-          "confirm_level": "none",
-          "split_group": false,
-          "participants_scope": "chief/admin",
-          "site": "본원",
-          "source_refs": [
-            "2-3",
-            "2-5-3"
-          ],
-          "note_only_keep": [
-            "문자 예시 원문",
-            "연락금지/예외 규칙"
-          ],
-          "hide_from_calendar_body": [
-            "질문 / 예시 포인트",
-            "조사 / 보강 내용",
-            "교수님 스타일 장문 서술",
-            "후기성 예외 사례",
-            "문자 예시 전문"
-          ],
-          "note": "보내기 기한: 수요일 13:00~14:00 권장 / 권희진 교수님과 김준형 교수님 리마인드 문자를 보낸다.",
-          "related_session_ids": [
-            "s-2026-04-30-1400-palpit",
-            "s-2026-04-30-0800-ecg-a"
           ],
           "boardDifficultyOverride": 0,
           "userNote": "",
@@ -13356,88 +13396,6 @@
           ]
         },
         {
-          "id": "comm-2026-04-30-chief",
-          "clerkship": "cardiology-2026-04-chief-draft-v2",
-          "week": "1주차",
-          "day": "목요일",
-          "date": "2026-04-30",
-          "time_label": "종료 직후",
-          "time_raw": "종료 직후",
-          "start_time": "",
-          "end_time": "",
-          "title": "조원 공지 · 일정 종료 후",
-          "professor": "",
-          "event_type": "chief",
-          "difficulty": 5,
-          "status": "draft",
-          "kind": "operations",
-          "needs_confirmation": false,
-          "summary": "목요일 일정 종료 직후",
-          "location": "",
-          "guide_pack_ids": [],
-          "sections": {
-            "intro": [
-              "보내기 기한: **목요일 일정 종료 직후**",
-              "금요일 심전도 발표, OSCE 연습, 제세동/심폐소생술 준비를 공지한다."
-            ],
-            "연관 수업": [
-              "- B 심전도 발표",
-              "- 제세동 / 심폐소생술 OT 및 OSCE"
-            ],
-            "원문 문자 / 공지": [
-              "- **일정 종료 후 공지**",
-              "  - **B**: 금요일 심전도 발표 준비 (조장, 발표자 7:10까지, 그 외 7:30까지 출근).",
-              "  - **OSCE 연습**: (연습 일정 잡았다면) 일정 종료 후 OSCE 센터에서 제세동/심폐소생술 OSCE 연습.",
-              "  - **전원**: 금요일 안계택 교수님 제세동/심폐소생술 OSCE 준비."
-            ]
-          },
-          "raw_md_sources": [
-            "2-1-5. 목요일 공지"
-          ],
-          "raw_md_excerpt": "#### 2-1-5. 목요일 공지\n- 일정 종료 후 공지\n  - B: 금요일 심전도 발표 준비 (발표자/조장 7:10까지, 그 외 7:30까지 출근).\n  - OSCE 센터 제세동/심폐소생술 연습.\n  - 전원: 금요일 안계택 교수님 OSCE 준비.",
-          "calendar_body_short": "보내기 기한: 목요일 일정 종료 직후",
-          "prep_tasks": [],
-          "core_points": [
-            "일정 종료 후 공지",
-            "B: 금요일 심전도 발표 준비 (발표자/조장 7:10까지, 그 외 7:30까지 출근).",
-            "OSCE 센터 제세동/심폐소생술 연습."
-          ],
-          "approval_required": false,
-          "approval_kind": null,
-          "confirm_level": "none",
-          "split_group": false,
-          "participants_scope": "chief->all",
-          "site": "본원",
-          "source_refs": [
-            "2-1-5"
-          ],
-          "note_only_keep": [
-            "복붙용 공지 원문",
-            "누락 방지용 체크 항목"
-          ],
-          "hide_from_calendar_body": [
-            "질문 / 예시 포인트",
-            "조사 / 보강 내용",
-            "교수님 스타일 장문 서술",
-            "후기성 예외 사례",
-            "문자 예시 전문"
-          ],
-          "note": "보내기 기한: 목요일 일정 종료 직후 / 금요일 심전도 발표, OSCE 연습, 제세동/심폐소생술 준비를 공지한다.",
-          "related_session_ids": [
-            "s-2026-05-01-0800-ecg-b",
-            "s-2026-05-01-0840-osce"
-          ],
-          "boardDifficultyOverride": 0,
-          "userNote": "",
-          "boardSignalOverrides": {
-            "assignment": "auto",
-            "presentation": "auto",
-            "exam": "auto"
-          },
-          "displayColor": "",
-          "displayState": "normal"
-        },
-        {
           "id": "comm-2026-04-30-admin",
           "clerkship": "cardiology-2026-04-chief-draft-v2",
           "week": "1주차",
@@ -13514,6 +13472,88 @@
           ],
           "note": "보내기 기한: 목요일 13:00~14:00 권장 / 안계택 교수님 일정 확인은 외래 학생을 통한 확인이 되면 생략 가능하다.",
           "related_session_ids": [
+            "s-2026-05-01-0840-osce"
+          ],
+          "boardDifficultyOverride": 0,
+          "userNote": "",
+          "boardSignalOverrides": {
+            "assignment": "auto",
+            "presentation": "auto",
+            "exam": "auto"
+          },
+          "displayColor": "",
+          "displayState": "normal"
+        },
+        {
+          "id": "comm-2026-04-30-chief",
+          "clerkship": "cardiology-2026-04-chief-draft-v2",
+          "week": "1주차",
+          "day": "목요일",
+          "date": "2026-04-30",
+          "time_label": "종료 직후",
+          "time_raw": "종료 직후",
+          "start_time": "",
+          "end_time": "",
+          "title": "조원 공지 · 일정 종료 후",
+          "professor": "",
+          "event_type": "chief",
+          "difficulty": 5,
+          "status": "draft",
+          "kind": "operations",
+          "needs_confirmation": false,
+          "summary": "목요일 일정 종료 직후",
+          "location": "",
+          "guide_pack_ids": [],
+          "sections": {
+            "intro": [
+              "보내기 기한: **목요일 일정 종료 직후**",
+              "금요일 심전도 발표, OSCE 연습, 제세동/심폐소생술 준비를 공지한다."
+            ],
+            "연관 수업": [
+              "- B 심전도 발표",
+              "- 제세동 / 심폐소생술 OT 및 OSCE"
+            ],
+            "원문 문자 / 공지": [
+              "- **일정 종료 후 공지**",
+              "  - **B**: 금요일 심전도 발표 준비 (조장, 발표자 7:10까지, 그 외 7:30까지 출근).",
+              "  - **OSCE 연습**: (연습 일정 잡았다면) 일정 종료 후 OSCE 센터에서 제세동/심폐소생술 OSCE 연습.",
+              "  - **전원**: 금요일 안계택 교수님 제세동/심폐소생술 OSCE 준비."
+            ]
+          },
+          "raw_md_sources": [
+            "2-1-5. 목요일 공지"
+          ],
+          "raw_md_excerpt": "#### 2-1-5. 목요일 공지\n- 일정 종료 후 공지\n  - B: 금요일 심전도 발표 준비 (발표자/조장 7:10까지, 그 외 7:30까지 출근).\n  - OSCE 센터 제세동/심폐소생술 연습.\n  - 전원: 금요일 안계택 교수님 OSCE 준비.",
+          "calendar_body_short": "보내기 기한: 목요일 일정 종료 직후",
+          "prep_tasks": [],
+          "core_points": [
+            "일정 종료 후 공지",
+            "B: 금요일 심전도 발표 준비 (발표자/조장 7:10까지, 그 외 7:30까지 출근).",
+            "OSCE 센터 제세동/심폐소생술 연습."
+          ],
+          "approval_required": false,
+          "approval_kind": null,
+          "confirm_level": "none",
+          "split_group": false,
+          "participants_scope": "chief->all",
+          "site": "본원",
+          "source_refs": [
+            "2-1-5"
+          ],
+          "note_only_keep": [
+            "복붙용 공지 원문",
+            "누락 방지용 체크 항목"
+          ],
+          "hide_from_calendar_body": [
+            "질문 / 예시 포인트",
+            "조사 / 보강 내용",
+            "교수님 스타일 장문 서술",
+            "후기성 예외 사례",
+            "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 목요일 일정 종료 직후 / 금요일 심전도 발표, OSCE 연습, 제세동/심폐소생술 준비를 공지한다.",
+          "related_session_ids": [
+            "s-2026-05-01-0800-ecg-b",
             "s-2026-05-01-0840-osce"
           ],
           "boardDifficultyOverride": 0,
@@ -15567,92 +15607,6 @@
           ]
         },
         {
-          "id": "comm-2026-05-06-chief",
-          "clerkship": "cardiology-2026-04-chief-draft-v2",
-          "week": "2주차",
-          "day": "수요일",
-          "date": "2026-05-06",
-          "time_label": "종료 직후",
-          "time_raw": "종료 직후",
-          "start_time": "",
-          "end_time": "",
-          "title": "조원 공지 · 일정 종료 후",
-          "professor": "",
-          "event_type": "chief",
-          "difficulty": 5,
-          "status": "draft",
-          "kind": "operations",
-          "needs_confirmation": false,
-          "summary": "수요일 일정 종료 직후",
-          "location": "",
-          "guide_pack_ids": [],
-          "sections": {
-            "intro": [
-              "보내기 기한: **수요일 일정 종료 직후**",
-              "세종 추가 공지, ECG 피드백, CD 발표, 호흡곤란 CPX 준비를 함께 정리한다."
-            ],
-            "연관 수업": [
-              "- C,D 심전도 발표",
-              "- CPX 호흡곤란"
-            ],
-            "원문 문자 / 공지": [
-              "- 세종 관련 공지는 각자 조 상황, 교수님 연락 맞춰서 알아서 하기.",
-              "- 전공의 선생님 ECG 발표 피드백은 CD 화요일, EF 수요일에 할 가능성 높음. 그 전에 각자 PPT 완성시키기.",
-              "- 화요일에 노재형 교수님 심혈관질환에 대한 Q&A 유폴 제출 — 자세한 건 드박 참고.",
-              "",
-              "- **일정 종료 후 공지**",
-              "  - **CD**: 목요일 심전도 발표 준비하기 (조장, 발표자 7:20까지, 그 외 7:30~40 전까지 출근).",
-              "  - **김미주 교수님 호흡곤란 CPX 준비**: 2명씩 짝지어서 교수님이 제시한 설정에 맞게 가상환자 대본 작성. 의사/환자는 랜덤이니 대본 다 외워가기. 신체진찰 있음."
-            ]
-          },
-          "raw_md_sources": [
-            "2-1-8. 2주차 수요일 공지"
-          ],
-          "raw_md_excerpt": "#### 2-1-8. 2주차 수요일 공지\n- 일정 종료 후 공지\n  - CD: 목요일 심전도 발표 준비 (발표자/조장 7:20까지, 그 외 7:40까지 출근).\n  - 김미주 교수님 호흡곤란 CPX 준비 (2인 1조 가상환자 대본 작성 및 암기, 신체진찰 포함).",
-          "calendar_body_short": "보내기 기한: 수요일 일정 종료 직후",
-          "prep_tasks": [],
-          "core_points": [
-            "일정 종료 후 공지",
-            "CD: 목요일 심전도 발표 준비 (발표자/조장 7:20까지, 그 외 7:40까지 출근).",
-            "김미주 교수님 호흡곤란 CPX 준비 (2인 1조 가상환자 대본 작성 및 암기, 신체진찰 포함)."
-          ],
-          "approval_required": false,
-          "approval_kind": null,
-          "confirm_level": "none",
-          "split_group": false,
-          "participants_scope": "chief->all",
-          "site": "세종",
-          "source_refs": [
-            "2-1-8",
-            "2-1-9"
-          ],
-          "note_only_keep": [
-            "복붙용 공지 원문",
-            "누락 방지용 체크 항목"
-          ],
-          "hide_from_calendar_body": [
-            "질문 / 예시 포인트",
-            "조사 / 보강 내용",
-            "교수님 스타일 장문 서술",
-            "후기성 예외 사례",
-            "문자 예시 전문"
-          ],
-          "note": "보내기 기한: 수요일 일정 종료 직후 / 세종 추가 공지, ECG 피드백, CD 발표, 호흡곤란 CPX 준비를 함께 정리한다.",
-          "related_session_ids": [
-            "s-2026-05-07-0800-ecg-cd",
-            "s-2026-05-07-0900-dyspnea"
-          ],
-          "boardDifficultyOverride": 0,
-          "userNote": "",
-          "boardSignalOverrides": {
-            "assignment": "auto",
-            "presentation": "auto",
-            "exam": "auto"
-          },
-          "displayColor": "",
-          "displayState": "normal"
-        },
-        {
           "id": "comm-2026-05-06-admin",
           "clerkship": "cardiology-2026-04-chief-draft-v2",
           "week": "2주차",
@@ -15999,6 +15953,92 @@
             }
           ],
           "detail_guide_tag": "외래 인계"
+        },
+        {
+          "id": "comm-2026-05-06-chief",
+          "clerkship": "cardiology-2026-04-chief-draft-v2",
+          "week": "2주차",
+          "day": "수요일",
+          "date": "2026-05-06",
+          "time_label": "종료 직후",
+          "time_raw": "종료 직후",
+          "start_time": "",
+          "end_time": "",
+          "title": "조원 공지 · 일정 종료 후",
+          "professor": "",
+          "event_type": "chief",
+          "difficulty": 5,
+          "status": "draft",
+          "kind": "operations",
+          "needs_confirmation": false,
+          "summary": "수요일 일정 종료 직후",
+          "location": "",
+          "guide_pack_ids": [],
+          "sections": {
+            "intro": [
+              "보내기 기한: **수요일 일정 종료 직후**",
+              "세종 추가 공지, ECG 피드백, CD 발표, 호흡곤란 CPX 준비를 함께 정리한다."
+            ],
+            "연관 수업": [
+              "- C,D 심전도 발표",
+              "- CPX 호흡곤란"
+            ],
+            "원문 문자 / 공지": [
+              "- 세종 관련 공지는 각자 조 상황, 교수님 연락 맞춰서 알아서 하기.",
+              "- 전공의 선생님 ECG 발표 피드백은 CD 화요일, EF 수요일에 할 가능성 높음. 그 전에 각자 PPT 완성시키기.",
+              "- 화요일에 노재형 교수님 심혈관질환에 대한 Q&A 유폴 제출 — 자세한 건 드박 참고.",
+              "",
+              "- **일정 종료 후 공지**",
+              "  - **CD**: 목요일 심전도 발표 준비하기 (조장, 발표자 7:20까지, 그 외 7:30~40 전까지 출근).",
+              "  - **김미주 교수님 호흡곤란 CPX 준비**: 2명씩 짝지어서 교수님이 제시한 설정에 맞게 가상환자 대본 작성. 의사/환자는 랜덤이니 대본 다 외워가기. 신체진찰 있음."
+            ]
+          },
+          "raw_md_sources": [
+            "2-1-8. 2주차 수요일 공지"
+          ],
+          "raw_md_excerpt": "#### 2-1-8. 2주차 수요일 공지\n- 일정 종료 후 공지\n  - CD: 목요일 심전도 발표 준비 (발표자/조장 7:20까지, 그 외 7:40까지 출근).\n  - 김미주 교수님 호흡곤란 CPX 준비 (2인 1조 가상환자 대본 작성 및 암기, 신체진찰 포함).",
+          "calendar_body_short": "보내기 기한: 수요일 일정 종료 직후",
+          "prep_tasks": [],
+          "core_points": [
+            "일정 종료 후 공지",
+            "CD: 목요일 심전도 발표 준비 (발표자/조장 7:20까지, 그 외 7:40까지 출근).",
+            "김미주 교수님 호흡곤란 CPX 준비 (2인 1조 가상환자 대본 작성 및 암기, 신체진찰 포함)."
+          ],
+          "approval_required": false,
+          "approval_kind": null,
+          "confirm_level": "none",
+          "split_group": false,
+          "participants_scope": "chief->all",
+          "site": "세종",
+          "source_refs": [
+            "2-1-8",
+            "2-1-9"
+          ],
+          "note_only_keep": [
+            "복붙용 공지 원문",
+            "누락 방지용 체크 항목"
+          ],
+          "hide_from_calendar_body": [
+            "질문 / 예시 포인트",
+            "조사 / 보강 내용",
+            "교수님 스타일 장문 서술",
+            "후기성 예외 사례",
+            "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 수요일 일정 종료 직후 / 세종 추가 공지, ECG 피드백, CD 발표, 호흡곤란 CPX 준비를 함께 정리한다.",
+          "related_session_ids": [
+            "s-2026-05-07-0800-ecg-cd",
+            "s-2026-05-07-0900-dyspnea"
+          ],
+          "boardDifficultyOverride": 0,
+          "userNote": "",
+          "boardSignalOverrides": {
+            "assignment": "auto",
+            "presentation": "auto",
+            "exam": "auto"
+          },
+          "displayColor": "",
+          "displayState": "normal"
         },
         {
           "id": "s-2026-05-07-0800-ecg-cd",
@@ -16469,96 +16509,6 @@
           "detail_guide_tag": "외래 인계"
         },
         {
-          "id": "comm-2026-05-07-chief",
-          "clerkship": "cardiology-2026-04-chief-draft-v2",
-          "week": "2주차",
-          "day": "목요일",
-          "date": "2026-05-07",
-          "time_label": "종료 직후",
-          "time_raw": "종료 직후",
-          "start_time": "",
-          "end_time": "",
-          "title": "조원 공지 · 일정 종료 후",
-          "professor": "",
-          "event_type": "chief",
-          "difficulty": 5,
-          "status": "draft",
-          "kind": "operations",
-          "needs_confirmation": false,
-          "summary": "목요일 일정 종료 직후",
-          "location": "",
-          "guide_pack_ids": [],
-          "sections": {
-            "intro": [
-              "보내기 기한: **목요일 일정 종료 직후**",
-              "EF 발표 준비와 판막 강의 준비를 공지한다."
-            ],
-            "연관 수업": [
-              "- E,F 심전도 발표",
-              "- 심장판막질환"
-            ],
-            "원문 문자 / 공지": [
-              "- **일정 종료 후 공지**",
-              "  - **EF**: 금요일 심전도 발표 준비하기 (조장, 발표자 7:20까지, 그 외 7:30~40 전까지 출근).",
-              "  - **양유진 교수님 심장판막 강의 준비**: 돌아가면서 질문 던지심. 야마만 보면 됨. 부담 없음."
-            ],
-            "조장 / E,F 발표 후속": [
-              "#### 1-12-5. 일정 후 할 일",
-              "",
-              "##### E, F학생",
-              "- 치프쌤 또는 레지던트 2년차 선생님께 피드백을 받는다.",
-              "- 치프쌤마다 피드백 시간, 장소, 파일 준비 방식이 다르다."
-            ]
-          },
-          "raw_md_sources": [
-            "2-1-9. 2주차 목요일 공지",
-            "1-12-5. 일정 후 할 일"
-          ],
-          "raw_md_excerpt": "#### 2-1-9. 2주차 목요일 공지\n- 일정 종료 후 공지\n  - EF: 금요일 심전도 발표 준비 (발표자/조장 7:20까지, 그 외 7:40까지 출근).\n  - 양유진 교수님 심장판막 강의 준비 (야마 확인).",
-          "calendar_body_short": "보내기 기한: 목요일 일정 종료 직후",
-          "prep_tasks": [],
-          "core_points": [
-            "일정 종료 후 공지",
-            "EF: 금요일 심전도 발표 준비 (발표자/조장 7:20까지, 그 외 7:40까지 출근).",
-            "양유진 교수님 심장판막 강의 준비 (야마 확인)."
-          ],
-          "approval_required": false,
-          "approval_kind": null,
-          "confirm_level": "none",
-          "split_group": false,
-          "participants_scope": "chief->all",
-          "site": "본원",
-          "source_refs": [
-            "2-1-10",
-            "1-12-5"
-          ],
-          "note_only_keep": [
-            "복붙용 공지 원문",
-            "누락 방지용 체크 항목"
-          ],
-          "hide_from_calendar_body": [
-            "질문 / 예시 포인트",
-            "조사 / 보강 내용",
-            "교수님 스타일 장문 서술",
-            "후기성 예외 사례",
-            "문자 예시 전문"
-          ],
-          "note": "보내기 기한: 목요일 일정 종료 직후 / EF 발표 준비와 판막 강의 준비를 공지한다.",
-          "related_session_ids": [
-            "s-2026-05-08-0800-ecg-ef",
-            "s-2026-05-08-1330-valvular"
-          ],
-          "boardDifficultyOverride": 0,
-          "userNote": "",
-          "boardSignalOverrides": {
-            "assignment": "auto",
-            "presentation": "auto",
-            "exam": "auto"
-          },
-          "displayColor": "",
-          "displayState": "normal"
-        },
-        {
           "id": "comm-2026-05-07-admin",
           "clerkship": "cardiology-2026-04-chief-draft-v2",
           "week": "2주차",
@@ -16639,6 +16589,96 @@
           ],
           "note": "보내기 기한: 목요일 13:00~14:00 권장 / 양유진/복영남 교수님 판막질환 일정 확인 문자를 보낸다.",
           "related_session_ids": [
+            "s-2026-05-08-1330-valvular"
+          ],
+          "boardDifficultyOverride": 0,
+          "userNote": "",
+          "boardSignalOverrides": {
+            "assignment": "auto",
+            "presentation": "auto",
+            "exam": "auto"
+          },
+          "displayColor": "",
+          "displayState": "normal"
+        },
+        {
+          "id": "comm-2026-05-07-chief",
+          "clerkship": "cardiology-2026-04-chief-draft-v2",
+          "week": "2주차",
+          "day": "목요일",
+          "date": "2026-05-07",
+          "time_label": "종료 직후",
+          "time_raw": "종료 직후",
+          "start_time": "",
+          "end_time": "",
+          "title": "조원 공지 · 일정 종료 후",
+          "professor": "",
+          "event_type": "chief",
+          "difficulty": 5,
+          "status": "draft",
+          "kind": "operations",
+          "needs_confirmation": false,
+          "summary": "목요일 일정 종료 직후",
+          "location": "",
+          "guide_pack_ids": [],
+          "sections": {
+            "intro": [
+              "보내기 기한: **목요일 일정 종료 직후**",
+              "EF 발표 준비와 판막 강의 준비를 공지한다."
+            ],
+            "연관 수업": [
+              "- E,F 심전도 발표",
+              "- 심장판막질환"
+            ],
+            "원문 문자 / 공지": [
+              "- **일정 종료 후 공지**",
+              "  - **EF**: 금요일 심전도 발표 준비하기 (조장, 발표자 7:20까지, 그 외 7:30~40 전까지 출근).",
+              "  - **양유진 교수님 심장판막 강의 준비**: 돌아가면서 질문 던지심. 야마만 보면 됨. 부담 없음."
+            ],
+            "조장 / E,F 발표 후속": [
+              "#### 1-12-5. 일정 후 할 일",
+              "",
+              "##### E, F학생",
+              "- 치프쌤 또는 레지던트 2년차 선생님께 피드백을 받는다.",
+              "- 치프쌤마다 피드백 시간, 장소, 파일 준비 방식이 다르다."
+            ]
+          },
+          "raw_md_sources": [
+            "2-1-9. 2주차 목요일 공지",
+            "1-12-5. 일정 후 할 일"
+          ],
+          "raw_md_excerpt": "#### 2-1-9. 2주차 목요일 공지\n- 일정 종료 후 공지\n  - EF: 금요일 심전도 발표 준비 (발표자/조장 7:20까지, 그 외 7:40까지 출근).\n  - 양유진 교수님 심장판막 강의 준비 (야마 확인).",
+          "calendar_body_short": "보내기 기한: 목요일 일정 종료 직후",
+          "prep_tasks": [],
+          "core_points": [
+            "일정 종료 후 공지",
+            "EF: 금요일 심전도 발표 준비 (발표자/조장 7:20까지, 그 외 7:40까지 출근).",
+            "양유진 교수님 심장판막 강의 준비 (야마 확인)."
+          ],
+          "approval_required": false,
+          "approval_kind": null,
+          "confirm_level": "none",
+          "split_group": false,
+          "participants_scope": "chief->all",
+          "site": "본원",
+          "source_refs": [
+            "2-1-10",
+            "1-12-5"
+          ],
+          "note_only_keep": [
+            "복붙용 공지 원문",
+            "누락 방지용 체크 항목"
+          ],
+          "hide_from_calendar_body": [
+            "질문 / 예시 포인트",
+            "조사 / 보강 내용",
+            "교수님 스타일 장문 서술",
+            "후기성 예외 사례",
+            "문자 예시 전문"
+          ],
+          "note": "보내기 기한: 목요일 일정 종료 직후 / EF 발표 준비와 판막 강의 준비를 공지한다.",
+          "related_session_ids": [
+            "s-2026-05-08-0800-ecg-ef",
             "s-2026-05-08-1330-valvular"
           ],
           "boardDifficultyOverride": 0,
@@ -17142,6 +17182,66 @@
               "source": "1-6. 심장내과.pdf p.2 평가 항목 비율(%)"
             }
           ]
+        },
+        {
+          "id": "admin-2026-05-08-1500-osce-booking",
+          "clerkship": "cardiology-2026-04-chief-draft-v2",
+          "week": "2주차",
+          "day": "금요일",
+          "date": "2026-05-08",
+          "time_label": "15:00",
+          "time_raw": "15:00",
+          "start_time": "15:00",
+          "end_time": "15:10",
+          "title": "OSCE 예약하기",
+          "professor": "",
+          "event_type": "admin",
+          "difficulty": 5,
+          "status": "todo",
+          "kind": "operations",
+          "needs_confirmation": false,
+          "summary": "강렬 TODO: 2026-05-08(금) 오후 3시 OSCE 예약해야 함. 예약 완료 아님.",
+          "location": "OSCE센터 / 전화 예약",
+          "guide_pack_ids": [],
+          "sections": {
+            "intro": [
+              "강렬 TODO: **2026-05-08(금) 오후 3시 OSCE 예약해야 함**.",
+              "상태: 예약 완료가 아니라 예약해야 할 항목.",
+              "오스키 센터 연락처: 042-580-8390"
+            ],
+            "메모": [
+              "- 심장내과 인계 기준: 오스키 센터 예약은 가능한 빨리 잡고, 일정 변경 시 방 예약도 같이 변경한다.",
+              "- 예약 대상/방은 실제 필요한 OSCE 항목에 맞춰 확인한다."
+            ]
+          },
+          "raw_md_sources": [
+            "2026-04-28 사용자 메모"
+          ],
+          "raw_md_excerpt": "나 다음주 금요일 오후 3시 OSCE 예약해야해. 이거 기억해둬.",
+          "calendar_body_short": "OSCE 예약 TODO · 예약 완료 아님",
+          "prep_tasks": [],
+          "core_points": [
+            "2026-05-08(금) 15:00 OSCE 예약하기",
+            "예약 완료 아님"
+          ],
+          "approval_required": false,
+          "approval_kind": null,
+          "confirm_level": "none",
+          "split_group": false,
+          "participants_scope": "leader",
+          "site": "본원",
+          "source_refs": [],
+          "note_only_keep": [],
+          "hide_from_calendar_body": [],
+          "boardDifficultyOverride": 3,
+          "userNote": "",
+          "boardSignalOverrides": {
+            "assignment": "auto",
+            "presentation": "auto",
+            "exam": "auto"
+          },
+          "displayColor": "",
+          "displayState": "normal"
         },
         {
           "id": "comm-2026-05-08-chief",
@@ -19476,6 +19576,19 @@
               ]
             },
             {
+              "time": "15:00",
+              "title": "OSCE 예약하기",
+              "professor": "",
+              "difficulty": 5,
+              "intro": [
+                "강렬 TODO: 오후 3시 OSCE 예약해야 함. 예약 완료 아님.",
+                "오스키 센터 연락처 042-580-8390."
+              ],
+              "prepare_points": [
+                "예약 대상/방을 실제 필요한 OSCE 항목에 맞춰 확인"
+              ]
+            },
+            {
               "time": "15:00~18:00",
               "title": "자율실습 및 보충학습",
               "professor": "",
@@ -19499,7 +19612,8 @@
             "주간실습계획과 성찰 2주차",
             "유폴 현장승인 · 심장판막질환",
             "유폴 현장승인 · E,F 심전도 발표",
-            "유폴 현장승인 · CPX HTN"
+            "유폴 현장승인 · CPX HTN",
+            "OSCE 예약하기"
           ],
           "max_session_difficulty": 8,
           "max_professor_score": 0
@@ -19744,7 +19858,8 @@
             "CPX HTN",
             "자율실습 및 보충학습",
             "심장판막질환",
-            "자율실습 및 보충학습"
+            "자율실습 및 보충학습",
+            "OSCE 예약하기"
           ],
           "prepare": [
             "과제 Checklist (금요일 내)",
@@ -19765,7 +19880,8 @@
             "과제 마감/회수: 주간실습계획과 성찰 2주차",
             "과제 마감/회수: 유폴 현장승인 · 심장판막질환",
             "과제 마감/회수: 유폴 현장승인 · E,F 심전도 발표",
-            "과제 마감/회수: 유폴 현장승인 · CPX HTN"
+            "과제 마감/회수: 유폴 현장승인 · CPX HTN",
+            "15:00 OSCE 예약하기 · 예약 완료 아님 · 오스키 센터 042-580-8390"
           ]
         }
       ],
