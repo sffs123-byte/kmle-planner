@@ -1,0 +1,3420 @@
+[
+  {
+    "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
+    "mode": "객관식",
+    "num_in_source": 1,
+    "question": "13개월 남자가 영유아 검진 옴. 임신나이 37주 출생체중 3200g 7개월부터 이유식 진행했으나 잘 진행되지 않고 모유수유는 하루에 5회 정도 진행 키 25백분위수 체중 10백분위수 두위 50백분위수 부족한 영양소는? (재시 문항) 혈색소8, 백혈구 혈소판 정상수치 평균적혈구용적 66 1) 철 2) 아연 3) ? 4) 망가니즈 5) ?",
+    "answer": "철 결핍",
+    "id": "actual1_001",
+    "origin": "actual_recall",
+    "priority_tier": "P4",
+    "type": "actual_pretest",
+    "episode": "Ep00-1",
+    "content_axis": "영양결핍-철/이유식/모유/소구성빈혈",
+    "answer_key_normalized": "철결핍",
+    "group_id": "G-NUT-FE",
+    "dedup_decision": "variant_keep",
+    "dedup_why": "철결핍 반복축이지만 빈혈+MCV trigger가 있는 최신 exact라 보존",
+    "dedup_badges": [
+      "variant-keep"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "영양결핍-철/이유식/모유/소구성빈혈",
+      "answer_key_normalized": "철결핍",
+      "group_id": "G-NUT-FE",
+      "dedup_decision": "variant_keep",
+      "why": "철결핍 반복축이지만 빈혈+MCV trigger가 있는 최신 exact라 보존",
+      "badges": [
+        "variant-keep"
+      ]
+    }
+  },
+  {
+    "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
+    "mode": "객관식",
+    "num_in_source": 2,
+    "question": "12개월 남아 수두 백신 맞으려함 3개월전에 특발혈소판감소자반증으로 치료받음 지금은 건강함 혈소판 수치 380000. 해야 할 처치는? (재시 문항) 1) 접종 연기 2) 혈소판 수혈 3) 아시클로버 4) 면역글로불린 5) 수두백신 접종",
+    "answer": "수두백신 접종",
+    "id": "actual1_002",
+    "origin": "actual_recall",
+    "priority_tier": "P4",
+    "type": "actual_pretest",
+    "episode": "Ep00-1",
+    "content_axis": "예방접종-수두백신/ITP/IVIG",
+    "answer_key_normalized": "수두백신 접종",
+    "group_id": "G-VAX-VARICELLA-IVIG-CONTRAST",
+    "dedup_decision": "contrast_pair",
+    "dedup_why": "원문 확인 완료: 2026 최신 문항은 IVIG 치료 언급이 없고 혈소판 회복 상태라 수두백신 접종",
+    "dedup_badges": [
+      "contrast-pair",
+      "ivig-branch"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "예방접종-수두백신/ITP/IVIG",
+      "answer_key_normalized": "수두백신 접종",
+      "group_id": "G-VAX-VARICELLA-IVIG-CONTRAST",
+      "dedup_decision": "contrast_pair",
+      "why": "원문 확인 완료: 2026 최신 문항은 IVIG 치료 언급이 없고 혈소판 회복 상태라 수두백신 접종",
+      "badges": [
+        "contrast-pair",
+        "ivig-branch"
+      ]
+    }
+  },
+  {
+    "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
+    "mode": "객관식",
+    "num_in_source": 3,
+    "question": "13개월 아이가 3일간 지속된 구토와 설사로 내원하였다. 3일간 구토로 인해 거의 먹지 못했으며, 심한 수양성 설사를 하루 10회 이상 하였다. 평소 10kg였으나 내원 당시 9kg였다. 혈액검사 결과는 다음과 같다. (pH 7.28, Na 136)알맞은 처치는? (재시 문항) 1) Normal saline 200cc 정주 2) Normal saline 40cc/hr 속도로 주입 3) 5% dextrose 200cc 정주 4) 5% dextrose 40cc/hr 속도로 주입 5) 5% dextrose 40cc/hr 속도로 주입(④와 선지 동일)",
+    "answer": "0.9% Normal saline 200cc 정주 / 20 mL/kg bolus",
+    "id": "actual1_003",
+    "origin": "actual_recall",
+    "priority_tier": "P4",
+    "type": "actual_pretest",
+    "episode": "Ep00-2",
+    "content_axis": "탈수-중증탈수 초기수액/NS bolus",
+    "answer_key_normalized": "0.9% NS 20mL/kg bolus",
+    "group_id": "G-FLUID-NS-BOLUS",
+    "dedup_decision": "variant_keep",
+    "dedup_why": "033/056과 같은 NS bolus 축이나 체중/Na/산증 trigger가 달라 variant로 보존",
+    "dedup_badges": [
+      "variant-keep"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "탈수-중증탈수 초기수액/NS bolus",
+      "answer_key_normalized": "0.9% NS 20mL/kg bolus",
+      "group_id": "G-FLUID-NS-BOLUS",
+      "dedup_decision": "variant_keep",
+      "why": "033/056과 같은 NS bolus 축이나 체중/Na/산증 trigger가 달라 variant로 보존",
+      "badges": [
+        "variant-keep"
+      ]
+    }
+  },
+  {
+    "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
+    "mode": "객관식",
+    "num_in_source": 4,
+    "question": "34주 여아 2,000g 태반조기박리가 의심되어 응급제왕으로 출생하였다. 출생 당시 자발호흡이 없이 축 늘어져 있었고 건조,자극,보온을 했음에도 생후 40초때 심박수가 80/분이었다. 이후 양압환기를 30초 시행하였으나 심박수가 100회/분 미만이었다. 양압환기를 지속하며 마스크교정, 입과 기도흡인, 흡기압력증가등의 조치를 했으나 여전히 심박수가 100회/분 미만이였다. 다음으로 할 수 있는 알맞은 처치는? (재시 문항) 1) 자극주기 2) 기관삽관 3) 양압환기 4) 가슴압박 5) 에피네프린 5. 임신성 당뇨로 인슐린 치료받고 있던 임산부 아프가 점수 1분 8점, 5분 9점 이후 아이에게 나타날 수 있는 소견은? (재시 문항) 1) 고마그네슘혈증 2) 고혈당혈증 3) 저칼슘혈증 4) 저칼륨혈증 5) 빈혈",
+    "answer": "기관삽관",
+    "id": "actual1_004",
+    "origin": "actual_recall",
+    "priority_tier": "P4",
+    "type": "actual_pretest",
+    "episode": "Ep00-3",
+    "content_axis": "신생아소생술-MRSOPA 후 HR<100",
+    "answer_key_normalized": "기관삽관",
+    "group_id": "G-NRP-INTUBATE",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "PPV/압박과 같은 broad NRP가 아니라 MRSOPA 후 삽관 결정",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "신생아소생술-MRSOPA 후 HR<100",
+      "answer_key_normalized": "기관삽관",
+      "group_id": "G-NRP-INTUBATE",
+      "dedup_decision": "keep_separate",
+      "why": "PPV/압박과 같은 broad NRP가 아니라 MRSOPA 후 삽관 결정",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
+    "mode": "객관식",
+    "num_in_source": 5,
+    "question": "임신성 당뇨로 인슐린 치료받고 있던 임산부. 아프가 점수 1분 8점, 5분 9점. 이후 아이에게 나타날 수 있는 소견은? 1) 고마그네슘혈증 2) 고혈당혈증 3) 저칼슘혈증 4) 저칼륨혈증 5) 빈혈",
+    "answer": "저칼슘혈증",
+    "id": "actual1_005",
+    "origin": "actual_recall",
+    "priority_tier": "P4",
+    "type": "actual_pretest",
+    "episode": "Ep00-3",
+    "content_axis": "고위험신생아-IDM 대사합병증",
+    "answer_key_normalized": "저칼슘혈증",
+    "group_id": "G-IDM-HYPOCA",
+    "dedup_decision": "variant_keep",
+    "dedup_why": "062와 같은 IDM 축이나 062는 선지 불명 broad recall",
+    "dedup_badges": [
+      "variant-keep"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "고위험신생아-IDM 대사합병증",
+      "answer_key_normalized": "저칼슘혈증",
+      "group_id": "G-IDM-HYPOCA",
+      "dedup_decision": "variant_keep",
+      "why": "062와 같은 IDM 축이나 062는 선지 불명 broad recall",
+      "badges": [
+        "variant-keep"
+      ]
+    }
+  },
+  {
+    "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
+    "mode": "주관식",
+    "num_in_source": 1,
+    "question": "24개월 남아가 아직 단어를 조합하여 문장을 만들지 못한다고 내원하였다. 이 환아에게서 자폐스펙트럼 장애를 감별하기 위해 '언어장애' 외에 반드시 확인해야 할 증상을 2가지 서술하시오. 1) 대인관계 형성장애 2) 제한되고 반복적인 행동",
+    "answer": "대인관계 형성장애, 제한되고 반복적인 행동/관심",
+    "id": "actual1_006",
+    "origin": "actual_recall",
+    "priority_tier": "P4",
+    "type": "actual_pretest",
+    "episode": "Ep00-1",
+    "content_axis": "발달-ASD triad",
+    "answer_key_normalized": "사회성장애+제한반복행동",
+    "group_id": "G-DEV-ASD",
+    "dedup_decision": "variant_keep",
+    "dedup_why": "016은 반복 2음절 blank라 같은 ASD 축이지만 답 target 다름",
+    "dedup_badges": [
+      "variant-keep"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "발달-ASD triad",
+      "answer_key_normalized": "사회성장애+제한반복행동",
+      "group_id": "G-DEV-ASD",
+      "dedup_decision": "variant_keep",
+      "why": "016은 반복 2음절 blank라 같은 ASD 축이지만 답 target 다름",
+      "badges": [
+        "variant-keep"
+      ]
+    }
+  },
+  {
+    "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
+    "mode": "주관식",
+    "num_in_source": 2,
+    "question": "태반을 통과하지 않아 출생 시 혈중 농도가 증가하면 선천 감염을 의미하는 면역글로불린은?",
+    "answer": "IgM",
+    "id": "actual1_007",
+    "origin": "actual_recall",
+    "priority_tier": "P4",
+    "type": "actual_pretest",
+    "episode": "Ep03-3",
+    "content_axis": "면역글로불린-선천감염 IgM",
+    "answer_key_normalized": "IgM",
+    "group_id": "G-IMM-IGM",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독 exact recall",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep03-3",
+      "content_axis": "면역글로불린-선천감염 IgM",
+      "answer_key_normalized": "IgM",
+      "group_id": "G-IMM-IGM",
+      "dedup_decision": "keep_unique",
+      "why": "단독 exact recall",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
+    "mode": "주관식",
+    "num_in_source": 3,
+    "question": "4세 여아가 감기 설사 경련으로 내원. 사지 가늘다. 검사결과 저혈당 고요산 고젖산 고중성지방혈증일때 어떤 질환을 의심할 수 있는가? (재시 문항)",
+    "answer": "당원병",
+    "id": "actual1_008",
+    "origin": "actual_recall",
+    "priority_tier": "P4",
+    "type": "actual_pretest",
+    "episode": "Ep00-2",
+    "content_axis": "대사-당원병/GSD 진단",
+    "answer_key_normalized": "당원병",
+    "group_id": "G-MET-GSD",
+    "dedup_decision": "variant_keep",
+    "dedup_why": "028은 유전방식까지 묻는 sibling",
+    "dedup_badges": [
+      "variant-keep"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "대사-당원병/GSD 진단",
+      "answer_key_normalized": "당원병",
+      "group_id": "G-MET-GSD",
+      "dedup_decision": "variant_keep",
+      "why": "028은 유전방식까지 묻는 sibling",
+      "badges": [
+        "variant-keep"
+      ]
+    }
+  },
+  {
+    "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
+    "mode": "주관식",
+    "num_in_source": 4,
+    "question": "임신 나이 38주, 3000g 출생 생후 3일, 황달을 주소로 내원. 모유, 분유 먹고 있으며 잘 움직임. 광선 치료 2시간 진행 후 총 빌리루빈 수치는 16 광선 치료와 함께 해볼 수 있는 치료는? <내원 당시 검사 결과> Hb, 혈색소 정상. 간수치 정상. CRP 정상. 총빌리루빈 15, 직접 0.9 쿰즈 검사 직접(+) 간접(-)",
+    "answer": "IVIG / 정맥 면역글로불린",
+    "id": "actual1_009",
+    "origin": "actual_recall",
+    "priority_tier": "P4",
+    "type": "actual_pretest",
+    "episode": "Ep00-4",
+    "content_axis": "신생아황달-Coombs양성/광선치료 불충분",
+    "answer_key_normalized": "IVIG",
+    "group_id": "G-JAUNDICE-IVIG",
+    "dedup_decision": "near_duplicate",
+    "dedup_why": "024와 same episode+axis+answer+trigger 유사. source 반복 badge 권장",
+    "dedup_badges": [
+      "near-duplicate",
+      "repeat-high-yield"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-4",
+      "content_axis": "신생아황달-Coombs양성/광선치료 불충분",
+      "answer_key_normalized": "IVIG",
+      "group_id": "G-JAUNDICE-IVIG",
+      "dedup_decision": "near_duplicate",
+      "why": "024와 same episode+axis+answer+trigger 유사. source 반복 badge 권장",
+      "badges": [
+        "near-duplicate",
+        "repeat-high-yield"
+      ]
+    }
+  },
+  {
+    "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
+    "mode": "주관식",
+    "num_in_source": 5,
+    "question": "산모가 분만 5일전부터 38.3도 이상의 복통, 고열, 질분비물 등 호소 태어난 남아가 호흡곤란 발열 37.8도 예상되는 균에 대한 조기 처치 약물 2가지 + CXR 사진 줌 (재시 문항)",
+    "answer": "ampicillin + gentamicin",
+    "id": "actual1_010",
+    "origin": "actual_recall",
+    "priority_tier": "P4",
+    "type": "actual_pretest",
+    "episode": "Ep00-4",
+    "content_axis": "신생아감염-EOS/chorioamnionitis",
+    "answer_key_normalized": "ampicillin+gentamicin",
+    "group_id": "G-EOS-AMP-GENTA",
+    "dedup_decision": "near_duplicate",
+    "dedup_why": "051과 같은 EOS antibiotics 축. trigger 유사",
+    "dedup_badges": [
+      "near-duplicate",
+      "repeat-high-yield"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-4",
+      "content_axis": "신생아감염-EOS/chorioamnionitis",
+      "answer_key_normalized": "ampicillin+gentamicin",
+      "group_id": "G-EOS-AMP-GENTA",
+      "dedup_decision": "near_duplicate",
+      "why": "051과 같은 EOS antibiotics 축. trigger 유사",
+      "badges": [
+        "near-duplicate",
+        "repeat-high-yield"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
+    "mode": "객관식",
+    "num_in_source": 1,
+    "question": "2개월 전부터 밥 잘 못먹음, 1년 전부터 혈액암 항암치료 받았음. 머리카락 푸석해짐+홍반 사진",
+    "answer": "아연",
+    "id": "actual1_011",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-1",
+    "content_axis": "영양결핍-아연/항암/피부홍반/모발",
+    "answer_key_normalized": "아연",
+    "group_id": "G-NUT-ZINC",
+    "dedup_decision": "same_topic_sibling",
+    "dedup_why": "084와 같은 아연 답이지만 trigger가 항암 vs TPN이라 병합 금지",
+    "dedup_badges": [
+      "same-topic-sibling",
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "영양결핍-아연/항암/피부홍반/모발",
+      "answer_key_normalized": "아연",
+      "group_id": "G-NUT-ZINC",
+      "dedup_decision": "same_topic_sibling",
+      "why": "084와 같은 아연 답이지만 trigger가 항암 vs TPN이라 병합 금지",
+      "badges": [
+        "same-topic-sibling",
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
+    "mode": "객관식",
+    "num_in_source": 2,
+    "question": "Digeorge syndrome인 환아의 특징을 나열한 후(Xray 상 가슴샘이 없었다는 텍스트가 추가됨) 어떠한 면역체계에 문제가 발생하는가? 1. 체액면역 2. 보체계 3. 세포면역 4. 포식세포계 5. 세포면역 + 체액면역",
+    "answer": "세포면역 이상 / T cell 관련 면역결핍",
+    "id": "actual1_012",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_high",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep03-3",
+    "content_axis": "면역결핍-DiGeorge/흉선없음",
+    "answer_key_normalized": "세포면역/T-cell 이상",
+    "group_id": "G-IMM-DIGEORGE-TCELL",
+    "dedup_decision": "duplicate",
+    "dedup_why": "052와 substantially same trigger+answer",
+    "dedup_badges": [
+      "duplicate",
+      "repeat-exact"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep03-3",
+      "content_axis": "면역결핍-DiGeorge/흉선없음",
+      "answer_key_normalized": "세포면역/T-cell 이상",
+      "group_id": "G-IMM-DIGEORGE-TCELL",
+      "dedup_decision": "duplicate",
+      "why": "052와 substantially same trigger+answer",
+      "badges": [
+        "duplicate",
+        "repeat-exact"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
+    "mode": "객관식",
+    "num_in_source": 3,
+    "question": "3살 여아 외과수술 후 찍은 ekg이다. ( EKG 는 정상) Na: 135, K: 6.8, Cl: 95, 처치해야할 방법은?(Pseudohyperkalemia 상황) 1. 경과관찰 2. 3. 4. Ca gluconate 5.",
+    "answer": "경과관찰",
+    "id": "actual1_013",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-2",
+    "content_axis": "전해질-pseudohyperkalemia/EKG정상",
+    "answer_key_normalized": "경과관찰",
+    "group_id": "G-ELEC-PSEUDOHYPERK",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독 전해질 함정",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "전해질-pseudohyperkalemia/EKG정상",
+      "answer_key_normalized": "경과관찰",
+      "group_id": "G-ELEC-PSEUDOHYPERK",
+      "dedup_decision": "keep_unique",
+      "why": "단독 전해질 함정",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
+    "mode": "객관식",
+    "num_in_source": 4,
+    "question": "40주에 3.5키로로 태어난 아이 경련으로 내원. 산전진찰에 특이소견 없었음. 검사 결과 glucose 55, Ca 5.5, K 9.5, Na 140, HCO3- 24. 적절한 처치는? 1. 항경련제 2. Ca gluconate 3. glucose 4. 5.",
+    "answer": "Ca gluconate",
+    "id": "actual1_014",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-3",
+    "content_axis": "신생아-저칼슘경련",
+    "answer_key_normalized": "Ca gluconate",
+    "group_id": "G-NEO-HYPOCA-SEIZURE",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "IDM 저칼슘과 broad topic은 같아도 trigger/answer가 치료라 분리",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "신생아-저칼슘경련",
+      "answer_key_normalized": "Ca gluconate",
+      "group_id": "G-NEO-HYPOCA-SEIZURE",
+      "dedup_decision": "keep_unique",
+      "why": "IDM 저칼슘과 broad topic은 같아도 trigger/answer가 치료라 분리",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
+    "mode": "객관식",
+    "num_in_source": 5,
+    "question": "27주 6일 800g 신생아 심박수 50. 처치는? 보기 양압환기/흡인/..",
+    "answer": "양압환기",
+    "id": "actual1_015",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-3",
+    "content_axis": "신생아소생술-HR<100/무호흡 초기처치",
+    "answer_key_normalized": "PPV",
+    "group_id": "G-NRP-PPV",
+    "dedup_decision": "near_duplicate",
+    "dedup_why": "076과 same answer/trigger 유사",
+    "dedup_badges": [
+      "near-duplicate",
+      "repeat-high-yield"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "신생아소생술-HR<100/무호흡 초기처치",
+      "answer_key_normalized": "PPV",
+      "group_id": "G-NRP-PPV",
+      "dedup_decision": "near_duplicate",
+      "why": "076과 same answer/trigger 유사",
+      "badges": [
+        "near-duplicate",
+        "repeat-high-yield"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
+    "mode": "주관식",
+    "num_in_source": 6,
+    "question": "(자폐증 증상 설명) 대인관계 형성 장애, 언어 장애, 제한되고 ()적인 행동 및 관심에서 ()에 들어갈 2음절 단어",
+    "answer": "반복",
+    "id": "actual1_016",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-1",
+    "content_axis": "발달-ASD triad",
+    "answer_key_normalized": "반복",
+    "group_id": "G-DEV-ASD",
+    "dedup_decision": "same_topic_sibling",
+    "dedup_why": "ASD triad 중 빈칸 target. 006과 병합 금지",
+    "dedup_badges": [
+      "same-topic-sibling",
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "발달-ASD triad",
+      "answer_key_normalized": "반복",
+      "group_id": "G-DEV-ASD",
+      "dedup_decision": "same_topic_sibling",
+      "why": "ASD triad 중 빈칸 target. 006과 병합 금지",
+      "badges": [
+        "same-topic-sibling",
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
+    "mode": "주관식",
+    "num_in_source": 7,
+    "question": "신생아는 각질층이 얇아 피부투과성이 높다. 따라서 피부를 투과하는 약물을 썼을 때 약물의 체내 농도가 증가할 수 있다. 이때 영향을 받는 약동학적 단계(ADME)는 무엇인가?",
+    "answer": "absorption",
+    "id": "actual1_017",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-1",
+    "content_axis": "약동학-신생아 피부투과/ADME",
+    "answer_key_normalized": "absorption",
+    "group_id": "G-PHARM-ABSORPTION",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독 약동학",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "약동학-신생아 피부투과/ADME",
+      "answer_key_normalized": "absorption",
+      "group_id": "G-PHARM-ABSORPTION",
+      "dedup_decision": "keep_unique",
+      "why": "단독 약동학",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
+    "mode": "주관식",
+    "num_in_source": 8,
+    "question": "프레더윌리, 엔젤만 증후군 같이 부모로부터 물려받는 유전자에 따라 자녀의 표현형이 나눠지는 현상",
+    "answer": "genetic imprinting",
+    "id": "actual1_018",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-2",
+    "content_axis": "유전-imprinting 정의",
+    "answer_key_normalized": "genetic imprinting",
+    "group_id": "G-GEN-IMPRINTING-DEF",
+    "dedup_decision": "duplicate",
+    "dedup_why": "048과 same definition answer",
+    "dedup_badges": [
+      "duplicate",
+      "repeat-exact"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "유전-imprinting 정의",
+      "answer_key_normalized": "genetic imprinting",
+      "group_id": "G-GEN-IMPRINTING-DEF",
+      "dedup_decision": "duplicate",
+      "why": "048과 same definition answer",
+      "badges": [
+        "duplicate",
+        "repeat-exact"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
+    "mode": "주관식",
+    "num_in_source": 9,
+    "question": "출산 5분 후 심박수 110회/분, 호흡 느림, 움직임은 약간 있음, 코에 카테터 넣었을 때 찡그림, 피부색은 동체는 홍색, 손발은 청색, Apgar score는?",
+    "answer": "6점",
+    "id": "actual1_019",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-3",
+    "content_axis": "신생아-Apgar score 계산",
+    "answer_key_normalized": "6점",
+    "group_id": "G-APGAR",
+    "dedup_decision": "variant_keep",
+    "dedup_why": "030과 같은 Apgar 계산이나 점수/소견 달라 별도 variant",
+    "dedup_badges": [
+      "variant-keep"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "신생아-Apgar score 계산",
+      "answer_key_normalized": "6점",
+      "group_id": "G-APGAR",
+      "dedup_decision": "variant_keep",
+      "why": "030과 같은 Apgar 계산이나 점수/소견 달라 별도 variant",
+      "badges": [
+        "variant-keep"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
+    "mode": "주관식",
+    "num_in_source": 10,
+    "question": "정상 신생아 첫 소변 출생직후에 보거나 출생후 얼마동안 보지 않을 수 있다. 조산아 및 만삭아의 95% 경우 (답: 24시간) 내에 첫 소변을 본다.",
+    "answer": "24시간",
+    "id": "actual1_020",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-3",
+    "content_axis": "신생아-첫소변 시간",
+    "answer_key_normalized": "24시간",
+    "group_id": "G-NEO-FIRST-URINE",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "신생아-첫소변 시간",
+      "answer_key_normalized": "24시간",
+      "group_id": "G-NEO-FIRST-URINE",
+      "dedup_decision": "keep_unique",
+      "why": "단독",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
+    "mode": "객관식",
+    "num_in_source": 1,
+    "question": "9개월 남아가 보채고 창백하다. 38주 5일 3.2kg으로 출생 출생 이후부터 완전 모유수유 중이다 엄마가 채식주의자이다 혈액검사 : Hb 8(감소), 적혈구분포폭 18%(증가) Q. 결핍이 의심되는 영양소는? 다른 선지) 구리/철분/피리독신(Vit.B6)/티아민(Vit.B1)",
+    "answer": "코발라민",
+    "id": "actual1_021",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-1",
+    "content_axis": "영양결핍-B12/채식산모/완전모유",
+    "answer_key_normalized": "코발라민/B12",
+    "group_id": "G-NUT-B12",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "철결핍과 broad 영양은 같지만 답/trigger 다름",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "영양결핍-B12/채식산모/완전모유",
+      "answer_key_normalized": "코발라민/B12",
+      "group_id": "G-NUT-B12",
+      "dedup_decision": "keep_separate",
+      "why": "철결핍과 broad 영양은 같지만 답/trigger 다름",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
+    "mode": "객관식",
+    "num_in_source": 2,
+    "question": "12개월 남아가 수두백신을 접종받기 위해 병원에 왔다 3개월 전 특발혈소판감소자반병으로 면역글로불린 치료를 받았다고 한다 현재는 건강하게 지내며, 지난 주에 확인한 혈소판 수치는 380,000/mm^3이다 Q. 처치는? 다른 선지) 혈소판 수혈/수두백신 접종/아시클로버 경구투여/면역글로불린 정맥주사",
+    "answer": "접종 연기",
+    "id": "actual1_022",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-1",
+    "content_axis": "예방접종-수두백신/ITP/IVIG",
+    "answer_key_normalized": "접종 연기",
+    "group_id": "G-VAX-VARICELLA-IVIG-CONTRAST",
+    "dedup_decision": "contrast_pair",
+    "dedup_why": "원문 확인 완료: 2025 문항은 3개월 전 면역글로불린 치료가 명시되어 생백신 접종 연기",
+    "dedup_badges": [
+      "contrast-pair",
+      "ivig-branch"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "예방접종-수두백신/ITP/IVIG",
+      "answer_key_normalized": "접종 연기",
+      "group_id": "G-VAX-VARICELLA-IVIG-CONTRAST",
+      "dedup_decision": "contrast_pair",
+      "why": "원문 확인 완료: 2025 문항은 3개월 전 면역글로불린 치료가 명시되어 생백신 접종 연기",
+      "badges": [
+        "contrast-pair",
+        "ivig-branch"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
+    "mode": "객관식",
+    "num_in_source": 3,
+    "question": "폐렴 걸린 6세 여아가 경련으로 내원하였다 활력징후/뇌 CT 이상 없음. Na 낮았음(123), 혈액 osmolarity 280, 소변 osmolarity 640 Q. 치료는?",
+    "answer": "3% saline",
+    "id": "actual1_023",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-2",
+    "content_axis": "전해질-증상성 저Na 경련",
+    "answer_key_normalized": "3% saline",
+    "group_id": "G-HYPONA-SEIZURE-3SALINE",
+    "dedup_decision": "near_duplicate",
+    "dedup_why": "097과 same answer+substantially same trigger",
+    "dedup_badges": [
+      "near-duplicate",
+      "repeat-high-yield"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "전해질-증상성 저Na 경련",
+      "answer_key_normalized": "3% saline",
+      "group_id": "G-HYPONA-SEIZURE-3SALINE",
+      "dedup_decision": "near_duplicate",
+      "why": "097과 same answer+substantially same trigger",
+      "badges": [
+        "near-duplicate",
+        "repeat-high-yield"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
+    "mode": "객관식",
+    "num_in_source": 4,
+    "question": "39주 제왕절개 아기 3일차에 황달로 내원 출생 당일부터 황달이 있었고 점점 심해졌다. 아이는 활발하다 간비대 소견 있었음 검사 – 총빌리루빈 14, 직접빌리루빈 1, 쿰즈검사 직접/간접 (+/-) 2시간 광선치료 후 총빌리루빈 16 Q. 이후 치료는? 다른 선지) 경과관찰/더 자주 모유수유/생리식염수 투여/고강도 광선치료",
+    "answer": "정맥 면역글로불린",
+    "id": "actual1_024",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-4",
+    "content_axis": "신생아황달-Coombs양성/광선치료 불충분",
+    "answer_key_normalized": "IVIG",
+    "group_id": "G-JAUNDICE-IVIG",
+    "dedup_decision": "near_duplicate",
+    "dedup_why": "009와 near duplicate. 둘 중 하나 representative 가능하나 source는 보존",
+    "dedup_badges": [
+      "near-duplicate",
+      "repeat-high-yield"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-4",
+      "content_axis": "신생아황달-Coombs양성/광선치료 불충분",
+      "answer_key_normalized": "IVIG",
+      "group_id": "G-JAUNDICE-IVIG",
+      "dedup_decision": "near_duplicate",
+      "why": "009와 near duplicate. 둘 중 하나 representative 가능하나 source는 보존",
+      "badges": [
+        "near-duplicate",
+        "repeat-high-yield"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
+    "mode": "객관식",
+    "num_in_source": 5,
+    "question": "배꼽탈장 사진 주고 진단명 묻기(아래 사진과 동일하진 않지만 유사한 사진 출제되었습니다) 다른선지) 배꼽탈출/배벽갈림증/선천성 횡격막 탈장/(??)",
+    "answer": "배꼽탈장",
+    "id": "actual1_025",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep08-1",
+    "content_axis": "외과-배꼽탈장 사진진단",
+    "answer_key_normalized": "배꼽탈장",
+    "group_id": "G-UMBILICAL-HERNIA",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독 사진형",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep08-1",
+      "content_axis": "외과-배꼽탈장 사진진단",
+      "answer_key_normalized": "배꼽탈장",
+      "group_id": "G-UMBILICAL-HERNIA",
+      "dedup_decision": "keep_unique",
+      "why": "단독 사진형",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
+    "mode": "주관식",
+    "num_in_source": 1,
+    "question": "정상 발달과정 중 원을 보고 따라 그릴 수 있는 개월 수는?",
+    "answer": "36개월",
+    "id": "actual1_026",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-1",
+    "content_axis": "발달-milestone/도형-원",
+    "answer_key_normalized": "36개월",
+    "group_id": "G-DEV-CIRCLE-36M",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "발달 broad cluster지만 answer target 독립",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "발달-milestone/도형-원",
+      "answer_key_normalized": "36개월",
+      "group_id": "G-DEV-CIRCLE-36M",
+      "dedup_decision": "keep_separate",
+      "why": "발달 broad cluster지만 answer target 독립",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
+    "mode": "주관식",
+    "num_in_source": 2,
+    "question": "생후 6개월부터 폐렴 3차례 앓아 면역기능 평가 위해 내원하였다 Lateral pharyngeal x-ray상 편도와 아데노이드가 관찰되지 않았다 총 혈청면역글로불린 농도가 90mg/dL였다. Q1. 진단은? 범저감마글로불린혈증 Q2. 치료는? 3~4주 간격 정맥용 면역글로불린 400~500mg/kg 투여",
+    "answer": "범저감마글로불린혈증 / 3~4주 간격 정맥용 면역글로불린 400~500mg/kg 투여",
+    "id": "actual1_027",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep03-3",
+    "content_axis": "면역결핍-범저감마/XLA 치료",
+    "answer_key_normalized": "범저감마글로불린혈증+IVIG",
+    "group_id": "G-IMM-XLA-IVIG",
+    "dedup_decision": "near_duplicate",
+    "dedup_why": "101과 same diagnosis/treatment 축",
+    "dedup_badges": [
+      "near-duplicate",
+      "repeat-high-yield"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep03-3",
+      "content_axis": "면역결핍-범저감마/XLA 치료",
+      "answer_key_normalized": "범저감마글로불린혈증+IVIG",
+      "group_id": "G-IMM-XLA-IVIG",
+      "dedup_decision": "near_duplicate",
+      "why": "101과 same diagnosis/treatment 축",
+      "badges": [
+        "near-duplicate",
+        "repeat-high-yield"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
+    "mode": "주관식",
+    "num_in_source": 3,
+    "question": "7세 여아가 경련하였다 간이 늑골 밑으로 4횡지 만져졌다 혈액검사 결과 : 혈당 낮음/간수치,총콜레스테롤,중성지방,젖산,요산 상승 Q1. 진단은? 당원병 Q2. 유전방식은? 상염색체 열성",
+    "answer": "당원병 / 상염색체 열성",
+    "id": "actual1_028",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-2",
+    "content_axis": "대사-당원병/GSD 진단+유전",
+    "answer_key_normalized": "당원병+상염색체열성",
+    "group_id": "G-MET-GSD",
+    "dedup_decision": "same_topic_sibling",
+    "dedup_why": "GSD 축이지만 answer target 추가라 병합 금지",
+    "dedup_badges": [
+      "same-topic-sibling",
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "대사-당원병/GSD 진단+유전",
+      "answer_key_normalized": "당원병+상염색체열성",
+      "group_id": "G-MET-GSD",
+      "dedup_decision": "same_topic_sibling",
+      "why": "GSD 축이지만 answer target 추가라 병합 금지",
+      "badges": [
+        "same-topic-sibling",
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
+    "mode": "주관식",
+    "num_in_source": 4,
+    "question": "37주 3.7kg으로 분만된 소아에서 경계가 불분명한 머리의 부종 Q. 진단은? 산류",
+    "answer": "산류",
+    "id": "actual1_029",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-3",
+    "content_axis": "분만손상-산류",
+    "answer_key_normalized": "산류",
+    "group_id": "G-BIRTH-CAPUT",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "분만손상-산류",
+      "answer_key_normalized": "산류",
+      "group_id": "G-BIRTH-CAPUT",
+      "dedup_decision": "keep_unique",
+      "why": "단독",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
+    "mode": "주관식",
+    "num_in_source": 5,
+    "question": "38주 정상체중 출생아 - 심박수 100회 미만/호흡 약함/운동 약함/코에 카테터 넣었을 때 약간 반응/피부 약간 분홍색 Q. Apgar 점수는? 5점",
+    "answer": "5점",
+    "id": "actual1_030",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-3",
+    "content_axis": "신생아-Apgar score 계산",
+    "answer_key_normalized": "5점",
+    "group_id": "G-APGAR",
+    "dedup_decision": "same_topic_sibling",
+    "dedup_why": "019와 same topic but different answer",
+    "dedup_badges": [
+      "same-topic-sibling",
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "신생아-Apgar score 계산",
+      "answer_key_normalized": "5점",
+      "group_id": "G-APGAR",
+      "dedup_decision": "same_topic_sibling",
+      "why": "019와 same topic but different answer",
+      "badges": [
+        "same-topic-sibling",
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
+    "mode": "객관식",
+    "num_in_source": 1,
+    "question": "6개월부터 이유식을 시작했지만 18개월까지 모유 위주로 먹음 X자 다리(외반슬) LAB 소견 : 25-수산화비타민 D 수치 4.4 (정상치 10~), +PTH ALP 업 X-ray 다리랑 손목쪽 제시(cupping으로 보임) 치료는? 다른 선지: 칼슘, 갑상선 호르몬..",
+    "answer": "비타민 D 경구복용",
+    "id": "actual1_031",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-1",
+    "content_axis": "영양결핍-VitD/구루병 치료",
+    "answer_key_normalized": "비타민D",
+    "group_id": "G-NUT-VITD-RICKETS",
+    "dedup_decision": "same_topic_sibling",
+    "dedup_why": "074와 구루병/VitD 축이지만 031은 치료, 074는 진단+결핍",
+    "dedup_badges": [
+      "same-topic-sibling",
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "영양결핍-VitD/구루병 치료",
+      "answer_key_normalized": "비타민D",
+      "group_id": "G-NUT-VITD-RICKETS",
+      "dedup_decision": "same_topic_sibling",
+      "why": "074와 구루병/VitD 축이지만 031은 치료, 074는 진단+결핍",
+      "badges": [
+        "same-topic-sibling",
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
+    "mode": "객관식",
+    "num_in_source": 2,
+    "question": "8세 소아 (체중 27 kg, 체표면적 1 m²)에게 acyclovir를 주사하려고 한다. 이때, 소아에서 가장 정확한 투여 용량 계산 방법으로 구한 값을 고르시오. 투여 기준은 다음과 같다: 체중 기준: 30–45 mg/kg/day (3회 분할 투여) 체표면적 기준: 1500 mg/m²/day (3회 분할 투여) 선지: 700/900/1200/1500/…",
+    "answer": "체표면적 기준 1500 mg/m²/day → 1500 mg/day",
+    "id": "actual1_032",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_high",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-1",
+    "content_axis": "약물용량-BSA dosing/acyclovir",
+    "answer_key_normalized": "1500 mg/day",
+    "group_id": "G-DRUG-BSA",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독 계산",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "약물용량-BSA dosing/acyclovir",
+      "answer_key_normalized": "1500 mg/day",
+      "group_id": "G-DRUG-BSA",
+      "dedup_decision": "keep_unique",
+      "why": "단독 계산",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
+    "mode": "객관식",
+    "num_in_source": 3,
+    "question": "n세 여아 빼박 중증탈수 소견 (12kg -> 10kg / 혈압 90/60) -> 제일 처음 해야 되는 처치 묻는 문제 (Na+ : 168) 1) 0.9% Normal saline 1시간 240cc 2) 0.9% Normal saline 40cc/hr 3) 5DW ~~~ 4) 5DW ~~~ 5) ?!",
+    "answer": "0.9% Normal saline 240cc를 1시간에 정주 / 20 mL/kg bolus",
+    "id": "actual1_033",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_high",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-2",
+    "content_axis": "탈수-중증/고나트륨탈수 초기수액",
+    "answer_key_normalized": "0.9% NS 20mL/kg bolus",
+    "group_id": "G-FLUID-NS-BOLUS",
+    "dedup_decision": "same_topic_sibling",
+    "dedup_why": "NS bolus 축이지만 고Na 168+12kg→10kg trigger라 003과 병합 금지",
+    "dedup_badges": [
+      "same-topic-sibling",
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "탈수-중증/고나트륨탈수 초기수액",
+      "answer_key_normalized": "0.9% NS 20mL/kg bolus",
+      "group_id": "G-FLUID-NS-BOLUS",
+      "dedup_decision": "same_topic_sibling",
+      "why": "NS bolus 축이지만 고Na 168+12kg→10kg trigger라 003과 병합 금지",
+      "badges": [
+        "same-topic-sibling",
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
+    "mode": "객관식",
+    "num_in_source": 4,
+    "question": "재태기간 28주, 출생 체중 750g, 제왕절개로 태어난 아이. 출생 직후부터 청색증, 가슴벽뒤당김, 날숨 때 끙끙거림. 가슴 청진상 양쪽 호흡음 감소. 가슴 방사선 사진 제시(total white 소견). 원인은? (객) 폐표면활성제 부족",
+    "answer": "폐표면활성제 부족 / RDS",
+    "id": "actual1_034",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-4",
+    "content_axis": "신생아호흡-RDS 원인",
+    "answer_key_normalized": "폐표면활성제 부족",
+    "group_id": "G-RDS-SURFACTANT-CAUSE",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "104 INSURE와 RDS broad topic이나 answer target 다름",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-4",
+      "content_axis": "신생아호흡-RDS 원인",
+      "answer_key_normalized": "폐표면활성제 부족",
+      "group_id": "G-RDS-SURFACTANT-CAUSE",
+      "dedup_decision": "keep_separate",
+      "why": "104 INSURE와 RDS broad topic이나 answer target 다름",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
+    "mode": "객관식",
+    "num_in_source": 5,
+    "question": "생후 10일된 환아 황달 주소로 내원. 빌리루빈 수치 11.0 직접빌리루빈 0.8 체중은 였고 모유수유중이었고 활발히 잘 움직였다. 옳은 조치는? 1. 경과관찰 2. 광선치료",
+    "answer": "경과관찰 / 모유수유 지속 가능",
+    "id": "actual1_035",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_medium",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-4",
+    "content_axis": "신생아황달-생후10일/모유수유/저위험",
+    "answer_key_normalized": "경과관찰/모유수유 지속",
+    "group_id": "G-JAUNDICE-OBSERVE",
+    "dedup_decision": "duplicate",
+    "dedup_why": "079와 substantially same trigger+answer",
+    "dedup_badges": [
+      "duplicate",
+      "repeat-exact"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-4",
+      "content_axis": "신생아황달-생후10일/모유수유/저위험",
+      "answer_key_normalized": "경과관찰/모유수유 지속",
+      "group_id": "G-JAUNDICE-OBSERVE",
+      "dedup_decision": "duplicate",
+      "why": "079와 substantially same trigger+answer",
+      "badges": [
+        "duplicate",
+        "repeat-exact"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
+    "mode": "주관식",
+    "num_in_source": 6,
+    "question": "사춘기 성숙정도를 남자는 고환 용적으로 구분하고, 여자는 유방 크기로 구분한다. 공통적으로 남녀는 ( )로 사춘기 정도를 구분한다.",
+    "answer": "음모",
+    "id": "actual1_036",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep06-1",
+    "content_axis": "사춘기성숙도-Tanner 공통기준",
+    "answer_key_normalized": "음모",
+    "group_id": "G-PUBERTY-TANNER-PUBICHAIR",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep06-1",
+      "content_axis": "사춘기성숙도-Tanner 공통기준",
+      "answer_key_normalized": "음모",
+      "group_id": "G-PUBERTY-TANNER-PUBICHAIR",
+      "dedup_decision": "keep_unique",
+      "why": "단독",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
+    "mode": "주관식",
+    "num_in_source": 7,
+    "question": "10월에 유행해서 mmr백신 맞았고 4주 전에 수두, 일본뇌염, PCV 맞은 13개월 아이가 맞아야 할 백신은? 아래의 접종기록에 있는 백신 중 하나 적어라. *환자의 접종 기록* HBV 3차까지 접종 BCG 접종 PCV 4차까지 접종 DTap 3차까지 접종 일본뇌염 생백신 1차 접종 수두 1차 접종 MMR 10월에 한번 접종",
+    "answer": "MMR 접종",
+    "id": "actual1_037",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_medium",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-1",
+    "content_axis": "예방접종-MMR/생백신 재접종",
+    "answer_key_normalized": "MMR",
+    "group_id": "G-VAX-MMR-13M",
+    "dedup_decision": "near_duplicate",
+    "dedup_why": "070과 same MMR repeat trigger",
+    "dedup_badges": [
+      "near-duplicate",
+      "repeat-high-yield"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "예방접종-MMR/생백신 재접종",
+      "answer_key_normalized": "MMR",
+      "group_id": "G-VAX-MMR-13M",
+      "dedup_decision": "near_duplicate",
+      "why": "070과 same MMR repeat trigger",
+      "badges": [
+        "near-duplicate",
+        "repeat-high-yield"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
+    "mode": "주관식",
+    "num_in_source": 8,
+    "question": "다운증후군 환아 어머니 염색체 핵형 사진 주고 (45, XY, 21;21 로버트슨 전위), 다음 환아에서 다운증후군 환아가 태어날 확률은?",
+    "answer": "100",
+    "id": "actual1_038",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-2",
+    "content_axis": "유전-Down/Robertsonian 21;21 recurrence",
+    "answer_key_normalized": "100%",
+    "group_id": "G-GEN-DOWN-ROB21",
+    "dedup_decision": "near_duplicate",
+    "dedup_why": "071과 same answer/trigger",
+    "dedup_badges": [
+      "near-duplicate",
+      "repeat-high-yield"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "유전-Down/Robertsonian 21;21 recurrence",
+      "answer_key_normalized": "100%",
+      "group_id": "G-GEN-DOWN-ROB21",
+      "dedup_decision": "near_duplicate",
+      "why": "071과 same answer/trigger",
+      "badges": [
+        "near-duplicate",
+        "repeat-high-yield"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
+    "mode": "주관식",
+    "num_in_source": 9,
+    "question": "최종월경일이 확실하지 않은 임신부에서 태어난 신생아의 임신나이 추정을 위해 출생 후 시행하는 신체검사 및 신경학적 검사 ?",
+    "answer": "New Ballard score",
+    "id": "actual1_039",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-3",
+    "content_axis": "신생아-재태연령 추정",
+    "answer_key_normalized": "New Ballard score",
+    "group_id": "G-BALLARD",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "신생아-재태연령 추정",
+      "answer_key_normalized": "New Ballard score",
+      "group_id": "G-BALLARD",
+      "dedup_decision": "keep_unique",
+      "why": "단독",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
+    "mode": "주관식",
+    "num_in_source": 10,
+    "question": "신생아 황달이 병적인 경우 3가지 상황 쓰세요. (부분 점수 없음)",
+    "answer": "병적 황달: 생후 24시간 이내 발생, bilirubin 급상승, 직접 bilirubin 증가 또는 2주 이상 지속 등",
+    "id": "actual1_040",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_high",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-4",
+    "content_axis": "신생아황달-병적황달 기준",
+    "answer_key_normalized": "병적황달 기준 3가지",
+    "group_id": "G-JAUNDICE-PATHOLOGIC",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "황달 broad topic이나 IVIG/관찰과 답 다름",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-4",
+      "content_axis": "신생아황달-병적황달 기준",
+      "answer_key_normalized": "병적황달 기준 3가지",
+      "group_id": "G-JAUNDICE-PATHOLOGIC",
+      "dedup_decision": "keep_separate",
+      "why": "황달 broad topic이나 IVIG/관찰과 답 다름",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "2025년 1학기  1-2조",
+    "mode": "객관식",
+    "num_in_source": 1,
+    "question": "2차 범위인데 1차에 나옴 1개월 여아, 대변에 실 같은 피, 변은 하루에 3-4회로 묽은 편이었으나 토하거나 보채지는 않음. 모유 수유 중, 이외에 다른 문제 없음 처치는? (다른 보기: 항생제, 스테로이드, 수액, 완전 단백 가수분해 분유 섭취)",
+    "answer": "수유모의 항원 제한 식사",
+    "id": "actual1_041",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-1",
+    "content_axis": "모유수유-혈변/알레르기성 직결장염",
+    "answer_key_normalized": "수유모 항원제한",
+    "group_id": "G-BREAST-ANTIGEN-RESTRICT",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "모유수유 broad cluster지만 금기/호르몬과 분리",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "모유수유-혈변/알레르기성 직결장염",
+      "answer_key_normalized": "수유모 항원제한",
+      "group_id": "G-BREAST-ANTIGEN-RESTRICT",
+      "dedup_decision": "keep_unique",
+      "why": "모유수유 broad cluster지만 금기/호르몬과 분리",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "2025년 1학기  1-2조",
+    "mode": "객관식",
+    "num_in_source": 2,
+    "question": "다음 중 효소 보충 요법으로 치료할 수 있는 것은? 페닐케톤뇨증, 나. Fabry, 다. 당원병, 라. Pompe",
+    "answer": "나, 라",
+    "id": "actual1_042",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-2",
+    "content_axis": "대사-lysosomal 효소보충 가능질환",
+    "answer_key_normalized": "Fabry+Pompe",
+    "group_id": "G-MET-ERT",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "MSUD/GSD와 병합 금지",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "대사-lysosomal 효소보충 가능질환",
+      "answer_key_normalized": "Fabry+Pompe",
+      "group_id": "G-MET-ERT",
+      "dedup_decision": "keep_separate",
+      "why": "MSUD/GSD와 병합 금지",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "2025년 1학기  1-2조",
+    "mode": "객관식",
+    "num_in_source": 3,
+    "question": "환아 소변이 안 나와서 수액을 줬는데, 여전히 소변이 잘 나오지 않고 음낭수종 생김 다음 처치는? (다른 보기: 5% albumin, 5% DW + 0.45 NaCL, 그냥 NaCL)",
+    "answer": "수액 중단(으로 추정)",
+    "id": "actual1_043",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-2",
+    "content_axis": "수분-수액과다/소변감소/부종",
+    "answer_key_normalized": "수액 중단 추정",
+    "group_id": "G-FLUID-OVERLOAD",
+    "dedup_decision": "needs_source",
+    "dedup_why": "답 추정형. 원문 확인 필요",
+    "dedup_badges": [
+      "source-check"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "수분-수액과다/소변감소/부종",
+      "answer_key_normalized": "수액 중단 추정",
+      "group_id": "G-FLUID-OVERLOAD",
+      "dedup_decision": "needs_source",
+      "why": "답 추정형. 원문 확인 필요",
+      "badges": [
+        "source-check"
+      ]
+    }
+  },
+  {
+    "source": "2025년 1학기  1-2조",
+    "mode": "객관식",
+    "num_in_source": 4,
+    "question": "(뇌 MRI 사진 주고 여러 군데 indi) 소아 백질연화증 호발 부위? (가장 유사한 사진 첨부)",
+    "answer": "Periventricular white matter 표시된 곳",
+    "id": "actual1_044",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep07-3",
+    "content_axis": "신경-PVL 호발부위/MRI",
+    "answer_key_normalized": "periventricular white matter",
+    "group_id": "G-NEURO-PVL",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "사진형 단독",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep07-3",
+      "content_axis": "신경-PVL 호발부위/MRI",
+      "answer_key_normalized": "periventricular white matter",
+      "group_id": "G-NEURO-PVL",
+      "dedup_decision": "keep_unique",
+      "why": "사진형 단독",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "2025년 1학기  1-2조",
+    "mode": "객관식",
+    "num_in_source": 5,
+    "question": "3세 남아, 수평선은 그리는데 별은 못 그림, 혼자 옷 입는데 벗지는 못함, 계단은 오르는데 뛰지 못함, 셋까지는 세는데 이십까진 못셈 발달 과정에서의 문제는?",
+    "answer": "운동발달지연",
+    "id": "actual1_045",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-1",
+    "content_axis": "발달-milestone/운동지연",
+    "answer_key_normalized": "운동발달지연",
+    "group_id": "G-DEV-MOTOR-DELAY",
+    "dedup_decision": "same_topic_sibling",
+    "dedup_why": "063과 운동발달지연 축이나 나이/선지 다름",
+    "dedup_badges": [
+      "same-topic-sibling",
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "발달-milestone/운동지연",
+      "answer_key_normalized": "운동발달지연",
+      "group_id": "G-DEV-MOTOR-DELAY",
+      "dedup_decision": "same_topic_sibling",
+      "why": "063과 운동발달지연 축이나 나이/선지 다름",
+      "badges": [
+        "same-topic-sibling",
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "2025년 1학기  1-2조",
+    "mode": "주관식",
+    "num_in_source": 1,
+    "question": "장기별 발육패턴 구분하는 그래프에 A~D 표시됨 A~D에 해당하는 장기 1개 이상 쓰기",
+    "answer": "장기별 발육패턴: 일반형(심장/신장 등), 신경형(뇌/두위), 림프형(림프절/편도/가슴샘), 생식형(생식기/자궁 등)",
+    "id": "actual1_046",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_high",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-1",
+    "content_axis": "성장-장기별 발육패턴",
+    "answer_key_normalized": "일반형/신경형/림프형/생식형",
+    "group_id": "G-GROWTH-ORGAN-PATTERN",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "100 두위와 related but answer target 다름",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "성장-장기별 발육패턴",
+      "answer_key_normalized": "일반형/신경형/림프형/생식형",
+      "group_id": "G-GROWTH-ORGAN-PATTERN",
+      "dedup_decision": "keep_separate",
+      "why": "100 두위와 related but answer target 다름",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "2025년 1학기  1-2조",
+    "mode": "주관식",
+    "num_in_source": 2,
+    "question": "항원에 인위적으로 노출시켜 감염을 예방하는 방법은?",
+    "answer": "예방접종",
+    "id": "actual1_047",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-1",
+    "content_axis": "예방접종-정의",
+    "answer_key_normalized": "예방접종",
+    "group_id": "G-VAX-DEFINITION",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독 정의",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "예방접종-정의",
+      "answer_key_normalized": "예방접종",
+      "group_id": "G-VAX-DEFINITION",
+      "dedup_decision": "keep_unique",
+      "why": "단독 정의",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "2025년 1학기  1-2조",
+    "mode": "주관식",
+    "num_in_source": 3,
+    "question": "어떤 유전자나 염색체 분절이 부모 중 어느 쪽에서 기인했는가에 따라 표현형 발현이 달라지는 현상?",
+    "answer": "Genetic imprinting",
+    "id": "actual1_048",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-2",
+    "content_axis": "유전-imprinting 정의",
+    "answer_key_normalized": "genetic imprinting",
+    "group_id": "G-GEN-IMPRINTING-DEF",
+    "dedup_decision": "duplicate",
+    "dedup_why": "018과 duplicate",
+    "dedup_badges": [
+      "duplicate",
+      "repeat-exact"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "유전-imprinting 정의",
+      "answer_key_normalized": "genetic imprinting",
+      "group_id": "G-GEN-IMPRINTING-DEF",
+      "dedup_decision": "duplicate",
+      "why": "018과 duplicate",
+      "badges": [
+        "duplicate",
+        "repeat-exact"
+      ]
+    }
+  },
+  {
+    "source": "2025년 1학기  1-2조",
+    "mode": "주관식",
+    "num_in_source": 4,
+    "question": "태아에서 출혈과 관련된 비타민은?",
+    "answer": "Vit K",
+    "id": "actual1_049",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-1",
+    "content_axis": "영양-비타민K/태아출혈",
+    "answer_key_normalized": "Vit K",
+    "group_id": "G-NUT-VITK",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "영양-비타민K/태아출혈",
+      "answer_key_normalized": "Vit K",
+      "group_id": "G-NUT-VITK",
+      "dedup_decision": "keep_unique",
+      "why": "단독",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "2025년 1학기  1-2조",
+    "mode": "주관식",
+    "num_in_source": 5,
+    "question": "황달과 케라틴 혈증을 감별하기 위해 진찰해야 할 부위는?",
+    "answer": "눈의 공막",
+    "id": "actual1_050",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "episode": "Ep00-4",
+    "content_axis": "황달-카로틴혈증 감별진찰",
+    "answer_key_normalized": "공막",
+    "group_id": "G-JAUNDICE-SCLERA",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "황달 broad but 답/trigger 독립",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-4",
+      "content_axis": "황달-카로틴혈증 감별진찰",
+      "answer_key_normalized": "공막",
+      "group_id": "G-JAUNDICE-SCLERA",
+      "dedup_decision": "keep_separate",
+      "why": "황달 broad but 답/trigger 독립",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "25~28조",
+    "mode": "객관식",
+    "num_in_source": 1,
+    "question": "35주 2kg으로 생후 3일 된 신생아에서 반복적인 미열, 청색증, 끙끙거림, 빈호흡이 있었다. 산모 분만 전 고열과 양막파열이 있었다. 태아는 잘 씹지 못해 정맥 영양 중이다. 우선적으로 해야 하는 치료는? Ampicillin + Gentamycin",
+    "answer": "ampicillin + gentamicin",
+    "id": "actual1_051",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-4",
+    "content_axis": "신생아감염-EOS/chorioamnionitis",
+    "answer_key_normalized": "ampicillin+gentamicin",
+    "group_id": "G-EOS-AMP-GENTA",
+    "dedup_decision": "near_duplicate",
+    "dedup_why": "010과 near duplicate",
+    "dedup_badges": [
+      "near-duplicate",
+      "repeat-high-yield"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-4",
+      "content_axis": "신생아감염-EOS/chorioamnionitis",
+      "answer_key_normalized": "ampicillin+gentamicin",
+      "group_id": "G-EOS-AMP-GENTA",
+      "dedup_decision": "near_duplicate",
+      "why": "010과 near duplicate",
+      "badges": [
+        "near-duplicate",
+        "repeat-high-yield"
+      ]
+    }
+  },
+  {
+    "source": "25~28조",
+    "mode": "객관식",
+    "num_in_source": 2,
+    "question": "Digeorge syndrome인 환아의 특징을 나열한 후(Xray 상 가슴샘이 없었다는 텍스트가 추가됨) 어떠한 면역체계에 문제가 발생하는가? 1. 체액면역 2. 보체계 3. 세포면역 4. 포식세포계 5. 세포면역 + 체액면역",
+    "answer": "세포면역 이상 / T cell 관련 면역결핍",
+    "id": "actual1_052",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_high",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep03-3",
+    "content_axis": "면역결핍-DiGeorge/흉선없음",
+    "answer_key_normalized": "세포면역/T-cell 이상",
+    "group_id": "G-IMM-DIGEORGE-TCELL",
+    "dedup_decision": "duplicate",
+    "dedup_why": "012와 exact/near duplicate",
+    "dedup_badges": [
+      "duplicate",
+      "repeat-exact"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep03-3",
+      "content_axis": "면역결핍-DiGeorge/흉선없음",
+      "answer_key_normalized": "세포면역/T-cell 이상",
+      "group_id": "G-IMM-DIGEORGE-TCELL",
+      "dedup_decision": "duplicate",
+      "why": "012와 exact/near duplicate",
+      "badges": [
+        "duplicate",
+        "repeat-exact"
+      ]
+    }
+  },
+  {
+    "source": "25~28조",
+    "mode": "객관식",
+    "num_in_source": 3,
+    "question": "18개월 영유아검진에서 다음과 같이 나왔다. 문제가 되는 것은? 1. 혼자 잘 걸을 수 있으나 잘 뛰지는 못한다. 2. 수평선은 그릴 수 있으나 원은 그리지 못한다.",
+    "answer": "복기 불완전: 18개월 발달 선지 원문 통합 확인 필요. 핵심은 18개월에는 단어 약 10개, 서툴게 뛰기, 손가락으로 요구가 가능함.",
+    "id": "actual1_053",
+    "origin": "actual_incomplete",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "actual_incomplete",
+    "qc_flag": "answer_or_original_needs_confirmation",
+    "episode": "Ep00-1",
+    "content_axis": "발달-milestone/18개월 선지판단",
+    "answer_key_normalized": "원문 통합 필요",
+    "group_id": "G-DEV-18M-FRAGMENT",
+    "dedup_decision": "fragment_of:actual1_054",
+    "dedup_why": "같은 객3 파싱 조각. duplicate가 아니라 fragment 병합 후보",
+    "dedup_badges": [
+      "fragment-recall"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "발달-milestone/18개월 선지판단",
+      "answer_key_normalized": "원문 통합 필요",
+      "group_id": "G-DEV-18M-FRAGMENT",
+      "dedup_decision": "fragment_of:actual1_054",
+      "why": "같은 객3 파싱 조각. duplicate가 아니라 fragment 병합 후보",
+      "badges": [
+        "fragment-recall"
+      ]
+    }
+  },
+  {
+    "source": "25~28조",
+    "mode": "객관식",
+    "num_in_source": 3,
+    "question": "단어 10개를 말할 수 있으나 간단한 문장은 이야기하지 못한다. 4. 원하는 것을 손가락으로 가리키며 달라고 할 수 있다.",
+    "answer": "복기 파싱 조각: actual1_053 문항의 선지 일부. 원문 통합 확인 필요.",
+    "id": "actual1_054",
+    "origin": "actual_incomplete",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "actual_incomplete",
+    "qc_flag": "answer_or_original_needs_confirmation",
+    "episode": "Ep00-1",
+    "content_axis": "발달-milestone/18개월 선지판단",
+    "answer_key_normalized": "원문 통합 필요",
+    "group_id": "G-DEV-18M-FRAGMENT",
+    "dedup_decision": "fragment_of:actual1_053",
+    "dedup_why": "053의 선지 조각",
+    "dedup_badges": [
+      "fragment-recall"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "발달-milestone/18개월 선지판단",
+      "answer_key_normalized": "원문 통합 필요",
+      "group_id": "G-DEV-18M-FRAGMENT",
+      "dedup_decision": "fragment_of:actual1_053",
+      "why": "053의 선지 조각",
+      "badges": [
+        "fragment-recall"
+      ]
+    }
+  },
+  {
+    "source": "25~28조",
+    "mode": "객관식",
+    "num_in_source": 4,
+    "question": "생후 3일 된 여아가 구역, 구토 증상 보이고 기면 상태로 입원하였다. 암모니아가 650일 때 해야 하는 검사는? 1. 혈당 2. 칼슘 3. 뇌파 4. 뇌초음파 5. 혈액 가스 분석",
+    "answer": "혈액 가스 분석",
+    "id": "actual1_055",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_medium",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-2",
+    "content_axis": "대사-고암모니아혈증 초기검사",
+    "answer_key_normalized": "혈액가스분석",
+    "group_id": "G-HYPERAMMONEMIA-ABG",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "093은 치료 혈액투석이라 병합 금지",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "대사-고암모니아혈증 초기검사",
+      "answer_key_normalized": "혈액가스분석",
+      "group_id": "G-HYPERAMMONEMIA-ABG",
+      "dedup_decision": "keep_separate",
+      "why": "093은 치료 혈액투석이라 병합 금지",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "25~28조",
+    "mode": "객관식",
+    "num_in_source": 5,
+    "question": "5세 여아, 탈수가 있으며 저혈압과 각종 Lab 소견 있었음. 진행해야 하는 치료는? 0.9% Normal Saline",
+    "answer": "0.9% Normal saline 정주",
+    "id": "actual1_056",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-2",
+    "content_axis": "탈수-저혈압/초기수액",
+    "answer_key_normalized": "0.9% NS 정주",
+    "group_id": "G-FLUID-NS-BOLUS",
+    "dedup_decision": "same_topic_sibling",
+    "dedup_why": "복기 문장이 짧아 같은 축 표시만 하고 대표화 금지",
+    "dedup_badges": [
+      "same-topic-sibling",
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "탈수-저혈압/초기수액",
+      "answer_key_normalized": "0.9% NS 정주",
+      "group_id": "G-FLUID-NS-BOLUS",
+      "dedup_decision": "same_topic_sibling",
+      "why": "복기 문장이 짧아 같은 축 표시만 하고 대표화 금지",
+      "badges": [
+        "same-topic-sibling",
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "25~28조",
+    "mode": "주관식",
+    "num_in_source": 1,
+    "question": "17세 여아가 6개월의 다이어트 10키로를 감량한 후 병원에서 비위관삽입을 진행해 정맥 영양중이다. 치료 3일 뒤 혈액 검사 결과가 다음과 같았다. 진단은? Na 140K 2.5 Cl 95 간 수치 정상 TP 6.0 albumin 2.5 glucose 120 CRP 3 Refeeding syndrome",
+    "answer": "Refeeding syndrome",
+    "id": "actual1_057",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-2",
+    "content_axis": "대사-Refeeding syndrome",
+    "answer_key_normalized": "Refeeding syndrome",
+    "group_id": "G-REFEEDING",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "대사-Refeeding syndrome",
+      "answer_key_normalized": "Refeeding syndrome",
+      "group_id": "G-REFEEDING",
+      "dedup_decision": "keep_unique",
+      "why": "단독",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "25~28조",
+    "mode": "주관식",
+    "num_in_source": 2,
+    "question": "임신 중 태내 성장이 지연되는 경우로서 예상되는 성장패턴보다 성장이 둔화되는 것은? 자궁 내 성장지연",
+    "answer": "자궁내 성장지연 / IUGR",
+    "id": "actual1_058",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-1",
+    "content_axis": "성장-IUGR 정의",
+    "answer_key_normalized": "IUGR",
+    "group_id": "G-GROWTH-IUGR",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "성장-IUGR 정의",
+      "answer_key_normalized": "IUGR",
+      "group_id": "G-GROWTH-IUGR",
+      "dedup_decision": "keep_unique",
+      "why": "단독",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "25~28조",
+    "mode": "주관식",
+    "num_in_source": 4,
+    "question": "탈수로 온 소아. 수액 치료 중 경련이 발생하였다. 치료 전 Na 농도는 170, 치료 후 농도는 130이였다. 경련이 발생한 원인과 치료는? 저나트륨혈증, 3% saline 정주 (Na 30mEq/hr)",
+    "answer": "저나트륨혈증에 의한 경련, 3% saline 정주",
+    "id": "actual1_059",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-2",
+    "content_axis": "전해질-Na 교정후 저Na 경련",
+    "answer_key_normalized": "저나트륨혈증+3% saline",
+    "group_id": "G-HYPONA-CORRECTION-SEIZURE",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "023/097과 치료는 같지만 trigger가 급격교정 후 경련이라 분리",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "전해질-Na 교정후 저Na 경련",
+      "answer_key_normalized": "저나트륨혈증+3% saline",
+      "group_id": "G-HYPONA-CORRECTION-SEIZURE",
+      "dedup_decision": "keep_separate",
+      "why": "023/097과 치료는 같지만 trigger가 급격교정 후 경련이라 분리",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "25~28조",
+    "mode": "주관식",
+    "num_in_source": 5,
+    "question": "5세 남아가 열이 나서 병원에 내원하였다. 5일 전부터 자주 토하고 묽은 변을 하루 10회 정도 보았다. 체온이 38도 이상으로 높게 나고 주변인도 비슷한 증상을 호소함. 가능성이 높은 병원균은? 로타바이러스",
+    "answer": "로타바이러스",
+    "id": "actual1_060",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep01-1",
+    "content_axis": "감염성설사-로타바이러스",
+    "answer_key_normalized": "로타바이러스",
+    "group_id": "G-INF-DIARRHEA-ROTA",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독 감염",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep01-1",
+      "content_axis": "감염성설사-로타바이러스",
+      "answer_key_normalized": "로타바이러스",
+      "group_id": "G-INF-DIARRHEA-ROTA",
+      "dedup_decision": "keep_unique",
+      "why": "단독 감염",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "29-32조",
+    "mode": "객관식",
+    "num_in_source": 2,
+    "question": "염색체 수는 정상이지만 아버지에게서 염색체를 둘다 받아서 생기는 질환(genetic imprinting설명) 1. Fragile X 2. Williams syndrome 3. Huntington 4. Cri du chat syndrome 5. Beckwith-widemann syndrome + 실버러셀, 프레더 윌리, 엔젤만",
+    "answer": "Beckwith-Wiedemann syndrome",
+    "id": "actual1_061",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_high",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-2",
+    "content_axis": "유전-imprinting 질환선택/BWS",
+    "answer_key_normalized": "Beckwith-Wiedemann",
+    "group_id": "G-GEN-IMPRINTING-DISEASE",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "018/048 정의, 102 PWS/Angelman mechanism과 분리",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "유전-imprinting 질환선택/BWS",
+      "answer_key_normalized": "Beckwith-Wiedemann",
+      "group_id": "G-GEN-IMPRINTING-DISEASE",
+      "dedup_decision": "keep_separate",
+      "why": "018/048 정의, 102 PWS/Angelman mechanism과 분리",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "29-32조",
+    "mode": "객관식",
+    "num_in_source": 3,
+    "question": "임신성 당뇨로 인슐린 치료를 받고 있던 임산부가 임신 36주에 3.8kg의 여아를 제왕절개로 분만하였다. 이후 아기에게 보일 수 있는 소견은?",
+    "answer": "IDM 소견: 저혈당, 저칼슘혈증, 다혈구증 등. 선지에 있으면 저칼슘혈증/저혈당 우선 확인",
+    "id": "actual1_062",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_medium",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-3",
+    "content_axis": "고위험신생아-IDM 대사합병증",
+    "answer_key_normalized": "저혈당/저칼슘/다혈구 중 선지 확인",
+    "group_id": "G-IDM-HYPOCA",
+    "dedup_decision": "same_topic_sibling",
+    "dedup_why": "IDM 소견 sibling. normalized answer가 broad라 005와 병합 금지",
+    "dedup_badges": [
+      "same-topic-sibling",
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "고위험신생아-IDM 대사합병증",
+      "answer_key_normalized": "저혈당/저칼슘/다혈구 중 선지 확인",
+      "group_id": "G-IDM-HYPOCA",
+      "dedup_decision": "same_topic_sibling",
+      "why": "IDM 소견 sibling. normalized answer가 broad라 005와 병합 금지",
+      "badges": [
+        "same-topic-sibling",
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "29-32조",
+    "mode": "객관식",
+    "num_in_source": 4,
+    "question": "3세 남아 성장 발달 계단은 오르는데 한발로 서잇지 못함 원은 그리는데 사각형은 못그림 물건은 셋까지만 셈 손 씻기는 하지만 세수는 못함 1. 사회적행동장애 2. 운동발달지연 3. 적응발달지연 4. 언어발달지연 5. 정상",
+    "answer": "운동발달지연",
+    "id": "actual1_063",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_high",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-1",
+    "content_axis": "발달-milestone/운동지연",
+    "answer_key_normalized": "운동발달지연",
+    "group_id": "G-DEV-MOTOR-DELAY",
+    "dedup_decision": "same_topic_sibling",
+    "dedup_why": "045와 같은 answer지만 trigger 세부가 다름",
+    "dedup_badges": [
+      "same-topic-sibling",
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "발달-milestone/운동지연",
+      "answer_key_normalized": "운동발달지연",
+      "group_id": "G-DEV-MOTOR-DELAY",
+      "dedup_decision": "same_topic_sibling",
+      "why": "045와 같은 answer지만 trigger 세부가 다름",
+      "badges": [
+        "same-topic-sibling",
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "29-32조",
+    "mode": "객관식",
+    "num_in_source": 5,
+    "question": "TPN에서 매일 감시해야하는 것 1. 키 2. 체중 3. 머리둘레 4. 암모니아 5. 중성지방",
+    "answer": "체중",
+    "id": "actual1_064",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_medium",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-1",
+    "content_axis": "영양/TPN-매일감시",
+    "answer_key_normalized": "체중",
+    "group_id": "G-TPN-DAILY-WEIGHT",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "084 아연결핍과 TPN 단어만 공유",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "영양/TPN-매일감시",
+      "answer_key_normalized": "체중",
+      "group_id": "G-TPN-DAILY-WEIGHT",
+      "dedup_decision": "keep_separate",
+      "why": "084 아연결핍과 TPN 단어만 공유",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "29-32조",
+    "mode": "주관식",
+    "num_in_source": 1,
+    "question": "11세 4년 전 급성림프구 백혈병을 진단받고 조혈모세포이식 없이 항암화학요법을 받고 완치되었다고 한다. 6세까지 예방접종은 나이에 맞게 모두 맞았다. 적합한 접종은?",
+    "answer": "답 미복기/원문 선지 확인 필요: 항암치료 완료 후 11세 예방접종 문항. Tdap/HPV/수막알균 또는 재접종 여부는 선지 확인 필요",
+    "id": "actual1_065",
+    "origin": "actual_incomplete",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "actual_incomplete",
+    "qc_flag": "answer_or_original_needs_confirmation",
+    "episode": "Ep00-1",
+    "content_axis": "예방접종-항암치료후 catch-up",
+    "answer_key_normalized": "원문 선지 확인 필요",
+    "group_id": "G-VAX-POST-CHEMO",
+    "dedup_decision": "needs_source",
+    "dedup_why": "답 미복기. 다른 예방접종 문제와 병합 금지",
+    "dedup_badges": [
+      "source-check"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "예방접종-항암치료후 catch-up",
+      "answer_key_normalized": "원문 선지 확인 필요",
+      "group_id": "G-VAX-POST-CHEMO",
+      "dedup_decision": "needs_source",
+      "why": "답 미복기. 다른 예방접종 문제와 병합 금지",
+      "badges": [
+        "source-check"
+      ]
+    }
+  },
+  {
+    "source": "29-32조",
+    "mode": "주관식",
+    "num_in_source": 2,
+    "question": "다운증후군 남아 핵형쓰기 47, XY, +21",
+    "answer": "47, XY, +21",
+    "id": "actual1_066",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-2",
+    "content_axis": "유전-Down karyotype",
+    "answer_key_normalized": "47,XY,+21",
+    "group_id": "G-GEN-DOWN-KARYOTYPE",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "038/071 recurrence risk와 분리",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "유전-Down karyotype",
+      "answer_key_normalized": "47,XY,+21",
+      "group_id": "G-GEN-DOWN-KARYOTYPE",
+      "dedup_decision": "keep_separate",
+      "why": "038/071 recurrence risk와 분리",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "29-32조",
+    "mode": "주관식",
+    "num_in_source": 3,
+    "question": "37주 3000g 황달 간비대 보였음. 광선치료 후 혈액검사 결과 총 빌리루빈 16. 쿰즈 결과 직접(-) 간접(+) 추가로 시행할 수 있는 치료? 교환수혈",
+    "answer": "교환수혈",
+    "id": "actual1_067",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-4",
+    "content_axis": "신생아황달-Coombs/교환수혈",
+    "answer_key_normalized": "교환수혈",
+    "group_id": "G-JAUNDICE-EXCHANGE",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "009/024 IVIG와 answer 다름",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-4",
+      "content_axis": "신생아황달-Coombs/교환수혈",
+      "answer_key_normalized": "교환수혈",
+      "group_id": "G-JAUNDICE-EXCHANGE",
+      "dedup_decision": "keep_separate",
+      "why": "009/024 IVIG와 answer 다름",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "29-32조",
+    "mode": "주관식",
+    "num_in_source": 4,
+    "question": "급성 성장기에 대해 설명.",
+    "answer": "제1 성장급등기: 태아기~2세, 제2 성장급등기: 사춘기~15/16세",
+    "id": "actual1_068",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_high",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-1",
+    "content_axis": "성장-성장급등기",
+    "answer_key_normalized": "제1 태아기~2세; 제2 사춘기",
+    "group_id": "G-GROWTH-SPURT",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "성장-성장급등기",
+      "answer_key_normalized": "제1 태아기~2세; 제2 사춘기",
+      "group_id": "G-GROWTH-SPURT",
+      "dedup_decision": "keep_unique",
+      "why": "단독",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "29-32조",
+    "mode": "주관식",
+    "num_in_source": 5,
+    "question": "18.8kg 환아에게 복부초음파 검사를 시행하기 위해 금식하려호 한다. 하루 필요한 수액량을 계산하여 수액 주입 속도를 구하시오. 57.6mL/hr",
+    "answer": "57.6 mL/hr",
+    "id": "actual1_069",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-2",
+    "content_axis": "수분-유지수액 계산",
+    "answer_key_normalized": "57.6mL/hr",
+    "group_id": "G-FLUID-MAINTENANCE-CALC",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "NS bolus와 계산축 분리",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "수분-유지수액 계산",
+      "answer_key_normalized": "57.6mL/hr",
+      "group_id": "G-FLUID-MAINTENANCE-CALC",
+      "dedup_decision": "keep_separate",
+      "why": "NS bolus와 계산축 분리",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "33~36조",
+    "mode": "객관식",
+    "num_in_source": 1,
+    "question": "13개월 여아 예방접종받기위해 병원 내원. 10개월 때 홍역 유행해서 홍역 백신 맞았고 4주전에 수두 백신과 일본뇌염 백신 맞았다. 추천할 예방접종은? 1. Dtap 2. 수막알균 3. MMR 4. 로타바이러스 5. 일본뇌염",
+    "answer": "MMR",
+    "id": "actual1_070",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_high",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-1",
+    "content_axis": "예방접종-MMR/생백신 재접종",
+    "answer_key_normalized": "MMR",
+    "group_id": "G-VAX-MMR-13M",
+    "dedup_decision": "near_duplicate",
+    "dedup_why": "037과 near duplicate",
+    "dedup_badges": [
+      "near-duplicate",
+      "repeat-high-yield"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "예방접종-MMR/생백신 재접종",
+      "answer_key_normalized": "MMR",
+      "group_id": "G-VAX-MMR-13M",
+      "dedup_decision": "near_duplicate",
+      "why": "037과 near duplicate",
+      "badges": [
+        "near-duplicate",
+        "repeat-high-yield"
+      ]
+    }
+  },
+  {
+    "source": "33~36조",
+    "mode": "객관식",
+    "num_in_source": 3,
+    "question": "로버트슨 전위 산모, 다운증후군 확률: 100% (야마)",
+    "answer": "100%",
+    "id": "actual1_071",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-2",
+    "content_axis": "유전-Down/Robertsonian 21;21 recurrence",
+    "answer_key_normalized": "100%",
+    "group_id": "G-GEN-DOWN-ROB21",
+    "dedup_decision": "near_duplicate",
+    "dedup_why": "038과 near duplicate",
+    "dedup_badges": [
+      "near-duplicate",
+      "repeat-high-yield"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "유전-Down/Robertsonian 21;21 recurrence",
+      "answer_key_normalized": "100%",
+      "group_id": "G-GEN-DOWN-ROB21",
+      "dedup_decision": "near_duplicate",
+      "why": "038과 near duplicate",
+      "badges": [
+        "near-duplicate",
+        "repeat-high-yield"
+      ]
+    }
+  },
+  {
+    "source": "33~36조",
+    "mode": "객관식",
+    "num_in_source": 4,
+    "question": "26주, 출산 후 3주경, 혈변 복부팽만 무호흡 WBC 24000 1. 항생제, 금식 2. 알레르기 분유 3. 인도메타신 4. 산소 5. 관장",
+    "answer": "NEC 의심: 금식 + 항생제",
+    "id": "actual1_072",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_high",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-4",
+    "content_axis": "신생아소화-NEC 치료",
+    "answer_key_normalized": "NPO+antibiotics",
+    "group_id": "G-NEC-NPO-ABX",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-4",
+      "content_axis": "신생아소화-NEC 치료",
+      "answer_key_normalized": "NPO+antibiotics",
+      "group_id": "G-NEC-NPO-ABX",
+      "dedup_decision": "keep_unique",
+      "why": "단독",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "33~36조",
+    "mode": "객관식",
+    "num_in_source": 5,
+    "question": "대천문 함몰, 바싹 마른 입, na 157mEq/L 중등도 고장성 / 중등도 저장성 / 중증 고장성 / 중증 등장성 / 중증 저장성",
+    "answer": "중등도 고장성 탈수",
+    "id": "actual1_073",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_medium",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-2",
+    "content_axis": "탈수-고장성/중증도 분류",
+    "answer_key_normalized": "중등도 고장성 탈수",
+    "group_id": "G-DEHYDRATION-CLASSIFY",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "NS bolus와 같은 탈수 broad but answer target 분류",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "탈수-고장성/중증도 분류",
+      "answer_key_normalized": "중등도 고장성 탈수",
+      "group_id": "G-DEHYDRATION-CLASSIFY",
+      "dedup_decision": "keep_separate",
+      "why": "NS bolus와 같은 탈수 broad but answer target 분류",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "33~36조",
+    "mode": "주관식",
+    "num_in_source": 1,
+    "question": "28+3wks 820g로 출생한 나이 4개월의 남자 환아의 손목 x ray 사진이다. 추정되는 진단명과 부족한 비타민은? (여기서 화살표는 없었음) 구루병, 비타민 D",
+    "answer": "구루병, 비타민 D 결핍",
+    "id": "actual1_074",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-1",
+    "content_axis": "영양결핍-VitD/구루병 진단",
+    "answer_key_normalized": "구루병+비타민D",
+    "group_id": "G-NUT-VITD-RICKETS",
+    "dedup_decision": "same_topic_sibling",
+    "dedup_why": "031과 같은 축이나 answer target 다름",
+    "dedup_badges": [
+      "same-topic-sibling",
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "영양결핍-VitD/구루병 진단",
+      "answer_key_normalized": "구루병+비타민D",
+      "group_id": "G-NUT-VITD-RICKETS",
+      "dedup_decision": "same_topic_sibling",
+      "why": "031과 같은 축이나 answer target 다름",
+      "badges": [
+        "same-topic-sibling",
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "33~36조",
+    "mode": "주관식",
+    "num_in_source": 4,
+    "question": "4세 저신장 익상경(webbed neck) 방패가슴 핵형검사시 45, XO 감별해야하는 진단과 호발하는 심장 기형은? 터너 증후군, CoA",
+    "answer": "터너 증후군, 대동맥축착(CoA)",
+    "id": "actual1_075",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep06-1",
+    "content_axis": "유전/내분비-Turner/CoA",
+    "answer_key_normalized": "Turner+CoA",
+    "group_id": "G-TURNER-COA",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep06-1",
+      "content_axis": "유전/내분비-Turner/CoA",
+      "answer_key_normalized": "Turner+CoA",
+      "group_id": "G-TURNER-COA",
+      "dedup_decision": "keep_unique",
+      "why": "단독",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "33~36조",
+    "mode": "주관식",
+    "num_in_source": 5,
+    "question": "재태연령 37주 5일 2300g 제왕절개로 출산한 남아. 출생 후 자발호흡없고 축 늘어져 보온,기도 개방, 자극. 생후 40초 심박수 90회/분 호흡 불규칙 청색증. 처치는? 양압 환기",
+    "answer": "양압환기 / PPV",
+    "id": "actual1_076",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-3",
+    "content_axis": "신생아소생술-HR<100/무호흡 초기처치",
+    "answer_key_normalized": "PPV",
+    "group_id": "G-NRP-PPV",
+    "dedup_decision": "near_duplicate",
+    "dedup_why": "015와 near duplicate",
+    "dedup_badges": [
+      "near-duplicate",
+      "repeat-high-yield"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "신생아소생술-HR<100/무호흡 초기처치",
+      "answer_key_normalized": "PPV",
+      "group_id": "G-NRP-PPV",
+      "dedup_decision": "near_duplicate",
+      "why": "015와 near duplicate",
+      "badges": [
+        "near-duplicate",
+        "repeat-high-yield"
+      ]
+    }
+  },
+  {
+    "source": "37~40조",
+    "mode": "객관식",
+    "num_in_source": 1,
+    "question": "12개월 아기 머리 둘레, 키,체중,치아 주어지고 비정상 고르는 문제",
+    "answer": "체중 감소/성장부전 가능성이 가장 큼. 원문 수치 확인 필요",
+    "id": "actual1_077",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_medium",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-1",
+    "content_axis": "성장-12개월 성장지표 이상",
+    "answer_key_normalized": "원문 수치 확인 필요",
+    "group_id": "G-GROWTH-12M-CHART",
+    "dedup_decision": "needs_source",
+    "dedup_why": "사진/수치형. 다른 성장문항과 병합 금지",
+    "dedup_badges": [
+      "source-check"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "성장-12개월 성장지표 이상",
+      "answer_key_normalized": "원문 수치 확인 필요",
+      "group_id": "G-GROWTH-12M-CHART",
+      "dedup_decision": "needs_source",
+      "why": "사진/수치형. 다른 성장문항과 병합 금지",
+      "badges": [
+        "source-check"
+      ]
+    }
+  },
+  {
+    "source": "37~40조",
+    "mode": "객관식",
+    "num_in_source": 3,
+    "question": "10개월 아이로 현재 모유 수유 중이며 이유식은 일 1회(부족함), 현재 아이에게서 부족할 것으로 예상되는 영양소는? 1. 단백질 2. 탄수화물 3. 지방 4. 비타민 D 5. 철분",
+    "answer": "철분",
+    "id": "actual1_078",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_high",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-1",
+    "content_axis": "영양결핍-철/이유식/모유",
+    "answer_key_normalized": "철분",
+    "group_id": "G-NUT-FE",
+    "dedup_decision": "same_topic_sibling",
+    "dedup_why": "철결핍 축이나 trigger/답 표현이 단순 결핍 예측형이라 001과 병합 금지",
+    "dedup_badges": [
+      "same-topic-sibling",
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "영양결핍-철/이유식/모유",
+      "answer_key_normalized": "철분",
+      "group_id": "G-NUT-FE",
+      "dedup_decision": "same_topic_sibling",
+      "why": "철결핍 축이나 trigger/답 표현이 단순 결핍 예측형이라 001과 병합 금지",
+      "badges": [
+        "same-topic-sibling",
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "37~40조",
+    "mode": "객관식",
+    "num_in_source": 4,
+    "question": "생후 10일 된 환아 황달 주소로 내원, 빌리루빈 수치 11.0, 직접 빌리루빈 0.8 그외 간수치 등 다른 수치는 정상. 치료법은? 1. 경과관찰 2. 분유로 변경 3. 모유 수유를 더 권장 4. 미복기 5. 미복기",
+    "answer": "경과관찰 / 모유수유 지속 권장",
+    "id": "actual1_079",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_medium",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-4",
+    "content_axis": "신생아황달-생후10일/모유수유/저위험",
+    "answer_key_normalized": "경과관찰/모유수유 지속",
+    "group_id": "G-JAUNDICE-OBSERVE",
+    "dedup_decision": "duplicate",
+    "dedup_why": "035와 duplicate",
+    "dedup_badges": [
+      "duplicate",
+      "repeat-exact"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-4",
+      "content_axis": "신생아황달-생후10일/모유수유/저위험",
+      "answer_key_normalized": "경과관찰/모유수유 지속",
+      "group_id": "G-JAUNDICE-OBSERVE",
+      "dedup_decision": "duplicate",
+      "why": "035와 duplicate",
+      "badges": [
+        "duplicate",
+        "repeat-exact"
+      ]
+    }
+  },
+  {
+    "source": "37~40조",
+    "mode": "객관식",
+    "num_in_source": 5,
+    "question": "이수성(Aneuploidy)인 질병은 가. 클라인펠터 나. 터너 다. 에드워드 라. 프레더 월리",
+    "answer": "이수성: 클라인펠터, 터너, 에드워드 / 프레더윌리는 제외",
+    "id": "actual1_080",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_high",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-2",
+    "content_axis": "유전-aneuploidy 질환구분",
+    "answer_key_normalized": "Klinefelter+Turner+Edwards; PWS 제외",
+    "group_id": "G-GEN-ANEUPLOIDY",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "Down/Turner broad와 병합 금지",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "유전-aneuploidy 질환구분",
+      "answer_key_normalized": "Klinefelter+Turner+Edwards; PWS 제외",
+      "group_id": "G-GEN-ANEUPLOIDY",
+      "dedup_decision": "keep_separate",
+      "why": "Down/Turner broad와 병합 금지",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "37~40조",
+    "mode": "주관식",
+    "num_in_source": 1,
+    "question": "MMR 백신 금기증 2가지 임신, 백혈병, 면역억제요법, 면역글로불린, 수혈, 지연성 과민반응 결여",
+    "answer": "MMR 금기: 임신, 백혈병/면역억제, 최근 면역글로불린 또는 수혈 등",
+    "id": "actual1_081",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-1",
+    "content_axis": "예방접종-MMR 금기",
+    "answer_key_normalized": "임신/면역억제/최근IG·수혈 등",
+    "group_id": "G-VAX-MMR-CONTRA",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "037/070 MMR 접종시기와 답 target 다름",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "예방접종-MMR 금기",
+      "answer_key_normalized": "임신/면역억제/최근IG·수혈 등",
+      "group_id": "G-VAX-MMR-CONTRA",
+      "dedup_decision": "keep_separate",
+      "why": "037/070 MMR 접종시기와 답 target 다름",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "37~40조",
+    "mode": "주관식",
+    "num_in_source": 4,
+    "question": "모유 수유와 관련 있는 호르몬 2가지 옥시토신, 프로락틴",
+    "answer": "옥시토신, 프로락틴",
+    "id": "actual1_082",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-1",
+    "content_axis": "모유수유-호르몬",
+    "answer_key_normalized": "옥시토신+프로락틴",
+    "group_id": "G-BREAST-HORMONE",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "094/095 금기와 병합 금지",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "모유수유-호르몬",
+      "answer_key_normalized": "옥시토신+프로락틴",
+      "group_id": "G-BREAST-HORMONE",
+      "dedup_decision": "keep_separate",
+      "why": "094/095 금기와 병합 금지",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "37~40조",
+    "mode": "주관식",
+    "num_in_source": 5,
+    "question": "당뇨 10세 여아 환자가 무력감 주소로 내원. 현재 산증 상태, 환자 ABGA, 혈장 이온 수치 주고 Plasma anion gap 구하는 문제 AG = Na+- Cl - HCO3",
+    "answer": "Anion gap = Na - Cl - HCO3",
+    "id": "actual1_083",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep06-2",
+    "content_axis": "당뇨/DKA-anion gap 계산",
+    "answer_key_normalized": "Na-Cl-HCO3",
+    "group_id": "G-DKA-AG",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독 계산",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep06-2",
+      "content_axis": "당뇨/DKA-anion gap 계산",
+      "answer_key_normalized": "Na-Cl-HCO3",
+      "group_id": "G-DKA-AG",
+      "dedup_decision": "keep_unique",
+      "why": "단독 계산",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "21-24조",
+    "mode": "객관식",
+    "num_in_source": 2,
+    "question": "3개월간 TPN 진행한 소아환자가 설사와 피부 증상이 발생. 부족한 영양소는? 아연",
+    "answer": "아연",
+    "id": "actual1_084",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-1",
+    "content_axis": "영양결핍-아연/TPN/설사피부",
+    "answer_key_normalized": "아연",
+    "group_id": "G-NUT-ZINC",
+    "dedup_decision": "same_topic_sibling",
+    "dedup_why": "011과 같은 답이지만 trigger 다름. 대표화 금지",
+    "dedup_badges": [
+      "same-topic-sibling",
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "영양결핍-아연/TPN/설사피부",
+      "answer_key_normalized": "아연",
+      "group_id": "G-NUT-ZINC",
+      "dedup_decision": "same_topic_sibling",
+      "why": "011과 같은 답이지만 trigger 다름. 대표화 금지",
+      "badges": [
+        "same-topic-sibling",
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "21-24조",
+    "mode": "객관식",
+    "num_in_source": 3,
+    "question": "비장 절제술을 받을 예정인 소아가 수술 전에 필요한 예방접종은? Hib, 폐렴구균 다당질 답이 하나면 Hib만",
+    "answer": "Hib + 폐렴구균 백신. 하나만 고르면 Hib 우선",
+    "id": "actual1_085",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-1",
+    "content_axis": "예방접종-비장절제 전 백신",
+    "answer_key_normalized": "Hib+폐렴구균",
+    "group_id": "G-VAX-ASPLENIA",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "예방접종-비장절제 전 백신",
+      "answer_key_normalized": "Hib+폐렴구균",
+      "group_id": "G-VAX-ASPLENIA",
+      "dedup_decision": "keep_unique",
+      "why": "단독",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "21-24조",
+    "mode": "객관식",
+    "num_in_source": 4,
+    "question": "2세 환아의 영유아 검진이다. 적절한 치료는? - 계단을 오를 수 있지만, 양 발을 번갈아 오를 수 없다. - 숟가락질은 하지만, 젓가락질은 못 한다. - 20개 단어를 말하지만, 문장은 못 한다. - 입방체 7개는 쌓지 못한다. 1. 언어 치료. 2. 운동 치료 3. 감각 치료 4. 사회화 치료 5. 적응 치료",
+    "answer": "언어 치료",
+    "id": "actual1_086",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_high",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-1",
+    "content_axis": "발달-milestone/2세 언어치료",
+    "answer_key_normalized": "언어치료",
+    "group_id": "G-DEV-LANGUAGE-THERAPY",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "045/063 운동지연과 분리",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "발달-milestone/2세 언어치료",
+      "answer_key_normalized": "언어치료",
+      "group_id": "G-DEV-LANGUAGE-THERAPY",
+      "dedup_decision": "keep_separate",
+      "why": "045/063 운동지연과 분리",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "21-24조",
+    "mode": "객관식",
+    "num_in_source": 5,
+    "question": "다음 중 치료가 식이요법인 것은? 1. MSUD 2. Gaucher 3. Fabry 4. Pompe 5. 헐러",
+    "answer": "MSUD",
+    "id": "actual1_087",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_high",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-2",
+    "content_axis": "대사-MSUD 식이치료",
+    "answer_key_normalized": "MSUD",
+    "group_id": "G-MET-MSUD-DIET",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "042 효소보충과 분리",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "대사-MSUD 식이치료",
+      "answer_key_normalized": "MSUD",
+      "group_id": "G-MET-MSUD-DIET",
+      "dedup_decision": "keep_separate",
+      "why": "042 효소보충과 분리",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "21-24조",
+    "mode": "주관식",
+    "num_in_source": 2,
+    "question": "9세 소아가 살이 쪄서 내원했다. 키 130cm(25-50 백분위), 체중 45kg (90-95백분위) BMI 26.6 (95<백분위)이다. 처치는? 체중감량",
+    "answer": "체중감량",
+    "id": "actual1_088",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep06-1",
+    "content_axis": "비만-BMI95 치료",
+    "answer_key_normalized": "체중감량",
+    "group_id": "G-OBESITY-WEIGHTLOSS",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep06-1",
+      "content_axis": "비만-BMI95 치료",
+      "answer_key_normalized": "체중감량",
+      "group_id": "G-OBESITY-WEIGHTLOSS",
+      "dedup_decision": "keep_unique",
+      "why": "단독",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "21-24조",
+    "mode": "주관식",
+    "num_in_source": 3,
+    "question": "감염이 반복되는 아이에게서 면역결핍을 의심할 수 있는 경우를 2가지 이상 열거하시오",
+    "answer": "면역결핍 의심: 반복/중증 감염, 기회감염 또는 드문 균 감염, 항생제 반응 불량, 성장부전, 가족력 등 중 2가지 이상",
+    "id": "actual1_089",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_high",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep03-3",
+    "content_axis": "면역결핍-의심소견",
+    "answer_key_normalized": "반복/중증/기회감염 등 2가지",
+    "group_id": "G-IMM-WARNING-SIGNS",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "면역결핍 broad but 진단/치료 문제와 분리",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep03-3",
+      "content_axis": "면역결핍-의심소견",
+      "answer_key_normalized": "반복/중증/기회감염 등 2가지",
+      "group_id": "G-IMM-WARNING-SIGNS",
+      "dedup_decision": "keep_separate",
+      "why": "면역결핍 broad but 진단/치료 문제와 분리",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "21-24조",
+    "mode": "주관식",
+    "num_in_source": 4,
+    "question": "출생 전기 포함 6단계에 대해 연령별 출생 후 단계를 열거해라.",
+    "answer": "출생 전기, 신생아기, 영아기, 유아기, 학령기, 청소년기",
+    "id": "actual1_090",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_high",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep00-1",
+    "content_axis": "성장-소아연령단계",
+    "answer_key_normalized": "출생전기~청소년기",
+    "group_id": "G-GROWTH-LIFE-STAGES",
+    "dedup_decision": "fragment_group",
+    "dedup_why": "091/092와 같은 문항 조각",
+    "dedup_badges": [
+      "fragment-group"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "성장-소아연령단계",
+      "answer_key_normalized": "출생전기~청소년기",
+      "group_id": "G-GROWTH-LIFE-STAGES",
+      "dedup_decision": "fragment_group",
+      "why": "091/092와 같은 문항 조각",
+      "badges": [
+        "fragment-group"
+      ]
+    }
+  },
+  {
+    "source": "21-24조",
+    "mode": "주관식",
+    "num_in_source": 1,
+    "question": "출생 전기(배아기(수정-8주) + 태아기 (9주-출생/38주)) 2. 신생아기 (출생- 생후 4주) 3. 영아기 (1개월-1년) 4. 유아기 (1-5세) 5. 학령기 (6-10세)",
+    "answer": "출생 전기, 신생아기, 영아기, 유아기, 학령기, 청소년기",
+    "id": "actual1_091",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "parse_fragment_answered",
+    "qc_flag": "parse_fragment_keep_for_count_review",
+    "episode": "Ep00-1",
+    "content_axis": "성장-소아연령단계",
+    "answer_key_normalized": "출생전기~청소년기",
+    "group_id": "G-GROWTH-LIFE-STAGES",
+    "dedup_decision": "fragment_of:actual1_090",
+    "dedup_why": "090 문항 조각",
+    "dedup_badges": [
+      "fragment-recall"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "성장-소아연령단계",
+      "answer_key_normalized": "출생전기~청소년기",
+      "group_id": "G-GROWTH-LIFE-STAGES",
+      "dedup_decision": "fragment_of:actual1_090",
+      "why": "090 문항 조각",
+      "badges": [
+        "fragment-recall"
+      ]
+    }
+  },
+  {
+    "source": "21-24조",
+    "mode": "주관식",
+    "num_in_source": 6,
+    "question": "청소년기 (11-21세)",
+    "answer": "청소년기: 11~21세",
+    "id": "actual1_092",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "parse_fragment_answered",
+    "qc_flag": "parse_fragment_keep_for_count_review",
+    "episode": "Ep00-1",
+    "content_axis": "성장-소아연령단계",
+    "answer_key_normalized": "청소년기 11~21세",
+    "group_id": "G-GROWTH-LIFE-STAGES",
+    "dedup_decision": "fragment_of:actual1_090",
+    "dedup_why": "090 문항의 마지막 조각",
+    "dedup_badges": [
+      "fragment-recall"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "성장-소아연령단계",
+      "answer_key_normalized": "청소년기 11~21세",
+      "group_id": "G-GROWTH-LIFE-STAGES",
+      "dedup_decision": "fragment_of:actual1_090",
+      "why": "090 문항의 마지막 조각",
+      "badges": [
+        "fragment-recall"
+      ]
+    }
+  },
+  {
+    "source": "21-24조",
+    "mode": "주관식",
+    "num_in_source": 5,
+    "question": "고암모니아혈증에서 암모니아 500 초과, 초기내과처치에 반응하지 않는 경우 치료법은? 혈액 투석",
+    "answer": "혈액투석",
+    "id": "actual1_093",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-2",
+    "content_axis": "대사-고암모니아혈증 치료",
+    "answer_key_normalized": "혈액투석",
+    "group_id": "G-HYPERAMMONEMIA-DIALYSIS",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "055와 answer target 다름",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "대사-고암모니아혈증 치료",
+      "answer_key_normalized": "혈액투석",
+      "group_id": "G-HYPERAMMONEMIA-DIALYSIS",
+      "dedup_decision": "keep_separate",
+      "why": "055와 answer target 다름",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
+    "mode": "객관식",
+    "num_in_source": 1,
+    "question": "모유 수유의 금기가 되는 것은? 1.산모 가슴 몽울 2. 산모 B형 간염 보균자 3.산모 감기약 먹음 4. 산모 항암 치료 중임",
+    "answer": "산모 항암 치료 중임",
+    "id": "actual1_094",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-1",
+    "content_axis": "모유수유-금기/산모항암",
+    "answer_key_normalized": "산모 항암치료",
+    "group_id": "G-BREAST-CONTRA-CHEMO",
+    "dedup_decision": "fragment_group",
+    "dedup_why": "095는 같은 객관식 파싱 조각",
+    "dedup_badges": [
+      "fragment-group"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "모유수유-금기/산모항암",
+      "answer_key_normalized": "산모 항암치료",
+      "group_id": "G-BREAST-CONTRA-CHEMO",
+      "dedup_decision": "fragment_group",
+      "why": "095는 같은 객관식 파싱 조각",
+      "badges": [
+        "fragment-group"
+      ]
+    }
+  },
+  {
+    "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
+    "mode": "객관식",
+    "num_in_source": 5,
+    "question": "산모 가슴 염증? 있음 답 4",
+    "answer": "파싱 조각: 객1 선지 일부. 정답은 산모 항암 치료 중임",
+    "id": "actual1_095",
+    "origin": "actual_incomplete",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "parse_fragment_answered",
+    "qc_flag": "parse_fragment_keep_for_count_review",
+    "episode": "Ep00-1",
+    "content_axis": "모유수유-금기/산모항암",
+    "answer_key_normalized": "산모 항암치료",
+    "group_id": "G-BREAST-CONTRA-CHEMO",
+    "dedup_decision": "fragment_of:actual1_094",
+    "dedup_why": "094 선지 조각",
+    "dedup_badges": [
+      "fragment-recall"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "모유수유-금기/산모항암",
+      "answer_key_normalized": "산모 항암치료",
+      "group_id": "G-BREAST-CONTRA-CHEMO",
+      "dedup_decision": "fragment_of:actual1_094",
+      "why": "094 선지 조각",
+      "badges": [
+        "fragment-recall"
+      ]
+    }
+  },
+  {
+    "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
+    "mode": "객관식",
+    "num_in_source": 2,
+    "question": "8개월 여아 6개월까지 예방접종 다 맞았으나 해외 생활로 bcg 못 맞음. 처치는? 답 TST 검사",
+    "answer": "TST 검사",
+    "id": "actual1_096",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-1",
+    "content_axis": "예방접종-BCG 미접종 8개월/TST",
+    "answer_key_normalized": "TST 검사",
+    "group_id": "G-VAX-BCG-TST",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "예방접종-BCG 미접종 8개월/TST",
+      "answer_key_normalized": "TST 검사",
+      "group_id": "G-VAX-BCG-TST",
+      "dedup_decision": "keep_unique",
+      "why": "단독",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
+    "mode": "객관식",
+    "num_in_source": 3,
+    "question": "폐렴 치료 + 경련 / Na 120 치료? 1. 경구 nacl 2. 3% saline 3. ... 답 3% saline",
+    "answer": "3% saline",
+    "id": "actual1_097",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-2",
+    "content_axis": "전해질-증상성 저Na 경련",
+    "answer_key_normalized": "3% saline",
+    "group_id": "G-HYPONA-SEIZURE-3SALINE",
+    "dedup_decision": "near_duplicate",
+    "dedup_why": "023과 near duplicate",
+    "dedup_badges": [
+      "near-duplicate",
+      "repeat-high-yield"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "전해질-증상성 저Na 경련",
+      "answer_key_normalized": "3% saline",
+      "group_id": "G-HYPONA-SEIZURE-3SALINE",
+      "dedup_decision": "near_duplicate",
+      "why": "023과 near duplicate",
+      "badges": [
+        "near-duplicate",
+        "repeat-high-yield"
+      ]
+    }
+  },
+  {
+    "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
+    "mode": "객관식",
+    "num_in_source": 4,
+    "question": "소아 체온 조절에 관해서 옳은 것? (1) 갈색 지방은 체온 조절에 관여하지 않는다 (2) 소아 체표면적은 성인보다 적어 체온 조절이 쉽다 (3) 외부 온도에 영향을 받지 않고 일정하다 (4) 마른 수건으로 닦는 것이 체온 조절에 효과적이다 (5) 저체온은 치료적으로 중요하지 않다 답 4",
+    "answer": "마른 수건으로 닦는 것이 체온 조절에 효과적이다",
+    "id": "actual1_098",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-3",
+    "content_axis": "신생아/소아-체온조절",
+    "answer_key_normalized": "마른 수건으로 닦기/보온",
+    "group_id": "G-THERMOREGULATION-DRY",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "신생아/소아-체온조절",
+      "answer_key_normalized": "마른 수건으로 닦기/보온",
+      "group_id": "G-THERMOREGULATION-DRY",
+      "dedup_decision": "keep_unique",
+      "why": "단독",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
+    "mode": "객관식",
+    "num_in_source": 5,
+    "question": "신생아 가슴압박 몇대 몇?? 1. 30:2 2. 15:2 3. 5:1 4. 3:1 5. 1:1 답 4",
+    "answer": "3:1",
+    "id": "actual1_099",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-3",
+    "content_axis": "신생아소생술-압박:환기 비율",
+    "answer_key_normalized": "3:1",
+    "group_id": "G-NRP-COMP-VENT-RATIO",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "PPV/삽관 broad NRP와 answer target 다름",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "신생아소생술-압박:환기 비율",
+      "answer_key_normalized": "3:1",
+      "group_id": "G-NRP-COMP-VENT-RATIO",
+      "dedup_decision": "keep_separate",
+      "why": "PPV/삽관 broad NRP와 answer target 다름",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
+    "mode": "주관식",
+    "num_in_source": 1,
+    "question": "신경형 장기 설명+ 두위는 ()세에 성인의 ()%까지 커진다 답 4, 80",
+    "answer": "4세, 80%",
+    "id": "actual1_100",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-1",
+    "content_axis": "성장-신경형/두위",
+    "answer_key_normalized": "4세 80%",
+    "group_id": "G-GROWTH-HEAD-80",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "046과 병합 금지",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "성장-신경형/두위",
+      "answer_key_normalized": "4세 80%",
+      "group_id": "G-GROWTH-HEAD-80",
+      "dedup_decision": "keep_separate",
+      "why": "046과 병합 금지",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
+    "mode": "주관식",
+    "num_in_source": 2,
+    "question": "범저감마글로불린혈증 및 치료",
+    "answer": "범저감마글로불린혈증; IVIG 3~4주 간격 투여",
+    "id": "actual1_101",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_inferred_high",
+    "qc_flag": "answer_inferred_from_context",
+    "episode": "Ep03-3",
+    "content_axis": "면역결핍-범저감마/XLA 치료",
+    "answer_key_normalized": "범저감마글로불린혈증+IVIG",
+    "group_id": "G-IMM-XLA-IVIG",
+    "dedup_decision": "near_duplicate",
+    "dedup_why": "027과 near duplicate, 027이 더 complete",
+    "dedup_badges": [
+      "near-duplicate",
+      "repeat-high-yield"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep03-3",
+      "content_axis": "면역결핍-범저감마/XLA 치료",
+      "answer_key_normalized": "범저감마글로불린혈증+IVIG",
+      "group_id": "G-IMM-XLA-IVIG",
+      "dedup_decision": "near_duplicate",
+      "why": "027과 near duplicate, 027이 더 complete",
+      "badges": [
+        "near-duplicate",
+        "repeat-high-yield"
+      ]
+    }
+  },
+  {
+    "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
+    "mode": "주관식",
+    "num_in_source": 3,
+    "question": "프레더 윌리, 엔젤만 증후군이 genetic imprinting, uniparental diostomy로 각각 부계, 모계인지 각각 채워 넣으시오 답 프레더 윌리 -deletion: 부계 -paternal upd: 모계 엔젤만 -deletion: 모계 -paternal upd: 부계",
+    "answer": "Prader-Willi: paternal deletion 또는 maternal UPD. Angelman: maternal deletion 또는 paternal UPD",
+    "id": "actual1_102",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-2",
+    "content_axis": "유전-imprinting PWS/Angelman deletion/UPD",
+    "answer_key_normalized": "PWS paternal del/maternal UPD; Angelman maternal del/paternal UPD",
+    "group_id": "G-GEN-PWS-ANGELMAN",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "imprinting broad지만 answer target 고급표라 병합 금지",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "유전-imprinting PWS/Angelman deletion/UPD",
+      "answer_key_normalized": "PWS paternal del/maternal UPD; Angelman maternal del/paternal UPD",
+      "group_id": "G-GEN-PWS-ANGELMAN",
+      "dedup_decision": "keep_separate",
+      "why": "imprinting broad지만 answer target 고급표라 병합 금지",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  },
+  {
+    "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
+    "mode": "주관식",
+    "num_in_source": 4,
+    "question": "생후 10일 남아 다 정상, 3일 전부터 양쪽 결막 충혈 및 분비물, 가장 의심되는 병원균? 답 클라미디아",
+    "answer": "Chlamydia trachomatis",
+    "id": "actual1_103",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-4",
+    "content_axis": "신생아감염-Chlamydia 결막염",
+    "answer_key_normalized": "Chlamydia trachomatis",
+    "group_id": "G-NEO-CONJ-CHLAMYDIA",
+    "dedup_decision": "keep_unique",
+    "dedup_why": "단독",
+    "dedup_badges": [
+      "unique-actual"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-4",
+      "content_axis": "신생아감염-Chlamydia 결막염",
+      "answer_key_normalized": "Chlamydia trachomatis",
+      "group_id": "G-NEO-CONJ-CHLAMYDIA",
+      "dedup_decision": "keep_unique",
+      "why": "단독",
+      "badges": [
+        "unique-actual"
+      ]
+    }
+  },
+  {
+    "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
+    "mode": "주관식",
+    "num_in_source": 5,
+    "question": "기관삽관후 폐포 계면활성제를 투여하고 수분에서 1시간 이후 발관한 후 nasal CPAP진행하는 방법을 뭐라고 하는지? 답 INSURE방법",
+    "answer": "INSURE 방법",
+    "id": "actual1_104",
+    "origin": "actual_recall",
+    "priority_tier": "P3",
+    "type": "actual_pretest",
+    "answer_confidence": "source_embedded",
+    "qc_flag": "answer_from_source_text",
+    "episode": "Ep00-4",
+    "content_axis": "신생아호흡-RDS surfactant 전략",
+    "answer_key_normalized": "INSURE",
+    "group_id": "G-RDS-INSURE",
+    "dedup_decision": "keep_separate",
+    "dedup_why": "034와 병합 금지",
+    "dedup_badges": [
+      "keep-separate"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-4",
+      "content_axis": "신생아호흡-RDS surfactant 전략",
+      "answer_key_normalized": "INSURE",
+      "group_id": "G-RDS-INSURE",
+      "dedup_decision": "keep_separate",
+      "why": "034와 병합 금지",
+      "badges": [
+        "keep-separate"
+      ]
+    }
+  }
+]
