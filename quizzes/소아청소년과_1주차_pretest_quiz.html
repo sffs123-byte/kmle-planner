@@ -586,9 +586,93 @@ body.drawing-active * {
 @media (max-width: 768px) {
     .card-grid { grid-template-columns: 1fr; }
 }
+
+
+/* Pediatric pretest background cue */
+body.peds-pretest-bg-body {
+    background:
+        linear-gradient(120deg, rgba(15, 23, 42, .93), rgba(30, 41, 59, .86)),
+        url('./assets/peds_vaccine_memory/source_vaccine_schedule_20260511.jpg') center top / cover fixed no-repeat !important;
+}
+body.peds-pretest-bg-body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image: url('./assets/peds_vaccine_memory/source_vaccine_schedule_20260511.jpg');
+    background-size: min(92vw, 940px) auto;
+    background-repeat: no-repeat;
+    background-position: center 52%;
+    opacity: .18;
+    filter: saturate(1.06) contrast(1.04);
+}
+body.peds-pretest-bg-body .sidebar,
+body.peds-pretest-bg-body .main,
+body.peds-pretest-bg-body .quiz-overlay,
+body.peds-pretest-bg-body .quiz-header {
+    position: relative;
+    z-index: 1;
+}
+body.peds-pretest-bg-body .card,
+body.peds-pretest-bg-body .quiz-card {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 18px 44px rgba(2, 6, 23, .24);
+}
+body.peds-pretest-bg-body .card::before,
+body.peds-pretest-bg-body .quiz-card::before {
+    content: '홍수로비 디폴히피로히피디디폴 사맘, Tdap HPV';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 5px 12px;
+    background: linear-gradient(90deg, rgba(30, 64, 175, .92), rgba(16, 185, 129, .82));
+    color: #eff6ff;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .04em;
+    text-align: center;
+    z-index: 2;
+}
+body.peds-pretest-bg-body .card .card-header,
+body.peds-pretest-bg-body .quiz-card {
+    padding-top: 34px !important;
+}
+.peds-pretest-mantra-ribbon {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    padding: 7px 10px;
+    background: rgba(15, 23, 42, .86);
+    color: #bfdbfe;
+    border-top: 1px solid rgba(147, 197, 253, .35);
+    font-size: 12px;
+    font-weight: 950;
+    letter-spacing: .08em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+}
+body.peds-pretest-bg-body .quiz-answer::after {
+    content: '홍수로비 디폴히피로히피디디폴 사맘, Tdap HPV';
+    display: block;
+    margin-top: 14px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: #dbeafe;
+    color: #1e3a8a;
+    font-weight: 950;
+    text-align: center;
+}
+
 </style>
 </head>
-<body>
+<body class="peds-pretest-bg-body">
+<div class="peds-pretest-mantra-ribbon">홍수로비 디폴히피로히피디디폴 사맘, Tdap HPV · 홍수로비 디폴히피로히피디디폴 사맘, Tdap HPV · 홍수로비 디폴히피로히피디디폴 사맘, Tdap HPV</div>
 
 <!-- Mobile sidebar toggle -->
 <button class="sb-mobile-toggle" id="sbMobileToggle" onclick="toggleMobileSidebar()">☰</button>
@@ -28238,6 +28322,7 @@ const QUIZ_DATA = {
 const ALL_IDS = ["actual1_001", "actual1_002", "actual1_003", "actual1_004", "actual1_005", "actual1_006", "actual1_007", "actual1_008", "actual1_009", "actual1_010", "actual1_011", "actual1_012", "actual1_013", "actual1_014", "actual1_015", "actual1_016", "actual1_017", "actual1_018", "actual1_019", "actual1_020", "actual1_021", "actual1_022", "actual1_023", "actual1_024", "actual1_025", "actual1_026", "actual1_027", "actual1_028", "actual1_029", "actual1_030", "actual1_031", "actual1_032", "actual1_033", "actual1_034", "actual1_035", "actual1_036", "actual1_037", "actual1_038", "actual1_039", "actual1_040", "actual1_041", "actual1_042", "actual1_043", "actual1_044", "actual1_045", "actual1_046", "actual1_047", "actual1_048", "actual1_049", "actual1_050", "actual1_051", "actual1_052", "actual1_053", "actual1_054", "actual1_055", "actual1_056", "actual1_057", "actual1_058", "actual1_059", "actual1_060", "actual1_061", "actual1_062", "actual1_063", "actual1_064", "actual1_065", "actual1_066", "actual1_067", "actual1_068", "actual1_069", "actual1_070", "actual1_071", "actual1_072", "actual1_073", "actual1_074", "actual1_075", "actual1_076", "actual1_077", "actual1_078", "actual1_079", "actual1_080", "actual1_081", "actual1_082", "actual1_083", "actual1_084", "actual1_085", "actual1_086", "actual1_087", "actual1_088", "actual1_089", "actual1_090", "actual1_091", "actual1_092", "actual1_093", "actual1_094", "actual1_095", "actual1_096", "actual1_097", "actual1_098", "actual1_099", "actual1_100", "actual1_101", "actual1_102", "actual1_103", "actual1_104", "hi1_001", "actual2023_001", "actual2023_002", "actual2023_003", "actual2023_004", "actual2023_005", "actual2023_006", "actual2023_007", "actual2023_008", "actual2023_009", "actual2023_010", "actual2023_011", "actual2023_012", "actual2023_013", "actual2023_014", "hi_q001", "hi_q002", "hi_q003", "hi_q006", "hi_q007", "hi_q010", "hi_q011", "hi_q012", "hi_q013", "hi_q014", "hi_q017", "hi_q018", "hi_q020", "hi_q024", "hi_q025", "hi_q026", "hi_q027", "hi_q028", "hi_q030", "hi_q033", "hi_q034", "hi_q035", "hi_q036", "hi_q037", "hi_q038", "hi_q039", "hi_q041", "hi_q043", "hi_q044", "hi_q045", "hi_q046", "hi_q047", "hi_q048", "hi_q049", "hi_q050", "hi_q052", "hi_q053", "hi_q054", "hi_q056", "hi_q057", "hi_q058", "hi_q059", "hi_q060", "hi_q061", "hi_q062", "hi_q063", "hi_q065", "hi_q066", "hi_q068", "hi_q069", "hi_q070", "hi_q072", "hi_q073", "hi_q074", "hi_q076", "hi_q079", "hi_q080", "hi_q083", "hi_q084", "hi_q085", "hi_q086", "hi_q087", "hi_q088", "hi_q089", "hi_q090", "hi_q092", "hi_q093", "hi_q095", "hi_q096", "hi_q097", "hi_q098", "hi_q099", "hi_q100", "hi_q101"];
 
 const STORAGE_PREFIX = "peds_pretest1_20260510_";
+const RANDOMIZE_REVIEW = true;
 const SRS_KEY = STORAGE_PREFIX + 'srs_v1';
 const HIST_KEY = STORAGE_PREFIX + 'hist_v1';
 const EDITS_KEY = STORAGE_PREFIX + 'edits_v1';
@@ -28501,11 +28586,21 @@ function updateReviewBtn() {
     document.getElementById('btnReview').textContent = '복습 시작 (' + due.length + '개)';
 }
 
+function shuffledCopy(ids) {
+    const arr = [...ids];
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+
 function startReview() {
     const plan = getStudyPlan();
-    // Queue rule: due cards first, then unseen cards in original question order.
+    // Queue rule: due cards first, then unseen cards. Some focused memory decks opt into shuffle.
     // Future scheduled cards stay in pending and jump ahead only when their time arrives.
-    startQuizWith([...plan.dueIds, ...plan.freshIds], { pending: plan.futurePending });
+    const reviewIds = [...plan.dueIds, ...plan.freshIds];
+    startQuizWith(RANDOMIZE_REVIEW ? shuffledCopy(reviewIds) : reviewIds, { pending: plan.futurePending });
 }
 
 let _resetTaps = 0, _resetTimer = null;

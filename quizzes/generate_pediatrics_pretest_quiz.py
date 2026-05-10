@@ -35,6 +35,7 @@ COMBINED_DATA = DATA_DIR / "pediatrics_pretest1_cards.json"
 OUT = QUIZ_DIR / "소아청소년과_1주차_pretest_quiz.html"
 TITLE = "소아청소년과 1주차 Pretest SRS"
 STORAGE_PREFIX = "peds_pretest1_20260510"
+MANTRA = "홍수로비 디폴히피로히피디디폴 사맘, Tdap HPV"
 
 ORIGIN_LABELS = {
     "actual_recall": "✅ 실제 복기",
@@ -640,14 +641,114 @@ def build_cards(raw_cards: list[dict]) -> list[dict]:
     return cards
 
 
+def apply_pretest_background() -> None:
+    """Add the vaccine schedule image/mantra as a passive background cue."""
+    text = OUT.read_text(encoding="utf-8")
+    mantra = e(MANTRA)
+    css = f"""
+
+/* Pediatric pretest background cue */
+body.peds-pretest-bg-body {{
+    background:
+        linear-gradient(120deg, rgba(15, 23, 42, .93), rgba(30, 41, 59, .86)),
+        url('./assets/peds_vaccine_memory/source_vaccine_schedule_20260511.jpg') center top / cover fixed no-repeat !important;
+}}
+body.peds-pretest-bg-body::before {{
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image: url('./assets/peds_vaccine_memory/source_vaccine_schedule_20260511.jpg');
+    background-size: min(92vw, 940px) auto;
+    background-repeat: no-repeat;
+    background-position: center 52%;
+    opacity: .18;
+    filter: saturate(1.06) contrast(1.04);
+}}
+body.peds-pretest-bg-body .sidebar,
+body.peds-pretest-bg-body .main,
+body.peds-pretest-bg-body .quiz-overlay,
+body.peds-pretest-bg-body .quiz-header {{
+    position: relative;
+    z-index: 1;
+}}
+body.peds-pretest-bg-body .card,
+body.peds-pretest-bg-body .quiz-card {{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 18px 44px rgba(2, 6, 23, .24);
+}}
+body.peds-pretest-bg-body .card::before,
+body.peds-pretest-bg-body .quiz-card::before {{
+    content: '{mantra}';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 5px 12px;
+    background: linear-gradient(90deg, rgba(30, 64, 175, .92), rgba(16, 185, 129, .82));
+    color: #eff6ff;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .04em;
+    text-align: center;
+    z-index: 2;
+}}
+body.peds-pretest-bg-body .card .card-header,
+body.peds-pretest-bg-body .quiz-card {{
+    padding-top: 34px !important;
+}}
+.peds-pretest-mantra-ribbon {{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    padding: 7px 10px;
+    background: rgba(15, 23, 42, .86);
+    color: #bfdbfe;
+    border-top: 1px solid rgba(147, 197, 253, .35);
+    font-size: 12px;
+    font-weight: 950;
+    letter-spacing: .08em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+}}
+body.peds-pretest-bg-body .quiz-answer::after {{
+    content: '{mantra}';
+    display: block;
+    margin-top: 14px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: #dbeafe;
+    color: #1e3a8a;
+    font-weight: 950;
+    text-align: center;
+}}
+"""
+    ribbon = f"<div class=\"peds-pretest-mantra-ribbon\">{mantra} · {mantra} · {mantra}</div>"
+    text = text.replace("</style>", css + "\n</style>", 1)
+    text = text.replace("<body>", '<body class="peds-pretest-bg-body">\n' + ribbon, 1)
+    OUT.write_text(text, encoding="utf-8")
+
+
 def main() -> None:
     actual = load_actual_cards()
     generated = []  # 강렬 지시: 제작 drill 문제는 제거하고 actual/HI source card만 유지한다.
     combined = [enrich_card_record(c) for c in actual + generated]
     COMBINED_DATA.write_text(json.dumps(combined, ensure_ascii=False, indent=2), encoding="utf-8")
     cards = build_cards(combined)
-    builder = QuizBuilder(cards=cards, title=TITLE, storage_prefix=STORAGE_PREFIX, enable_self_answer=False)
+    builder = QuizBuilder(
+        cards=cards,
+        title=TITLE,
+        storage_prefix=STORAGE_PREFIX,
+        enable_self_answer=False,
+        randomize_review=True,
+    )
     builder.write(str(OUT))
+    apply_pretest_background()
     print(f"actual_cards: {len(actual)}")
     print(f"generated_drill_cards: {len(generated)}")
     print(f"total_cards: {len(cards)}")
