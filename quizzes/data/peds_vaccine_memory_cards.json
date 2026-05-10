@@ -5,7 +5,7 @@
     "question": "생백신 암기 구호는?",
     "answer": "사일 홍수 로비",
     "note": "생백신 리스트를 여는 암기문장. 사일=Sabin·일본뇌염, 홍수=홍역-볼거리-풍진(MMR)·수두, 로비=로타바이러스·BCG.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_002_live_list",
@@ -13,7 +13,7 @@
     "question": "이미지 기준 생백신 6가지를 모두 쓰기",
     "answer": "Sabin, 일본뇌염, MMR, 수두, 로타바이러스, BCG",
     "note": "구호 ‘사일 홍수 로비’를 실제 백신명으로 풀어쓴다.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_003_live_sail",
@@ -21,7 +21,7 @@
     "question": "‘사일’이 뜻하는 생백신은?",
     "answer": "Sabin, 일본뇌염",
     "note": "Sabin은 경구 폴리오 생백신을 가리키는 암기 포인트.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_004_live_hongsu",
@@ -29,7 +29,7 @@
     "question": "‘홍수’가 뜻하는 생백신은?",
     "answer": "홍역-볼거리-풍진(MMR), 수두",
     "note": "홍역·볼거리·풍진은 MMR 한 묶음으로 기억.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_005_live_robi",
@@ -37,7 +37,7 @@
     "question": "‘로비’가 뜻하는 생백신은?",
     "answer": "로타바이러스, BCG",
     "note": "로타 + 비씨지.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_006_same_day_principle",
@@ -45,7 +45,7 @@
     "question": "2가지 백신을 동시에 투여할 때 원칙은?",
     "answer": "다른 주사기로 다른 부위에 투여",
     "note": "같은 날 맞출 수 있어도 한 주사기에 섞는 게 아니다.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_007_live_live_interval",
@@ -53,7 +53,7 @@
     "question": "생백신끼리 따로 맞을 때 필요한 간격은?",
     "answer": "4주 이상",
     "note": "같은 날이 아니면 4주 이상 간격이 필요하다.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_008_live_live_same_day",
@@ -61,7 +61,7 @@
     "question": "생백신-생백신은 같은 날 접종 가능한가?",
     "answer": "가능. 단 같은 날이 아니면 4주 이상 간격",
     "note": "동시접종은 가능하고, 따로 맞으면 4주 rule.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_009_live_inactivated_interval",
@@ -69,7 +69,7 @@
     "question": "생백신-사백신 사이 간격 제한은?",
     "answer": "상관없음. 동시접종 가능",
     "note": "4주 rule은 생백신끼리 따로 맞을 때가 핵심.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_010_inactivated_inactivated_interval",
@@ -77,7 +77,7 @@
     "question": "사백신-사백신 사이 간격 제한은?",
     "answer": "상관없음. 동시접종 가능",
     "note": "사백신끼리는 간격에 크게 묶이지 않는다.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_011_minimum_interval",
@@ -85,7 +85,7 @@
     "question": "예방접종 간격의 최소기준은 어떻게 해야 하나?",
     "answer": "최소기준은 지켜야 함",
     "note": "너무 짧으면 면역 형성이 부족할 수 있다.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_012_longer_interval",
@@ -93,7 +93,7 @@
     "question": "접종 간격이 권장보다 길어지면 어떻게 되나?",
     "answer": "백신 효과에 지장 없음. 횟수도 동일",
     "note": "밀렸다고 처음부터 다시 시작하지 않는다는 감각.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_013_permanent_contra_anaphylaxis",
@@ -101,7 +101,7 @@
     "question": "예방접종 영구 금기 1: 이전 접종 후 무엇?",
     "answer": "아나필락시스 과거력",
     "note": "같은 백신/성분에 대한 중증 알레르기 반응은 영구 금기.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_014_permanent_contra_pertussis",
@@ -109,7 +109,7 @@
     "question": "예방접종 영구 금기 2: 백일해 접종 후 언제 뇌증?",
     "answer": "백일해 접종 7일 이내 뇌증 발생",
     "note": "pertussis-containing vaccine의 핵심 금기.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_015_temporary_contra_pregnancy",
@@ -117,7 +117,7 @@
     "question": "일시적 금기: 임신에서 특히 피해야 하는 백신군은?",
     "answer": "생백신",
     "note": "MMR·수두 같은 생백신은 임신 중 금기.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_016_temporary_contra_immuno",
@@ -125,7 +125,7 @@
     "question": "일시적 금기: 면역저하에는 무엇이 포함될 수 있나?",
     "answer": "면역저하, 스테로이드 치료 등",
     "note": "생백신은 면역저하에서 안전성과 효과가 문제된다.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_017_steroid_live",
@@ -133,7 +133,7 @@
     "question": "고용량 전신 스테로이드 사용 중 생백신 판단은?",
     "answer": "생백신 연기/금기",
     "note": "Pretest lock: 면역저하 단서가 있으면 생백신을 바로 맞히지 않는다.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_018_recent_ig_blood",
@@ -141,7 +141,7 @@
     "question": "최근 감마글로불린/혈청 주사/수혈은 어떤 접종에서 주의?",
     "answer": "생백신 접종 연기 고려",
     "note": "이미지 기준 ‘최근 11개월 이내’가 주의사항. 실제 간격은 제제/용량별로 달라질 수 있다.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_019_caution_acute_fever",
@@ -149,7 +149,7 @@
     "question": "접종 주의사항 예시: 급성 열성 질환이면?",
     "answer": "상태 평가 후 접종 연기 가능",
     "note": "가벼운 증상인지, 전신상태가 나쁜지 구분.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_020_caution_chronic_disease",
@@ -157,7 +157,7 @@
     "question": "접종 주의사항 예시로 나온 장기 질환은?",
     "answer": "심혈관·신장·간 질환",
     "note": "생명 위험 가능성이나 면역 형성 저하 가능성을 평가한다.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_021_risk_benefit",
@@ -165,7 +165,7 @@
     "question": "주의사항에서 최종 판단 원칙은?",
     "answer": "예방효과와 이상반응 위험성 평가",
     "note": "접종 이득과 위험을 비교한다.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_022_case_mmr_varicella",
@@ -173,7 +173,7 @@
     "question": "Case: MMR을 오늘 맞고 수두를 다른 날 맞으려면 최소 간격은?",
     "answer": "4주 이상",
     "note": "MMR과 수두는 둘 다 생백신.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_023_case_mmr_dtap",
@@ -181,7 +181,7 @@
     "question": "Case: MMR과 DTaP를 같은 날 맞을 수 있나?",
     "answer": "가능",
     "note": "생백신-사백신 간격은 상관없고 동시접종 가능.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_024_case_dtap_ipv",
@@ -189,7 +189,7 @@
     "question": "Case: DTaP와 IPV 사이 간격 제한은?",
     "answer": "상관없음",
     "note": "사백신-사백신 조합.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_025_case_anaphylaxis",
@@ -197,7 +197,7 @@
     "question": "Case: 이전 백신 접종 후 아나필락시스가 있었다. 다음 같은 백신은?",
     "answer": "금기",
     "note": "영구 금기 카드.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_026_case_encephalopathy",
@@ -205,7 +205,7 @@
     "question": "Case: 백일해 포함 백신 7일 이내 뇌증 발생. 이후 pertussis 백신은?",
     "answer": "금기",
     "note": "DTaP/Tdap 판단에서 중요한 문구.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_027_case_pregnant_mmr",
@@ -213,7 +213,7 @@
     "question": "Case: 임신 중 MMR 접종 가능한가?",
     "answer": "불가. 생백신 금기",
     "note": "임신은 생백신 일시적 금기.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_028_case_ivig_mmr",
@@ -221,7 +221,7 @@
     "question": "Case: 최근 IVIG/수혈 후 MMR·수두 접종은?",
     "answer": "연기 고려",
     "note": "외부 항체가 생백신 효과를 떨어뜨릴 수 있다.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_029_case_delayed_schedule",
@@ -229,7 +229,7 @@
     "question": "Case: 접종 간격이 너무 길어졌다. 처음부터 다시 시작?",
     "answer": "아니오. 이어서 접종",
     "note": "간격이 길어진 것은 효과에 지장 없고 횟수 동일.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   },
   {
     "id": "vaccine_030_one_line_lock",
@@ -237,6 +237,222 @@
     "question": "예방접종 간격 한 줄 lock line",
     "answer": "생백신끼리 따로면 4주, 나머지는 대체로 상관없음",
     "note": "시험장에서 가장 빨리 쓰는 문장.",
-    "source": "uploaded vaccine note image 2026-05-11"
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_031_schedule_all_core",
+    "num": 31,
+    "question": "이미지 표 기준 소아 예방접종 일정 핵심 10개를 순서대로 말하기",
+    "answer": "BCG 1개월 / HAV 12·24개월 / HBV 0·1·6개월 / Rotavirus 2·4·6개월 / Hib·PCV 2·4·6·12개월 / Tdap 2·4·6·18개월·6세·12세 / IPV 2·4·6개월·6세 / VAR 12개월 / MMR 12개월·6세 / Influenza 6개월부터 매년",
+    "note": "표 전체를 한 번에 떠올리는 final boss 카드.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_032_schedule_bcg",
+    "num": 32,
+    "question": "BCG 접종 시기",
+    "answer": "1개월",
+    "note": "BCG는 가장 앞쪽 단독 월령으로 기억.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_033_schedule_hav",
+    "num": 33,
+    "question": "A형간염 HAV 접종 시기",
+    "answer": "12개월, 24개월",
+    "note": "HAV는 12와 24, 1년 간격 느낌.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_034_schedule_hbv",
+    "num": 34,
+    "question": "B형간염 HBV 접종 시기",
+    "answer": "0개월, 1개월, 6개월",
+    "note": "출생 직후 0개월을 놓치면 안 된다.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_035_schedule_rota",
+    "num": 35,
+    "question": "Rotavirus 접종 시기",
+    "answer": "2개월, 4개월, 6개월",
+    "note": "영아 초반 2-4-6 세트.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_036_schedule_hib_pcv",
+    "num": 36,
+    "question": "Hib와 PCV 접종 시기",
+    "answer": "2개월, 4개월, 6개월, 12개월",
+    "note": "둘이 같은 리듬: 2-4-6 후 12개월 booster.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_037_schedule_tdap",
+    "num": 37,
+    "question": "Tdap/DTaP 계열 접종 시기",
+    "answer": "2개월, 4개월, 6개월, 18개월, 6세, 12세",
+    "note": "2-4-6 기본접종 뒤 18개월, 6세, 12세로 이어진다.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_038_schedule_ipv",
+    "num": 38,
+    "question": "폴리오 IPV 접종 시기",
+    "answer": "2개월, 4개월, 6개월, 6세",
+    "note": "2-4-6 후 6세 booster.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_039_schedule_var",
+    "num": 39,
+    "question": "수두 VAR 접종 시기",
+    "answer": "12개월",
+    "note": "수두는 12개월 단독으로 먼저 잠근다.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_040_schedule_mmr",
+    "num": 40,
+    "question": "MMR 접종 시기",
+    "answer": "12개월, 6세",
+    "note": "MMR은 12개월과 6세.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_041_schedule_influenza",
+    "num": 41,
+    "question": "Influenza 접종 시기",
+    "answer": "6개월부터 매년",
+    "note": "매년접종이라는 단어가 핵심.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_042_month_0",
+    "num": 42,
+    "question": "0개월 접종으로 표에 있는 것은?",
+    "answer": "HBV",
+    "note": "출생 직후 B형간염.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_043_month_1",
+    "num": 43,
+    "question": "1개월 접종으로 표에 있는 것은?",
+    "answer": "BCG, HBV",
+    "note": "BCG 1개월, HBV 1개월.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_044_month_2",
+    "num": 44,
+    "question": "2개월에 시작/접종되는 백신 묶음",
+    "answer": "Rotavirus, Hib, PCV, Tdap/DTaP, IPV",
+    "note": "2개월은 2-4-6 세트가 한꺼번에 시작되는 달.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_045_month_4",
+    "num": 45,
+    "question": "4개월 접종 백신 묶음",
+    "answer": "Rotavirus, Hib, PCV, Tdap/DTaP, IPV",
+    "note": "2개월 묶음과 같은 2-4-6 리듬.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_046_month_6",
+    "num": 46,
+    "question": "6개월 접종 백신 묶음",
+    "answer": "HBV, Rotavirus, Hib, PCV, Tdap/DTaP, IPV, Influenza 시작",
+    "note": "6개월은 HBV 마무리 + 2-4-6 세트 + 독감 시작.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_047_month_12",
+    "num": 47,
+    "question": "12개월 접종 백신 묶음",
+    "answer": "HAV, Hib, PCV, 수두(VAR), MMR",
+    "note": "12개월은 HAV 시작, Hib/PCV booster, 생백신 VAR/MMR.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_048_month_18",
+    "num": 48,
+    "question": "18개월 접종으로 표에 있는 것은?",
+    "answer": "Tdap/DTaP",
+    "note": "18개월 booster.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_049_month_24",
+    "num": 49,
+    "question": "24개월 접종으로 표에 있는 것은?",
+    "answer": "HAV",
+    "note": "A형간염 두 번째.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_050_year_6",
+    "num": 50,
+    "question": "6세 접종 백신 묶음",
+    "answer": "Tdap/DTaP, IPV, MMR",
+    "note": "6세는 DTaP/IPV/MMR booster.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_051_year_12",
+    "num": 51,
+    "question": "12세 접종으로 표에 있는 것은?",
+    "answer": "Tdap/Tdap 계열",
+    "note": "이미지 요약표 기준 12세 booster.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_052_schedule_246_set",
+    "num": 52,
+    "question": "2·4·6개월 공통 리듬으로 외울 백신은?",
+    "answer": "Rotavirus, Hib, PCV, Tdap/DTaP, IPV",
+    "note": "2-4-6 리듬을 먼저 묶으면 표가 단순해진다.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_053_schedule_12_pair_live",
+    "num": 53,
+    "question": "12개월 생백신으로 같이 떠올릴 것",
+    "answer": "수두(VAR), MMR",
+    "note": "12개월에 생백신 VAR/MMR을 같이 잠근다.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_054_schedule_12_boosters",
+    "num": 54,
+    "question": "12개월 booster/추가 접종으로 같이 떠올릴 것",
+    "answer": "HAV 시작, Hib·PCV booster, VAR, MMR",
+    "note": "12개월은 실제 문제에서 많이 물리는 갈림길.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_055_schedule_hepatitis_compare",
+    "num": 55,
+    "question": "A형간염과 B형간염 일정 비교",
+    "answer": "HAV: 12·24개월 / HBV: 0·1·6개월",
+    "note": "간염끼리 헷갈릴 때 0개월이 있으면 B형간염.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_056_schedule_live_12_6",
+    "num": 56,
+    "question": "12개월과 6세에 반복되는 생백신은?",
+    "answer": "MMR",
+    "note": "수두는 12개월, MMR은 12개월과 6세.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
+  },
+  {
+    "id": "vaccine_057_schedule_one_line",
+    "num": 57,
+    "question": "소아 예방접종 일정 한 줄 lock line",
+    "answer": "0-1-6 HBV, 1 BCG, 2-4-6 로타/Hib/PCV/DTaP/IPV, 12 HAV/Hib/PCV/VAR/MMR, 6세 DTaP/IPV/MMR, 독감 6개월부터 매년",
+    "note": "시험 직전 전체 표를 한 문장으로 압축.",
+    "source": "uploaded vaccine note/schedule images 2026-05-11"
   }
 ]
