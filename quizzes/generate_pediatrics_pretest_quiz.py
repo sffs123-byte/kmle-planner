@@ -213,6 +213,8 @@ def format_problem_html(text: str) -> str:
 def answer_confidence(card: dict) -> tuple[str, str]:
     if card.get("id") in UNCERTAIN_IDS or card.get("origin") == "actual_incomplete" or dedup_key(card) in {"needs_source", "fragment_of"}:
         return "⚠️ 알렌 기준 추정", "복기 원문/선지가 불완전해서 확정 답처럼 외우면 위험합니다. 알렌 개념으로 가장 그럴듯한 방향을 표시했습니다."
+    if str(card.get("qc_flag", "")).startswith("added_from_HI_all_Q_marker_sweep"):
+        return "✅ HI Q marker 보존", "HI 1차 원문에서 객Q/주Q로 표시된 문항을 빠뜨리지 않도록 exact-source 카드로 보존했습니다."
     if card.get("qc_flag") == "added_from_2023_HI_full_audit":
         return "✅ 2023/HI source 추가", "2023 기출/HI raw 전수대조에서 빠진 exact stem을 추가했습니다."
     if card.get("origin") == "generated_drill":

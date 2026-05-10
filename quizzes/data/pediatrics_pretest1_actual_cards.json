@@ -4033,5 +4033,4247 @@
         "source-added"
       ]
     }
+  },
+  {
+    "id": "hi_q001",
+    "source": "HI raw 소아과_pre-test_1차_HI line 20",
+    "mode": "주Q",
+    "num_in_source": "HI-Q001",
+    "question": "미성년자를 연령에 따라 5단계로 분류하시오.",
+    "answer": "HI 1차 원문 Q001 (주Q, line 20) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q001",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q002",
+    "source": "HI raw 소아과_pre-test_1차_HI line 20",
+    "mode": "객Q",
+    "num_in_source": "HI-Q002",
+    "question": "4세 남아가 건강검진을 위해 내원했다. 임신 나이 40주에 출생체중 3.3kg,",
+    "answer": "HI 1차 원문 Q002 (객Q, line 20) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n20:   주Q. 미성년자를 연령에 따라 5단계로 분류하시오.                             객Q. 4세 남아가 건강검진을 위해 내원했다. 임신 나이 40주에 출생체중 3.3kg,\n21:                                                               키 50cm로 태어났다. 현재 키 91cm, 체중 17kg, 머리둘레 50cm 였다. 다음\n22:                                                               중 상담이 필요한 이상 소견은?\n23: [ 2장 : 성장과 발달 ]                                             ①키                     ② 체중                  ③ 머리 둘레\n24:  ◈ 성장의 4단계 구분          주                                    ④ 치아 수                 ⑤ 모두 정상 소견\n25:  (1) 태아기 ~ 2세 : 빨리 성장하는 시기 - 제 1 성장 급등기\n26:  (2) 2세 ~ 사춘기 : 서서히 성장하는 시기\n27:  (3) 사춘기 ~ 15, 16세 : 빨리 성장하는 시기 - 제 2 성장 급등기              ◈ 성 성숙도 (Tanner stage)    주   주\n28: \n29: \n30: \n31: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q002",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q003",
+    "source": "HI raw 소아과_pre-test_1차_HI line 34",
+    "mode": "주Q",
+    "num_in_source": "HI-Q003",
+    "question": "성장의 4단계를 구분하고 성장 급등기에 대해 설명",
+    "answer": "HI 1차 원문 Q003 (주Q, line 34) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n34:   주Q. 성장의 4단계를 구분하고 성장 급등기에 대해 설명\n35:                                                            · 1단계는 사춘기 이전, 2단계는 사춘기 초기, 5단계는 완정성숙을 의미\n36: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q003",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q004",
+    "source": "HI raw 소아과_pre-test_1차_HI line 37",
+    "mode": "주Q",
+    "num_in_source": "HI-Q004",
+    "question": "남자는 사춘기 성숙정도를 ( 1 ) 으로 구분하고, 여자는 사춘기 성숙정도를",
+    "answer": "HI 1차 원문 Q004 (주Q, line 37) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n37:  ◈ 장기별 발육패턴 구분             주                               주Q. 남자는 사춘기 성숙정도를 ( 1 ) 으로 구분하고, 여자는 사춘기 성숙정도를\n38:   1) 일반형 : 대부분의 장기 (심장, 신장, 호흡기, 소화기 등)                        ( 2 ) 으로 구분하고, 공통적으로 남녀는 ( 3 ) 으로 사춘기 정도를 구분한다.\n39:   2) 신경형 : 뇌, 척수, 시각기, 두위                                   (1) 고환 용적            (2) 유방 크기      (3) 음모\n40:   3) 림프형 : 림프절, 편도, 가슴샘\n41:   4) 생식형 : 생식기, 유선, 음모, 자궁, 전립샘                           ◈ 숫구멍 (Fontanel)   주\n42: \n43: \n44: \n45: \n46:                                                           · 폐쇄시기\n47:                                                            (1) 뒤숫구멍 : 생후 6~8주\n48:                                                            (2) 앞숫구멍 : 생후 14~18개월 (정상아에서 2세 이후에 닫히기도 함)",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q004",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q005",
+    "source": "HI raw 소아과_pre-test_1차_HI line 49",
+    "mode": "주Q",
+    "num_in_source": "HI-Q005",
+    "question": "A~D 의 각 패턴 이름과 해당하는 장기 1개 이상 쓰기",
+    "answer": "HI 1차 원문 Q005 (주Q, line 49) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n49:   주Q. A~D 의 각 패턴 이름과 해당하는 장기 1개 이상 쓰기                      (3) 봉합선 : 생후 6~8개월경에 닫히지만 X선에서는 성숙할 때까지 화골 X\n50:                                                           · 앞숫구멍 크기 계산\n51: ◈ 생치    주\n52: \n53:                                                            : 대변의 중점 간의 거리를 합한 것을 2등분 한 값\n54:  · 유치의 수 : 월령 - 6\n55:  · 유치 20개, 영구치 28~32개\n56:  · 생치 지연 (Delayed eruption) 원인 : 특발성, 영양 장애, 갑상샘기능저하 등",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q005",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q006",
+    "source": "HI raw 소아과_pre-test_1차_HI line 57",
+    "mode": "주Q",
+    "num_in_source": "HI-Q006",
+    "question": "앞숫구멍이 닫히는 시기를 기술하고, 앞숫구멍의 크기를 재는 방법을",
+    "answer": "HI 1차 원문 Q006 (주Q, line 57) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n57:  · 생치 증상 : 보챔, 침 흘림, 젖을 빨거나 씹으려는 증상                        주Q. 앞숫구멍이 닫히는 시기를 기술하고, 앞숫구멍의 크기를 재는 방법을\n58: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q006",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q007",
+    "source": "HI raw 소아과_pre-test_1차_HI line 59",
+    "mode": "주Q",
+    "num_in_source": "HI-Q007",
+    "question": "생치가 나올 때 나타나는 증상 기술하기",
+    "answer": "HI 1차 원문 Q007 (주Q, line 59) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n59:   주Q. 생치가 나올 때 나타나는 증상 기술하기                                    그림으로 그려 설명하시오.\n60: \n61: \n62: ◈ 성장 유형\n63:  (1) 출생 전 원인에 의한 성장 장애 : 출생 시부터 작고, 출생 후 정상과 차이 더 벌어짐\n64:  (2) 가족성 저신장 : 처음부터 끝까지 정상의 lower margin 따라 성장\n65:  (3) 체질성 성장 지연 : Lower margin 따라 자라다가 후반에 급속 성장 / 가족력 O\n66:  (4) 출생 후 원인에 의한 성장 저하\n67:    : 잘 자라다가 성장 멈추고, 질병에서 회복되면 원래 곡선 회복함\n68: \n69: ◈ 정상 발달   주   객   객   객   객\n70:                                                           ◈ 언어발달지연   주",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q007",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q008",
+    "source": "HI raw 소아과_pre-test_1차_HI line 84",
+    "mode": "주Q",
+    "num_in_source": "HI-Q008",
+    "question": "언어발달지연의 정의와 원인 2가지",
+    "answer": "HI 1차 원문 Q008 (주Q, line 84) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n84:                                                           주Q. 언어발달지연의 정의와 원인 2가지\n85: \n86: \n87: \n88: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q008",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q009",
+    "source": "HI raw 소아과_pre-test_1차_HI line 89",
+    "mode": "주Q",
+    "num_in_source": "HI-Q009",
+    "question": "다음 도형을 그릴 수 있는 나이는?",
+    "answer": "HI 1차 원문 Q009 (주Q, line 89) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n89:  주Q. 다음 도형을 그릴 수 있는 나이는?\n90:  (1) 삼각형 : 5세                 (2) 원 : 3세   (3) 사각형 : 4세\n91: \n92: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q009",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q010",
+    "source": "HI raw 소아과_pre-test_1차_HI line 93",
+    "mode": "객Q",
+    "num_in_source": "HI-Q010",
+    "question": "18개월 남아 발달과정에서 문제는?",
+    "answer": "HI 1차 원문 Q010 (객Q, line 93) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n93:  객Q. 18개월 남아 발달과정에서 문제는?\n94:  · 입방체 4개\n95:  · 선은 그리나 삼각형 못그림\n96:  · 뛸 수 있고 손잡고 층계 오르나 번갈아가면서 층계 혼자 오르지 못함\n97:  · 단어 15개 쓰나 2문장은 못 씀\n98:  ① 조대운동발달 지연                  ② 언어발달지연     ③ 정상\n99:  ④ 미세운동발달 지연                  ⑤ 사회적행동장애\n100: \n101: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q010",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q011",
+    "source": "HI raw 소아과_pre-test_1차_HI line 102",
+    "mode": "객Q",
+    "num_in_source": "HI-Q011",
+    "question": "3세 남아 발달 과정에서 문제는?",
+    "answer": "HI 1차 원문 Q011 (객Q, line 102) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n102:  객Q. 3세 남아 발달 과정에서 문제는?\n103:  · 수평선은 그리는데 별은 못 그림\n104:  · 혼자 옷 입는데 벗진 못함\n105:  · 계단은 오르는데 뛰지 못함\n106:  · 셋까지는 세는데 이십까진 못 셈\n107:  ① 사회성 발달 지연                  ② 운동발달지연     ③ 언어발달지연\n108:  ④ 학습 장애                      ⑤ 정상\n109: \n110: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q011",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q012",
+    "source": "HI raw 소아과_pre-test_1차_HI line 111",
+    "mode": "객Q",
+    "num_in_source": "HI-Q012",
+    "question": "3세 남아의 발달상태는 다음과 같다. 적합한 치료는?",
+    "answer": "HI 1차 원문 Q012 (객Q, line 111) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n111:  객Q. 3세 남아의 발달상태는 다음과 같다. 적합한 치료는?\n112:  · 숟가락질을 하며, 혼자 걸을 수는 있지만 뛰거나 한발로 서지는 못한다.\n113:  · 손으로 양쪽 무릎을 짚고 손을 조금씩 허벅지로 옮기면서 일어선다.\n114:  · 원을 보고 그린다.\n115:  · 혼자 윗옷을 입고, 손을 씻는다.\n116:  · 3단어 문장은 말할 수 있으나 4단어 문장은 못하고, 할 수 있는 단어는 60개.\n117:  ① 감각치료                       ② 운동치료          ③ 언어치료\n118:  ④ 음악치료                       ⑤ 사회화치료\n119: \n120: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q012",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q013",
+    "source": "HI raw 소아과_pre-test_1차_HI line 121",
+    "mode": "객Q",
+    "num_in_source": "HI-Q013",
+    "question": "5세 남아의 발달 상태는 다음과 같다. 발달 상태는?",
+    "answer": "HI 1차 원문 Q013 (객Q, line 121) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n121:  객Q. 5세 남아의 발달 상태는 다음과 같다. 발달 상태는?\n122:  · 한 발씩 번갈아가면서 뛴다\n123:  · 삼각형 그림\n124:  · 옷을 혼자 벗음\n125:  · 셋까지 셈\n126:  A) 언어 발달 지연\n127: \n128: [ 4장 : 소아의 영양 ]\n129: ◈ 모유 영양                                                    ◈ 비타민 결핍증\n130:  1) 모유 영양의 장점                                              1) B1 (Thiamine)\n131:                                                             - 악성 종양 환자나 수술 후에 결핍되는 경우가 많음\n132:                                                             - 결핍 시 : Beriberi (심부전, 빈맥, 신경염, 감각이상), 베르니케 뇌병증",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q013",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q014",
+    "source": "HI raw 소아과_pre-test_1차_HI line 167",
+    "mode": "주Q",
+    "num_in_source": "HI-Q014",
+    "question": "모유에 더 많은 성분은?",
+    "answer": "HI 1차 원문 Q014 (주Q, line 167) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n167:   주Q. 모유에 더 많은 성분은?\n168:                                                             - Vit. K : 응고인자 2, 7, 9, 10 합성에 관여함\n169:    (1) 항체, 방어인자       (2) 호르몬, 성장인자   (3) 필수지방산, 불포화지방산\n170:                                                             - 신생아 출혈 질환과 관련 있음 (그래서 출생 직후에 Vit.K 근주 필요)\n171: \n172:  ◈ 이유 (Weaning)\n173:                                                            ◈ 담즙 정체시 보충이 필요한 비타민\n174:  1) 정의\n175:                                                            : 지용성 비타민 (A, D, E, K)\n176:   · 영양적 : 젖, 우유만을 먹던 영아가 반고형식을 거쳐 고형식으로 이행하는 과정",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q014",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q015",
+    "source": "HI raw 소아과_pre-test_1차_HI line 177",
+    "mode": "객Q",
+    "num_in_source": "HI-Q015",
+    "question": "태아에서 출혈과 관련된 비타민은?",
+    "answer": "HI 1차 원문 Q015 (객Q, line 177) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n177:   · 기능적 : 젖, 우유를 빠는 것으로부터 음식물을 부수어 삼키는 것으로 발달              객Q. 태아에서 출혈과 관련된 비타민은?\n178:  2) 시작 시기 : 생후 4~6개월에 시작해서 만 1세에 완료                          A) Vit. K\n179:  3) 원칙 : 철분 포함한 단일 곡식이용, 일정한 시간에 먹이기, 한번에 한가지 재료 사용\n180: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q015",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q016",
+    "source": "HI raw 소아과_pre-test_1차_HI line 181",
+    "mode": "객Q",
+    "num_in_source": "HI-Q016",
+    "question": "31주, 1,300g으로 출생함. 신생아 때 괴사성 대장염으로 회장 절제함. 2세 때",
+    "answer": "HI 1차 원문 Q016 (객Q, line 181) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n181:                                                            객Q. 31주, 1,300g으로 출생함. 신생아 때 괴사성 대장염으로 회장 절제함. 2세 때",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q016",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q017",
+    "source": "HI raw 소아과_pre-test_1차_HI line 182",
+    "mode": "주Q",
+    "num_in_source": "HI-Q017",
+    "question": "이유 (Weaning)의 정의와 시작시기",
+    "answer": "HI 1차 원문 Q017 (주Q, line 182) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n182:   주Q. 이유 (Weaning)의 정의와 시작시기\n183:                                                               신장 75cm, 체중 9.3kg이고 무기력함. Hb 8, MCV 112. 결핍되어서 보충해\n184: ◈ 철분 결핍                                                       주어야 하는 영양소는?\n185:  · 미숙아, 저체중아의 경우 문제가 되는 경우 많음                               ① Vit.B12           ② Folate         ③ Zn   ④ Fe\n186: \n187:  · 철결핍성 빈혈 : MCV 감소, 혈색소 감소",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q017",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q018",
+    "source": "HI raw 소아과_pre-test_1차_HI line 188",
+    "mode": "주Q",
+    "num_in_source": "HI-Q018",
+    "question": "니코틴산 결핍 시 발생하는 증상 중 펠레그라의 증상에 대해 쓰시오.",
+    "answer": "HI 1차 원문 Q018 (주Q, line 188) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n188:  · 적정섭취량 : 생후 6개월까지 필요한 1일 6mg, 이후 10mg                    주Q. 니코틴산 결핍 시 발생하는 증상 중 펠레그라의 증상에 대해 쓰시오.\n189:                                                              A) Diarrhea, dementia, dermatitis\n190: \n191: ◈ 아연 결핍    객\n192: \n193: \n194: \n195: \n196:  · 장기간의 TPN, 흡수장애와 연관 있음\n197:  · 임상 양상\n198:   - 피부 : 장병성 말단피부염, 탈모\n199:   - 구역, 구토 설사",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q018",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q019",
+    "source": "HI raw 소아과_pre-test_1차_HI line 203",
+    "mode": "객Q",
+    "num_in_source": "HI-Q019",
+    "question": "생후 50일된 남아가 생후 30일부터 시작된 하루 10회 이상의 수양성 설사와",
+    "answer": "HI 1차 원문 Q019 (객Q, line 203) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n203:   객Q. 생후 50일된 남아가 생후 30일부터 시작된 하루 10회 이상의 수양성 설사와\n204:      식욕 부진으로 병원에 왔다. 키, 몸무게 모두 10백분위수 이하였다. 부족할 것\n205:      으로 예상되는 미량 원소는?\n206:    ①철          ② 아연       ③ 구리    ④ 망간      ⑤ 요오드\n207: \n208: [ 7장 : 수분 및 전해질 평형 ]\n209: ◈ 탈수의 정도와 임상 양상                                              ◈ 수액량 계산법      주\n210: \n211: \n212: \n213: \n214:                                                              · < 10kg : 100ml/kg",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q019",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q020",
+    "source": "HI raw 소아과_pre-test_1차_HI line 218",
+    "mode": "주Q",
+    "num_in_source": "HI-Q020",
+    "question": "26kg 소아에서 필요한 수액량 계산",
+    "answer": "HI 1차 원문 Q020 (주Q, line 218) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n218:                                                              주Q. 26kg 소아에서 필요한 수액량 계산\n219:                                                               A) 1500 + 20 X (26-20) = 1620 mL\n220: \n221: \n222: \n223: \n224:  ◈ 치료 원칙 객\n225:   · 경증 : 경구용 수액요법\n226:   · 중등도 : Phase 2~3 시행\n227:   · 중증 : Phase 1~3 시행\n228: \n229: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q020",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q021",
+    "source": "HI raw 소아과_pre-test_1차_HI line 235",
+    "mode": "객Q",
+    "num_in_source": "HI-Q021",
+    "question": "12개월 남아가 설사로 인한 탈수 증세를 보여 입원하였다. 입원 당시에는 설사",
+    "answer": "HI 1차 원문 Q021 (객Q, line 235) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n235:  객Q. 12개월 남아가 설사로 인한 탈수 증세를 보여 입원하였다. 입원 당시에는 설사\n236:     가 멎었고, 구토나 열은 없었다. 체중은 원래 10kg 에서 입원 시 8.8kg 였다.\n237:     구강점막은 건조 하였으며 혈압은 70/40mmHg, 모세혈관 재충만 시간은\n238:     연장되어 있었다. 초기 검사 결과는 다음과 같았다.\n239:    Na 132 mEq/L, K 5.0mEq/L, Cl 105mEq/L, HCO3 15mEq/L\n240:    BUN 32mg/dL, Ur SG 1.025\n241:  Q1. 이 환자에서 가장 먼저 선택할 수액은?\n242:   ① Dextrose 5% + Na 77mEq\n243:   ② Dextrose 10% + Na 77mEq + KCl 5mEq\n244:   ③ 0.45% saline\n245:   ④ Oral hydration solution\n246:   ⑤ 0.9% saline",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q021",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q022",
+    "source": "HI raw 소아과_pre-test_1차_HI line 265",
+    "mode": "객Q",
+    "num_in_source": "HI-Q022",
+    "question": "어떤 유전자나 염색체 분적이 부모 중 어느 쪽에서 기인 했는가에 따라",
+    "answer": "HI 1차 원문 Q022 (객Q, line 265) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n265:   객Q. 어떤 유전자나 염색체 분적이 부모 중 어느 쪽에서 기인 했는가에 따라\n266:      표현형이 좌우되는 현상을 일컫는 유전방법으로, 유전자의 발현이 그 유전자가\n267:      유래하는 부모의 성에 따라 다르다는 것을 의미하는 현상으로 벡위드-와이드만\n268:      증후군, 실버러셀증후군, 프레더 윌리 증후군과 같은 질환의 기전을 설명하는\n269:      것으로 올바른 것은?\n270:    ① Anticipation              ② Imprinting       ③ Allelic expansion\n271:    ④ Allelic heterogeneity ⑤ Negative selection\n272: \n273: \n274: \n275: ◈ 유전 질환\n276: 1. 다운 증후군 : 47, XX (XY), +21      주   주",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q022",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q023",
+    "source": "HI raw 소아과_pre-test_1차_HI line 290",
+    "mode": "주Q",
+    "num_in_source": "HI-Q023",
+    "question": "사진 (다운증후군)과 같은 얼굴을 가진 아이의 부모에 대해 유전자 검사를 시행",
+    "answer": "HI 1차 원문 Q023 (주Q, line 290) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n290:   주Q. 사진 (다운증후군)과 같은 얼굴을 가진 아이의 부모에 대해 유전자 검사를 시행\n291:       하였다. 아버지에서 다음과 같은 핵형 (45,XY, 21;21 로버트슨전위)이 보였다면,",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q023",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q024",
+    "source": "HI raw 소아과_pre-test_1차_HI line 292",
+    "mode": "주Q",
+    "num_in_source": "HI-Q024",
+    "question": "상염색체 우성으로 전달되는 유전질환 3가지 열거",
+    "answer": "HI 1차 원문 Q024 (주Q, line 292) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n292:       이 가정에서 임신 시에 첫 아기와 같은 질환을 가질 아기가 태어날 확률은                           주Q. 상염색체 우성으로 전달되는 유전질환 3가지 열거\n293:       이론상 얼마인가?                                                          - 연골무형성증, Marfan 증후군, Huntington disease\n294:    - 100%\n295: \n296: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q024",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q025",
+    "source": "HI raw 소아과_pre-test_1차_HI line 297",
+    "mode": "주Q",
+    "num_in_source": "HI-Q025",
+    "question": "다운증후군에서 가장 흔한 염색체 핵형을 염색체 핵형 표기법으로 쓰기 (여아)",
+    "answer": "HI 1차 원문 Q025 (주Q, line 297) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n297:   주Q. 다운증후군에서 가장 흔한 염색체 핵형을 염색체 핵형 표기법으로 쓰기 (여아)\n298:    - 47, XX, +21\n299: \n300: \n301:  2. 터너 증후군 : 45, XO    객   객\n302: \n303: \n304: \n305: \n306:   · 특징 : 산모의 연령 증가와 관계 없음\n307:   · 임상 양상\n308:   - 표현형은 여성 : 원발성 무월경, 불임, 난소는 없거나 흔적만 있음",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q025",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q026",
+    "source": "HI raw 소아과_pre-test_1차_HI line 316",
+    "mode": "객Q",
+    "num_in_source": "HI-Q026",
+    "question": "모체의 연령 증가에 따라 발병율이 증가하지 않는 것은?",
+    "answer": "HI 1차 원문 Q026 (객Q, line 316) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n316:   객Q. 모체의 연령 증가에 따라 발병율이 증가하지 않는 것은?\n317:    ① 클라인펠터                     ② 터너               ③ 파타우\n318:    ④ 에드워드                      ⑤ 다운증후군\n319: \n320: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q026",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q027",
+    "source": "HI raw 소아과_pre-test_1차_HI line 321",
+    "mode": "객Q",
+    "num_in_source": "HI-Q027",
+    "question": "9세 여아가 반복되는 중이염으로 병원에 왔다. 신생아 때 대동맥 축착 교정",
+    "answer": "HI 1차 원문 Q027 (객Q, line 321) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n321:   객Q. 9세 여아가 반복되는 중이염으로 병원에 왔다. 신생아 때 대동맥 축착 교정\n322:      수술을 받은 과거력이 있었으며, 키는 3백분위수 미만, 체중은 5백분위수 미만\n323:      이었다. 입천장활이 높고, 4번째 손허리뼈가 짧았다. 시행할 검사는?\n324:    ① 골수검사                      ② 염색체 핵형검사             ③ 부갑상샘 호르몬 검사\n325:    ④ 포식세포기능검사                  ⑤ 혈청 면역글로불린\n326: \n327: [ 8장 : 유전 ]\n328: ◈ 유전 대사 질환 - 국내 신생아 선별검사 대상 질환                                                ◈ 당원병 (Glycogen storage disease) type I      주   주\n329: \n330: \n331: \n332: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q027",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q028",
+    "source": "HI raw 소아과_pre-test_1차_HI line 340",
+    "mode": "주Q",
+    "num_in_source": "HI-Q028",
+    "question": "페닐케톤뇨증 치료 원칙",
+    "answer": "HI 1차 원문 Q028 (주Q, line 340) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n340:   주Q. 페닐케톤뇨증 치료 원칙\n341:                                                                                - 생옥수수 전분 섭취 : 혈당을 오랜시간 유지 시켜줌\n342:    - 저페닐알라닌 식이\n343:                                                                                - 약물요법 (allopurinol), 간이식, 수액공급\n344: 2. 단풍당뇨증 (MSUD)        객",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q028",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q029",
+    "source": "HI raw 소아과_pre-test_1차_HI line 345",
+    "mode": "주Q",
+    "num_in_source": "HI-Q029",
+    "question": "2세 남아가 저혈당으로 왔다. 간이 늑골 밑으로 4횡지 만져졌고, 혈액검사는",
+    "answer": "HI 1차 원문 Q029 (주Q, line 345) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n345:                                                                                주Q. 2세 남아가 저혈당으로 왔다. 간이 늑골 밑으로 4횡지 만져졌고, 혈액검사는\n346:  · 원인 : BCKD 효소 결핍 -> leucin, isoleucine, valine 축적                                 아래와 같다. 진단과 치료는? (사진 : 아이의 복부 팽만)\n347:  · 임상 증상 : 첫 1주 이내에 신경학적 증상 (구토, 경련 등), 소변과 땀에서 단내                              · Glucose 40mg/dL, T4 1.2ng/dL(참고치<40), TSH 3.4mIU/L(참고치 0.4~4.5)\n348:  · 선별 검사 : Leucin 증가\n349:                                                                                 · AST/ALT 80/140 U/L(참고치 <40), uric acid 8.5mg/dL(참고치 2.0~6.0),\n350:  · 검사 소견 : 혈장과 소변의 3 BCAA 증가 (+) Ketoacid\n351:                                                                                  total cholesterol 300mg/dL(참고치 100~190), IGF-1 75ng/dL (n : 60~300),\n352:  · 치료 : 저분자아미노산 식이 (5일 이내)\n353:                                                                                  triglyceride 680mg/dL(참고치 <150), lactic acid 4.0mmol/L(참고치 0.8~1.8)",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q029",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q030",
+    "source": "HI raw 소아과_pre-test_1차_HI line 354",
+    "mode": "객Q",
+    "num_in_source": "HI-Q030",
+    "question": "생후 3일된 환아가 경련을 주소로 내원. 신생아 선별검사에서 leucine 증가",
+    "answer": "HI 1차 원문 Q030 (객Q, line 354) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n354:  객Q. 생후 3일된 환아가 경련을 주소로 내원. 신생아 선별검사에서 leucine 증가                               - 진단 : Glycogen storage disease\n355:      소견 및 채취한 땀과 소변에서 특유의 단내가 났다. 진단은?                                          - 치료 : 생옥수수 전분 섭취\n356:    ① MSUD                  ② Methylmalonic acidemia\n357:    ③ Isovaleric acidemia   ④ Propionic acidemia       ⑤ Urea cycle disorder   ◈ 고암모니아 혈증 유발 질환\n358:                                                                               1. 고암모니아혈증        객\n359: \n360: \n361: 3. 호모시스틴뇨증 (Homocystinuria)\n362: \n363: \n364: \n365: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q030",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q031",
+    "source": "HI raw 소아과_pre-test_1차_HI line 400",
+    "mode": "객Q",
+    "num_in_source": "HI-Q031",
+    "question": "3일 된 신생아에서 구역, 구토를 보이더니 기면 상태로 왔다. 암모니아가 800",
+    "answer": "HI 1차 원문 Q031 (객Q, line 400) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n400:  1) 전구물질의 제한 : MSUD, 갈락토즈혈증, 호모시스틴뇨증, 윌슨병, PKU                                 객Q. 3일 된 신생아에서 구역, 구토를 보이더니 기면 상태로 왔다. 암모니아가 800\n401:  2) 결손물질 보충 : 갑상선 호르몬 합성 장애                                                        으로 확인되었다. 원인 감별에 도움이 되는 검사는?\n402:  3) 축적물질 제거 : 윌슨병, 가족성 고콜레스테롤혈증                                                 ① 혈액 가스 분석                    ② 전해질        ③ 간기능\n403:  4) 효소보충요법 : 리소좀 축적 장애 (Gaucher, Fabry, Hurler, Pompe)                          ④ 콩팥 기능                       ⑤ 혈액 응고 인자\n404:  5) 조효소 보충요법 : 호모시스틴뇨증, MMA",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q031",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q032",
+    "source": "HI raw 소아과_pre-test_1차_HI line 405",
+    "mode": "주Q",
+    "num_in_source": "HI-Q032",
+    "question": "고암모니아 혈증에서 암모니아 500 초과 또는 초기 내과 처치에 반응하지",
+    "answer": "HI 1차 원문 Q032 (주Q, line 405) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n405:                                                                                주Q. 고암모니아 혈증에서 암모니아 500 초과 또는 초기 내과 처치에 반응하지",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q032",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q033",
+    "source": "HI raw 소아과_pre-test_1차_HI line 406",
+    "mode": "객Q",
+    "num_in_source": "HI-Q033",
+    "question": "다음 유전성 대사 질환 중 치료 원칙이 다른 질환은?",
+    "answer": "HI 1차 원문 Q033 (객Q, line 406) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n406:  객Q. 다음 유전성 대사 질환 중 치료 원칙이 다른 질환은?\n407:                                                                                   않을 때의 치료법은?\n408:   ① Pompe                      ② Gaucher               ③ Fabry\n409:                                                                                 - 혈액 투석\n410:   ④ Mucopolysaccharidosis type 2       ⑤ MSUD\n411: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q033",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q034",
+    "source": "HI raw 소아과_pre-test_1차_HI line 412",
+    "mode": "주Q",
+    "num_in_source": "HI-Q034",
+    "question": "요소회로대사 이상에서 가장 흔한 효소 결핍은?",
+    "answer": "HI 1차 원문 Q034 (주Q, line 412) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n412:                                                                                주Q. 요소회로대사 이상에서 가장 흔한 효소 결핍은?\n413:                                                                                 - OTC 결손\n414: \n415: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q034",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q035",
+    "source": "HI raw 소아과_pre-test_1차_HI line 416",
+    "mode": "객Q",
+    "num_in_source": "HI-Q035",
+    "question": "Leucine 상승, 소변과 땀에서 발고린내, 진단은?",
+    "answer": "HI 1차 원문 Q035 (객Q, line 416) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n416:                                                                                객Q. Leucine 상승, 소변과 땀에서 발고린내, 진단은?\n417:                                                                                 - Isovaleric acidemia\n418: \n419: [ 10장 : 면역학 ]\n420: ◈ 태아 및 영아의 면역글로불린            주   주                               2. DiGeorge syndrome (= CATCH 22 syndrome)         주   객\n421: \n422: \n423: \n424:                                                                   · 원인 : 염색체 이상 22q11.2 microdeletion\n425:                                                                   · 임상 양상\n426:                                                                    - 신생아기 저칼슘혈증에 의한 경련 : 혈청 Ca, PTH ↓\n427:                                                                    - 가슴샘과 부갑상샘의 무형성 또는 형성 저하",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q035",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q036",
+    "source": "HI raw 소아과_pre-test_1차_HI line 432",
+    "mode": "주Q",
+    "num_in_source": "HI-Q036",
+    "question": "생후 10일된 신생아가 tetany로 내원하였다. 구개열이 있었으며 흉선이",
+    "answer": "HI 1차 원문 Q036 (주Q, line 432) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n432:                                                                   주Q. 생후 10일된 신생아가 tetany로 내원하였다. 구개열이 있었으며 흉선이\n433:                                                                      보이지 않았다. 혈액 검사 상에서 저칼슘혈증이 있었다. 진단을위해 시행한\n434:                 IgG                             IgM\n435:                                                                      검사는 아래 그림과 같다. 다음 검사 이름과 진단명을 쓰시오.\n436:  · 분자량 작음                            · 분자량이 큼\n437:                                                                    - 검사 : FISH\n438:  · 출생 직후 농도는 임산부와 비슷                 · 출생 시 증가 시 선천 감염 의미\n439:                                                                    - 진단명 : DiGeorge syndrome\n440:  · 재태기간 12주부터 태반 통해 이행               · 출생 직후 생성, 생후 6일에 급속히 증가\n441:  · 출생 후 6~8개월에 모체 항체는 고갈             · 1세 경 성인치에 도달",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q036",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q037",
+    "source": "HI raw 소아과_pre-test_1차_HI line 442",
+    "mode": "객Q",
+    "num_in_source": "HI-Q037",
+    "question": "생후 2일된 남아가 경련으로 병원에 왔다. 임신 나이 40주, 출생체중 3,200g",
+    "answer": "HI 1차 원문 Q037 (객Q, line 442) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n442:                                                                   객Q. 생후 2일된 남아가 경련으로 병원에 왔다. 임신 나이 40주, 출생체중 3,200g\n443:  · 7~8세 경 성인치에 도달                    · 그람 음성균에 대한 저항력 증가\n444:                                                                       으로 질분만으로 태어났다. 아래 턱이 작았고, 입천장갈림증이 있었다. 복장뼈\n445:  · 그람양성균과 바이러스에 저항력 증가\n446:                                                                       왼쪽 아래 가장자리에서 3/6도의 범수축기 심잡음이 들렸다. 혈액 검사 결과는",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q037",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q038",
+    "source": "HI raw 소아과_pre-test_1차_HI line 447",
+    "mode": "주Q",
+    "num_in_source": "HI-Q038",
+    "question": "다음 그림의 (1), (2) 에 해당하는 내용은?",
+    "answer": "HI 1차 원문 Q038 (주Q, line 447) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n447:   주Q. 다음 그림의 (1), (2) 에 해당하는 내용은?                                     다음과 같았다. 필요한 검사는?\n448:    (1) IgG        (2) IgM                                           · 혈색소 14.3g/dL, 백혈구 9,800/mm³, 혈소판 480,000/mm³, ESR 3mm/h (<10)\n449:                                                                     · 포도당 97mg/dL, Na 135mEq/L, K 3.9mEq/L, CRP 0.7mg/L (<10)",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q038",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q039",
+    "source": "HI raw 소아과_pre-test_1차_HI line 450",
+    "mode": "주Q",
+    "num_in_source": "HI-Q039",
+    "question": "다음 설명에 해당하는 것은?",
+    "answer": "HI 1차 원문 Q039 (주Q, line 450) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n450:   주Q. 다음 설명에 해당하는 것은?                                               · Ca 5.8mg/dL (7.0~12.0), P 10mg/dL (4.8~8.2), Mg 1.8mg/dL (1.2~2.6)\n451:    (1) 물려받지 못해 그람 음성균 감염이 높은 것은? IgM                               ① 혈청 보체                   ② 절대 중성구수                      ③ 혈청 면역 글로불린 G\n452:    (2) 높으면 선천 감염을 의미하는 것은? 출생 직후 IgM                               ④ 백혈구 살균 기능 검사 ⑤ T림프구 세군 (subtype)\n453:    (3) 임산부와 비슷하거나 높은 것은? 출생 직후 IgG\n454: \n455:                                                                  3. 만성 육아종 질환\n456: \n457: \n458: \n459: \n460:                        객주",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q039",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q040",
+    "source": "HI raw 소아과_pre-test_1차_HI line 461",
+    "mode": "주Q",
+    "num_in_source": "HI-Q040",
+    "question": "GA 38+5w, 2.3kg 출생 남아. 출생 직후 실시한 혈액검사 결과는 다음과",
+    "answer": "HI 1차 원문 Q040 (주Q, line 461) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n461:   주Q. GA 38+5w, 2.3kg 출생 남아. 출생 직후 실시한 혈액검사 결과는 다음과               · 원인 : 식세포 NADPH oxidase의 유전적결함\n462:      같다. (혈중 IgA, IgG, IgM 값과 정상치가 주어짐. IgM 크게 상승되어 있음)           · 유전 : 성염색체 열성 (X 염색체)\n463:    (1) 어떤 이상이 있는가?          출생 직후 IGM 의 상승                        · 임상 양상\n464:    (2) 어떤 질환이 의심되는가 ?            선천 감염                             - 반복적인 폐렴, 림프절염, 피부 감염\n465:                                                                    - 간/피하/연부 조직의 농양\n466:  ◈ 면역 질환\n467:                                                                    - S. aureus 등 catalase 양성 세균에 의한 비전형적인 감염 병력\n468:  1. 범저감마글로불린 혈증\n469:                                                                   · 진단 : 포식세포기능검사 -> NBT 검사 (선별), DHR 검사 (확진)\n470:   · 특징 : IgG, IgA, IgM 항체가 선천적으로 생성되지 않음\n471:                                                                   · 치료 : 조혈모세포 이식\n472:   · 증상",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q040",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q041",
+    "source": "HI raw 소아과_pre-test_1차_HI line 473",
+    "mode": "객Q",
+    "num_in_source": "HI-Q041",
+    "question": "3세 남아가 열과 기침으로 병원에 왔다. 생후 2개월에 항문주위고름집이 있어",
+    "answer": "HI 1차 원문 Q041 (객Q, line 473) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n473:    - 생후 6~9개월 부터 세균 감염 빈발 : 중이염, 폐렴, 결막염, 농가진 등                   객Q. 3세 남아가 열과 기침으로 병원에 왔다. 생후 2개월에 항문주위고름집이 있어\n474: \n475:    - 전신 림프절 결여 : 편도, 아데노이드, 말초 림프절                                   절개배농을 하였고, 황색포도알균이 배양되었다. 이후에도 항문주위고름집이\n476: \n477:   · 검사                                                               반복되었다. 외삼촌도 비슷한 병력으로 어린 나이에 사망하였다. 혈액 검사 상\n478: \n479:    - 혈청 IgG, IgA, IgM 모두 표준치의 < 95%                                  백혈구 수, 면역 글로불린, T 림프구 수는 정상이었다. 다음 검사로 할 것은?\n480:                                                                    ① 보체활성측정                 ② 동종응집소검사                       ③ B림프구 증식 반응\n481:    - 총 감마글로불린 농도 < 100mg/dL\n482:                                                                    ④ 포식세포기능검사               ⑤ 혈청 면역글로불린\n483:    - 세포면역검사는 정상\n484:   · 치료 : 매 3~4주마다 정맥용 면역글로불린 400~500mg/kg 투여",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q041",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q042",
+    "source": "HI raw 소아과_pre-test_1차_HI line 487",
+    "mode": "주Q",
+    "num_in_source": "HI-Q042",
+    "question": "15개월 아이, 출생 7개월부터 세균성 폐렴, 중이염 등이 반복되어 면역학적",
+    "answer": "HI 1차 원문 Q042 (주Q, line 487) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n487:   주Q. 15개월 아이, 출생 7개월부터 세균성 폐렴, 중이염 등이 반복되어 면역학적                  · 임상 양상\n488:      평가를 위해 내원하였다. 총 Ig가 90 이었고, 편도와 아데노이드가 관찰되지                   - 성장 저하\n489:      않았다. 진단과 치료는?                                                 - 출생 후 수개월 내 설사, 폐렴, 중이염, 피부 감염\n490:    - 진단 : 범저감마글로불린 혈증                                             · m/c 유전 : X-linked\n491:    - 치료 : 매 3~4개월 마다 정맥용 면역글로불린 400~500mg/kg 투여                   · 검사\n492:                                                                   (1) 림프구 결핍증 : 모든 종류의 T 림프구 수가 저하됨\n493:                                                                   (2) 가슴샘이 매우 작음\n494:                                                                   (3) Mitogen, 항원, 이종 세포에 대한 림프구 증식 반응 결여\n495:                                                                   · 치료 : 조혈모세포 이식\n496: \n497: [ 11장 신생아 질환 ]\n498: ◈ 미숙아                                                    2. New Ballard score   주   주",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q042",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q043",
+    "source": "HI raw 소아과_pre-test_1차_HI line 516",
+    "mode": "객Q",
+    "num_in_source": "HI-Q043",
+    "question": "미숙아에 비해 정상 신생아의 특징으로 옳은 것은?",
+    "answer": "HI 1차 원문 Q043 (객Q, line 516) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n516:  객Q. 미숙아에 비해 정상 신생아의 특징으로 옳은 것은?\n517:   ① 체표면적이 넓음\n518:   ② 체온 유지를 위해 필요한 중성온도가 높음\n519:   ③ 출생 후 생리적 체중 감소가 큼\n520:   ④ 소변 농축능이 작음\n521:    ⑤ 불감성 수분 손실량이 적음\n522: \n523: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q043",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q044",
+    "source": "HI raw 소아과_pre-test_1차_HI line 524",
+    "mode": "주Q",
+    "num_in_source": "HI-Q044",
+    "question": "미숙아와 만삭아를 부등호로 비교",
+    "answer": "HI 1차 원문 Q044 (주Q, line 524) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n524:   주Q. 미숙아와 만삭아를 부등호로 비교\n525:    1) 출생 초기 체표면적 : 미숙아 > 만삭아\n526:    2) 생리적 체중감소 : 미숙아 > 만삭아\n527:    3) 소변농축능 : 미숙아 < 만삭아\n528:    4) 불감성 수분 손실량 : 미숙아 > 만삭아\n529: \n530: \n531:  2. 미숙아 영양    객   주\n532: \n533: \n534: \n535: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q044",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q045",
+    "source": "HI raw 소아과_pre-test_1차_HI line 538",
+    "mode": "주Q",
+    "num_in_source": "HI-Q045",
+    "question": "New ballard score에서 만삭아에서 볼 수 있는 소견 동그라미 치기",
+    "answer": "HI 1차 원문 Q045 (주Q, line 538) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n538:    -> 빨기운동, 후두개와 목젖의 조화, nasal passage, 정상적인 식도 운동성 필수   주Q. New ballard score에서 만삭아에서 볼 수 있는 소견 동그라미 치기\n539:   · 모유, 특히 초유는 조산아의 장관 영양에 반드시 필요함                        1) 각창\n540:   · 극소 조산아에게도 조기 장관 영양은 권장됨\n541: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q045",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q046",
+    "source": "HI raw 소아과_pre-test_1차_HI line 542",
+    "mode": "객Q",
+    "num_in_source": "HI-Q046",
+    "question": "저체중 출생아의 영양에 대한 설명으로 올바른 것은?",
+    "answer": "HI 1차 원문 Q046 (객Q, line 542) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n542:   객Q. 저체중 출생아의 영양에 대한 설명으로 올바른 것은?                        2) 팔의 되돌아 오기 반응\n543:    ① 최소장관영양은 괴사성 장염을 낮춘다\n544:    ② 따라잡기성장을 위해 단백질 5~6g/kg/일 투여",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q046",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q047",
+    "source": "HI raw 소아과_pre-test_1차_HI line 545",
+    "mode": "객Q",
+    "num_in_source": "HI-Q047",
+    "question": "New ballard score 의 육체적 성숙도 평가 중 재태연령 23주 미숙아에서",
+    "answer": "HI 1차 원문 Q047 (객Q, line 545) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n545:    ③ 극소저체중아에게는 모유보다는 특수 제조된 분유를 준다                       객Q. New ballard score 의 육체적 성숙도 평가 중 재태연령 23주 미숙아에서\n546:    ④ 일반적으로 제태연령 32주 부터는 빨기운동, 연하협응, 식도기능이 발달하여               관찰될 수 있는 모습은?\n547:      경구수유가 가능하다                                            ① 피부 : 갈라지고 창백하며, 정맥이 거의 안 보인다\n548:    ⑤ 기도삽관과 제대동맥도관 시 경관영양이 불가능하다                            ② 솜털 : 없다\n549:                                                            ③ 발바닥 (발금) : 앞부분에 횡선만 관찰된다",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q047",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q048",
+    "source": "HI raw 소아과_pre-test_1차_HI line 550",
+    "mode": "주Q",
+    "num_in_source": "HI-Q048",
+    "question": "저체중아에게 필수로 투여해야하는 아미노산 3가지",
+    "answer": "HI 1차 원문 Q048 (주Q, line 550) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n550:   주Q. 저체중아에게 필수로 투여해야하는 아미노산 3가지                           ④ 귀 : 굴곡이 확실하게 있고, 접으면 쉽게 펴진다\n551:    - 티로신, 시스테인, 히스티딘                                       ⑤ 생식기 (여) : 소음순 및 대음순이 모두 관찰된다\n552: \n553: \n554:  ◈ 자궁내성장지연 (IUGR)       주",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q048",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q049",
+    "source": "HI raw 소아과_pre-test_1차_HI line 555",
+    "mode": "객Q",
+    "num_in_source": "HI-Q049",
+    "question": "New ballard score 의 육체적 성숙도 평가 중 만삭아에서 볼 수 있는 것은?",
+    "answer": "HI 1차 원문 Q049 (객Q, line 555) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n555:                                                           객Q. New ballard score 의 육체적 성숙도 평가 중 만삭아에서 볼 수 있는 것은?\n556:                                                            ① 손목 각도 : 90도\n557:                                                            ② 오금 (슬와) 각도 : 180도\n558:                                                            ③ 피부 : 양피지 같고 깊은 금이 있으며, 정맥은 안보임\n559:                                                            ④ 솜털 : 많음\n560:                                                            ⑤ 생식기 (여) : 음핵이 크며 소음순이 커짐\n561: \n562: \n563: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q049",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q050",
+    "source": "HI raw 소아과_pre-test_1차_HI line 564",
+    "mode": "주Q",
+    "num_in_source": "HI-Q050",
+    "question": "자궁내성장지연 중 대칭성과 비대칭성 원인 각각 2가지 이상 쓰기",
+    "answer": "HI 1차 원문 Q050 (주Q, line 564) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n564:  주Q. 자궁내성장지연 중 대칭성과 비대칭성 원인 각각 2가지 이상 쓰기\n565:   - 대칭성 : TORCH 증후군, 염색체 이상\n566:   - 비대칭성 : HTN, DM, 영양결핍\n567: \n568: [ 11장 신생아 질환 ]\n569:  ◈ 신생아 소생술       주   주   객                               ◈ APGAR score   주\n570: \n571: \n572: \n573:                                                          · 생후 1분 & 5분에 평가\n574: \n575: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q050",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q051",
+    "source": "HI raw 소아과_pre-test_1차_HI line 579",
+    "mode": "주Q",
+    "num_in_source": "HI-Q051",
+    "question": "임신 나이 34주의 신생아가 제왕절개술로 태어났다. 출생 직후에 잘 울고 잘",
+    "answer": "HI 1차 원문 Q051 (주Q, line 579) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n579:                                                           주Q. 임신 나이 34주의 신생아가 제왕절개술로 태어났다. 출생 직후에 잘 울고 잘\n580:                                                              움직여서 미리 준비해 둔 복사 온열기에 눕히고 구강 분비물을 제거하였다.\n581:                                                              생후 1분째 진찰에서 호흡은 규칙적으로 잘 울었고, 활발히 움직였으며, 심박은\n582:                                                              120회/분이었다. 몸통의 피부색은 분홍색이었으나 손발이 파랬으며, 카테터를\n583:                                                              콧속에 넣었을 때 얼굴을 찡그렸다. 생후 1분 아프가 점수는?\n584:                                                            - 8점\n585: \n586: \n587:                                                          ◈ 과체중아\n588:                                                          · 정의 : 해당 나이에서 출생 체중이 90백분위수 이상인 경우\n589:                                                          · 특징\n590:                                                           (1) 분만 손상 ↑ : Brachial plexus 손상, 쇄골 골절, 두혈종, 경막밑 혈종 등",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q051",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q052",
+    "source": "HI raw 소아과_pre-test_1차_HI line 594",
+    "mode": "주Q",
+    "num_in_source": "HI-Q052",
+    "question": "과체중아의 분만 손상을 3가지 이상 쓰기",
+    "answer": "HI 1차 원문 Q052 (주Q, line 594) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n594:                                                           주Q. 과체중아의 분만 손상을 3가지 이상 쓰기\n595:                                                            - Brachial plexus 손상, 쇄골 골절, 두혈종\n596: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q052",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q053",
+    "source": "HI raw 소아과_pre-test_1차_HI line 597",
+    "mode": "주Q",
+    "num_in_source": "HI-Q053",
+    "question": "신생아 소생술의 첫 단계에서 양압환기를 결정하는 요소는?",
+    "answer": "HI 1차 원문 Q053 (주Q, line 597) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n597:   주Q. 신생아 소생술의 첫 단계에서 양압환기를 결정하는 요소는?\n598:    - 심박수 < 100회/분, 헐떡 호흡 혹은 무호흡이 있는지                     ◈ 과숙아    객\n599: \n600: \n601: \n602: \n603:                                                           · 정의 : 재태기간이 42주 이상인 아기",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q053",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q054",
+    "source": "HI raw 소아과_pre-test_1차_HI line 604",
+    "mode": "주Q",
+    "num_in_source": "HI-Q054",
+    "question": "재태연령 38주 2일, 출생체중 2,380g, 남아가 제왕절개술로 출생하였다.",
+    "answer": "HI 1차 원문 Q054 (주Q, line 604) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n604:   주Q. 재태연령 38주 2일, 출생체중 2,380g, 남아가 제왕절개술로 출생하였다.         · 처치 : 만삭에서 2~4주 이상 지나면 유도분만 또는 제왕절개술 시행\n605:       출생 직후 잘 울지 못하고 자발 호흡이 없고 축 늘어져 있었다. 1차적으로           · 특징\n606:       해야 할 처치에 대해 쓰시오.                                     (1) 배냇솜털이 없음\n607:    (1) 따듯하게 해주기, 정상 체온 유지           (3) 닦아주기               (2) 태지 감소\n608:    (2) 필요시 기도 분비물 제거                (4) 자극하기               (3) 손톱과 발톱이 김\n609:                                                            (4) 두발이 많음",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q054",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q055",
+    "source": "HI raw 소아과_pre-test_1차_HI line 610",
+    "mode": "객Q",
+    "num_in_source": "HI-Q055",
+    "question": "재태연령 38주 2일, 출생체중 2,380g, 제왕절개술로 출생한 남자아이다.",
+    "answer": "HI 1차 원문 Q055 (객Q, line 610) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n610:   객Q. 재태연령 38주 2일, 출생체중 2,380g, 제왕절개술로 출생한 남자아이다.          (5) 아기가 또렷또렷함\n611:      출생 시 자발호흡이 없고 축 늘어져 있어 보온, 기도개방, 건조, 자극을 시행           (6) 피부 : 창백하고 양피지 같고 벗겨져 있음\n612:      하였으나 생후 30초 째 심박 80회/분이었고, 호흡은 불규칙하였으며,               (7) 20% 에서 태반부전 증후군 동반 : 손톱, 피부, 탯줄, 태반막 등이 태변에 착색\n613:      손발에 청색증이 관찰되었다. 다음 처치는?",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q055",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q056",
+    "source": "HI raw 소아과_pre-test_1차_HI line 614",
+    "mode": "객Q",
+    "num_in_source": "HI-Q056",
+    "question": "다음 중 과숙아에 대한 설명으로 옳은 것은?",
+    "answer": "HI 1차 원문 Q056 (객Q, line 614) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n614:                                                           객Q. 다음 중 과숙아에 대한 설명으로 옳은 것은?\n615:     ① 기관 내 삽관                ② 가슴압박             ③ 양압환기\n616:                                                            ① 재태기간이 43주 이상인 아기를 말한다.\n617:     ④ 생리식염수 투여               ⑤ Epinephrine 투여\n618:                                                            ② 태지가 많다.\n619:                                                            ③ 태반 부전 증후군의 대부분은 과숙아이다.\n620:                                                            ④ 태반 부전 증후군이 동반되면 양수와 태아는 태변으로 착색된다.\n621:                                                            ⑤ 진통이 시작될 때까지 기다리며 자연 분만을 시도한다.\n622: \n623: [ 11장 신생아 질환 ]\n624: ◈ 신생아 진찰                                                  ◈ 신경학적 진찰\n625: 1. 특징         객주1) 모로 반사                                                    주",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q056",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q057",
+    "source": "HI raw 소아과_pre-test_1차_HI line 652",
+    "mode": "주Q",
+    "num_in_source": "HI-Q057",
+    "question": "(모로 반사에 대한 설명과 그림이 주어짐) 다음 반사는?",
+    "answer": "HI 1차 원문 Q057 (주Q, line 652) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n652:  · 비정상 : 보조호흡근 사용, 호기동안 약하게 신음 소리, 그르렁 소리, 콧방울 벌렁,        주Q. (모로 반사에 대한 설명과 그림이 주어짐) 다음 반사는?\n653: \n654:            늑간근 및 흉골의 함몰 -> 흉부 방사선 실시",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q057",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q058",
+    "source": "HI raw 소아과_pre-test_1차_HI line 655",
+    "mode": "주Q",
+    "num_in_source": "HI-Q058",
+    "question": "임신 나이 41주 체중 4100g 신생아가 질분만으로 난산으로 태어났다. 바로",
+    "answer": "HI 1차 원문 Q058 (주Q, line 655) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n655:                                                           주Q. 임신 나이 41주 체중 4100g 신생아가 질분만으로 난산으로 태어났다. 바로\n656: \n657: 6. 심장                                                         누운 신생아의 머리를 30도 정도 들어 순간적으로 떨어트렸더니 한쪽 팔은 쭉\n658: \n659:  · 심잡음 유무 : 심병변 의심 시 심초음파 검사 실시                               뻗어 구부렸으나 다른 팔은 움직이지 않았다. 의심되는 진단 3가지\n660: \n661:  · 심박수 : 잘 때 90회/분 ~ 활동 중 180회/분                            - 편마비, 쇄골 골절, 상지 신경 손상\n662: \n663:  · 맥박은 상지 & 하지에서 모두 촉진",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q058",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q059",
+    "source": "HI raw 소아과_pre-test_1차_HI line 664",
+    "mode": "주Q",
+    "num_in_source": "HI-Q059",
+    "question": "쇄골 골절을 파악하기 위한 원시 반사는?",
+    "answer": "HI 1차 원문 Q059 (주Q, line 664) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n664:                                                           주Q. 쇄골 골절을 파악하기 위한 원시 반사는?\n665: \n666: 7. 복부                                                       - 모로 반사\n667: \n668:  · 정상적으로 생후 24시간 까지는 X선 사진 상 가스가 직장에서 보여야 함\n669:  · 배꼽 혈관 : 2개 동맥, 1개 정맥\n670:                                                           ◈ 신생아 피부 진찰 소견              주   주\n671: \n672: \n673: \n674: \n675: 8. 대, 소변                                                   (1) 할리퀸 색조 변화 : 옆으로 뉘었을 때 시상부터 지골까지 중앙선 따라 좌우 다름",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q059",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q060",
+    "source": "HI raw 소아과_pre-test_1차_HI line 679",
+    "mode": "객Q",
+    "num_in_source": "HI-Q060",
+    "question": "신생아 진찰 설명 중 옳은 것은?",
+    "answer": "HI 1차 원문 Q060 (객Q, line 679) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n679:   객Q. 신생아 진찰 설명 중 옳은 것은?                                   (4) 독성 홍반 : 홍반 위에 작은 수포 농포성 구진\n680:    ① 신생아 초진은 24시간 후 시행한다.                                  (5) 태변 착색 : 자궁 내 저산소증 등에 의해 태지, 피부, 탯줄이 황갈색으로 탈색\n681:    ② 처음 앞숫구멍은 열려 있으며 팽만되어 있다.",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q060",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q061",
+    "source": "HI raw 소아과_pre-test_1차_HI line 682",
+    "mode": "주Q",
+    "num_in_source": "HI-Q061",
+    "question": "다음 설명에 해당하는 피부 진찰 소견은?",
+    "answer": "HI 1차 원문 Q061 (주Q, line 682) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n682:    ③ 호흡수는 1분동안 편안한 상태에서 재야되며 30~60회가 정상이다.                주Q. 다음 설명에 해당하는 피부 진찰 소견은?\n683: \n684:    ④ 처음 심잡음이 없으면 심기형 배제 가능하다.                               (1) 생후 2~3일 이내 홍반 위 구진성 농포 : 독성 홍반\n685: \n686:    ⑤ 95% 이상에서 출산 후 24시간 내에 첫 소변이 나오고, 24시간 후에 태변이           (2) 골반이나 다른 부위 경계 뚜렷한 푸른색소 침착 : 몽고 반점\n687: \n688:        나온다.                                                 (3) 옆으로 뉘였을 때 시상부터 치골까지 중앙선 따라 좌우 피부색 차이\n689:                                                               : 할리퀸 색조 변화\n690: \n691: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q061",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q062",
+    "source": "HI raw 소아과_pre-test_1차_HI line 692",
+    "mode": "주Q",
+    "num_in_source": "HI-Q062",
+    "question": "(연어반 사진 주고) 진단과 치료는?",
+    "answer": "HI 1차 원문 Q062 (주Q, line 692) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n692:                                                            주Q. (연어반 사진 주고) 진단과 치료는?\n693:                                                             - 진단 : 연어반\n694:                                                             - 치료 : 경과관찰\n695: \n696: [ 11장 신생아 질환 ]\n697: ◈ 신생아 관리                                           ◈ 분만 손상\n698: \n699:             객주\n700:  · 신생아는 열 손실이 쉬워서 체온 조절이 힘듦 -> 담요로 싸서 보온\n701:   - 체중에 비해 체표면적이 넓고, 피하 지방의 절연층이 얇고, 양수에 젖어 있어서\n702:                                                    1. 두개 외 손상\n703:                                                    1) 산류 : 경계 불분명, 봉합선을 넘어서 발생, 선진 부위에 발생",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q062",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q063",
+    "source": "HI raw 소아과_pre-test_1차_HI line 711",
+    "mode": "주Q",
+    "num_in_source": "HI-Q063",
+    "question": "37주. 태생, 3.7kg 신생아가 머리에 봉합선을 넘지 않는, 경계가 뚜렷한",
+    "answer": "HI 1차 원문 Q063 (주Q, line 711) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n711:                                                     주Q. 37주. 태생, 3.7kg 신생아가 머리에 봉합선을 넘지 않는, 경계가 뚜렷한\n712:  · 피부 관리\n713:                                                        덩어리가 만져진다고 해서 왔다. 진단은?\n714:   - 체온이 충분히 안정화 될 때까지 목욕 보류\n715:                                                      - 두혈종\n716:   - 배꼽이 떨어져 나가면 욕조에서 목욕 시켜도 됨\n717:  · 신생아 출혈 질환 방지를 위해 출생 직후에 Vitamin K1 1mg 근육주사",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q063",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q064",
+    "source": "HI raw 소아과_pre-test_1차_HI line 718",
+    "mode": "주Q",
+    "num_in_source": "HI-Q064",
+    "question": "신생아 머리에 봉합선을 통과하는 경계가 불분명한 덩어리가 만져짐. 진단은?",
+    "answer": "HI 1차 원문 Q064 (주Q, line 718) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n718:                                                     주Q. 신생아 머리에 봉합선을 통과하는 경계가 불분명한 덩어리가 만져짐. 진단은?\n719:  · 선별 검사는 모두에게 실시\n720:                                                      - 산류\n721:  · B형 간염 예방 접종은 퇴원 전에 시행\n722:  · 모유 수유 권장 (되도록 일찍)\n723:                                                    2. 말초 신경 손상",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q064",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q065",
+    "source": "HI raw 소아과_pre-test_1차_HI line 724",
+    "mode": "객Q",
+    "num_in_source": "HI-Q065",
+    "question": "신생아 관리에 대한 설명 중 옳은 것은?",
+    "answer": "HI 1차 원문 Q065 (객Q, line 724) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n724:  객Q. 신생아 관리에 대한 설명 중 옳은 것은?                        1) Brachial palsy (위팔 신경 마비)\n725:   ① 신생아는 성인의 체표면적보다 체표면적이 작아 보온에 신경 써야 한다.          ① Erb-Duchenne 마비 (상부 위팔 신경 마비) : C5~6 손상      객\n726: \n727: \n728: \n729:   ② 눈관리는 임산부와 신생아의 bonding을 위해 바로 하지 않고, 질산은 점안시      - 어깨는 내전, 내회전, 팔꿈치는 펴서, 아래팔은 회내한 상태로 움직이지 못함\n730:     바로 씻는다.                                           - 손상 쪽 Moro (-), 파악 반사 (+)\n731:   ③ 감염을 막기 위해 출생 후 바로 씻긴다.                          ② Klumpke 마비 (하부 위팔 신경 마비) : C7~8, T1 손상\n732:   ④ 출혈을 예방하기 위해 근주 Vit.K 1mg 을 주사한다.                  - 파악 반사 (-)\n733:   ⑤ 유전, 혈역학적 선별검사는 보호자와 상의 후 선택적으로 시행한다.\n734:                                                    2) 횡격막 신경 마비 : C3, 4, 5 손상\n735: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q065",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q066",
+    "source": "HI raw 소아과_pre-test_1차_HI line 753",
+    "mode": "객Q",
+    "num_in_source": "HI-Q066",
+    "question": "재태연령 39주, 출생 체중 2.9kg로 정상질식분만, 출생 시 잘 울었고, 전신",
+    "answer": "HI 1차 원문 Q066 (객Q, line 753) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n753:                                                     객Q. 재태연령 39주, 출생 체중 2.9kg로 정상질식분만, 출생 시 잘 울었고, 전신",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q066",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q067",
+    "source": "HI raw 소아과_pre-test_1차_HI line 754",
+    "mode": "객Q",
+    "num_in_source": "HI-Q067",
+    "question": "임신성 당뇨로 인슐린 치료를 받고 있던 임산부가 임신 36주에 3.8kg의",
+    "answer": "HI 1차 원문 Q067 (객Q, line 754) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n754:   객Q. 임신성 당뇨로 인슐린 치료를 받고 있던 임산부가 임신 36주에 3.8kg의        상태 양호했으나 좌측 모로반사 안타나고, 좌측 어깨는 모아서 내회전 되어있음.\n755:      여아를 제왕절개로 분만하였다. 이후 아기에게 보일 수 있는 소견은?             좌측 팔꿈치는 펴서 아래팔이 회내 증가, 파악반사는 정상, 진단은?\n756:    ① 고마그네슘혈증            ② 고혈당혈증    ③ 저칼슘혈증           ① Klumpke 마비         ② Erb-duchenne 마비    ③ 가로막 신경 마비\n757:    ④ 저칼륨혈증              ⑤ 빈혈                         ④ 좌측쇄골 골절            ⑤ 얼굴 신경 마비\n758: \n759: ◈ 다태아에서의 합병증\n760:  1) 역동맥관류 증후군 (TRAP)                               ◈ 선천 기형       주\n761: \n762: \n763: \n764: \n765:                           객주",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q067",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q068",
+    "source": "HI raw 소아과_pre-test_1차_HI line 774",
+    "mode": "주Q",
+    "num_in_source": "HI-Q068",
+    "question": "태반에서 동정맥간 문합이 발생하여 한 태아에서 다른 태아로 혈액이 유출되는",
+    "answer": "HI 1차 원문 Q068 (주Q, line 774) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q068",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q069",
+    "source": "HI raw 소아과_pre-test_1차_HI line 774",
+    "mode": "주Q",
+    "num_in_source": "HI-Q069",
+    "question": "생명 위협하는 선천 기형 중 증상에 따라 추정 가능한 기형은?",
+    "answer": "HI 1차 원문 Q069 (주Q, line 774) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n774:   주Q. 태반에서 동정맥간 문합이 발생하여 한 태아에서 다른 태아로 혈액이 유출되는     주Q. 생명 위협하는 선천 기형 중 증상에 따라 추정 가능한 기형은?\n775:     질환을 무엇이라 하는가?                                    (1) 양수과다, 과다 침흘림, VATER 증후군 : 식도 폐쇄\n776:   - 쌍태아간 수혈 증후군 (TTTS)                               (2) 양수과다, 담즙 착색 구토, 복부 팽만 : 십이지장 폐쇄\n777: \n778: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q069",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q070",
+    "source": "HI raw 소아과_pre-test_1차_HI line 779",
+    "mode": "객Q",
+    "num_in_source": "HI-Q070",
+    "question": "태어나자마자 호흡곤란, 청색증, 오목가슴, 배가 홀쭉함, 왼쪽 폐에서는",
+    "answer": "HI 1차 원문 Q070 (객Q, line 779) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n779:                                                     객Q. 태어나자마자 호흡곤란, 청색증, 오목가슴, 배가 홀쭉함, 왼쪽 폐에서는\n780:                                                       호흡음이 거의 들리지 않음. (X-ray 사진 제공), 진단은?\n781:                                                      A) 선천 가로막 탈장\n782: \n783: [ 11장 신생아 질환 ]\n784: ◈ 신생아의 호흡기 질환                                            4. 신생아 지속성 폐동맥 고혈압 (PPHN)\n785: 1. 신생아 일과성 빠른 호흡 (TTN)       주\n786:                                                          · 출생 직후 PVR 감소 실패로 폐외 R-L shunt 발생 -> 저산소증, 고탄산혈증\n787:  · 위험요인 : 만삭아, 제왕절개, 당뇨 산모                               · 임상 양상\n788:  · 증상 : 출생 후 빈호흡, 호흡곤란 -> 시간 경과에 따른 증상 악화 없음              - 만삭아에서 100% 산소 투여해도 청색증이 호전되지 않음\n789:  · 예후 : 보통 24~72 시간 내에 호전됨                                - 출생 후 12시간 이내 증상 발현\n790:  · 진단 : CXR 에서 Sunburst pattern                          · 진단 : 심초음파",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q070",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q071",
+    "source": "HI raw 소아과_pre-test_1차_HI line 807",
+    "mode": "주Q",
+    "num_in_source": "HI-Q071",
+    "question": "임신 나이 29주, 출생체중 1,600g 신생아가 인공 호흡기 치료 중이다. 생후",
+    "answer": "HI 1차 원문 Q071 (주Q, line 807) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n807:                                                          주Q. 임신 나이 29주, 출생체중 1,600g 신생아가 인공 호흡기 치료 중이다. 생후\n808:  · 예방 : 인공 폐표면 활성제\n809:                                                             2일에 갑자기 호흡곤란, 청색증, 가슴뒤당김이 심해졌고, 산소포화도가 낮아\n810:                                                             졌다. 가슴 X선 사진에서 오른쪽 가슴에서 공기음영이 증가하고, 가로막이\n811: 3. 태변 흡입 증후군 (MAS)       객\n812: \n813:                                                             아래로 이동되고, 세로칸이 왼쪽으로 이동하였다. 진단과 치료는?\n814:  · 양수가 태변에 착색된 채로 태어난 신생아에서 호흡곤란 증상이 보이고, 그 원인을\n815:                                                           - 진단 : 기흉\n816:   달리 찾아서 설명할 수 없는 경우\n817:                                                           - 치료 : 가슴관 삽관\n818:  · 과숙아 or 만삭아에서 흔히 발생",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q071",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q072",
+    "source": "HI raw 소아과_pre-test_1차_HI line 822",
+    "mode": "주Q",
+    "num_in_source": "HI-Q072",
+    "question": "38주, 제왕절개, 산모 5년 째 당뇨약 먹는 중, Sunburst pattern 보이는 ◈ 신생아 괴사성 장염 (NEC) 객",
+    "answer": "HI 1차 원문 Q072 (주Q, line 822) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n822:  주Q. 38주, 제왕절개, 산모 5년 째 당뇨약 먹는 중, Sunburst pattern 보이는   ◈ 신생아 괴사성 장염 (NEC)       객\n823: \n824: \n825: \n826: \n827:      x-ray 주고 진단과 치료는?                                   · 위험요인 : 미숙아, 저체중아, 장허혈, 고농도 경구 영양, 빠른 수유 진행\n828:    - 진단 : TTN                                            · 임상양상: 대부분 생후 2~3주 이내 발병\n829:    - 치료 : 보조 산소공급 및 경과관찰                                  - 비특이적전신증상: 기면, 무호흡, 체온불안정\n830:                                                           - 위장관 증상 : 복부팽만, 구토, 혈변, 장음감소",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q072",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q073",
+    "source": "HI raw 소아과_pre-test_1차_HI line 831",
+    "mode": "주Q",
+    "num_in_source": "HI-Q073",
+    "question": "임신나이 42주, 출생체중 4.0kg인 신생아가 출생 직후부터 호흡 곤란을",
+    "answer": "HI 1차 원문 Q073 (주Q, line 831) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n831:  주Q. 임신나이 42주, 출생체중 4.0kg인 신생아가 출생 직후부터 호흡 곤란을            - Football sign : pneumoperitoneum을 의미하여 응급개복술 필요\n832:     보여 인공 환기 요법을 시행하였다. 태아 심박수 측정 시 후기 심박수 저하가           · 진단 : X-ray 상 장벽 내 공기 관찰, 복강 내 free air\n833:     관찰되었고, 양수는 태변 착색을 보였다. 흉부 방사선 소견이 다음과 같을 때,          · 치료\n834:     적절한 진단은?                                              - 금식, TPN, L-tube 감압, 수분공급\n835:    - 태변 흡입 증후군 (MAS)                                      - 항생제 투여, DIC 교정\n836:                                                           - 응급개복술: 장천공이 있거나 치료에 반응 없을 때",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q073",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q074",
+    "source": "HI raw 소아과_pre-test_1차_HI line 837",
+    "mode": "객Q",
+    "num_in_source": "HI-Q074",
+    "question": "제왕절개술, 산소공급과 환기로 나아지지 않는 청색증, 손과 발에 태변,",
+    "answer": "HI 1차 원문 Q074 (객Q, line 837) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n837:  객Q. 제왕절개술, 산소공급과 환기로 나아지지 않는 청색증, 손과 발에 태변,",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q074",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q075",
+    "source": "HI raw 소아과_pre-test_1차_HI line 838",
+    "mode": "객Q",
+    "num_in_source": "HI-Q075",
+    "question": "27개월, 700g 출생 이후 RDS 로 인공 환기. 분유 수유 중 15일 째 혈변 있음.",
+    "answer": "HI 1차 원문 Q075 (객Q, line 838) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n838:                                                          객Q. 27개월, 700g 출생 이후 RDS 로 인공 환기. 분유 수유 중 15일 째 혈변 있음.\n839:     하얀 X-ray 사진. 치료는?\n840:                                                             잦은 무호흡, 처짐, 저혈압, 복부팽만, 장음 감소, Foot ball sign 보임. 진단은?\n841:   ① 가슴 압박               ② 기관 내 삽관     ③ 일산화 질소 흡입\n842:                                                            - 신생아 괴사성 장염\n843:   ④ 코르티스테로이드 투여 ⑤ 인공폐표면활성제투여\n844: \n845: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q075",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q076",
+    "source": "HI raw 소아과_pre-test_1차_HI line 846",
+    "mode": "객Q",
+    "num_in_source": "HI-Q076",
+    "question": "임신 나이 29주, 체중 1,000g 으로 출생한 신생아가 RDS로 폐표면 활성제를",
+    "answer": "HI 1차 원문 Q076 (객Q, line 846) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n846:  객Q. 임신 나이 29주, 체중 1,000g 으로 출생한 신생아가 RDS로 폐표면 활성제를\n847:     사용 후 가슴 X-ray 와 임상 양상의 호전을 보이던 중 생후 10일 경 호흡수가\n848:     70회/분, 무호흡 횟수의 증가, FiO2 21% 에서 40% 까지 증가해 촬영한\n849:     X-ray 는 다음 과 같다. 의심되는 진단은?\n850:   ① 태변 흡인 증후군\n851:   ② 기관지폐 형성이상\n852:   ③ 신생아 일과성 빠른 호흡\n853:   ④ 동맥관 열림증\n854:   ⑤ 심실 중격 결손\n855: \n856: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q076",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q077",
+    "source": "HI raw 소아과_pre-test_1차_HI line 857",
+    "mode": "주Q",
+    "num_in_source": "HI-Q077",
+    "question": "RDS 사진과 병력 주고 진단은?",
+    "answer": "HI 1차 원문 Q077 (주Q, line 857) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n857:  주Q. RDS 사진과 병력 주고 진단은?\n858: \n859: [ 11장 신생아 질환 ]\n860: ◈ 선천 감염 (진단적 의미 있음)                                        ◈ 신생아 발열\n861:  1) Rubella virus                                          1) 탈수열\n862: \n863: \n864:                       객주\n865:   : 수막뇌염 / 수두종 / 샘병증 / 청력 장애 / 심근염 / 선천 결함 / 뼈질환 / 녹내장 /\n866:    맥락망막염 or 망막증 / 백내장 / 소안구증\n867:  2) Cytomegalovirus\n868:                                                             · 건강한 신생아에서 생후 2~3일에 38~39 ℃의 체온 상승",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q077",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q078",
+    "source": "HI raw 소아과_pre-test_1차_HI line 881",
+    "mode": "객Q",
+    "num_in_source": "HI-Q078",
+    "question": "5세 남아가 열이 나서 병원에 내원하였다. 임신 나이 39주 2일, 출생 체중",
+    "answer": "HI 1차 원문 Q078 (객Q, line 881) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n881:    포도막염                                                     객Q. 5세 남아가 열이 나서 병원에 내원하였다. 임신 나이 39주 2일, 출생 체중\n882:  6) Enterovirus                                                3.2kg, 질식분만으로 태어나 조리원에서 진고 있고 분유를 먹고 있었다. 5일\n883:   : 수막뇌염 / 샘병증 / 반점구진 발진 / 마비 / 심근염 / 결막염 or 각결막염              전부터 자주 토하고, 묽은 변을 하루 7~10회 본다고 하였다. 조리원에서\n884:                                                                유사한 증상을 보이는 신생아가 4명 있었다. 진찰 상 맥박 150회/분, 호흡",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q078",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q079",
+    "source": "HI raw 소아과_pre-test_1차_HI line 885",
+    "mode": "주Q",
+    "num_in_source": "HI-Q079",
+    "question": "자궁 또는 분만 시 감염으로 나타나는 증상이다. 가장 가능성 있는 것은?",
+    "answer": "HI 1차 원문 Q079 (주Q, line 885) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n885:   주Q. 자궁 또는 분만 시 감염으로 나타나는 증상이다. 가장 가능성 있는 것은?                 40회/분, 체온 38.3이다. 아기는 처져있고, 복부팽만이 있다. 가장 가능성\n886:    · 증상 : 간비비대, 황달, 폐렴, 출혈반, 수막뇌염, 수두증, 소두증, 두개내석회화,           높은 원인은?\n887:            청력장애, 맥락망막염, 시력장애                                 ① 로타 바이러스                   ② 파르보               ③ 거대세포바이러스\n888:    A) Cytomegalovirus                                        ④ 인플루엔자                     ⑤ 단순헤르페스\n889: \n890: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q079",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q080",
+    "source": "HI raw 소아과_pre-test_1차_HI line 891",
+    "mode": "객Q",
+    "num_in_source": "HI-Q080",
+    "question": "태어난지 3일 된 여자아기 40주 출생, 3kg, 열이 나서 왔다. V/S은 괜찮았고,",
+    "answer": "HI 1차 원문 Q080 (객Q, line 891) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n891:                                                             객Q. 태어난지 3일 된 여자아기 40주 출생, 3kg, 열이 나서 왔다. V/S은 괜찮았고,\n892:                                                                체온은 38.1도. 내원 당시 체중은 2.7kg 이었고 아기 상태는 좋았다. 얼굴에\n893:                                                                홍조, 황달이 있었고, 손발이 따듯하다. 치료는?\n894:                                                              ① 항생제                       ② 해열제               ③ 분유 수유\n895:                                                              ④ 미온수 마사지                   ⑤ 모유 수유 증량\n896:                                                              -> 해설 : 탈수 소견 보이니까 열은 탈수열, 황달은 조기 모유 수유 때문임.\n897: \n898: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q080",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q081",
+    "source": "HI raw 소아과_pre-test_1차_HI line 899",
+    "mode": "객Q",
+    "num_in_source": "HI-Q081",
+    "question": "재태연령 36주, 출생 체중 2.8kg, 질식분만으로 출생한 생후 7일 남아. 산전",
+    "answer": "HI 1차 원문 Q081 (객Q, line 899) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n899:                                                             객Q. 재태연령 36주, 출생 체중 2.8kg, 질식분만으로 출생한 생후 7일 남아. 산전\n900:                                                                조기양막파수가 있었고, 피부가 얼룩덜룩하며 38.5도의 발열이 있으며,\n901:                                                                밥을 잘 안먹으려 한다. 치료는?\n902:                                                               · 혈액 검사 : WBC 4000, Plt 10,000, CRP 3\n903:                                                               · CSF 검사 : WBC 10 (단핵구 10, 림프구 90), 당 50, 단백질 100\n904:                                                              ① Ampicillin + Cefazolin            ② Ampicillin + Gentamycin\n905:                                                              ③ Penicillin + Cefotaxime           ④ Vancomycin + Meropenem\n906:                                                              ⑤ Cefazolin + Acyclovir\n907: \n908: [ 11장 신생아 질환 ]\n909: ◈ 황달                                                    ◈ 모유 황달     객\n910: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q081",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q082",
+    "source": "HI raw 소아과_pre-test_1차_HI line 929",
+    "mode": "객Q",
+    "num_in_source": "HI-Q082",
+    "question": "임신 나이 38주 5일, 출생체중 3.1kg 로 태어난 생후 10일 된 여아가 황달로",
+    "answer": "HI 1차 원문 Q082 (객Q, line 929) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n929:                                                         객Q. 임신 나이 38주 5일, 출생체중 3.1kg 로 태어난 생후 10일 된 여아가 황달로\n930:  · 만삭아에서 빌리루빈 12mg/dL 이상, 미숙아에서 10~14mg/dL 이상\n931:                                                            병원에 왔고, 체중은 3200g 였으며 모유 수유 중이었다. 검사는 다음과 같았다.\n932:  · 황달이 생후 10~14일 이상 지속되는 경우\n933:                                                            옳은 조치는?\n934:  · 생후 시간에 관계없이 직접 빌리루빈 2mg/dL 이상\n935:                                                           · 백혈구 8000, 혈색소 16.0g/dL, 그물적혈구 2.8%, 혈소판 260,000\n936: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q082",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q083",
+    "source": "HI raw 소아과_pre-test_1차_HI line 937",
+    "mode": "객Q",
+    "num_in_source": "HI-Q083",
+    "question": "황달의 원인과 시기로 적합하게 이어진 것은?",
+    "answer": "HI 1차 원문 Q083 (객Q, line 937) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n937:  객Q. 황달의 원인과 시기로 적합하게 이어진 것은?                             · AST/ALT 42/19, CRP 0.1, 빌리루빈 (총/직접) 8.5/0.5\n938:   ① 생후 24시간 이내 - 태아 적혈모구증                                ① 분유 수유로 변경            ② 포도당 보충                  ③ 광선요법\n939:   ② 생후 24시간 이내 - 모유 황달                                   ④ 경과 관찰                ⑤ 교환 수혈\n940:   ③ 3~7일 - 담도 폐쇄증\n941:                                                         ◈ 용혈성 황달 -> 생후 1일에 발생\n942:   ④ 2~3일 - 갑상선 기능 저하증\n943:                                                         1. Rh 부적합\n944:   ⑤ 7일 이후 - 생리적 황달\n945:                                                         · Coombs 검사 : 간접 (+) / 직접 (+)\n946:                                                         · 검사 결과 : 빈혈, Reticulocyte 증가, nRBC 증가",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q083",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q084",
+    "source": "HI raw 소아과_pre-test_1차_HI line 947",
+    "mode": "객Q",
+    "num_in_source": "HI-Q084",
+    "question": "신생아 황달에서 평가가 필요한 경우는?",
+    "answer": "HI 1차 원문 Q084 (객Q, line 947) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n947:  객Q. 신생아 황달에서 평가가 필요한 경우는?\n948:                                                         · Rh (-) 산모가 임신 중, 유산, 분만 등에 의해 태아의 D 항원에 감작되어서 발생\n949:   ① 생후 72시간 이내에 발생\n950:                                                         · 예방 : 항 Rh 면역글로불린 (RhoGAM)\n951:   ② 하루에 빌리루빈 6mg/dL 증가\n952:   ③ 미숙아에서 빌리루빈 9mg/dL\n953:                                                         2. ABO 부적합\n954:   ④ 8일 째 지속되는 황달\n955:                                                         · Coombs 검사 : 간접 (+) / 직접 (-)\n956:   ⑤ 직접 빌리루빈 1\n957:                                                         · 대개 엄마의 혈액형이 O형이고, 신생아의 혈액형이 A or B 형일 때 발생\n958: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q084",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q085",
+    "source": "HI raw 소아과_pre-test_1차_HI line 961",
+    "mode": "주Q",
+    "num_in_source": "HI-Q085",
+    "question": "GA 38주, 출생체중 3.1kg 으로 태어난 아이가 생후 3일 째 내원하였다. 생후",
+    "answer": "HI 1차 원문 Q085 (주Q, line 961) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n961:  · 정의 : 간접 빌리루빈이 뇌세포 내에 축적되어 발생하는 신경학적 증후군               주Q. GA 38주, 출생체중 3.1kg 으로 태어난 아이가 생후 3일 째 내원하였다. 생후\n962:  · 임상 양상                                                    1일 째부터 황달이 보였으며 검사 결과는 다음과 같다. 황달의 원인은?\n963:   - 초기 : 무기력 (기면), 식욕부진, Moro 반사 소실 등                     · 백혈구 7500, 혈색소 11.5g/dL, 그물 적혈구 10%, 혈소판 300,000\n964:   - 후기 : 후궁반장, 천문 팽윤, 안면 및 사지 연축, 높은 울음소리, 경련 및 발작        · AST/ALT 정상, 빌리루빈 (총/직접) 15/0.9\n965:  · 일반적인 핵황달의 빌리루빈 농도 > 20mg/dL                            · 산모 Rh+ O형, 아이 RH+ A 형\n966:  · 치료 : 광선치료, 교환수혈                                        A) ABO 부적합\n967:         -> 핵황달의 위험이 있는 혈중 간접 빌리루빈 농도에 도달하지 못하도록 예방\n968:                                                         ◈ 황달의 치료        주   객\n969: \n970: \n971: \n972:  ◈ 생리적 황달    객",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q085",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q086",
+    "source": "HI raw 소아과_pre-test_1차_HI line 983",
+    "mode": "객Q",
+    "num_in_source": "HI-Q086",
+    "question": "신생아 생리적 황달에 대해 옳은 것은?",
+    "answer": "HI 1차 원문 Q086 (객Q, line 983) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q086",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q087",
+    "source": "HI raw 소아과_pre-test_1차_HI line 983",
+    "mode": "주Q",
+    "num_in_source": "HI-Q087",
+    "question": "신생아 황달의 치료 중 광선 치료를 효과적으로 하기 위한 방법 3가지 이상",
+    "answer": "HI 1차 원문 Q087 (주Q, line 983) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n983:   객Q. 신생아 생리적 황달에 대해 옳은 것은?                              주Q. 신생아 황달의 치료 중 광선 치료를 효과적으로 하기 위한 방법 3가지 이상\n984:    ① 태아적혈구 파괴와 간의 미숙에 의해 발생한다.",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q087",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q088",
+    "source": "HI raw 소아과_pre-test_1차_HI line 985",
+    "mode": "객Q",
+    "num_in_source": "HI-Q088",
+    "question": "생후 24시간에 신생아가 피부가 노래져서 왔음. 적절한 치료는?",
+    "answer": "HI 1차 원문 Q088 (객Q, line 985) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n985:    ② 생후 직후부터 발생한다.                                       객Q. 생후 24시간에 신생아가 피부가 노래져서 왔음. 적절한 치료는?\n986:    ③ 직접 빌리루빈이 증가한다.                                       · Hb 10.1, 적혈구 용적률 31%, 그물적혈구 9.0, 쿰즈검사 (직/간) 음/양\n987:    ④ 하루에 5mg/dL 이상 증가한다.                                  · 빌리루빈 (총/직접) 22/0.9, AST/ALT 40/22, CRP 0.5\n988:    ⑤ 한달 이상 지속된다.                                         A) 교환수혈\n989: \n990: [ 11장 : 신생아 질환]\n991: ◈ 예방 접종                                                        ◈ 약독화 생백신 종류 -> 생백신간에는 4주 이상 간격 필요\n992: \n993: \n994: \n995: \n996:             객주",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q088",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q089",
+    "source": "HI raw 소아과_pre-test_1차_HI line 1006",
+    "mode": "객Q",
+    "num_in_source": "HI-Q089",
+    "question": "13개월 남아가 예방접종을 받기 위해 병원에 왔다. 생후 7개월 까지는 접종을",
+    "answer": "HI 1차 원문 Q089 (객Q, line 1006) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n1006:   객Q. 13개월 남아가 예방접종을 받기 위해 병원에 왔다. 생후 7개월 까지는 접종을                ② 즉각적 아나필락시스 반응                 - 48hr 이내 허탈, 쇼크 유사 상태 발생\n1007:      다 받았으나, 이후 잦은 감기 때문에 접종을 못하였다. 발육은 정상이었다.                   ③ 진행하는 신경 질환이 있는 경우             - 48hr 이내 달래도 심하게 3시간 이상 움\n1008:      시행해야 할 예방 접종은?                                            (4) MMR 접종 금지     주    주\n1009:                                                                                                  - 3일 이내 열성 또는 비열성 경련 발생\n1010:    ① 수두                ② BCG                ③ B형 간염              ① 임신\n1011:    ④ 로타바이러스            ⑤ 회색질척수염백신 (Polio vaccine)                ② 백혈병 or 림프성, 기타 악성 종양\n1012:                                                                  ③ 면역억제요법 -> 중지 3개월 후에 접종",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q089",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q090",
+    "source": "HI raw 소아과_pre-test_1차_HI line 1013",
+    "mode": "객Q",
+    "num_in_source": "HI-Q090",
+    "question": "14개월 소아가 예방접종을 받기 위해 병원에 왔다. 평소 건강하고 영아 접종은",
+    "answer": "HI 1차 원문 Q090 (객Q, line 1013) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n1013:   객Q. 14개월 소아가 예방접종을 받기 위해 병원에 왔다. 평소 건강하고 영아 접종은                ④ 면역글로불린, 혈액, 혈청 등을 사용\n1014:      추천 일정에 따라 맞았고, 12개월 이후에는 2주 전에 A형 간염, MMR 접종을               ⑤ 지연성 과민반응 기전 결여\n1015:      받았고, 접종력은 다음과 같다. 추천 접종은?                                   ⑥ Gelatin, neomycin 알레르기\n1016:      : BCG 1회, DTaP 3회, 폴리오 3회, 폐렴구균 3회, B형 간염 3회, A형 간염 1회,\n1017:       B형 인플루엔자 3회, MMR 1회                                      2. 면역글로불린 & 혈액제제 투여 후 약독화 생백신 접종 간격\n1018:    ① 수두                ② 수막알균               ③ 약독화 일본뇌염         (1) 면역 글로불린\n1019:    ④ 로타바이러스            ⑤ 폐렴구균                                   - 면역결핍 치료 : 8개월\n1020:                                                                 - Kawasaki 병 : 11개월",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q090",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q091",
+    "source": "HI raw 소아과_pre-test_1차_HI line 1021",
+    "mode": "객Q",
+    "num_in_source": "HI-Q091",
+    "question": "11세 여아가 예방접종을 위해 병원에 왔다. 4년 전 급성림프구 백혈병을 진단",
+    "answer": "HI 1차 원문 Q091 (객Q, line 1021) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n1021:   객Q. 11세 여아가 예방접종을 위해 병원에 왔다. 4년 전 급성림프구 백혈병을 진단              (2) 혈액 제제 투여\n1022:      받고, 조혈모세포이식 없이 항암화학요법을 받고 완치되었다고 한다. 6세까지                  - Packed RBCs : 5~6개월\n1023:      예방접종은 나이에 맞게 모두 맞았다. 적합한 접종은?                              - 전혈 : 6개월\n1024:    ① B형간염              ② 일본뇌염               ③ 폐렴구균              - 혈장/혈소판 제품 : 7개월\n1025:    ④ MMR               ⑤ TDaP",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q091",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q092",
+    "source": "HI raw 소아과_pre-test_1차_HI line 1026",
+    "mode": "주Q",
+    "num_in_source": "HI-Q092",
+    "question": "DTaP 의 금기사항 2가지 이상 쓰기",
+    "answer": "HI 1차 원문 Q092 (주Q, line 1026) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n1026:                                                                주Q. DTaP 의 금기사항 2가지 이상 쓰기",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q092",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q093",
+    "source": "HI raw 소아과_pre-test_1차_HI line 1027",
+    "mode": "객Q",
+    "num_in_source": "HI-Q093",
+    "question": "15개월된 남아에서 추가적으로 필요한 예방접종을 고르시오.",
+    "answer": "HI 1차 원문 Q093 (객Q, line 1027) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n1027:   객Q. 15개월된 남아에서 추가적으로 필요한 예방접종을 고르시오.",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q093",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q094",
+    "source": "HI raw 소아과_pre-test_1차_HI line 1028",
+    "mode": "주Q",
+    "num_in_source": "HI-Q094",
+    "question": "MMR 백신의 금기증 2가지 이상 쓰기",
+    "answer": "HI 1차 원문 Q094 (주Q, line 1028) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n1028:      : BCG 1회, B형 간염 3회, DTaP 3회, 폴리오 3회, PCV 4회, MMR 1회,      주Q. MMR 백신의 금기증 2가지 이상 쓰기\n1029:       수두 1회, 일본뇌염 생백신 1회, A형 간염 1회",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q094",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q095",
+    "source": "HI raw 소아과_pre-test_1차_HI line 1030",
+    "mode": "객Q",
+    "num_in_source": "HI-Q095",
+    "question": "12개월 남아가 예방 접종을 위해 병원에 왔다. 2개월 전 수술을 받으면서",
+    "answer": "HI 1차 원문 Q095 (객Q, line 1030) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n1030:    ① DTaP              ② MMR             ③ 수두                  객Q. 12개월 남아가 예방 접종을 위해 병원에 왔다. 2개월 전 수술을 받으면서\n1031:    ④ 일본뇌염              ⑤ 로타                                        신선냉동혈장과 농축적혈구 수혈을 받았다고 하였다. 이전 예방접종은 접종\n1032:                                                                    시기에 맞게 모두 맞았다. 적합한 예방접종을 고르시오.",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q095",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q096",
+    "source": "HI raw 소아과_pre-test_1차_HI line 1033",
+    "mode": "주Q",
+    "num_in_source": "HI-Q096",
+    "question": "이전에 예방접종을 모두 접종 일정에 맞추어 제 때 시행한 4세 여아가 예방",
+    "answer": "HI 1차 원문 Q096 (주Q, line 1033) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n1033:   주Q. 이전에 예방접종을 모두 접종 일정에 맞추어 제 때 시행한 4세 여아가 예방                 ① MMR                     ② 수두              ③ BCG\n1034:      접종을 위해 내원하였다. 아이는 건강하며 내원 당일에도 기타 아픈 증상이                   ④ A형 간염 백신                ⑤ B형 간염 백신\n1035:      없다고 하였고, 계란을 먹으면 두드러기가 생긴다고 하지만 이전에 예방접종을",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q096",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q097",
+    "source": "HI raw 소아과_pre-test_1차_HI line 1036",
+    "mode": "주Q",
+    "num_in_source": "HI-Q097",
+    "question": "이전의 예방 접종은 모두 잘 맞아온 4세 소아가 수혈을 받은 후 시행해야 할",
+    "answer": "HI 1차 원문 Q097 (주Q, line 1036) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n1036:      했을 때 이상 반응은 없었다. 이 아이에게 접종할 수 있는 기본접종 3가지는?               주Q. 이전의 예방 접종은 모두 잘 맞아온 4세 소아가 수혈을 받은 후 시행해야 할\n1037:    - DTaP 5차, 폴리오 4차, MMR 2차                                      예방 접종 2가지와 일정 기간 동안은 시행하지 않아야 할 예방접종 1가지\n1038:                                                                 - 시행해야 할 예방접종 : DTaP 5차, IPV 4차\n1039:                                                                 - 시행하지 않아야 할 예방접종 : MMR 2차\n1040: \n1041: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q097",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q098",
+    "source": "HI raw 소아과_pre-test_1차_HI line 1042",
+    "mode": "주Q",
+    "num_in_source": "HI-Q098",
+    "question": "가와사키로 인해서 1개월 전 면역글로불린 치료를 받은 14개월 남아. 6개월",
+    "answer": "HI 1차 원문 Q098 (주Q, line 1042) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n1042:                                                                주Q. 가와사키로 인해서 1개월 전 면역글로불린 치료를 받은 14개월 남아. 6개월\n1043:                                                                   까지는 모두 접종 완료했고, 12개월과 3개월에 일본 뇌염 1,2차, Hib, PCV 4차\n1044:                                                                   까지 모두 완료했다. 해야하는 접종과 해야하지만 연기해야 할 예방접종은?\n1045:                                                                 - 해야되는 예방접종 : IPV 3차, A형 간염 1차\n1046:                                                                 - 연기해야 하는 예방접종 : MMR 1차, 수두\n1047: \n1048: [ 12장 : 감염병 ]\n1049: ◈ B형 간염 접종       주\n1050: \n1051: \n1052: \n1053: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q098",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q099",
+    "source": "HI raw 소아과_pre-test_1차_HI line 1061",
+    "mode": "주Q",
+    "num_in_source": "HI-Q099",
+    "question": "HBsAg (+) 산모에게서 태어난 신생아에게 투여할 2가지",
+    "answer": "HI 1차 원문 Q099 (주Q, line 1061) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n1061:   주Q. HBsAg (+) 산모에게서 태어난 신생아에게 투여할 2가지\n1062:    - 12시간 이내에 HBIG + B형 간염 백신\n1063: \n1064: \n1065: \n1066: ◈ 특수 상황에서의 예방 접종\n1067:  1) 무비증   객\n1068: \n1069: \n1070: \n1071:   · 생백신 접종 금기\n1072:   · 백신 접종 : 폐렴 구균, 뇌수막염 (Hib), 수막알균 (N. meningitidis)",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q099",
+      "주Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q100",
+    "source": "HI raw 소아과_pre-test_1차_HI line 1087",
+    "mode": "객Q",
+    "num_in_source": "HI-Q100",
+    "question": "만성특발혈소판감소자색반병을 앓고 있는 15세 남아가 스테로이드 치료에도",
+    "answer": "HI 1차 원문 Q100 (객Q, line 1087) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n1087:   객Q. 만성특발혈소판감소자색반병을 앓고 있는 15세 남아가 스테로이드 치료에도\n1088:      불구하고 출혈이 조절되지 않아 지라절제술을 받을 예정이다. 수술 전에 필요한\n1089:      예방접종으로 알맞은 것은?\n1090:    ① 결핵                 ② 수두              ③ 백일해\n1091:    ④ 수막알균               ⑤ 홍역/볼거리/풍진 (MMR)\n1092: \n1093: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q100",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
+  },
+  {
+    "id": "hi_q101",
+    "source": "HI raw 소아과_pre-test_1차_HI line 1094",
+    "mode": "객Q",
+    "num_in_source": "HI-Q101",
+    "question": "14개월 소아가 홍역, 볼거리, 풍진 혼합백신(MMR)을 접종하러 병원에 왔다.",
+    "answer": "HI 1차 원문 Q101 (객Q, line 1094) 확인 카드. 정답은 아래 HI 원문/해설 snippet 기준으로 확인한다. 기존 actual deck에 중복이 있더라도 HI의 Q marker 자체를 빠뜨리지 않기 위해 별도 보존했다.\n1094:   객Q. 14개월 소아가 홍역, 볼거리, 풍진 혼합백신(MMR)을 접종하러 병원에 왔다.\n1095:      천식으로 부데소니드 400μg을 하루 2회, 1개월 동안 흡입 치료하고 있다.\n1096:      접종 시기는?\n1097:    ① 지금 가능                     ② 부데소니드 치료 중단 후 즉시\n1098:    ③ 부데소니드 치료 중단 2주 후          ④ 부데소니드 치료 중단 1개월 후\n1099:    ⑤ 부데소니드 치료 중단 6개월 후\n1100: ",
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_snippet",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "episode": "HI-raw",
+    "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+    "answer_key_normalized": "HI raw snippet preserved",
+    "group_id": "G-HI-ALL-Q-MARKERS",
+    "dedup_decision": "source_preserve:hi_q_marker",
+    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_badges": [
+      "HI-Q",
+      "source-preserved"
+    ],
+    "tags": [
+      "HI",
+      "HI-Q",
+      "source-preserved",
+      "HI-Q101",
+      "객Q"
+    ],
+    "strict_dedup_v2": {
+      "episode": "HI-raw",
+      "content_axis": "HI 1차 원문 Q marker exact-source supplement",
+      "answer_key_normalized": "HI raw snippet preserved",
+      "group_id": "G-HI-ALL-Q-MARKERS",
+      "dedup_decision": "source_preserve:hi_q_marker",
+      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "badges": [
+        "HI-Q",
+        "source-preserved"
+      ]
+    }
   }
 ]
