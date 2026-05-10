@@ -204,7 +204,8 @@ def clean_answer_text(card: dict) -> str:
 def format_problem_html(text: str) -> str:
     out = e(text)
     # Put choices / Q1 / Q2 on separate lines for readability.
-    out = re.sub(r"\s+(?=(?:[1-5]|①|②|③|④|⑤)[\)\.]\s*)", "<br>", out)
+    out = re.sub(r"\s+(?=[①②③④⑤])", "<br>", out)
+    out = re.sub(r"\s+(?=[1-5][\)\.]\s*)", "<br>", out)
     out = re.sub(r"\s+(Q[12]\.)", r"<br>\1", out)
     out = out.replace(" 다른 선지)", "<br>다른 선지)")
     out = out.replace(" 선지:", "<br>선지:")
@@ -212,6 +213,10 @@ def format_problem_html(text: str) -> str:
 
 
 def answer_confidence(card: dict) -> tuple[str, str]:
+    if card.get("hi_repaired_v1"):
+        if card.get("needs_review"):
+            return "⚠️ HI 재구성 · 확인 필요", "HI 원문에서 질문/선지를 재조립했지만 답은 일부 추론이 섞여 있어 최종 확인이 필요합니다."
+        return "✅ HI 재구성", "HI 원문 Q marker를 실제 퀴즈 카드 형태로 재구성했습니다."
     if card.get("id") in UNCERTAIN_IDS or card.get("origin") == "actual_incomplete" or dedup_key(card) in {"needs_source", "fragment_of"}:
         return "⚠️ 알렌 기준 추정", "복기 원문/선지가 불완전해서 확정 답처럼 외우면 위험합니다. 알렌 개념으로 가장 그럴듯한 방향을 표시했습니다."
     if str(card.get("qc_flag", "")).startswith("added_from_HI_all_Q_marker_sweep"):
@@ -374,6 +379,14 @@ def pitfall_line(card: dict) -> str:
 
 
 def explanation_lines(card: dict) -> list[tuple[str, str]]:
+    if card.get("hi_repaired_v1"):
+        confidence, note = answer_confidence(card)
+        return [
+            ("핵심 단서", card.get("content_axis") or clean_question_text(card)[:90]),
+            ("HI 재구성", card.get("hi_repaired_explanation") or "HI 원문을 질문·선지·정답 형태로 재조립했다."),
+            ("판단", f"정답은 {clean_answer_text(card)}입니다."),
+            ("주의", note),
+        ]
     if card.get("id") == "actual1_069":
         return [
             ("핵심 단서", "18.8 kg, 금식 중 유지수액 하루 필요량과 시간당 주입속도 계산"),
