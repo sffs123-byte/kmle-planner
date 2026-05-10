@@ -309,7 +309,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
     "exact_expression": "",
-    "display_question": "24개월 남아가 아직 단어를 조합하여 문장을 만들지 못한다고 내원하였다. 이 환아에게서 자폐스펙트럼 장애를 감별하기 위해 '언어장애' 외에 반드시 확인해야 할 증상을 2가지 서술하시오. 1) 대인관계 형성장애 2) 제한되고 반복적인 행동",
+    "display_question": "24개월 남아가 아직 단어를 조합하여 문장을 만들지 못한다고 내원하였다. 이 환아에게서 자폐스펙트럼 장애를 감별하기 위해 '언어장애' 외에 반드시 확인해야 할 증상을 2가지 서술하시오.",
     "display_answer": "대인관계 형성장애, 제한되고 반복적인 행동/관심",
     "explanation_lines": [
       {
@@ -1375,7 +1375,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
     "exact_expression": "",
-    "display_question": "배꼽탈장 사진 주고 진단명 묻기(아래 사진과 동일하진 않지만 유사한 사진 출제되었습니다) 다른선지) 배꼽탈출/배벽갈림증/선천성 횡격막 탈장/(??)",
+    "display_question": "배꼽 부위가 돌출된 사진을 보고 진단명을 고르시오. 다른 선지: 배꼽탈출 / 배벽갈림증 / 선천성 횡격막 탈장 / 기타",
     "display_answer": "배꼽탈장",
     "explanation_lines": [
       {
@@ -1599,7 +1599,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
     "exact_expression": "",
-    "display_question": "37주 3.7kg으로 분만된 소아에서 경계가 불분명한 머리의 부종 Q. 진단은? 산류",
+    "display_question": "37주, 3.7 kg으로 분만된 소아에서 경계가 불분명한 머리 부종이 관찰된다. 진단은?",
     "display_answer": "산류",
     "explanation_lines": [
       {
@@ -1656,7 +1656,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
     "exact_expression": "",
-    "display_question": "38주 정상체중 출생아 - 심박수 100회 미만/호흡 약함/운동 약함/코에 카테터 넣었을 때 약간 반응/피부 약간 분홍색 Q. Apgar 점수는? 5점",
+    "display_question": "38주 정상체중 출생아. 심박수 100회 미만, 호흡 약함, 움직임 약간, 코에 카테터를 넣었을 때 약간 반응, 몸통은 분홍색이나 손발은 청색이다. Apgar 점수는?",
     "display_answer": "5점",
     "explanation_lines": [
       {
@@ -1884,7 +1884,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
     "exact_expression": "",
-    "display_question": "재태기간 28주, 출생 체중 750g, 제왕절개로 태어난 아이. 출생 직후부터 청색증, 가슴벽뒤당김, 날숨 때 끙끙거림. 가슴 청진상 양쪽 호흡음 감소. 가슴 방사선 사진 제시(total white 소견). 원인은? (객) 폐표면활성제 부족",
+    "display_question": "재태기간 28주, 출생 체중 750 g, 제왕절개로 태어난 아이. 출생 직후부터 청색증, 가슴벽뒤당김, 날숨 때 끙끙거림. 양쪽 호흡음 감소와 CXR total white-out 소견이 있다. 원인은?",
     "display_answer": "폐표면활성제 부족 / RDS",
     "explanation_lines": [
       {
@@ -2836,7 +2836,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "25~28조",
     "exact_expression": "",
-    "display_question": "35주 2kg으로 생후 3일 된 신생아에서 반복적인 미열, 청색증, 끙끙거림, 빈호흡이 있었다. 산모 분만 전 고열과 양막파열이 있었다. 태아는 잘 씹지 못해 정맥 영양 중이다. 우선적으로 해야 하는 치료는? Ampicillin + Gentamycin",
+    "display_question": "35주, 2 kg으로 생후 3일 된 신생아에서 반복적인 미열, 청색증, 끙끙거림, 빈호흡이 있다. 산모는 분만 전 고열과 양막파열이 있었다. 우선적으로 해야 하는 치료는?",
     "display_answer": "ampicillin + gentamicin",
     "explanation_lines": [
       {
@@ -3120,7 +3120,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "25~28조",
     "exact_expression": "",
-    "display_question": "5세 여아, 탈수가 있으며 저혈압과 각종 Lab 소견 있었음. 진행해야 하는 치료는? 0.9% Normal Saline",
+    "display_question": "5세 여아. 탈수와 저혈압이 있고 Lab 소견이 제시되었다. 진행해야 하는 치료는?",
     "display_answer": "0.9% Normal saline 정주",
     "explanation_lines": [
       {
@@ -3176,7 +3176,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "25~28조",
     "exact_expression": "",
-    "display_question": "17세 여아가 6개월의 다이어트 10키로를 감량한 후 병원에서 비위관삽입을 진행해 정맥 영양중이다. 치료 3일 뒤 혈액 검사 결과가 다음과 같았다. 진단은? Na 140K 2.5 Cl 95 간 수치 정상 TP 6.0 albumin 2.5 glucose 120 CRP 3 Refeeding syndrome",
+    "display_question": "17세 여아가 6개월간 다이어트로 10 kg 감량한 뒤 비위관 삽입과 정맥영양을 시작하였다. 치료 3일 뒤 K 2.5, albumin 2.5 등 전해질/영양 이상이 보인다. 진단은?",
     "display_answer": "Refeeding syndrome",
     "explanation_lines": [
       {
@@ -3232,7 +3232,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "25~28조",
     "exact_expression": "",
-    "display_question": "임신 중 태내 성장이 지연되는 경우로서 예상되는 성장패턴보다 성장이 둔화되는 것은? 자궁 내 성장지연",
+    "display_question": "임신 중 태내 성장이 예상되는 성장패턴보다 둔화되는 상태를 무엇이라고 하는가?",
     "display_answer": "자궁내 성장지연 / IUGR",
     "explanation_lines": [
       {
@@ -3288,7 +3288,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "25~28조",
     "exact_expression": "",
-    "display_question": "탈수로 온 소아. 수액 치료 중 경련이 발생하였다. 치료 전 Na 농도는 170, 치료 후 농도는 130이였다. 경련이 발생한 원인과 치료는? 저나트륨혈증, 3% saline 정주 (Na 30mEq/hr)",
+    "display_question": "탈수로 온 소아가 수액 치료 중 경련을 보였다. 치료 전 Na 170, 치료 후 Na 130이었다. 경련의 원인과 치료는?",
     "display_answer": "저나트륨혈증에 의한 경련, 3% saline 정주",
     "explanation_lines": [
       {
@@ -3344,7 +3344,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "25~28조",
     "exact_expression": "",
-    "display_question": "5세 남아가 열이 나서 병원에 내원하였다. 5일 전부터 자주 토하고 묽은 변을 하루 10회 정도 보았다. 체온이 38도 이상으로 높게 나고 주변인도 비슷한 증상을 호소함. 가능성이 높은 병원균은? 로타바이러스",
+    "display_question": "5세 남아가 5일 전부터 반복 구토와 하루 10회 정도의 묽은 변, 38도 이상 발열을 보인다. 주변인도 비슷한 증상을 호소한다. 가능성이 높은 병원균은?",
     "display_answer": "로타바이러스",
     "explanation_lines": [
       {
@@ -3684,7 +3684,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29-32조",
     "exact_expression": "",
-    "display_question": "다운증후군 남아 핵형쓰기 47, XY, +21",
+    "display_question": "다운증후군 남아의 핵형을 쓰시오.",
     "display_answer": "47, XY, +21",
     "explanation_lines": [
       {
@@ -3796,7 +3796,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29-32조",
     "exact_expression": "",
-    "display_question": "급성 성장기에 대해 설명.",
+    "display_question": "제1 성장급등기와 제2 성장급등기의 시기를 설명하시오.",
     "display_answer": "제1 성장급등기: 태아기~2세, 제2 성장급등기: 사춘기~15/16세",
     "explanation_lines": [
       {
@@ -3852,7 +3852,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29-32조",
     "exact_expression": "",
-    "display_question": "18.8kg 환아에게 복부초음파 검사를 시행하기 위해 금식하려호 한다. 하루 필요한 수액량을 계산하여 수액 주입 속도를 구하시오. 57.6mL/hr",
+    "display_question": "18.8 kg 환아에게 복부초음파 검사를 위해 금식시키려 한다. 하루 필요한 수액량을 계산하여 수액 주입 속도를 구하시오.",
     "display_answer": "57.6 mL/hr",
     "explanation_lines": [
       {
@@ -3968,7 +3968,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "33~36조",
     "exact_expression": "",
-    "display_question": "로버트슨 전위 산모, 다운증후군 확률: 100% (야마)",
+    "display_question": "Robertsonian translocation 21;21 산모에서 다음 아이가 다운증후군으로 태어날 확률은?",
     "display_answer": "100%",
     "explanation_lines": [
       {
@@ -4138,7 +4138,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "33~36조",
     "exact_expression": "",
-    "display_question": "28+3wks 820g로 출생한 나이 4개월의 남자 환아의 손목 x ray 사진이다. 추정되는 진단명과 부족한 비타민은? (여기서 화살표는 없었음) 구루병, 비타민 D",
+    "display_question": "28+3주, 820 g으로 출생한 생후 4개월 남아의 손목 X-ray 사진이 제시되었다. 추정되는 진단명과 부족한 비타민은?",
     "display_answer": "구루병, 비타민 D 결핍",
     "explanation_lines": [
       {
@@ -4194,7 +4194,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "33~36조",
     "exact_expression": "",
-    "display_question": "4세 저신장 익상경(webbed neck) 방패가슴 핵형검사시 45, XO 감별해야하는 진단과 호발하는 심장 기형은? 터너 증후군, CoA",
+    "display_question": "4세, 저신장, 익상경(webbed neck), 방패가슴이 있고 핵형검사에서 45,XO가 의심된다. 감별해야 하는 진단과 호발하는 심장 기형은?",
     "display_answer": "터너 증후군, 대동맥축착(CoA)",
     "explanation_lines": [
       {
@@ -4252,7 +4252,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "33~36조",
     "exact_expression": "",
-    "display_question": "재태연령 37주 5일 2300g 제왕절개로 출산한 남아. 출생 후 자발호흡없고 축 늘어져 보온,기도 개방, 자극. 생후 40초 심박수 90회/분 호흡 불규칙 청색증. 처치는? 양압 환기",
+    "display_question": "재태연령 37주 5일, 2300 g 제왕절개 출생 남아. 출생 후 자발호흡이 없고 축 늘어져 보온, 기도 개방, 자극을 시행했다. 생후 40초 심박수 90회/분, 호흡 불규칙, 청색증이 있다. 처치는?",
     "display_answer": "양압환기 / PPV",
     "explanation_lines": [
       {
@@ -4536,7 +4536,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "37~40조",
     "exact_expression": "",
-    "display_question": "MMR 백신 금기증 2가지 임신, 백혈병, 면역억제요법, 면역글로불린, 수혈, 지연성 과민반응 결여",
+    "display_question": "MMR 백신의 금기증을 2가지 이상 쓰시오.",
     "display_answer": "MMR 금기: 임신, 백혈병/면역억제, 최근 면역글로불린 또는 수혈 등",
     "explanation_lines": [
       {
@@ -4592,7 +4592,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "37~40조",
     "exact_expression": "",
-    "display_question": "모유 수유와 관련 있는 호르몬 2가지 옥시토신, 프로락틴",
+    "display_question": "모유 수유와 관련 있는 호르몬 2가지를 쓰시오.",
     "display_answer": "옥시토신, 프로락틴",
     "explanation_lines": [
       {
@@ -4648,7 +4648,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "37~40조",
     "exact_expression": "",
-    "display_question": "당뇨 10세 여아 환자가 무력감 주소로 내원. 현재 산증 상태, 환자 ABGA, 혈장 이온 수치 주고 Plasma anion gap 구하는 문제 AG = Na+- Cl - HCO3",
+    "display_question": "당뇨가 있는 10세 여아가 무력감으로 내원하였다. 산증 상태이며 ABGA와 혈장 이온 수치가 제시되었다. Plasma anion gap 계산식을 쓰시오.",
     "display_answer": "Anion gap = Na - Cl - HCO3",
     "explanation_lines": [
       {
@@ -4706,7 +4706,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "21-24조",
     "exact_expression": "",
-    "display_question": "3개월간 TPN 진행한 소아환자가 설사와 피부 증상이 발생. 부족한 영양소는? 아연",
+    "display_question": "3개월간 TPN을 진행한 소아환자가 설사와 피부 증상을 보인다. 부족한 영양소는?",
     "display_answer": "아연",
     "explanation_lines": [
       {
@@ -4762,7 +4762,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "21-24조",
     "exact_expression": "",
-    "display_question": "비장 절제술을 받을 예정인 소아가 수술 전에 필요한 예방접종은? Hib, 폐렴구균 다당질 답이 하나면 Hib만",
+    "display_question": "비장 절제술을 받을 예정인 소아가 수술 전에 필요한 예방접종은?",
     "display_answer": "Hib + 폐렴구균 백신. 하나만 고르면 Hib 우선",
     "explanation_lines": [
       {
@@ -4930,7 +4930,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "21-24조",
     "exact_expression": "",
-    "display_question": "9세 소아가 살이 쪄서 내원했다. 키 130cm(25-50 백분위), 체중 45kg (90-95백분위) BMI 26.6 (95<백분위)이다. 처치는? 체중감량",
+    "display_question": "9세 소아가 비만으로 내원했다. 키 130 cm(25-50 백분위), 체중 45 kg(90-95 백분위), BMI 26.6(95백분위 초과)이다. 처치는?",
     "display_answer": "체중감량",
     "explanation_lines": [
       {
@@ -5042,7 +5042,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "21-24조",
     "exact_expression": "",
-    "display_question": "출생 전기 포함 6단계에 대해 연령별 출생 후 단계를 열거해라.",
+    "display_question": "소아 연령 단계를 6단계로 열거하시오.",
     "display_answer": "출생 전기, 신생아기, 영아기, 유아기, 학령기, 청소년기",
     "explanation_lines": [
       {
@@ -5098,7 +5098,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "21-24조",
     "exact_expression": "",
-    "display_question": "소아 연령 구분 단계 문제의 복기 조각. 출생 전기, 신생아기, 영아기, 유아기, 학령기 등이 제시되었다. 전체 단계를 완성하라.",
+    "display_question": "소아 연령 구분 단계 문제의 복기 조각. 전체 단계를 완성하라.",
     "display_answer": "출생 전기, 신생아기, 영아기, 유아기, 학령기, 청소년기",
     "explanation_lines": [
       {
@@ -5210,7 +5210,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "21-24조",
     "exact_expression": "",
-    "display_question": "고암모니아혈증에서 암모니아 500 초과, 초기내과처치에 반응하지 않는 경우 치료법은? 혈액 투석",
+    "display_question": "고암모니아혈증에서 암모니아가 500을 초과하고 초기 내과처치에 반응하지 않는 경우 치료법은?",
     "display_answer": "혈액투석",
     "explanation_lines": [
       {
@@ -5322,7 +5322,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
     "exact_expression": "",
-    "display_question": "모유수유 금기 문항의 복기 조각. actual1_094의 선지 일부로 보이며, 핵심 정답은 산모 항암치료 중이다.",
+    "display_question": "모유수유 금기 문항의 복기 조각이다. actual1_094와 같은 원문으로 보아야 한다.",
     "display_answer": "산모 항암치료 중 — 모유수유 금기(actual1_094와 같은 문항 조각)",
     "explanation_lines": [
       {
@@ -5378,7 +5378,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
     "exact_expression": "",
-    "display_question": "8개월 여아 6개월까지 예방접종 다 맞았으나 해외 생활로 bcg 못 맞음. 처치는? 답 TST 검사",
+    "display_question": "8개월 여아. 6개월까지 예방접종은 모두 맞았으나 해외 생활로 BCG를 맞지 못했다. 처치는?",
     "display_answer": "TST 검사",
     "explanation_lines": [
       {
@@ -5604,7 +5604,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
     "exact_expression": "",
-    "display_question": "신경형 장기 설명+ 두위는 ()세에 성인의 ()%까지 커진다 답 4, 80",
+    "display_question": "신경형 장기 설명. 두위는 몇 세에 성인의 몇 %까지 커지는가?",
     "display_answer": "4세, 80%",
     "explanation_lines": [
       {
@@ -5662,7 +5662,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
     "exact_expression": "",
-    "display_question": "범저감마글로불린혈증 및 치료",
+    "display_question": "생후 6개월 이후 반복 폐렴, 편도/아데노이드 없음, 총 면역글로불린 감소가 보인다. 의심되는 질환과 치료는?",
     "display_answer": "범저감마글로불린혈증; IVIG 3~4주 간격 투여",
     "explanation_lines": [
       {
@@ -5718,7 +5718,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
     "exact_expression": "",
-    "display_question": "프레더 윌리, 엔젤만 증후군이 genetic imprinting, uniparental diostomy로 각각 부계, 모계인지 각각 채워 넣으시오 답 프레더 윌리 -deletion: 부계 -paternal upd: 모계 엔젤만 -deletion: 모계 -paternal upd: 부계",
+    "display_question": "Prader-Willi syndrome과 Angelman syndrome에서 deletion과 uniparental disomy가 각각 부계/모계 중 어디에서 기인하는지 채워 넣으시오.",
     "display_answer": "Prader-Willi: paternal deletion 또는 maternal UPD. Angelman: maternal deletion 또는 paternal UPD",
     "explanation_lines": [
       {
@@ -5774,7 +5774,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
     "exact_expression": "",
-    "display_question": "생후 10일 남아 다 정상, 3일 전부터 양쪽 결막 충혈 및 분비물, 가장 의심되는 병원균? 답 클라미디아",
+    "display_question": "생후 10일 남아. 3일 전부터 양쪽 결막 충혈과 분비물이 있다. 가장 의심되는 병원균은?",
     "display_answer": "Chlamydia trachomatis",
     "explanation_lines": [
       {
@@ -5830,7 +5830,7 @@
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
     "exact_expression": "",
-    "display_question": "기관삽관후 폐포 계면활성제를 투여하고 수분에서 1시간 이후 발관한 후 nasal CPAP진행하는 방법을 뭐라고 하는지? 답 INSURE방법",
+    "display_question": "기관삽관 후 폐포 계면활성제를 투여하고 수분에서 1시간 이후 발관한 뒤 nasal CPAP를 진행하는 방법을 무엇이라고 하는가?",
     "display_answer": "INSURE 방법",
     "explanation_lines": [
       {
@@ -6214,12 +6214,12 @@
     "origin": "generated_drill",
     "priority_tier": "P2",
     "type": "generated_trigger",
-    "display_question": "모유수유 금기가 되는 산모 상황은? 산모 항암치료 중.",
+    "display_question": "산모가 항암치료 중이다. 모유수유 가능 여부는?",
     "display_answer": "모유수유 금기",
     "explanation_lines": [
       {
         "label": "핵심 단서",
-        "text": "모유수유 금기가 되는 산모 상황은? 산모 항암치료 중."
+        "text": "산모가 항암치료 중이다. 모유수유 가능 여부는?"
       },
       {
         "label": "알렌 기준",
