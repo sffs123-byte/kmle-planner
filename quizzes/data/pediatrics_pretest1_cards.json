@@ -8861,7 +8861,7 @@
     "source": "HI raw 소아과 pre-test 1차 재구성",
     "mode": "주Q",
     "num_in_source": "HI-Q044",
-    "question": "미숙아와 만삭아를 부등호로 비교하시오.",
+    "question": "미숙아와 만삭아를 다음 4가지 항목에서 부등호로 비교하시오. (출생 초기 체표면적 / 생리적 체중감소 / 소변농축능 / 불감성 수분손실량)",
     "answer": "출생 초기 체표면적: 미숙아 > 만삭아; 생리적 체중감소: 미숙아 > 만삭아; 소변농축능: 미숙아 < 만삭아; 불감성 수분 손실량: 미숙아 > 만삭아",
     "origin": "actual_recall",
     "priority_tier": "P1",
@@ -8869,11 +8869,11 @@
     "answer_confidence": "✅ HI 재구성",
     "qc_flag": "hi_q_marker_reconstructed_v1",
     "episode": "HI-raw",
-    "content_axis": "HI 원문 재구성: 미숙아는 만삭아보다 체표면적, 생리적 체중감소, 불감성 수분 손실량이 크고 소변농축능은 작다.",
+    "content_axis": "HI 원문 재구성: 미숙아/만삭아 4항목 비교(체표면적, 생리적 체중감소, 소변농축능, 불감성 수분손실량)",
     "answer_key_normalized": "출생 초기 체표면적: 미숙아 > 만삭아; 생리적 체중감소: 미숙아 > 만삭아; 소변농축능: 미숙아 < 만삭아; 불감성 수분 손실량: 미숙아 > 만삭아",
     "group_id": "G-HI-ALL-Q-MARKERS",
     "dedup_decision": "source_preserve:hi_q_marker:reconstructed",
-    "dedup_why": "HI 원문 Q marker를 실제 문제·선지·정답 형태로 재구성함.",
+    "dedup_why": "HI 원문 비교 문항을 실제 풀이 가능하도록 비교 항목 4가지를 질문에 명시함.",
     "dedup_badges": [
       "HI-Q",
       "source-preserved",
@@ -8885,7 +8885,8 @@
       "source-preserved",
       "HI-Q044",
       "주Q",
-      "hi-reconstructed-v1"
+      "hi-reconstructed-v1",
+      "comparison-items-explicit"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
@@ -8900,23 +8901,23 @@
         "hi-reconstructed"
       ]
     },
-    "hi_repaired_explanation": "미숙아는 만삭아보다 체표면적, 생리적 체중감소, 불감성 수분 손실량이 크고 소변농축능은 작다.",
+    "hi_repaired_explanation": "미숙아는 만삭아보다 출생 초기 체표면적, 생리적 체중감소, 불감성 수분손실량이 크고, 소변농축능은 낮다. 질문에 비교 항목 4가지를 명시해 답을 떠올리도록 수정했다.",
     "hi_repaired_v1": true,
     "needs_review": false,
     "answer_confidence_repair": "high",
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "HI raw 소아과 pre-test 1차 재구성",
     "exact_expression": "",
-    "display_question": "미숙아와 만삭아를 부등호로 비교하시오.",
+    "display_question": "미숙아와 만삭아를 다음 4가지 항목에서 부등호로 비교하시오. (출생 초기 체표면적 / 생리적 체중감소 / 소변농축능 / 불감성 수분손실량)",
     "display_answer": "출생 초기 체표면적: 미숙아 > 만삭아; 생리적 체중감소: 미숙아 > 만삭아; 소변농축능: 미숙아 < 만삭아; 불감성 수분 손실량: 미숙아 > 만삭아",
     "explanation_lines": [
       {
         "label": "핵심 단서",
-        "text": "HI 원문 재구성: 미숙아는 만삭아보다 체표면적, 생리적 체중감소, 불감성 수분 손실량이 크고 소변농축능은 작다."
+        "text": "HI 원문 재구성: 미숙아/만삭아 4항목 비교(체표면적, 생리적 체중감소, 소변농축능, 불감성 수분손실량)"
       },
       {
         "label": "HI 재구성",
-        "text": "미숙아는 만삭아보다 체표면적, 생리적 체중감소, 불감성 수분 손실량이 크고 소변농축능은 작다."
+        "text": "미숙아는 만삭아보다 출생 초기 체표면적, 생리적 체중감소, 불감성 수분손실량이 크고, 소변농축능은 낮다. 질문에 비교 항목 4가지를 명시해 답을 떠올리도록 수정했다."
       },
       {
         "label": "판단",
