@@ -3880,19 +3880,19 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_added_reviewed",
-    "qc_flag": "added_from_2023_HI_full_audit",
+    "qc_flag": "added_from_2023_HI_full_audit; exact_phrase_verified_user_image_20260511",
     "id": "actual2023_011",
-    "source": "2023년 소아청소년과 9-12조 pretest 1차 복기 lines 140-165",
+    "source": "2023년 소아청소년과 9-12조 pretest 1차 복기 lines 140-165 / 사용자 이미지 1 확인",
     "mode": "주관식",
     "num_in_source": "주2",
-    "question": "면역결핍 환자에서 세포성 면역을 검사하는 방법과 체액성 면역을 검사하는 방법을 구분하시오.",
-    "answer": "세포성 면역: 말초혈 림프구 수/형태, T cell subset, 지연 피부반응, 림프구 증식반응, thymus chest X-ray 등. 체액성 면역: 혈청 Ig 정량, isohemagglutinin, 특정 항체 생성능, B cell 측정 등.",
+    "question": "면역결핍이 있는 환자에서 세포성 면역을 검사하기 위한 방법과 체액성 면역을 검사하기 위한 방법을 구분하시오. 가. 혈청 면역글로불린 정량 검사(IgG, IgM, IgA, IgD, IgE) / 나. 말초혈 림프구 수 및 형태 / 다. T cell subset 검사 / 라. Isohemagglutinin 측정 / 마. lateral pharyngeal X-ray / 바. thymus chest X-ray",
+    "answer": "세포성 면역: 나. 말초혈 림프구 수 및 형태, 다. T cell subset 검사, 바. thymus chest X-ray. 체액성 면역: 가. 혈청 면역글로불린 정량 검사, 라. isohemagglutinin 측정, 마. lateral pharyngeal X-ray.",
     "episode": "Ep03-3",
     "content_axis": "면역결핍-세포성/체액성 면역검사 구분",
-    "answer_key_normalized": "cellular vs humoral immune tests",
+    "answer_key_normalized": "세포성=말초혈 림프구/T cell subset/thymus chest X-ray; 체액성=Ig 정량/isohemagglutinin/lateral pharyngeal X-ray",
     "group_id": "G-IMMUNE-TESTS",
     "dedup_decision": "source_added:2023_exact",
-    "dedup_why": "DiGeorge 카드와 별개로 검사 taxonomy exact stem 추가",
+    "dedup_why": "사용자 이미지 기준으로 선택지 가-바와 세포성/체액성 3가지씩 exact answer 보정",
     "dedup_badges": [
       "2023-source",
       "source-added"
@@ -3900,15 +3900,17 @@
     "tags": [
       "2023",
       "source-added",
-      "IMMUNE_TESTS"
+      "IMMUNE_TESTS",
+      "exact_phrase_verified_20260511",
+      "user-image"
     ],
     "strict_dedup_v2": {
       "episode": "Ep03-3",
       "content_axis": "면역결핍-세포성/체액성 면역검사 구분",
-      "answer_key_normalized": "cellular vs humoral immune tests",
+      "answer_key_normalized": "세포성=말초혈 림프구/T cell subset/thymus chest X-ray; 체액성=Ig 정량/isohemagglutinin/lateral pharyngeal X-ray",
       "group_id": "G-IMMUNE-TESTS",
       "dedup_decision": "source_added:2023_exact",
-      "why": "DiGeorge 카드와 별개로 검사 taxonomy exact stem 추가",
+      "why": "사용자 이미지 기준으로 선택지 가-바와 세포성/체액성 3가지씩 exact answer 보정",
       "badges": [
         "2023-source",
         "source-added"
@@ -4000,19 +4002,19 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_added_reviewed",
-    "qc_flag": "added_from_2023_HI_full_audit",
+    "qc_flag": "added_from_2023_HI_full_audit; exact_stem_verified_user_image_20260511",
     "id": "actual2023_014",
-    "source": "2023년 소아청소년과 17-20조 pretest 1차 복기 lines 446-449",
+    "source": "2023년 소아청소년과 17-20조 pretest 1차 복기 / 사용자 이미지 6 확인",
     "mode": "주관식",
     "num_in_source": "주2",
-    "question": "미숙아에서 조산, RDS, 저산소 허혈/재관류, 혈압 변동, 기흉, 혈량 과다, 혈소판 감소증 등이 위험인자이고, 심하면 의식장애·저혈압·무호흡·창백·근긴장도 감소·경련·대사산증·hematocrit 감소를 보이는 질환은?",
+    "question": "32주, 1500 g 미숙아가 인공호흡기를 달고 있다. 출생 3일째 경련을 보이고, 앞숫구멍 돌출과 빈혈이 있다. 진단명을 쓰시오.",
     "answer": "뇌실주위-뇌실내 출혈 / IVH",
     "episode": "Ep00-3",
     "content_axis": "미숙아-뇌실주위/뇌실내출혈 IVH",
-    "answer_key_normalized": "IVH",
+    "answer_key_normalized": "IVH/뇌실주위-뇌실내출혈",
     "group_id": "G-IVH-PRETERM",
     "dedup_decision": "source_added:2023_exact",
-    "dedup_why": "2023 exact stem 누락",
+    "dedup_why": "사용자 이미지 기준으로 broad risk-factor 카드가 아니라 32주/1500g/인공호흡/생후3일 경련 exact stem으로 보정",
     "dedup_badges": [
       "2023-source",
       "source-added"
@@ -4020,15 +4022,17 @@
     "tags": [
       "2023",
       "source-added",
-      "IVH_PRETERM"
+      "IVH_PRETERM",
+      "exact_stem_verified_20260511",
+      "user-image"
     ],
     "strict_dedup_v2": {
       "episode": "Ep00-3",
       "content_axis": "미숙아-뇌실주위/뇌실내출혈 IVH",
-      "answer_key_normalized": "IVH",
+      "answer_key_normalized": "IVH/뇌실주위-뇌실내출혈",
       "group_id": "G-IVH-PRETERM",
       "dedup_decision": "source_added:2023_exact",
-      "why": "2023 exact stem 누락",
+      "why": "사용자 이미지 기준으로 broad risk-factor 카드가 아니라 32주/1500g/인공호흡/생후3일 경련 exact stem으로 보정",
       "badges": [
         "2023-source",
         "source-added"
@@ -7897,6 +7901,141 @@
         "2023-source",
         "source-added",
         "resweep-20260511"
+      ]
+    }
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_added_reviewed",
+    "qc_flag": "added_from_user_2023_problem_images_20260511",
+    "id": "actual2023_019",
+    "source": "2023년 소아청소년과 5-8조 pretest 1차 복기 lines 1-18 / 사용자 이미지 2 확인",
+    "mode": "객관식",
+    "num_in_source": "객1",
+    "question": "12개월 남아 발달 상태를 검진하였다. 혼자 걸을 수는 있지만 계단 오르지는 못한다. 손으로 잡을 수는 있지만 엄지 집게만으로 잡지는 못한다. 엄마, 아빠, 맘마 외 다른 말은 하지 못한다. 바이바이 놀이를 할 수 있다. 진단은? 1) 조대운동발달지연 2) 언어발달지연 3) 정상 4) 미세운동발달지연 5) 사회적행동장애",
+    "answer": "미세운동발달지연",
+    "episode": "Ep00-1",
+    "content_axis": "성장발달-12개월/미세운동/엄지집게잡기",
+    "answer_key_normalized": "미세운동발달지연",
+    "group_id": "G-12MO-FINE-MOTOR-PINCER",
+    "dedup_decision": "source_added:user_image_exact",
+    "dedup_why": "사용자 이미지 7장 기준 exact stem 누락 확인 후 추가",
+    "dedup_badges": [
+      "2023-source",
+      "user-image",
+      "source-added"
+    ],
+    "tags": [
+      "2023",
+      "user-image",
+      "source-added",
+      "DEVELOPMENT",
+      "FINE_MOTOR",
+      "12_MONTHS"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "성장발달-12개월/미세운동/엄지집게잡기",
+      "answer_key_normalized": "미세운동발달지연",
+      "group_id": "G-12MO-FINE-MOTOR-PINCER",
+      "dedup_decision": "source_added:user_image_exact",
+      "why": "사용자 이미지 7장 기준 exact stem 누락 확인 후 추가",
+      "badges": [
+        "2023-source",
+        "user-image",
+        "source-added"
+      ]
+    }
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_added_reviewed",
+    "qc_flag": "added_from_user_2023_problem_images_20260511",
+    "id": "actual2023_020",
+    "source": "2023년 소아청소년과 9-12조 pretest 1차 복기 lines 175-179 / 사용자 이미지 3 확인",
+    "mode": "주관식",
+    "num_in_source": "주4",
+    "question": "임신 41주 질분만으로 태어난 신생아. 산모는 임신성 당뇨였고, 태아 혈당은 40이었다. 경구 모유 투여에도 1시간 후 혈당이 34였을 때 다음으로 고려할 처치는?",
+    "answer": "10% 포도당액 2 mL/kg IV bolus",
+    "episode": "Ep00-3",
+    "content_axis": "신생아-IDM/저혈당/포도당 bolus",
+    "answer_key_normalized": "10% dextrose 2 mL/kg IV bolus",
+    "group_id": "G-IDM-HYPOGLYCEMIA-DEXTROSE-BOLUS",
+    "dedup_decision": "source_added:user_image_exact",
+    "dedup_why": "사용자 이미지 7장 기준 exact stem 누락 확인 후 추가",
+    "dedup_badges": [
+      "2023-source",
+      "user-image",
+      "source-added"
+    ],
+    "tags": [
+      "2023",
+      "user-image",
+      "source-added",
+      "IDM",
+      "HYPOGLYCEMIA",
+      "DEXTROSE"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "신생아-IDM/저혈당/포도당 bolus",
+      "answer_key_normalized": "10% dextrose 2 mL/kg IV bolus",
+      "group_id": "G-IDM-HYPOGLYCEMIA-DEXTROSE-BOLUS",
+      "dedup_decision": "source_added:user_image_exact",
+      "why": "사용자 이미지 7장 기준 exact stem 누락 확인 후 추가",
+      "badges": [
+        "2023-source",
+        "user-image",
+        "source-added"
+      ]
+    }
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_added_reviewed",
+    "qc_flag": "added_from_user_2023_problem_images_20260511",
+    "id": "actual2023_021",
+    "source": "사용자 이미지 6: 소아 pretest 23문제 신규 이미지 묶음",
+    "mode": "주관식",
+    "num_in_source": "주2",
+    "question": "4세 여아가 인플루엔자 접종을 위해 내원하였다. 접종 후 5분 만에 간지럽다고 호소하더니 갑자기 입술과 얼굴이 붓기 시작하고, 숨쉬기 힘들어했으며 쌕쌕거리는 소리가 들렸다. 응급의료시스템 가동 후 1차 투여할 약제는?",
+    "answer": "에피네프린 IM",
+    "episode": "Ep03-3",
+    "content_axis": "알레르기-예방접종 후 아나필락시스/epinephrine",
+    "answer_key_normalized": "epinephrine IM",
+    "group_id": "G-VACCINE-ANAPHYLAXIS-EPINEPHRINE",
+    "dedup_decision": "source_added:user_image_exact",
+    "dedup_why": "사용자 이미지 7장 기준 exact stem 누락 확인 후 추가",
+    "dedup_badges": [
+      "2023-source",
+      "user-image",
+      "source-added"
+    ],
+    "tags": [
+      "2023",
+      "user-image",
+      "source-added",
+      "ANAPHYLAXIS",
+      "EPINEPHRINE",
+      "VACCINE"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep03-3",
+      "content_axis": "알레르기-예방접종 후 아나필락시스/epinephrine",
+      "answer_key_normalized": "epinephrine IM",
+      "group_id": "G-VACCINE-ANAPHYLAXIS-EPINEPHRINE",
+      "dedup_decision": "source_added:user_image_exact",
+      "why": "사용자 이미지 7장 기준 exact stem 누락 확인 후 추가",
+      "badges": [
+        "2023-source",
+        "user-image",
+        "source-added"
       ]
     }
   }
