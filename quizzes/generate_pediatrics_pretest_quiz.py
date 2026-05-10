@@ -162,17 +162,21 @@ QUESTION_CLEANUPS = {
 
 
 ANSWER_DISPLAY_OVERRIDES = {
+    "actual1_022": "생백신 접종 연기",
+    "actual1_067": "복기상 교환수혈로 되어 있으나, 현재 제시 조건만으로는 IVIG가 우선. 교환수혈은 광선치료/IVIG 실패 또는 핵황달 위험/교환수혈 기준 이상일 때.",
+    "actual1_069": "개념상 60 mL/hr. 복기상 57.6 mL/hr로 되어 있으나 100-50-20 rule로는 18.8 kg = 1000 + 440 = 1440 mL/day, 즉 60 mL/hr.",
     "actual1_042": "Fabry disease, Pompe disease",
     "actual1_043": "수액 중단/추가 crystalloid 중지로 추정 — 원문 선지 확인 필요",
     "actual1_053": "원문 통합 필요 — 18개월 발달 선지 전체를 보고 비정상 축을 골라야 함",
     "actual1_054": "파싱 조각 — actual1_053과 통합해서 판단",
     "actual1_065": "원문 선지 확인 필요 — 알렌 기준으로는 치료 종료/면역 회복 후 catch-up 접종을 검토, 11~12세 정기접종(Tdap/HPV 등)은 선지 의존",
     "actual1_077": "원문 수치 확인 필요 — 성장곡선에서 이탈한 항목, 특히 체중/성장부전 가능성을 우선 의심",
+    "actual1_081": "MMR/생백신 금기: 임신, 백혈병/심한 면역억제(고용량 전신 스테로이드 포함), 최근 면역글로불린 또는 수혈 등",
     "actual1_095": "산모 항암치료 중 — 모유수유 금기(actual1_094와 같은 문항 조각)",
 }
 
 
-UNCERTAIN_IDS = {"actual1_043", "actual1_053", "actual1_054", "actual1_065", "actual1_077", "actual1_095"}
+UNCERTAIN_IDS = {"actual1_043", "actual1_053", "actual1_054", "actual1_065", "actual1_067", "actual1_069", "actual1_077", "actual1_095"}
 
 
 def normalize_space(text: str) -> str:
@@ -209,6 +213,8 @@ def format_problem_html(text: str) -> str:
 def answer_confidence(card: dict) -> tuple[str, str]:
     if card.get("id") in UNCERTAIN_IDS or card.get("origin") == "actual_incomplete" or dedup_key(card) in {"needs_source", "fragment_of"}:
         return "⚠️ 알렌 기준 추정", "복기 원문/선지가 불완전해서 확정 답처럼 외우면 위험합니다. 알렌 개념으로 가장 그럴듯한 방향을 표시했습니다."
+    if card.get("qc_flag") == "added_from_2023_HI_full_audit":
+        return "✅ 2023/HI source 추가", "2023 기출/HI raw 전수대조에서 빠진 exact stem을 추가했습니다."
     if card.get("origin") == "generated_drill":
         return "🧠 제작 drill", "actual 복기에서 뽑은 trigger를 변형한 drill입니다."
     return "✅ actual 기준", "복기 답을 알렌 개념틀로 재정렬했습니다."
@@ -221,8 +227,10 @@ def allen_rule(card: dict) -> str:
     a = clean_answer_text(card)
     hay = f"{gid} {axis} {q} {a}"
 
+    if gid == "G-NUT-B12-ILEAL-RESECTION":
+        return "비타민 B12는 terminal ileum에서 흡수된다. NEC 후 회장절제술 + MCV 112 같은 대구성 빈혈이면 채식 산모 문제가 아니어도 B12/cobalamin 결핍으로 잠근다."
     if gid == "G-VAX-VARICELLA-IVIG-CONTRAST" or ("수두" in hay and "IVIG" in hay):
-        return "생백신인 수두/MMR은 최근 면역글로불린·혈액제제를 맞았으면 접종을 미룬다. 반대로 IVIG가 명시되지 않고 ITP가 회복되어 혈소판이 정상이라면 ITP 병력 자체만으로 수두백신 금기는 아니다."
+        return "수두만이 아니라 MMR·수두 같은 생백신 전체는 최근 면역글로불린·혈액제제를 맞았으면 접종을 미룬다. 반대로 IVIG가 명시되지 않고 ITP가 회복되어 혈소판이 정상이라면 ITP 병력 자체만으로 생백신 금기는 아니다."
     if "G-NUT-FE" in gid or ("철" in a and ("MCV" in q or "이유식" in q)):
         return "생후 6개월 이후 저장철이 떨어지는데 모유 위주·이유식 부족·MCV 감소가 같이 보이면 철결핍을 먼저 본다."
     if "B12" in gid or "코발라민" in a or "cobalamin" in a:
@@ -233,8 +241,10 @@ def allen_rule(card: dict) -> str:
         return "구루병은 모유 위주 식이, 낮은 25-OH vitamin D, ALP/PTH 상승, 손목·다리 X-ray 변화가 같이 묶인다. 치료 축은 비타민 D 보충이다."
     if "Vit K" in a or "비타민 K" in a:
         return "신생아/태아 출혈과 응고인자 II, VII, IX, X를 떠올리면 비타민 K로 연결된다."
+    if gid == "G-POST-VACCINE-FEVER-OBSERVE":
+        return "예방접종 후 1~2일 발열이어도 잘 먹고 전신상태가 좋으며 피부색이 괜찮으면 우선 경과관찰이다. 항생제/면역글로불린/스테로이드는 중증 감염이나 특수 상황 단서가 있어야 간다."
     if "VAX" in gid or "예방접종" in axis or "MMR" in hay or "BCG" in hay:
-        return "예방접종 문제는 ‘오늘 맞아도 되는가’를 생백신 간격, 면역저하/임신/최근 IVIG, 나이별 정기접종표 순서로 판정한다."
+        return "예방접종 문제는 ‘오늘 맞아도 되는가’를 생백신 간격, 임신, 면역저하, 최근 IVIG/수혈, 나이별 정기접종표 순서로 판정한다. 면역저하에는 백혈병/항암뿐 아니라 고용량 전신 스테로이드도 포함해서 본다."
     if "FLUID-NS" in gid or "중증탈수" in axis or "bolus" in a:
         return "중증 탈수 또는 순환부전의 첫 처치는 0.9% 생리식염수 20 mL/kg bolus다. 10 kg이면 200 mL, 12 kg이면 240 mL로 계산한다."
     if "HYPONA" in gid or "3% saline" in a:
@@ -243,10 +253,20 @@ def allen_rule(card: dict) -> str:
         return "K 수치만 높고 EKG가 정상이며 채혈/수술 맥락이 있으면 가성 고칼륨혈증을 먼저 의심한다. 즉시 calcium을 주기보다 재확인/경과관찰이 답이 된다."
     if "FLUID-OVERLOAD" in gid:
         return "소변이 안 나온다고 계속 수액을 밀어 넣는 문제가 아니다. 수액 후 부종·음낭수종이 생기면 체액과다 또는 신장 handling 문제를 의심해 추가 crystalloid를 멈추는 쪽이 알렌식 추론이다."
+    if card.get("id") == "actual1_069":
+        return "유지수액은 100-50-20 rule로 계산한다. 18.8 kg이면 첫 10 kg은 1000 mL/day, 남은 8.8 kg은 8.8×50=440 mL/day라 총 1440 mL/day이고, 24시간으로 나누면 60 mL/hr다. 복기상 57.6 mL/hr는 계산과 맞지 않아 복기 답 의심으로 표시한다."
     if "MAINTENANCE" in gid:
         return "유지수액은 100-50-20 rule로 계산하고, 하루 총량을 24시간으로 나누어 mL/hr를 구한다."
+    if "TPN-DAILY-WEIGHT" in gid:
+        return "TPN 모니터링에서 매일 변화를 가장 직접적으로 보는 지표는 체중이다. 키·머리둘레는 매일 변하지 않고, 중성지방/암모니아는 상황별 검사이지 매일 기본 답으로 잠그는 항목은 아니다."
+    if gid == "G-WILSON-TRIENTINE":
+        return "간기능 저하에 ceruloplasmin과 serum copper가 낮게 제시되면 Wilson disease 축이다. 치료 선지에서는 구리 킬레이터인 trientine을 고른다."
     if "GSD" in gid or "당원병" in a:
         return "저혈당 + 젖산 + 요산 + 중성지방 상승에 간비대가 붙으면 당원병, 특히 glycogen storage disease bundle로 본다."
+    if gid == "G-AD-INHERITANCE":
+        return "상염색체 우성은 세대마다 나타나는 vertical transmission과 남녀 모두 가능하다는 점을 본다. 문제에서 AD 가계도라고 주면 답은 상염색체 우성이다."
+    if gid == "G-HEMOPHILIA-XLINK":
+        return "혈우병 A는 X-linked recessive다. 보인자 산모가 다시 남아를 임신하면 그 남아가 혈우병일 확률은 1/2로 잠근다."
     if "IMPRINTING" in gid or "imprinting" in hay:
         return "염색체 수보다 부모 어느 쪽에서 온 유전자인지가 표현형을 바꾸면 genetic imprinting이다. Prader-Willi/Angelman, Beckwith-Wiedemann 계열이 대표 trigger다."
     if "DOWN" in gid or "Turner" in hay or "ANEUPLOIDY" in gid:
@@ -257,8 +277,14 @@ def allen_rule(card: dict) -> str:
         return "효소보충요법은 lysosomal storage disease에서 묻는다. Fabry, Pompe, Gaucher는 가능하고 PKU/MSUD는 식이치료 축이다."
     if "MSUD" in gid:
         return "MSUD는 branched-chain amino acid 대사 문제라 전구물질 제한, 즉 식이치료가 핵심이다."
+    if gid == "G-NRP-INITIAL-QUESTIONS":
+        return "분만 직후 소생술 필요 여부는 세 질문으로 문을 연다. 만삭인가, 근긴장도가 좋은가, 울거나 숨을 잘 쉬는가. 셋 다 예면 routine care, 아니면 초기 처치/소생술로 간다."
+    if gid == "G-NEONATAL-ASPHYXIA-DEF":
+        return "신생아 가사는 산소 공급과 이산화탄소 제거가 안 되어 저산소혈증, 산혈증, 고탄산혈증이 생긴 상태다. 정의 문제에서는 이 세 단어를 같이 잠근다."
     if "NRP" in gid or "PPV" in a or "기관삽관" in a or "3:1" in a:
         return "신생아 소생술은 HR 100과 60 두 문으로 푼다. HR<100 또는 무호흡이면 PPV, PPV가 안 먹히면 MRSOPA, 그래도 HR<100이면 기관삽관, HR<60이면 가슴압박+환기다."
+    if gid == "G-MECONIUM-OBSERVE":
+        return "태변착색이 있어도 HR 140이고 호흡/근긴장/전신상태가 괜찮으면 삽관이나 NO가 아니라 경과관찰이다. 태변 자체보다 아이 상태가 스위치다."
     if "APGAR" in gid or "Apgar" in hay:
         return "Apgar는 심박수, 호흡, 근긴장도, 자극반응, 피부색 5항목을 각각 0~2점으로 더한다."
     if "IDM" in gid:
@@ -269,6 +295,10 @@ def allen_rule(card: dict) -> str:
         return "경계가 불분명하고 봉합선을 넘는 두피 부종은 산류다. 두혈종은 골막하 출혈이라 봉합선을 넘지 않는다."
     if "FIRST-URINE" in gid or "첫 소변" in hay:
         return "정상 신생아는 대부분 출생 후 24시간 이내 첫 소변을 본다."
+    if gid == "G-BRONZE-BABY":
+        return "광선치료 후 피부가 회갈색/청동색으로 변하면 bronze baby syndrome이다. 직접빌리루빈 증가나 담즙정체/폐쇄간질환과 연결되는 황달 합병증으로 묻는다."
+    if card.get("id") == "actual1_067":
+        return "Q67은 Q9/Q24와 같은 면역성 용혈 황달 축으로 보이지만, 지문에 광선치료/IVIG 실패, 핵황달 증상, 교환수혈 기준 초과가 충분히 제시되지 않았다. 현재 조건만 보면 Coombs 양성/면역성 용혈 + 광선치료 후 상승이므로 IVIG를 먼저 고려하고, 교환수혈은 더 강한 다음 단계로 둔다."
     if "JAUNDICE-IVIG" in gid:
         return "생후 초반 황달에서 Coombs 양성, 광선치료에도 빌리루빈 상승이면 면역성 용혈이다. 광선치료와 함께 IVIG를 고려한다."
     if "JAUNDICE-EXCHANGE" in gid:
@@ -279,12 +309,20 @@ def allen_rule(card: dict) -> str:
         return "신생아 황달은 생후 시점, 직접빌리루빈, Coombs, 상승 속도, 아이 상태로 병적 황달인지 먼저 가른다."
     if "EOS" in gid or "ampicillin" in a:
         return "산모 융모양막염 cue와 신생아 호흡곤란/발열이 같이 나오면 조기 신생아 패혈증으로 보고 ampicillin + gentamicin을 경험적으로 시작한다."
+    if gid == "G-PNEUMOTHORAX-CHESTTUBE":
+        return "인공호흡 중 갑작스런 호흡곤란, 한쪽 공기음영 증가, 가로막 하강, mediastinal shift는 기흉이다. 긴장성/증상성 기흉이면 가슴관 삽입으로 간다."
+    if gid == "G-IVH-PRETERM":
+        return "미숙아, RDS, 혈압 변동, 저산소 허혈, 기흉 뒤 갑작스런 무호흡·창백·근긴장 저하·경련·Hct 감소가 나오면 IVH, 즉 뇌실주위-뇌실내 출혈을 의심한다."
     if "RDS" in gid or "INSURE" in a or "폐표면활성제" in a:
         return "미숙아의 grunting, retraction, diffuse/white lung은 폐표면활성제 부족 RDS다. 삽관-계면활성제-조기발관-CPAP 흐름은 INSURE다."
     if "NEC" in gid or "금식" in a:
         return "미숙아가 수유 중 혈변, 복부팽만, 무호흡을 보이면 NEC를 의심하고 금식, 위장관 감압, 항생제로 시작한다."
+    if gid == "G-CHLAMYDIA-EYE-PROPHYLAXIS":
+        return "신생아 눈관리에서 erythromycin/tetracycline 점안은 Chlamydia 감염 예방 목적이다. 생후 10일 결막염 원인 문제와 예방 목적 문제를 분리해 외운다."
     if "CHLAMYDIA" in gid or "Chlamydia" in a:
         return "생후 5~14일 무렵 양측 결막염/분비물은 Chlamydia trachomatis를 우선 떠올린다."
+    if gid == "G-IMMUNE-TESTS":
+        return "세포성 면역은 T cell/subset, 지연 피부반응, 림프구 증식반응, thymus X-ray 쪽이고, 체액성 면역은 Ig 정량, isohemagglutinin, 특정 항체 생성능, B cell 측정 쪽이다."
     if "IMM-DIGEORGE" in gid:
         return "DiGeorge는 흉선 저형성/무형성 문제라 T cell, 즉 세포면역 이상이 핵심이다."
     if "XLA" in gid or "범저감마" in a:
@@ -293,6 +331,10 @@ def allen_rule(card: dict) -> str:
         return "IgG는 태반을 통과하지만 IgM은 통과하지 못한다. 따라서 신생아 혈중 IgM 증가는 태아가 직접 만든 항체, 즉 선천감염 clue다."
     if "IMM" in gid or "면역결핍" in axis:
         return "면역결핍은 반복·중증·기회감염, 드문 균, 항생제 반응 불량, 성장부전을 red flag로 본다."
+    if gid == "G-LANGUAGE-DELAY-DEF-CAUSE":
+        return "언어발달지연은 언어가 나이에 맞는 수준에 도달하지 못한 상태다. 만 2세에도 말을 못 하면 강한 경고이고, 원인은 지적장애, 자폐증, 청력장애 등을 같이 적는다."
+    if gid == "G-NEURO-BREATH-HOLDING":
+        return "울거나 화난 뒤 청색증이 오고 짧은 강직 뒤 회복되는 toddler spell은 호흡중지발작이다. 발작수면이나 야경증이 아니라 감정 trigger와 빠른 회복이 문을 연다."
     if "DEV" in gid or "발달" in axis:
         return "발달 문제는 대근육, 소근육, 언어, 사회성 중 어느 축이 연령 기대치보다 가장 뒤처졌는지 고르는 방식으로 푼다."
     if "GROWTH" in gid or "성장" in axis:
@@ -313,8 +355,12 @@ def allen_rule(card: dict) -> str:
 def pitfall_line(card: dict) -> str:
     key = dedup_key(card)
     gid = card.get("group_id", "") or ""
+    if card.get("id") == "actual1_069":
+        return "복기상 57.6 mL/hr로 들어왔지만 18.8 kg 유지수액 계산식과 맞지 않는다. 100-50-20 rule 기준 개념상 우선답은 60 mL/hr로 보고 review-needed로 표시한다."
+    if card.get("id") == "actual1_067":
+        return "복기상 답은 교환수혈로 들어왔지만 Q9/Q24의 IVIG 카드와 concept conflict가 있다. 이 카드는 복기의심/review-needed로 보고 IVIG 우선, 교환수혈은 실패·핵황달·threshold 조건이 있을 때로 잠근다."
     if gid == "G-VAX-VARICELLA-IVIG-CONTRAST":
-        return "ITP라는 단어보다 IVIG/혈액제제 투여 여부가 갈림길이다. actual1_002는 IVIG 명시가 없어 접종, actual1_022는 IVIG 명시가 있어 연기다."
+        return "수두만의 문제가 아니라 생백신 전체의 효과 문제다. ITP라는 단어보다 IVIG/혈액제제 투여 여부가 갈림길이다. actual1_002는 IVIG 명시가 없어 접종, actual1_022는 IVIG 명시가 있어 생백신 연기다."
     if key in {"duplicate", "near_duplicate"}:
         return "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다."
     if key in {"same_topic_sibling", "variant_keep"}:
@@ -325,6 +371,21 @@ def pitfall_line(card: dict) -> str:
 
 
 def explanation_lines(card: dict) -> list[tuple[str, str]]:
+    if card.get("id") == "actual1_069":
+        return [
+            ("핵심 단서", "18.8 kg, 금식 중 유지수액 하루 필요량과 시간당 주입속도 계산"),
+            ("계산", "100-50-20 rule: 첫 10 kg 1000 mL/day + 남은 8.8 kg×50 = 440 mL/day → 총 1440 mL/day"),
+            ("판단", "1440 ÷ 24 = 60 mL/hr. 복기상 57.6 mL/hr는 계산식과 맞지 않아 복기 답 의심으로 표시한다."),
+            ("주의", "체중이 18.8 kg 그대로라면 60 mL/hr가 개념상 우선답이다. 57.6은 체중/복기 오기 가능성이 있어 단독 정답으로 외우지 말 것."),
+        ]
+    if card.get("id") == "actual1_067":
+        return [
+            ("핵심 단서", "37주 신생아 황달+간비대, 광선치료 후 T-bil 16, Coombs 결과 제시"),
+            ("Q9/Q24 비교", "Q9/Q24처럼 Coombs 양성/면역성 용혈 + 광선치료 후 상승 축이면 우선 IVIG를 고려한다."),
+            ("알렌 기준", "교환수혈은 광선치료와 IVIG로 조절되지 않거나, 핵황달 증상/교환수혈 기준 이상처럼 더 강한 조건이 있을 때의 다음 단계다."),
+            ("판단", "복기상 교환수혈로 되어 있으나 현재 제시 조건만으로는 IVIG가 우선이다. 이 카드는 복기의심/concept-conflict/review-needed로 표시한다."),
+            ("주의", "교환수혈 단독 정답으로 외우지 말 것. IVIG 우선, 교환수혈은 실패·핵황달·threshold 조건이 있을 때."),
+        ]
     confidence, note = answer_confidence(card)
     return [
         ("핵심 단서", card.get("content_axis") or clean_question_text(card)[:80]),

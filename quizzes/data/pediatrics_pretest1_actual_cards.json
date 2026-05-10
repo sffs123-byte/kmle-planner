@@ -2057,7 +2057,7 @@
     "priority_tier": "P3",
     "type": "actual_pretest",
     "answer_confidence": "source_inferred_medium",
-    "qc_flag": "answer_inferred_from_context",
+    "qc_flag": "answer_ok_explanation_fixed",
     "episode": "Ep00-1",
     "content_axis": "영양/TPN-매일감시",
     "answer_key_normalized": "체중",
@@ -2077,7 +2077,10 @@
       "badges": [
         "keep-separate"
       ]
-    }
+    },
+    "tags": [
+      "explanation-fixed"
+    ]
   },
   {
     "source": "29-32조",
@@ -2150,33 +2153,40 @@
     "mode": "주관식",
     "num_in_source": 3,
     "question": "37주 3000g 황달 간비대 보였음. 광선치료 후 혈액검사 결과 총 빌리루빈 16. 쿰즈 결과 직접(-) 간접(+) 추가로 시행할 수 있는 치료? 교환수혈",
-    "answer": "교환수혈",
+    "answer": "복기상 교환수혈로 되어 있으나, 현재 제시 조건만으로는 IVIG가 우선. 교환수혈은 광선치료/IVIG 실패 또는 핵황달 위험/교환수혈 기준 이상일 때.",
     "id": "actual1_067",
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
-    "qc_flag": "answer_from_source_text",
+    "answer_confidence": "복기의심",
+    "qc_flag": "concept_conflict_review_needed",
     "episode": "Ep00-4",
-    "content_axis": "신생아황달-Coombs/교환수혈",
-    "answer_key_normalized": "교환수혈",
-    "group_id": "G-JAUNDICE-EXCHANGE",
-    "dedup_decision": "keep_separate",
-    "dedup_why": "009/024 IVIG와 answer 다름",
+    "content_axis": "신생아황달-Coombs/면역성용혈-IVIG우선-교환수혈조건부",
+    "answer_key_normalized": "IVIG 우선; 교환수혈 조건부",
+    "group_id": "G-JAUNDICE-IVIG-CONFLICT",
+    "dedup_decision": "concept_conflict:review_needed",
+    "dedup_why": "Q9/Q24와 같은 면역성 용혈+광선치료 후 상승 축이나, 교환수혈 조건이 부족해 IVIG 우선으로 표시",
     "dedup_badges": [
-      "keep-separate"
+      "concept-conflict",
+      "review-needed"
     ],
     "strict_dedup_v2": {
       "episode": "Ep00-4",
-      "content_axis": "신생아황달-Coombs/교환수혈",
-      "answer_key_normalized": "교환수혈",
-      "group_id": "G-JAUNDICE-EXCHANGE",
-      "dedup_decision": "keep_separate",
-      "why": "009/024 IVIG와 answer 다름",
+      "content_axis": "신생아황달-Coombs/면역성용혈-IVIG우선-교환수혈조건부",
+      "answer_key_normalized": "IVIG 우선; 교환수혈 조건부",
+      "group_id": "G-JAUNDICE-IVIG-CONFLICT",
+      "dedup_decision": "concept_conflict:review_needed",
+      "why": "Q9/Q24와 같은 면역성 용혈+광선치료 후 상승 축이나, 교환수혈 조건이 부족해 IVIG 우선으로 표시",
       "badges": [
-        "keep-separate"
+        "concept-conflict",
+        "review-needed"
       ]
-    }
+    },
+    "tags": [
+      "복기의심",
+      "concept-conflict",
+      "review-needed"
+    ]
   },
   {
     "source": "29-32조",
@@ -2216,33 +2226,40 @@
     "mode": "주관식",
     "num_in_source": 5,
     "question": "18.8kg 환아에게 복부초음파 검사를 시행하기 위해 금식하려호 한다. 하루 필요한 수액량을 계산하여 수액 주입 속도를 구하시오. 57.6mL/hr",
-    "answer": "57.6 mL/hr",
+    "answer": "개념상 60 mL/hr. 복기상 57.6 mL/hr로 되어 있으나 100-50-20 rule로는 18.8 kg = 1000 + 440 = 1440 mL/day, 즉 60 mL/hr.",
     "id": "actual1_069",
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
-    "qc_flag": "answer_from_source_text",
+    "answer_confidence": "복기의심",
+    "qc_flag": "calculation_conflict_review_needed",
     "episode": "Ep00-2",
     "content_axis": "수분-유지수액 계산",
-    "answer_key_normalized": "57.6mL/hr",
+    "answer_key_normalized": "60 mL/hr (복기 57.6 의심)",
     "group_id": "G-FLUID-MAINTENANCE-CALC",
-    "dedup_decision": "keep_separate",
-    "dedup_why": "NS bolus와 계산축 분리",
+    "dedup_decision": "calculation_conflict:review_needed",
+    "dedup_why": "18.8 kg 유지수액은 100-50-20 rule 기준 1440 mL/day=60 mL/hr. 복기 57.6 mL/hr는 계산 불일치.",
     "dedup_badges": [
-      "keep-separate"
+      "calculation-conflict",
+      "review-needed"
     ],
     "strict_dedup_v2": {
       "episode": "Ep00-2",
       "content_axis": "수분-유지수액 계산",
-      "answer_key_normalized": "57.6mL/hr",
+      "answer_key_normalized": "60 mL/hr (복기 57.6 의심)",
       "group_id": "G-FLUID-MAINTENANCE-CALC",
-      "dedup_decision": "keep_separate",
-      "why": "NS bolus와 계산축 분리",
+      "dedup_decision": "calculation_conflict:review_needed",
+      "why": "18.8 kg 유지수액은 100-50-20 rule 기준 1440 mL/day=60 mL/hr. 복기 57.6 mL/hr는 계산 불일치.",
       "badges": [
-        "keep-separate"
+        "calculation-conflict",
+        "review-needed"
       ]
-    }
+    },
+    "tags": [
+      "복기의심",
+      "calculation-conflict",
+      "review-needed"
+    ]
   },
   {
     "source": "33~36조",
@@ -3414,6 +3431,606 @@
       "why": "034와 병합 금지",
       "badges": [
         "keep-separate"
+      ]
+    }
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_added_reviewed",
+    "qc_flag": "added_from_2023_HI_full_audit",
+    "id": "hi1_001",
+    "source": "HI raw: 소아과_pre-test_1차_HI lines 181-185 / 여신 raw lines 239-249",
+    "mode": "객관식",
+    "num_in_source": "HI-B12",
+    "question": "31주, 1,300g으로 출생하고 신생아 때 괴사성 장염으로 회장 절제술을 받은 2세 아이가 무기력하며 Hb 8, MCV 112이다. 결핍되어 보충해야 하는 영양소는? 1) Vit.B12 2) Folate 3) Zn 4) Fe",
+    "answer": "Vitamin B12 / cobalamin",
+    "episode": "Ep00-1",
+    "content_axis": "영양-B12/회장절제술/거대적혈모구빈혈",
+    "answer_key_normalized": "Vitamin B12/cobalamin",
+    "group_id": "G-NUT-B12-ILEAL-RESECTION",
+    "dedup_decision": "source_added:hi_exact",
+    "dedup_why": "HI raw와 여신 raw에 있는 B12 회장절제술 trigger가 기존 deck에서 채식 산모 trigger에 묻혀 exact stem으로 빠져 있어 추가",
+    "dedup_badges": [
+      "hi-source",
+      "source-added"
+    ],
+    "tags": [
+      "HI",
+      "source-added",
+      "B12_DEF"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "영양-B12/회장절제술/거대적혈모구빈혈",
+      "answer_key_normalized": "Vitamin B12/cobalamin",
+      "group_id": "G-NUT-B12-ILEAL-RESECTION",
+      "dedup_decision": "source_added:hi_exact",
+      "why": "HI raw와 여신 raw에 있는 B12 회장절제술 trigger가 기존 deck에서 채식 산모 trigger에 묻혀 exact stem으로 빠져 있어 추가",
+      "badges": [
+        "hi-source",
+        "source-added"
+      ]
+    }
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_added_reviewed",
+    "qc_flag": "added_from_2023_HI_full_audit",
+    "id": "actual2023_001",
+    "source": "2023년 소아청소년과 13-16조 pretest 1차 복기 lines 256-270",
+    "mode": "객관식",
+    "num_in_source": "객4",
+    "question": "3세 남아가 2~3분간 울다가 얼굴에 청색증이 생기고 전신이 30초간 강직된 후 의식이 회복된다. 마트에서 장난감을 사주지 않거나 좋아하는 만화영화를 보지 못하게 할 때 증상이 나타난다. 진단은? 1) 야경증 2) 발작수면 3) 몸서리 발작 4) 호흡중지발작 5) 양성발작체위현기증",
+    "answer": "호흡중지발작",
+    "episode": "Ep07-1",
+    "content_axis": "신경-호흡중지발작/breath-holding spell",
+    "answer_key_normalized": "호흡중지발작",
+    "group_id": "G-NEURO-BREATH-HOLDING",
+    "dedup_decision": "source_added:2023_exact",
+    "dedup_why": "2023 exact stem 누락",
+    "dedup_badges": [
+      "2023-source",
+      "source-added"
+    ],
+    "tags": [
+      "2023",
+      "source-added",
+      "BREATH_HOLDING"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep07-1",
+      "content_axis": "신경-호흡중지발작/breath-holding spell",
+      "answer_key_normalized": "호흡중지발작",
+      "group_id": "G-NEURO-BREATH-HOLDING",
+      "dedup_decision": "source_added:2023_exact",
+      "why": "2023 exact stem 누락",
+      "badges": [
+        "2023-source",
+        "source-added"
+      ]
+    }
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_added_reviewed",
+    "qc_flag": "added_from_2023_HI_full_audit",
+    "id": "actual2023_002",
+    "source": "2023년 소아청소년과 1-4조 pretest 1차 복기 lines 543-550",
+    "mode": "주관식",
+    "num_in_source": "주3",
+    "question": "태아나 신생아에게 산소 공급과 이산화탄소 제거가 원활히 이루어지지 않아 저산소혈증, 산혈증, 고탄산혈증이 발생하는 상태를 무엇이라고 하는가?",
+    "answer": "신생아 가사 / 주산기 가사",
+    "episode": "Ep00-3",
+    "content_axis": "신생아-가사 정의",
+    "answer_key_normalized": "신생아 가사",
+    "group_id": "G-NEONATAL-ASPHYXIA-DEF",
+    "dedup_decision": "source_added:2023_exact",
+    "dedup_why": "2023 exact stem 누락",
+    "dedup_badges": [
+      "2023-source",
+      "source-added"
+    ],
+    "tags": [
+      "2023",
+      "source-added",
+      "NEONATAL_ASPHYXIA_DEF"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "신생아-가사 정의",
+      "answer_key_normalized": "신생아 가사",
+      "group_id": "G-NEONATAL-ASPHYXIA-DEF",
+      "dedup_decision": "source_added:2023_exact",
+      "why": "2023 exact stem 누락",
+      "badges": [
+        "2023-source",
+        "source-added"
+      ]
+    }
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_added_reviewed",
+    "qc_flag": "added_from_2023_HI_full_audit",
+    "id": "actual2023_003",
+    "source": "2023년 소아청소년과 1-4조 pretest 1차 복기 lines 507-520",
+    "mode": "객관식",
+    "num_in_source": "객4",
+    "question": "41주 3500g 여아가 제왕절개로 출생했다. 태변착색된 신생아이며 HR 140 외에 다른 증상은 없다. 처치는? 1) 경과관찰 2) 인공호흡기 3) 기관삽관 4) 경비관 산소공급 5) nitric oxide",
+    "answer": "경과관찰",
+    "episode": "Ep00-3",
+    "content_axis": "신생아-태변착색/활력양호/경과관찰",
+    "answer_key_normalized": "경과관찰",
+    "group_id": "G-MECONIUM-OBSERVE",
+    "dedup_decision": "source_added:2023_exact",
+    "dedup_why": "2023 exact stem 누락",
+    "dedup_badges": [
+      "2023-source",
+      "source-added"
+    ],
+    "tags": [
+      "2023",
+      "source-added",
+      "MECONIUM_OBSERVE"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "신생아-태변착색/활력양호/경과관찰",
+      "answer_key_normalized": "경과관찰",
+      "group_id": "G-MECONIUM-OBSERVE",
+      "dedup_decision": "source_added:2023_exact",
+      "why": "2023 exact stem 누락",
+      "badges": [
+        "2023-source",
+        "source-added"
+      ]
+    }
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_added_reviewed",
+    "qc_flag": "added_from_2023_HI_full_audit",
+    "id": "actual2023_004",
+    "source": "2023년 소아청소년과 13-16조 pretest 1차 복기 lines 309-312",
+    "mode": "주관식",
+    "num_in_source": "주3",
+    "question": "신생아 소생술이 필요하지 않은지 판단하기 위한 3가지 질문을 쓰시오.",
+    "answer": "만삭아인가? 근긴장도는 좋은가? 울거나 숨을 잘 쉬는가?",
+    "episode": "Ep00-3",
+    "content_axis": "신생아소생술-초기평가 3질문",
+    "answer_key_normalized": "만삭/근긴장도/호흡·울음",
+    "group_id": "G-NRP-INITIAL-QUESTIONS",
+    "dedup_decision": "source_added:2023_exact",
+    "dedup_why": "2023 exact stem 누락",
+    "dedup_badges": [
+      "2023-source",
+      "source-added"
+    ],
+    "tags": [
+      "2023",
+      "source-added",
+      "NRP_INITIAL_QUESTIONS"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "신생아소생술-초기평가 3질문",
+      "answer_key_normalized": "만삭/근긴장도/호흡·울음",
+      "group_id": "G-NRP-INITIAL-QUESTIONS",
+      "dedup_decision": "source_added:2023_exact",
+      "why": "2023 exact stem 누락",
+      "badges": [
+        "2023-source",
+        "source-added"
+      ]
+    }
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_added_reviewed",
+    "qc_flag": "added_from_2023_HI_full_audit",
+    "id": "actual2023_005",
+    "source": "2023년 소아청소년과 13-16조 pretest 1차 복기 lines 301-306",
+    "mode": "주관식",
+    "num_in_source": "주2",
+    "question": "임신나이 29주, 출생체중 1,600g 신생아가 인공호흡기 치료 중이다. 생후 2일에 갑자기 호흡곤란, 청색증, 가슴뒤당김이 심해지고 산소포화도가 낮아졌다. 흉부 X선에서 오른쪽 가슴 공기음영 증가, 가로막 하강, 세로칸 좌측 이동이 보인다. 진단과 치료는?",
+    "answer": "기흉 → 가슴관 삽입",
+    "episode": "Ep00-4",
+    "content_axis": "신생아호흡-기흉/긴장성기흉/chest tube",
+    "answer_key_normalized": "기흉/chest tube",
+    "group_id": "G-PNEUMOTHORAX-CHESTTUBE",
+    "dedup_decision": "source_added:2023_exact",
+    "dedup_why": "drill에는 있었지만 2023 actual exact stem으로 추가",
+    "dedup_badges": [
+      "2023-source",
+      "source-added"
+    ],
+    "tags": [
+      "2023",
+      "source-added",
+      "PNEUMOTHORAX_CHESTTUBE"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-4",
+      "content_axis": "신생아호흡-기흉/긴장성기흉/chest tube",
+      "answer_key_normalized": "기흉/chest tube",
+      "group_id": "G-PNEUMOTHORAX-CHESTTUBE",
+      "dedup_decision": "source_added:2023_exact",
+      "why": "drill에는 있었지만 2023 actual exact stem으로 추가",
+      "badges": [
+        "2023-source",
+        "source-added"
+      ]
+    }
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_added_reviewed",
+    "qc_flag": "added_from_2023_HI_full_audit",
+    "id": "actual2023_006",
+    "source": "2023년 소아청소년과 1-4조 pretest 1차 복기 lines 557-564",
+    "mode": "주관식",
+    "num_in_source": "주4",
+    "question": "황달로 광선치료를 받은 환아의 피부가 짙은 회갈색/청동색으로 변하는 것을 무엇이라고 하는가?",
+    "answer": "청동아증후군 / bronze baby syndrome",
+    "episode": "Ep00-4",
+    "content_axis": "신생아황달-광선치료 합병증/bronze baby syndrome",
+    "answer_key_normalized": "bronze baby syndrome",
+    "group_id": "G-BRONZE-BABY",
+    "dedup_decision": "source_added:2023_exact",
+    "dedup_why": "2023 exact stem 누락",
+    "dedup_badges": [
+      "2023-source",
+      "source-added"
+    ],
+    "tags": [
+      "2023",
+      "source-added",
+      "BRONZE_BABY"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-4",
+      "content_axis": "신생아황달-광선치료 합병증/bronze baby syndrome",
+      "answer_key_normalized": "bronze baby syndrome",
+      "group_id": "G-BRONZE-BABY",
+      "dedup_decision": "source_added:2023_exact",
+      "why": "2023 exact stem 누락",
+      "badges": [
+        "2023-source",
+        "source-added"
+      ]
+    }
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_added_reviewed",
+    "qc_flag": "added_from_2023_HI_full_audit",
+    "id": "actual2023_007",
+    "source": "2023년 소아청소년과 17-20조 pretest 1차 복기 lines 461-463",
+    "mode": "주관식",
+    "num_in_source": "주4",
+    "question": "신생아 눈관리에서 erythromycin 또는 tetracycline 점안은 어떤 감염을 예방하기 위한 목적인가?",
+    "answer": "클라미디아 감염 예방",
+    "episode": "Ep00-4",
+    "content_axis": "신생아눈관리-클라미디아 예방",
+    "answer_key_normalized": "Chlamydia prophylaxis",
+    "group_id": "G-CHLAMYDIA-EYE-PROPHYLAXIS",
+    "dedup_decision": "source_added:2023_exact",
+    "dedup_why": "결막염 원인 카드와 별개로 눈관리 예방 목적 exact stem 추가",
+    "dedup_badges": [
+      "2023-source",
+      "source-added"
+    ],
+    "tags": [
+      "2023",
+      "source-added",
+      "CHLAMYDIA_EYE_PROPHYLAXIS"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-4",
+      "content_axis": "신생아눈관리-클라미디아 예방",
+      "answer_key_normalized": "Chlamydia prophylaxis",
+      "group_id": "G-CHLAMYDIA-EYE-PROPHYLAXIS",
+      "dedup_decision": "source_added:2023_exact",
+      "why": "결막염 원인 카드와 별개로 눈관리 예방 목적 exact stem 추가",
+      "badges": [
+        "2023-source",
+        "source-added"
+      ]
+    }
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_added_reviewed",
+    "qc_flag": "added_from_2023_HI_full_audit",
+    "id": "actual2023_008",
+    "source": "2023년 소아청소년과 1-4조 pretest 1차 복기 lines 525-530",
+    "mode": "객관식/주관식",
+    "num_in_source": "객5",
+    "question": "혈우병 A 남아를 낳은 산모가 다시 남아를 임신했다. 남편은 혈우병 A 병력이 없다. 다음 남아가 혈우병 A일 확률은?",
+    "answer": "1/2",
+    "episode": "Ep00-2",
+    "content_axis": "유전-혈우병A/X-linked recessive/남아 재발위험",
+    "answer_key_normalized": "1/2",
+    "group_id": "G-HEMOPHILIA-XLINK",
+    "dedup_decision": "source_added:2023_exact",
+    "dedup_why": "2023 exact stem 누락",
+    "dedup_badges": [
+      "2023-source",
+      "source-added"
+    ],
+    "tags": [
+      "2023",
+      "source-added",
+      "HEMOPHILIA_XLINK"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "유전-혈우병A/X-linked recessive/남아 재발위험",
+      "answer_key_normalized": "1/2",
+      "group_id": "G-HEMOPHILIA-XLINK",
+      "dedup_decision": "source_added:2023_exact",
+      "why": "2023 exact stem 누락",
+      "badges": [
+        "2023-source",
+        "source-added"
+      ]
+    }
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_added_reviewed",
+    "qc_flag": "added_from_2023_HI_full_audit",
+    "id": "actual2023_009",
+    "source": "2023년 소아청소년과 13-16조 pretest 1차 복기 lines 293-297",
+    "mode": "주관식",
+    "num_in_source": "주1",
+    "question": "가계도가 제시되고 상염색체 우성 양식을 보인다. 이 유전 양식은 무엇인가?",
+    "answer": "상염색체 우성",
+    "episode": "Ep00-2",
+    "content_axis": "유전-상염색체 우성 가계도",
+    "answer_key_normalized": "상염색체 우성",
+    "group_id": "G-AD-INHERITANCE",
+    "dedup_decision": "source_added:2023_exact",
+    "dedup_why": "2023 exact stem 누락",
+    "dedup_badges": [
+      "2023-source",
+      "source-added"
+    ],
+    "tags": [
+      "2023",
+      "source-added",
+      "AD_INHERITANCE"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "유전-상염색체 우성 가계도",
+      "answer_key_normalized": "상염색체 우성",
+      "group_id": "G-AD-INHERITANCE",
+      "dedup_decision": "source_added:2023_exact",
+      "why": "2023 exact stem 누락",
+      "badges": [
+        "2023-source",
+        "source-added"
+      ]
+    }
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_added_reviewed",
+    "qc_flag": "added_from_2023_HI_full_audit",
+    "id": "actual2023_010",
+    "source": "2023년 소아청소년과 17-20조 pretest 1차 복기 lines 331-353",
+    "mode": "객관식",
+    "num_in_source": "객1",
+    "question": "7세 여아가 간기능 저하로 내원했다. 간이 갈비모서리 아래 2~3 cm 만져지고 AST/ALT 상승, serum ceruloplasmin <4.0, serum Cu 16으로 낮다. 치료는? 1) alpha-glucosidase 2) cholestyramine 3) cobalamin 4) pyridoxine 5) trientine",
+    "answer": "trientine",
+    "episode": "Ep00-2",
+    "content_axis": "대사-Wilson disease/구리킬레이터",
+    "answer_key_normalized": "trientine",
+    "group_id": "G-WILSON-TRIENTINE",
+    "dedup_decision": "source_added:2023_exact",
+    "dedup_why": "2023 exact stem 누락",
+    "dedup_badges": [
+      "2023-source",
+      "source-added"
+    ],
+    "tags": [
+      "2023",
+      "source-added",
+      "WILSON_TRIENTINE"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-2",
+      "content_axis": "대사-Wilson disease/구리킬레이터",
+      "answer_key_normalized": "trientine",
+      "group_id": "G-WILSON-TRIENTINE",
+      "dedup_decision": "source_added:2023_exact",
+      "why": "2023 exact stem 누락",
+      "badges": [
+        "2023-source",
+        "source-added"
+      ]
+    }
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_added_reviewed",
+    "qc_flag": "added_from_2023_HI_full_audit",
+    "id": "actual2023_011",
+    "source": "2023년 소아청소년과 9-12조 pretest 1차 복기 lines 140-165",
+    "mode": "주관식",
+    "num_in_source": "주2",
+    "question": "면역결핍 환자에서 세포성 면역을 검사하는 방법과 체액성 면역을 검사하는 방법을 구분하시오.",
+    "answer": "세포성 면역: 말초혈 림프구 수/형태, T cell subset, 지연 피부반응, 림프구 증식반응, thymus chest X-ray 등. 체액성 면역: 혈청 Ig 정량, isohemagglutinin, 특정 항체 생성능, B cell 측정 등.",
+    "episode": "Ep03-3",
+    "content_axis": "면역결핍-세포성/체액성 면역검사 구분",
+    "answer_key_normalized": "cellular vs humoral immune tests",
+    "group_id": "G-IMMUNE-TESTS",
+    "dedup_decision": "source_added:2023_exact",
+    "dedup_why": "DiGeorge 카드와 별개로 검사 taxonomy exact stem 추가",
+    "dedup_badges": [
+      "2023-source",
+      "source-added"
+    ],
+    "tags": [
+      "2023",
+      "source-added",
+      "IMMUNE_TESTS"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep03-3",
+      "content_axis": "면역결핍-세포성/체액성 면역검사 구분",
+      "answer_key_normalized": "cellular vs humoral immune tests",
+      "group_id": "G-IMMUNE-TESTS",
+      "dedup_decision": "source_added:2023_exact",
+      "why": "DiGeorge 카드와 별개로 검사 taxonomy exact stem 추가",
+      "badges": [
+        "2023-source",
+        "source-added"
+      ]
+    }
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_added_reviewed",
+    "qc_flag": "added_from_2023_HI_full_audit",
+    "id": "actual2023_012",
+    "source": "2023년 소아청소년과 13-16조 pretest 1차 복기 lines 274-288",
+    "mode": "객관식",
+    "num_in_source": "객5",
+    "question": "생후 n개월 여아가 발열로 내원했다. 2일 전 예방접종을 했고 조금 보채지만 잘 먹으며 피부는 핑크색이다. 조치는? 1) 경과관찰 2) 항생제 3) 면역글로불린 4) 글루코코르티코이드 5) 복기안됨",
+    "answer": "경과관찰",
+    "episode": "Ep00-1",
+    "content_axis": "예방접종-접종 후 발열/전신상태 양호/경과관찰",
+    "answer_key_normalized": "경과관찰",
+    "group_id": "G-POST-VACCINE-FEVER-OBSERVE",
+    "dedup_decision": "source_added:2023_exact",
+    "dedup_why": "2023 exact stem 누락",
+    "dedup_badges": [
+      "2023-source",
+      "source-added"
+    ],
+    "tags": [
+      "2023",
+      "source-added",
+      "POST_VACCINE_FEVER"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "예방접종-접종 후 발열/전신상태 양호/경과관찰",
+      "answer_key_normalized": "경과관찰",
+      "group_id": "G-POST-VACCINE-FEVER-OBSERVE",
+      "dedup_decision": "source_added:2023_exact",
+      "why": "2023 exact stem 누락",
+      "badges": [
+        "2023-source",
+        "source-added"
+      ]
+    }
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_added_reviewed",
+    "qc_flag": "added_from_2023_HI_full_audit",
+    "id": "actual2023_013",
+    "source": "2023년 소아청소년과 13-16조 pretest 1차 복기 lines 315-318 / HI lines 73-82",
+    "mode": "주관식",
+    "num_in_source": "주4",
+    "question": "언어발달지연의 정의와 원인 2가지를 쓰시오.",
+    "answer": "정의: 언어 발달이 도달해야 할 수준에 이르지 못한 상태, 일반적으로 만 2세가 되어도 말을 하지 못하는 경우. 원인: 지적장애, 자폐증, 청력장애 등.",
+    "episode": "Ep00-1",
+    "content_axis": "발달-언어발달지연 정의/원인",
+    "answer_key_normalized": "language delay definition and causes",
+    "group_id": "G-LANGUAGE-DELAY-DEF-CAUSE",
+    "dedup_decision": "source_added:2023_exact",
+    "dedup_why": "기존 trigger drill과 별개로 정의/원인 exact stem 추가",
+    "dedup_badges": [
+      "2023-source",
+      "source-added"
+    ],
+    "tags": [
+      "2023",
+      "source-added",
+      "LANGUAGE_DELAY"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "발달-언어발달지연 정의/원인",
+      "answer_key_normalized": "language delay definition and causes",
+      "group_id": "G-LANGUAGE-DELAY-DEF-CAUSE",
+      "dedup_decision": "source_added:2023_exact",
+      "why": "기존 trigger drill과 별개로 정의/원인 exact stem 추가",
+      "badges": [
+        "2023-source",
+        "source-added"
+      ]
+    }
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "source_added_reviewed",
+    "qc_flag": "added_from_2023_HI_full_audit",
+    "id": "actual2023_014",
+    "source": "2023년 소아청소년과 17-20조 pretest 1차 복기 lines 446-449",
+    "mode": "주관식",
+    "num_in_source": "주2",
+    "question": "미숙아에서 조산, RDS, 저산소 허혈/재관류, 혈압 변동, 기흉, 혈량 과다, 혈소판 감소증 등이 위험인자이고, 심하면 의식장애·저혈압·무호흡·창백·근긴장도 감소·경련·대사산증·hematocrit 감소를 보이는 질환은?",
+    "answer": "뇌실주위-뇌실내 출혈 / IVH",
+    "episode": "Ep00-3",
+    "content_axis": "미숙아-뇌실주위/뇌실내출혈 IVH",
+    "answer_key_normalized": "IVH",
+    "group_id": "G-IVH-PRETERM",
+    "dedup_decision": "source_added:2023_exact",
+    "dedup_why": "2023 exact stem 누락",
+    "dedup_badges": [
+      "2023-source",
+      "source-added"
+    ],
+    "tags": [
+      "2023",
+      "source-added",
+      "IVH_PRETERM"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "미숙아-뇌실주위/뇌실내출혈 IVH",
+      "answer_key_normalized": "IVH",
+      "group_id": "G-IVH-PRETERM",
+      "dedup_decision": "source_added:2023_exact",
+      "why": "2023 exact stem 누락",
+      "badges": [
+        "2023-source",
+        "source-added"
       ]
     }
   }
