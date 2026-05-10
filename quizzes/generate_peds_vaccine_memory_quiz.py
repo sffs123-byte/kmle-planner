@@ -23,8 +23,9 @@ OUT = QUIZ_DIR / "소아_예방접종_암기퀴즈.html"
 DATA_OUT = DATA_DIR / "peds_vaccine_memory_cards.json"
 SOURCE_IMAGE_IN = Path("/Users/sffs123gmail.com/.openclaw/media/inbound/file_146---2b868f2a-112a-4a1f-aae5-ffac82352f8b.jpg")
 SOURCE_IMAGE = ASSET_DIR / "source_vaccine_note_20260511.jpg"
-SOURCE_SCHEDULE_IN = Path("/Users/sffs123gmail.com/.openclaw/media/inbound/file_147---292231db-2c85-4287-a66f-27486b82853b.jpg")
+SOURCE_SCHEDULE_IN = Path("/Users/sffs123gmail.com/.openclaw/media/inbound/file_148---55496679-f7da-4af4-8f36-a728419ba4ee.jpg")
 SOURCE_SCHEDULE = ASSET_DIR / "source_vaccine_schedule_20260511.jpg"
+MANTRA = "홍수로비 디폴히피로히피디디폴 사맘, Tdap HPV"
 
 if SOURCE_IMAGE_IN.exists():
     shutil.copyfile(SOURCE_IMAGE_IN, SOURCE_IMAGE)
@@ -34,6 +35,10 @@ if SOURCE_SCHEDULE_IN.exists():
 
 def e(s: object) -> str:
     return html.escape(str(s), quote=False)
+
+
+def mantra_strip() -> str:
+    return f'<div class="vaccine-mantra-inline">{e(MANTRA)}</div>'
 
 
 CARDS = [
@@ -127,6 +132,7 @@ def card_html_q(q: str, tag: str) -> str:
   <div style="font-size:11px;font-weight:900;color:#93c5fd;letter-spacing:.06em;">예방접종 암기</div>
   <div style="font-size:17px;line-height:1.65;color:#e5e7eb;font-weight:800;">{e(q)}</div>
   <div><span style="background:#1e3a8a;color:#dbeafe;border:1px solid #60a5fa;border-radius:999px;padding:2px 8px;font-size:11px;font-weight:800;">#{e(tag)}</span></div>
+  {mantra_strip()}
 </div>
 """.strip()
 
@@ -136,6 +142,7 @@ def card_html_a(q: str, a: str, note: str, tag: str) -> str:
     schedule_img = "./assets/peds_vaccine_memory/source_vaccine_schedule_20260511.jpg"
     return f"""
 <section style="display:flex;flex-direction:column;gap:12px;line-height:1.7;">
+  {mantra_strip()}
   <div style="border-left:4px solid #2563eb;background:#eff6ff;padding:12px 14px;border-radius:10px;">
     <div style="font-size:12px;font-weight:900;color:#1d4ed8;margin-bottom:6px;">문제</div>
     <div>{e(q)}</div>
@@ -154,6 +161,7 @@ def card_html_a(q: str, a: str, note: str, tag: str) -> str:
     <img src="{schedule_img}" alt="소아 예방접종 일정 원본" style="max-width:100%;border-radius:12px;margin-top:10px;border:1px solid #e5e7eb;" />
     <div style="margin-top:8px;font-size:12px;color:#64748b;">#{e(tag)} · 업로드 이미지 기반</div>
   </details>
+  {mantra_strip()}
 </section>
 """.strip()
 
@@ -169,6 +177,7 @@ def guide_html(q: str, a: str, note: str, tag: str) -> str:
   <p>{e(note)}</p>
   <h4>출처</h4>
   <p>업로드 이미지: 생백신/동시접종/금기 메모 + 소아 예방접종 일정표</p>
+  <p><strong>{e(MANTRA)}</strong></p>
   <p><code>{e(tag)}</code></p>
 </section>
 """.strip()
@@ -191,6 +200,119 @@ def build_cards() -> list[dict]:
     return built
 
 
+def apply_spell_background() -> None:
+    """Make the vaccine mantra unavoidable without turning it into another question."""
+    text = OUT.read_text(encoding="utf-8")
+    css = f"""
+
+/* Vaccine spell layer: 강렬 고정 암기 주문 */
+body.vaccine-spell-body {{
+    background:
+        linear-gradient(120deg, rgba(15, 23, 42, .91), rgba(30, 41, 59, .84)),
+        url('./assets/peds_vaccine_memory/source_vaccine_schedule_20260511.jpg') center top / cover fixed no-repeat !important;
+}}
+body.vaccine-spell-body::before {{
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+        repeating-linear-gradient(135deg,
+            rgba(59, 130, 246, .16) 0 2px,
+            transparent 2px 62px),
+        url('./assets/peds_vaccine_memory/source_vaccine_schedule_20260511.jpg');
+    background-size: auto, min(92vw, 920px) auto;
+    background-repeat: repeat, no-repeat;
+    background-position: center, center 54%;
+    opacity: .20;
+    filter: saturate(1.08) contrast(1.04);
+}}
+body.vaccine-spell-body .sidebar,
+body.vaccine-spell-body .main,
+body.vaccine-spell-body .quiz-overlay,
+body.vaccine-spell-body .quiz-header {{
+    position: relative;
+    z-index: 1;
+}}
+body.vaccine-spell-body .card,
+body.vaccine-spell-body .quiz-card {{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 18px 44px rgba(2, 6, 23, .24);
+}}
+body.vaccine-spell-body .card::before,
+body.vaccine-spell-body .quiz-card::before {{
+    content: '{e(MANTRA)}';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 5px 12px;
+    background: linear-gradient(90deg, rgba(30, 64, 175, .92), rgba(16, 185, 129, .82));
+    color: #eff6ff;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .04em;
+    text-align: center;
+    z-index: 2;
+}}
+body.vaccine-spell-body .card .card-header,
+body.vaccine-spell-body .quiz-card {{
+    padding-top: 34px !important;
+}}
+.vaccine-mantra-inline {{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #eff6ff, #ecfdf5);
+    color: #1e3a8a;
+    border: 1px solid rgba(37, 99, 235, .24);
+    font-size: 12px;
+    font-weight: 950;
+    letter-spacing: .03em;
+}}
+.vaccine-mantra-ribbon {{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    padding: 7px 10px;
+    background: rgba(15, 23, 42, .86);
+    color: #bfdbfe;
+    border-top: 1px solid rgba(147, 197, 253, .35);
+    font-size: 12px;
+    font-weight: 950;
+    letter-spacing: .08em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+}}
+body.vaccine-spell-body .quiz-answer::after {{
+    content: '{e(MANTRA)}';
+    display: block;
+    margin-top: 14px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: #dbeafe;
+    color: #1e3a8a;
+    font-weight: 950;
+    text-align: center;
+}}
+"""
+    ribbon = f"""
+<div class="vaccine-mantra-ribbon">{e(MANTRA)} · {e(MANTRA)} · {e(MANTRA)} · {e(MANTRA)}</div>
+""".strip()
+    text = text.replace("</style>", css + "\n</style>", 1)
+    text = text.replace("<body>", '<body class="vaccine-spell-body">\n' + ribbon, 1)
+    OUT.write_text(text, encoding="utf-8")
+
+
 def main() -> None:
     cards=build_cards()
     builder=QuizBuilder(
@@ -201,6 +323,7 @@ def main() -> None:
         randomize_review=True,
     )
     builder.write(str(OUT))
+    apply_spell_background()
     print(f"cards: {len(cards)}")
     print(f"data: {DATA_OUT}")
     print(f"out: {OUT}")
