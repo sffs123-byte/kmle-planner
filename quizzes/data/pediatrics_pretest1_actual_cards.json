@@ -4045,34 +4045,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q001",
-      "주Q"
+      "주Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -4087,34 +4090,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q002",
-      "객Q"
+      "객Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -4129,34 +4135,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q003",
-      "주Q"
+      "주Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -4171,34 +4180,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q004",
-      "주Q"
+      "주Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -4213,34 +4225,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q005",
-      "주Q"
+      "주Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -4255,34 +4270,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q006",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -4297,34 +4315,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q007",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -4339,34 +4360,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q008",
-      "주Q"
+      "주Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -4381,34 +4405,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q009",
-      "주Q"
+      "주Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -4423,34 +4450,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q010",
-      "객Q"
+      "객Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -4465,34 +4495,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q011",
-      "객Q"
+      "객Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -4507,34 +4540,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q012",
-      "객Q"
+      "객Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -4549,34 +4585,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q013",
-      "객Q"
+      "객Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -4591,34 +4630,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q014",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -4633,34 +4675,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q015",
-      "객Q"
+      "객Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -4675,34 +4720,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q016",
-      "객Q"
+      "객Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -4717,34 +4765,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q017",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -4759,34 +4810,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q018",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -4801,34 +4855,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q019",
-      "객Q"
+      "객Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -4843,34 +4900,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q020",
-      "주Q"
+      "주Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -4885,34 +4945,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q021",
-      "객Q"
+      "객Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -4927,34 +4990,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q022",
-      "객Q"
+      "객Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -4969,34 +5035,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q023",
-      "주Q"
+      "주Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -5011,34 +5080,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q024",
-      "주Q"
+      "주Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -5053,34 +5125,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q025",
-      "주Q"
+      "주Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -5095,34 +5170,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q026",
-      "객Q"
+      "객Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -5137,34 +5215,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q027",
-      "객Q"
+      "객Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -5179,34 +5260,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q028",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -5221,34 +5305,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q029",
-      "주Q"
+      "주Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -5263,34 +5350,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q030",
-      "객Q"
+      "객Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -5305,34 +5395,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q031",
-      "객Q"
+      "객Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -5347,34 +5440,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q032",
-      "주Q"
+      "주Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -5389,34 +5485,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q033",
-      "객Q"
+      "객Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -5431,34 +5530,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q034",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -5473,34 +5575,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q035",
-      "객Q"
+      "객Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -5515,34 +5620,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q036",
-      "주Q"
+      "주Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -5557,34 +5665,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q037",
-      "객Q"
+      "객Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -5599,34 +5710,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q038",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -5641,34 +5755,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q039",
-      "주Q"
+      "주Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -5683,34 +5800,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q040",
-      "주Q"
+      "주Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -5725,34 +5845,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q041",
-      "객Q"
+      "객Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -5767,34 +5890,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q042",
-      "주Q"
+      "주Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -5809,34 +5935,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q043",
-      "객Q"
+      "객Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -5851,34 +5980,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q044",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -5893,34 +6025,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q045",
-      "주Q"
+      "주Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -5935,34 +6070,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q046",
-      "객Q"
+      "객Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -5977,34 +6115,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q047",
-      "객Q"
+      "객Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -6019,34 +6160,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q048",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -6061,34 +6205,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q049",
-      "객Q"
+      "객Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -6103,34 +6250,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q050",
-      "주Q"
+      "주Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -6145,34 +6295,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q051",
-      "주Q"
+      "주Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -6187,34 +6340,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q052",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -6229,34 +6385,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q053",
-      "주Q"
+      "주Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -6271,34 +6430,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q054",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -6313,34 +6475,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q055",
-      "객Q"
+      "객Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -6355,34 +6520,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q056",
-      "객Q"
+      "객Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -6397,34 +6565,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q057",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -6439,34 +6610,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q058",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -6481,34 +6655,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q059",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -6523,34 +6700,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q060",
-      "객Q"
+      "객Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -6565,34 +6745,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q061",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -6607,34 +6790,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q062",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -6649,34 +6835,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q063",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -6691,34 +6880,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q064",
-      "주Q"
+      "주Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -6733,34 +6925,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q065",
-      "객Q"
+      "객Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -6775,34 +6970,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q066",
-      "객Q"
+      "객Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -6817,34 +7015,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q067",
-      "객Q"
+      "객Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -6859,34 +7060,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q068",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -6901,34 +7105,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q069",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -6943,34 +7150,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q070",
-      "객Q"
+      "객Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -6985,34 +7195,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q071",
-      "주Q"
+      "주Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -7027,34 +7240,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q072",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -7069,34 +7285,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q073",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -7111,34 +7330,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q074",
-      "객Q"
+      "객Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -7153,34 +7375,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q075",
-      "객Q"
+      "객Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -7195,34 +7420,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q076",
-      "객Q"
+      "객Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -7237,34 +7465,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q077",
-      "주Q"
+      "주Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -7279,34 +7510,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q078",
-      "객Q"
+      "객Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -7321,34 +7555,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q079",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -7363,34 +7600,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q080",
-      "객Q"
+      "객Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -7405,34 +7645,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q081",
-      "객Q"
+      "객Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -7447,34 +7690,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q082",
-      "객Q"
+      "객Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -7489,34 +7735,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q083",
-      "객Q"
+      "객Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -7531,34 +7780,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q084",
-      "객Q"
+      "객Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -7573,34 +7825,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q085",
-      "주Q"
+      "주Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -7615,34 +7870,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q086",
-      "객Q"
+      "객Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -7657,34 +7915,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q087",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -7699,34 +7960,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q088",
-      "객Q"
+      "객Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -7741,34 +8005,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q089",
-      "객Q"
+      "객Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -7783,34 +8050,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q090",
-      "객Q"
+      "객Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -7825,34 +8095,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q091",
-      "객Q"
+      "객Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -7867,34 +8140,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q092",
-      "주Q"
+      "주Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -7909,34 +8185,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q093",
-      "객Q"
+      "객Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -7951,34 +8230,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-exact-or-near",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+    "dedup_why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-exact-or-near"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q094",
-      "주Q"
+      "주Q",
+      "overlap-exact-or-near"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-exact-or-near",
+      "why": "기존 169 deck에 exact 또는 near-exact stem/answer가 이미 있음. HI 원문 보존용 중복 카드.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-exact-or-near"
       ]
     }
   },
@@ -7993,34 +8275,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q095",
-      "객Q"
+      "객Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -8035,34 +8320,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q096",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -8077,34 +8365,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q097",
-      "주Q"
+      "주Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -8119,34 +8410,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q098",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -8161,34 +8455,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-new-hi-gap",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+    "dedup_why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-new-hi-gap"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q099",
-      "주Q"
+      "주Q",
+      "overlap-new-hi-gap"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-new-hi-gap",
+      "why": "기존 169 deck에 사실상 빠져 있던 HI Q marker stem. 신규 보강 필요성이 높음.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-new-hi-gap"
       ]
     }
   },
@@ -8203,34 +8500,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q100",
-      "객Q"
+      "객Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   },
@@ -8245,34 +8545,37 @@
     "priority_tier": "P1",
     "type": "actual_pretest",
     "answer_confidence": "source_snippet",
-    "qc_flag": "added_from_HI_all_Q_marker_sweep",
+    "qc_flag": "added_from_HI_all_Q_marker_sweep_overlap-same-concept-variant",
     "episode": "HI-raw",
     "content_axis": "HI 1차 원문 Q marker exact-source supplement",
     "answer_key_normalized": "HI raw snippet preserved",
     "group_id": "G-HI-ALL-Q-MARKERS",
-    "dedup_decision": "source_preserve:hi_q_marker",
-    "dedup_why": "강렬 지시: HI 1차 원문에서 객Q/주Q로 표시된 것은 전부 문제로 보고 별도 exact-source 카드로 보존",
+    "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+    "dedup_why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
     "dedup_badges": [
       "HI-Q",
-      "source-preserved"
+      "source-preserved",
+      "overlap-same-concept-variant"
     ],
     "tags": [
       "HI",
       "HI-Q",
       "source-preserved",
       "HI-Q101",
-      "객Q"
+      "객Q",
+      "overlap-same-concept-variant"
     ],
     "strict_dedup_v2": {
       "episode": "HI-raw",
       "content_axis": "HI 1차 원문 Q marker exact-source supplement",
       "answer_key_normalized": "HI raw snippet preserved",
       "group_id": "G-HI-ALL-Q-MARKERS",
-      "dedup_decision": "source_preserve:hi_q_marker",
-      "why": "HI 객Q/주Q marker occurrence preserved verbatim-ish as quiz source",
+      "dedup_decision": "source_preserve:hi_q_marker:overlap-same-concept-variant",
+      "why": "기존 deck에 같은 개념/축은 있으나 HI의 exact stem 또는 answer framing은 달라 별도 보존.",
       "badges": [
         "HI-Q",
-        "source-preserved"
+        "source-preserved",
+        "overlap-same-concept-variant"
       ]
     }
   }
