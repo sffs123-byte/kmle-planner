@@ -562,6 +562,15 @@ body.drawing-active * {
     box-shadow: 0 2px 8px rgba(0,0,0,0.4);
     align-items: center; justify-content: center;
 }
+.mobile-review-start {
+    display: none;
+    position: fixed; left: 56px; top: 10px; z-index: 200;
+    min-height: 36px; padding: 0 14px;
+    background: var(--green); border: none; color: #fff;
+    border-radius: 999px; cursor: pointer;
+    font-size: 13px; font-weight: 800;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
 .sb-overlay {
     display: none;
     position: fixed; inset: 0;
@@ -573,6 +582,7 @@ body.drawing-active * {
 /* responsive */
 @media (max-width: 1100px) {
     .sb-mobile-toggle { display: flex; }
+    .mobile-review-start { display: inline-flex; align-items: center; justify-content: center; }
     .sidebar {
         transform: translateX(-100%);
         z-index: 150;
@@ -645,6 +655,7 @@ body.peds-pretest-bg-body .quiz-answer::after {
 
 <!-- Mobile sidebar toggle -->
 <button class="sb-mobile-toggle" id="sbMobileToggle" onclick="toggleMobileSidebar()">☰</button>
+<button class="mobile-review-start" id="btnReviewMobile" onclick="startReview()">복습 시작</button>
 <div class="sb-overlay" id="sbOverlay" onclick="toggleMobileSidebar()"></div>
 
 <!-- Sidebar -->
@@ -28551,8 +28562,13 @@ function getReviewDue() {
 }
 
 function updateReviewBtn() {
-    const due = getReviewDue();
-    document.getElementById('btnReview').textContent = '복습 시작 (' + due.length + '개)';
+    const plan = getStudyPlan();
+    const count = plan.dueIds.length + plan.freshIds.length;
+    const label = '복습 시작 (' + count + '개)';
+    const btn = document.getElementById('btnReview');
+    if (btn) btn.textContent = label;
+    const mobileBtn = document.getElementById('btnReviewMobile');
+    if (mobileBtn) mobileBtn.textContent = label;
 }
 
 function shuffledCopy(ids) {
