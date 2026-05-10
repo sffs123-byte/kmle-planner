@@ -590,7 +590,7 @@ def build_guide_html(card: dict) -> str:
     <tr><th>Subsection</th><td>{e(card.get('subsection', '-') or '-')}</td></tr>
     {dedup_rows}
   </table>
-  <p class="guide-note">실제 복기 문항과 제작 응용 drill을 섞되, origin badge로 분리했습니다. actual 문항은 v2 strict audit 기준으로 duplicate/variant/conflict/fragment를 표시하며, 문항 삭제 없이 원문 evidence를 보존합니다.</p>
+  <p class="guide-note">실제 복기 문항과 HI 원문 Q marker 보강 카드를 함께 보존합니다. 제작 drill은 제거했고, HI 보강 카드는 중복 정도를 overlap badge로 표시합니다.</p>
 </section>
 """.strip()
 
@@ -642,7 +642,7 @@ def build_cards(raw_cards: list[dict]) -> list[dict]:
 
 def main() -> None:
     actual = load_actual_cards()
-    generated = parse_generated_drill()
+    generated = []  # 강렬 지시: 제작 drill 문제는 제거하고 actual/HI source card만 유지한다.
     combined = [enrich_card_record(c) for c in actual + generated]
     COMBINED_DATA.write_text(json.dumps(combined, ensure_ascii=False, indent=2), encoding="utf-8")
     cards = build_cards(combined)
