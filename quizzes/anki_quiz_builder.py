@@ -107,7 +107,7 @@ def build_html(cards, page_images, title="Anki 퀴즈", storage_prefix="quiz"):
         <div class="card" id="card-{c['id']}">
             <div class="card-header">
                 <span class="card-num">{c['num']}</span>
-                <span class="card-title">{c['q']}</span>
+                <div class="card-title">{c['q']}</div>
                 <button class="draw-btn" onclick="toggleDraw('{c['id']}')" title="필기 모드">🍎</button>
                 <button class="edit-btn" onclick="toggleEdit('{c['id']}')" title="편집">✏️</button>
                 <button class="copy-btn" onclick="copyQA('{c['id']}')" title="문제+답 복사">📋</button>

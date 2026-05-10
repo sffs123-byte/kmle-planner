@@ -31,7 +31,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "13개월 남자가 영유아 검진 옴. 임신나이 37주 출생체중 3200g 7개월부터 이유식 진행했으나 잘 진행되지 않고 모유수유는 하루에 5회 정도 진행 키 25백분위수 체중 10백분위수 두위 50백분위수 부족한 영양소는? 혈색소8, 백혈구 혈소판 정상수치 평균적혈구용적 66 1) 철 2) 아연 3) ? 4) 망가니즈 5) ?",
+    "display_answer": "철 결핍",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "영양결핍-철/이유식/모유/소구성빈혈"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "생후 6개월 이후 저장철이 떨어지는데 모유 위주·이유식 부족·MCV 감소가 같이 보이면 철결핍을 먼저 본다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 철 결핍입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
@@ -67,7 +88,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "12개월 남아 수두 백신 맞으려함 3개월전에 특발혈소판감소자반증으로 치료받음 지금은 건강함 혈소판 수치 380000. 해야 할 처치는? 1) 접종 연기 2) 혈소판 수혈 3) 아시클로버 4) 면역글로불린 5) 수두백신 접종",
+    "display_answer": "수두백신 접종",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "예방접종-수두백신/ITP/IVIG"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "생백신인 수두/MMR은 최근 면역글로불린·혈액제제를 맞았으면 접종을 미룬다. 반대로 IVIG가 명시되지 않고 ITP가 회복되어 혈소판이 정상이라면 ITP 병력 자체만으로 수두백신 금기는 아니다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 수두백신 접종입니다."
+      },
+      {
+        "label": "주의",
+        "text": "ITP라는 단어보다 IVIG/혈액제제 투여 여부가 갈림길이다. actual1_002는 IVIG 명시가 없어 접종, actual1_022는 IVIG 명시가 있어 연기다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
@@ -101,7 +143,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "13개월 아이가 3일간 지속된 구토와 설사로 내원하였다. 3일간 구토로 인해 거의 먹지 못했으며, 심한 수양성 설사를 하루 10회 이상 하였다. 평소 10kg였으나 내원 당시 9kg였다. 혈액검사 결과는 다음과 같다. (pH 7.28, Na 136)알맞은 처치는? 1) Normal saline 200cc 정주 2) Normal saline 40cc/hr 속도로 주입 3) 5% dextrose 200cc 정주 4) 5% dextrose 40cc/hr 속도로 주입 5) 5% dextrose 40cc/hr 속도로 주입(④와 선지 동일)",
+    "display_answer": "0.9% Normal saline 200cc 정주 / 20 mL/kg bolus",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "탈수-중증탈수 초기수액/NS bolus"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "중증 탈수 또는 순환부전의 첫 처치는 0.9% 생리식염수 20 mL/kg bolus다. 10 kg이면 200 mL, 12 kg이면 240 mL로 계산한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 0.9% Normal saline 200cc 정주 / 20 mL/kg bolus입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
@@ -135,7 +198,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "34주 여아, 2,000g. 태반조기박리 의심으로 응급 제왕절개 출생. 출생 직후 무호흡/축 늘어짐. 보온·건조·자극 후 생후 40초 HR 80/min. PPV 30초 후에도 HR<100이고, MRSOPA 교정 후에도 HR<100이다. 다음 처치는? 1) 자극주기 2) 기관삽관 3) 양압환기 4) 가슴압박 5) 에피네프린",
+    "display_answer": "기관삽관",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아소생술-MRSOPA 후 HR<100"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "신생아 소생술은 HR 100과 60 두 문으로 푼다. HR<100 또는 무호흡이면 PPV, PPV가 안 먹히면 MRSOPA, 그래도 HR<100이면 기관삽관, HR<60이면 가슴압박+환기다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 기관삽관입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
@@ -169,7 +253,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "임신성 당뇨로 인슐린 치료받고 있던 임산부. 아프가 점수 1분 8점, 5분 9점. 이후 아이에게 나타날 수 있는 소견은? 1) 고마그네슘혈증 2) 고혈당혈증 3) 저칼슘혈증 4) 저칼륨혈증 5) 빈혈",
+    "display_answer": "저칼슘혈증",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "고위험신생아-IDM 대사합병증"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "당뇨 산모 아이는 고인슐린 상태로 태어나 저혈당, 저칼슘혈증, 다혈구증 등을 보일 수 있다. 선지에 저칼슘혈증이 있으면 강한 후보가 된다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 저칼슘혈증입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
@@ -203,7 +308,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "24개월 남아가 아직 단어를 조합하여 문장을 만들지 못한다고 내원하였다. 이 환아에게서 자폐스펙트럼 장애를 감별하기 위해 '언어장애' 외에 반드시 확인해야 할 증상을 2가지 서술하시오. 1) 대인관계 형성장애 2) 제한되고 반복적인 행동",
+    "display_answer": "대인관계 형성장애, 제한되고 반복적인 행동/관심",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "발달-ASD triad"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "발달 문제는 대근육, 소근육, 언어, 사회성 중 어느 축이 연령 기대치보다 가장 뒤처졌는지 고르는 방식으로 푼다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 대인관계 형성장애, 제한되고 반복적인 행동/관심입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
@@ -237,7 +363,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "태반을 통과하지 않아 출생 시 혈중 농도가 증가하면 선천 감염을 의미하는 면역글로불린은?",
+    "display_answer": "IgM",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "면역글로불린-선천감염 IgM"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "IgG는 태반을 통과하지만 IgM은 통과하지 못한다. 따라서 신생아 혈중 IgM 증가는 태아가 직접 만든 항체, 즉 선천감염 clue다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 IgM입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
@@ -271,7 +418,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "4세 여아가 감기 설사 경련으로 내원. 사지 가늘다. 검사결과 저혈당 고요산 고젖산 고중성지방혈증일때 어떤 질환을 의심할 수 있는가?",
+    "display_answer": "당원병",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "대사-당원병/GSD 진단"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "저혈당 + 젖산 + 요산 + 중성지방 상승에 간비대가 붙으면 당원병, 특히 glycogen storage disease bundle로 본다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 당원병입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
@@ -307,7 +475,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "임신 나이 38주, 3000g 출생 생후 3일, 황달을 주소로 내원. 모유, 분유 먹고 있으며 잘 움직임. 광선 치료 2시간 진행 후 총 빌리루빈 수치는 16 광선 치료와 함께 해볼 수 있는 치료는? <내원 당시 검사 결과> Hb, 혈색소 정상. 간수치 정상. CRP 정상. 총빌리루빈 15, 직접 0.9 쿰즈 검사 직접(+) 간접(-)",
+    "display_answer": "IVIG / 정맥 면역글로불린",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아황달-Coombs양성/광선치료 불충분"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "생후 초반 황달에서 Coombs 양성, 광선치료에도 빌리루빈 상승이면 면역성 용혈이다. 광선치료와 함께 IVIG를 고려한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 IVIG / 정맥 면역글로불린입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
@@ -343,7 +532,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2026년 1학기 9, 10, 11, 12조 (시험일: 2026.03.16)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "산모가 분만 5일전부터 38.3도 이상의 복통, 고열, 질분비물 등 호소 태어난 남아가 호흡곤란 발열 37.8도 예상되는 균에 대한 조기 처치 약물 2가지 + CXR 사진 줌",
+    "display_answer": "ampicillin + gentamicin",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아감염-EOS/chorioamnionitis"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "산모 융모양막염 cue와 신생아 호흡곤란/발열이 같이 나오면 조기 신생아 패혈증으로 보고 ampicillin + gentamicin을 경험적으로 시작한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 ampicillin + gentamicin입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
@@ -379,7 +589,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "2개월 전부터 밥 잘 못먹음, 1년 전부터 혈액암 항암치료 받았음. 머리카락 푸석해짐+홍반 사진",
+    "display_answer": "아연",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "영양결핍-아연/항암/피부홍반/모발"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "TPN, 항암, 만성 설사 뒤 피부홍반·모발 변화가 나오면 아연 결핍이 시험장 trigger다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 아연입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
@@ -391,7 +622,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_high",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep03-3",
     "content_axis": "면역결핍-DiGeorge/흉선없음",
@@ -417,7 +648,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "DiGeorge syndrome인 환아의 특징을 나열한 후(Xray 상 가슴샘이 없었다는 텍스트가 추가됨) 어떠한 면역체계에 문제가 발생하는가? 1. 체액면역 2. 보체계 3. 세포면역 4. 포식세포계 5. 세포면역 + 체액면역",
+    "display_answer": "세포면역 이상 / T cell 관련 면역결핍",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "면역결핍-DiGeorge/흉선없음"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "DiGeorge는 흉선 저형성/무형성 문제라 T cell, 즉 세포면역 이상이 핵심이다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 세포면역 이상 / T cell 관련 면역결핍입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
@@ -451,7 +702,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "3살 여아 외과수술 후 찍은 EKG이다. ( EKG 는 정상) Na: 135, K: 6.8, Cl: 95, 처치해야할 방법은?(Pseudohyperkalemia 상황) 1. 경과관찰 2. 3. 4. Ca gluconate 5.",
+    "display_answer": "경과관찰",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "전해질-pseudohyperkalemia/EKG정상"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "K 수치만 높고 EKG가 정상이며 채혈/수술 맥락이 있으면 가성 고칼륨혈증을 먼저 의심한다. 즉시 calcium을 주기보다 재확인/경과관찰이 답이 된다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 경과관찰입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
@@ -485,7 +757,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "40주에 3.5키로로 태어난 아이 경련으로 내원. 산전진찰에 특이소견 없었음. 검사 결과 glucose 55, Ca 5.5, K 9.5, Na 140, HCO3- 24. 적절한 처치는? 1. 항경련제 2. Ca gluconate 3. glucose 4. 5.",
+    "display_answer": "Ca gluconate",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아-저칼슘경련"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 '신생아-저칼슘경련'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 Ca gluconate입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
@@ -521,7 +814,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "27주 6일 800g 신생아 심박수 50. 처치는? 보기 양압환기/흡인/..",
+    "display_answer": "양압환기",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아소생술-HR<100/무호흡 초기처치"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "신생아 소생술은 HR 100과 60 두 문으로 푼다. HR<100 또는 무호흡이면 PPV, PPV가 안 먹히면 MRSOPA, 그래도 HR<100이면 기관삽관, HR<60이면 가슴압박+환기다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 양압환기입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
@@ -557,7 +871,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "(자폐증 증상 설명) 대인관계 형성 장애, 언어 장애, 제한되고 ()적인 행동 및 관심에서 ()에 들어갈 2음절 단어",
+    "display_answer": "반복",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "발달-ASD triad"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "발달 문제는 대근육, 소근육, 언어, 사회성 중 어느 축이 연령 기대치보다 가장 뒤처졌는지 고르는 방식으로 푼다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 반복입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
@@ -591,7 +926,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "신생아는 각질층이 얇아 피부투과성이 높다. 따라서 피부를 투과하는 약물을 썼을 때 약물의 체내 농도가 증가할 수 있다. 이때 영향을 받는 약동학적 단계(ADME)는 무엇인가?",
+    "display_answer": "absorption",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "약동학-신생아 피부투과/ADME"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 '약동학-신생아 피부투과/ADME'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 absorption입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
@@ -627,7 +983,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "프레더윌리, 엔젤만 증후군 같이 부모로부터 물려받는 유전자에 따라 자녀의 표현형이 나눠지는 현상",
+    "display_answer": "genetic imprinting",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "유전-imprinting 정의"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "염색체 수보다 부모 어느 쪽에서 온 유전자인지가 표현형을 바꾸면 genetic imprinting이다. Prader-Willi/Angelman, Beckwith-Wiedemann 계열이 대표 trigger다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 genetic imprinting입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
@@ -661,7 +1038,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "출산 5분 후 심박수 110회/분, 호흡 느림, 움직임은 약간 있음, 코에 카테터 넣었을 때 찡그림, 피부색은 동체는 홍색, 손발은 청색, Apgar score는?",
+    "display_answer": "6점",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아-Apgar score 계산"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "Apgar는 심박수, 호흡, 근긴장도, 자극반응, 피부색 5항목을 각각 0~2점으로 더한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 6점입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
@@ -695,7 +1093,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 11,12,13,14조 (시험일: 2025.11.10)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "정상 신생아는 대개 출생 후 몇 시간 이내 첫 소변을 보는가?",
+    "display_answer": "24시간",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아-첫소변 시간"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "정상 신생아는 대부분 출생 후 24시간 이내 첫 소변을 본다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 24시간입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
@@ -729,7 +1148,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "9개월 남아가 보채고 창백하다. 38주 5일 3.2kg으로 출생 출생 이후부터 완전 모유수유 중이다 엄마가 채식주의자이다 혈액검사 : Hb 8(감소), 적혈구분포폭 18%(증가) Q. 결핍이 의심되는 영양소는? 다른 선지) 구리/철분/피리독신(Vit.B6)/티아민(Vit.B1)",
+    "display_answer": "코발라민",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "영양결핍-B12/채식산모/완전모유"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "채식 산모 + 완전 모유수유 + 빈혈이면 모유 자체가 아니라 산모 저장량 부족에 의한 비타민 B12 결핍을 의심한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 코발라민입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
@@ -765,7 +1205,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "12개월 남아가 수두백신을 접종받기 위해 병원에 왔다 3개월 전 특발혈소판감소자반병으로 면역글로불린 치료를 받았다고 한다 현재는 건강하게 지내며, 지난 주에 확인한 혈소판 수치는 380,000/mm^3이다 Q. 처치는? 다른 선지) 혈소판 수혈/수두백신 접종/아시클로버 경구투여/면역글로불린 정맥주사",
+    "display_answer": "접종 연기",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "예방접종-수두백신/ITP/IVIG"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "생백신인 수두/MMR은 최근 면역글로불린·혈액제제를 맞았으면 접종을 미룬다. 반대로 IVIG가 명시되지 않고 ITP가 회복되어 혈소판이 정상이라면 ITP 병력 자체만으로 수두백신 금기는 아니다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 접종 연기입니다."
+      },
+      {
+        "label": "주의",
+        "text": "ITP라는 단어보다 IVIG/혈액제제 투여 여부가 갈림길이다. actual1_002는 IVIG 명시가 없어 접종, actual1_022는 IVIG 명시가 있어 연기다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
@@ -801,7 +1262,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "폐렴 걸린 6세 여아가 경련으로 내원하였다 활력징후/뇌 CT 이상 없음. Na 낮았음(123), 혈액 osmolarity 280, 소변 osmolarity 640 Q. 치료는?",
+    "display_answer": "3% saline",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "전해질-증상성 저Na 경련"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "경련이 동반된 증상성 저나트륨혈증은 CT가 정상이어도 3% saline으로 뇌부종 위험을 먼저 끊는다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 3% saline입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
@@ -837,7 +1319,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "39주 제왕절개 아기 3일차에 황달로 내원 출생 당일부터 황달이 있었고 점점 심해졌다. 아이는 활발하다 간비대 소견 있었음 검사 – 총빌리루빈 14, 직접빌리루빈 1, 쿰즈검사 직접/간접 (+/-) 2시간 광선치료 후 총빌리루빈 16 Q. 이후 치료는? 다른 선지) 경과관찰/더 자주 모유수유/생리식염수 투여/고강도 광선치료",
+    "display_answer": "정맥 면역글로불린",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아황달-Coombs양성/광선치료 불충분"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "생후 초반 황달에서 Coombs 양성, 광선치료에도 빌리루빈 상승이면 면역성 용혈이다. 광선치료와 함께 IVIG를 고려한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 정맥 면역글로불린입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
@@ -871,7 +1374,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "배꼽탈장 사진 주고 진단명 묻기(아래 사진과 동일하진 않지만 유사한 사진 출제되었습니다) 다른선지) 배꼽탈출/배벽갈림증/선천성 횡격막 탈장/(??)",
+    "display_answer": "배꼽탈장",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "외과-배꼽탈장 사진진단"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "배꼽 부위로 장이 튀어나오되 피부로 덮이고 제대륜 결손이면 배꼽탈장이다. 배벽갈림증/제대탈출과 사진 위치가 다르다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 배꼽탈장입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
@@ -905,7 +1429,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "정상 발달과정 중 원을 보고 따라 그릴 수 있는 개월 수는?",
+    "display_answer": "36개월",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "발달-milestone/도형-원"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "발달 문제는 대근육, 소근육, 언어, 사회성 중 어느 축이 연령 기대치보다 가장 뒤처졌는지 고르는 방식으로 푼다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 36개월입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
@@ -941,7 +1486,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "생후 6개월부터 폐렴을 3차례 앓은 영아. Lateral pharyngeal X-ray에서 편도와 아데노이드가 보이지 않고, 총 혈청 면역글로불린 농도는 90 mg/dL이다. 진단과 치료는?",
+    "display_answer": "범저감마글로불린혈증 / 3~4주 간격 정맥용 면역글로불린 400~500mg/kg 투여",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "면역결핍-범저감마/XLA 치료"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "생후 6개월 이후 반복 세균감염, 편도/아데노이드 없음, Ig 감소는 B cell/항체 문제인 범저감마글로불린혈증으로 보고 IVIG를 반복 투여한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 범저감마글로불린혈증 / 3~4주 간격 정맥용 면역글로불린 400~500mg/kg 투여입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
@@ -977,7 +1543,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "7세 여아가 경련으로 내원. 간이 늑골 밑 4횡지 만져지고, 혈당 감소와 간수치·총콜레스테롤·중성지방·젖산·요산 상승이 있다. Q1. 진단은? Q2. 유전 방식은?",
+    "display_answer": "당원병 / 상염색체 열성",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "대사-당원병/GSD 진단+유전"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "저혈당 + 젖산 + 요산 + 중성지방 상승에 간비대가 붙으면 당원병, 특히 glycogen storage disease bundle로 본다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 당원병 / 상염색체 열성입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
@@ -1011,7 +1598,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "37주 3.7kg으로 분만된 소아에서 경계가 불분명한 머리의 부종 Q. 진단은? 산류",
+    "display_answer": "산류",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "분만손상-산류"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "경계가 불분명하고 봉합선을 넘는 두피 부종은 산류다. 두혈종은 골막하 출혈이라 봉합선을 넘지 않는다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 산류입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
@@ -1047,7 +1655,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 15,16,17,18조 (시험일: 2025.10.13)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "38주 정상체중 출생아 - 심박수 100회 미만/호흡 약함/운동 약함/코에 카테터 넣었을 때 약간 반응/피부 약간 분홍색 Q. Apgar 점수는? 5점",
+    "display_answer": "5점",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아-Apgar score 계산"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "Apgar는 심박수, 호흡, 근긴장도, 자극반응, 피부색 5항목을 각각 0~2점으로 더한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 5점입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
@@ -1083,7 +1712,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "6개월부터 이유식을 시작했지만 18개월까지 모유 위주로 먹음 X자 다리(외반슬) LAB 소견 : 25-수산화비타민 D 수치 4.4 (정상치 10~), +PTH ALP 업 X-ray 다리랑 손목쪽 제시(cupping으로 보임) 치료는? 다른 선지: 칼슘, 갑상선 호르몬..",
+    "display_answer": "비타민 D 경구복용",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "영양결핍-VitD/구루병 치료"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "구루병은 모유 위주 식이, 낮은 25-OH vitamin D, ALP/PTH 상승, 손목·다리 X-ray 변화가 같이 묶인다. 치료 축은 비타민 D 보충이다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 비타민 D 경구복용입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
@@ -1095,7 +1745,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_high",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-1",
     "content_axis": "약물용량-BSA dosing/acyclovir",
@@ -1119,7 +1769,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "8세 소아 (체중 27 kg, 체표면적 1 m²)에게 acyclovir를 주사하려고 한다. 이때, 소아에서 가장 정확한 투여 용량 계산 방법으로 구한 값을 고르시오. 투여 기준은 다음과 같다: 체중 기준: 30–45 mg/kg/day (3회 분할 투여) 체표면적 기준: 1500 mg/m²/day (3회 분할 투여) 선지: 700/900/1200/1500/…",
+    "display_answer": "체표면적 기준 1500 mg/m²/day → 1500 mg/day",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "약물용량-BSA dosing/acyclovir"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "소아 약물 용량은 문제에서 체표면적 기준을 주면 BSA 기준을 우선 적용한다. BSA 1 m²이면 1500 mg/m²/day는 1500 mg/day다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 체표면적 기준 1500 mg/m²/day → 1500 mg/day입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
@@ -1131,7 +1801,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_high",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-2",
     "content_axis": "탈수-중증/고나트륨탈수 초기수액",
@@ -1157,7 +1827,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "n세 여아 빼박 중증탈수 소견 (12kg -> 10kg / 혈압 90/60) -> 제일 처음 해야 되는 처치 묻는 문제 (Na+ : 168) 1) 0.9% Normal saline 1시간 240cc 2) 0.9% Normal saline 40cc/hr 3) 5DW ~~~ 4) 5DW ~~~ 5) ?!",
+    "display_answer": "0.9% Normal saline 240cc를 1시간에 정주 / 20 mL/kg bolus",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "탈수-중증/고나트륨탈수 초기수액"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "중증 탈수 또는 순환부전의 첫 처치는 0.9% 생리식염수 20 mL/kg bolus다. 10 kg이면 200 mL, 12 kg이면 240 mL로 계산한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 0.9% Normal saline 240cc를 1시간에 정주 / 20 mL/kg bolus입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
@@ -1169,7 +1859,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-4",
     "content_axis": "신생아호흡-RDS 원인",
@@ -1193,7 +1883,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "재태기간 28주, 출생 체중 750g, 제왕절개로 태어난 아이. 출생 직후부터 청색증, 가슴벽뒤당김, 날숨 때 끙끙거림. 가슴 청진상 양쪽 호흡음 감소. 가슴 방사선 사진 제시(total white 소견). 원인은? (객) 폐표면활성제 부족",
+    "display_answer": "폐표면활성제 부족 / RDS",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아호흡-RDS 원인"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "미숙아의 grunting, retraction, diffuse/white lung은 폐표면활성제 부족 RDS다. 삽관-계면활성제-조기발관-CPAP 흐름은 INSURE다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 폐표면활성제 부족 / RDS입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
@@ -1205,7 +1915,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_medium",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-4",
     "content_axis": "신생아황달-생후10일/모유수유/저위험",
@@ -1231,7 +1941,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "생후 10일된 환아 황달 주소로 내원. 빌리루빈 수치 11.0 직접빌리루빈 0.8 체중은 였고 모유수유중이었고 활발히 잘 움직였다. 옳은 조치는? 1. 경과관찰 2. 광선치료",
+    "display_answer": "경과관찰 / 모유수유 지속 가능",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아황달-생후10일/모유수유/저위험"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "생후 10일, 총빌리루빈이 높지 않고 직접빌리루빈/간수치가 괜찮으며 아이가 활발하면 저위험 모유황달 쪽이라 경과관찰과 수유 지속이 중심이다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 경과관찰 / 모유수유 지속 가능입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
@@ -1265,7 +1995,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "사춘기 성숙정도를 남자는 고환 용적으로 구분하고, 여자는 유방 크기로 구분한다. 공통적으로 남녀는 ( )로 사춘기 정도를 구분한다.",
+    "display_answer": "음모",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "사춘기성숙도-Tanner 공통기준"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "효소보충요법은 lysosomal storage disease에서 묻는다. Fabry, Pompe, Gaucher는 가능하고 PKU/MSUD는 식이치료 축이다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 음모입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
@@ -1277,7 +2028,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_medium",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-1",
     "content_axis": "예방접종-MMR/생백신 재접종",
@@ -1303,7 +2054,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "10월에 유행해서 mmr백신 맞았고 4주 전에 수두, 일본뇌염, PCV 맞은 13개월 아이가 맞아야 할 백신은? 아래의 접종기록에 있는 백신 중 하나 적어라. *환자의 접종 기록* HBV 3차까지 접종 BCG 접종 PCV 4차까지 접종 DTap 3차까지 접종 일본뇌염 생백신 1차 접종 수두 1차 접종 MMR 10월에 한번 접종",
+    "display_answer": "MMR 접종",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "예방접종-MMR/생백신 재접종"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "예방접종 문제는 ‘오늘 맞아도 되는가’를 생백신 간격, 면역저하/임신/최근 IVIG, 나이별 정기접종표 순서로 판정한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 MMR 접종입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
@@ -1339,7 +2110,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "다운증후군 환아 어머니 염색체 핵형 사진 주고 (45, XY, 21;21 로버트슨 전위), 다음 환아에서 다운증후군 환아가 태어날 확률은?",
+    "display_answer": "100",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "유전-Down/Robertsonian 21;21 recurrence"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "염색체 문제는 수적 이상인지, 전위인지, imprinting인지부터 가른다. Down 기본 핵형은 47,XY,+21이고 Robertsonian 21;21이면 재발 위험이 극단적으로 높다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 100입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
@@ -1373,7 +2165,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "최종월경일이 확실하지 않은 임신부에서 태어난 신생아의 임신나이 추정을 위해 출생 후 시행하는 신체검사 및 신경학적 검사 ?",
+    "display_answer": "New Ballard score",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아-재태연령 추정"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "최종월경일이 불확실하면 출생 후 신체/신경학적 성숙도를 묶어 New Ballard score로 재태연령을 추정한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 New Ballard score입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
@@ -1385,7 +2198,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_high",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-4",
     "content_axis": "신생아황달-병적황달 기준",
@@ -1409,7 +2222,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 2학기 19,21,22,23조 (시험일: 2025.09.08)",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "신생아 황달이 병적인 경우 3가지 상황 쓰세요. (부분 점수 없음)",
+    "display_answer": "병적 황달: 생후 24시간 이내 발생, bilirubin 급상승, 직접 bilirubin 증가 또는 2주 이상 지속 등",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아황달-병적황달 기준"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "신생아 황달은 생후 시점, 직접빌리루빈, Coombs, 상승 속도, 아이 상태로 병적 황달인지 먼저 가른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 병적 황달: 생후 24시간 이내 발생, bilirubin 급상승, 직접 bilirubin 증가 또는 2주 이상 지속 등입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "2025년 1학기  1-2조",
@@ -1443,7 +2276,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 1학기  1-2조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "2차 범위인데 1차에 나옴 1개월 여아, 대변에 실 같은 피, 변은 하루에 3-4회로 묽은 편이었으나 토하거나 보채지는 않음. 모유 수유 중, 이외에 다른 문제 없음 처치는? (다른 보기: 항생제, 스테로이드, 수액, 완전 단백 가수분해 분유 섭취)",
+    "display_answer": "수유모의 항원 제한 식사",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "모유수유-혈변/알레르기성 직결장염"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "모유수유 문제는 금기인지, 산모 식이/약물 문제인지, 아이 증상 때문인지 나눈다. 산모 항암치료는 금기이고, 혈변만 있으면 우선 수유모 항원 제한을 생각한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 수유모의 항원 제한 식사입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 1학기  1-2조",
@@ -1477,7 +2331,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 1학기  1-2조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "다음 중 효소 보충 요법으로 치료할 수 있는 것은? 페닐케톤뇨증, 나. Fabry, 다. 당원병, 라. Pompe",
+    "display_answer": "Fabry disease, Pompe disease",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "대사-lysosomal 효소보충 가능질환"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "효소보충요법은 lysosomal storage disease에서 묻는다. Fabry, Pompe, Gaucher는 가능하고 PKU/MSUD는 식이치료 축이다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 Fabry disease, Pompe disease입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 1학기  1-2조",
@@ -1511,7 +2386,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 1학기  1-2조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "환아 소변이 안 나와서 수액을 줬는데, 여전히 소변이 잘 나오지 않고 음낭수종 생김 다음 처치는? (다른 보기: 5% albumin, 5% DW + 0.45 NaCl, 그냥 NaCl)",
+    "display_answer": "수액 중단/추가 crystalloid 중지로 추정 — 원문 선지 확인 필요",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "수분-수액과다/소변감소/부종"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "소변이 안 나온다고 계속 수액을 밀어 넣는 문제가 아니다. 수액 후 부종·음낭수종이 생기면 체액과다 또는 신장 handling 문제를 의심해 추가 crystalloid를 멈추는 쪽이 알렌식 추론이다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 수액 중단/추가 crystalloid 중지로 추정 — 원문 선지 확인 필요입니다."
+      },
+      {
+        "label": "주의",
+        "text": "복기 정보가 불완전하므로 최종 시험장 암기는 원문 선지 확인 전까지 '추정'으로 둔다. 복기 원문/선지가 불완전해서 확정 답처럼 외우면 위험합니다. 알렌 개념으로 가장 그럴듯한 방향을 표시했습니다."
+      }
+    ],
+    "answer_confidence": "⚠️ 알렌 기준 추정"
   },
   {
     "source": "2025년 1학기  1-2조",
@@ -1545,7 +2441,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 1학기  1-2조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "(뇌 MRI 사진 주고 여러 군데 indi) 소아 백질연화증 호발 부위? (가장 유사한 사진 첨부)",
+    "display_answer": "Periventricular white matter 표시된 곳",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신경-PVL 호발부위/MRI"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 '신경-PVL 호발부위/MRI'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 Periventricular white matter 표시된 곳입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 1학기  1-2조",
@@ -1581,7 +2498,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 1학기  1-2조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "3세 남아, 수평선은 그리는데 별은 못 그림, 혼자 옷 입는데 벗지는 못함, 계단은 오르는데 뛰지 못함, 셋까지는 세는데 이십까진 못셈 발달 과정에서의 문제는?",
+    "display_answer": "운동발달지연",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "발달-milestone/운동지연"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "발달 문제는 대근육, 소근육, 언어, 사회성 중 어느 축이 연령 기대치보다 가장 뒤처졌는지 고르는 방식으로 푼다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 운동발달지연입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 1학기  1-2조",
@@ -1593,7 +2531,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_high",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-1",
     "content_axis": "성장-장기별 발육패턴",
@@ -1617,7 +2555,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 1학기  1-2조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "장기별 발육패턴 구분하는 그래프에 A~D 표시됨 A~D에 해당하는 장기 1개 이상 쓰기",
+    "display_answer": "장기별 발육패턴: 일반형(심장/신장 등), 신경형(뇌/두위), 림프형(림프절/편도/가슴샘), 생식형(생식기/자궁 등)",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "성장-장기별 발육패턴"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "소아 성장 문제는 나이 단계, 성장곡선, 장기별 발육패턴을 좌표축으로 잡는다. 숫자만 외우지 말고 어떤 축이 벗어났는지 본다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 장기별 발육패턴: 일반형(심장/신장 등), 신경형(뇌/두위), 림프형(림프절/편도/가슴샘), 생식형(생식기/자궁 등)입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "2025년 1학기  1-2조",
@@ -1651,7 +2609,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 1학기  1-2조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "항원에 인위적으로 노출시켜 감염을 예방하는 방법은?",
+    "display_answer": "예방접종",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "예방접종-정의"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "예방접종 문제는 ‘오늘 맞아도 되는가’를 생백신 간격, 면역저하/임신/최근 IVIG, 나이별 정기접종표 순서로 판정한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 예방접종입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 1학기  1-2조",
@@ -1687,7 +2666,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 1학기  1-2조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "어떤 유전자나 염색체 분절이 부모 중 어느 쪽에서 기인했는가에 따라 표현형 발현이 달라지는 현상?",
+    "display_answer": "Genetic imprinting",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "유전-imprinting 정의"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "염색체 수보다 부모 어느 쪽에서 온 유전자인지가 표현형을 바꾸면 genetic imprinting이다. Prader-Willi/Angelman, Beckwith-Wiedemann 계열이 대표 trigger다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 Genetic imprinting입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 1학기  1-2조",
@@ -1721,7 +2721,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 1학기  1-2조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "태아에서 출혈과 관련된 비타민은?",
+    "display_answer": "Vit K",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "영양-비타민K/태아출혈"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "신생아/태아 출혈과 응고인자 II, VII, IX, X를 떠올리면 비타민 K로 연결된다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 Vit K입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "2025년 1학기  1-2조",
@@ -1755,7 +2776,28 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "2025년 1학기  1-2조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "황달과 케라틴 혈증을 감별하기 위해 진찰해야 할 부위는?",
+    "display_answer": "눈의 공막",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "황달-카로틴혈증 감별진찰"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "신생아 황달은 생후 시점, 직접빌리루빈, Coombs, 상승 속도, 아이 상태로 병적 황달인지 먼저 가른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 눈의 공막입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ],
+    "answer_confidence": "✅ actual 기준"
   },
   {
     "source": "25~28조",
@@ -1767,7 +2809,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-4",
     "content_axis": "신생아감염-EOS/chorioamnionitis",
@@ -1793,7 +2835,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "25~28조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "35주 2kg으로 생후 3일 된 신생아에서 반복적인 미열, 청색증, 끙끙거림, 빈호흡이 있었다. 산모 분만 전 고열과 양막파열이 있었다. 태아는 잘 씹지 못해 정맥 영양 중이다. 우선적으로 해야 하는 치료는? Ampicillin + Gentamycin",
+    "display_answer": "ampicillin + gentamicin",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아감염-EOS/chorioamnionitis"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "산모 융모양막염 cue와 신생아 호흡곤란/발열이 같이 나오면 조기 신생아 패혈증으로 보고 ampicillin + gentamicin을 경험적으로 시작한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 ampicillin + gentamicin입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "25~28조",
@@ -1805,7 +2867,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_high",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep03-3",
     "content_axis": "면역결핍-DiGeorge/흉선없음",
@@ -1831,7 +2893,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "25~28조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "DiGeorge syndrome인 환아의 특징을 나열한 후(Xray 상 가슴샘이 없었다는 텍스트가 추가됨) 어떠한 면역체계에 문제가 발생하는가? 1. 체액면역 2. 보체계 3. 세포면역 4. 포식세포계 5. 세포면역 + 체액면역",
+    "display_answer": "세포면역 이상 / T cell 관련 면역결핍",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "면역결핍-DiGeorge/흉선없음"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "DiGeorge는 흉선 저형성/무형성 문제라 T cell, 즉 세포면역 이상이 핵심이다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 세포면역 이상 / T cell 관련 면역결핍입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "25~28조",
@@ -1843,7 +2925,7 @@
     "origin": "actual_incomplete",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "actual_incomplete",
+    "answer_confidence": "⚠️ 알렌 기준 추정",
     "qc_flag": "answer_or_original_needs_confirmation",
     "episode": "Ep00-1",
     "content_axis": "발달-milestone/18개월 선지판단",
@@ -1867,7 +2949,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "25~28조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "18개월 영유아검진 발달 선지 판단 문제. 복기된 선지: 혼자 걸을 수 있으나 잘 뛰지는 못한다 / 수평선은 그릴 수 있으나 원은 그리지 못한다. 원문 선지 통합이 필요하다.",
+    "display_answer": "원문 통합 필요 — 18개월 발달 선지 전체를 보고 비정상 축을 골라야 함",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "발달-milestone/18개월 선지판단"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "발달 문제는 대근육, 소근육, 언어, 사회성 중 어느 축이 연령 기대치보다 가장 뒤처졌는지 고르는 방식으로 푼다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 원문 통합 필요 — 18개월 발달 선지 전체를 보고 비정상 축을 골라야 함입니다."
+      },
+      {
+        "label": "주의",
+        "text": "복기 정보가 불완전하므로 최종 시험장 암기는 원문 선지 확인 전까지 '추정'으로 둔다. 복기 원문/선지가 불완전해서 확정 답처럼 외우면 위험합니다. 알렌 개념으로 가장 그럴듯한 방향을 표시했습니다."
+      }
+    ]
   },
   {
     "source": "25~28조",
@@ -1879,7 +2981,7 @@
     "origin": "actual_incomplete",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "actual_incomplete",
+    "answer_confidence": "⚠️ 알렌 기준 추정",
     "qc_flag": "answer_or_original_needs_confirmation",
     "episode": "Ep00-1",
     "content_axis": "발달-milestone/18개월 선지판단",
@@ -1903,7 +3005,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "25~28조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "18개월 발달 문항의 복기 조각. 복기된 선지: 단어 10개를 말할 수 있으나 간단한 문장은 말하지 못한다 / 원하는 것을 손가락으로 가리켜 달라고 할 수 있다. actual1_053과 같은 원문으로 보아야 한다.",
+    "display_answer": "파싱 조각 — actual1_053과 통합해서 판단",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "발달-milestone/18개월 선지판단"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "발달 문제는 대근육, 소근육, 언어, 사회성 중 어느 축이 연령 기대치보다 가장 뒤처졌는지 고르는 방식으로 푼다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 파싱 조각 — actual1_053과 통합해서 판단입니다."
+      },
+      {
+        "label": "주의",
+        "text": "복기 정보가 불완전하므로 최종 시험장 암기는 원문 선지 확인 전까지 '추정'으로 둔다. 복기 원문/선지가 불완전해서 확정 답처럼 외우면 위험합니다. 알렌 개념으로 가장 그럴듯한 방향을 표시했습니다."
+      }
+    ]
   },
   {
     "source": "25~28조",
@@ -1915,7 +3037,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_medium",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-2",
     "content_axis": "대사-고암모니아혈증 초기검사",
@@ -1939,7 +3061,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "25~28조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "생후 3일 된 여아가 구역, 구토 증상 보이고 기면 상태로 입원하였다. 암모니아가 650일 때 해야 하는 검사는? 1. 혈당 2. 칼슘 3. 뇌파 4. 뇌초음파 5. 혈액 가스 분석",
+    "display_answer": "혈액 가스 분석",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "대사-고암모니아혈증 초기검사"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "신생아 고암모니아혈증은 빠르게 산염기 상태를 확인하고, 암모니아가 매우 높거나 초기 내과치료에 반응하지 않으면 혈액투석으로 제거한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 혈액 가스 분석입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "25~28조",
@@ -1951,7 +3093,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-2",
     "content_axis": "탈수-저혈압/초기수액",
@@ -1977,7 +3119,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "25~28조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "5세 여아, 탈수가 있으며 저혈압과 각종 Lab 소견 있었음. 진행해야 하는 치료는? 0.9% Normal Saline",
+    "display_answer": "0.9% Normal saline 정주",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "탈수-저혈압/초기수액"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "중증 탈수 또는 순환부전의 첫 처치는 0.9% 생리식염수 20 mL/kg bolus다. 10 kg이면 200 mL, 12 kg이면 240 mL로 계산한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 0.9% Normal saline 정주입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "25~28조",
@@ -1989,7 +3151,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-2",
     "content_axis": "대사-Refeeding syndrome",
@@ -2013,7 +3175,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "25~28조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "17세 여아가 6개월의 다이어트 10키로를 감량한 후 병원에서 비위관삽입을 진행해 정맥 영양중이다. 치료 3일 뒤 혈액 검사 결과가 다음과 같았다. 진단은? Na 140K 2.5 Cl 95 간 수치 정상 TP 6.0 albumin 2.5 glucose 120 CRP 3 Refeeding syndrome",
+    "display_answer": "Refeeding syndrome",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "대사-Refeeding syndrome"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 '대사-Refeeding syndrome'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 Refeeding syndrome입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "25~28조",
@@ -2025,7 +3207,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-1",
     "content_axis": "성장-IUGR 정의",
@@ -2049,7 +3231,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "25~28조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "임신 중 태내 성장이 지연되는 경우로서 예상되는 성장패턴보다 성장이 둔화되는 것은? 자궁 내 성장지연",
+    "display_answer": "자궁내 성장지연 / IUGR",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "성장-IUGR 정의"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "소아 성장 문제는 나이 단계, 성장곡선, 장기별 발육패턴을 좌표축으로 잡는다. 숫자만 외우지 말고 어떤 축이 벗어났는지 본다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 자궁내 성장지연 / IUGR입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "25~28조",
@@ -2061,7 +3263,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-2",
     "content_axis": "전해질-Na 교정후 저Na 경련",
@@ -2085,7 +3287,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "25~28조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "탈수로 온 소아. 수액 치료 중 경련이 발생하였다. 치료 전 Na 농도는 170, 치료 후 농도는 130이였다. 경련이 발생한 원인과 치료는? 저나트륨혈증, 3% saline 정주 (Na 30mEq/hr)",
+    "display_answer": "저나트륨혈증에 의한 경련, 3% saline 정주",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "전해질-Na 교정후 저Na 경련"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "경련이 동반된 증상성 저나트륨혈증은 CT가 정상이어도 3% saline으로 뇌부종 위험을 먼저 끊는다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 저나트륨혈증에 의한 경련, 3% saline 정주입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "25~28조",
@@ -2097,7 +3319,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep01-1",
     "content_axis": "감염성설사-로타바이러스",
@@ -2121,7 +3343,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "25~28조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "5세 남아가 열이 나서 병원에 내원하였다. 5일 전부터 자주 토하고 묽은 변을 하루 10회 정도 보았다. 체온이 38도 이상으로 높게 나고 주변인도 비슷한 증상을 호소함. 가능성이 높은 병원균은? 로타바이러스",
+    "display_answer": "로타바이러스",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "감염성설사-로타바이러스"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 '감염성설사-로타바이러스'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 로타바이러스입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "29-32조",
@@ -2133,7 +3375,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_high",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-2",
     "content_axis": "유전-imprinting 질환선택/BWS",
@@ -2157,7 +3399,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29-32조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "염색체 수는 정상이지만 아버지에게서 염색체를 둘다 받아서 생기는 질환(genetic imprinting설명) 1. Fragile X 2. Williams syndrome 3. Huntington 4. Cri du chat syndrome 5. Beckwith-widemann syndrome + 실버러셀, 프레더 윌리, 엔젤만",
+    "display_answer": "Beckwith-Wiedemann syndrome",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "유전-imprinting 질환선택/BWS"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "염색체 수보다 부모 어느 쪽에서 온 유전자인지가 표현형을 바꾸면 genetic imprinting이다. Prader-Willi/Angelman, Beckwith-Wiedemann 계열이 대표 trigger다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 Beckwith-Wiedemann syndrome입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "29-32조",
@@ -2169,7 +3431,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_medium",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-3",
     "content_axis": "고위험신생아-IDM 대사합병증",
@@ -2195,7 +3457,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29-32조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "임신성 당뇨로 인슐린 치료를 받고 있던 임산부가 임신 36주에 3.8kg의 여아를 제왕절개로 분만하였다. 이후 아기에게 보일 수 있는 소견은?",
+    "display_answer": "IDM 소견: 저혈당, 저칼슘혈증, 다혈구증 등. 선지에 있으면 저칼슘혈증/저혈당 우선 확인",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "고위험신생아-IDM 대사합병증"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "당뇨 산모 아이는 고인슐린 상태로 태어나 저혈당, 저칼슘혈증, 다혈구증 등을 보일 수 있다. 선지에 저칼슘혈증이 있으면 강한 후보가 된다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 IDM 소견: 저혈당, 저칼슘혈증, 다혈구증 등. 선지에 있으면 저칼슘혈증/저혈당 우선 확인입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "29-32조",
@@ -2207,7 +3489,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_high",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-1",
     "content_axis": "발달-milestone/운동지연",
@@ -2233,7 +3515,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29-32조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "3세 남아 성장 발달 계단은 오르는데 한발로 서잇지 못함 원은 그리는데 사각형은 못그림 물건은 셋까지만 셈 손 씻기는 하지만 세수는 못함 1. 사회적행동장애 2. 운동발달지연 3. 적응발달지연 4. 언어발달지연 5. 정상",
+    "display_answer": "운동발달지연",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "발달-milestone/운동지연"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "발달 문제는 대근육, 소근육, 언어, 사회성 중 어느 축이 연령 기대치보다 가장 뒤처졌는지 고르는 방식으로 푼다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 운동발달지연입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "29-32조",
@@ -2245,7 +3547,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_medium",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-1",
     "content_axis": "영양/TPN-매일감시",
@@ -2269,7 +3571,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29-32조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "TPN에서 매일 감시해야하는 것 1. 키 2. 체중 3. 머리둘레 4. 암모니아 5. 중성지방",
+    "display_answer": "체중",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "영양/TPN-매일감시"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "신생아 고암모니아혈증은 빠르게 산염기 상태를 확인하고, 암모니아가 매우 높거나 초기 내과치료에 반응하지 않으면 혈액투석으로 제거한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 체중입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "29-32조",
@@ -2281,7 +3603,7 @@
     "origin": "actual_incomplete",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "actual_incomplete",
+    "answer_confidence": "⚠️ 알렌 기준 추정",
     "qc_flag": "answer_or_original_needs_confirmation",
     "episode": "Ep00-1",
     "content_axis": "예방접종-항암치료후 catch-up",
@@ -2305,7 +3627,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29-32조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "11세 소아. 4년 전 급성림프구백혈병 진단 후 조혈모세포이식 없이 항암화학요법을 받고 완치. 6세까지 예방접종은 나이에 맞게 완료. 지금 적합한 예방접종은? 원문 선지 확인 필요.",
+    "display_answer": "원문 선지 확인 필요 — 알렌 기준으로는 치료 종료/면역 회복 후 catch-up 접종을 검토, 11~12세 정기접종(Tdap/HPV 등)은 선지 의존",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "예방접종-항암치료후 catch-up"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "예방접종 문제는 ‘오늘 맞아도 되는가’를 생백신 간격, 면역저하/임신/최근 IVIG, 나이별 정기접종표 순서로 판정한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 원문 선지 확인 필요 — 알렌 기준으로는 치료 종료/면역 회복 후 catch-up 접종을 검토, 11~12세 정기접종(Tdap/HPV 등)은 선지 의존입니다."
+      },
+      {
+        "label": "주의",
+        "text": "복기 정보가 불완전하므로 최종 시험장 암기는 원문 선지 확인 전까지 '추정'으로 둔다. 복기 원문/선지가 불완전해서 확정 답처럼 외우면 위험합니다. 알렌 개념으로 가장 그럴듯한 방향을 표시했습니다."
+      }
+    ]
   },
   {
     "source": "29-32조",
@@ -2317,7 +3659,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-2",
     "content_axis": "유전-Down karyotype",
@@ -2341,7 +3683,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29-32조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "다운증후군 남아 핵형쓰기 47, XY, +21",
+    "display_answer": "47, XY, +21",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "유전-Down karyotype"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "염색체 문제는 수적 이상인지, 전위인지, imprinting인지부터 가른다. Down 기본 핵형은 47,XY,+21이고 Robertsonian 21;21이면 재발 위험이 극단적으로 높다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 47, XY, +21입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "29-32조",
@@ -2353,7 +3715,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-4",
     "content_axis": "신생아황달-Coombs/교환수혈",
@@ -2377,7 +3739,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29-32조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "37주, 3,000g 신생아. 황달과 간비대가 있고 광선치료 후 총빌리루빈 16. Coombs 결과가 제시되었다. 추가로 시행할 수 있는 치료는?",
+    "display_answer": "교환수혈",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아황달-Coombs/교환수혈"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "용혈 황달이 심하거나 광선치료/IVIG로 조절되지 않으면 핵황달 예방을 위해 교환수혈로 넘어간다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 교환수혈입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "29-32조",
@@ -2389,7 +3771,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_high",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-1",
     "content_axis": "성장-성장급등기",
@@ -2413,7 +3795,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29-32조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "급성 성장기에 대해 설명.",
+    "display_answer": "제1 성장급등기: 태아기~2세, 제2 성장급등기: 사춘기~15/16세",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "성장-성장급등기"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "소아 성장 문제는 나이 단계, 성장곡선, 장기별 발육패턴을 좌표축으로 잡는다. 숫자만 외우지 말고 어떤 축이 벗어났는지 본다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 제1 성장급등기: 태아기~2세, 제2 성장급등기: 사춘기~15/16세입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "29-32조",
@@ -2425,7 +3827,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-2",
     "content_axis": "수분-유지수액 계산",
@@ -2449,7 +3851,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29-32조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "18.8kg 환아에게 복부초음파 검사를 시행하기 위해 금식하려호 한다. 하루 필요한 수액량을 계산하여 수액 주입 속도를 구하시오. 57.6mL/hr",
+    "display_answer": "57.6 mL/hr",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "수분-유지수액 계산"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "유지수액은 100-50-20 rule로 계산하고, 하루 총량을 24시간으로 나누어 mL/hr를 구한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 57.6 mL/hr입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "33~36조",
@@ -2461,7 +3883,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_high",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-1",
     "content_axis": "예방접종-MMR/생백신 재접종",
@@ -2487,7 +3909,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "33~36조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "13개월 여아 예방접종받기위해 병원 내원. 10개월 때 홍역 유행해서 홍역 백신 맞았고 4주전에 수두 백신과 일본뇌염 백신 맞았다. 추천할 예방접종은? 1. Dtap 2. 수막알균 3. MMR 4. 로타바이러스 5. 일본뇌염",
+    "display_answer": "MMR",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "예방접종-MMR/생백신 재접종"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "예방접종 문제는 ‘오늘 맞아도 되는가’를 생백신 간격, 면역저하/임신/최근 IVIG, 나이별 정기접종표 순서로 판정한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 MMR입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "33~36조",
@@ -2499,7 +3941,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-2",
     "content_axis": "유전-Down/Robertsonian 21;21 recurrence",
@@ -2525,7 +3967,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "33~36조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "로버트슨 전위 산모, 다운증후군 확률: 100% (야마)",
+    "display_answer": "100%",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "유전-Down/Robertsonian 21;21 recurrence"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "염색체 문제는 수적 이상인지, 전위인지, imprinting인지부터 가른다. Down 기본 핵형은 47,XY,+21이고 Robertsonian 21;21이면 재발 위험이 극단적으로 높다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 100%입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "33~36조",
@@ -2537,7 +3999,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_high",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-4",
     "content_axis": "신생아소화-NEC 치료",
@@ -2561,7 +4023,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "33~36조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "26주, 출산 후 3주경, 혈변 복부팽만 무호흡 WBC 24000 1. 항생제, 금식 2. 알레르기 분유 3. 인도메타신 4. 산소 5. 관장",
+    "display_answer": "NEC 의심: 금식 + 항생제",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아소화-NEC 치료"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "미숙아가 수유 중 혈변, 복부팽만, 무호흡을 보이면 NEC를 의심하고 금식, 위장관 감압, 항생제로 시작한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 NEC 의심: 금식 + 항생제입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "33~36조",
@@ -2573,7 +4055,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_medium",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-2",
     "content_axis": "탈수-고장성/중증도 분류",
@@ -2597,7 +4079,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "33~36조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "대천문 함몰, 바싹 마른 입, na 157mEq/L 중등도 고장성 / 중등도 저장성 / 중증 고장성 / 중증 등장성 / 중증 저장성",
+    "display_answer": "중등도 고장성 탈수",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "탈수-고장성/중증도 분류"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 '탈수-고장성/중증도 분류'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 중등도 고장성 탈수입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "33~36조",
@@ -2609,7 +4111,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-1",
     "content_axis": "영양결핍-VitD/구루병 진단",
@@ -2635,7 +4137,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "33~36조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "28+3wks 820g로 출생한 나이 4개월의 남자 환아의 손목 x ray 사진이다. 추정되는 진단명과 부족한 비타민은? (여기서 화살표는 없었음) 구루병, 비타민 D",
+    "display_answer": "구루병, 비타민 D 결핍",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "영양결핍-VitD/구루병 진단"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "구루병은 모유 위주 식이, 낮은 25-OH vitamin D, ALP/PTH 상승, 손목·다리 X-ray 변화가 같이 묶인다. 치료 축은 비타민 D 보충이다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 구루병, 비타민 D 결핍입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "33~36조",
@@ -2647,7 +4169,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep06-1",
     "content_axis": "유전/내분비-Turner/CoA",
@@ -2671,7 +4193,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "33~36조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "4세 저신장 익상경(webbed neck) 방패가슴 핵형검사시 45, XO 감별해야하는 진단과 호발하는 심장 기형은? 터너 증후군, CoA",
+    "display_answer": "터너 증후군, 대동맥축착(CoA)",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "유전/내분비-Turner/CoA"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "염색체 문제는 수적 이상인지, 전위인지, imprinting인지부터 가른다. Down 기본 핵형은 47,XY,+21이고 Robertsonian 21;21이면 재발 위험이 극단적으로 높다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 터너 증후군, 대동맥축착(CoA)입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "33~36조",
@@ -2683,7 +4225,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-3",
     "content_axis": "신생아소생술-HR<100/무호흡 초기처치",
@@ -2709,7 +4251,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "33~36조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "재태연령 37주 5일 2300g 제왕절개로 출산한 남아. 출생 후 자발호흡없고 축 늘어져 보온,기도 개방, 자극. 생후 40초 심박수 90회/분 호흡 불규칙 청색증. 처치는? 양압 환기",
+    "display_answer": "양압환기 / PPV",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아소생술-HR<100/무호흡 초기처치"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "신생아 소생술은 HR 100과 60 두 문으로 푼다. HR<100 또는 무호흡이면 PPV, PPV가 안 먹히면 MRSOPA, 그래도 HR<100이면 기관삽관, HR<60이면 가슴압박+환기다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 양압환기 / PPV입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "37~40조",
@@ -2721,7 +4283,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_medium",
+    "answer_confidence": "⚠️ 알렌 기준 추정",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-1",
     "content_axis": "성장-12개월 성장지표 이상",
@@ -2745,7 +4307,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "37~40조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "12개월 아기 머리 둘레, 키,체중,치아 주어지고 비정상 고르는 문제",
+    "display_answer": "원문 수치 확인 필요 — 성장곡선에서 이탈한 항목, 특히 체중/성장부전 가능성을 우선 의심",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "성장-12개월 성장지표 이상"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "소아 성장 문제는 나이 단계, 성장곡선, 장기별 발육패턴을 좌표축으로 잡는다. 숫자만 외우지 말고 어떤 축이 벗어났는지 본다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 원문 수치 확인 필요 — 성장곡선에서 이탈한 항목, 특히 체중/성장부전 가능성을 우선 의심입니다."
+      },
+      {
+        "label": "주의",
+        "text": "복기 정보가 불완전하므로 최종 시험장 암기는 원문 선지 확인 전까지 '추정'으로 둔다. 복기 원문/선지가 불완전해서 확정 답처럼 외우면 위험합니다. 알렌 개념으로 가장 그럴듯한 방향을 표시했습니다."
+      }
+    ]
   },
   {
     "source": "37~40조",
@@ -2757,7 +4339,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_high",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-1",
     "content_axis": "영양결핍-철/이유식/모유",
@@ -2783,7 +4365,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "37~40조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "10개월 아이로 현재 모유 수유 중이며 이유식은 일 1회(부족함), 현재 아이에게서 부족할 것으로 예상되는 영양소는? 1. 단백질 2. 탄수화물 3. 지방 4. 비타민 D 5. 철분",
+    "display_answer": "철분",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "영양결핍-철/이유식/모유"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "생후 6개월 이후 저장철이 떨어지는데 모유 위주·이유식 부족·MCV 감소가 같이 보이면 철결핍을 먼저 본다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 철분입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "37~40조",
@@ -2795,7 +4397,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_medium",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-4",
     "content_axis": "신생아황달-생후10일/모유수유/저위험",
@@ -2821,7 +4423,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "37~40조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "생후 10일 된 환아 황달 주소로 내원, 빌리루빈 수치 11.0, 직접 빌리루빈 0.8 그외 간수치 등 다른 수치는 정상. 치료법은? 1. 경과관찰 2. 분유로 변경 3. 모유 수유를 더 권장 4. 미복기 5. 미복기",
+    "display_answer": "경과관찰 / 모유수유 지속 권장",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아황달-생후10일/모유수유/저위험"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "생후 10일, 총빌리루빈이 높지 않고 직접빌리루빈/간수치가 괜찮으며 아이가 활발하면 저위험 모유황달 쪽이라 경과관찰과 수유 지속이 중심이다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 경과관찰 / 모유수유 지속 권장입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "37~40조",
@@ -2833,7 +4455,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_high",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-2",
     "content_axis": "유전-aneuploidy 질환구분",
@@ -2857,7 +4479,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "37~40조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "이수성(Aneuploidy)인 질병은 가. 클라인펠터 나. 터너 다. 에드워드 라. 프레더 월리",
+    "display_answer": "이수성: 클라인펠터, 터너, 에드워드 / 프레더윌리는 제외",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "유전-aneuploidy 질환구분"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "염색체 문제는 수적 이상인지, 전위인지, imprinting인지부터 가른다. Down 기본 핵형은 47,XY,+21이고 Robertsonian 21;21이면 재발 위험이 극단적으로 높다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 이수성: 클라인펠터, 터너, 에드워드 / 프레더윌리는 제외입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "37~40조",
@@ -2869,7 +4511,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-1",
     "content_axis": "예방접종-MMR 금기",
@@ -2893,7 +4535,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "37~40조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "MMR 백신 금기증 2가지 임신, 백혈병, 면역억제요법, 면역글로불린, 수혈, 지연성 과민반응 결여",
+    "display_answer": "MMR 금기: 임신, 백혈병/면역억제, 최근 면역글로불린 또는 수혈 등",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "예방접종-MMR 금기"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "예방접종 문제는 ‘오늘 맞아도 되는가’를 생백신 간격, 면역저하/임신/최근 IVIG, 나이별 정기접종표 순서로 판정한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 MMR 금기: 임신, 백혈병/면역억제, 최근 면역글로불린 또는 수혈 등입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "37~40조",
@@ -2905,7 +4567,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-1",
     "content_axis": "모유수유-호르몬",
@@ -2929,7 +4591,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "37~40조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "모유 수유와 관련 있는 호르몬 2가지 옥시토신, 프로락틴",
+    "display_answer": "옥시토신, 프로락틴",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "모유수유-호르몬"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "모유수유 문제는 금기인지, 산모 식이/약물 문제인지, 아이 증상 때문인지 나눈다. 산모 항암치료는 금기이고, 혈변만 있으면 우선 수유모 항원 제한을 생각한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 옥시토신, 프로락틴입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "37~40조",
@@ -2941,7 +4623,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep06-2",
     "content_axis": "당뇨/DKA-anion gap 계산",
@@ -2965,7 +4647,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "37~40조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "당뇨 10세 여아 환자가 무력감 주소로 내원. 현재 산증 상태, 환자 ABGA, 혈장 이온 수치 주고 Plasma anion gap 구하는 문제 AG = Na+- Cl - HCO3",
+    "display_answer": "Anion gap = Na - Cl - HCO3",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "당뇨/DKA-anion gap 계산"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 '당뇨/DKA-anion gap 계산'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 Anion gap = Na - Cl - HCO3입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "21-24조",
@@ -2977,7 +4679,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-1",
     "content_axis": "영양결핍-아연/TPN/설사피부",
@@ -3003,7 +4705,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "21-24조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "3개월간 TPN 진행한 소아환자가 설사와 피부 증상이 발생. 부족한 영양소는? 아연",
+    "display_answer": "아연",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "영양결핍-아연/TPN/설사피부"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "TPN, 항암, 만성 설사 뒤 피부홍반·모발 변화가 나오면 아연 결핍이 시험장 trigger다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 아연입니다."
+      },
+      {
+        "label": "주의",
+        "text": "비슷한 주제지만 trigger나 답의 축이 달라질 수 있으므로 무리하게 병합하지 않는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "21-24조",
@@ -3015,7 +4737,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-1",
     "content_axis": "예방접종-비장절제 전 백신",
@@ -3039,7 +4761,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "21-24조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "비장 절제술을 받을 예정인 소아가 수술 전에 필요한 예방접종은? Hib, 폐렴구균 다당질 답이 하나면 Hib만",
+    "display_answer": "Hib + 폐렴구균 백신. 하나만 고르면 Hib 우선",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "예방접종-비장절제 전 백신"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "예방접종 문제는 ‘오늘 맞아도 되는가’를 생백신 간격, 면역저하/임신/최근 IVIG, 나이별 정기접종표 순서로 판정한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 Hib + 폐렴구균 백신. 하나만 고르면 Hib 우선입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "21-24조",
@@ -3051,7 +4793,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_high",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-1",
     "content_axis": "발달-milestone/2세 언어치료",
@@ -3075,7 +4817,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "21-24조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "2세 환아의 영유아 검진이다. 적절한 치료는? - 계단을 오를 수 있지만, 양 발을 번갈아 오를 수 없다. - 숟가락질은 하지만, 젓가락질은 못 한다. - 20개 단어를 말하지만, 문장은 못 한다. - 입방체 7개는 쌓지 못한다. 1. 언어 치료. 2. 운동 치료 3. 감각 치료 4. 사회화 치료 5. 적응 치료",
+    "display_answer": "언어 치료",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "발달-milestone/2세 언어치료"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "발달 문제는 대근육, 소근육, 언어, 사회성 중 어느 축이 연령 기대치보다 가장 뒤처졌는지 고르는 방식으로 푼다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 언어 치료입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "21-24조",
@@ -3087,7 +4849,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_high",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-2",
     "content_axis": "대사-MSUD 식이치료",
@@ -3111,7 +4873,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "21-24조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "다음 중 치료가 식이요법인 것은? 1. MSUD 2. Gaucher 3. Fabry 4. Pompe 5. 헐러",
+    "display_answer": "MSUD",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "대사-MSUD 식이치료"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "MSUD는 branched-chain amino acid 대사 문제라 전구물질 제한, 즉 식이치료가 핵심이다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 MSUD입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "21-24조",
@@ -3123,7 +4905,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep06-1",
     "content_axis": "비만-BMI95 치료",
@@ -3147,7 +4929,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "21-24조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "9세 소아가 살이 쪄서 내원했다. 키 130cm(25-50 백분위), 체중 45kg (90-95백분위) BMI 26.6 (95<백분위)이다. 처치는? 체중감량",
+    "display_answer": "체중감량",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "비만-BMI95 치료"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "BMI가 95백분위 이상이면 소아 비만으로 보고 생활습관 교정과 체중감량 방향을 잡는다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 체중감량입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "21-24조",
@@ -3159,7 +4961,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_high",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep03-3",
     "content_axis": "면역결핍-의심소견",
@@ -3183,7 +4985,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "21-24조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "감염이 반복되는 아이에게서 면역결핍을 의심할 수 있는 경우를 2가지 이상 열거하시오",
+    "display_answer": "면역결핍 의심: 반복/중증 감염, 기회감염 또는 드문 균 감염, 항생제 반응 불량, 성장부전, 가족력 등 중 2가지 이상",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "면역결핍-의심소견"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "면역결핍은 반복·중증·기회감염, 드문 균, 항생제 반응 불량, 성장부전을 red flag로 본다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 면역결핍 의심: 반복/중증 감염, 기회감염 또는 드문 균 감염, 항생제 반응 불량, 성장부전, 가족력 등 중 2가지 이상입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "21-24조",
@@ -3195,7 +5017,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_high",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep00-1",
     "content_axis": "성장-소아연령단계",
@@ -3219,7 +5041,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "21-24조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "출생 전기 포함 6단계에 대해 연령별 출생 후 단계를 열거해라.",
+    "display_answer": "출생 전기, 신생아기, 영아기, 유아기, 학령기, 청소년기",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "성장-소아연령단계"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "소아 성장 문제는 나이 단계, 성장곡선, 장기별 발육패턴을 좌표축으로 잡는다. 숫자만 외우지 말고 어떤 축이 벗어났는지 본다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 출생 전기, 신생아기, 영아기, 유아기, 학령기, 청소년기입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "21-24조",
@@ -3231,7 +5073,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "parse_fragment_answered",
+    "answer_confidence": "⚠️ 알렌 기준 추정",
     "qc_flag": "parse_fragment_keep_for_count_review",
     "episode": "Ep00-1",
     "content_axis": "성장-소아연령단계",
@@ -3255,7 +5097,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "21-24조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "소아 연령 구분 단계 문제의 복기 조각. 출생 전기, 신생아기, 영아기, 유아기, 학령기 등이 제시되었다. 전체 단계를 완성하라.",
+    "display_answer": "출생 전기, 신생아기, 영아기, 유아기, 학령기, 청소년기",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "성장-소아연령단계"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "소아 성장 문제는 나이 단계, 성장곡선, 장기별 발육패턴을 좌표축으로 잡는다. 숫자만 외우지 말고 어떤 축이 벗어났는지 본다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 출생 전기, 신생아기, 영아기, 유아기, 학령기, 청소년기입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 원문/선지가 불완전해서 확정 답처럼 외우면 위험합니다. 알렌 개념으로 가장 그럴듯한 방향을 표시했습니다."
+      }
+    ]
   },
   {
     "source": "21-24조",
@@ -3267,7 +5129,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "parse_fragment_answered",
+    "answer_confidence": "⚠️ 알렌 기준 추정",
     "qc_flag": "parse_fragment_keep_for_count_review",
     "episode": "Ep00-1",
     "content_axis": "성장-소아연령단계",
@@ -3291,7 +5153,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "21-24조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "소아 연령 구분 단계 문제의 복기 조각. 청소년기의 연령 범위를 묻는다.",
+    "display_answer": "청소년기: 11~21세",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "성장-소아연령단계"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "소아 성장 문제는 나이 단계, 성장곡선, 장기별 발육패턴을 좌표축으로 잡는다. 숫자만 외우지 말고 어떤 축이 벗어났는지 본다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 청소년기: 11~21세입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 원문/선지가 불완전해서 확정 답처럼 외우면 위험합니다. 알렌 개념으로 가장 그럴듯한 방향을 표시했습니다."
+      }
+    ]
   },
   {
     "source": "21-24조",
@@ -3303,7 +5185,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-2",
     "content_axis": "대사-고암모니아혈증 치료",
@@ -3327,7 +5209,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "21-24조",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "고암모니아혈증에서 암모니아 500 초과, 초기내과처치에 반응하지 않는 경우 치료법은? 혈액 투석",
+    "display_answer": "혈액투석",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "대사-고암모니아혈증 치료"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "신생아 고암모니아혈증은 빠르게 산염기 상태를 확인하고, 암모니아가 매우 높거나 초기 내과치료에 반응하지 않으면 혈액투석으로 제거한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 혈액투석입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
@@ -3339,7 +5241,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-1",
     "content_axis": "모유수유-금기/산모항암",
@@ -3363,7 +5265,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "모유 수유의 금기가 되는 것은? 1.산모 가슴 몽울 2. 산모 B형 간염 보균자 3.산모 감기약 먹음 4. 산모 항암 치료 중임",
+    "display_answer": "산모 항암 치료 중임",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "모유수유-금기/산모항암"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "모유수유 문제는 금기인지, 산모 식이/약물 문제인지, 아이 증상 때문인지 나눈다. 산모 항암치료는 금기이고, 혈변만 있으면 우선 수유모 항원 제한을 생각한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 산모 항암 치료 중임입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
@@ -3375,7 +5297,7 @@
     "origin": "actual_incomplete",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "parse_fragment_answered",
+    "answer_confidence": "⚠️ 알렌 기준 추정",
     "qc_flag": "parse_fragment_keep_for_count_review",
     "episode": "Ep00-1",
     "content_axis": "모유수유-금기/산모항암",
@@ -3399,7 +5321,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "모유수유 금기 문항의 복기 조각. actual1_094의 선지 일부로 보이며, 핵심 정답은 산모 항암치료 중이다.",
+    "display_answer": "산모 항암치료 중 — 모유수유 금기(actual1_094와 같은 문항 조각)",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "모유수유-금기/산모항암"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "모유수유 문제는 금기인지, 산모 식이/약물 문제인지, 아이 증상 때문인지 나눈다. 산모 항암치료는 금기이고, 혈변만 있으면 우선 수유모 항원 제한을 생각한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 산모 항암치료 중 — 모유수유 금기(actual1_094와 같은 문항 조각)입니다."
+      },
+      {
+        "label": "주의",
+        "text": "복기 정보가 불완전하므로 최종 시험장 암기는 원문 선지 확인 전까지 '추정'으로 둔다. 복기 원문/선지가 불완전해서 확정 답처럼 외우면 위험합니다. 알렌 개념으로 가장 그럴듯한 방향을 표시했습니다."
+      }
+    ]
   },
   {
     "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
@@ -3411,7 +5353,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-1",
     "content_axis": "예방접종-BCG 미접종 8개월/TST",
@@ -3435,7 +5377,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "8개월 여아 6개월까지 예방접종 다 맞았으나 해외 생활로 bcg 못 맞음. 처치는? 답 TST 검사",
+    "display_answer": "TST 검사",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "예방접종-BCG 미접종 8개월/TST"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "예방접종 문제는 ‘오늘 맞아도 되는가’를 생백신 간격, 면역저하/임신/최근 IVIG, 나이별 정기접종표 순서로 판정한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 TST 검사입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
@@ -3447,7 +5409,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-2",
     "content_axis": "전해질-증상성 저Na 경련",
@@ -3473,7 +5435,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "폐렴 치료 중 경련 발생, Na 120 mEq/L. 치료는? 1) 경구 NaCl 2) 3% saline 3) ...",
+    "display_answer": "3% saline",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "전해질-증상성 저Na 경련"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "경련이 동반된 증상성 저나트륨혈증은 CT가 정상이어도 3% saline으로 뇌부종 위험을 먼저 끊는다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 3% saline입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
@@ -3485,7 +5467,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-3",
     "content_axis": "신생아/소아-체온조절",
@@ -3509,7 +5491,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "소아 체온 조절에 관해서 옳은 것? (1) 갈색 지방은 체온 조절에 관여하지 않는다 (2) 소아 체표면적은 성인보다 적어 체온 조절이 쉽다 (3) 외부 온도에 영향을 받지 않고 일정하다 (4) 마른 수건으로 닦는 것이 체온 조절에 효과적이다 (5) 저체온은 치료적으로 중요하지 않다",
+    "display_answer": "마른 수건으로 닦는 것이 체온 조절에 효과적이다",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아/소아-체온조절"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 '신생아/소아-체온조절'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 마른 수건으로 닦는 것이 체온 조절에 효과적이다입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
@@ -3521,7 +5523,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-3",
     "content_axis": "신생아소생술-압박:환기 비율",
@@ -3545,7 +5547,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "신생아 소생술에서 가슴압박:환기 비율은? 1) 30:2 2) 15:2 3) 5:1 4) 3:1 5) 1:1",
+    "display_answer": "3:1",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아소생술-압박:환기 비율"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "신생아 소생술은 HR 100과 60 두 문으로 푼다. HR<100 또는 무호흡이면 PPV, PPV가 안 먹히면 MRSOPA, 그래도 HR<100이면 기관삽관, HR<60이면 가슴압박+환기다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 3:1입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
@@ -3557,7 +5579,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-1",
     "content_axis": "성장-신경형/두위",
@@ -3581,7 +5603,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "신경형 장기 설명+ 두위는 ()세에 성인의 ()%까지 커진다 답 4, 80",
+    "display_answer": "4세, 80%",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "성장-신경형/두위"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "소아 성장 문제는 나이 단계, 성장곡선, 장기별 발육패턴을 좌표축으로 잡는다. 숫자만 외우지 말고 어떤 축이 벗어났는지 본다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 4세, 80%입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
@@ -3593,7 +5635,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_inferred_high",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_inferred_from_context",
     "episode": "Ep03-3",
     "content_axis": "면역결핍-범저감마/XLA 치료",
@@ -3619,7 +5661,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "범저감마글로불린혈증 및 치료",
+    "display_answer": "범저감마글로불린혈증; IVIG 3~4주 간격 투여",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "면역결핍-범저감마/XLA 치료"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "생후 6개월 이후 반복 세균감염, 편도/아데노이드 없음, Ig 감소는 B cell/항체 문제인 범저감마글로불린혈증으로 보고 IVIG를 반복 투여한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 범저감마글로불린혈증; IVIG 3~4주 간격 투여입니다."
+      },
+      {
+        "label": "주의",
+        "text": "반복 출제 신호가 있는 카드다. 같은 답을 여는 trigger를 통째로 묶어 외운다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
@@ -3631,7 +5693,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-2",
     "content_axis": "유전-imprinting PWS/Angelman deletion/UPD",
@@ -3655,7 +5717,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "프레더 윌리, 엔젤만 증후군이 genetic imprinting, uniparental diostomy로 각각 부계, 모계인지 각각 채워 넣으시오 답 프레더 윌리 -deletion: 부계 -paternal upd: 모계 엔젤만 -deletion: 모계 -paternal upd: 부계",
+    "display_answer": "Prader-Willi: paternal deletion 또는 maternal UPD. Angelman: maternal deletion 또는 paternal UPD",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "유전-imprinting PWS/Angelman deletion/UPD"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "염색체 수보다 부모 어느 쪽에서 온 유전자인지가 표현형을 바꾸면 genetic imprinting이다. Prader-Willi/Angelman, Beckwith-Wiedemann 계열이 대표 trigger다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 Prader-Willi: paternal deletion 또는 maternal UPD. Angelman: maternal deletion 또는 paternal UPD입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
@@ -3667,7 +5749,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-4",
     "content_axis": "신생아감염-Chlamydia 결막염",
@@ -3691,7 +5773,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "생후 10일 남아 다 정상, 3일 전부터 양쪽 결막 충혈 및 분비물, 가장 의심되는 병원균? 답 클라미디아",
+    "display_answer": "Chlamydia trachomatis",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아감염-Chlamydia 결막염"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "생후 5~14일 무렵 양측 결막염/분비물은 Chlamydia trachomatis를 우선 떠올린다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 Chlamydia trachomatis입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "source": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
@@ -3703,7 +5805,7 @@
     "origin": "actual_recall",
     "priority_tier": "P3",
     "type": "actual_pretest",
-    "answer_confidence": "source_embedded",
+    "answer_confidence": "✅ actual 기준",
     "qc_flag": "answer_from_source_text",
     "episode": "Ep00-4",
     "content_axis": "신생아호흡-RDS surfactant 전략",
@@ -3727,7 +5829,27 @@
     },
     "section": "실제 1차 Pretest 누적 복기",
     "subsection": "29__5_26년-5_6_7_8조_pre-test_5_6_7_8조_1주차_프테_복기.docx.txt",
-    "exact_expression": ""
+    "exact_expression": "",
+    "display_question": "기관삽관후 폐포 계면활성제를 투여하고 수분에서 1시간 이후 발관한 후 nasal CPAP진행하는 방법을 뭐라고 하는지? 답 INSURE방법",
+    "display_answer": "INSURE 방법",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아호흡-RDS surfactant 전략"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "미숙아의 grunting, retraction, diffuse/white lung은 폐표면활성제 부족 RDS다. 삽관-계면활성제-조기발관-CPAP 흐름은 INSURE다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 INSURE 방법입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
   },
   {
     "id": "drill1_001",
@@ -3741,7 +5863,28 @@
     "subsection": "2026 9~12조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "13개월, 이유식 부진, 모유 위주, Hb 8, MCV 66. 부족 영양소는?",
+    "display_answer": "철",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "13개월, 이유식 부진, 모유 위주, Hb 8, MCV 66. 부족 영양소는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "생후 6개월 이후 저장철이 떨어지는데 모유 위주·이유식 부족·MCV 감소가 같이 보이면 철결핍을 먼저 본다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 철입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_002",
@@ -3755,7 +5898,28 @@
     "subsection": "2026 9~12조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "12개월, ITP 치료 3개월 후, 현재 건강/혈소판 정상, 수두백신 예정. 처치는?",
+    "display_answer": "수두백신 접종",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "12개월, ITP 치료 3개월 후, 현재 건강/혈소판 정상, 수두백신 예정. 처치는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'A. 최신 2026 exact 20문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 수두백신 접종입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_003",
@@ -3769,7 +5933,28 @@
     "subsection": "2026 9~12조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "10kg 소아가 구토/설사 후 9kg, pH 7.28, Na 136. 초기 처치는?",
+    "display_answer": "0.9% NS 200cc 정주, 20 mL/kg bolus",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "10kg 소아가 구토/설사 후 9kg, pH 7.28, Na 136. 초기 처치는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "중증 탈수 또는 순환부전의 첫 처치는 0.9% 생리식염수 20 mL/kg bolus다. 10 kg이면 200 mL, 12 kg이면 240 mL로 계산한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 0.9% NS 200cc 정주, 20 mL/kg bolus입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_004",
@@ -3783,7 +5968,28 @@
     "subsection": "2026 9~12조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "34주 신생아, HR 80, PPV 30초 후 HR<100, MRSOPA 후도 HR<100. 다음 처치는?",
+    "display_answer": "기관삽관",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "34주 신생아, HR 80, PPV 30초 후 HR<100, MRSOPA 후도 HR<100. 다음 처치는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "신생아 소생술은 HR 100과 60 두 문으로 푼다. HR<100 또는 무호흡이면 PPV, PPV가 안 먹히면 MRSOPA, 그래도 HR<100이면 기관삽관, HR<60이면 가슴압박+환기다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 기관삽관입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_005",
@@ -3797,7 +6003,28 @@
     "subsection": "2026 9~12조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "임신성 당뇨 산모 아이에게 나타날 수 있는 전해질 소견은?",
+    "display_answer": "저칼슘혈증",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "임신성 당뇨 산모 아이에게 나타날 수 있는 전해질 소견은?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'A. 최신 2026 exact 20문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 저칼슘혈증입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_006",
@@ -3811,7 +6038,28 @@
     "subsection": "2026 9~12조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "24개월, 단어 조합 문장 못함. ASD 감별 위해 언어장애 외 확인할 증상 2가지는?",
+    "display_answer": "대인관계 형성장애, 제한되고 반복적인 행동/관심",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "24개월, 단어 조합 문장 못함. ASD 감별 위해 언어장애 외 확인할 증상 2가지는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'A. 최신 2026 exact 20문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 대인관계 형성장애, 제한되고 반복적인 행동/관심입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_007",
@@ -3825,7 +6073,28 @@
     "subsection": "2026 9~12조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "태반을 통과하지 않아 출생 시 증가하면 선천감염을 의미하는 면역글로불린은?",
+    "display_answer": "IgM",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "태반을 통과하지 않아 출생 시 증가하면 선천감염을 의미하는 면역글로불린은?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "IgG는 태반을 통과하지만 IgM은 통과하지 못한다. 따라서 신생아 혈중 IgM 증가는 태아가 직접 만든 항체, 즉 선천감염 clue다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 IgM입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_008",
@@ -3839,7 +6108,28 @@
     "subsection": "2026 9~12조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "저혈당 + 고요산 + 고젖산 + 고중성지방혈증. 질환은?",
+    "display_answer": "당원병",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "저혈당 + 고요산 + 고젖산 + 고중성지방혈증. 질환은?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "저혈당 + 젖산 + 요산 + 중성지방 상승에 간비대가 붙으면 당원병, 특히 glycogen storage disease bundle로 본다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 당원병입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_009",
@@ -3853,7 +6143,28 @@
     "subsection": "2026 9~12조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "생후 3일 황달, direct Coombs(+), 광선치료 후 bilirubin 상승. 추가 치료는?",
+    "display_answer": "IVIG",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "생후 3일 황달, direct Coombs(+), 광선치료 후 bilirubin 상승. 추가 치료는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'A. 최신 2026 exact 20문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 IVIG입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_010",
@@ -3867,7 +6178,28 @@
     "subsection": "2026 9~12조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "산모 발열/복통/질분비물 + 신생아 호흡곤란/발열. 경험적 항생제 2가지는?",
+    "display_answer": "ampicillin + gentamicin",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "산모 발열/복통/질분비물 + 신생아 호흡곤란/발열. 경험적 항생제 2가지는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "산모 융모양막염 cue와 신생아 호흡곤란/발열이 같이 나오면 조기 신생아 패혈증으로 보고 ampicillin + gentamicin을 경험적으로 시작한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 ampicillin + gentamicin입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_011",
@@ -3881,7 +6213,28 @@
     "subsection": "2026 5~8조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "모유수유 금기가 되는 산모 상황은? 산모 항암치료 중.",
+    "display_answer": "모유수유 금기",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "모유수유 금기가 되는 산모 상황은? 산모 항암치료 중."
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'A. 최신 2026 exact 20문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 모유수유 금기입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_012",
@@ -3895,7 +6248,28 @@
     "subsection": "2026 5~8조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "8개월, BCG 못 맞고 해외 생활. 다음 처치는?",
+    "display_answer": "TST 먼저",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "8개월, BCG 못 맞고 해외 생활. 다음 처치는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "예방접종 문제는 ‘오늘 맞아도 되는가’를 생백신 간격, 면역저하/임신/최근 IVIG, 나이별 정기접종표 순서로 판정한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 TST 먼저입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_013",
@@ -3909,7 +6283,28 @@
     "subsection": "2026 5~8조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "폐렴 치료 중 경련, Na 120. 치료는?",
+    "display_answer": "3% saline",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "폐렴 치료 중 경련, Na 120. 치료는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "경련이 동반된 증상성 저나트륨혈증은 CT가 정상이어도 3% saline으로 뇌부종 위험을 먼저 끊는다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 3% saline입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_014",
@@ -3923,7 +6318,28 @@
     "subsection": "2026 5~8조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "소아 체온조절에서 효과적인 기본 처치는?",
+    "display_answer": "마른 수건으로 닦기/보온",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "소아 체온조절에서 효과적인 기본 처치는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'A. 최신 2026 exact 20문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 마른 수건으로 닦기/보온입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_015",
@@ -3937,7 +6353,28 @@
     "subsection": "2026 5~8조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "신생아 가슴압박:환기 비율은?",
+    "display_answer": "3:1",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아 가슴압박:환기 비율은?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "신생아 소생술은 HR 100과 60 두 문으로 푼다. HR<100 또는 무호흡이면 PPV, PPV가 안 먹히면 MRSOPA, 그래도 HR<100이면 기관삽관, HR<60이면 가슴압박+환기다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 3:1입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_016",
@@ -3951,7 +6388,28 @@
     "subsection": "2026 5~8조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "신경형 장기, 두위는 몇 세에 성인의 몇 퍼센트까지 커지는가?",
+    "display_answer": "4세, 80%",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신경형 장기, 두위는 몇 세에 성인의 몇 퍼센트까지 커지는가?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'A. 최신 2026 exact 20문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 4세, 80%입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_017",
@@ -3965,7 +6423,28 @@
     "subsection": "2026 5~8조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "범저감마글로불린혈증 치료는?",
+    "display_answer": "IVIG 3~4주 간격",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "범저감마글로불린혈증 치료는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'A. 최신 2026 exact 20문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 IVIG 3~4주 간격입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_018",
@@ -3979,7 +6458,28 @@
     "subsection": "2026 5~8조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "Prader-Willi/Angelman처럼 부모 유래에 따라 표현형이 달라지는 현상은?",
+    "display_answer": "genetic imprinting",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "Prader-Willi/Angelman처럼 부모 유래에 따라 표현형이 달라지는 현상은?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "염색체 수보다 부모 어느 쪽에서 온 유전자인지가 표현형을 바꾸면 genetic imprinting이다. Prader-Willi/Angelman, Beckwith-Wiedemann 계열이 대표 trigger다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 genetic imprinting입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_019",
@@ -3993,7 +6493,28 @@
     "subsection": "2026 5~8조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "생후 10일, 양쪽 결막충혈/분비물. 의심 병원균은?",
+    "display_answer": "Chlamydia",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "생후 10일, 양쪽 결막충혈/분비물. 의심 병원균은?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "생후 5~14일 무렵 양측 결막염/분비물은 Chlamydia trachomatis를 우선 떠올린다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 Chlamydia입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_020",
@@ -4007,7 +6528,28 @@
     "subsection": "2026 5~8조 최신 10문항",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "기관삽관 후 surfactant 투여, 수분~1시간 뒤 발관 후 nasal CPAP. 방법명은?",
+    "display_answer": "INSURE",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "기관삽관 후 surfactant 투여, 수분~1시간 뒤 발관 후 nasal CPAP. 방법명은?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "미숙아의 grunting, retraction, diffuse/white lung은 폐표면활성제 부족 RDS다. 삽관-계면활성제-조기발관-CPAP 흐름은 INSURE다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 INSURE입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_021",
@@ -4021,7 +6563,28 @@
     "subsection": "Ep00-1 진찰·발달·영양·예방",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "9개월, 채식 산모, 완전 모유수유, Hb 감소. 부족 영양소는?",
+    "display_answer": "cobalamin / vitamin B12",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "9개월, 채식 산모, 완전 모유수유, Hb 감소. 부족 영양소는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "채식 산모 + 완전 모유수유 + 빈혈이면 모유 자체가 아니라 산모 저장량 부족에 의한 비타민 B12 결핍을 의심한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 cobalamin / vitamin B12입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_022",
@@ -4035,7 +6598,28 @@
     "subsection": "Ep00-1 진찰·발달·영양·예방",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "항암치료 중, 머리카락 푸석, 홍반/피부증상. 부족 영양소는?",
+    "display_answer": "아연",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "항암치료 중, 머리카락 푸석, 홍반/피부증상. 부족 영양소는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "TPN, 항암, 만성 설사 뒤 피부홍반·모발 변화가 나오면 아연 결핍이 시험장 trigger다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 아연입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_023",
@@ -4049,7 +6633,28 @@
     "subsection": "Ep00-1 진찰·발달·영양·예방",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "18개월까지 모유 위주, X자다리, 25-OH vitamin D 감소, PTH/ALP 상승. 치료는?",
+    "display_answer": "비타민 D",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "18개월까지 모유 위주, X자다리, 25-OH vitamin D 감소, PTH/ALP 상승. 치료는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "구루병은 모유 위주 식이, 낮은 25-OH vitamin D, ALP/PTH 상승, 손목·다리 X-ray 변화가 같이 묶인다. 치료 축은 비타민 D 보충이다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 비타민 D입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_024",
@@ -4063,7 +6668,28 @@
     "subsection": "Ep00-1 진찰·발달·영양·예방",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "태아/신생아 출혈과 관련된 비타민은?",
+    "display_answer": "비타민 K",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "태아/신생아 출혈과 관련된 비타민은?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "신생아/태아 출혈과 응고인자 II, VII, IX, X를 떠올리면 비타민 K로 연결된다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 비타민 K입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_025",
@@ -4077,7 +6703,28 @@
     "subsection": "Ep00-1 진찰·발달·영양·예방",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "2세가 간단한 문장을 만들지 못한다. 발달 문제는?",
+    "display_answer": "언어발달지연",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "2세가 간단한 문장을 만들지 못한다. 발달 문제는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'B. Sibling trigger 30문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 언어발달지연입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_026",
@@ -4091,7 +6738,28 @@
     "subsection": "Ep00-1 진찰·발달·영양·예방",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "3세가 뛰지 못한다. 필요한 치료는?",
+    "display_answer": "운동치료",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "3세가 뛰지 못한다. 필요한 치료는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'B. Sibling trigger 30문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 운동치료입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_027",
@@ -4105,7 +6773,28 @@
     "subsection": "Ep00-1 진찰·발달·영양·예방",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "원을 보고 따라 그리는 나이는?",
+    "display_answer": "36개월 / 3세",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "원을 보고 따라 그리는 나이는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'B. Sibling trigger 30문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 36개월 / 3세입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_028",
@@ -4119,7 +6808,28 @@
     "subsection": "Ep00-1 진찰·발달·영양·예방",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "사각형을 그리는 나이는?",
+    "display_answer": "4세",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "사각형을 그리는 나이는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'B. Sibling trigger 30문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 4세입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_029",
@@ -4133,7 +6843,28 @@
     "subsection": "Ep00-1 진찰·발달·영양·예방",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "삼각형을 그리는 나이는?",
+    "display_answer": "5세",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "삼각형을 그리는 나이는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'B. Sibling trigger 30문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 5세입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_030",
@@ -4147,7 +6878,28 @@
     "subsection": "Ep00-1 진찰·발달·영양·예방",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "IVIG 치료 3개월 후 수두백신 예정. 처치는?",
+    "display_answer": "생백신 접종 연기",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "IVIG 치료 3개월 후 수두백신 예정. 처치는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "생백신인 수두/MMR은 최근 면역글로불린·혈액제제를 맞았으면 접종을 미룬다. 반대로 IVIG가 명시되지 않고 ITP가 회복되어 혈소판이 정상이라면 ITP 병력 자체만으로 수두백신 금기는 아니다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 생백신 접종 연기입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_031",
@@ -4161,7 +6913,28 @@
     "subsection": "Ep00-2 수분·유전·대사",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "중증 탈수, 혈압 낮고 처짐, Na 168. 첫 수액은?",
+    "display_answer": "0.9% NS bolus",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "중증 탈수, 혈압 낮고 처짐, Na 168. 첫 수액은?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "중증 탈수 또는 순환부전의 첫 처치는 0.9% 생리식염수 20 mL/kg bolus다. 10 kg이면 200 mL, 12 kg이면 240 mL로 계산한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 0.9% NS bolus입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_032",
@@ -4175,7 +6948,28 @@
     "subsection": "Ep00-2 수분·유전·대사",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "12kg 아이의 초기 NS bolus 양은?",
+    "display_answer": "240 mL",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "12kg 아이의 초기 NS bolus 양은?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'B. Sibling trigger 30문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 240 mL입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_033",
@@ -4189,7 +6983,28 @@
     "subsection": "Ep00-2 수분·유전·대사",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "탈수 치료 중 Na가 급격히 떨어지고 경련. 원인과 치료는?",
+    "display_answer": "저나트륨혈증, 3% saline",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "탈수 치료 중 Na가 급격히 떨어지고 경련. 원인과 치료는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "경련이 동반된 증상성 저나트륨혈증은 CT가 정상이어도 3% saline으로 뇌부종 위험을 먼저 끊는다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 저나트륨혈증, 3% saline입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_034",
@@ -4203,7 +7018,28 @@
     "subsection": "Ep00-2 수분·유전·대사",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "Down syndrome 남아의 핵형은?",
+    "display_answer": "47,XY,+21",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "Down syndrome 남아의 핵형은?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'B. Sibling trigger 30문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 47,XY,+21입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_035",
@@ -4217,7 +7053,28 @@
     "subsection": "Ep00-2 수분·유전·대사",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "Turner syndrome 핵형과 동반 심장기형은?",
+    "display_answer": "45,X / 대동맥축착 CoA",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "Turner syndrome 핵형과 동반 심장기형은?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "염색체 문제는 수적 이상인지, 전위인지, imprinting인지부터 가른다. Down 기본 핵형은 47,XY,+21이고 Robertsonian 21;21이면 재발 위험이 극단적으로 높다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 45,X / 대동맥축착 CoA입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_036",
@@ -4231,7 +7088,28 @@
     "subsection": "Ep00-2 수분·유전·대사",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "Robertsonian translocation 21;21 산모에서 Down 아이 확률은?",
+    "display_answer": "100%",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "Robertsonian translocation 21;21 산모에서 Down 아이 확률은?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'B. Sibling trigger 30문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 100%입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_037",
@@ -4245,7 +7123,28 @@
     "subsection": "Ep00-2 수분·유전·대사",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "효소보충요법 가능한 lysosomal storage disease 예시는?",
+    "display_answer": "Fabry, Pompe, Gaucher 등",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "효소보충요법 가능한 lysosomal storage disease 예시는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'B. Sibling trigger 30문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 Fabry, Pompe, Gaucher 등입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_038",
@@ -4259,7 +7158,28 @@
     "subsection": "Ep00-2 수분·유전·대사",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "MSUD 치료 방향은?",
+    "display_answer": "식이 제한/전구물질 제한",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "MSUD 치료 방향은?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'B. Sibling trigger 30문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 식이 제한/전구물질 제한입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_039",
@@ -4273,7 +7193,28 @@
     "subsection": "Ep00-2 수분·유전·대사",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "암모니아 500 초과, 초기 내과치료 반응 없음. 치료는?",
+    "display_answer": "혈액투석",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "암모니아 500 초과, 초기 내과치료 반응 없음. 치료는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "신생아 고암모니아혈증은 빠르게 산염기 상태를 확인하고, 암모니아가 매우 높거나 초기 내과치료에 반응하지 않으면 혈액투석으로 제거한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 혈액투석입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_040",
@@ -4287,7 +7228,28 @@
     "subsection": "Ep00-2 수분·유전·대사",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "당원병 유전 방식은?",
+    "display_answer": "상염색체 열성",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "당원병 유전 방식은?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'B. Sibling trigger 30문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 상염색체 열성입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_041",
@@ -4301,7 +7263,28 @@
     "subsection": "Ep00-3 신생아 소생술·고위험",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "신생아 HR<100 또는 무호흡이면?",
+    "display_answer": "PPV",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아 HR<100 또는 무호흡이면?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "신생아 소생술은 HR 100과 60 두 문으로 푼다. HR<100 또는 무호흡이면 PPV, PPV가 안 먹히면 MRSOPA, 그래도 HR<100이면 기관삽관, HR<60이면 가슴압박+환기다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 PPV입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_042",
@@ -4315,7 +7298,28 @@
     "subsection": "Ep00-3 신생아 소생술·고위험",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "PPV 후 가슴 움직임이 부족하면 확인/교정하는 단계는?",
+    "display_answer": "MRSOPA",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "PPV 후 가슴 움직임이 부족하면 확인/교정하는 단계는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'B. Sibling trigger 30문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 MRSOPA입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_043",
@@ -4329,7 +7333,28 @@
     "subsection": "Ep00-3 신생아 소생술·고위험",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "HR<60이면?",
+    "display_answer": "가슴압박 + 환기",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "HR<60이면?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'B. Sibling trigger 30문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 가슴압박 + 환기입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_044",
@@ -4343,7 +7368,28 @@
     "subsection": "Ep00-3 신생아 소생술·고위험",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "임신나이를 추정하기 위한 출생 후 신체/신경학적 검사는?",
+    "display_answer": "New Ballard score",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "임신나이를 추정하기 위한 출생 후 신체/신경학적 검사는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'B. Sibling trigger 30문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 New Ballard score입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_045",
@@ -4357,7 +7403,28 @@
     "subsection": "Ep00-3 신생아 소생술·고위험",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "정상 신생아 첫 소변은 대부분 언제까지 보는가?",
+    "display_answer": "24시간 이내",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "정상 신생아 첫 소변은 대부분 언제까지 보는가?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "정상 신생아는 대부분 출생 후 24시간 이내 첫 소변을 본다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 24시간 이내입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_046",
@@ -4371,7 +7438,28 @@
     "subsection": "Ep00-3 신생아 소생술·고위험",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "Apgar score 구성 5가지는?",
+    "display_answer": "심박수, 호흡, 근긴장도, 자극반응, 피부색",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "Apgar score 구성 5가지는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "Apgar는 심박수, 호흡, 근긴장도, 자극반응, 피부색 5항목을 각각 0~2점으로 더한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 심박수, 호흡, 근긴장도, 자극반응, 피부색입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_047",
@@ -4385,7 +7473,28 @@
     "subsection": "Ep00-4 신생아 황달·호흡·감염",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "미숙아, grunting/retraction, total white-out. 원인은?",
+    "display_answer": "폐표면활성제 부족 / RDS",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "미숙아, grunting/retraction, total white-out. 원인은?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "미숙아의 grunting, retraction, diffuse/white lung은 폐표면활성제 부족 RDS다. 삽관-계면활성제-조기발관-CPAP 흐름은 INSURE다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 폐표면활성제 부족 / RDS입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_048",
@@ -4399,7 +7508,28 @@
     "subsection": "Ep00-4 신생아 황달·호흡·감염",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "갑자기 호흡곤란, 한쪽 흉곽 공기음영 증가, mediastinal shift. 진단/치료는?",
+    "display_answer": "기흉, chest tube",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "갑자기 호흡곤란, 한쪽 흉곽 공기음영 증가, mediastinal shift. 진단/치료는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'B. Sibling trigger 30문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 기흉, chest tube입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_049",
@@ -4413,7 +7543,28 @@
     "subsection": "Ep00-4 신생아 황달·호흡·감염",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "미숙아, 수유 중 혈변/복부팽만/무호흡. 처치는?",
+    "display_answer": "NEC 의심, 금식 + 항생제",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "미숙아, 수유 중 혈변/복부팽만/무호흡. 처치는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "미숙아가 수유 중 혈변, 복부팽만, 무호흡을 보이면 NEC를 의심하고 금식, 위장관 감압, 항생제로 시작한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 NEC 의심, 금식 + 항생제입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   },
   {
     "id": "drill1_050",
@@ -4427,6 +7578,27 @@
     "subsection": "Ep00-4 신생아 황달·호흡·감염",
     "origin": "generated_drill",
     "priority_tier": "P2",
-    "type": "generated_trigger"
+    "type": "generated_trigger",
+    "display_question": "DiGeorge syndrome에서 주로 문제되는 면역체계와 검사는?",
+    "display_answer": "세포면역/T cell, T cell subset",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "DiGeorge syndrome에서 주로 문제되는 면역체계와 검사는?"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 'B. Sibling trigger 30문항'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 세포면역/T cell, T cell subset입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. actual 복기에서 뽑은 trigger를 변형한 drill입니다."
+      }
+    ],
+    "answer_confidence": "🧠 제작 drill"
   }
 ]
