@@ -169,7 +169,13 @@ def build_cards() -> list[dict]:
 
 def main() -> None:
     cards=build_cards()
-    builder=QuizBuilder(cards=cards, title=TITLE, storage_prefix=STORAGE_PREFIX, enable_self_answer=False)
+    builder=QuizBuilder(
+        cards=cards,
+        title=TITLE,
+        storage_prefix=STORAGE_PREFIX,
+        enable_self_answer=False,
+        randomize_review=True,
+    )
     builder.write(str(OUT))
     print(f"cards: {len(cards)}")
     print(f"data: {DATA_OUT}")

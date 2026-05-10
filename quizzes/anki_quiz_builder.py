@@ -80,12 +80,13 @@ def build_card_guide(card, page_images):
     return "\n".join(parts) if parts else "<p>해설 이미지 없음</p>"
 
 
-def build_html(cards, page_images, title="Anki 퀴즈", storage_prefix="quiz", enable_self_answer=True):
+def build_html(cards, page_images, title="Anki 퀴즈", storage_prefix="quiz", enable_self_answer=True, randomize_review=False):
     """최종 HTML 조립"""
 
     num_cards = len(cards)
     title_html = html_lib.escape(title)
     storage_prefix_js = json.dumps(f"{storage_prefix}_")
+    randomize_review_js = "true" if randomize_review else "false"
 
     # Build QUIZ_DATA JS object
     quiz_data_items = []
@@ -805,6 +806,7 @@ body.drawing-active * {{
 {all_ids_js}
 
 const STORAGE_PREFIX = {storage_prefix_js};
+const RANDOMIZE_REVIEW = {randomize_review_js};
 const SRS_KEY = STORAGE_PREFIX + 'srs_v1';
 const HIST_KEY = STORAGE_PREFIX + 'hist_v1';
 const EDITS_KEY = STORAGE_PREFIX + 'edits_v1';
@@ -1066,11 +1068,21 @@ function updateReviewBtn() {{
     document.getElementById('btnReview').textContent = '복습 시작 (' + due.length + '개)';
 }}
 
+function shuffledCopy(ids) {{
+    const arr = [...ids];
+    for (let i = arr.length - 1; i > 0; i--) {{
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }}
+    return arr;
+}}
+
 function startReview() {{
     const plan = getStudyPlan();
-    // Queue rule: due cards first, then unseen cards in original question order.
+    // Queue rule: due cards first, then unseen cards. Some focused memory decks opt into shuffle.
     // Future scheduled cards stay in pending and jump ahead only when their time arrives.
-    startQuizWith([...plan.dueIds, ...plan.freshIds], {{ pending: plan.futurePending }});
+    const reviewIds = [...plan.dueIds, ...plan.freshIds];
+    startQuizWith(RANDOMIZE_REVIEW ? shuffledCopy(reviewIds) : reviewIds, {{ pending: plan.futurePending }});
 }}
 
 let _resetTaps = 0, _resetTimer = null;
@@ -3383,7 +3395,7 @@ class QuizBuilder:
     """카드 목록을 받아 단일 HTML 파일로 출력하는 빌더."""
 
     def __init__(self, cards, title="Anki 퀴즈", storage_prefix="quiz",
-                 subtitle=None, page_images=None, enable_self_answer=True):
+                 subtitle=None, page_images=None, enable_self_answer=True, randomize_review=False):
         """
         Parameters
         ----------
@@ -3393,6 +3405,7 @@ class QuizBuilder:
         subtitle       : 부제목 (선택, 없으면 자동 생성)
         page_images    : {페이지번호: base64문자열} 딕셔너리 (선택)
         enable_self_answer : 퀴즈 모드에서 "내 답안 먼저 써보기" UI 표시 여부
+        randomize_review : 복습 시작 버튼에서 카드 순서를 셔플할지 여부
         """
         self.cards = cards
         self.title = title
@@ -3400,6 +3413,7 @@ class QuizBuilder:
         self.subtitle = subtitle or f"{title} — {len(cards)}문제"
         self.page_images = page_images or {}
         self.enable_self_answer = enable_self_answer
+        self.randomize_review = randomize_review
 
         # Populate 'g' field from page_images if not directly provided
         for c in self.cards:
@@ -3408,7 +3422,7 @@ class QuizBuilder:
 
     def build(self) -> str:
         """완성된 HTML 문자열 반환"""
-        return build_html(self.cards, self.page_images, self.title, self.storage_prefix, self.enable_self_answer)
+        return build_html(self.cards, self.page_images, self.title, self.storage_prefix, self.enable_self_answer, self.randomize_review)
 
     def write(self, path: str) -> None:
         """HTML을 파일로 저장"""

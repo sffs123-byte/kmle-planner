@@ -5427,6 +5427,7 @@ const QUIZ_DATA = {
 const ALL_IDS = ["vaccine_001_live_mnemonic", "vaccine_002_live_list", "vaccine_003_live_sail", "vaccine_004_live_hongsu", "vaccine_005_live_robi", "vaccine_006_same_day_principle", "vaccine_007_live_live_interval", "vaccine_008_live_live_same_day", "vaccine_009_live_inactivated_interval", "vaccine_010_inactivated_inactivated_interval", "vaccine_011_minimum_interval", "vaccine_012_longer_interval", "vaccine_013_permanent_contra_anaphylaxis", "vaccine_014_permanent_contra_pertussis", "vaccine_015_temporary_contra_pregnancy", "vaccine_016_temporary_contra_immuno", "vaccine_017_steroid_live", "vaccine_018_recent_ig_blood", "vaccine_019_caution_acute_fever", "vaccine_020_caution_chronic_disease", "vaccine_021_risk_benefit", "vaccine_022_case_mmr_varicella", "vaccine_023_case_mmr_dtap", "vaccine_024_case_dtap_ipv", "vaccine_025_case_anaphylaxis", "vaccine_026_case_encephalopathy", "vaccine_027_case_pregnant_mmr", "vaccine_028_case_ivig_mmr", "vaccine_029_case_delayed_schedule", "vaccine_030_one_line_lock", "vaccine_031_schedule_all_core", "vaccine_032_schedule_bcg", "vaccine_033_schedule_hav", "vaccine_034_schedule_hbv", "vaccine_035_schedule_rota", "vaccine_036_schedule_hib_pcv", "vaccine_037_schedule_tdap", "vaccine_038_schedule_ipv", "vaccine_039_schedule_var", "vaccine_040_schedule_mmr", "vaccine_041_schedule_influenza", "vaccine_042_month_0", "vaccine_043_month_1", "vaccine_044_month_2", "vaccine_045_month_4", "vaccine_046_month_6", "vaccine_047_month_12", "vaccine_048_month_18", "vaccine_049_month_24", "vaccine_050_year_6", "vaccine_051_year_12", "vaccine_052_schedule_246_set", "vaccine_053_schedule_12_pair_live", "vaccine_054_schedule_12_boosters", "vaccine_055_schedule_hepatitis_compare", "vaccine_056_schedule_live_12_6", "vaccine_057_schedule_one_line"];
 
 const STORAGE_PREFIX = "peds_vaccine_memory_20260511_";
+const RANDOMIZE_REVIEW = true;
 const SRS_KEY = STORAGE_PREFIX + 'srs_v1';
 const HIST_KEY = STORAGE_PREFIX + 'hist_v1';
 const EDITS_KEY = STORAGE_PREFIX + 'edits_v1';
@@ -5690,11 +5691,21 @@ function updateReviewBtn() {
     document.getElementById('btnReview').textContent = '복습 시작 (' + due.length + '개)';
 }
 
+function shuffledCopy(ids) {
+    const arr = [...ids];
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+
 function startReview() {
     const plan = getStudyPlan();
-    // Queue rule: due cards first, then unseen cards in original question order.
+    // Queue rule: due cards first, then unseen cards. Some focused memory decks opt into shuffle.
     // Future scheduled cards stay in pending and jump ahead only when their time arrives.
-    startQuizWith([...plan.dueIds, ...plan.freshIds], { pending: plan.futurePending });
+    const reviewIds = [...plan.dueIds, ...plan.freshIds];
+    startQuizWith(RANDOMIZE_REVIEW ? shuffledCopy(reviewIds) : reviewIds, { pending: plan.futurePending });
 }
 
 let _resetTaps = 0, _resetTimer = null;
