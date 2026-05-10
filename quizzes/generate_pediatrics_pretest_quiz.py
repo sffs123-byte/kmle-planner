@@ -703,7 +703,8 @@ body.peds-pretest-bg-body::before {{
     box-shadow: 0 0 8px rgba(248, 113, 113, .34);
 }}
 body.peds-pretest-bg-body .sidebar {{ position: fixed; }}
-body.peds-pretest-bg-body .main, body.peds-pretest-bg-body .quiz-overlay, body.peds-pretest-bg-body .quiz-header {{ position: relative; z-index: 1; }}
+body.peds-pretest-bg-body .main, body.peds-pretest-bg-body .quiz-header {{ position: relative; z-index: 1; }}
+body.peds-pretest-bg-body .quiz-overlay {{ position: fixed; z-index: 200; }}
 body.peds-pretest-bg-body .card, body.peds-pretest-bg-body .quiz-card {{ position: relative; overflow: hidden; box-shadow: 0 18px 44px rgba(2, 6, 23, .24); }}
 body.peds-pretest-bg-body .card::before, body.peds-pretest-bg-body .quiz-card::before {{
     content: '{mantra}'; position: absolute; left: 0; right: 0; top: 0; padding: 5px 12px;
