@@ -66,10 +66,13 @@ anki_quiz_builder.py — 재사용 가능한 Anki SRS 퀴즈 HTML 빌더
 import html as html_lib
 import json
 import os
+import re
 
 
 def build_card_guide(card, page_images):
-    """카드의 Study Guide HTML 생성 — 해당 페이지 이미지를 포함"""
+    """카드의 Study Guide HTML 생성 — 직접 g가 있으면 우선 사용, 없으면 페이지 이미지 포함"""
+    if card.get("g"):
+        return card["g"]
     parts = []
     for p in card.get("pages", []):
         if p in page_images:
@@ -130,9 +133,20 @@ def build_html(cards, page_images, title="Anki 퀴즈", storage_prefix="quiz"):
     cards_html = "\n".join(card_html_parts)
 
     # Sidebar items
+    # `q` may contain inline badge HTML. Never truncate raw HTML here: cutting a tag
+    # mid-way breaks the DOM and can swallow the entire card grid into the sidebar.
+    def sidebar_preview(value, limit=32):
+        text = re.sub(r"<[^>]*>", "", str(value))
+        text = html_lib.unescape(text)
+        text = re.sub(r"\s+", " ", text).strip()
+        if len(text) > limit:
+            text = text[:limit].rstrip() + "…"
+        return html_lib.escape(text)
+
     sidebar_items = []
     for c in cards:
-        sidebar_items.append(f'<div class="sb-item" onclick="scrollToCard(\'{c["id"]}\')">{c["num"]}. {c["q"][:20]}…</div>')
+        preview = sidebar_preview(c["q"])
+        sidebar_items.append(f'<div class="sb-item" onclick="scrollToCard(\'{c["id"]}\')">{c["num"]}. {preview}</div>')
     sidebar_html = "\n".join(sidebar_items)
 
     html = f"""<!DOCTYPE html>
