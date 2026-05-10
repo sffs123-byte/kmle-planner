@@ -200,116 +200,96 @@ def build_cards() -> list[dict]:
     return built
 
 
+
+def mantra_wall_html(class_name: str) -> str:
+    pieces = [
+        "홍수로비 디폴히피로히피디디폴 사맘, Tdap HPV",
+        "홍수로비", "디폴히피로히피디디폴", "사맘", "Tdap HPV",
+        "디폴히피로", "히피디디폴", "SAMAM", "12개월 히피+SAM", "4~6세 디폴+MMR", "11세 Tdap HPV",
+    ]
+    layouts = [
+        (8,10,-14,1.05,.42,28),(30,8,7,.86,.32,18),(62,9,-5,.90,.30,22),(86,8,13,.86,.34,20),
+        (12,24,8,.82,.30,18),(44,23,-11,1.08,.42,26),(75,24,16,.84,.34,18),(93,24,-20,.78,.28,16),
+        (18,40,-25,.88,.30,19),(38,39,11,.82,.30,17),(64,42,-8,1.12,.42,25),(88,40,22,.86,.32,18),
+        (7,58,18,.74,.26,16),(28,60,-9,1.04,.36,23),(52,58,5,.78,.26,17),(77,61,-18,1.10,.42,24),
+        (14,76,-6,1.18,.44,25),(43,78,17,.84,.32,18),(67,76,-13,.90,.34,19),(91,80,9,.80,.30,17),
+        (24,92,12,.82,.28,17),(54,91,-4,1.08,.40,24),(82,93,-16,.86,.32,18),
+    ]
+    spans = []
+    for i, (x, y, r, sc, op, fs) in enumerate(layouts):
+        label = pieces[i % len(pieces)]
+        spans.append(f'<span style="--x:{x}%;--y:{y}%;--r:{r}deg;--s:{sc};--o:{op};--fs:{fs}px">{e(label)}</span>')
+    strings = []
+    for x, y, r, w in [(18,31,-18,42),(55,33,11,35),(35,67,19,48),(72,69,-14,38),(50,50,-35,70)]:
+        strings.append(f'<i style="--x:{x}%;--y:{y}%;--r:{r}deg;--w:{w}vw"></i>')
+    return f'<div class="{class_name}" aria-hidden="true">' + ''.join(spans + strings) + '</div>'
+
+
 def apply_spell_background() -> None:
-    """Make the vaccine mantra unavoidable without turning it into another question."""
+    """Make the vaccine mantra unavoidable without using image wallpaper."""
     text = OUT.read_text(encoding="utf-8")
     css = f"""
 
-/* Vaccine spell layer: 강렬 고정 암기 주문 */
+/* Vaccine spell layer: text-only evidence-board / ransom-note wall */
 body.vaccine-spell-body {{
     background:
-        linear-gradient(120deg, rgba(15, 23, 42, .91), rgba(30, 41, 59, .84)),
-        url('./assets/peds_vaccine_memory/source_vaccine_schedule_20260511.jpg') center top / cover fixed no-repeat !important;
+        radial-gradient(circle at 12% 8%, rgba(37, 99, 235, .22), transparent 32%),
+        radial-gradient(circle at 86% 14%, rgba(220, 38, 38, .20), transparent 30%),
+        linear-gradient(135deg, #111827 0%, #1f2937 48%, #0f172a 100%) !important;
 }}
 body.vaccine-spell-body::before {{
     content: '';
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
+    position: fixed; inset: 0; pointer-events: none; z-index: 0;
     background-image:
-        repeating-linear-gradient(135deg,
-            rgba(59, 130, 246, .16) 0 2px,
-            transparent 2px 62px),
-        url('./assets/peds_vaccine_memory/source_vaccine_schedule_20260511.jpg');
-    background-size: auto, min(92vw, 920px) auto;
-    background-repeat: repeat, no-repeat;
-    background-position: center, center 54%;
-    opacity: .20;
-    filter: saturate(1.08) contrast(1.04);
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+    background-size: 44px 44px, 44px 44px;
+    opacity: .55;
 }}
-body.vaccine-spell-body .sidebar,
-body.vaccine-spell-body .main,
-body.vaccine-spell-body .quiz-overlay,
-body.vaccine-spell-body .quiz-header {{
-    position: relative;
-    z-index: 1;
+.vaccine-mantra-wall {{ position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }}
+.vaccine-mantra-wall span {{
+    position: absolute; left: var(--x); top: var(--y);
+    transform: translate(-50%, -50%) rotate(var(--r)) scale(var(--s));
+    opacity: var(--o); color: #dbeafe; background: rgba(15, 23, 42, .56);
+    border: 1px solid rgba(191, 219, 254, .30); border-radius: 6px; padding: 4px 10px;
+    font-size: var(--fs); font-weight: 1000; letter-spacing: .06em; white-space: nowrap;
+    text-transform: uppercase; font-family: Impact, Haettenschweiler, 'Arial Black', system-ui, sans-serif;
+    text-shadow: 0 2px 10px rgba(0,0,0,.58); box-shadow: 0 8px 22px rgba(0,0,0,.20);
 }}
-body.vaccine-spell-body .card,
-body.vaccine-spell-body .quiz-card {{
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 18px 44px rgba(2, 6, 23, .24);
+.vaccine-mantra-wall span:nth-child(3n) {{ color: #fecaca; border-color: rgba(248, 113, 113, .34); background: rgba(127, 29, 29, .20); }}
+.vaccine-mantra-wall span:nth-child(4n) {{ color: #bbf7d0; border-color: rgba(74, 222, 128, .32); background: rgba(20, 83, 45, .20); }}
+.vaccine-mantra-wall i {{
+    position: absolute; left: var(--x); top: var(--y); width: var(--w); height: 2px;
+    transform: translate(-50%, -50%) rotate(var(--r)); background: rgba(239, 68, 68, .42);
+    box-shadow: 0 0 8px rgba(248, 113, 113, .34);
 }}
-body.vaccine-spell-body .card::before,
-body.vaccine-spell-body .quiz-card::before {{
-    content: '{e(MANTRA)}';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    padding: 5px 12px;
+body.vaccine-spell-body .sidebar, body.vaccine-spell-body .main, body.vaccine-spell-body .quiz-overlay, body.vaccine-spell-body .quiz-header {{ position: relative; z-index: 1; }}
+body.vaccine-spell-body .card, body.vaccine-spell-body .quiz-card {{ position: relative; overflow: hidden; box-shadow: 0 18px 44px rgba(2, 6, 23, .24); }}
+body.vaccine-spell-body .card::before, body.vaccine-spell-body .quiz-card::before {{
+    content: '{e(MANTRA)}'; position: absolute; left: 0; right: 0; top: 0; padding: 5px 12px;
     background: linear-gradient(90deg, rgba(30, 64, 175, .92), rgba(16, 185, 129, .82));
-    color: #eff6ff;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: .04em;
-    text-align: center;
-    z-index: 2;
+    color: #eff6ff; font-size: 11px; font-weight: 900; letter-spacing: .04em; text-align: center; z-index: 2;
 }}
-body.vaccine-spell-body .card .card-header,
-body.vaccine-spell-body .quiz-card {{
-    padding-top: 34px !important;
-}}
+body.vaccine-spell-body .card .card-header, body.vaccine-spell-body .quiz-card {{ padding-top: 34px !important; }}
 .vaccine-mantra-inline {{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    max-width: 100%;
-    padding: 6px 10px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, #eff6ff, #ecfdf5);
-    color: #1e3a8a;
-    border: 1px solid rgba(37, 99, 235, .24);
-    font-size: 12px;
-    font-weight: 950;
-    letter-spacing: .03em;
+    display: inline-flex; align-items: center; justify-content: center; width: fit-content; max-width: 100%;
+    padding: 6px 10px; border-radius: 999px; background: linear-gradient(90deg, #eff6ff, #ecfdf5);
+    color: #1e3a8a; border: 1px solid rgba(37, 99, 235, .24); font-size: 12px; font-weight: 950; letter-spacing: .03em;
 }}
 .vaccine-mantra-ribbon {{
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    padding: 7px 10px;
-    background: rgba(15, 23, 42, .86);
-    color: #bfdbfe;
-    border-top: 1px solid rgba(147, 197, 253, .35);
-    font-size: 12px;
-    font-weight: 950;
-    letter-spacing: .08em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-align: center;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 9999; padding: 7px 10px;
+    background: rgba(15, 23, 42, .86); color: #bfdbfe; border-top: 1px solid rgba(147, 197, 253, .35);
+    font-size: 12px; font-weight: 950; letter-spacing: .08em; white-space: nowrap; overflow: hidden; text-align: center;
 }}
 body.vaccine-spell-body .quiz-answer::after {{
-    content: '{e(MANTRA)}';
-    display: block;
-    margin-top: 14px;
-    padding: 8px 10px;
-    border-radius: 10px;
-    background: #dbeafe;
-    color: #1e3a8a;
-    font-weight: 950;
-    text-align: center;
+    content: '{e(MANTRA)}'; display: block; margin-top: 14px; padding: 8px 10px; border-radius: 10px;
+    background: #dbeafe; color: #1e3a8a; font-weight: 950; text-align: center;
 }}
 """
-    ribbon = f"""
-<div class="vaccine-mantra-ribbon">{e(MANTRA)} · {e(MANTRA)} · {e(MANTRA)} · {e(MANTRA)}</div>
-""".strip()
+    ribbon = f'<div class="vaccine-mantra-ribbon">{e(MANTRA)} · {e(MANTRA)} · {e(MANTRA)} · {e(MANTRA)}</div>'
+    wall = mantra_wall_html("vaccine-mantra-wall")
     text = text.replace("</style>", css + "\n</style>", 1)
-    text = text.replace("<body>", '<body class="vaccine-spell-body">\n' + ribbon, 1)
+    text = text.replace("<body>", '<body class="vaccine-spell-body">\n' + wall + "\n" + ribbon, 1)
     OUT.write_text(text, encoding="utf-8")
 
 

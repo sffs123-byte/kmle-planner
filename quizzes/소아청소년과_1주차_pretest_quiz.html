@@ -588,90 +588,59 @@ body.drawing-active * {
 }
 
 
-/* Pediatric pretest background cue */
+/* Pediatric pretest text-only evidence-board cue */
 body.peds-pretest-bg-body {
     background:
-        linear-gradient(120deg, rgba(15, 23, 42, .93), rgba(30, 41, 59, .86)),
-        url('./assets/peds_vaccine_memory/source_vaccine_schedule_20260511.jpg') center top / cover fixed no-repeat !important;
+        radial-gradient(circle at 12% 8%, rgba(37, 99, 235, .22), transparent 32%),
+        radial-gradient(circle at 86% 14%, rgba(220, 38, 38, .18), transparent 30%),
+        linear-gradient(135deg, #111827 0%, #1f2937 48%, #0f172a 100%) !important;
 }
 body.peds-pretest-bg-body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    background-image: url('./assets/peds_vaccine_memory/source_vaccine_schedule_20260511.jpg');
-    background-size: min(92vw, 940px) auto;
-    background-repeat: no-repeat;
-    background-position: center 52%;
-    opacity: .18;
-    filter: saturate(1.06) contrast(1.04);
+    content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+    background-size: 44px 44px, 44px 44px; opacity: .55;
 }
-body.peds-pretest-bg-body .sidebar,
-body.peds-pretest-bg-body .main,
-body.peds-pretest-bg-body .quiz-overlay,
-body.peds-pretest-bg-body .quiz-header {
-    position: relative;
-    z-index: 1;
+.peds-pretest-mantra-wall { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.peds-pretest-mantra-wall span {
+    position: absolute; left: var(--x); top: var(--y);
+    transform: translate(-50%, -50%) rotate(var(--r)) scale(var(--s));
+    opacity: var(--o); color: #dbeafe; background: rgba(15, 23, 42, .56);
+    border: 1px solid rgba(191, 219, 254, .30); border-radius: 6px; padding: 4px 10px;
+    font-size: var(--fs); font-weight: 1000; letter-spacing: .06em; white-space: nowrap;
+    text-transform: uppercase; font-family: Impact, Haettenschweiler, 'Arial Black', system-ui, sans-serif;
+    text-shadow: 0 2px 10px rgba(0,0,0,.58); box-shadow: 0 8px 22px rgba(0,0,0,.20);
 }
-body.peds-pretest-bg-body .card,
-body.peds-pretest-bg-body .quiz-card {
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 18px 44px rgba(2, 6, 23, .24);
+.peds-pretest-mantra-wall span:nth-child(3n) { color: #fecaca; border-color: rgba(248, 113, 113, .34); background: rgba(127, 29, 29, .20); }
+.peds-pretest-mantra-wall span:nth-child(4n) { color: #bbf7d0; border-color: rgba(74, 222, 128, .32); background: rgba(20, 83, 45, .20); }
+.peds-pretest-mantra-wall i {
+    position: absolute; left: var(--x); top: var(--y); width: var(--w); height: 2px;
+    transform: translate(-50%, -50%) rotate(var(--r)); background: rgba(239, 68, 68, .42);
+    box-shadow: 0 0 8px rgba(248, 113, 113, .34);
 }
-body.peds-pretest-bg-body .card::before,
-body.peds-pretest-bg-body .quiz-card::before {
-    content: '홍수로비 디폴히피로히피디디폴 사맘, Tdap HPV';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    padding: 5px 12px;
+body.peds-pretest-bg-body .sidebar, body.peds-pretest-bg-body .main, body.peds-pretest-bg-body .quiz-overlay, body.peds-pretest-bg-body .quiz-header { position: relative; z-index: 1; }
+body.peds-pretest-bg-body .card, body.peds-pretest-bg-body .quiz-card { position: relative; overflow: hidden; box-shadow: 0 18px 44px rgba(2, 6, 23, .24); }
+body.peds-pretest-bg-body .card::before, body.peds-pretest-bg-body .quiz-card::before {
+    content: '홍수로비 디폴히피로히피디디폴 사맘, Tdap HPV'; position: absolute; left: 0; right: 0; top: 0; padding: 5px 12px;
     background: linear-gradient(90deg, rgba(30, 64, 175, .92), rgba(16, 185, 129, .82));
-    color: #eff6ff;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: .04em;
-    text-align: center;
-    z-index: 2;
+    color: #eff6ff; font-size: 11px; font-weight: 900; letter-spacing: .04em; text-align: center; z-index: 2;
 }
-body.peds-pretest-bg-body .card .card-header,
-body.peds-pretest-bg-body .quiz-card {
-    padding-top: 34px !important;
-}
+body.peds-pretest-bg-body .card .card-header, body.peds-pretest-bg-body .quiz-card { padding-top: 34px !important; }
 .peds-pretest-mantra-ribbon {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    padding: 7px 10px;
-    background: rgba(15, 23, 42, .86);
-    color: #bfdbfe;
-    border-top: 1px solid rgba(147, 197, 253, .35);
-    font-size: 12px;
-    font-weight: 950;
-    letter-spacing: .08em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-align: center;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 9999; padding: 7px 10px;
+    background: rgba(15, 23, 42, .86); color: #bfdbfe; border-top: 1px solid rgba(147, 197, 253, .35);
+    font-size: 12px; font-weight: 950; letter-spacing: .08em; white-space: nowrap; overflow: hidden; text-align: center;
 }
 body.peds-pretest-bg-body .quiz-answer::after {
-    content: '홍수로비 디폴히피로히피디디폴 사맘, Tdap HPV';
-    display: block;
-    margin-top: 14px;
-    padding: 8px 10px;
-    border-radius: 10px;
-    background: #dbeafe;
-    color: #1e3a8a;
-    font-weight: 950;
-    text-align: center;
+    content: '홍수로비 디폴히피로히피디디폴 사맘, Tdap HPV'; display: block; margin-top: 14px; padding: 8px 10px; border-radius: 10px;
+    background: #dbeafe; color: #1e3a8a; font-weight: 950; text-align: center;
 }
 
 </style>
 </head>
 <body class="peds-pretest-bg-body">
+<div class="peds-pretest-mantra-wall" aria-hidden="true"><span style="--x:10%;--y:12%;--r:-16deg;--s:1.05;--o:0.38;--fs:27px">홍수로비 디폴히피로히피디디폴 사맘, Tdap HPV</span><span style="--x:36%;--y:9%;--r:9deg;--s:0.8;--o:0.28;--fs:18px">홍수로비</span><span style="--x:64%;--y:12%;--r:-7deg;--s:0.92;--o:0.3;--fs:22px">디폴히피로히피디디폴</span><span style="--x:88%;--y:10%;--r:15deg;--s:0.78;--o:0.28;--fs:18px">사맘</span><span style="--x:12%;--y:28%;--r:11deg;--s:0.82;--o:0.28;--fs:18px">Tdap HPV</span><span style="--x:46%;--y:26%;--r:-12deg;--s:1.08;--o:0.38;--fs:25px">디폴히피로</span><span style="--x:78%;--y:28%;--r:18deg;--s:0.84;--o:0.3;--fs:18px">히피디디폴</span><span style="--x:20%;--y:45%;--r:-25deg;--s:0.9;--o:0.3;--fs:19px">SAMAM</span><span style="--x:42%;--y:44%;--r:12deg;--s:0.78;--o:0.28;--fs:17px">12개월 히피+SAM</span><span style="--x:67%;--y:46%;--r:-9deg;--s:1.06;--o:0.38;--fs:24px">4~6세 디폴+MMR</span><span style="--x:90%;--y:45%;--r:23deg;--s:0.78;--o:0.28;--fs:17px">11세 Tdap HPV</span><span style="--x:9%;--y:64%;--r:18deg;--s:0.74;--o:0.24;--fs:16px">홍수로비 디폴히피로히피디디폴 사맘, Tdap HPV</span><span style="--x:32%;--y:66%;--r:-8deg;--s:1.04;--o:0.34;--fs:23px">홍수로비</span><span style="--x:58%;--y:64%;--r:6deg;--s:0.78;--o:0.26;--fs:17px">디폴히피로히피디디폴</span><span style="--x:82%;--y:67%;--r:-18deg;--s:1.08;--o:0.38;--fs:24px">사맘</span><span style="--x:15%;--y:84%;--r:-6deg;--s:1.14;--o:0.4;--fs:24px">Tdap HPV</span><span style="--x:45%;--y:84%;--r:16deg;--s:0.82;--o:0.3;--fs:18px">디폴히피로</span><span style="--x:72%;--y:86%;--r:-14deg;--s:0.88;--o:0.3;--fs:18px">히피디디폴</span><i style="--x:20%;--y:35%;--r:-18deg;--w:42vw"></i><i style="--x:56%;--y:37%;--r:13deg;--w:35vw"></i><i style="--x:38%;--y:69%;--r:19deg;--w:48vw"></i><i style="--x:74%;--y:72%;--r:-14deg;--w:38vw"></i><i style="--x:51%;--y:52%;--r:-35deg;--w:72vw"></i></div>
 <div class="peds-pretest-mantra-ribbon">홍수로비 디폴히피로히피디디폴 사맘, Tdap HPV · 홍수로비 디폴히피로히피디디폴 사맘, Tdap HPV · 홍수로비 디폴히피로히피디디폴 사맘, Tdap HPV</div>
 
 <!-- Mobile sidebar toggle -->
