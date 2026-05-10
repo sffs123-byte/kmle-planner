@@ -263,7 +263,8 @@ body.vaccine-spell-body::before {{
     transform: translate(-50%, -50%) rotate(var(--r)); background: rgba(239, 68, 68, .42);
     box-shadow: 0 0 8px rgba(248, 113, 113, .34);
 }}
-body.vaccine-spell-body .sidebar, body.vaccine-spell-body .main, body.vaccine-spell-body .quiz-overlay, body.vaccine-spell-body .quiz-header {{ position: relative; z-index: 1; }}
+body.vaccine-spell-body .sidebar {{ position: fixed; }}
+body.vaccine-spell-body .main, body.vaccine-spell-body .quiz-overlay, body.vaccine-spell-body .quiz-header {{ position: relative; z-index: 1; }}
 body.vaccine-spell-body .card, body.vaccine-spell-body .quiz-card {{ position: relative; overflow: hidden; box-shadow: 0 18px 44px rgba(2, 6, 23, .24); }}
 body.vaccine-spell-body .card::before, body.vaccine-spell-body .quiz-card::before {{
     content: '{e(MANTRA)}'; position: absolute; left: 0; right: 0; top: 0; padding: 5px 12px;

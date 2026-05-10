@@ -564,13 +564,33 @@ body.drawing-active * {
 }
 .mobile-review-start {
     display: none;
-    position: fixed; left: 56px; top: 10px; z-index: 200;
+    position: fixed; left: 56px; top: 10px; z-index: 10050;
     min-height: 36px; padding: 0 14px;
     background: var(--green); border: none; color: #fff;
     border-radius: 999px; cursor: pointer;
     font-size: 13px; font-weight: 800;
     box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
+.review-hero {
+    margin: 0 0 20px;
+    padding: 18px 18px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(137,180,250,.20), rgba(166,227,161,.14));
+    border: 1px solid rgba(137,180,250,.30);
+    box-shadow: 0 12px 32px rgba(0,0,0,.18);
+    display: flex; align-items: center; justify-content: space-between; gap: 14px;
+}
+.review-hero-title { font-size: 18px; font-weight: 900; color: var(--text); margin-bottom: 4px; }
+.review-hero-sub { font-size: 13px; color: var(--text-dim); line-height: 1.55; }
+.review-hero-btn {
+    border: none; border-radius: 999px;
+    padding: 13px 20px;
+    background: var(--green); color: #fff;
+    font-size: 15px; font-weight: 900;
+    cursor: pointer; white-space: nowrap;
+    box-shadow: 0 8px 22px rgba(64,160,43,.24);
+}
+.review-hero-btn:active, .mobile-review-start:active, .btn-review:active { transform: translateY(1px); }
 .sb-overlay {
     display: none;
     position: fixed; inset: 0;
@@ -588,13 +608,16 @@ body.drawing-active * {
         z-index: 150;
     }
     .sidebar.mobile-open {
-        transform: translateX(0);
+        transform: translateX(0) !important;
     }
+    .sidebar.mobile-open.collapsed { transform: translateX(0) !important; }
     .sidebar .sb-toggle { display: none; }
     .main { margin-left: 0 !important; padding: 12px; padding-top: 56px; }
 }
 @media (max-width: 768px) {
     .card-grid { grid-template-columns: 1fr; }
+    .review-hero { flex-direction: column; align-items: stretch; margin-top: 2px; }
+    .review-hero-btn { width: 100%; min-height: 48px; }
 }
 
 
@@ -629,7 +652,8 @@ body.peds-pretest-bg-body::before {
     transform: translate(-50%, -50%) rotate(var(--r)); background: rgba(239, 68, 68, .42);
     box-shadow: 0 0 8px rgba(248, 113, 113, .34);
 }
-body.peds-pretest-bg-body .sidebar, body.peds-pretest-bg-body .main, body.peds-pretest-bg-body .quiz-overlay, body.peds-pretest-bg-body .quiz-header { position: relative; z-index: 1; }
+body.peds-pretest-bg-body .sidebar { position: fixed; }
+body.peds-pretest-bg-body .main, body.peds-pretest-bg-body .quiz-overlay, body.peds-pretest-bg-body .quiz-header { position: relative; z-index: 1; }
 body.peds-pretest-bg-body .card, body.peds-pretest-bg-body .quiz-card { position: relative; overflow: hidden; box-shadow: 0 18px 44px rgba(2, 6, 23, .24); }
 body.peds-pretest-bg-body .card::before, body.peds-pretest-bg-body .quiz-card::before {
     content: '홍수로비 디폴히피로히피디디폴 사맘, Tdap HPV'; position: absolute; left: 0; right: 0; top: 0; padding: 5px 12px;
@@ -655,7 +679,7 @@ body.peds-pretest-bg-body .quiz-answer::after {
 
 <!-- Mobile sidebar toggle -->
 <button class="sb-mobile-toggle" id="sbMobileToggle" onclick="toggleMobileSidebar()">☰</button>
-<button class="mobile-review-start" id="btnReviewMobile" onclick="startReview()">복습 시작</button>
+<button class="mobile-review-start" id="btnReviewMobile" data-start-review="1" onclick="startReview()">복습 시작</button>
 <div class="sb-overlay" id="sbOverlay" onclick="toggleMobileSidebar()"></div>
 
 <!-- Sidebar -->
@@ -668,7 +692,7 @@ body.peds-pretest-bg-body .quiz-answer::after {
             <div class="progress-label" id="progressLabel">0 / 193 완료</div>
         </div>
         <div class="sb-quiz-btns">
-            <button class="btn-review" id="btnReview" onclick="startReview()">복습 시작 (0개)</button>
+            <button class="btn-review" id="btnReview" data-start-review="1" onclick="startReview()">복습 시작 (0개)</button>
             <button class="btn-reset" id="btnReset" onclick="handleResetTap()">전체 다시 풀기<br><small>[3연타 시 초기화]</small></button>
         </div>
         <div style="margin-top:12px;">
@@ -871,6 +895,13 @@ body.peds-pretest-bg-body .quiz-answer::after {
 
 <!-- Main card view -->
 <div class="main" id="mainContent">
+    <div class="review-hero" id="reviewHero">
+        <div>
+            <div class="review-hero-title">랜덤 복습 시작</div>
+            <div class="review-hero-sub">사이드바가 접혀도 여기서 바로 시작됩니다. 순서 힌트 없이 랜덤으로 나옵니다.</div>
+        </div>
+        <button class="review-hero-btn" id="btnReviewHero" data-start-review="1" onclick="startReview()">복습 시작</button>
+    </div>
     <div class="card-grid">
         
         <div class="card" id="card-actual1_001">
@@ -28569,6 +28600,8 @@ function updateReviewBtn() {
     if (btn) btn.textContent = label;
     const mobileBtn = document.getElementById('btnReviewMobile');
     if (mobileBtn) mobileBtn.textContent = label;
+    const heroBtn = document.getElementById('btnReviewHero');
+    if (heroBtn) heroBtn.textContent = label;
 }
 
 function shuffledCopy(ids) {
@@ -28586,6 +28619,18 @@ function startReview() {
     // Future scheduled cards stay in pending and jump ahead only when their time arrives.
     const reviewIds = [...plan.dueIds, ...plan.freshIds];
     startQuizWith(RANDOMIZE_REVIEW ? shuffledCopy(reviewIds) : reviewIds, { pending: plan.futurePending });
+}
+
+let _lastStartTouch = 0;
+function startReviewFromEvent(ev) {
+    const target = ev.target && ev.target.closest ? ev.target.closest('[data-start-review]') : null;
+    if (!target) return;
+    ev.preventDefault();
+    ev.stopPropagation();
+    if (ev.stopImmediatePropagation) ev.stopImmediatePropagation();
+    if (ev.type === 'click' && Date.now() - _lastStartTouch < 450) return;
+    if (ev.type === 'touchend') _lastStartTouch = Date.now();
+    startReview();
 }
 
 let _resetTaps = 0, _resetTimer = null;
@@ -30869,6 +30914,8 @@ const guideObserver = new MutationObserver(function(mutations) {
 
 // ── Init ──
 window.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('click', startReviewFromEvent, true);
+    document.addEventListener('touchend', startReviewFromEvent, true);
     applyEdits();
     updateReviewBtn();
     showDrawIndicators();
