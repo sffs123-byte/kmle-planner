@@ -6128,20 +6128,20 @@
     "origin": "actual_recall",
     "priority_tier": "P1",
     "type": "actual_pretest",
-    "answer_confidence": "✅ 2023/HI source 추가",
-    "qc_flag": "added_from_2023_HI_full_audit",
+    "answer_confidence": "✅ actual 기준",
+    "qc_flag": "added_from_2023_HI_full_audit; exact_phrase_verified_20260511",
     "id": "actual2023_004",
-    "source": "2023년 소아청소년과 13-16조 pretest 1차 복기 lines 309-312",
+    "source": "2023년 소아청소년과 13-16조 pretest 1차 복기 lines 309-312 / 사용자 이미지 7번 확인",
     "mode": "주관식",
     "num_in_source": "주3",
     "question": "신생아 소생술이 필요하지 않은지 판단하기 위한 3가지 질문을 쓰시오.",
-    "answer": "만삭아인가? 근긴장도는 좋은가? 울거나 숨을 잘 쉬는가?",
+    "answer": "만삭아인가? 근육긴장도는 좋은가? 울거나 숨은 잘 쉬는가?",
     "episode": "Ep00-3",
     "content_axis": "신생아소생술-초기평가 3질문",
     "answer_key_normalized": "만삭/근긴장도/호흡·울음",
     "group_id": "G-NRP-INITIAL-QUESTIONS",
     "dedup_decision": "source_added:2023_exact",
-    "dedup_why": "2023 exact stem 누락",
+    "dedup_why": "2023 exact stem. 2026-05-11 사용자 이미지 기준으로 답 표현을 근육긴장도/울거나 숨으로 보정",
     "dedup_badges": [
       "2023-source",
       "source-added"
@@ -6149,7 +6149,8 @@
     "tags": [
       "2023",
       "source-added",
-      "NRP_INITIAL_QUESTIONS"
+      "NRP_INITIAL_QUESTIONS",
+      "exact_phrase_verified_20260511"
     ],
     "strict_dedup_v2": {
       "episode": "Ep00-3",
@@ -6157,17 +6158,17 @@
       "answer_key_normalized": "만삭/근긴장도/호흡·울음",
       "group_id": "G-NRP-INITIAL-QUESTIONS",
       "dedup_decision": "source_added:2023_exact",
-      "why": "2023 exact stem 누락",
+      "why": "2023 exact stem. 2026-05-11 사용자 이미지 기준으로 답 표현을 근육긴장도/울거나 숨으로 보정",
       "badges": [
         "2023-source",
         "source-added"
       ]
     },
     "section": "실제 1차 Pretest 누적 복기",
-    "subsection": "2023년 소아청소년과 13-16조 pretest 1차 복기 lines 309-312",
+    "subsection": "2023년 소아청소년과 13-16조 pretest 1차 복기 lines 309-312 / 사용자 이미지 7번 확인",
     "exact_expression": "",
     "display_question": "신생아 소생술이 필요하지 않은지 판단하기 위한 3가지 질문을 쓰시오.",
-    "display_answer": "만삭아인가? 근긴장도는 좋은가? 울거나 숨을 잘 쉬는가?",
+    "display_answer": "만삭아인가? 근육긴장도는 좋은가? 울거나 숨은 잘 쉬는가?",
     "explanation_lines": [
       {
         "label": "핵심 단서",
@@ -6179,11 +6180,11 @@
       },
       {
         "label": "판단",
-        "text": "따라서 이 카드의 답은 만삭아인가? 근긴장도는 좋은가? 울거나 숨을 잘 쉬는가?입니다."
+        "text": "따라서 이 카드의 답은 만삭아인가? 근육긴장도는 좋은가? 울거나 숨은 잘 쉬는가?입니다."
       },
       {
         "label": "주의",
-        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 2023 기출/HI raw 전수대조에서 빠진 exact stem을 추가했습니다."
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
       }
     ]
   },
@@ -12203,6 +12204,276 @@
       {
         "label": "주의",
         "text": "HI 원문 Q marker를 실제 퀴즈 카드 형태로 재구성했습니다."
+      }
+    ]
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "✅ actual 기준",
+    "qc_flag": "added_from_2023_1w_full_resweep_20260511",
+    "id": "actual2023_015",
+    "source": "2023년 소아청소년과 9-12조 pretest 1차 복기 lines 163-171",
+    "mode": "주관식",
+    "num_in_source": "주3",
+    "question": "성장곡선 그림에서 각각의 type 이름이 가려져 있다. 각 type에 해당하는 장기를 1개 이상 쓰시오. (lymphoid type / neural type / general type / genital type)",
+    "answer": "lymphoid type: 림프절 / neural type: 뇌 / general type: 심장 / genital type: 생식기",
+    "episode": "Ep00-1",
+    "content_axis": "성장발달-Scammon 성장곡선/type별 장기",
+    "answer_key_normalized": "lymphoid=림프절; neural=뇌; general=심장; genital=생식기",
+    "group_id": "G-GROWTH-CURVE-TYPES",
+    "dedup_decision": "source_added:2023_exact_resweep",
+    "dedup_why": "2023 1주차 PDF full resweep에서 exact stem 누락 확인 후 추가",
+    "dedup_badges": [
+      "2023-source",
+      "source-added",
+      "resweep-20260511"
+    ],
+    "tags": [
+      "2023",
+      "source-added",
+      "resweep-20260511",
+      "GROWTH_CURVE",
+      "SCAMMON"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "성장발달-Scammon 성장곡선/type별 장기",
+      "answer_key_normalized": "lymphoid=림프절; neural=뇌; general=심장; genital=생식기",
+      "group_id": "G-GROWTH-CURVE-TYPES",
+      "dedup_decision": "source_added:2023_exact_resweep",
+      "why": "2023 1주차 PDF full resweep에서 exact stem 누락 확인 후 추가",
+      "badges": [
+        "2023-source",
+        "source-added",
+        "resweep-20260511"
+      ]
+    },
+    "section": "실제 1차 Pretest 누적 복기",
+    "subsection": "2023년 소아청소년과 9-12조 pretest 1차 복기 lines 163-171",
+    "exact_expression": "",
+    "display_question": "성장곡선 그림에서 각각의 type 이름이 가려져 있다. 각 type에 해당하는 장기를 1개 이상 쓰시오. (lymphoid type / neural type / general type / genital type)",
+    "display_answer": "lymphoid type: 림프절 / neural type: 뇌 / general type: 심장 / genital type: 생식기",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "성장발달-Scammon 성장곡선/type별 장기"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "발달 문제는 대근육, 소근육, 언어, 사회성 중 어느 축이 연령 기대치보다 가장 뒤처졌는지 고르는 방식으로 푼다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 lymphoid type: 림프절 / neural type: 뇌 / general type: 심장 / genital type: 생식기입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "✅ actual 기준",
+    "qc_flag": "added_from_2023_1w_full_resweep_20260511",
+    "id": "actual2023_016",
+    "source": "2023년 소아청소년과 13-16조 pretest 1차 복기 lines 231-244",
+    "mode": "객관식",
+    "num_in_source": "객3",
+    "question": "임신 41주 남아가 제왕절개로 출생했다. 산모는 임신성 고혈압이 있었고, 1분 Apgar 9점, 5분 Apgar 10점, 신장 42 cm, 두위 32 cm이며 잘 울고 활발하다. 추후 발생할 수 있는 문제는? 1) 폐성숙 지연 2) 빈혈 3) 발열 4) 적혈구증가증",
+    "answer": "적혈구증가증",
+    "episode": "Ep00-3",
+    "content_axis": "신생아-과숙아/임신성고혈압 산모/적혈구증가증",
+    "answer_key_normalized": "적혈구증가증",
+    "group_id": "G-POSTTERM-IUGR-POLYCYTHEMIA",
+    "dedup_decision": "source_added:2023_exact_resweep",
+    "dedup_why": "2023 1주차 PDF full resweep에서 exact stem 누락 확인 후 추가",
+    "dedup_badges": [
+      "2023-source",
+      "source-added",
+      "resweep-20260511"
+    ],
+    "tags": [
+      "2023",
+      "source-added",
+      "resweep-20260511",
+      "POLYCYTHEMIA",
+      "POSTTERM",
+      "PIH"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-3",
+      "content_axis": "신생아-과숙아/임신성고혈압 산모/적혈구증가증",
+      "answer_key_normalized": "적혈구증가증",
+      "group_id": "G-POSTTERM-IUGR-POLYCYTHEMIA",
+      "dedup_decision": "source_added:2023_exact_resweep",
+      "why": "2023 1주차 PDF full resweep에서 exact stem 누락 확인 후 추가",
+      "badges": [
+        "2023-source",
+        "source-added",
+        "resweep-20260511"
+      ]
+    },
+    "section": "실제 1차 Pretest 누적 복기",
+    "subsection": "2023년 소아청소년과 13-16조 pretest 1차 복기 lines 231-244",
+    "exact_expression": "",
+    "display_question": "임신 41주 남아가 제왕절개로 출생했다. 산모는 임신성 고혈압이 있었고, 1분 Apgar 9점, 5분 Apgar 10점, 신장 42 cm, 두위 32 cm이며 잘 울고 활발하다. 추후 발생할 수 있는 문제는? 1) 폐성숙 지연 2) 빈혈 3) 발열 4) 적혈구증가증",
+    "display_answer": "적혈구증가증",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아-과숙아/임신성고혈압 산모/적혈구증가증"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "Apgar는 심박수, 호흡, 근긴장도, 자극반응, 피부색 5항목을 각각 0~2점으로 더한다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 적혈구증가증입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "✅ actual 기준",
+    "qc_flag": "added_from_2023_1w_full_resweep_20260511",
+    "id": "actual2023_017",
+    "source": "2023년 소아청소년과 17-20조 pretest 1차 복기 객2 이미지/여신 1차 신생아 피부소견 보조 확인",
+    "mode": "객관식",
+    "num_in_source": "객2",
+    "question": "신생아 피부 소견 문제. 생후 2~3일 이내 홍반 위에 작은 구진 또는 농포가 보이고, 자연적으로 사라지는 양성 피부 병변의 진단은?",
+    "answer": "독성 홍반 / erythema toxicum neonatorum",
+    "episode": "Ep00-1",
+    "content_axis": "신생아진찰-독성홍반/양성피부병변",
+    "answer_key_normalized": "독성홍반",
+    "group_id": "G-NEONATAL-ERYTHEMA-TOXICUM",
+    "dedup_decision": "source_added:2023_exact_resweep",
+    "dedup_why": "2023 1주차 PDF full resweep에서 exact stem 누락 확인 후 추가",
+    "dedup_badges": [
+      "2023-source",
+      "source-added",
+      "resweep-20260511"
+    ],
+    "tags": [
+      "2023",
+      "source-added",
+      "resweep-20260511",
+      "TOXIC_ERYTHEMA",
+      "NEONATAL_SKIN"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "신생아진찰-독성홍반/양성피부병변",
+      "answer_key_normalized": "독성홍반",
+      "group_id": "G-NEONATAL-ERYTHEMA-TOXICUM",
+      "dedup_decision": "source_added:2023_exact_resweep",
+      "why": "2023 1주차 PDF full resweep에서 exact stem 누락 확인 후 추가",
+      "badges": [
+        "2023-source",
+        "source-added",
+        "resweep-20260511"
+      ]
+    },
+    "section": "실제 1차 Pretest 누적 복기",
+    "subsection": "2023년 소아청소년과 17-20조 pretest 1차 복기 객2 이미지/여신 1차 신생아 피부소견 보조 확인",
+    "exact_expression": "",
+    "display_question": "신생아 피부 소견 문제. 생후 2~3일 이내 홍반 위에 작은 구진 또는 농포가 보이고, 자연적으로 사라지는 양성 피부 병변의 진단은?",
+    "display_answer": "독성 홍반 / erythema toxicum neonatorum",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "신생아진찰-독성홍반/양성피부병변"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "알렌 기준으로는 '신생아진찰-독성홍반/양성피부병변'의 trigger를 먼저 잡고, 선지보다 병태생리/나이/검사 패턴으로 답을 고른다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 독성 홍반 / erythema toxicum neonatorum입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
+      }
+    ]
+  },
+  {
+    "origin": "actual_recall",
+    "priority_tier": "P1",
+    "type": "actual_pretest",
+    "answer_confidence": "✅ actual 기준",
+    "qc_flag": "added_from_2023_1w_full_resweep_20260511",
+    "id": "actual2023_018",
+    "source": "2023년 소아청소년과 1-4조 pretest 1차 복기 lines 463-466",
+    "mode": "객관식",
+    "num_in_source": "객1",
+    "question": "12개월, 3300 g 출생 아이. 키 72 cm, 체중 7.5 kg, 치아 없음, 머리둘레 45 cm이다. 성장발달지연인 것은? 1) 키 2) 머리크기 3) 체중 4) 치아 5) 해당없음",
+    "answer": "체중",
+    "episode": "Ep00-1",
+    "content_axis": "성장발달-12개월 성장지표/체중 성장지연",
+    "answer_key_normalized": "체중 성장지연",
+    "group_id": "G-12MO-WEIGHT-GROWTH-DELAY",
+    "dedup_decision": "source_added:2023_exact_resweep",
+    "dedup_why": "2023 1주차 PDF full resweep에서 exact stem 누락 확인 후 추가",
+    "dedup_badges": [
+      "2023-source",
+      "source-added",
+      "resweep-20260511"
+    ],
+    "tags": [
+      "2023",
+      "source-added",
+      "resweep-20260511",
+      "GROWTH_DELAY",
+      "WEIGHT",
+      "12_MONTHS"
+    ],
+    "strict_dedup_v2": {
+      "episode": "Ep00-1",
+      "content_axis": "성장발달-12개월 성장지표/체중 성장지연",
+      "answer_key_normalized": "체중 성장지연",
+      "group_id": "G-12MO-WEIGHT-GROWTH-DELAY",
+      "dedup_decision": "source_added:2023_exact_resweep",
+      "why": "2023 1주차 PDF full resweep에서 exact stem 누락 확인 후 추가",
+      "badges": [
+        "2023-source",
+        "source-added",
+        "resweep-20260511"
+      ]
+    },
+    "section": "실제 1차 Pretest 누적 복기",
+    "subsection": "2023년 소아청소년과 1-4조 pretest 1차 복기 lines 463-466",
+    "exact_expression": "",
+    "display_question": "12개월, 3300 g 출생 아이. 키 72 cm, 체중 7.5 kg, 치아 없음, 머리둘레 45 cm이다. 성장발달지연인 것은? 1) 키 2) 머리크기 3) 체중 4) 치아 5) 해당없음",
+    "display_answer": "체중",
+    "explanation_lines": [
+      {
+        "label": "핵심 단서",
+        "text": "성장발달-12개월 성장지표/체중 성장지연"
+      },
+      {
+        "label": "알렌 기준",
+        "text": "발달 문제는 대근육, 소근육, 언어, 사회성 중 어느 축이 연령 기대치보다 가장 뒤처졌는지 고르는 방식으로 푼다."
+      },
+      {
+        "label": "판단",
+        "text": "따라서 이 카드의 답은 체중입니다."
+      },
+      {
+        "label": "주의",
+        "text": "선지 하나를 외우기보다, 문제에서 답을 여는 단서를 먼저 찾는다. 복기 답을 알렌 개념틀로 재정렬했습니다."
       }
     ]
   }
