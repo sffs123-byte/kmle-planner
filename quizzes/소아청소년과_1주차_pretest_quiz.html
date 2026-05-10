@@ -21697,18 +21697,7 @@ function renderQuizCard(id) {
                 <button class="edit-btn" onclick="toggleQuizEdit('${id}')" title="편집">✏️</button>
                 <button class="copy-btn" onclick="copyQA('${id}')" title="문제+답 복사">📋</button>
             </div>
-            <div class="self-grade-box">
-                <div class="self-grade-label">
-                    <span>✍️ 내 답안 먼저 써보기</span>
-                    <small>자동저장 · 수정된 정답 기준 채점</small>
-                </div>
-                <textarea class="self-answer-input" id="quizUserAnswer" placeholder="정답 보기 전에 기억나는 대로 적어봐. 예: 핵심 진단 기준, 수치, 치료 순서..."></textarea>
-                <div class="self-grade-actions">
-                    <button class="grade-btn" onclick="gradeUserAnswer('${id}')">내 답 채점</button>
-                    <button class="grade-clear-btn" onclick="clearUserAnswer('${id}')">답안 지우기</button>
-                </div>
-                <div class="grade-result" id="gradeResult"></div>
-            </div>
+
             <button class="show-answer-btn" id="showAnsBtn" onclick="showQuizAnswer('${id}')">정답 보기 ▼</button>
             <div class="quiz-answer" id="quizAnswer">
                 <div class="draw-toolbar" id="draw-toolbar-quiz"></div>

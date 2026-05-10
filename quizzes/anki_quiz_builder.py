@@ -80,7 +80,7 @@ def build_card_guide(card, page_images):
     return "\n".join(parts) if parts else "<p>해설 이미지 없음</p>"
 
 
-def build_html(cards, page_images, title="Anki 퀴즈", storage_prefix="quiz"):
+def build_html(cards, page_images, title="Anki 퀴즈", storage_prefix="quiz", enable_self_answer=True):
     """최종 HTML 조립"""
 
     num_cards = len(cards)
@@ -148,6 +148,20 @@ def build_html(cards, page_images, title="Anki 퀴즈", storage_prefix="quiz"):
         preview = sidebar_preview(c["q"])
         sidebar_items.append(f'<div class="sb-item" onclick="scrollToCard(\'{c["id"]}\')">{c["num"]}. {preview}</div>')
     sidebar_html = "\n".join(sidebar_items)
+
+    self_answer_html = """
+            <div class="self-grade-box">
+                <div class="self-grade-label">
+                    <span>✍️ 내 답안 먼저 써보기</span>
+                    <small>자동저장 · 수정된 정답 기준 채점</small>
+                </div>
+                <textarea class="self-answer-input" id="quizUserAnswer" placeholder="정답 보기 전에 기억나는 대로 적어봐. 예: 핵심 진단 기준, 수치, 치료 순서..."></textarea>
+                <div class="self-grade-actions">
+                    <button class="grade-btn" onclick="gradeUserAnswer('${id}')">내 답 채점</button>
+                    <button class="grade-clear-btn" onclick="clearUserAnswer('${id}')">답안 지우기</button>
+                </div>
+                <div class="grade-result" id="gradeResult"></div>
+            </div>""" if enable_self_answer else ""
 
     html = f"""<!DOCTYPE html>
 <html lang="ko">
@@ -1175,18 +1189,7 @@ function renderQuizCard(id) {{
                 <button class="edit-btn" onclick="toggleQuizEdit('${{id}}')" title="편집">✏️</button>
                 <button class="copy-btn" onclick="copyQA('${{id}}')" title="문제+답 복사">📋</button>
             </div>
-            <div class="self-grade-box">
-                <div class="self-grade-label">
-                    <span>✍️ 내 답안 먼저 써보기</span>
-                    <small>자동저장 · 수정된 정답 기준 채점</small>
-                </div>
-                <textarea class="self-answer-input" id="quizUserAnswer" placeholder="정답 보기 전에 기억나는 대로 적어봐. 예: 핵심 진단 기준, 수치, 치료 순서..."></textarea>
-                <div class="self-grade-actions">
-                    <button class="grade-btn" onclick="gradeUserAnswer('${{id}}')">내 답 채점</button>
-                    <button class="grade-clear-btn" onclick="clearUserAnswer('${{id}}')">답안 지우기</button>
-                </div>
-                <div class="grade-result" id="gradeResult"></div>
-            </div>
+{self_answer_html}
             <button class="show-answer-btn" id="showAnsBtn" onclick="showQuizAnswer('${{id}}')">정답 보기 ▼</button>
             <div class="quiz-answer" id="quizAnswer">
                 <div class="draw-toolbar" id="draw-toolbar-quiz"></div>
@@ -3380,7 +3383,7 @@ class QuizBuilder:
     """카드 목록을 받아 단일 HTML 파일로 출력하는 빌더."""
 
     def __init__(self, cards, title="Anki 퀴즈", storage_prefix="quiz",
-                 subtitle=None, page_images=None):
+                 subtitle=None, page_images=None, enable_self_answer=True):
         """
         Parameters
         ----------
@@ -3389,12 +3392,14 @@ class QuizBuilder:
         storage_prefix : localStorage 키 접두사 (기본 "quiz")
         subtitle       : 부제목 (선택, 없으면 자동 생성)
         page_images    : {페이지번호: base64문자열} 딕셔너리 (선택)
+        enable_self_answer : 퀴즈 모드에서 "내 답안 먼저 써보기" UI 표시 여부
         """
         self.cards = cards
         self.title = title
         self.storage_prefix = storage_prefix
         self.subtitle = subtitle or f"{title} — {len(cards)}문제"
         self.page_images = page_images or {}
+        self.enable_self_answer = enable_self_answer
 
         # Populate 'g' field from page_images if not directly provided
         for c in self.cards:
@@ -3403,7 +3408,7 @@ class QuizBuilder:
 
     def build(self) -> str:
         """완성된 HTML 문자열 반환"""
-        return build_html(self.cards, self.page_images, self.title, self.storage_prefix)
+        return build_html(self.cards, self.page_images, self.title, self.storage_prefix, self.enable_self_answer)
 
     def write(self, path: str) -> None:
         """HTML을 파일로 저장"""

@@ -550,7 +550,7 @@ def main() -> None:
     combined = [enrich_card_record(c) for c in actual + generated]
     COMBINED_DATA.write_text(json.dumps(combined, ensure_ascii=False, indent=2), encoding="utf-8")
     cards = build_cards(combined)
-    builder = QuizBuilder(cards=cards, title=TITLE, storage_prefix=STORAGE_PREFIX)
+    builder = QuizBuilder(cards=cards, title=TITLE, storage_prefix=STORAGE_PREFIX, enable_self_answer=False)
     builder.write(str(OUT))
     print(f"actual_cards: {len(actual)}")
     print(f"generated_drill_cards: {len(generated)}")
