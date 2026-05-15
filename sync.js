@@ -494,6 +494,10 @@ async function requestLocalApi(path, payload = {}) {
 
 async function detectLocalApi() {
   if (isStandaloneMode) return false;
+  const host = location.hostname || '';
+  const hasLocalToken = Boolean(localStorage.getItem(LOCAL_TOKEN_KEY));
+  const isLoopback = host === 'localhost' || host === '127.0.0.1' || host === '::1';
+  if (!hasLocalToken && !isLoopback) return false;
   try {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 1200);
