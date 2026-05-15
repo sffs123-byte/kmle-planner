@@ -1,0 +1,355 @@
+{
+  "meta": {
+    "bundle_id": "pediatrics-2026-05-track-bca",
+    "generated_at": "2026-05-10T12:58:00+09:00"
+  },
+  "reminders": [
+    {
+      "date": "2026-05-11",
+      "session_id": "peds-w1-mon-pretest-ot",
+      "level": "critical",
+      "message": "08:20~09:00 프리테스트 #1 + 1주차 OT — 08:20 프리테스트 20분, 08:40~09:00 OT. 끝나면 B분과 혈종 병원학교 진행 여부 확인.",
+      "checklist": [
+        "전날 밤 프리테스트 복기 1차 answer-bank 암기",
+        "신분/필기구/청진기/마스크 준비"
+      ]
+    },
+    {
+      "date": "2026-05-11",
+      "session_id": "peds-w1-mon-hemonc-am",
+      "level": "high",
+      "message": "09:00~13:00(프테/OT 직후 변동) 혈액종양 병동: 병원학교 다학제회의/EMR 설명/회진/케이스 배정 — 프테/OT 종료 후 병원학교 회의 진행 여부 확인. 환자 설명은 월 오후 보고와 목 POMR로 이어진다.",
+      "checklist": [
+        "마스크",
+        "녹음 준비",
+        "혈종 프테/ALL·AML 기본 용어"
+      ]
+    },
+    {
+      "date": "2026-05-11",
+      "session_id": "peds-w1-mon-hemonc-briefing",
+      "level": "high",
+      "message": "14:00~18:00(보고 시간 당일확인) 혈액종양 환자상태보고/질문/피드백 — 배정 환자를 전공의 노티처럼 짧게 보고. 월 점심부터 바로 준비해야 한다.",
+      "checklist": [
+        "월 점심에 담당 환자 한 줄 요약",
+        "질문 1개",
+        "치료 단계/검사 수치 확인"
+      ]
+    },
+    {
+      "date": "2026-05-12",
+      "session_id": "peds-w1-tue-nicu-ot",
+      "level": "high",
+      "message": "08:45~13:00(OT 09:00~09:30 변동) NICU 입장/신생아 OT/과제 배정/환자 설명 — B분과 과제가 한 번에 생성되는 날. 자기소개서, NBS, 자습레포트, 신생아 POMR 확인.",
+      "checklist": [
+        "개인 크록스",
+        "노트북/충전기",
+        "NBS 양식",
+        "자기소개서 작성 시작"
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "session_id": "peds-w1-thu-hemonc-pomr",
+      "level": "critical",
+      "message": "14:00~18:30(외래 종료 후 피드백, 늦어질 수 있음) 임연정 교수님 외래 + 혈종 POMR/노티 피드백 — 1주차 B분과 최고강도. POMR/노티는 수요일 밤까지 초안 완료가 안전하다.",
+      "checklist": [
+        "수요일 밤 POMR 초안",
+        "목 점심 노티 리허설",
+        "검사 수치/치료단계 확인"
+      ]
+    },
+    {
+      "date": "2026-05-15",
+      "session_id": "peds-w1-fri-common-portfolio",
+      "level": "high",
+      "message": "09:00~18:00(공통강의/보충/대기 변동) + 17:00 제출 금요일 floating common + B분과 유폴리오/주간포트폴리오 마감 — 일정은 변동 가능. 제출 누락 방지가 핵심. 주간포트폴리오 17:00 마감.",
+      "checklist": [
+        "오전 제출 목록 점검",
+        "미완 과제 마무리",
+        "포트폴리오 5줄 소감"
+      ]
+    },
+    {
+      "date": "2026-05-18",
+      "session_id": "peds-w2-mon-pretest",
+      "level": "critical",
+      "message": "08:20~08:40 프리테스트 #2 — 2주차 범위: 감염, 소화기, 호흡기, 심혈관 + 전주 집담회 가능.",
+      "checklist": [
+        "프테 #2",
+        "주관식 5 + 객관식 5",
+        "전주 집담회 1문제 가능"
+      ]
+    },
+    {
+      "date": "2026-05-19",
+      "session_id": "peds-w2-tue-infection-ward-am",
+      "level": "critical",
+      "message": "09:30~13:00(전날 확인) C분과 감염 병동: 김경민 교수님 회진/입원환자 배정 — 병동실습 입원환자 1건 확보 D-day. 최신 앞조 자료상 UTI/APN/발열 환자가 가장 흔함.",
+      "checklist": [
+        "월요일 점심/오후 교수님께 시간장소 확인",
+        "UTI/APN/무병소 발열 quick review",
+        "SOAP/POMR 양식 준비"
+      ]
+    },
+    {
+      "date": "2026-05-19",
+      "session_id": "peds-w2-tue-infection-ward-pm",
+      "level": "high",
+      "message": "14:00~18:00 감염 병동 POMR/예진기록지 작성 — 배정 환자 문진·신체진찰 후 POMR 또는 예진기록지 작성 시작. 금요일까지 제출.",
+      "checklist": [
+        "문진/신체진찰",
+        "Problem list",
+        "금요일 제출 초안"
+      ]
+    },
+    {
+      "date": "2026-05-20",
+      "session_id": "peds-w2-wed-gi-am",
+      "level": "high",
+      "message": "09:00~13:00 소화기영양: 김현진 교수님 외래 — 외래 예진 후보. 복통/변비/IBD/간염 질문 가능.",
+      "checklist": [
+        "초진/신환 예진 후보",
+        "SOAP 양식",
+        "복통 red flag"
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "session_id": "peds-w3-mon-pretest",
+      "level": "critical",
+      "message": "08:20~08:40 프리테스트 #3 — 3주차 범위: 혈액종양, 신요로, 내분비, 신경, 골격, 알레르기, 결체조직 등 + 전주 집담회 가능.",
+      "checklist": [
+        "프테 #3",
+        "마지막 정규 프테",
+        "재시 회피 목표"
+      ]
+    },
+    {
+      "date": "2026-05-29",
+      "session_id": "peds-w3-fri-common-buffer",
+      "level": "high",
+      "message": "09:00~18:00 + 17:00 제출 3주차 금요일: 보충/대면진료/CPX 준비 buffer + 주간포트폴리오 — 4주차 전 마지막 buffer. 부족한 예진·POMR·대면진료증례보고서 초안·CPX 스크립트를 여기서 정리.",
+      "checklist": [
+        "부족 예진 0 만들기",
+        "CPX 5개 주제 1회독",
+        "주간포트폴리오 17:00"
+      ]
+    },
+    {
+      "date": "2026-06-01",
+      "session_id": "peds-w4-mon-cpx-1",
+      "level": "critical",
+      "message": "09:00~13:00 CPX #1 — 4주차 CPX 시작. 3주차 전까지 스크립트 1회독이 끝나야 한다.",
+      "checklist": [
+        "CPX #1",
+        "전날 밤 새벽 금지",
+        "체크리스트 기반"
+      ]
+    },
+    {
+      "date": "2026-06-01",
+      "session_id": "peds-w4-mon-cpx-2",
+      "level": "critical",
+      "message": "14:00~18:00 CPX #2 — 오전 피드백을 오후에 바로 반영. 포트폴리오/증례보고서 미루면 안 됨.",
+      "checklist": [
+        "CPX #2",
+        "오전 실수 회수",
+        "저녁 증례보고서 점검"
+      ]
+    },
+    {
+      "date": "2026-06-03",
+      "session_id": "peds-w4-wed-cardio-cpx3",
+      "level": "critical",
+      "message": "09:00~18:00 세종 소아심장 mini-lecture + CPX #3 — 세종 일정과 CPX가 겹치는 고강도 날.",
+      "checklist": [
+        "소아심장",
+        "CPX #3",
+        "이동 피로 관리"
+      ]
+    },
+    {
+      "date": "2026-06-04",
+      "session_id": "peds-w4-thu-case-cpx4",
+      "level": "critical",
+      "message": "09:00~18:00 세종 병동 증례토의 + CPX #4 — 증례토의와 CPX가 같이 있는 날. 대면진료증례보고서가 미완이면 밤이 무너진다.",
+      "checklist": [
+        "증례토의",
+        "CPX #4",
+        "보고서 최종화"
+      ]
+    },
+    {
+      "date": "2026-06-05",
+      "session_id": "peds-w4-fri-cpx5-deadlines",
+      "level": "critical",
+      "message": "09:00~17:00 CPX #5 + 대면진료증례보고서/최종 포트폴리오 마감 — 금요일 오전 CPX 전까지 보고서는 사실상 끝나 있어야 한다. 최종 포트폴리오 17:00.",
+      "checklist": [
+        "CPX #5",
+        "대면진료증례보고서 12:00",
+        "최종 포트폴리오 17:00"
+      ]
+    },
+    {
+      "date": "2026-05-11",
+      "assignment_id": "peds-pretest-1-prep",
+      "level": "critical",
+      "message": "프리테스트 #1 준비 마감 — 2026-05-11T08:20:00",
+      "checklist": [
+        "복기/홍창의 1~11장 answer-bank",
+        "1주차 최고 우선순위. 프테 #1은 실습시험 30% 축 중 첫 회차."
+      ]
+    },
+    {
+      "date": "2026-05-18",
+      "assignment_id": "peds-pretest-2-prep",
+      "level": "critical",
+      "message": "프리테스트 #2 준비 마감 — 2026-05-18T08:20:00",
+      "checklist": [
+        "감염/소화기/호흡기/심혈관 + 집담회",
+        "2주차 프테. 전주 집담회 1문제 가능성을 반영."
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "assignment_id": "peds-pretest-3-prep",
+      "level": "critical",
+      "message": "프리테스트 #3 준비 마감 — 2026-05-25T08:20:00",
+      "checklist": [
+        "혈액종양/신요로/내분비/신경/골격/알레르기/결체조직",
+        "마지막 정규 프테. 재시 회피 목표."
+      ]
+    },
+    {
+      "date": "2026-05-15",
+      "assignment_id": "peds-week1-portfolio",
+      "level": "high",
+      "message": "1주차 주간 포트폴리오 마감 — 2026-05-15T17:00:00",
+      "checklist": [
+        "U-Folio 주간 포트폴리오",
+        "B분과 혈종/신생아/감염 외래 소감과 과제 업로드 상태 확인."
+      ]
+    },
+    {
+      "date": "2026-05-22",
+      "assignment_id": "peds-week2-portfolio",
+      "level": "high",
+      "message": "2주차 주간 포트폴리오 마감 — 2026-05-22T17:00:00",
+      "checklist": [
+        "U-Folio 주간 포트폴리오",
+        "C분과 감염 병동 POMR, 내분비/소화기/신경 개인평가 정리."
+      ]
+    },
+    {
+      "date": "2026-05-29",
+      "assignment_id": "peds-week3-portfolio",
+      "level": "high",
+      "message": "3주차 주간 포트폴리오 마감 — 2026-05-29T17:00:00",
+      "checklist": [
+        "U-Folio 주간 포트폴리오",
+        "A분과 과제와 부족 예진 마감, 4주차 CPX 준비 전 마지막 정리."
+      ]
+    },
+    {
+      "date": "2026-06-05",
+      "assignment_id": "peds-final-portfolio",
+      "level": "critical",
+      "message": "최종 포트폴리오 제출 마감 — 2026-06-05T17:00:00",
+      "checklist": [
+        "최종 U-Folio 포트폴리오",
+        "금요일 17:00 hard deadline. CPX #5와 겹치므로 목요일 밤까지 완성."
+      ]
+    },
+    {
+      "date": "2026-05-29",
+      "assignment_id": "peds-outpatient-3-cases",
+      "level": "critical",
+      "message": "외래환자 예진 3건 마감 — 2026-05-29T17:00:00",
+      "checklist": [
+        "외래 예진기록지/피드백 3건",
+        "공식 예진환자 보고서: 외래 매주 1명씩 총 3건. 기회 생기면 바로 확보."
+      ]
+    },
+    {
+      "date": "2026-05-22",
+      "assignment_id": "peds-inpatient-ward-case",
+      "level": "critical",
+      "message": "병동실습 입원환자 1건 마감 — 2026-05-22T17:00:00",
+      "checklist": [
+        "최신 앞조 병동 POMR은 UTI/APN/발열 환자가 다수.",
+        "B분과 혈종/신생아 POMR은 대체 인정 가능성 확인만 하고 여기에 의존하지 않음."
+      ]
+    },
+    {
+      "date": "2026-05-11",
+      "assignment_id": "peds-b-hemonc-patient-briefing",
+      "level": "high",
+      "message": "B분과 혈액종양 환자상태보고 마감 — 2026-05-11T16:00:00",
+      "checklist": [
+        "짧은 노티/질문 1개",
+        "월요일 오후 임연정 교수님께 배정 환자를 짧게 보고. OSCE 환자상태보고와 연결."
+      ]
+    },
+    {
+      "date": "2026-05-15",
+      "assignment_id": "peds-b-hemonc-pomr",
+      "level": "high",
+      "message": "B분과 혈종 POMR/개인평가 마감 — 2026-05-15T17:00:00",
+      "checklist": [
+        "피드백 받은 POMR + 개인평가(혈액종양)",
+        "목요일 피드백 전 수요일 밤까지 초안. 피드백 반영 후 U-Folio 제출."
+      ]
+    },
+    {
+      "date": "2026-05-15",
+      "assignment_id": "peds-b-neonate-bundle",
+      "level": "high",
+      "message": "B분과 신생아 과제 묶음 마감 — 2026-05-15T17:00:00",
+      "checklist": [
+        "자기소개서/NBS/자습레포트/신생아 POMR",
+        "NICU에서 생성되는 신생아 과제. NBS와 POMR은 포트폴리오/예진기록지 메뉴와 연결."
+      ]
+    },
+    {
+      "date": "2026-05-22",
+      "assignment_id": "peds-c-infection-pomr",
+      "level": "critical",
+      "message": "C분과 감염 병동 POMR 마감 — 2026-05-22T17:00:00",
+      "checklist": [
+        "병동 POMR/예진기록지",
+        "공식 병동 입원환자 1건의 핵심 제출물."
+      ]
+    },
+    {
+      "date": "2026-05-29",
+      "assignment_id": "peds-a-division-tasks",
+      "level": "high",
+      "message": "A분과 개인평가/호흡기·심장·PICU 과제 마감 — 2026-05-29T17:00:00",
+      "checklist": [
+        "개인평가 + POMR/외래/아나필락시스 내용",
+        "A분과 인계 추가 확인 전까지 skeleton. 3주차 금요일 전 부족 예진/과제 마감."
+      ]
+    },
+    {
+      "date": "2026-05-31",
+      "assignment_id": "peds-cpx-prep",
+      "level": "critical",
+      "message": "CPX/OSCE 5주제 1회독 마감 — 2026-05-31T22:00:00",
+      "checklist": [
+        "CPX 5개 스크립트 + OSCE 체크리스트",
+        "4주차는 짬이 거의 없으므로 3주차 주말 전 1회독 완료."
+      ]
+    },
+    {
+      "date": "2026-06-05",
+      "assignment_id": "peds-face-case-report",
+      "level": "critical",
+      "message": "대면진료증례보고서 마감 — 2026-06-05T12:00:00",
+      "checklist": [
+        "대면진료증례보고서",
+        "금요일 12:00 제출. 목요일 밤까지 사실상 완료해야 CPX #5를 망치지 않음."
+      ]
+    }
+  ]
+}

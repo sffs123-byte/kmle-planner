@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "bundle_id": "pediatrics-2026-05-track-bca",
+    "generated_at": "2026-05-10T12:58:00+09:00"
+  },
+  "counts": {
+    "sessions": 39,
+    "assignments": 16,
+    "sessions_by_week": {
+      "1주차 B분과": 10,
+      "2주차 C분과": 12,
+      "3주차 A분과": 10,
+      "4주차 공통": 7
+    }
+  },
+  "hard_gates": {
+    "has_meta_clerkship_id": true,
+    "sessions_array": true,
+    "assignments_array": true,
+    "has_three_pretests": true,
+    "has_inpatient_case": true,
+    "has_week4_cpx": true
+  },
+  "errors": [],
+  "pass": true
+}

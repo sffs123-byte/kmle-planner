@@ -7,11 +7,17 @@ const PLANNER_STATE_VERSION = 'kmlePlannerState.v2';
 const PLANNER_USER_STATE_VERSION = 'planner-user-state.v1';
 const PLANNER_USER_ID = 'gangryeol-main';
 
+const urlParams = new URLSearchParams(window.location.search);
+const isStandaloneMode = urlParams.get('mode') === 'standalone' || urlParams.get('guest') === 'true';
+const LOCAL_TOKEN_KEY = 'kmlePlannerLocalToken.v1';
+const urlLocalToken = urlParams.get('localToken') || urlParams.get('token') || '';
+if (urlLocalToken) localStorage.setItem(LOCAL_TOKEN_KEY, urlLocalToken);
+
 const defaultConfig = {
   supabaseUrl: 'https://fqvmubjivjyohrwqfbdk.supabase.co',
   supabaseAnonKey: 'sb_publishable_x9mnaYjAMbFGGBacRbWmww_3GPRftzR',
   syncCode: '',
-  autoSync: true
+  autoSync: !isStandaloneMode
 };
 
 function generateRandomCode() {
@@ -175,6 +181,8 @@ const ui = {
 };
 
 let supabase = null;
+let localDbMode = false;
+let localEventSource = null;
 let pollingTimer = null;
 let remoteTimer = null;
 let realtimeChannel = null;
@@ -252,7 +260,7 @@ function injectUI() {
 
   const statusPill = document.createElement('div');
   statusPill.className = 'sync-pill';
-  statusPill.innerHTML = '<span class="sync-pill-dot"></span><span>로컬 전용 모드</span>';
+  statusPill.innerHTML = isStandaloneMode ? '<span class="sync-pill-dot"></span><span>공유용 모드 (로컬저장)</span>' : '<span class="sync-pill-dot"></span><span>로컬 전용 모드</span>';
   heroSide.appendChild(statusPill);
 
   const modal = document.createElement('div');
@@ -412,7 +420,12 @@ function renderSessionText() {
   const meta = readMeta();
   const appInfo = typeof window.__kmlePlannerAppInfo === 'function' ? window.__kmlePlannerAppInfo() : null;
 
-  ui.sessionText.textContent = [
+  const lines = isStandaloneMode ? [
+    `mode: Standalone (Guest)`,
+    `device: ${meta.deviceId}`,
+    `저장위치: 이 기기 브라우저 (LocalStorage)`,
+    `동기화: 비활성화됨 (개인 정보 보호)`
+  ] : [
     `user state: ${PLANNER_USER_ID}`,
     `device: ${meta.deviceId}`,
     `마지막 로컬 변경: ${formatDateTime(meta.lastLocalChangeAt)}`,
@@ -422,7 +435,9 @@ function renderSessionText() {
     `user state 업로드 대기: ${meta.pendingUserStateHash ? '있음' : '없음'}`,
     `legacy 업로드 대기: ${meta.pendingLegacyHash ? '있음' : '없음'}`,
     config.syncCode ? `legacy sync code: ${maskCode(config.syncCode)}` : 'legacy sync code: 없음'
-  ].join('\n');
+  ];
+
+  ui.sessionText.textContent = lines.join('\n');
 
   if (ui.appInfoText) {
     ui.appInfoText.textContent = [
@@ -452,9 +467,69 @@ function setStatus(message, tone = 'default') {
   }
 }
 
+
+function localApiHeaders() {
+  const token = localStorage.getItem(LOCAL_TOKEN_KEY) || '';
+  return token ? { 'x-planner-local-token': token } : {};
+}
+
+function localApiUrl(path) {
+  const token = localStorage.getItem(LOCAL_TOKEN_KEY) || '';
+  if (!token) return path;
+  const sep = path.includes('?') ? '&' : '?';
+  return `${path}${sep}localToken=${encodeURIComponent(token)}`;
+}
+
+async function requestLocalApi(path, payload = {}) {
+  const response = await fetch(path, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', ...localApiHeaders() },
+    body: JSON.stringify(payload),
+    cache: 'no-store'
+  });
+  const json = await response.json().catch(() => ({}));
+  if (!response.ok || json?.ok === false) throw new Error(json?.error || `local API ${response.status}`);
+  return json;
+}
+
+async function detectLocalApi() {
+  if (isStandaloneMode) return false;
+  try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 1200);
+    const response = await fetch(localApiUrl('/api/health'), { cache: 'no-store', signal: controller.signal, headers: localApiHeaders() });
+    clearTimeout(timer);
+    if (!response.ok) return false;
+    const data = await response.json();
+    if (data?.authRequired && !localStorage.getItem(LOCAL_TOKEN_KEY)) return false;
+    return data?.ok === true && data?.localDb === true;
+  } catch {
+    return false;
+  }
+}
+
 async function initializeSupabase() {
+  if (isStandaloneMode) {
+    supabase = null;
+    stopLoops();
+    setStatus('공유용 Standalone 모드 (로컬 저장)', 'connected');
+    return;
+  }
   const config = readConfig();
   renderConfigToUI();
+
+  if (await detectLocalApi()) {
+    localDbMode = true;
+    supabase = null;
+    renderSessionText();
+    kickOffLoops();
+    setStatus('Local DB 연결됨. Mac mini SQLite 상태를 확인 중이다.', 'connected');
+    await pullPlannerUserState({ reason: '초기 확인' });
+    if (config.syncCode) await pullRemoteState({ reason: 'legacy 초기 확인' });
+    return;
+  }
+
+  localDbMode = false;
 
   if (!config.supabaseUrl || !config.supabaseAnonKey) {
     supabase = null;
@@ -483,6 +558,25 @@ async function initializeSupabase() {
 }
 
 function startRealtimeSubscription() {
+  if (localDbMode) {
+    if (localEventSource) {
+      try { localEventSource.close(); } catch {}
+      localEventSource = null;
+    }
+    try {
+      localEventSource = new EventSource(localApiUrl(`/api/events?user_id=${encodeURIComponent(PLANNER_USER_ID)}`));
+      localEventSource.addEventListener('update', (event) => {
+        try {
+          const payload = JSON.parse(event.data || '{}');
+          if (payload.updated_by && payload.updated_by === readMeta().deviceId) return;
+        } catch {}
+        void pullPlannerUserState({ reason: 'Local DB 실시간 반영' });
+      });
+      localEventSource.addEventListener('open', () => setStatus('Local DB realtime 연결됨. 다른 기기 변경을 반영한다.', 'connected'));
+      localEventSource.addEventListener('error', () => setStatus('Local DB realtime 재연결 중이다.', 'pending'));
+    } catch {}
+    return;
+  }
   if (!supabase) return;
   if (realtimeChannel) {
     try { supabase.removeChannel(realtimeChannel); } catch {}
@@ -538,9 +632,13 @@ function stopLoops() {
   if (realtimeChannel && supabase) {
     try { supabase.removeChannel(realtimeChannel); } catch {}
   }
+  if (localEventSource) {
+    try { localEventSource.close(); } catch {}
+  }
   pollingTimer = null;
   remoteTimer = null;
   realtimeChannel = null;
+  localEventSource = null;
 }
 
 async function checkLocalStateChange() {
@@ -584,9 +682,9 @@ async function flushImmediateSync(reason = '즉시 업로드') {
     return;
   }
 
-  if (!supabase) {
+  if (!supabase && !localDbMode) {
     await initializeSupabase();
-    if (!supabase) return;
+    if (!supabase && !localDbMode) return;
   }
 
   await retryPendingSync(changed ? reason : `${reason} 재시도`);
@@ -614,12 +712,26 @@ function scheduleImmediateSync(reason = '즉시 업로드') {
 }
 
 async function plannerSyncPull(syncCode) {
+  if (localDbMode) {
+    const json = await requestLocalApi('/api/planner-sync/pull', { sync_code: syncCode });
+    return json.row;
+  }
   const { data, error } = await supabase.rpc('planner_sync_pull', { p_sync_code: syncCode });
   if (error) throw error;
   return Array.isArray(data) ? data[0] : data;
 }
 
 async function plannerSyncPush(syncCode, payload, updatedAt, deviceId) {
+  if (localDbMode) {
+    const json = await requestLocalApi('/api/planner-sync/push', {
+      sync_code: syncCode,
+      state_json: payload,
+      state_version: PLANNER_STATE_VERSION,
+      updated_by: deviceId,
+      updated_at: updatedAt
+    });
+    return json.row;
+  }
   const { data, error } = await supabase.rpc('planner_sync_push', {
     p_sync_code: syncCode,
     p_state_json: payload,
@@ -632,12 +744,26 @@ async function plannerSyncPush(syncCode, payload, updatedAt, deviceId) {
 }
 
 async function plannerUserStatePull(userId = PLANNER_USER_ID) {
+  if (localDbMode) {
+    const json = await requestLocalApi('/api/planner-user-state/pull', { user_id: userId });
+    return json.row;
+  }
   const { data, error } = await supabase.rpc('planner_user_state_pull', { p_user_id: userId });
   if (error) throw error;
   return Array.isArray(data) ? data[0] : data;
 }
 
 async function plannerUserStatePush(payload, updatedAt, deviceId, userId = PLANNER_USER_ID) {
+  if (localDbMode) {
+    const json = await requestLocalApi('/api/planner-user-state/push', {
+      user_id: userId,
+      state_json: payload,
+      state_version: PLANNER_USER_STATE_VERSION,
+      updated_by: deviceId,
+      updated_at: updatedAt
+    });
+    return json.row;
+  }
   const { data, error } = await supabase.rpc('planner_user_state_push', {
     p_user_id: userId,
     p_state_json: payload,
@@ -674,9 +800,9 @@ async function retryPendingSync(reason = '자동 재시도 업로드') {
   const needsLegacyPush = Boolean(config.syncCode && meta.pendingLegacyHash) && meta.pendingLegacyHash === currentHash;
   if (!needsUserStatePush && !needsLegacyPush) return false;
 
-  if (!supabase) {
+  if (!supabase && !localDbMode) {
     await initializeSupabase();
-    if (!supabase) return false;
+    if (!supabase && !localDbMode) return false;
   }
 
   if (needsUserStatePush) await pushPlannerUserState(reason);
@@ -686,8 +812,8 @@ async function retryPendingSync(reason = '자동 재시도 업로드') {
 
 async function pushPlannerUserState(reason = '수동 업로드') {
   if (syncing) return;
-  if (!supabase) {
-    setStatus('Supabase 연결이 아직 안 잡혔다.', 'error');
+  if (!supabase && !localDbMode) {
+    setStatus('동기화 서버 연결이 아직 안 잡혔다.', 'error');
     return;
   }
 
@@ -710,7 +836,7 @@ async function pushPlannerUserState(reason = '수동 업로드') {
       meta.pendingUserStateHash = '';
     }
     saveMeta(meta);
-    setStatus(`${reason} 완료 — planner_user_state에 현재 상태를 저장했다.`, 'connected');
+    setStatus(`${reason} 완료 — local/Supabase user state에 현재 상태를 저장했다.`, 'connected');
     renderSessionText();
   } catch (error) {
     setStatus(`user state 업로드 실패: ${error.message || error}`, 'error');
@@ -726,8 +852,8 @@ async function pushLocalState(reason = '수동 업로드') {
     setStatus('먼저 동기화 코드를 만들거나 입력해줘.', 'error');
     return;
   }
-  if (!supabase) {
-    setStatus('Supabase 연결이 아직 안 잡혔다.', 'error');
+  if (!supabase && !localDbMode) {
+    setStatus('동기화 서버 연결이 아직 안 잡혔다.', 'error');
     return;
   }
 
@@ -761,7 +887,7 @@ async function pushLocalState(reason = '수동 업로드') {
 
 async function pullPlannerUserState({ force = false, reason = '수동 새로받기' } = {}) {
   if (syncing) return;
-  if (!supabase) return;
+  if (!supabase && !localDbMode) return;
 
   syncing = true;
   try {
@@ -769,7 +895,7 @@ async function pullPlannerUserState({ force = false, reason = '수동 새로받�
     const meta = readMeta();
 
     if (!row?.state_json) {
-      if (force) setStatus('planner_user_state에 아직 저장된 상태가 없다.', 'pending');
+      if (force) setStatus('local/Supabase user state에 아직 저장된 상태가 없다.', 'pending');
       return;
     }
 
@@ -804,8 +930,8 @@ async function pullPlannerUserState({ force = false, reason = '수동 새로받�
 
       setStatus(
         appliedInPlace
-          ? `${reason} 완료 — planner_user_state를 현재 화면에 바로 반영했다.`
-          : `${reason} 완료 — planner_user_state를 이 기기에 반영했다.`,
+          ? `${reason} 완료 — local/Supabase user state를 현재 화면에 바로 반영했다.`
+          : `${reason} 완료 — local/Supabase user state를 이 기기에 반영했다.`,
         'connected'
       );
       renderSessionText();
@@ -818,10 +944,10 @@ async function pullPlannerUserState({ force = false, reason = '수동 새로받�
 
     saveMeta(meta);
     if (force) {
-      setStatus('planner_user_state는 확인했지만, 현재 기기 데이터가 더 최신이거나 동일하다.', 'connected');
+      setStatus('local/Supabase user state는 확인했지만, 현재 기기 데이터가 더 최신이거나 동일하다.', 'connected');
     }
   } catch (error) {
-    setStatus(`planner_user_state 불러오기 실패: ${error.message || error}`, 'error');
+    setStatus(`local/Supabase user state 불러오기 실패: ${error.message || error}`, 'error');
   } finally {
     syncing = false;
     renderSessionText();
@@ -831,7 +957,7 @@ async function pullPlannerUserState({ force = false, reason = '수동 새로받�
 async function pullRemoteState({ force = false, reason = '수동 새로받기' } = {}) {
   if (syncing) return;
   const config = readConfig();
-  if (!config.syncCode || !supabase) return;
+  if (!config.syncCode || (!supabase && !localDbMode)) return;
 
   syncing = true;
   try {
@@ -970,5 +1096,5 @@ injectUI();
 bootstrapMetaFromCurrentState();
 renderConfigToUI();
 renderSessionText();
-setStatus('planner_user_state 연결 준비 중이다.', 'default');
+setStatus('Local DB / planner_user_state 연결 준비 중이다.', 'default');
 void initializeSupabase();

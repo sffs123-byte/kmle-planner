@@ -7,3 +7,6 @@
 planner-backup-*.json
 kmle-planner-backup-*.json
 quizzes/__pycache__/
+
+# Local DB/runtime secrets
+.local/
