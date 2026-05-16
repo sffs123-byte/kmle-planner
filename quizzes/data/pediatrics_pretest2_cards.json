@@ -1,707 +1,1261 @@
 [
   {
-    "id": "peds2_2026_001",
-    "origin": "latest_2026",
-    "tier": "P4",
-    "mode": "객관식",
-    "source": "2026 9·10·11·12조 2차 pretest Q1",
-    "axis": "식중독-섭취 후 1-6시간 구토",
-    "q": "6세 남아. 유치원 급식으로 김밥을 먹은 뒤 약 3시간 후 구토와 설사를 시작했고, 같은 유치원 아이들도 비슷한 증상을 보였다. 가장 가능성 높은 원인균은?",
-    "a": "포도알균 식중독, Staphylococcus aureus toxin",
-    "lock": "김밥·급식 후 1-6시간, 구토 우세 집단발생이면 S. aureus toxin."
+    "id": "PEDS2-2026-9to12-MCQ1",
+    "source": "2026 9~12조 2차 pretest 복기 update 2026.04.10 / 최신인계 핵심",
+    "source_rank": 1,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "6세 남아가 오후 1시 유치원 급식 김밥을 먹고 오후 4시부터 구토와 설사를 했으며 같은 유치원 학생 3명도 비슷한 증상이다. 원인균은?",
+    "answer": "포도알균",
+    "explanation": "최신 인계 핵심에서 '김밥 급식 후 3시간 뒤 구토/설사 집단 발생 -> 포도알균'으로 정리되어 있다.",
+    "tags": [
+      "감염",
+      "식중독",
+      "포도알균",
+      "재시",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_2026_002",
-    "origin": "latest_2026",
-    "tier": "P4",
-    "mode": "객관식",
-    "source": "2026 9·10·11·12조 2차 pretest Q2",
-    "axis": "장중첩증-재발-target sign",
-    "q": "3세 남아. 8시간 전부터 보채고 토하며, 보챔과 안정이 반복된다. 1주 전 장중첩증으로 공기정복을 받은 병력이 있고 복부초음파에서 target sign이 보인다. 적절한 처치는?",
-    "a": "공기정복, air reduction",
-    "lock": "장중첩증 + target sign + 복막염/천공 단서 없음 → 공기정복."
+    "id": "PEDS2-2026-9to12-MCQ2",
+    "source": "2026 9~12조 2차 pretest 복기 update 2026.04.10 / 최신인계 핵심",
+    "source_rank": 1,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "3세 남아가 8시간 전부터 보채고 토하며, 1주 전 장중첩증으로 공기정복을 한 적이 있다. 복부 초음파 target sign이 보일 때 적절한 처치는?",
+    "answer": "공기 정복",
+    "explanation": "원문 보기 중 공기 정복이 있으며, 최신 인계 핵심도 'target sign + 장중첩증 재발 -> 공기정복'으로 정리한다.",
+    "tags": [
+      "소화기",
+      "장중첩증",
+      "target_sign",
+      "재시",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_2026_003",
-    "origin": "latest_2026",
-    "tier": "P4",
-    "mode": "객관식",
-    "source": "2026 9·10·11·12조 2차 pretest Q3",
-    "axis": "만성기침-부비동염/상기도 원인",
-    "q": "11세 여아. 5주 전부터 밤낮으로 기침. 청진은 정상, FeNO는 낮고, CXR와 Caldwell-Water view가 제시되었다. 알맞은 치료는?",
-    "a": "항생제 쪽으로 정리. 부비동염/상기도 원인 만성기침 축",
-    "lock": "낮은 FeNO·정상 청진이면 천식 흡입치료보다 부비동염/상기도 원인을 먼저 생각한다.",
-    "note": "원본 이미지/선지 의존성이 있는 문항이라 최종 직전에는 사진과 선지를 한 번 더 확인."
+    "id": "PEDS2-2026-9to12-MCQ3",
+    "source": "2026 9~12조 2차 pretest 복기 update 2026.04.10 / 최신인계 핵심",
+    "source_rank": 1,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "11세 여아가 5주 전부터 밤낮으로 기침하고 호흡음은 정상이며 FeNO 18, CXR와 Caldwell-Water view가 제시되었다. 알맞은 치료는?",
+    "answer": "항생제",
+    "explanation": "최신 인계 핵심에서 부비동염/상기도 원인 기침 쪽으로 보며 답 후보를 항생제로 정리했다.",
+    "tags": [
+      "호흡기",
+      "부비동염",
+      "만성기침",
+      "재시"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_2026_004",
-    "origin": "latest_2026",
-    "tier": "P4",
-    "mode": "객관식",
-    "source": "2026 9·10·11·12조 2차 pretest Q4",
-    "axis": "세기관지염-supportive care",
-    "q": "8개월 남아. 2일째 기침, 잘 먹지 않음, nasal flaring, retraction, 양측 wheezing. 림프구 우세, CRP 정상. 치료는?",
-    "a": "수액 및 산소공급",
-    "lock": "bronchiolitis는 대부분 바이러스성. 치료는 산소·수액 등 supportive care."
+    "id": "PEDS2-2026-9to12-MCQ4",
+    "source": "2026 9~12조 2차 pretest 복기 update 2026.04.10 / 최신인계 핵심",
+    "source_rank": 1,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "8개월 남아가 2일째 기침, 수유저하, 코 벌렁거림, 갈비뼈뒤당김, 양쪽 폐 쌕쌕거림을 보이며 림프구 우세, CRP 정상이다. 치료는?",
+    "answer": "수액 및 산소공급",
+    "explanation": "최신 인계 핵심은 bronchiolitis로 정리하며 답을 수액 및 산소공급으로 제시한다.",
+    "tags": [
+      "호흡기",
+      "세기관지염",
+      "재시"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_2026_005",
-    "origin": "latest_2026",
-    "tier": "P4",
-    "mode": "객관식",
-    "source": "2026 9·10·11·12조 2차 pretest Q5",
-    "axis": "TOF-hypercyanotic spell",
-    "q": "5개월 영아. 출생 직후 청색증형 심장병 진단. 울다가 청색증이 심해졌고, 비슷한 증상이 반복되며 심잡음은 잘 들리지 않는다. 부츠모양 CXR가 제시되었다. 즉시 처치는?",
-    "a": "Knee-chest position, 무릎-가슴 자세",
-    "lock": "TOF hypercyanotic spell 첫 처치는 knee-chest position."
+    "id": "PEDS2-2026-9to12-MCQ5",
+    "source": "2026 9~12조 2차 pretest 복기 update 2026.04.10 / 최신인계 핵심",
+    "source_rank": 1,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "5개월 영아가 울다가 청색증으로 내원했다. 출생 직후 청색증형 심장병 진단을 받았고 이전에도 비슷한 증상이 있었으며 심잡음은 들리지 않았다. 치료는?",
+    "answer": "Knee-chest position",
+    "explanation": "최신 인계 핵심은 TOF hypercyanotic spell로 보며 답을 knee-chest position으로 정리한다.",
+    "tags": [
+      "심장",
+      "TOF",
+      "hypoxic_spell",
+      "재시",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_2026_006",
-    "origin": "latest_2026",
-    "tier": "P4",
-    "mode": "주관식",
-    "source": "2026 9·10·11·12조 2차 pretest 주1",
-    "axis": "항생제 stewardship",
-    "q": "불필요하거나 부적합한 항생제를 사용했을 때 발생할 수 있는 문제를 2가지 이상 쓰시오.",
-    "a": "항생제 내성 증가, 약물 이상반응, 정상균총 파괴와 C. difficile 감염, 의료비 증가 등",
-    "lock": "내성·부작용·정상균총 파괴를 기본 3축으로 외우면 안전."
+    "id": "PEDS2-2026-9to12-SA1",
+    "source": "2026 9~12조 2차 pretest 복기 update 2026.04.10 / 최신인계 핵심",
+    "source_rank": 1,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "불필요하거나 부적합한 항생제를 사용했을 때 발생할 수 있는 문제를 두 가지 이상 서술하시오.",
+    "answer": "내성 증가, 이상반응, 정상균총 파괴/C. difficile, 비용 증가 등",
+    "explanation": "최신 인계 핵심에서 항생제 misuse의 문제점으로 이 항목들을 제시한다.",
+    "tags": [
+      "감염",
+      "항생제",
+      "의국회의"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_2026_007",
-    "origin": "latest_2026",
-    "tier": "P4",
-    "mode": "주관식",
-    "source": "2026 9·10·11·12조 2차 pretest 주2",
-    "axis": "double bubble-십이지장폐쇄",
-    "q": "신생아가 수유 후 구토를 보이고 X-ray에서 double bubble sign이 제시되었다. 진단은?",
-    "a": "선천 십이지장 폐쇄",
-    "lock": "신생아 구토 + double bubble = congenital duodenal atresia."
+    "id": "PEDS2-2026-9to12-SA2",
+    "source": "2026 9~12조 2차 pretest 복기 update 2026.04.10 / 최신인계 핵심",
+    "source_rank": 1,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "임신 36주, 출생체중 3.0 kg 신생아가 수유 후 구토했고 chest X-ray에서 double bubble sign이 제시되었다. 진단은?",
+    "answer": "선천 십이지장 폐쇄",
+    "explanation": "원문에 정답이 '선천 십이지장 폐쇄'로 명시되어 있다.",
+    "tags": [
+      "신생아",
+      "소화기",
+      "double_bubble",
+      "재시",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_2026_008",
-    "origin": "latest_2026",
-    "tier": "P4",
-    "mode": "주관식",
-    "source": "2026 9·10·11·12조 2차 pretest 주3",
-    "axis": "인두후부농양-검사",
-    "q": "4세 남아. 먹지 못하고 침을 흘리며 보채고, 목을 뒤로 젖힌 채 목을 잘 움직이지 못한다. 가장 의심되는 진단명과 시행할 검사는?",
-    "a": "인두후부농양, retropharyngeal abscess / lateral neck X-ray",
-    "lock": "침흘림 + 목 신전 + 목 운동 제한 = retropharyngeal abscess, lateral neck view."
+    "id": "PEDS2-2026-9to12-SA3",
+    "source": "2026 9~12조 2차 pretest 복기 update 2026.04.10 / 최신인계 핵심",
+    "source_rank": 1,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "4세 남아가 2일 전부터 먹지 못하고 침을 흘리며 보채고, 목을 뒤로 젖힌 채 목을 잘 움직이지 못한다. 가장 의심되는 진단명과 시행해야 하는 검사는?",
+    "answer": "인두후부농양(retropharyngeal abscess), lateral neck X-ray",
+    "explanation": "원문에 진단명과 검사 정답이 각각 인두후부농양, lateral neck x-ray로 명시되어 있다.",
+    "tags": [
+      "감염",
+      "상기도",
+      "인두후부농양",
+      "재시",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_2026_009",
-    "origin": "latest_2026",
-    "tier": "P4",
-    "mode": "주관식",
-    "source": "2026 9·10·11·12조 2차 pretest 주4",
-    "axis": "Kawasaki-echo",
-    "q": "8개월 남아. 6일 고열, 결막충혈, 딸기혀, 손 홍조, 발진이 있고 proBNP가 상승했다. 진단 평가에 필요한 추가검사는?",
-    "a": "심초음파",
-    "lock": "Kawasaki 의심이면 coronary artery 평가를 위해 echo."
+    "id": "PEDS2-2026-9to12-SA4",
+    "source": "2026 9~12조 2차 pretest 복기 update 2026.04.10 / 최신인계 핵심",
+    "source_rank": 1,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "8개월 남아가 6일 전부터 고열, 전신 발진, 결막충혈, 딸기혀, 손 홍조를 보이고 proBNP 2000이다. 진단을 위해 필요한 추가검사는?",
+    "answer": "심초음파",
+    "explanation": "원문 정답이 심초음파이며, 최신 인계 핵심도 Kawasaki disease 추가검사로 심초음파를 제시한다.",
+    "tags": [
+      "심장",
+      "가와사키병",
+      "심초음파",
+      "재시",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_2026_010",
-    "origin": "latest_2026",
-    "tier": "P4",
-    "mode": "주관식",
-    "source": "2026 9·10·11·12조 2차 pretest 주5 의국회의",
-    "axis": "감염관리-손위생",
-    "q": "감염전파를 차단하기 위한 가장 중요한 방법 1가지는?",
-    "a": "손위생",
-    "lock": "감염관리 1번 답은 손위생."
+    "id": "PEDS2-2026-9to12-SA5",
+    "source": "2026 9~12조 2차 pretest 복기 update 2026.04.10 / 최신인계 핵심",
+    "source_rank": 1,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "감염전파를 차단하기 위한 가장 중요한 방법 한 가지는?",
+    "answer": "손위생",
+    "explanation": "원문 의국회의 문제 정답이 손위생으로 명시되어 있다.",
+    "tags": [
+      "감염관리",
+      "손위생",
+      "의국회의"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_2026_011",
-    "origin": "recent_2026",
-    "tier": "P3",
-    "mode": "객관식",
-    "source": "2026 5·6·7·8조 2주차 프테 객1",
-    "axis": "수족구병",
-    "q": "4세 남아. 미열 뒤 잘 먹지 못하고 침을 흘리며, 손·발·사타구니 발진과 구강 궤양이 보인다. 진단은?",
-    "a": "수족구병",
-    "lock": "구강 궤양 + 손·발 발진이면 HFMD."
+    "id": "PEDS2-2026-5to8-Q1",
+    "source": "2026 5~8조 2주차 프테 복기",
+    "source_rank": 2,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "4세 남아가 미열 후 잘 먹으려 하지 않고 침을 흘리며 목이 아프다고 하고 손/발/사타구니 발진과 목젖 주위 발적 동반 궤양이 있다. 진단은?",
+    "answer": "수족구병",
+    "explanation": "원문에 문항 끝 정답이 수족구병으로 적혀 있다.",
+    "tags": [
+      "감염",
+      "수족구병",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_2026_012",
-    "origin": "recent_2026",
-    "tier": "P3",
-    "mode": "객관식",
-    "source": "2026 5·6·7·8조 2주차 프테 객2",
-    "axis": "선천거대결장-확진검사",
-    "q": "선천거대결장을 확진하기 위한 검사는?",
-    "a": "직장 흡인생검 또는 생검",
-    "lock": "Hirschsprung 확진은 ganglion cell 부재 확인, 즉 생검."
+    "id": "PEDS2-2026-5to8-Q10",
+    "source": "2026 5~8조 2주차 프테 복기",
+    "source_rank": 2,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "High take off RCA의 정의는?",
+    "answer": "정상 위치보다 위에서 분지 되어있는 RCA",
+    "explanation": "원문에 High take off RCA의 정의가 '정상 위치보다 위에서 분지 되어있는 RCA'로 적혀 있다.",
+    "tags": [
+      "심장",
+      "관상동맥",
+      "의국회의"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_2026_013",
-    "origin": "recent_2026",
-    "tier": "P3",
-    "mode": "객관식",
-    "source": "2026 5·6·7·8조 2주차 프테 객3",
-    "axis": "후두연화증",
-    "q": "2개월 남아. 생후 2주부터 그르렁거림이 있고, 울거나 수유할 때 심해지며 엎드리면 완화된다. 치료는?",
-    "a": "경과관찰",
-    "lock": "후두연화증은 대개 성장하며 호전되어 경과관찰."
+    "id": "PEDS2-2026-5to8-Q2",
+    "source": "2026 5~8조 2주차 프테 복기",
+    "source_rank": 2,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "거대결장 확진을 위한 검사는?",
+    "answer": "생검",
+    "explanation": "원문은 '거대결장 확진을 위한 검사 - 생검'으로 정리되어 있다.",
+    "tags": [
+      "소화기",
+      "선천거대결장",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_2026_014",
-    "origin": "recent_2026",
-    "tier": "P3",
-    "mode": "객관식",
-    "source": "2026 5·6·7·8조 2주차 프테 객4",
-    "axis": "이물흡인-Heimlich",
-    "q": "8세 남아가 호두를 먹다가 청색증과 호흡곤란을 보인다. 다음 처치는?",
-    "a": "하임리히법",
-    "lock": "소아/성인 이물질 기도폐쇄 + 의식 있음 → Heimlich."
+    "id": "PEDS2-2026-5to8-Q3",
+    "source": "2026 5~8조 2주차 프테 복기",
+    "source_rank": 2,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "2개월 남아가 생후 2주부터 그르렁거림이 있고 울거나 보채거나 수유할 때 심해지며 엎어 놓으면 완화된다. 흡기 시 협착음이 들릴 때 치료는?",
+    "answer": "경과관찰",
+    "explanation": "원문에 치료가 경과관찰로 적혀 있다.",
+    "tags": [
+      "호흡기",
+      "후두연화증",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_2026_015",
-    "origin": "recent_2026",
-    "tier": "P3",
-    "mode": "객관식",
-    "source": "2026 5·6·7·8조 2주차 프테 객5",
-    "axis": "Kawasaki-치료",
-    "q": "7개월 남아. 6일 고열, 결막충혈, 붉고 갈라진 입술, 경부림프절, 전신발진, ESR 상승이 있다. 치료는?",
-    "a": "IVIG",
-    "lock": "Kawasaki 치료 핵심은 IVIG + aspirin."
+    "id": "PEDS2-2026-5to8-Q4",
+    "source": "2026 5~8조 2주차 프테 복기",
+    "source_rank": 2,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "8세 남아가 호두를 먹고 청색증과 호흡곤란을 보였다. 처치는?",
+    "answer": "하임리히법",
+    "explanation": "원문에 정답이 하임리히법으로 적혀 있다.",
+    "tags": [
+      "응급",
+      "이물흡인",
+      "하임리히",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_2026_016",
-    "origin": "recent_2026",
-    "tier": "P3",
-    "mode": "주관식",
-    "source": "2026 5·6·7·8조 2주차 프테 주6",
-    "axis": "cellulitis-항생제",
-    "q": "5세 아이. 전날 39도 고열 이후 발등이 붓고 만지면 아프다. 진단과 치료 항생제는?",
-    "a": "Cellulitis / cefazolin, nafcillin, oxacillin, dicloxacillin 등",
-    "lock": "비화농성 cellulitis는 MSSA/Strep coverage 축."
+    "id": "PEDS2-2026-5to8-Q5",
+    "source": "2026 5~8조 2주차 프테 복기",
+    "source_rank": 2,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "7개월 남아가 6일 지속 고열, 결막충혈, 붉고 갈라진 입술, 왼쪽 림프절 종대, 전신 발진, ESR 상승 등을 보인다. 치료는?",
+    "answer": "IVIG",
+    "explanation": "원문에 치료가 IVIG로 적혀 있다.",
+    "tags": [
+      "가와사키병",
+      "IVIG",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_2026_017",
-    "origin": "recent_2026",
-    "tier": "P3",
-    "mode": "주관식",
-    "source": "2026 5·6·7·8조 2주차 프테 주7",
-    "axis": "만성복통-alarm symptom",
-    "q": "소아 만성복통에서 추가검사가 필요한 alarm symptom을 2가지 이상 쓰시오.",
-    "a": "체중감소, 성장부전, 혈변/흑색변, 지속 구토, 야간통, 발열, 관절통, 구강궤양, IBD 가족력 등",
-    "lock": "성장·체중·혈변·야간통·전신증상은 기능성으로 넘기면 안 된다."
+    "id": "PEDS2-2026-5to8-Q6",
+    "source": "2026 5~8조 2주차 프테 복기",
+    "source_rank": 2,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "5세 아이가 전날 39도 고열 후 발등이 붓고 만지면 아프다. 진단과 치료는?",
+    "answer": "Cellulitis; Cefazolin / Nafcillin / Oxacillin / Dicloxacillin",
+    "explanation": "원문에 진단 Cellulitis, 치료 cefazolin/nafcillin/oxacillin/dicloxacillin이 적혀 있다.",
+    "tags": [
+      "감염",
+      "피부연조직",
+      "cellulitis"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_2026_018",
-    "origin": "recent_2026",
-    "tier": "P3",
-    "mode": "주관식",
-    "source": "2026 5·6·7·8조 2주차 프테 주8",
-    "axis": "급성중이염",
-    "q": "화농성 중이염 사진이 제시되었다. 진단 및 1차 치료는?",
-    "a": "급성 화농성 중이염 / amoxicillin",
-    "lock": "AOM 1차 항생제는 amoxicillin."
+    "id": "PEDS2-2026-5to8-Q7",
+    "source": "2026 5~8조 2주차 프테 복기",
+    "source_rank": 2,
+    "origin": "uncertain_recall",
+    "priority": "P4 최신2026",
+    "question": "소아 만성복통에서 추가검사가 필요한 alarm symptom은? 두 개 이상",
+    "answer": "원문 확인 필요",
+    "explanation": "원문에는 질문만 있고 답이 적혀 있지 않다.",
+    "tags": [
+      "소화기",
+      "만성복통"
+    ],
+    "uncertain": true
   },
   {
-    "id": "peds2_2026_019",
-    "origin": "recent_2026",
-    "tier": "P3",
-    "mode": "주관식",
-    "source": "2026 5·6·7·8조 2주차 프테 주9",
-    "axis": "폐동맥판협착",
-    "q": "7세 여아. 운동 시 흉통/호흡곤란, wide split S2, P2 약화, CXR에서 좌측 pulmonary artery 확장. 진단은?",
-    "a": "Pulmonary stenosis, 폐동맥판협착",
-    "lock": "P2 약화 + PA 확장 + 운동 시 증상 → PS."
+    "id": "PEDS2-2026-5to8-Q8",
+    "source": "2026 5~8조 2주차 프테 복기",
+    "source_rank": 2,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "화농성중이염 사진이 제시되었다. 진단 및 치료는?",
+    "answer": "화농성 중이염, 아목시실린",
+    "explanation": "원문에 '화농성 중이염, 아목시실린'으로 정리되어 있다.",
+    "tags": [
+      "이비인후",
+      "중이염"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_2026_020",
-    "origin": "recent_2026",
-    "tier": "P3",
-    "mode": "주관식",
-    "source": "2026 5·6·7·8조 2주차 프테 주10",
-    "axis": "High take-off RCA",
-    "q": "High take-off RCA의 정의는?",
-    "a": "우관상동맥이 정상 위치보다 높은 위치에서 기시하는 것",
-    "lock": "High take-off = coronary ostium이 정상보다 위쪽."
+    "id": "PEDS2-2026-5to8-Q9",
+    "source": "2026 5~8조 2주차 프테 복기",
+    "source_rank": 2,
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "question": "7세 여아가 운동 시 흉통/호흡곤란, S2 wide split, 호흡에 따라 변화, P2 약화, CXR 좌측 PA 확장을 보인다. 진단은?",
+    "answer": "PS",
+    "explanation": "원문에 진단이 PS로 적혀 있다.",
+    "tags": [
+      "심장",
+      "폐동맥협착",
+      "variant"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_021",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 11·12·13·14조 2차 객1",
-    "axis": "Salmonella",
-    "q": "설사, 점액성 혈변, 대변 중성구 다수 소견이 보이면 원인균은?",
-    "a": "Salmonella",
-    "lock": "침습성 세균성 장염 + 점액혈변 + PMN → Salmonella/Shigella 축, 복기 답 Salmonella."
+    "id": "PEDS2-2025-11to14-Q1",
+    "source": "2025년 2학기 11~14조 2차 pretest 복기",
+    "source_rank": 3,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "설사, 점액성 혈변, 중성구 다수 소견(80%)이 있는 문제의 원인균은?",
+    "answer": "살모넬라균",
+    "explanation": "원문에 답이 살모넬라균으로 명시되어 있다.",
+    "tags": [
+      "감염",
+      "설사",
+      "살모넬라",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_022",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 11·12·13·14조 2차 객2",
-    "axis": "장중첩증-진단검사",
-    "q": "주기적 복통, 갑작스러운 심한 복통, 점액성 혈변이 있는 소아에서 진단을 위한 검사는?",
-    "a": "복부초음파",
-    "lock": "장중첩증 진단은 abdominal ultrasound, 치료는 air reduction."
+    "id": "PEDS2-2025-11to14-Q10",
+    "source": "2025년 2학기 11~14조 2차 pretest 복기",
+    "source_rank": 3,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "정상 신생아에서 선천성 갑상샘저하증 선별검사의 적절한 시기는?",
+    "answer": "이상적으로 72시간에 시행, 최소 48시간 후 시행",
+    "explanation": "원문 의국문제 답이 72시간, 최소 48시간 후로 적혀 있다.",
+    "tags": [
+      "신생아",
+      "선별검사",
+      "의국회의"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_023",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 11·12·13·14조 2차 주6",
-    "axis": "Croup",
-    "q": "개짖는 듯한 기침과 X-ray상 상기도 협착이 보이는 질환명과 병인은?",
-    "a": "Croup / parainfluenza virus",
-    "lock": "Barking cough + steeple sign = croup, parainfluenza."
+    "id": "PEDS2-2025-11to14-Q2",
+    "source": "2025년 2학기 11~14조 2차 pretest 복기",
+    "source_rank": 3,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "남아가 주기적으로 배가 아프다가 갑자기 심한 복통과 점액성 혈변을 보인다. 진단을 위한 검사는?",
+    "answer": "복부초음파",
+    "explanation": "원문에 답이 복부초음파로 명시되어 있다.",
+    "tags": [
+      "소화기",
+      "장중첩증",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_024",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 11·12·13·14조 2차 주8",
-    "axis": "천식 감별",
-    "q": "급성기관지염과 천식에서 천식임을 의심할 중요 소견을 3가지 쓰시오.",
-    "a": "천식/알레르기 가족력, 말초혈액 호산구 증가, 3회 이상 반복 천명, 베타2 작용제에 의한 호전",
-    "lock": "반복성·아토피성·기관지확장제 반응성이 천식 쪽."
+    "id": "PEDS2-2025-11to14-Q3",
+    "source": "2025년 2학기 11~14조 2차 pretest 복기",
+    "source_rank": 3,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "8세 남아가 명절날 호두를 먹고 청색증과 호흡곤란을 보였다. 다음으로 시행할 처치는?",
+    "answer": "하임리히법",
+    "explanation": "원문 답이 하임리히법이며 2026 5~8조와 반복된다.",
+    "tags": [
+      "응급",
+      "이물흡인",
+      "하임리히",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_025",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 11·12·13·14조 2차 주9",
-    "axis": "소아 혈압 cuff",
-    "q": "소아 혈압 측정 시 혈압대 폭과 공기주머니 길이는 각각 어느 정도가 적절한가?",
-    "a": "폭은 위팔 중간둘레의 40% 이상, 공기주머니 길이는 위팔둘레의 80-100%",
-    "lock": "BP cuff: width 40%, bladder length 80-100%."
+    "id": "PEDS2-2025-11to14-Q4",
+    "source": "2025년 2학기 11~14조 2차 pretest 복기",
+    "source_rank": 3,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "2개월 남아가 생후 2주부터 그르렁거림이 있고 수유/보챔 때 심해지며 엎어 놓으면 완화되고 흡기 협착음이 들린다. 치료는?",
+    "answer": "경과관찰",
+    "explanation": "원문 답이 경과관찰이며 2026 5~8조와 반복된다.",
+    "tags": [
+      "호흡기",
+      "후두연화증",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_026",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 11·12·13·14조 의국회의",
-    "axis": "선천갑상샘저하증 선별",
-    "q": "정상 신생아에서 선천성 갑상샘저하증 선별검사의 권장 시기는?",
-    "a": "이상적으로 생후 72시간, 최소 생후 48시간 이후",
-    "lock": "NBS timing: ideal 72h, at least after 48h."
+    "id": "PEDS2-2025-11to14-Q5",
+    "source": "2025년 2학기 11~14조 2차 pretest 복기",
+    "source_rank": 3,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "생후 18일 남아에게 LUSB 2/6 ejection murmur, P2, S2 splitting, ejection click 없음이 있었다. 진단은?",
+    "answer": "생리적 폐동맥협착분지음",
+    "explanation": "원문에 답이 생리적 폐동맥협착분지음으로 적혀 있다.",
+    "tags": [
+      "심장",
+      "murmur"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_027",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 15·16·17·18조 2차 객1",
-    "axis": "adenovirus",
-    "q": "눈 주위/결막염 사진과 URI/발열 맥락이 제시될 때 반복 복기된 원인 바이러스는?",
-    "a": "Adenovirus",
-    "lock": "결막염 + 호흡기/인후 증상 = adenovirus를 떠올린다."
+    "id": "PEDS2-2025-11to14-Q6",
+    "source": "2025년 2학기 11~14조 2차 pretest 복기",
+    "source_rank": 3,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "개짖듯이 킁킁거리는 기침소리와 X-ray상 상기도가 좁아진 소견이 있다. 질병명과 병인은?",
+    "answer": "Croup; parainfluenza virus",
+    "explanation": "원문 답이 Croup / parainfluenza virus로 명시되어 있다.",
+    "tags": [
+      "호흡기",
+      "croup",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_028",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 15·16·17·18조 2차 객2",
-    "axis": "Meckel diverticulum",
-    "q": "3세 남아가 무통성 대량 선홍색 혈변을 보인다. 진단은?",
-    "a": "Meckel diverticulum, 메켈 게실",
-    "lock": "소아 무통성 선홍색 혈변 = Meckel."
+    "id": "PEDS2-2025-11to14-Q7",
+    "source": "2025년 2학기 11~14조 2차 pretest 복기",
+    "source_rank": 3,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "임신 나이 32주, 출생체중 2.7 kg 소아가 지속되는 담즙성 구토로 내원했다. 복부 X선에서 확인할 sign은?",
+    "answer": "Double bubble sign",
+    "explanation": "원문 답이 Double bubble sign으로 명시되어 있다.",
+    "tags": [
+      "신생아",
+      "double_bubble",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_029",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 15·16·17·18조 2차 주1",
-    "axis": "SSSS",
-    "q": "4세 남아. 피부 벗겨짐과 발적, Nikolsky sign 양성. 진단명과 원인균은?",
-    "a": "Staphylococcal scalded skin syndrome / Staphylococcus aureus",
-    "lock": "Nikolsky+피부박리 소아 = SSSS, S. aureus exfoliative toxin."
+    "id": "PEDS2-2025-11to14-Q8",
+    "source": "2025년 2학기 11~14조 2차 pretest 복기",
+    "source_rank": 3,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "급성기관지염과 천식에서 천식임을 감별하는 중요소견 세 가지는?",
+    "answer": "천식 가족력, 말초 혈액내 호산구 증가, 3회 이상 자주 반복되는 천명음",
+    "explanation": "원문 답이 세 항목으로 제시되어 있다.",
+    "tags": [
+      "호흡기",
+      "천식",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_030",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 15·16·17·18조 2차 주2",
-    "axis": "만성 비특이 설사",
-    "q": "18개월 남아가 한 달 전부터 물 같은 변과 정상 변을 번갈아 보고, 과일주스를 자주 마시며 성장/진찰은 정상이다. 진단은?",
-    "a": "만성 비특이 설사, toddler's diarrhea",
-    "lock": "정상 성장 + 과일주스 + 만성 물변 = chronic nonspecific diarrhea."
+    "id": "PEDS2-2025-11to14-Q9",
+    "source": "2025년 2학기 11~14조 2차 pretest 복기",
+    "source_rank": 3,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "소아 혈압 측정 시 혈압대 폭과 공기주머니 길이는 각각 얼마여야 하는가?",
+    "answer": "혈압대 폭은 위팔 중간 둘레의 40% 이상, 공기주머니 길이는 위팔 둘레의 80~100%",
+    "explanation": "원문 답이 해당 수치로 명시되어 있다.",
+    "tags": [
+      "진찰",
+      "혈압"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_031",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 15·16·17·18조 2차 주4",
-    "axis": "태아순환",
-    "q": "태아순환에서 병렬순환을 가능하게 하는 구조물 3가지와 산소포화도가 가장 높은 혈관은?",
-    "a": "정맥관, 동맥관, 난원공 / 제대정맥",
-    "lock": "DV-DA-FO, 최고 산소포화도는 umbilical vein."
+    "id": "PEDS2-2025-15to18-Q1",
+    "source": "2025년 2학기 15~18조 2차 pretest 복기",
+    "source_rank": 4,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "거의 동일한 지문과 눈 주위 사진이 제시된 문제에서 원인은?",
+    "answer": "아데노바이러스",
+    "explanation": "원문에 정답이 아데노바이러스로 적혀 있다.",
+    "tags": [
+      "감염",
+      "아데노바이러스",
+      "unclear_stem"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_032",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 15·16·17·18조 의국회의",
-    "axis": "cardiomarker",
-    "q": "소아 Cardiomarker 평가 항목 2가지는?",
-    "a": "Troponin, NT-proBNP",
-    "lock": "심근손상은 troponin, 심부전/strain은 NT-proBNP."
+    "id": "PEDS2-2025-15to18-Q2",
+    "source": "2025년 2학기 15~18조 2차 pretest 복기",
+    "source_rank": 4,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "3세 남아가 무통성 대량의 선홍색 혈변을 보인다. 진단은?",
+    "answer": "메켈 게실",
+    "explanation": "원문에 정답이 메켈 게실로 적혀 있다.",
+    "tags": [
+      "소화기",
+      "혈변"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_033",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 19·21·22·23조 2차 객1",
-    "axis": "EBV infectious mononucleosis",
-    "q": "림프구와 비정형 림프구가 많고 전염단핵구증/성홍열/가와사키 등이 선지로 나온 경우 가장 맞는 진단은?",
-    "a": "EBV infectious mononucleosis, 전염단핵구증",
-    "lock": "Atypical lymphocyte 20% = EBV infectious mononucleosis."
+    "id": "PEDS2-2025-15to18-Q3",
+    "source": "2025년 2학기 15~18조 2차 pretest 복기",
+    "source_rank": 4,
+    "origin": "uncertain_recall",
+    "priority": "P3 누적복기",
+    "question": "감기 증상 치료 관련 설명 중 틀린 것은? 보기: 중이염 합병 감소 여부, 천식 악화 예방 여부, 증상 치료 필요성, 세균성 부비동염 합병증 감소 여부, oseltamivir와 중이염 감소 여부.",
+    "answer": "원문 확인 필요",
+    "explanation": "원문에는 보기만 있고 답이 명시되어 있지 않다.",
+    "tags": [
+      "호흡기",
+      "감기"
+    ],
+    "uncertain": true
   },
   {
-    "id": "peds2_past_034",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 19·21·22·23조 2차 객2",
-    "axis": "탈수-정맥수액",
-    "q": "10개월 영아가 설사 후 2kg 감소하고 처져 있다. 필요한 처치는?",
-    "a": "0.9% 생리식염수 정맥주사",
-    "lock": "처짐/중증 탈수면 ORS보다 isotonic saline IV부터."
+    "id": "PEDS2-2025-15to18-Q4",
+    "source": "2025년 2학기 15~18조 2차 pretest 복기",
+    "source_rank": 4,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "4세 남아가 먹지 못하고 침을 흘리며 목을 뒤로 젖히고 목을 잘 움직이지 못한다. 가장 의심되는 진단명과 시행해야 하는 검사는?",
+    "answer": "인두후부농양 - neck lateral view",
+    "explanation": "원문 보기의 정답 조합이 인두후부농양 - neck lateral view로 제시된다.",
+    "tags": [
+      "상기도",
+      "인두후부농양",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_035",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 19·21·22·23조 2차 객3",
-    "axis": "영유아 호흡기 특성",
-    "q": "영유아가 호흡기 질환에 취약한 해부·생리학적 이유로 옳은 축은?",
-    "a": "기도 지름이 좁고, 후두개가 크며, 비강호흡 의존도가 높다",
-    "lock": "작은 기도는 부종 조금에도 저항이 크게 증가한다."
+    "id": "PEDS2-2025-15to18-Q5",
+    "source": "2025년 2학기 15~18조 2차 pretest 복기",
+    "source_rank": 4,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "5번 야마 문항의 정답은?",
+    "answer": "CoA",
+    "explanation": "원문에는 상세 지문 없이 '정답: CoA'만 적혀 있다.",
+    "tags": [
+      "심장",
+      "CoA",
+      "unclear_stem"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_036",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 19·21·22·23조 2차 주7",
-    "axis": "Hirschsprung-DRE gas",
-    "q": "생후 5주 남아. 잘 먹지 못하고 반복 구토, 복부팽만. DRE 후 손가락을 빼자 가스가 나왔다. 진단은?",
-    "a": "선천거대결장, Hirschsprung disease",
-    "lock": "복부팽만 + DRE 후 explosive gas/stool = Hirschsprung."
+    "id": "PEDS2-2025-15to18-SA1",
+    "source": "2025년 2학기 15~18조 2차 pretest 복기",
+    "source_rank": 4,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "4세 남아가 피부 벗겨짐과 발적으로 내원했고 Nikolsky 징후 양성이다. 진단명과 원인균은?",
+    "answer": "포도알균 화상 피부 증후군(SSSS); 황색 포도알균(S. aureus)",
+    "explanation": "원문에 진단명과 원인균이 그대로 제시되어 있다.",
+    "tags": [
+      "피부",
+      "SSSS",
+      "포도알균",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_037",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 19·21·22·23조 2차 주8",
-    "axis": "AOM 합병증",
-    "q": "급성 중이염의 합병증을 3가지 이상 쓰시오.",
-    "a": "유양돌기염, 안면신경마비, 미로염, 수막염, 뇌농양, 경막외/경막하 농양 등",
-    "lock": "귀 주변 합병증 + 두개내 합병증으로 묶어 외운다."
+    "id": "PEDS2-2025-15to18-SA2",
+    "source": "2025년 2학기 15~18조 2차 pretest 복기",
+    "source_rank": 4,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "18개월 남아가 한 달 전부터 물 같은 변과 정상 변이 번갈아 나오며 과일주스를 자주 마시고 체중/진찰은 정상이다. 진단은?",
+    "answer": "만성 비특이 설사",
+    "explanation": "원문 정답이 만성 비특이 설사로 적혀 있다.",
+    "tags": [
+      "소화기",
+      "설사"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_038",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 19·21·22·23조 2차 주9",
-    "axis": "TOF spell 응급치료",
-    "q": "TOF hypoxic spell의 내과적 응급치료를 쓰시오.",
-    "a": "Knee-chest position, 산소, morphine, phenylephrine 등 혈관수축제, 수액/탈수 교정, 베타차단제, 산증 교정 등",
-    "lock": "SVR 올리고, RVOT spasm 줄이고, 탈수/산증 교정."
+    "id": "PEDS2-2025-15to18-SA4A",
+    "source": "2025년 2학기 15~18조 2차 pretest 복기",
+    "source_rank": 4,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "태아순환 병렬 순환을 위한 세 가지 구조물은?",
+    "answer": "정맥관, 동맥관, 난원공",
+    "explanation": "원문에 정맥관, 동맥관, 난원공이 정답으로 제시되어 있다.",
+    "tags": [
+      "신생아",
+      "태아순환"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_039",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 1학기 1·2조 객2",
-    "axis": "흉수-측와위",
-    "q": "발열, 기침, 흉통, 복통이 있고 CXR상 pleural effusion이 의심된다. 다음에 시행할 X-ray는?",
-    "a": "측와위 X-ray, lateral decubitus view",
-    "lock": "흉수 양/이동성 확인은 decubitus view."
+    "id": "PEDS2-2025-15to18-SA4B",
+    "source": "2025년 2학기 15~18조 2차 pretest 복기",
+    "source_rank": 4,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "태아 혈관 중 산소포화도가 가장 높은 혈관은?",
+    "answer": "제대 정맥",
+    "explanation": "원문 정답이 제대 정맥으로 적혀 있다.",
+    "tags": [
+      "신생아",
+      "태아순환"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_040",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 1학기 1·2조 객3",
-    "axis": "세균성 뇌수막염",
-    "q": "두통, 구토, Kernig sign 양성. CSF에서 WBC 증가, PMN 우세, 단백 증가, glucose 감소가 보인다. 진단은?",
-    "a": "세균성 뇌수막염",
-    "lock": "CSF PMN↑, protein↑, glucose↓ = bacterial meningitis."
+    "id": "PEDS2-2025-15to18-SA5",
+    "source": "2025년 2학기 15~18조 2차 pretest 복기",
+    "source_rank": 4,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "소아 Cardiomarker 평가 항목 두 가지는?",
+    "answer": "Troponin, NT pro-BNP",
+    "explanation": "원문 의국회의 답이 Troponin, NT pro-BNP로 적혀 있다.",
+    "tags": [
+      "심장",
+      "cardiomarker",
+      "의국회의"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_041",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 1학기 1·2조 객4",
-    "axis": "DiGeorge-심장기형",
-    "q": "DiGeorge/CATCH22 의심 얼굴·천명음 맥락에서 흔히 동반될 수 있는 심혈관 기형으로 복기된 답은?",
-    "a": "VSD",
-    "lock": "복기 답은 VSD. 일반적으로는 conotruncal anomaly 축도 같이 기억."
+    "id": "PEDS2-2025-19to23-Q1",
+    "source": "2025년 2학기 19~23조 2차 pretest 복기",
+    "source_rank": 5,
+    "origin": "uncertain_recall",
+    "priority": "P3 누적복기",
+    "question": "사진과 비슷한 병력, 검사소견에 림프구와 비정형 림프구가 많음(20%)이 있었고 보기로 전염단핵구증, 성홍열, 가와사키병 등이 제시되었다. 정답은?",
+    "answer": "원문 확인 필요",
+    "explanation": "원문에는 보기 일부만 있고 답이 명시되어 있지 않다.",
+    "tags": [
+      "감염",
+      "비정형림프구",
+      "unclear_answer"
+    ],
+    "uncertain": true
   },
   {
-    "id": "peds2_past_042",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 1학기 1·2조 주1",
-    "axis": "고유량 산소공급",
-    "q": "고유량 산소 공급 방법을 3가지 이상 쓰시오.",
-    "a": "기관내삽관, Venturi mask, 산소텐트, 산소후드 등",
-    "lock": "텐트/후드/벤투리/삽관을 세트로."
+    "id": "PEDS2-2025-19to23-Q2",
+    "source": "2025년 2학기 19~23조 2차 pretest 복기",
+    "source_rank": 5,
+    "origin": "uncertain_recall",
+    "priority": "P3 누적복기",
+    "question": "10개월 아이가 설사로 2 kg 빠지고 처져 있다. 필요한 처치는?",
+    "answer": "원문 확인 필요",
+    "explanation": "원문에는 경구 수액과 0.9% 생리식염수 정맥주사가 적혀 있으나 정답 표시가 없다.",
+    "tags": [
+      "탈수",
+      "수액",
+      "unclear_answer"
+    ],
+    "uncertain": true
   },
   {
-    "id": "peds2_past_043",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 1학기 1·2조 주2",
-    "axis": "급성췌장염 진단기준",
-    "q": "소아 급성 췌장염의 진단기준을 쓰시오.",
-    "a": "상복부 급성복통/압통, amylase 또는 lipase 정상상한 3배 이상, 영상검사상 급성췌장염 소견 중 2개 이상",
-    "lock": "통증·효소 3배·영상 중 2개."
+    "id": "PEDS2-2025-19to23-Q4",
+    "source": "2025년 2학기 19~23조 2차 pretest 복기",
+    "source_rank": 5,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "6세 남아가 콧물/기침 후 발열과 호흡부전, 늑간 함몰, 호기성 천명, 간이 갈비 아래 3횡지까지 만져졌다. 이 환자의 임상 경과로 나타날 수 없는 것은?",
+    "answer": "후두 연화증",
+    "explanation": "원문에 답이 5번 후두 연화증으로 표시되어 있다.",
+    "tags": [
+      "호흡기",
+      "세기관지염",
+      "variant"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_044",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025/2023 반복 백일해",
-    "axis": "백일해",
-    "q": "짧고 반복적인 발작성 기침 뒤 흡기성 whoop 또는 구토가 있는 소아. 원인균과 치료 항생제는?",
-    "a": "Bordetella pertussis / macrolide, 예: azithromycin, erythromycin, clarithromycin",
-    "lock": "Pertussis = Bordetella pertussis + macrolide."
+    "id": "PEDS2-2025-19to23-Q7",
+    "source": "2025년 2학기 19~23조 2차 pretest 복기",
+    "source_rank": 5,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "생후 5주 남아가 3일 전부터 잘 먹지 않고 반복 구토, 복부팽만이 있으며 DRE 후 가스가 나왔다. 진단은?",
+    "answer": "선천거대결장",
+    "explanation": "원문에 답이 선천거대결장으로 적혀 있다.",
+    "tags": [
+      "소화기",
+      "선천거대결장",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_045",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2023 25·28조 객2",
-    "axis": "활동결핵 접촉 영아",
-    "q": "생후 50일 영아가 활동성 결핵 환자인 할머니와 접촉했다. 처치는?",
-    "a": "TST 시행 + INH 예방치료 축",
-    "lock": "어린 영아 TB 접촉은 검사만 기다리지 말고 INH window prophylaxis를 생각."
+    "id": "PEDS2-2025-1to2-Q1",
+    "source": "2025년 1학기 1~2조 2차 Pretest 기출",
+    "source_rank": 6,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "생후 2일 남아가 담즙성 구토, 임신 중 양수과다증, 다운증후군, X-ray double bubble sign을 보인다. 진단은?",
+    "answer": "선천성 십이지장 폐쇄증",
+    "explanation": "원문 답이 선천성 십이지장 폐쇄증으로 명시되어 있으며 2026 최신 문항과 반복된다.",
+    "tags": [
+      "신생아",
+      "double_bubble",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_046",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2023 25·28조 객4",
-    "axis": "거짓막대장염",
-    "q": "항생제 치료 후 설사, 혈변, 복통이 생기고 대장내시경에서 막이 보인다. 진단은?",
-    "a": "거짓막 대장염, C. difficile 감염",
-    "lock": "항생제 후 pseudomembrane = C. difficile."
+    "id": "PEDS2-2025-1to2-Q2",
+    "source": "2025년 1학기 1~2조 2차 Pretest 기출",
+    "source_rank": 6,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "5세 여아가 발열과 함께 기침, 흉통, 복통이 있고 X-ray상 effusion이 있다. 다음에 시행할 것은?",
+    "answer": "측와위 X-ray",
+    "explanation": "원문 답이 측와위 x-ray로 적혀 있다.",
+    "tags": [
+      "호흡기",
+      "흉수",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_047",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2023 25·28조 객5",
-    "axis": "감염성 심내막염 예방",
-    "q": "감염성 심내막염 예방이 필요한 고위험 심질환으로 맞는 것은?",
-    "a": "교정하지 않은 청색증형 선천심질환 등",
-    "lock": "Unrepaired cyanotic CHD는 IE prophylaxis high-risk."
+    "id": "PEDS2-2025-1to2-Q3",
+    "source": "2025년 1학기 1~2조 2차 Pretest 기출",
+    "source_rank": 6,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "두통, 구토, Kernig 양성과 CSF WBC 1450, 중성구 90%, 단백 212, glucose 45 소견이 있다. 진단은?",
+    "answer": "세균성 뇌수막염",
+    "explanation": "원문 답이 세균성 뇌수막염으로 적혀 있다.",
+    "tags": [
+      "감염",
+      "뇌수막염"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_048",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2023 25·28조 주3",
-    "axis": "식도폐쇄",
-    "q": "34주 출생아. 출생 직후 호흡곤란, 산전 양수과다증, 비위관 삽입 시 저항감. 진단은?",
-    "a": "선천성 식도폐쇄, congenital esophageal atresia",
-    "lock": "NG tube 안 들어감 + polyhydramnios = esophageal atresia."
+    "id": "PEDS2-2025-1to2-SA1",
+    "source": "2025년 1학기 1~2조 2차 Pretest 기출",
+    "source_rank": 6,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "고유량 산소 공급 방법 세 가지 이상은?",
+    "answer": "기관내 삽관, venturi mask, 산소 텐트 등",
+    "explanation": "원문 답이 기관내 삽관, venturi mask, 산소 텐트 등으로 제시되어 있다.",
+    "tags": [
+      "호흡기",
+      "산소공급",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_049",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2023 25·28조 의국회의",
-    "axis": "수술 전 항생제",
-    "q": "수술 전 예방적 항생제의 가장 적절한 투여 시점은?",
-    "a": "수술 60분 전",
-    "lock": "수술 예방 항생제는 incision 전 60분 이내."
+    "id": "PEDS2-2025-1to2-SA2",
+    "source": "2025년 1학기 1~2조 2차 Pretest 기출",
+    "source_rank": 6,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "급성 췌장염 진단기준은?",
+    "answer": "상복부 급성복통과 압통, 혈액췌장효소 정상상한치 3배 이상 상승, 복부초음파/CT/MRI 소견 중 2가지 이상",
+    "explanation": "원문에 세 가지 기준과 '세 가지 중 2가지 이상'이라는 설명이 제시되어 있다.",
+    "tags": [
+      "소화기",
+      "췌장염"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_050",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2023 29·32조 주1",
-    "axis": "성홍열-S.pyogenes",
-    "q": "고열, 인후통, 딸기혀, 전신 홍반성 발진. 원인균과 항생제로 예방하는 합병증은?",
-    "a": "Streptococcus pyogenes / 류마티스열 등",
-    "lock": "Scarlet fever = GAS, 치료 목적 중 하나는 rheumatic fever 예방."
+    "id": "PEDS2-2025-1to2-SA3",
+    "source": "2025년 1학기 1~2조 2차 Pretest 기출",
+    "source_rank": 6,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "발작적 짧은 기침 후 구토가 있는 백일해 증상을 유발하는 균 이름은?",
+    "answer": "Bordetella pertussis",
+    "explanation": "원문 답이 Bordetella pertussis로 적혀 있으며 2023 복기와 반복된다.",
+    "tags": [
+      "감염",
+      "백일해",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_051",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2023 33·36조 주1",
-    "axis": "신생아 HSV",
-    "q": "13일 신생아. 수포성 발진, 경련, 축 늘어짐. 원인 병원체와 치료는?",
-    "a": "Herpes simplex virus / acyclovir",
-    "lock": "신생아 vesicle + seizure = HSV, acyclovir 즉시."
+    "id": "PEDS2-2025-1to2-SA4",
+    "source": "2025년 1학기 1~2조 2차 Pretest 기출",
+    "source_rank": 6,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "Hypoxic spell의 내과적 응급치료는?",
+    "answer": "Knee-chest position, 모르핀 주사, 혈관 수축제, 산소 공급, 철분/탈수 교정 등",
+    "explanation": "원문 답이 해당 항목들로 제시되어 있다.",
+    "tags": [
+      "심장",
+      "TOF",
+      "hypoxic_spell",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_052",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2023 33·36조 주2",
-    "axis": "부비동염 합병증",
-    "q": "부비동염의 합병증을 3가지 이상 쓰시오.",
-    "a": "안와/안와주위 연조직염, 안와농양, 수막염, 경막외농양, 경막하농양 등",
-    "lock": "Orbit complication + intracranial complication으로 묶는다."
+    "id": "PEDS2-2023-25to28-Q2",
+    "source": "2023년 2학기 2차 Pretest 기출 25~28조",
+    "source_rank": 7,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "생후 50일 된 아기가 내원했고 할머니가 활동결핵으로 진단되었다. 해야 하는 처치는?",
+    "answer": "TST + INH",
+    "explanation": "원문에 TST + INH로 정리되어 있다.",
+    "tags": [
+      "감염",
+      "결핵"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_053",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2023 33·36조 주3",
-    "axis": "PSVT",
-    "q": "9세 소아가 감기 중 심박수가 빠르고, ECG상 규칙적인 narrow QRS tachycardia가 제시되었다. 진단과 치료는?",
-    "a": "PSVT / adenosine",
-    "lock": "소아 regular narrow QRS tachycardia = PSVT, acute drug adenosine."
+    "id": "PEDS2-2023-25to28-Q3",
+    "source": "2023년 2학기 2차 Pretest 기출 25~28조",
+    "source_rank": 7,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "흉수 CXR 문항에서 필요한 촬영은?",
+    "answer": "측와위",
+    "explanation": "원문에 '흉수 CXR / 측와위'로 정리되어 있으며 2025 흉수 문항과 반복된다.",
+    "tags": [
+      "호흡기",
+      "흉수",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_054",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2023 37·40조 객3",
-    "axis": "수막알균",
-    "q": "발열, 두통, 경부강직. CSF에서 PMN 증가와 당 감소, Gram negative diplococci가 보인다. 원인균은?",
-    "a": "Neisseria meningitidis, 수막알균",
-    "lock": "Gram-negative diplococci meningitis = meningococcus."
+    "id": "PEDS2-2023-25to28-Q4",
+    "source": "2023년 2학기 2차 Pretest 기출 25~28조",
+    "source_rank": 7,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "7세 여아가 설사, 혈변, 발열, 복통으로 내원했고 2개월 전부터 중이염으로 항생제 치료를 받았다. 대장내시경 소견이 제시될 때 진단은?",
+    "answer": "거짓막 대장염",
+    "explanation": "원문 답이 거짓막 대장염으로 적혀 있다.",
+    "tags": [
+      "소화기",
+      "항생제",
+      "C_difficile"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_055",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2023 37·40조 주1",
-    "axis": "Kawasaki 감별",
-    "q": "Kawasaki disease의 감별진단을 5가지 쓰시오.",
-    "a": "성홍열, 홍역, Stevens-Johnson syndrome, toxic shock syndrome, EBV 감염 등",
-    "lock": "Kawasaki mimic은 감염성 발진질환과 점막/쇼크 질환으로 묶는다."
+    "id": "PEDS2-2023-25to28-SA1",
+    "source": "2023년 2학기 2차 Pretest 기출 25~28조",
+    "source_rank": 7,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "백일해 증례에서 균 이름과 치료 항생제 한 가지 이상은?",
+    "answer": "Bordetella pertussis; erythromycin, clarithromycin, azithromycin",
+    "explanation": "원문에 균 이름과 macrolide 항생제들이 제시되어 있다.",
+    "tags": [
+      "감염",
+      "백일해",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_056",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2023 37·40조 주2",
-    "axis": "결핵 4제",
-    "q": "객혈, 피로, CXR상 cavity/infiltration으로 결핵이 의심된다. 초기 4제 약제는?",
-    "a": "INH, RMP, EMB, PZA",
-    "lock": "활동성 결핵 기본 4제 = isoniazid, rifampin, ethambutol, pyrazinamide."
+    "id": "PEDS2-2023-25to28-SA2",
+    "source": "2023년 2학기 2차 Pretest 기출 25~28조",
+    "source_rank": 7,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "소아가 성인에 비해 호흡기가 불리한 점 두 가지 이상은?",
+    "answer": "기도가 좁아 환기 장애가 용이함; 기관지 내 점액선이 발달해 분비물이 많음; 폐포 면적이 작아 기체교환능력이 부진; 호흡 관련 근육이 미숙함",
+    "explanation": "원문 답에 네 가지 항목이 제시되어 있다.",
+    "tags": [
+      "호흡기",
+      "소아특성"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_057",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2023 21·24조 객1",
-    "axis": "rotavirus",
-    "q": "생후 8일 환아. 묽은 변과 복부팽만, 같은 조리원에 비슷한 증상을 보이는 환아가 다수. 원인 병원체는?",
-    "a": "Rotavirus",
-    "lock": "조리원 신생아 집단 설사 복기 답은 rotavirus."
+    "id": "PEDS2-2023-25to28-SA3",
+    "source": "2023년 2학기 2차 Pretest 기출 25~28조",
+    "source_rank": 7,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "34주 2.5 kg으로 태어난 아기가 출생 직후 호흡곤란이 있었고 산전 양수과다증, 비위관 삽입 시 저항감이 있었다. 진단은?",
+    "answer": "Congenital esophageal atresia",
+    "explanation": "원문 답이 Congenital esophageal atresia로 적혀 있다.",
+    "tags": [
+      "신생아",
+      "식도폐쇄"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_058",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2023 21·24조 객2",
-    "axis": "PS",
-    "q": "7세 남아. LUSB midsystolic murmur, P2 감소, CXR pulmonary artery bulging. 진단은?",
-    "a": "Pulmonary stenosis",
-    "lock": "LUSB systolic murmur + P2 감소 + PA bulging = PS."
+    "id": "PEDS2-2023-25to28-SA5",
+    "source": "2023년 2학기 2차 Pretest 기출 25~28조",
+    "source_rank": 7,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "수술 전 가장 적절한 항생제 투여 시점은?",
+    "answer": "수술 60분 전",
+    "explanation": "원문 컨퍼런스 문제 답이 수술 60분 전으로 적혀 있다.",
+    "tags": [
+      "감염관리",
+      "항생제",
+      "의국회의"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_059",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2023 21·24조 객3",
-    "axis": "epiglottitis",
-    "q": "후두경 검사에서 후두개가 붓고 붉다. 가능한 치료 3가지는?",
-    "a": "기도삽관, 비기관삽관 또는 기관절개술, 항생제",
-    "lock": "Epiglottitis는 기도확보가 먼저, 항생제는 그 다음."
+    "id": "PEDS2-2023-29to32-Q1",
+    "source": "2023년 2학기 2차 Pretest 기출 29~32조",
+    "source_rank": 8,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "유치원생이 오후 1시 김밥을 먹고 오후 4시 설사, 동료 10명도 같은 증상을 보일 때 감염균은?",
+    "answer": "포도알균",
+    "explanation": "원문 보기에 포도알균이 있고, 2026 최신 인계가 동일 키워드의 답을 포도알균으로 확정한다.",
+    "tags": [
+      "감염",
+      "식중독",
+      "포도알균",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_060",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2023 21·24조 객5",
-    "axis": "식도 이물",
-    "q": "2세 아이가 뭔가를 삼킨 뒤 먹으려 하지 않는다. AP/lateral CXR에서 동전 같은 이물이 기관 뒤쪽, 즉 식도 쪽에 걸린다. 처치는?",
-    "a": "응급 위식도 내시경 또는 내시경 제거",
-    "lock": "식도 이물 + 섭취 거부 = 내시경 제거."
+    "id": "PEDS2-2023-29to32-SA1",
+    "source": "2023년 2학기 2차 Pretest 기출 29~32조",
+    "source_rank": 8,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "7세 남아가 고열, 인후통, 전신 홍반성 발진, 인두 충혈, 딸기혀를 보인다. 원인 세균과 항생제로 예방 가능한 합병증은?",
+    "answer": "Streptococcus pyogenes; 류마티스열, 중이염, 경부림프절염",
+    "explanation": "원문 답이 원인균과 예방 합병증으로 제시되어 있다.",
+    "tags": [
+      "감염",
+      "성홍열"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_past_061",
-    "origin": "past_recall",
-    "tier": "P2",
-    "mode": "야마",
-    "source": "2025 11·12·13·14조 객5",
-    "axis": "생리적 폐동맥분지협착음",
-    "q": "생후 18일 남아. LUSB 2/6 ejection murmur, P2, S2 splitting, ejection click 없음. 진단은?",
-    "a": "생리적 폐동맥분지협착음, physiologic peripheral pulmonary stenosis",
-    "lock": "신생아 LUSB ejection murmur + click 없음 = physiologic PPS."
+    "id": "PEDS2-2023-29to32-SA4",
+    "source": "2023년 2학기 2차 Pretest 기출 29~32조",
+    "source_rank": 8,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "고유량 산소 공급 방법 세 가지는?",
+    "answer": "산소 텐트, 산소 후드, 기관내 삽관, venturi mask",
+    "explanation": "원문 답에 네 가지 방법이 제시되어 있으며 2025 1~2조와 반복된다.",
+    "tags": [
+      "호흡기",
+      "산소공급",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_conf_062",
-    "origin": "conference",
-    "tier": "P1",
-    "mode": "의국회의 후보",
-    "source": "강렬 실제 의국회의 메모: DSD/무월경 case",
-    "axis": "45,X/46,XY mixed gonadal dysgenesis",
-    "q": "16세 phenotypic female의 primary amenorrhea. Short stature/Turner stigmata, SRY 양성, AMH low, uterus 존재, GnRH stimulation에서 LH/FSH 상승, hCG stimulation 양성. 핵심 진단축과 처치는?",
-    "a": "45,X/46,XY mosaic mixed gonadal dysgenesis / Y material이 있는 dysgenetic gonad는 gonadoblastoma 위험 때문에 gonadectomy",
-    "lock": "Y material + dysgenetic/streak gonad = gonadoblastoma risk → gonadectomy."
+    "id": "PEDS2-2023-33to36-Q1",
+    "source": "2023년 2학기 2차 Pretest 기출 33~36조",
+    "source_rank": 9,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "6세 남아가 얼굴/두피/목/몸통/사타구니 발진, 피부 벗겨짐, Nikolsky 징후 양성을 보인다. 원인균은?",
+    "answer": "포도알균",
+    "explanation": "원문 보기에서 포도알균이 정답 맥락으로 제시되며 4S syndrome과 연결되어 있다.",
+    "tags": [
+      "피부",
+      "SSSS",
+      "포도알균",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_conf_063",
-    "origin": "conference",
-    "tier": "P1",
-    "mode": "의국회의 후보",
-    "source": "2026-05-14 의국회의: NGS/rWGS",
-    "axis": "NGS-rWGS-Trio WGS",
-    "q": "NGS, panel, WES, WGS, rWGS, Trio WGS를 각각 어떻게 구분하는가?",
-    "a": "NGS는 sequencing 기술/platform. Panel/WES/WGS는 검사 범위. WES는 exon, WGS는 whole genome. rWGS는 급성 중증 신생아·소아 희귀질환에서 빠른 진단/치료결정 목적. Trio WGS는 환아+부모 분석으로 de novo/compound heterozygous/VUS 해석에 유리",
-    "lock": "기술은 NGS, 범위는 panel-WES-WGS, 임상 속도는 rWGS, 해석력은 trio."
+    "id": "PEDS2-2023-33to36-Q5",
+    "source": "2023년 2학기 2차 Pretest 기출 33~36조",
+    "source_rank": 9,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "3세 환아가 주기적 복통이 있고 내원 3시간 전부터 갑자기 10~15분 간격 복통과 혈변을 보인다. 검사는?",
+    "answer": "복부초음파",
+    "explanation": "원문 보기 중 복부초음파가 제시되며 2025 장중첩증 문항과 반복된다.",
+    "tags": [
+      "소화기",
+      "장중첩증",
+      "repeat"
+    ],
+    "uncertain": false
   },
   {
-    "id": "peds2_conf_064",
-    "origin": "conference",
-    "tier": "P1",
-    "mode": "의국회의 후보",
-    "source": "2026-05-14 의국회의: NGS/rWGS",
-    "axis": "유전검사 해석",
-    "q": "rWGS/NGS 의국회의에서 sequencing 자체보다 더 중요하다고 강조된 해석 축은?",
-    "a": "Phenotype과 variant database 기반 해석, 국내 데이터 확보",
-    "lock": "유전검사는 읽는 것보다 phenotype에 맞게 해석하는 것이 핵심."
+    "id": "PEDS2-2023-33to36-SA1",
+    "source": "2023년 2학기 2차 Pretest 기출 33~36조",
+    "source_rank": 9,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "13일 된 신생아가 수포성 발진, 경련, 축 늘어짐을 보인다. 원인 병원체와 치료는?",
+    "answer": "Herpes simplex virus; acyclovir",
+    "explanation": "원문에 병원체 HSV와 치료 acyclovir가 제시되어 있다.",
+    "tags": [
+      "신생아",
+      "HSV"
+    ],
+    "uncertain": false
+  },
+  {
+    "id": "PEDS2-2023-33to36-SA2",
+    "source": "2023년 2학기 2차 Pretest 기출 33~36조",
+    "source_rank": 9,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "부비동염의 합병증 세 가지 이상은?",
+    "answer": "안와 및 안와주위 연조직염과 농양; 수막염; 경막외 또는 경막하 농양",
+    "explanation": "원문 답에 안와 합병증과 두개강내 합병증이 제시되어 있다.",
+    "tags": [
+      "이비인후",
+      "부비동염"
+    ],
+    "uncertain": false
+  },
+  {
+    "id": "PEDS2-2023-33to36-SA3",
+    "source": "2023년 2학기 2차 Pretest 기출 33~36조",
+    "source_rank": 9,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "9세 소아가 감기로 치료 중 심박수가 빠르다고 병원에 왔고 심전도 사진이 제시되었다. 진단과 치료는?",
+    "answer": "PSVT; adenosine",
+    "explanation": "원문에 진단 PSVT, 치료 adenosine으로 제시되어 있다.",
+    "tags": [
+      "심장",
+      "부정맥"
+    ],
+    "uncertain": false
+  },
+  {
+    "id": "PEDS2-2023-37to40-Q3",
+    "source": "2023년 2학기 2차 Pretest 기출 37~40조",
+    "source_rank": 10,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "15세가 남아프리카 방문 후 발열, 두통, 경부 강직을 보이고 CSF PMN 증가, 당 감소, Gram negative 쌍알균이 확인된다. 원인균은?",
+    "answer": "수막알균(Neisseria meningitis)",
+    "explanation": "원문 보기에서 수막알균 - Neisseria meningitis가 정답으로 제시되어 있다.",
+    "tags": [
+      "감염",
+      "뇌수막염"
+    ],
+    "uncertain": false
+  },
+  {
+    "id": "PEDS2-2023-37to40-Q5",
+    "source": "2023년 2학기 2차 Pretest 기출 37~40조",
+    "source_rank": 10,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "2세 아이가 30분 전 무언가를 삼켰고 CXR AP/lateral에서 동전 같은 것이 목에 걸려 있으며 lateral에서 기관 뒤에 위치한다. 다음 조치는?",
+    "answer": "응급 위식도 내시경",
+    "explanation": "원문 보기 중 기관 뒤 위치의 식도 이물에 해당하는 처치로 응급 위식도 내시경이 제시되어 있다.",
+    "tags": [
+      "응급",
+      "이물",
+      "식도이물"
+    ],
+    "uncertain": false
+  },
+  {
+    "id": "PEDS2-2023-37to40-SA1",
+    "source": "2023년 2학기 2차 Pretest 기출 37~40조",
+    "source_rank": 10,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "가와사키병 감별진단 다섯 가지는?",
+    "answer": "성홍열, 홍역, SJS, TSS, EBV 감염",
+    "explanation": "원문은 암기문구와 함께 성홍열, 홍역, SJS, TSS, EBV 감염을 제시한다.",
+    "tags": [
+      "가와사키병",
+      "감별진단"
+    ],
+    "uncertain": false
+  },
+  {
+    "id": "PEDS2-2023-37to40-SA2",
+    "source": "2023년 2학기 2차 Pretest 기출 37~40조",
+    "source_rank": 10,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "객혈, 최근 피로 증가, CXR cavity/infiltration 소견이 있는 환아의 진단과 사용하는 약제 네 가지는?",
+    "answer": "결핵; INH, RMP, EMB, PZA",
+    "explanation": "원문에 진단 결핵과 네 가지 약제가 제시되어 있다.",
+    "tags": [
+      "감염",
+      "결핵"
+    ],
+    "uncertain": false
+  },
+  {
+    "id": "PEDS2-2023-37to40-SA4",
+    "source": "2023년 2학기 2차 Pretest 기출 37~40조",
+    "source_rank": 10,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "세기관지염과 천식을 감별할 때 천식임을 의심할 수 있는 소견 세 가지 이상은?",
+    "answer": "천식의 가족력, 알레르기 가족력, 베타2 효현제에 의한 호전",
+    "explanation": "원문 답에 세 가지가 제시되어 있으며 천식 감별 반복 테마이다.",
+    "tags": [
+      "호흡기",
+      "천식",
+      "repeat"
+    ],
+    "uncertain": false
+  },
+  {
+    "id": "PEDS2-2023-21to24-Q1",
+    "source": "2023년 2학기 2차 Pretest 기출 21~24조",
+    "source_rank": 11,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "생후 8일 환아가 묽은 변과 복부팽만으로 내원했고 같은 조리원에 비슷한 증상을 가진 환아가 다수이다. 원인 병원체는?",
+    "answer": "로타바이러스",
+    "explanation": "원문 답이 로타바이러스로 적혀 있다.",
+    "tags": [
+      "감염",
+      "설사",
+      "로타바이러스"
+    ],
+    "uncertain": false
+  },
+  {
+    "id": "PEDS2-2023-21to24-Q2",
+    "source": "2023년 2학기 2차 Pretest 기출 21~24조",
+    "source_rank": 11,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "7세 남아가 LUSB midsystolic murmur grade 3/6, P2 감소, CXR 폐동맥 bulging을 보인다. 진단은?",
+    "answer": "PS",
+    "explanation": "원문 보기 중 PS가 해당 문항의 답 맥락이며 2026 5~8조 PS 문항과 변형 반복된다.",
+    "tags": [
+      "심장",
+      "폐동맥협착",
+      "variant",
+      "repeat"
+    ],
+    "uncertain": false
+  },
+  {
+    "id": "PEDS2-2023-21to24-Q3",
+    "source": "2023년 2학기 2차 Pretest 기출 21~24조",
+    "source_rank": 11,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "4세 남아 후두경 검사에서 후두개가 부풀고 붉은 빛이다. 가능한 치료 세 가지는?",
+    "answer": "기도삽관, 비기관삽관, 기관절개술 + 항생제",
+    "explanation": "원문에 치료 세 가지가 제시되어 있다.",
+    "tags": [
+      "상기도",
+      "후두개염"
+    ],
+    "uncertain": false
+  },
+  {
+    "id": "PEDS2-2023-21to24-Q5",
+    "source": "2023년 2학기 2차 Pretest 기출 21~24조",
+    "source_rank": 11,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "TOF로 단락수술 후 추적관찰 중인 3개월 남아가 기침/콧물 후 호흡곤란, SpO2 86%, wheezing, boot-shaped heart를 보인다. 원인 바이러스는?",
+    "answer": "RSV",
+    "explanation": "원문 보기에 RSV가 있으며 세기관지염/TOF 맥락의 반복 테마이다.",
+    "tags": [
+      "호흡기",
+      "RSV",
+      "TOF"
+    ],
+    "uncertain": false
+  },
+  {
+    "id": "PEDS2-2023-21to24-SA2",
+    "source": "2023년 2학기 2차 Pretest 기출 21~24조",
+    "source_rank": 11,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "13세 여아가 액체는 삼키나 고체는 삼키지 못하고 식후 구토와 3 kg 체중감소가 있으며 CXR가 제시되었다. 진단은?",
+    "answer": "식도이완불능증",
+    "explanation": "원문 답이 식도이완불능증으로 적혀 있다.",
+    "tags": [
+      "소화기",
+      "식도이완불능증"
+    ],
+    "uncertain": false
+  },
+  {
+    "id": "PEDS2-2023-21to24-SA3",
+    "source": "2023년 2학기 2차 Pretest 기출 21~24조",
+    "source_rank": 11,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "심한 하기도 질환을 시사하는 소견 세 가지는?",
+    "answer": "청색증, 곤봉지, 호흡곤란",
+    "explanation": "원문 답이 청색증, 곤봉지, 호흡곤란으로 제시되어 있다.",
+    "tags": [
+      "호흡기",
+      "하기도"
+    ],
+    "uncertain": false
+  },
+  {
+    "id": "PEDS2-2023-21to24-SA4",
+    "source": "2023년 2학기 2차 Pretest 기출 21~24조",
+    "source_rank": 11,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "편도 인두부 삼출액, 경부 림프절 비대, 림프구 우세 WBC 증가, AST/ALT 상승, 이종친화항체 양성이 있다. 진단명과 치료는?",
+    "answer": "전염 단핵구증; 대증치료",
+    "explanation": "원문에 진단명 전염 단핵구증과 대증치료가 제시되어 있다.",
+    "tags": [
+      "감염",
+      "전염단핵구증"
+    ],
+    "uncertain": false
+  },
+  {
+    "id": "PEDS2-2023-21to24-SA5",
+    "source": "2023년 2학기 2차 Pretest 기출 21~24조",
+    "source_rank": 11,
+    "origin": "actual_recall",
+    "priority": "P3 누적복기",
+    "question": "NGT 또는 NJT를 통한 feeding이 얼마 이상 필요하면 PEG 또는 PEG-J를 고려해야 하는가?",
+    "answer": "3-6 weeks",
+    "explanation": "원문 빈칸 답이 3-6 weeks로 제시되어 있다.",
+    "tags": [
+      "영양",
+      "PEG"
+    ],
+    "uncertain": false
   }
 ]
