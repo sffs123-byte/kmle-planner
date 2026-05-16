@@ -385,7 +385,18 @@ def build_hi_card(src: dict, idx: int) -> dict:
     }
 
 
+def load_existing_full_explanations() -> dict[str, str]:
+    if not DATA_FULL.exists():
+        return {}
+    try:
+        rows = json.loads(DATA_FULL.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    return {str(c.get("id")): str(c.get("enhanced_explanation") or "").strip() for c in rows if c.get("id") and c.get("enhanced_explanation")}
+
+
 def load_all_records() -> list[dict]:
+    existing_enhanced = load_existing_full_explanations()
     non_hi_images = load_non_hi_image_map()
     records: list[dict] = []
 
@@ -434,6 +445,8 @@ def load_all_records() -> list[dict]:
     for n, rec in enumerate(records, 1):
         rec["num"] = n
         rec["tags"] = list(dict.fromkeys(rec.get("tags", [])))
+        if rec.get("id") in existing_enhanced:
+            rec["enhanced_explanation"] = existing_enhanced[rec["id"]]
     return records
 
 

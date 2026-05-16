@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kmle-planner-20260516T232025Z';
+const CACHE_NAME = 'kmle-planner-20260516T234453Z';
 const ASSETS = [
   './',
   './index.html',
