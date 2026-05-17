@@ -83,10 +83,26 @@ CURATED_NON_HI_IMAGE_EXCLUDES = {
     ("PEDS2-2023-33to36-SA3", "non_hi_qimg_016"),
 }
 
+# These are front-safe original problem images, not answer-only source crops.
+# They should appear before answer reveal because the visual finding is part
+# of the question stem.
+CURATED_FRONT_IMAGE_EXACT = {
+    ("PEDS2-2025-15to18-Q1", "non_hi_qimg_038"),  # adenovirus eye/periorbital photo
+    ("PEDS2-2025-19to23-Q1", "non_hi_qimg_037"),  # infectious mononucleosis/PBS source image
+    ("PEDS2-2025-11to14-Q6", "non_hi_qimg_041"),  # croup steeple sign
+}
+
+CURATED_HI_DUPLICATES = {
+    # Same original question as HI2-021. Keep the original image on the front,
+    # but do not duplicate the whole answer/explanation on reveal.
+    "PEDS2-2025-15to18-Q1": "PEDS2-HI2-021",
+}
+
 CURATED_CARD_FIXES = {
     "PEDS2-2025-15to18-Q1": {
-        "question": "객Q. 2세 여아가 발열과 눈 충혈로 병원에 왔다. 결막이 충혈되어 있고, 눈 주위에 황색 분비물과 인두 부위의 발적이 있었다. 목 림프절이 만져진다. 원인은?\n① 리노바이러스 ② 노로바이러스 ③ 파르보바이러스\n④ 아데노바이러스 ⑤ RSV",
-        "answer": "아데노바이러스",
+        "question": "객Q. 2세 여아가 발열과 눈 충혈로 병원에 왔다. 결막이 충혈되어 있고, 눈 주위에\n황색 분비물과 인두 부위의 발적이 있었다. 목 림프절이 만져진다. 원인은?\n① 리노바이러스 ② 노로바이러스 ③ 파르보바이러스\n④ 아데노바이러스 ⑤ RSV",
+        "answer": "HI2-021과 동일 문항",
+        "same_as_hi": "PEDS2-HI2-021",
         "uncertain": False,
         "enhanced_explanation": "🧭 Big picture\n발열 + 결막충혈/분비물 + 인두 발적 + 경부림프절이면 아데노바이러스의 인두결막열(pharyngoconjunctival fever)을 먼저 떠올린다.\n\n🔎 핵심 단서\n- 2세 소아의 발열\n- 결막 충혈과 눈 주위 황색 분비물\n- 인두 발적\n- 목 림프절 촉지\n- 선택지 중 adenovirus가 이 조합을 가장 잘 설명\n\n👣 시험장 사고 흐름\n1단계: 눈 증상만 보지 말고 인두/발열을 같이 묶는다.\n2단계: 인두염 + 결막염이면 adenovirus를 먼저 올린다.\n3단계: RSV는 세기관지염, 노로바이러스는 위장관, parvovirus는 발진/혈액 축이라 stem과 거리가 있다.\n\n🧠 쉽게 이해하기\n아데노바이러스는 목과 눈을 동시에 건드리는 바이러스라고 잡으면 된다. 그냥 눈곱 문제처럼 보여도, fever와 pharyngitis가 같이 있으면 bacterial conjunctivitis보다 adenovirus 쪽으로 기운다.\n\n📊 감별/오답 제거\nAdenovirus: 발열, 인두염, 결막염.\nRhinovirus: 감기/콧물 중심.\nNorovirus: 구토·설사 중심.\nParvovirus B19: 전염홍반/혈액질환 축.\nRSV: 영아 세기관지염, wheezing 축.\n\n✅ 3초 Lock line\n소아 발열 + 인두염 + 결막염 = 아데노바이러스.\n\n🎯 암기 확인 퀴즈\nQ. 인두결막열의 대표 원인 바이러스는?\nA. 아데노바이러스."
     },
@@ -267,9 +283,14 @@ def load_non_hi_image_map() -> dict[str, list[dict]]:
             if (card_id, curated_id) in CURATED_NON_HI_IMAGE_EXCLUDES:
                 continue
             if int(cand.get("score", 0)) >= 4 and cand.get("path"):
-                item = copy_asset(cand["path"], card_id or "nonhi", curated_id or "nonhi")
+                is_front_exact = (card_id, curated_id) in CURATED_FRONT_IMAGE_EXACT
+                item_kind = "nonhi_exact" if is_front_exact else (curated_id or "nonhi")
+                item = copy_asset(cand["path"], card_id or "nonhi", item_kind)
                 if item:
-                    item["caption"] = f"non-HI candidate · score {cand.get('score')} · {cand.get('curated_id', '')}"
+                    item["caption"] = "원문 문제 이미지" if is_front_exact else f"non-HI candidate · score {cand.get('score')} · {cand.get('curated_id', '')}"
+                    if is_front_exact:
+                        item["front_visible"] = True
+                        item["curated_id"] = curated_id
                     usable.append(item)
         if usable:
             out[card_id] = usable
@@ -293,7 +314,14 @@ def apply_curated_card_fixes(card: dict) -> None:
         card["explanation"] = normalize_multiline(fix["explanation"])
     if "uncertain" in fix:
         card["uncertain"] = bool(fix["uncertain"])
-    card["tags"] = list(dict.fromkeys(card.get("tags", []) + ["curated-front-fix"]))
+    if "same_as_hi" in fix:
+        card["same_as_hi"] = normalize_space(fix["same_as_hi"])
+    if card.get("id") in CURATED_HI_DUPLICATES:
+        card["same_as_hi"] = CURATED_HI_DUPLICATES[str(card.get("id"))]
+    extra_tags = ["curated-front-fix"]
+    if card.get("same_as_hi"):
+        extra_tags.append("HI-duplicate")
+    card["tags"] = list(dict.fromkeys(card.get("tags", []) + extra_tags))
 
 
 def mask_hi_front(raw: str) -> str:
@@ -372,7 +400,7 @@ def images_html(card: dict, where: str) -> str:
     figs = []
     for img in imgs:
         # Avoid text-answer crops on the front. Embedded images are safer; source crops stay answer/guide only.
-        if where == "front" and img.get("kind") not in {"embedded", "linked", "nonhi_exact"}:
+        if where == "front" and not (img.get("front_visible") or img.get("kind") in {"embedded", "linked", "nonhi_exact"}):
             continue
         caption = img.get("caption") or img.get("kind") or "image"
         figs.append(f"""
@@ -405,7 +433,22 @@ def format_tutor_html(text: object) -> str:
     return "".join(blocks)
 
 
+def duplicate_answer_html(card: dict) -> str:
+    same = normalize_space(card.get("same_as_hi"))
+    return f"""
+<section class="kmle-answer" style="display:flex;flex-direction:column;gap:12px;">
+  <div style="border-left:4px solid #2563eb;background:#eff6ff;padding:12px 14px;border-radius:10px;">
+    <div style="font-size:12px;font-weight:900;color:#1d4ed8;margin-bottom:6px;letter-spacing:.04em;">답</div>
+    <div style="font-size:20px;line-height:1.55;color:#052e16;"><strong>HI와 동일 문항입니다.</strong></div>
+    <div style="margin-top:8px;font-size:13px;line-height:1.65;color:#334155;">{e(same)} 카드와 같은 원문이라, 여기서는 중복 해설을 반복하지 않습니다.</div>
+  </div>
+</section>
+""".strip()
+
+
 def answer_html(card: dict) -> str:
+    if card.get("same_as_hi"):
+        return duplicate_answer_html(card)
     explanation = card.get("enhanced_explanation") or card.get("explanation") or ""
     raw_block = ""
     if card.get("raw_problem"):
@@ -444,6 +487,17 @@ def answer_html(card: dict) -> str:
 
 
 def guide_html(card: dict) -> str:
+    if card.get("same_as_hi"):
+        return f"""
+<section class="kmle-guide" style="line-height:1.7;">
+  <h4>문제</h4>
+  <p>{fmt(card.get('display_question') or card.get('question'))}</p>
+  {images_html(card, 'front')}
+  <h4>답</h4>
+  <p><strong>HI와 동일 문항입니다.</strong></p>
+  <p>{e(card.get('same_as_hi'))} 카드와 같은 원문이라 중복 해설을 반복하지 않습니다.</p>
+</section>
+""".strip()
     return f"""
 <section class="kmle-guide" style="line-height:1.7;">
   <h4>문제</h4>

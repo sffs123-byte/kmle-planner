@@ -203,8 +203,8 @@
     "source_rank": 31,
     "origin": "actual_recall",
     "priority": "P3 누적복기",
-    "question": "객Q. 2세 여아가 발열과 눈 충혈로 병원에 왔다. 결막이 충혈되어 있고, 눈 주위에 황색 분비물과 인두 부위의 발적이 있었다. 목 림프절이 만져진다. 원인은?\n① 리노바이러스 ② 노로바이러스 ③ 파르보바이러스\n④ 아데노바이러스 ⑤ RSV",
-    "answer": "아데노바이러스",
+    "question": "객Q. 2세 여아가 발열과 눈 충혈로 병원에 왔다. 결막이 충혈되어 있고, 눈 주위에\n황색 분비물과 인두 부위의 발적이 있었다. 목 림프절이 만져진다. 원인은?\n① 리노바이러스 ② 노로바이러스 ③ 파르보바이러스\n④ 아데노바이러스 ⑤ RSV",
+    "answer": "HI2-021과 동일 문항",
     "explanation": "원문에 정답이 아데노바이러스로 적혀 있다.",
     "tags": [
       "감염",
@@ -216,23 +216,27 @@
       "core79",
       "actual_recall",
       "curated-front-fix",
+      "HI-duplicate",
       "12장 감염"
     ],
     "uncertain": false,
     "enhanced_explanation": "🧭 Big picture\n발열 + 결막충혈/분비물 + 인두 발적 + 경부림프절이면 아데노바이러스의 인두결막열(pharyngoconjunctival fever)을 먼저 떠올린다.\n\n🔎 핵심 단서\n- 2세 소아의 발열\n- 결막 충혈과 눈 주위 황색 분비물\n- 인두 발적\n- 목 림프절 촉지\n- 선택지 중 adenovirus가 이 조합을 가장 잘 설명\n\n👣 시험장 사고 흐름\n1단계: 눈 증상만 보지 말고 인두/발열을 같이 묶는다.\n2단계: 인두염 + 결막염이면 adenovirus를 먼저 올린다.\n3단계: RSV는 세기관지염, 노로바이러스는 위장관, parvovirus는 발진/혈액 축이라 stem과 거리가 있다.\n\n🧠 쉽게 이해하기\n아데노바이러스는 목과 눈을 동시에 건드리는 바이러스라고 잡으면 된다. 그냥 눈곱 문제처럼 보여도, fever와 pharyngitis가 같이 있으면 bacterial conjunctivitis보다 adenovirus 쪽으로 기운다.\n\n📊 감별/오답 제거\nAdenovirus: 발열, 인두염, 결막염.\nRhinovirus: 감기/콧물 중심.\nNorovirus: 구토·설사 중심.\nParvovirus B19: 전염홍반/혈액질환 축.\nRSV: 영아 세기관지염, wheezing 축.\n\n✅ 3초 Lock line\n소아 발열 + 인두염 + 결막염 = 아데노바이러스.\n\n🎯 암기 확인 퀴즈\nQ. 인두결막열의 대표 원인 바이러스는?\nA. 아데노바이러스.",
     "layer": "core79",
     "mode": "주관식",
-    "display_question": "객Q. 2세 여아가 발열과 눈 충혈로 병원에 왔다. 결막이 충혈되어 있고, 눈 주위에 황색 분비물과 인두 부위의 발적이 있었다. 목 림프절이 만져진다. 원인은?\n① 리노바이러스 ② 노로바이러스 ③ 파르보바이러스\n④ 아데노바이러스 ⑤ RSV",
+    "display_question": "객Q. 2세 여아가 발열과 눈 충혈로 병원에 왔다. 결막이 충혈되어 있고, 눈 주위에\n황색 분비물과 인두 부위의 발적이 있었다. 목 림프절이 만져진다. 원인은?\n① 리노바이러스 ② 노로바이러스 ③ 파르보바이러스\n④ 아데노바이러스 ⑤ RSV",
     "section": "P3 누적복기",
     "images": [
       {
-        "src": "assets/peds_pretest2_full/PEDS2-2025-15to18-Q1__non_hi_qimg_038__non_hi_qimg_038.png",
-        "kind": "non_hi_qimg_038",
+        "src": "assets/peds_pretest2_full/PEDS2-2025-15to18-Q1__nonhi_exact__non_hi_qimg_038.png",
+        "kind": "nonhi_exact",
         "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_image_extract_20260517/curated_question_images/non_hi_qimg_038.png",
-        "caption": "non-HI candidate · score 8 · non_hi_qimg_038"
+        "caption": "원문 문제 이미지",
+        "front_visible": true,
+        "curated_id": "non_hi_qimg_038"
       }
     ],
     "has_image": true,
+    "same_as_hi": "PEDS2-HI2-021",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
     "num": 7
@@ -300,10 +304,12 @@
     "section": "P3 누적복기",
     "images": [
       {
-        "src": "assets/peds_pretest2_full/PEDS2-2025-19to23-Q1__non_hi_qimg_037__non_hi_qimg_037.png",
-        "kind": "non_hi_qimg_037",
+        "src": "assets/peds_pretest2_full/PEDS2-2025-19to23-Q1__nonhi_exact__non_hi_qimg_037.png",
+        "kind": "nonhi_exact",
         "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_image_extract_20260517/curated_question_images/non_hi_qimg_037.png",
-        "caption": "non-HI candidate · score 12 · non_hi_qimg_037"
+        "caption": "원문 문제 이미지",
+        "front_visible": true,
+        "curated_id": "non_hi_qimg_037"
       }
     ],
     "has_image": true,
@@ -4898,10 +4904,12 @@
     "enhanced_explanation": "🧭 Big picture\n개 짖는 듯한 기침, 상기도 협착, X-ray상 좁아진 subglottic airway는 Croup, 즉 급성 폐쇄성 후두기관기관지염을 가리킨다. 원인으로 가장 대표적인 건 parainfluenza virus. 소아 상기도가 좁은데 염증으로 더 부으면 흡기 stridor와 barking cough가 생기는 구조야.\n\n🔎 핵심 단서\n- ⭕ 개짖는 기침: barking cough = croup 대표 trigger\n- ⭕ 상기도 좁아짐: subglottic narrowing, steeple sign\n- ⭕ 병인 질문: parainfluenza virus가 1순위\n- ❌ 침 흘림/삼킴곤란/독성 외관: 후두개염이나 인두후부농양 쪽 단서\n\n👣 시험장 사고 흐름\n1단계: 기침 소리 확인 → barking이면 croup 먼저.\n2단계: X-ray가 subglottic narrowing/steeple sign인지 확인.\n3단계: 원인균은 parainfluenza virus로 답.\n4단계: 치료 문제로 바뀌면 mild는 dexamethasone, 중등도 이상 stridor는 nebulized epinephrine 추가.\n\n🧠 쉽게 이해하기\nCroup은 성대 아래쪽 기도가 감기 바이러스 때문에 붓는 병이야. 기도는 원래 빨대인데, 아이 빨대는 어른보다 훨씬 얇다. 조금만 부어도 공기가 지나갈 때 소리가 커지고, 기침이 “컹컹” 개 짖는 것처럼 들린다. parainfluenza가 대표 범인이라 시험에서 거의 세트 메뉴처럼 나온다. X-ray steeple sign은 교회 첨탑처럼 위로 뾰족하게 좁아진 모양이라고 생각하면 된다.\n\n📊 감별/오답 제거\n비교표\n- Croup: barking cough, hoarseness, inspiratory stridor, steeple sign, parainfluenza.\n- 후두개염: 고열, 침흘림, tripod, thumb sign, Hib, 기도확보 우선.\n- 세균성 기관염: 독성 외관, 고열, thick secretion, 항생제/기도관리.\n- 이물흡인: 갑작스런 질식, 음식/장난감 병력, 발열 전구증상 없음.\n- 인두후부농양: 목 뒤로 젖힘, 침흘림, neck lateral widening.\n\n✅ 3초 Lock line\nBarking cough + steeple sign = Croup, 원인은 parainfluenza virus.\n\n🎯 암기 확인 퀴즈\nQ1. Croup의 대표 바이러스는? \nA1. Parainfluenza virus.\nQ2. Croup X-ray 소견은? \nA2. Steeple sign/subglottic narrowing.\nQ3. 후두개염과 구분되는 위험 단서는? \nA3. 침흘림, tripod, 독성 외관, 고열.",
     "images": [
       {
-        "src": "assets/peds_pretest2_full/PEDS2-2025-11to14-Q6__non_hi_qimg_041__non_hi_qimg_041.png",
-        "kind": "non_hi_qimg_041",
+        "src": "assets/peds_pretest2_full/PEDS2-2025-11to14-Q6__nonhi_exact__non_hi_qimg_041.png",
+        "kind": "nonhi_exact",
         "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_image_extract_20260517/curated_question_images/non_hi_qimg_041.png",
-        "caption": "non-HI candidate · score 7 · non_hi_qimg_041"
+        "caption": "원문 문제 이미지",
+        "front_visible": true,
+        "curated_id": "non_hi_qimg_041"
       }
     ],
     "layer": "core79",
