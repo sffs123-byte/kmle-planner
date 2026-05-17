@@ -176,6 +176,22 @@ CURATED_HI_DUPLICATES = {
     "PEDS2-2025-15to18-Q1": "PEDS2-HI2-021",
 }
 
+# HI PDF image extraction is proximity-based, so images from the same page/column
+# can be pulled into a neighboring question. These explicit card+filename blocks
+# are the infection-unit audit fixes. Prefer no image over a misleading image.
+CURATED_HI_IMAGE_EXCLUDES = {
+    # Q43 수두: extracted image is an EBV atypical lymphocyte smear from the next section.
+    ("PEDS2-HI2-013", "hi2_pdfimg_03_p03L.jpg"),
+    ("PEDS2-HI2-013", "hi2_013_p03L.png"),
+    # Q55 septic arthritis asks for joint-fluid Gram stain; CXR belongs to pertussis Q53.
+    ("PEDS2-HI2-025", "hi2_pdfimg_08_p04L.jpg"),
+    # Q56 impetigo infant face/perioral lesion: keep face image, drop adjacent leg lesion.
+    ("PEDS2-HI2-026", "hi2_pdfimg_06_p04R.jpg"),
+    # Q57 impetigo scratched lesion: keep leg lesion, drop tetanus table and infant face.
+    ("PEDS2-HI2-027", "hi2_pdfimg_04_p04R.jpg"),
+    ("PEDS2-HI2-027", "hi2_pdfimg_05_p04R.jpg"),
+}
+
 CURATED_CARD_FIXES = {
     "PEDS2-2023-25to28-Q2": {
         "answer": "활동성/선천결핵 확인 후, 활동성 결핵이 없으면 isoniazid 3개월 예방투여 후 TST 판정",
@@ -214,6 +230,10 @@ CURATED_CARD_FIXES = {
 # BEGIN INFECTION_ANSWER_AUDIT_FIXES_20260517
 CURATED_CARD_FIXES.update({'PEDS2-2025-15to18-Q1': {'question': '객Q. 2세 여아가 발열과 눈 충혈로 병원에 왔다. 결막이 충혈되어 있고, 눈 주위에\n황색 분비물과 인두 부위의 발적이 있었다. 목 림프절이 만져진다. 원인은?\n① 리노바이러스 ② 노로바이러스 ③ 파르보바이러스\n④ 아데노바이러스 ⑤ RSV', 'display_question': '객Q. 2세 여아가 발열과 눈 충혈로 병원에 왔다. 결막이 충혈되어 있고, 눈 주위에\n황색 분비물과 인두 부위의 발적이 있었다. 목 림프절이 만져진다. 원인은?\n① 리노바이러스 ② 노로바이러스 ③ 파르보바이러스\n④ 아데노바이러스 ⑤ RSV', 'answer': '아데노바이러스', 'uncertain': False}, 'PEDS2-2023PDF-029': {'answer': '헤르페스 잇몸구내염, herpetic gingivostomatitis', 'uncertain': False}, 'PEDS2-2023PDF-038': {'answer': '급성 중이염 1차 치료: Amoxicillin', 'uncertain': False}, 'PEDS2-HI2-001': {'answer': '직장 체온 38℃ 이상', 'uncertain': False}, 'PEDS2-HI2-002': {'answer': '감염, 류마티즘/자가염증성질환, 종양', 'uncertain': False}, 'PEDS2-HI2-003': {'answer': '1~3개월: E. coli, enterovirus, parechovirus / 3~36개월: S. pneumoniae, N. meningitidis, Salmonella', 'uncertain': False}, 'PEDS2-HI2-004': {'answer': '항생제 내성 증가, 정상균총 파괴, 부작용/불필요한 경제적 부담 증가', 'uncertain': False}, 'PEDS2-HI2-005': {'answer': '홍역; 생후 4개월 남동생은 노출 6일 이내 면역글로불린', 'uncertain': False}, 'PEDS2-HI2-008': {'answer': 'Mumps virus; 대증치료/acetaminophen', 'uncertain': False}, 'PEDS2-HI2-009': {'answer': '수족구병; Coxsackievirus A16', 'uncertain': False}, 'PEDS2-HI2-010': {'answer': '돌발진(장미진); HHV-6', 'uncertain': False}, 'PEDS2-HI2-014': {'answer': '엡스타인바 바이러스(EBV)', 'uncertain': False}, 'PEDS2-HI2-015': {'answer': 'Acetaminophen 등 대증치료', 'uncertain': False}, 'PEDS2-HI2-016': {'answer': 'A군 사슬알균(Streptococcus pyogenes); 류마티스열 예방', 'uncertain': False}, 'PEDS2-HI2-017': {'answer': '고름 사슬알균(Streptococcus pyogenes)', 'uncertain': False}, 'PEDS2-HI2-018': {'answer': '아목시실린', 'uncertain': False}, 'PEDS2-HI2-021': {'answer': '아데노바이러스', 'uncertain': False}, 'PEDS2-HI2-022': {'answer': 'Bordetella pertussis; erythromycin 또는 macrolide', 'uncertain': False}, 'PEDS2-HI2-023': {'answer': '클라리트로마이신', 'uncertain': False}, 'PEDS2-HI2-024': {'question': '주Q. 12세 환자가 2일 전부터 시작된 발열과 무릎 통증을 주소로 내원하였다. 신체검사상 압통은 있었고, 발적과 열감은 없었다.\n(1) 진단은? 급성 골수염\n(2) 원인균? S. aureus', 'display_question': '주Q. 12세 환자가 2일 전부터 시작된 발열과 무릎 통증을 주소로 내원하였다. 신체검사상 압통은 있었고, 발적과 열감은 없었다.\n(1) 진단은? [답 숨김]\n(2) 원인균? [답 숨김]', 'answer': '급성 골수염; Staphylococcus aureus', 'uncertain': False}, 'PEDS2-HI2-025': {'answer': '나프실린', 'uncertain': False}, 'PEDS2-HI2-026': {'answer': '농가진; S. aureus 및 Group A Streptococcus', 'uncertain': False}, 'PEDS2-HI2-028': {'answer': '파상풍 백신 X, 파상풍 면역글로불린 X; 상처 소독', 'uncertain': False}, 'PEDS2-HI2-039': {'answer': '바이러스 수막염; Enterovirus', 'uncertain': False}, 'PEDS2-HI2-041': {'answer': '엔테로바이러스', 'uncertain': False}, 'PEDS2-HI2-042': {'answer': 'B군 사슬알균(Group B Streptococcus)', 'uncertain': False}, 'PEDS2-HI2-082': {'answer': '인두 후부 농양 - Neck lateral view', 'uncertain': False}, 'PEDS2-2023-37to40-Q3': {'answer': '수막알균(Neisseria meningitidis)', 'uncertain': False}, 'PEDS2-HI2-030': {'answer': '반응성/세균성 림프절염, EBV 전염단핵구증, 결핵/비정형 마이코박테리아, Kawasaki disease, 악성질환 등에서 3가지 이상', 'uncertain': False}, 'PEDS2-HI2-038': {'answer': 'S. pneumoniae, H. influenzae type b, N. meningitidis', 'uncertain': False}})
 # END INFECTION_ANSWER_AUDIT_FIXES_20260517
+
+# BEGIN DIGESTIVE_ANSWER_AUDIT_FIXES_20260517
+CURATED_CARD_FIXES.update({'PEDS2-2026-5to8-Q7': {'answer': '만성복통 alarm symptom: 야간 각성 복통, 지속적 우상복부/우하복부 통증 또는 국소 압통, 연하곤란, 혈변/위장관 실혈, 의미 있는 담즙성·주기적·지속적 구토, 만성 중증/야간 설사, 발열, 체중감소/성장속도 감소, 사춘기 지연, IBD/소화성궤양 가족력 등에서 2개 이상', 'uncertain': False}, 'PEDS2-2025-19to23-Q2': {'answer': '중증 탈수로 보이면 등장성 IV 수액(0.9% 생리식염수 등)을 우선 투여한다. 중등도 이하 탈수는 ORS 50–100 mL/kg를 3–4시간에 투여한다.', 'uncertain': False}, 'PEDS2-2023PDF-035': {'answer': '중간창자 꼬임(midgut volvulus)', 'uncertain': False}, 'PEDS2-HI2-043': {'answer': '로타바이러스 백신', 'uncertain': False}, 'PEDS2-HI2-044': {'answer': '바이러스 위장관염; 가장 흔한 바이러스는 로타바이러스', 'uncertain': False}, 'PEDS2-HI2-045': {'answer': '로타바이러스', 'uncertain': False}, 'PEDS2-HI2-046': {'answer': 'Salmonella typhi; ceftriaxone 또는 3세대 cephalosporin', 'uncertain': False}, 'PEDS2-HI2-047': {'answer': '수유모의 항원 제한 식사', 'uncertain': False}, 'PEDS2-HI2-048': {'answer': '젖당 제한 식이', 'uncertain': False}, 'PEDS2-HI2-056': {'answer': '만성복통 red flag: 야간 각성 복통, 지속적 RUQ/RLQ 통증 또는 국소 압통, 연하곤란, 혈변/위장관 실혈, 의미 있는 구토, 야간/중증 설사, 발열, 체중감소/성장속도 감소, 사춘기 지연, IBD/소화성궤양 가족력 등에서 4개 이상', 'uncertain': False}, 'PEDS2-HI2-057': {'answer': '복부초음파', 'uncertain': False}, 'PEDS2-HI2-059': {'answer': '장중첩증; 복부초음파', 'uncertain': False}, 'PEDS2-HI2-060': {'answer': '연소 용종 의심; 대장내시경', 'uncertain': False}, 'PEDS2-HI2-062': {'answer': '메켈 게실; 99mTc-pertechnetate scan(메켈 스캔)', 'uncertain': False}, 'PEDS2-HI2-069': {'answer': '전해질 및 수분 공급 후 수술적 치료', 'uncertain': False}, 'PEDS2-HI2-073': {'answer': '비타민 D', 'uncertain': False}, 'PEDS2-HI2-076': {'answer': '아연', 'uncertain': False}, 'PEDS2-HI2-077': {'answer': '아연', 'uncertain': False}})
+# END DIGESTIVE_ANSWER_AUDIT_FIXES_20260517
 
 # Official 2-week pretest scope from 교수님 공지 PDF:
 # 2주차 = 12~15장: 감염, 소화기, 호흡기, 심혈관.
@@ -1006,9 +1026,11 @@ def build_hi_card(src: dict, idx: int) -> dict:
     card_id = f"PEDS2-HI2-{idx:03d}"
     images = []
     for p in src.get("linked_images") or []:
+        src_name = Path(p).name
+        if (card_id, src_name) in CURATED_HI_IMAGE_EXCLUDES:
+            continue
         item = copy_asset(p, card_id, "embedded")
         if item:
-            src_name = Path(p).name
             if src_name in EMBEDDED_ANSWER_ONLY_FILENAMES:
                 item["answer_only"] = True
                 item["caption"] = f"답/해설 포함 원문 이미지 · {src_name}"
@@ -1016,10 +1038,12 @@ def build_hi_card(src: dict, idx: int) -> dict:
                 item["caption"] = f"HI embedded image · {src_name}"
             images.append(item)
     if src.get("question_crop"):
-        item = copy_asset(src.get("question_crop"), card_id, "source_crop")
-        if item:
-            item["caption"] = "HI source crop · 원문 위치 확인용"
-            images.append(item)
+        crop_name = Path(str(src.get("question_crop"))).name
+        if (card_id, crop_name) not in CURATED_HI_IMAGE_EXCLUDES:
+            item = copy_asset(src.get("question_crop"), card_id, "source_crop")
+            if item:
+                item["caption"] = "HI source crop · 원문 위치 확인용"
+                images.append(item)
     answer = extract_hi_answer(raw)
     section = normalize_space(src.get("section") or "HI")
     kind = normalize_space(src.get("kind") or src.get("marker") or "HI")
