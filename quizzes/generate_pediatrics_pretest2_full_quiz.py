@@ -260,6 +260,10 @@ CURATED_CARD_FIXES.setdefault("PEDS2-2023PDF-029", {}).update({
     "uncertain": False,
 })
 
+# BEGIN RESPIRATORY_ANSWER_AUDIT_FIXES_20260517
+CURATED_CARD_FIXES.update({'PEDS2-HI2-031': {'answer': '소아: 폐 하부 병변·초감염 결핵·치유 시 석회화 / 성인: 폐첨 또는 쇄골상부 병변·재감염/재활성화 결핵·치유 시 섬유화', 'uncertain': False}, 'PEDS2-HI2-032': {'answer': 'Chest X-ray와 TST; 정상/활동성 결핵 배제 시 isoniazid 예방치료', 'uncertain': False}, 'PEDS2-HI2-034': {'answer': '이소니아지드 9개월 복용', 'uncertain': False}, 'PEDS2-HI2-037': {'answer': 'Isoniazid + Rifampicin + Pyrazinamide + Ethambutol 2개월 후 Isoniazid + Rifampicin 4개월', 'uncertain': False}, 'PEDS2-HI2-065': {'answer': '기관루 동반 식도폐쇄', 'uncertain': False}, 'PEDS2-HI2-078': {'answer': '니스타틴', 'uncertain': False}, 'PEDS2-HI2-081': {'answer': '경과관찰', 'uncertain': False}, 'PEDS2-HI2-087': {'answer': '부비동염; Streptococcus pneumoniae', 'uncertain': False}, 'PEDS2-HI2-088': {'answer': '크룹; Parainfluenza virus', 'uncertain': False}, 'PEDS2-HI2-090': {'answer': '에피네프린', 'uncertain': False}, 'PEDS2-HI2-091': {'answer': '수액치료', 'uncertain': False}, 'PEDS2-HI2-093': {'answer': '바이러스성 폐렴', 'uncertain': False}, 'PEDS2-HI2-094': {'answer': '암피실린-설박탐', 'uncertain': False}, 'PEDS2-HI2-095': {'answer': '마이코플라즈마 폐렴', 'uncertain': False}, 'PEDS2-HI2-101': {'answer': 'ICS + LABA', 'uncertain': False}, 'PEDS2-HI2-102': {'answer': '흡입형 속효성 β2 항진제(SABA)', 'uncertain': False}, 'PEDS2-HI2-104': {'answer': 'A: Formoterol / B: Budesonide-Formoterol 복합제', 'uncertain': False}, 'PEDS2-2025-19to23-Q3-SOURCEVAR': {'answer': '4번', 'uncertain': False}})
+# END RESPIRATORY_ANSWER_AUDIT_FIXES_20260517
+
 # Official 2-week pretest scope from 교수님 공지 PDF:
 # 2주차 = 12~15장: 감염, 소화기, 호흡기, 심혈관.
 # Some all-HI-bank cards are retained even when they look mixed/out-of-scope;
