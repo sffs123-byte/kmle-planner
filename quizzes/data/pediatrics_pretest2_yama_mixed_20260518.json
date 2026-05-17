@@ -14,10 +14,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "호흡기"
+      "호흡기",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p01R: 감기 증상 치료 관련 틀린 설명을 고르는 문제. 보기에는 감기 증상 치료가 중이염/천식 악화/세균성 부비동염 합병증을 줄이는지, 인플루엔자에서 oseltamivir가 중이염을 줄이는지 등이 포함된다."
   },
@@ -36,10 +38,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p01R: 여아, 성장지연, 출생 직후 손발 부종/목 webbing 등 Turner syndrome 단서가 있을 때 동반 심혈관 기형으로 의심할 것은?"
   },
@@ -58,10 +62,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": true,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p03R: 12세 소아가 학교 심전도 검사에서 이상을 지적받았으나 증상 없이 건강하다. PDF 메모상 PAC 그래프 의심. 진단은?"
   },
@@ -80,10 +86,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p03R: 감염성 심내막염 예방이 필요한 심질환을 고르는 문제. 보기: ASD, VSD, 교정하지 않은 TOF, 심장수술 완치 후 인공삽입물 삽입 6개월 경과, 심장이식 후 판막병변 없음."
   },
@@ -102,10 +110,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": true,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p05L: 생후 7일 아기에서 심잡음으로 내원했고 ECG가 제시되었다. 정상 신생아 ECG 소견 판단 문제."
   },
@@ -124,10 +134,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": true,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p08R: ECG tachycardia가 제시되고 신체검사는 빈맥 외 정상. 보기: sinus tachycardia, atrial flutter, AVRT, AVNRT 등. 진단은?"
   },
@@ -146,10 +158,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": true,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p09R: 심도자 catheter tip 위치 문제. 교수 설명상 IVC→RA→ASD→LA로 넘어가며 right-deviated aorta 언급."
   },
@@ -214,10 +228,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "소화기"
+      "소화기",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p13L: Biliary atresia 그림/황달 병력에서 치료는?"
   },
@@ -236,10 +252,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "감염"
+      "감염",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p13L: 3~36개월 소아에서 백신접종 이후 occult bacteremia 위험이 감소한 대표 원인균 2가지는?"
   },
@@ -258,10 +276,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "감염"
+      "감염",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p13R: 건강한 5세 소아 수두의 치료는?"
   },
@@ -280,10 +300,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "호흡기"
+      "호흡기",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": true,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p13R: 흉수 CXR와 pleural fluid/serum LDH, pH, ADA가 제시된 폐렴성 흉수 문제. 원인균으로 판단할 것은?"
   },
@@ -302,10 +324,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": true,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p13R: 성장지연 + 심잡음 + 얼굴/CXR 사진으로 Down AV valve regurgitation 또는 Williams AS 등을 감별하는 문제."
   },
@@ -324,10 +348,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p14L: Long QT syndrome에서 부정맥 예방을 위해 사용하는 약물은?"
   },
@@ -346,10 +372,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p14L: Hemodynamically significant PDA에서 약물로 폐쇄를 시도할 때 사용하는 약제는?"
   },
@@ -391,10 +419,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "호흡기"
+      "호흡기",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p14R: 급성중이염의 흔한 원인균 3가지와 1차 치료제는?"
   },
@@ -413,10 +443,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "호흡기"
+      "호흡기",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p15L: 6개월 세기관지염 환아에서 수유가 어렵거나 탈수가 있을 때 수액 선택지형 정답은?"
   },
@@ -435,10 +467,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "호흡기"
+      "호흡기",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p15L: 급성 후두개염 치료 3가지를 고르는 문제."
   },
@@ -480,10 +514,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": true,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p15R: Fetal hydrops와 fetal tachycardia/atrial flutter가 의심되는 EKG가 제시된 경우 치료는?"
   },
@@ -502,10 +538,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "감염"
+      "감염",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p16L: 잠복결핵 정의, 가족 밀접접촉자 3개월 관리, 생백신 접종 후 TST 시행 시기 빈칸 문제."
   },
@@ -524,10 +562,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": true,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p17L: 4세 여아, BCG 접종 때 심잡음 발견. CXR가 제시되고 RA/LA/RV 확장 등을 고르는 선천심질환 영상 문제."
   },
@@ -546,10 +586,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p17L: 심도자에서 SVC~PA 산소포화도 75%, PV~Ao 95%, RV 70/0/6, PA 15/0으로 RV-PA 압력차가 큰 경우 치료는?"
   },
@@ -568,10 +610,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "감염"
+      "감염",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": true,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p17L: 고열, 혈액배양 gram negative, CRP 80 등으로 제시된 소아 감염 문제의 진단은?"
   },
@@ -636,10 +680,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "감염"
+      "감염",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p17R: 급성 골수염에서 원인균과 연령별 항생제: S. aureus, 신생아 oxacillin, 5세 이후 nafcillin."
   },
@@ -658,10 +704,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "소화기"
+      "소화기",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p17R: 3세 변비, 어린이집 이후 시작, 변지림, 성장/진찰 정상인 경우와 Hirschsprung disease를 감별하라."
   },
@@ -680,10 +728,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": true,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p17R: 9세가 운동 중 반복 실신하고 ECG/운동부하 ECG가 제시된다. 감별할 부정맥은?"
   },
@@ -725,10 +775,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p18L/p24R: 감염성 심내막염 예방이 필요한 심질환 6가지를 쓰는 문제."
   },
@@ -747,10 +799,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "감염"
+      "감염",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p18L: EBV 전염단핵구증 의심: 목 림프절, 간효소 상승, 인후통. 진단을 위해 볼 검사는?"
   },
@@ -769,10 +823,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": true,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p18L: 6세가 2년간 반복 두근거림. ECG에서 WPW/sinus/EAT/VT 등을 감별하는 문제."
   },
@@ -791,10 +847,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": true,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p18L: 개심술 전/후 ECG 두 장이 제시되고 RAE/RAD/RVH/RBBB/LVH 등을 고르는 문제."
   },
@@ -836,10 +894,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p18R: Pulmonary stenosis에서 pulmonary artery bulging이 보이고 치료를 정하는 문제. RV-PA gradient 기준은?"
   },
@@ -881,10 +941,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "호흡기"
+      "호흡기",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p19L: RSV 세기관지염 원인과 IVIG/예방 투여 대상 2가지는?"
   },
@@ -949,10 +1011,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "소화기"
+      "소화기",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p20R: 간염과 biliary atresia 감별에서 반드시 확인할 임상 단서는?"
   },
@@ -971,10 +1035,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "호흡기"
+      "호흡기",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p26L: 흉곽함몰/그렁거림과 X-ray가 제시된 급성세기관지염에서 가장 흔한 원인 미생물은?"
   },
@@ -993,10 +1059,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p26R: 9개월 VSD, LUSB regurgitant murmur와 apex diastolic murmur가 있을 때 의미 있는 좌우단락을 시사하는 지표는?"
   },
@@ -1038,10 +1106,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "소화기"
+      "소화기",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p27L: 장중첩증에서 검사와 호발부위는?"
   },
@@ -1060,10 +1130,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p27L: 심장수술 후 ECG에서 RBBB, RVH, left axis deviation이 보이면 연결할 선천심질환은?"
   },
@@ -1082,10 +1154,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "호흡기"
+      "호흡기",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p27L: 1월, 15세 남자, 인후통/근육통/두통/마른기침/콧물 등 influenza 의심 증상에서 치료는?"
   },
@@ -1863,10 +1937,12 @@
       "yama25-21",
       "pdf-full-audit",
       "variant",
-      "감염"
+      "감염",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p30R: 신생아기 이후 급성 세균수막염 원인균 3가지는?"
   },
@@ -2115,10 +2191,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "호흡기"
+      "호흡기",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p32R: 천식 악화 고위험인자가 아닌 것을 고르는 문제. ICS 사용 여부가 보기로 제시됨."
   },
@@ -2183,10 +2261,12 @@
       "yama25-21",
       "pdf-full-audit",
       "missing",
-      "심혈관"
+      "심혈관",
+      "범위외/혼입확인",
+      "3주차혼입가능"
     ],
     "uncertain": false,
-    "force_official_unit": null,
+    "force_official_unit": "범위외/확인",
     "append_to_end": true,
     "raw_anchor": "p32R: Kawasaki disease에서 giant coronary aneurysm이 있을 때 추가 약제와 추적검사는?"
   },
