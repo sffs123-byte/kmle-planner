@@ -37,6 +37,7 @@ V3_2025 = TMP / "peds_pretest2_fullhunt_20260517" / "worker_2025_missing_v3_card
 V3_2023 = TMP / "peds_pretest2_fullhunt_20260517" / "worker_2023_v3_cards.json"
 HI_ALL = TMP / "peds_pretest2_review_20260517" / "hi_extract" / "HI_2차_기출문제_원문+이미지_2026-05-17.json"
 NON_HI_IMG_MAP = TMP / "peds_pretest2_image_extract_20260517" / "NON_HI_current_deck_image_card_link_candidates_2026-05-17.json"
+YAMA_MIXED_20260518 = DATA_DIR / "pediatrics_pretest2_yama_mixed_20260518.json"
 
 # 2026-05-18 full source audit: 2025 cumulative/raw leftovers that were
 # not represented as exact cards in the FULL deck.  These are intentionally
@@ -1067,7 +1068,9 @@ A3. TST가 이미 양성이므로 재검 전 예방투여 단계가 아님""",
 
 
 def apply_official_unit(card: dict) -> None:
-    unit = infer_official_unit(card)
+    unit = card.get("force_official_unit") or card.get("official_unit_override") or infer_official_unit(card)
+    if unit not in OFFICIAL_UNIT_CHAPTER:
+        unit = infer_official_unit(card)
     card["official_unit"] = unit
     card["official_chapter"] = OFFICIAL_UNIT_CHAPTER[unit]
     card["tags"] = list(dict.fromkeys(card.get("tags", []) + [card["official_chapter"], unit]))
@@ -1933,6 +1936,20 @@ def load_all_records() -> list[dict]:
         rec = normalize_base_card(c, i, "source2025", c.get("priority") or "P3 누적복기", c.get("origin") or "actual_recall")
         rec["source_rank"] = 2100 + i
         rec["tags"].extend(["2025-leftover", "actual-raw-leftover"])
+        records.append(rec)
+        existing_ids.add(rec["id"])
+
+    yama_mixed = json.loads(YAMA_MIXED_20260518.read_text(encoding="utf-8")) if YAMA_MIXED_20260518.exists() else []
+    for i, c in enumerate(yama_mixed, 1):
+        if c.get("id") in existing_ids:
+            continue
+        rec = normalize_base_card(c, i, "candidate", c.get("priority") or "P2 PDF-yama-missing", c.get("origin") or "pdf_yama_25_21_full_audit")
+        rec["source_rank"] = 5000 + i
+        rec["tags"].extend(["yama25-21", "pdf-full-audit", "mixed-scope-preserved"])
+        if c.get("force_official_unit"):
+            rec["force_official_unit"] = c.get("force_official_unit")
+        if c.get("append_to_end"):
+            rec["append_to_end"] = True
         records.append(rec)
         existing_ids.add(rec["id"])
 
