@@ -386,6 +386,94 @@ CURATED_MANUAL_CARD_IMAGES = {
     ],
 }
 
+# BEGIN CARDIO_ECG_MANUAL_FRONT_IMAGES_20260518
+# Source-faithful ECG restorations for cards whose stem says ECG/심전도 was shown.
+# Only images/crops without explicit answer text are front-visible; source crops with answer text remain answer-side.
+CURATED_MANUAL_CARD_IMAGES.update({
+    "PEDS2-2023-33to36-SA3": [
+        {
+            "src": "assets/peds_pretest2_full/peds2_manual_psvt_ecg_src06_img014.png",
+            "caption": "원문 tachycardia ECG · PSVT/SVT 문항",
+            "kind": "manual_front_ecg",
+            "front_visible": True,
+            "curated_id": "manual_psvt_ecg_src06_img014_20260518",
+        }
+    ],
+    "PEDS2-2023PDF-002": [
+        {
+            "src": "assets/peds_pretest2_full/peds2_manual_pediatric_ecg_src03_img002.png",
+            "caption": "원문 소아 ECG · 12개월/RVH 판단 문항",
+            "kind": "manual_front_ecg",
+            "front_visible": True,
+            "curated_id": "manual_pediatric_ecg_src03_img002_20260518",
+        }
+    ],
+    "PEDS2-2023PDF-011": [
+        {
+            "src": "assets/peds_pretest2_full/peds2_manual_psvt_ecg_src06_img014.png",
+            "caption": "원문 tachycardia ECG · 빈맥 감별 문항",
+            "kind": "manual_front_ecg",
+            "front_visible": True,
+            "curated_id": "manual_tachycardia_ecg_src06_img014_20260518",
+        }
+    ],
+    "PEDS2-2023PDF-019": [
+        {
+            "src": "assets/peds_pretest2_full/peds2_manual_pac_aberrancy_ecg_src03_img032_crop.png",
+            "caption": "원문 ECG crop · 18세 ECG 이상 문항",
+            "kind": "manual_front_ecg",
+            "front_visible": True,
+            "curated_id": "manual_pac_aberrancy_ecg_src03_img032_20260518",
+        }
+    ],
+    "PEDS2-2023PDF-028": [
+        {
+            "src": "assets/peds_pretest2_full/peds2_manual_longqt_ecg_src03_img039_crop.png",
+            "caption": "원문 ECG crop · Long QT 문항",
+            "kind": "manual_front_ecg",
+            "front_visible": True,
+            "curated_id": "manual_longqt_ecg_src03_img039_20260518",
+        }
+    ],
+    "PEDS2-YAMA25-21-ASYMPTOMATIC-ECG-PAC": [
+        {
+            "src": "assets/peds_pretest2_full/peds2_manual_pac_aberrancy_ecg_src03_img032_crop.png",
+            "caption": "원문 ECG crop · 무증상 ECG 이상/PAC 후보",
+            "kind": "manual_front_ecg",
+            "front_visible": True,
+            "curated_id": "manual_pac_aberrancy_ecg_yama_20260518",
+        }
+    ],
+    "PEDS2-YAMA25-21-NEONATAL-ECG-RV-DOMINANCE": [
+        {
+            "src": "assets/peds_pretest2_full/peds2_manual_pediatric_ecg_src03_img002.png",
+            "caption": "원문 소아 ECG · 신생아/소아 우심실 우세 판단",
+            "kind": "manual_front_ecg",
+            "front_visible": True,
+            "curated_id": "manual_pediatric_ecg_yama_20260518",
+        }
+    ],
+    "PEDS2-YAMA25-21-PSVT-SUBTYPE-ECG-IMAGE": [
+        {
+            "src": "assets/peds_pretest2_full/peds2_manual_psvt_ecg_src06_img014.png",
+            "caption": "원문 tachycardia ECG · PSVT subtype 감별",
+            "kind": "manual_front_ecg",
+            "front_visible": True,
+            "curated_id": "manual_psvt_ecg_yama_20260518",
+        }
+    ],
+    "PEDS2-YAMA25-21-EXERTIONAL-SYNCOPE-LQTS-CPVT": [
+        {
+            "src": "assets/peds_pretest2_full/peds2_manual_longqt_ecg_src03_img039_crop.png",
+            "caption": "원문 ECG crop · 운동 실신/LQTS-CPVT 감별",
+            "kind": "manual_front_ecg",
+            "front_visible": True,
+            "curated_id": "manual_longqt_ecg_yama_20260518",
+        }
+    ],
+})
+# END CARDIO_ECG_MANUAL_FRONT_IMAGES_20260518
+
 # Embedded HI images are front-visible by default only when they are clean
 # diagnostic material (CXR/ECG/US/lesion photo). These embedded pages contain
 # diagnosis/treatment tables, labeled murmur diagrams, or annotated teaching

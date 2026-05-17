@@ -7997,17 +7997,27 @@
       "2주차",
       "core79",
       "actual_recall",
+      "curated-front-fix",
+      "manual-image-restored",
       "15장 심혈관",
       "심혈관"
     ],
     "uncertain": false,
     "enhanced_explanation": "🧭 Big picture\n9세 아이가 갑자기 심박수가 매우 빠르고 심전도가 제시되면 소아 빈맥 알고리즘을 떠올려야 해. PSVT, 즉 paroxysmal supraventricular tachycardia는 소아에서 흔한 발작성 빈맥이고, 보통 narrow QRS regular tachycardia로 나온다. 혈역학적으로 안정하면 vagal maneuver 후 adenosine이 핵심 치료다. 문제의 답은 PSVT; adenosine.\n\n🔎 핵심 단서\n- ⭕️ 감기 치료 중 “심박수가 빠르다” = 약물/발열도 볼 수 있지만 ECG가 핵심\n- ⭕️ 소아 발작성 빠른 심박 = PSVT 빈출\n- ⭕️ 진단과 치료 세트 = PSVT + adenosine\n- ⭕️ Adenosine = AV node를 잠깐 차단해 reentry 회로를 끊음\n- ❌ 단순 sinus tachycardia는 원인 교정이 치료, adenosine이 답이 아님\n\n👣 시험장 사고 흐름\n1단계: ECG에서 regular narrow-complex tachycardia인지 본다.\n2단계: P wave가 잘 안 보이고 갑자기 시작/끝나는 소아 빈맥이면 PSVT를 잡는다.\n3단계: 안정하면 vagal maneuver → 실패 시 adenosine. 불안정하면 synchronized cardioversion.\n\n🧠 쉽게 이해하기\nPSVT는 심장 전기 신호가 AV node 근처에서 뺑뺑이 도는 상황이야. 심장이 “앞으로 가야 하는데 회전교차로에서 무한 회전”하는 느낌. Adenosine은 그 회전교차로를 1초 정도 셧다운해서 회로를 끊는다. 그래서 투여하면 잠깐 심장이 멈춘 듯 보여도 치료 원리는 정확히 그거야. 단, 반감기가 매우 짧아서 빠른 IV push가 중요하다.\n\n📊 감별/오답 제거\n비교표:\n- PSVT | 갑작스러운 regular narrow tachycardia, P wave 불명확 | 치료: vagal → adenosine\n- Sinus tachycardia | 발열/탈수/통증 등 원인, P wave 보임, 속도 변동 | 원인 치료\n- VT | wide QRS tachycardia, 위험 | 전기치료/항부정맥\n- Atrial flutter | sawtooth flutter wave | adenosine은 진단 보조 가능하나 근본 답 아님\n\nDecision flow:\n빈맥 확인 → 혈역학 불안정이면 synchronized cardioversion → 안정 + narrow regular이면 vagal maneuver → 실패 시 adenosine.\n\n✅ 3초 Lock line\n소아 regular narrow tachycardia = PSVT, 안정하면 adenosine.\n\n🎯 암기 확인 퀴즈\nQ1. PSVT 1차 약물 치료는?\nQ2. Adenosine은 어느 부위를 일시 차단?\nQ3. 불안정 PSVT의 처치는?\n\nA1. Adenosine\nA2. AV node\nA3. Synchronized cardioversion",
-    "images": [],
+    "images": [
+      {
+        "src": "assets/peds_pretest2_full/peds2_manual_psvt_ecg_src06_img014.png",
+        "caption": "원문 tachycardia ECG · PSVT/SVT 문항",
+        "kind": "manual_front_ecg",
+        "front_visible": true,
+        "curated_id": "manual_psvt_ecg_src06_img014_20260518"
+      }
+    ],
     "layer": "core79",
     "mode": "주관식",
     "display_question": "9세 소아가 감기로 치료 중 심박수가 빠르다고 병원에 왔고 심전도 사진이 제시되었다. 진단과 치료는?",
     "section": "P3 누적복기",
-    "has_image": false,
+    "has_image": true,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
     "num": 209
@@ -8104,19 +8114,28 @@
       "source2023pdf",
       "actual_recall_source_variant",
       "curated-front-fix",
+      "manual-image-restored",
       "15장 심혈관",
       "심혈관"
     ],
     "uncertain": false,
     "source_variant_status_vs_current79": "missing",
     "raw_anchor": "객관식 3번. 생후 12개월 소아의 심전도다. 진폭이 크고 나이가 어릴수록 우심실 우세",
-    "images": [],
+    "images": [
+      {
+        "src": "assets/peds_pretest2_full/peds2_manual_pediatric_ecg_src03_img002.png",
+        "caption": "원문 소아 ECG · 12개월/RVH 판단 문항",
+        "kind": "manual_front_ecg",
+        "front_visible": true,
+        "curated_id": "manual_pediatric_ecg_src03_img002_20260518"
+      }
+    ],
     "layer": "source2023pdf",
     "mode": "주관식",
     "display_question": "생후 12개월 소아 ECG가 제시되었다. 보기 LVH, RAE, RVH, 정상 중 옳은 해석은?",
     "enhanced_explanation": "🧭 Big picture\n소아 ECG는 성인 ECG처럼 바로 읽으면 낚인다. 특히 영아는 태아순환 시절부터 우심실이 일을 많이 해왔기 때문에 생후 한동안 우심실 우세가 정상적으로 남아 있어. 그래서 12개월 ECG에서 우측 전흉부 R파가 커 보이거나 축이 오른쪽으로 보이면 ‘병적 RVH’인지 ‘나이에 맞는 정상 우심실 우세’인지 원문 ECG와 기준을 같이 봐야 한다. 이 카드는 이미지 의존이라 확정 답은 원문 확인 필요.\n\n🔎 핵심 단서\n⭕ 생후 12개월: 아직 성인형 ECG와 다름\n⭕ 보기: LVH, RAE, RVH, 정상 → ECG 판독형 문제\n⭕ 복기 답: 영아 우심실 우세/RVH처럼 보이는 소견\n⚠️ ECG 이미지 없음: 정상 변이인지 병적 RVH인지 원문 확인 필요\n\n👣 시험장 사고 흐름\n1단계: 나이부터 확인한다. 소아 ECG는 나이별 정상범위가 핵심.\n2단계: QRS axis, V1/V6 R:S ratio, P파를 본다.\n3단계: 12개월이면 우심실 우세가 아직 남을 수 있음을 반영.\n4단계: 증상·심잡음·CXR 단서가 없으면 ECG만으로 과진단하지 않는다.\n\n🧠 쉽게 이해하기\n아기는 태어나기 전 폐를 안 쓰니까 우심실이 폐혈관 높은 압력을 상대로 꽤 빡세게 일해. 출생 후 폐순환이 열리면서 점점 좌심실 주도권으로 바뀌지만, 이 변화가 하루아침에 끝나는 게 아니야. 그래서 어린아이 ECG는 ‘오른쪽이 세 보이는 게 정상일 수 있다’가 기본 마인드야.\n\n📊 감별/오답 제거\n| 선택지 | 볼 소견 | 이 카드에서 주의점 |\n| 정상/연령상 우심실 우세 | 나이에 맞는 우축·V1 R 우세 | ✅ 가능, 원문 확인 필요 |\n| RVH | 우축편위, V1 tall R, 임상 단서 | ECG 이미지/기준 필요 |\n| LVH | 좌측 전흉부 고전압 등 | 복기 축과 다름 |\n| RAE | tall peaked P wave | P파 원문 필요 |\n\n✅ 3초 Lock line\n영아 ECG는 우심실 우세가 정상처럼 보일 수 있다; ECG 원문 없으면 확정 금지.\n\n🎯 암기 확인 퀴즈\nQ1. 영아 ECG에서 성인보다 상대적으로 우세한 심실은?\nQ2. 소아 ECG 판독에서 제일 먼저 확인할 것은?\nQ3. 이 카드의 최종 답을 조심해야 하는 이유는?\n\nA1. 우심실\nA2. 나이별 정상범위\nA3. ECG 이미지 의존 문항이라 원문 확인 필요",
     "section": "P3 2023PDF source-variant",
-    "has_image": false,
+    "has_image": true,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
     "num": 212
@@ -8225,19 +8244,29 @@
       "2주차",
       "source2023pdf",
       "actual_recall_source_variant",
+      "curated-front-fix",
+      "manual-image-restored",
       "15장 심혈관",
       "심혈관"
     ],
     "uncertain": true,
     "source_variant_status_vs_current79": "missing",
     "raw_anchor": "객3. 심전도 유사, 빈맥 이외 정상, 보기 sinus tachycardia/atrial flutter/AVRT/AVNRT",
-    "images": [],
+    "images": [
+      {
+        "src": "assets/peds_pretest2_full/peds2_manual_psvt_ecg_src06_img014.png",
+        "caption": "원문 tachycardia ECG · 빈맥 감별 문항",
+        "kind": "manual_front_ecg",
+        "front_visible": true,
+        "curated_id": "manual_tachycardia_ecg_src06_img014_20260518"
+      }
+    ],
     "layer": "source2023pdf",
     "mode": "주관식",
     "display_question": "빈맥 이외 신체검사는 정상이고 ECG가 제시되었다. 보기 sinus tachycardia, atrial flutter, AVRT, AVNRT 등 중 진단은?",
     "enhanced_explanation": "🧭 Big picture\n소아에서 갑자기 빠르고 규칙적인 빈맥이 오면 PSVT, 특히 AVRT/AVNRT를 먼저 떠올린다. 하지만 이 카드는 ECG가 제시된 문제라 P파 위치, QRS 폭, saw-tooth flutter wave 같은 원문 소견 없이는 AVRT인지 AVNRT인지, 또는 sinus tachycardia/atrial flutter인지 확정하면 위험해. 복기상 안전축은 ‘SVT 계열, AVRT 또는 AVNRT 가능, 원문 ECG 확인 필요’야.\n\n🔎 핵심 단서\n⭕ 빈맥 이외 신체검사 정상: 구조적 쇼크 단서보다 부정맥 판독\n⭕ 보기: sinus tachycardia, atrial flutter, AVRT, AVNRT\n⭕ 소아의 갑작스러운 규칙적 빈맥: PSVT 흔함\n⚠️ ECG 이미지 없음: 세부 진단 확정 금지\n\n👣 시험장 사고 흐름\n1단계: QRS가 narrow인지 wide인지 본다.\n2단계: rhythm이 규칙적인지 확인한다.\n3단계: P wave가 QRS와 어떤 관계인지 본다.\n4단계: abrupt onset/offset, 매우 빠른 regular narrow tachycardia면 PSVT.\n5단계: flutter wave가 보이면 atrial flutter, P가 정상적으로 앞서고 rate가 상황에 맞으면 sinus tachycardia.\n\n🧠 쉽게 이해하기\n정상 sinus tachycardia는 몸이 열나거나 아파서 심장이 ‘빨리 뛰어!’ 명령을 받은 상태라 서서히 빨라지고 P파도 정상 루트야. PSVT는 전기회로가 심장 안에서 뺑뺑이를 돌아 갑자기 스위치 켜지듯 빨라지는 느낌. AVRT/AVNRT는 그 회로 위치가 조금 다른 형제라고 보면 된다.\n\n📊 감별/오답 제거\n| 진단 | ECG/임상 힌트 | 이 카드에서 |\n| AVRT/AVNRT | regular narrow tachycardia, 갑작스런 시작 | ✅ 복기상 PSVT 축 |\n| Sinus tachycardia | 정상 P preceding QRS, 원인 있음, 점진적 | ECG 확인 필요 |\n| Atrial flutter | saw-tooth F wave | 원문 파형 필요 |\n| Wide QRS VT | wide complex, 불안정 가능 | 보기/원문에 따라 확인 |\n\n✅ 3초 Lock line\n소아 갑작스런 규칙적 narrow 빈맥 = PSVT 축, AVRT/AVNRT 세부는 ECG 원문 확인.\n\n🎯 암기 확인 퀴즈\nQ1. PSVT는 보통 규칙적인가 불규칙한가?\nQ2. sinus tachycardia와 PSVT 감별에서 중요한 시작 양상은?\nQ3. atrial flutter를 시사하는 대표 파형은?\n\nA1. 규칙적\nA2. PSVT는 갑작스럽고 sinus는 원인에 따라 점진적\nA3. saw-tooth flutter wave",
     "section": "P3 2023PDF source-variant",
-    "has_image": false,
+    "has_image": true,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
     "num": 215
@@ -8305,6 +8334,8 @@
       "2주차",
       "source2023pdf",
       "actual_recall_source_variant",
+      "curated-front-fix",
+      "manual-image-restored",
       "15장 심혈관",
       "심혈관"
     ],
@@ -8316,8 +8347,16 @@
     "display_question": "18세 남자가 ECG 이상으로 내원했다. 보기 AV block, PAC, VPC, intermittent WPW, ectopic atrial rhythm 중 진단은?",
     "enhanced_explanation": "🧭 Big picture\n부정맥 ECG 문제는 그림이 정답의 90%야. 18세 남자 ECG 이상에서 AV block, PAC, VPC, intermittent WPW, ectopic atrial rhythm 중 고르는 문제라면 P파 위치, PR 간격, QRS 폭, delta wave, 조기박동 모양을 봐야 한다. 하지만 현재 복기에는 ECG 이미지가 없으므로 확정 답은 원문 ECG 이미지 확인 필요. 대신 각 선택지의 판독 포인트를 정리해두는 게 안전하다.\n\n🔎 핵심 단서\n⭕ 18세 ECG 이상: 부정맥/전도장애 판독 문제\n⭕ 선택지: AV block, PAC, VPC, intermittent WPW, ectopic atrial rhythm\n⚠️ 원문 ECG 없음: 정답 확정 불가\n⭕ 공부축: P-QRS 관계, PR interval, QRS 폭, delta wave\n\n👣 시험장 사고 흐름\n1단계: P파가 있나, 모양이 정상 sinus P인가 확인.\n2단계: P와 QRS가 1:1로 연결되는지 본다.\n3단계: PR interval이 짧거나 길거나 탈락되는지 본다.\n4단계: QRS가 narrow인지 wide인지, delta wave가 있는지 확인.\n5단계: 일찍 튀어나온 beat가 있으면 PAC/VPC 감별.\n\n🧠 쉽게 이해하기\nECG는 심장 전기의 CCTV야. AV block은 신호가 AV node에서 늦거나 끊기는 것, PAC/VPC는 위쪽 심방이나 아래쪽 심실에서 ‘새치기 박동’이 튀어나오는 것, WPW는 샛길(accessory pathway) 때문에 신호가 지름길로 먼저 내려가는 상태야. 그래서 그림 없이 이름만 보고 찍으면 위험하다.\n\n📊 감별/오답 제거\n| 선택지 | 핵심 ECG 소견 |\n| AV block | PR prolongation 또는 dropped QRS, P-QRS 관계 이상 |\n| PAC | 조기 P파 + 보통 narrow QRS |\n| VPC | 조기 wide QRS, 보상성 휴지 가능 |\n| WPW | short PR + delta wave + wide-ish QRS, intermittent면 간헐적 |\n| Ectopic atrial rhythm | 비정상 P axis/morphology, atrial focus 변화 |\n\n✅ 3초 Lock line\n부정맥 선택지 문제는 P파·PR·QRS·delta wave를 봐야 하며, ECG 없으면 원문 확인 필요.\n\n🎯 암기 확인 퀴즈\nQ1. WPW의 대표 ECG 2가지는?\nQ2. VPC는 QRS가 보통 narrow인가 wide인가?\nQ3. AV block 감별에서 핵심으로 보는 간격은?\n\nA1. Short PR, delta wave\nA2. Wide\nA3. PR interval 및 P-QRS 관계",
     "section": "P3 2023PDF source-variant",
-    "images": [],
-    "has_image": false,
+    "images": [
+      {
+        "src": "assets/peds_pretest2_full/peds2_manual_pac_aberrancy_ecg_src03_img032_crop.png",
+        "caption": "원문 ECG crop · 18세 ECG 이상 문항",
+        "kind": "manual_front_ecg",
+        "front_visible": true,
+        "curated_id": "manual_pac_aberrancy_ecg_src03_img032_20260518"
+      }
+    ],
+    "has_image": true,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
     "num": 217
@@ -8469,6 +8508,7 @@
       "source2023pdf",
       "actual_recall_source_variant",
       "curated-front-fix",
+      "manual-image-restored",
       "15장 심혈관",
       "심혈관"
     ],
@@ -8480,8 +8520,16 @@
     "mode": "주관식",
     "display_question": "ECG/증례가 제시되었다. 진단은?",
     "section": "P3 2023PDF source-variant",
-    "images": [],
-    "has_image": false,
+    "images": [
+      {
+        "src": "assets/peds_pretest2_full/peds2_manual_longqt_ecg_src03_img039_crop.png",
+        "caption": "원문 ECG crop · Long QT 문항",
+        "kind": "manual_front_ecg",
+        "front_visible": true,
+        "curated_id": "manual_longqt_ecg_src03_img039_20260518"
+      }
+    ],
+    "has_image": true,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
     "num": 221
@@ -11812,6 +11860,8 @@
       "candidate",
       "pdf_yama_25_21_full_audit",
       "mixed-scope-preserved",
+      "curated-front-fix",
+      "manual-image-restored",
       "범위외/혼입 확인",
       "범위외/확인"
     ],
@@ -11822,8 +11872,16 @@
     "layer": "candidate",
     "source_rank": 5003,
     "display_question": "12세 소아가 학교 심전도 검사에서 이상을 지적받았으나 증상 없이 건강하다. PDF 메모상 PAC 그래프 의심. 진단은?",
-    "images": [],
-    "has_image": false,
+    "images": [
+      {
+        "src": "assets/peds_pretest2_full/peds2_manual_pac_aberrancy_ecg_src03_img032_crop.png",
+        "caption": "원문 ECG crop · 무증상 ECG 이상/PAC 후보",
+        "kind": "manual_front_ecg",
+        "front_visible": true,
+        "curated_id": "manual_pac_aberrancy_ecg_yama_20260518"
+      }
+    ],
+    "has_image": true,
     "official_unit": "범위외/확인",
     "official_chapter": "범위외/혼입 확인",
     "num": 302
@@ -11892,6 +11950,8 @@
       "candidate",
       "pdf_yama_25_21_full_audit",
       "mixed-scope-preserved",
+      "curated-front-fix",
+      "manual-image-restored",
       "범위외/혼입 확인",
       "범위외/확인"
     ],
@@ -11902,8 +11962,16 @@
     "layer": "candidate",
     "source_rank": 5005,
     "display_question": "생후 7일 아기에서 심잡음으로 내원했고 ECG가 제시되었다. 정상 신생아 ECG 소견 판단 문제.",
-    "images": [],
-    "has_image": false,
+    "images": [
+      {
+        "src": "assets/peds_pretest2_full/peds2_manual_pediatric_ecg_src03_img002.png",
+        "caption": "원문 소아 ECG · 신생아/소아 우심실 우세 판단",
+        "kind": "manual_front_ecg",
+        "front_visible": true,
+        "curated_id": "manual_pediatric_ecg_yama_20260518"
+      }
+    ],
+    "has_image": true,
     "official_unit": "범위외/확인",
     "official_chapter": "범위외/혼입 확인",
     "num": 304
@@ -11932,6 +12000,8 @@
       "candidate",
       "pdf_yama_25_21_full_audit",
       "mixed-scope-preserved",
+      "curated-front-fix",
+      "manual-image-restored",
       "범위외/혼입 확인",
       "범위외/확인"
     ],
@@ -11942,8 +12012,16 @@
     "layer": "candidate",
     "source_rank": 5006,
     "display_question": "ECG tachycardia가 제시되고 신체검사는 빈맥 외 정상. 보기: sinus tachycardia, atrial flutter, AVRT, AVNRT 등. 진단은?",
-    "images": [],
-    "has_image": false,
+    "images": [
+      {
+        "src": "assets/peds_pretest2_full/peds2_manual_psvt_ecg_src06_img014.png",
+        "caption": "원문 tachycardia ECG · PSVT subtype 감별",
+        "kind": "manual_front_ecg",
+        "front_visible": true,
+        "curated_id": "manual_psvt_ecg_yama_20260518"
+      }
+    ],
+    "has_image": true,
     "official_unit": "범위외/확인",
     "official_chapter": "범위외/혼입 확인",
     "num": 305
@@ -12926,6 +13004,8 @@
       "candidate",
       "pdf_yama_25_21_full_audit",
       "mixed-scope-preserved",
+      "curated-front-fix",
+      "manual-image-restored",
       "범위외/혼입 확인",
       "범위외/확인"
     ],
@@ -12936,8 +13016,16 @@
     "layer": "candidate",
     "source_rank": 5031,
     "display_question": "9세가 운동 중 반복 실신하고 ECG/운동부하 ECG가 제시된다. 감별할 부정맥은?",
-    "images": [],
-    "has_image": false,
+    "images": [
+      {
+        "src": "assets/peds_pretest2_full/peds2_manual_longqt_ecg_src03_img039_crop.png",
+        "caption": "원문 ECG crop · 운동 실신/LQTS-CPVT 감별",
+        "kind": "manual_front_ecg",
+        "front_visible": true,
+        "curated_id": "manual_longqt_ecg_yama_20260518"
+      }
+    ],
+    "has_image": true,
     "official_unit": "범위외/확인",
     "official_chapter": "범위외/혼입 확인",
     "num": 330
