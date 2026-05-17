@@ -390,6 +390,15 @@ CURATED_MANUAL_CARD_IMAGES = {
 # Source-faithful ECG restorations for cards whose stem says ECG/심전도 was shown.
 # Only images/crops without explicit answer text are front-visible; source crops with answer text remain answer-side.
 CURATED_MANUAL_CARD_IMAGES.update({
+    "PEDS2-HI2-122": [
+        {
+            "src": "assets/peds_pretest2_full/peds2_manual_hi122_normal_ecg_crop.png",
+            "caption": "원문 ECG crop · 생후 7일 정상 심전도 문항",
+            "kind": "manual_front_ecg",
+            "front_visible": True,
+            "curated_id": "manual_hi122_normal_ecg_crop_20260518",
+        }
+    ],
     "PEDS2-2023-33to36-SA3": [
         {
             "src": "assets/peds_pretest2_full/peds2_manual_psvt_ecg_src06_img014.png",

@@ -9474,6 +9474,7 @@
       "소아 심전도 특징",
       "hi_bank_raw",
       "curated-front-fix",
+      "manual-image-restored",
       "15장 심혈관",
       "심혈관"
     ],
@@ -9498,6 +9499,13 @@
         "kind": "source_crop",
         "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/question_crops/hi2_122_p14L.png",
         "caption": "HI source crop · 원문 위치 확인용"
+      },
+      {
+        "src": "assets/peds_pretest2_full/peds2_manual_hi122_normal_ecg_crop.png",
+        "caption": "원문 ECG crop · 생후 7일 정상 심전도 문항",
+        "kind": "manual_front_ecg",
+        "front_visible": true,
+        "curated_id": "manual_hi122_normal_ecg_crop_20260518"
       }
     ],
     "has_image": true,
