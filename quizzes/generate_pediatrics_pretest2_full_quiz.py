@@ -482,6 +482,149 @@ def infer_official_unit(card: dict) -> str:
     return "범위외/확인"
 
 
+
+# 2026-05-17 user correction: TB contact algorithm should be shown on all
+# pediatric TB contact-management cards. Once a TST/IGRA result is given,
+# active TB screening (Hx/PEx/CXR) is assumed to have already been done.
+TB_CONTACT_ALGORITHM_IMAGE = {
+    "src": "assets/peds_pretest2_full/tb_contact_algorithm_20260517.jpg",
+    "caption": "활동성 결핵 접촉자의 진단/치료 알고리즘",
+    "kind": "manual_answer_algorithm",
+    "answer_only": True,
+    "curated_id": "tb_contact_algorithm_20260517_user_image",
+}
+for _tb_card_id in ("PEDS2-HI2-032", "PEDS2-HI2-033", "PEDS2-HI2-034"):
+    CURATED_MANUAL_CARD_IMAGES.setdefault(_tb_card_id, []).append(TB_CONTACT_ALGORITHM_IMAGE)
+
+CURATED_CARD_FIXES.update({
+    "PEDS2-HI2-032": {
+        "answer": "Chest X-ray와 TST; 둘 다 정상/음성이면 isoniazid(INH) 3개월 예방적 투여 후 마지막 접촉 8주 뒤 재검",
+        "uncertain": False,
+        "enhanced_explanation": """🧭 Big picture
+활동성 결핵 접촉자는 먼저 활동성 결핵 여부를 확인한다. 기준은 병력(Hx), 진찰(PEx), 흉부 X선(CXR)이고, 영아·어린 소아에서는 이 단계를 생략하면 안 된다. 이 카드의 15개월 아이는 3개월~2세 구간이므로, 활동성 결핵을 먼저 확인하고 TST를 시행한다. CXR/TST가 정상 또는 음성이면 그냥 끝내지 않고 INH 3개월 예방적 투여 후 마지막 접촉 시점으로부터 8주 뒤 다시 검사한다.
+
+🔎 핵심 단서
+⭕ 15개월: 3개월~2세 구간
+⭕ 아버지 활동성 결핵: 밀접 접촉자
+⭕ BCG 접종 여부와 무관하게 접촉자 평가는 필요
+⭕ 먼저 활동성 결핵 확인: Hx, PEx, CXR
+⭕ 이후 TST 시행
+⭕ 정상/음성이면 INH 3개월 예방적 투여 후 8주 뒤 재검
+
+👣 시험장 사고 흐름
+1단계: 활동성 결핵 접촉자임을 확인한다.
+2단계: 먼저 활동성 결핵을 확인한다: 병력, 진찰, 흉부 X선.
+3단계: 3개월~2세는 TST로 감염 여부를 본다.
+4단계: TST가 음성이어도 어린 소아는 window period가 있으므로 INH 3개월 예방적 투여 후 마지막 접촉 8주 뒤 재검한다.
+5단계: 재검 양성이면 잠복결핵 치료로 전환하고, 음성이면 추적관찰 종료 축이다.
+
+🧠 쉽게 이해하기
+결핵 접촉자 알고리즘은 두 층으로 생각하면 된다. 첫째, 지금 이미 활동성 결핵인가를 먼저 확인한다. 둘째, 활동성은 아니지만 감염됐거나 아직 검사 양성으로 바뀌기 전인지 본다. 15개월처럼 어린 아이는 결핵으로 진행할 위험이 크기 때문에, 처음 TST가 음성이어도 안전하게 INH를 잠깐 먹이며 기다렸다가 8주 뒤 다시 확인한다.
+
+📊 감별/오답 제거
+| 상황 | 해석 | 처치 |
+| 3개월~2세 접촉자, 활동성 결핵 의심 | 이미 병이 진행 | 활동성 결핵 치료 |
+| 활동성 결핵 배제 후 TST 음성 | 아직 window period 가능 | INH 3개월 예방적 투여 후 8주 뒤 재검 |
+| 활동성 결핵 배제 후 TST 양성 | 잠복결핵감염 | INH 총 9개월 치료 |
+| TST 시행 이후를 묻는 문항 | 활동성 결핵 확인은 앞에서 끝난 전제 | TST 결과에 따라 INH 기간 결정 |
+
+✅ 3초 Lock line
+활동성 결핵 접촉자 = 먼저 Hx/PEx/CXR로 활동성 확인, 3개월~2세 TST 음성이면 INH 3개월 후 8주 재검.
+
+🎯 암기 확인 퀴즈
+Q1. 결핵 접촉자에서 TST 전에 먼저 확인할 것은?
+Q2. 15개월 접촉자에서 활동성 배제 + TST 음성이면?
+Q3. 마지막 접촉 후 언제 재검하나?
+
+A1. 활동성 결핵 여부, 즉 병력·진찰·CXR
+A2. INH 3개월 예방적 투여
+A3. 마지막 접촉 시점으로부터 8주 뒤""",
+    },
+    "PEDS2-HI2-033": {
+        "answer": "Isoniazid(INH) 총 9개월 잠복결핵 치료",
+        "uncertain": False,
+        "enhanced_explanation": """🧭 Big picture
+CXR 음성, TST 양성이면 활동성 폐결핵 소견은 없지만 결핵 감염은 확인된 상태다. 결핵 접촉자 알고리즘에서 TST를 시행한 이후를 묻는 문항은, 그 전에 활동성 결핵 확인(Hx, PEx, CXR)을 이미 했다는 전제로 봐야 한다. 따라서 여기서 다시 활동성 확인을 하거나 TST를 반복하는 선택지가 아니라, 잠복결핵감염 치료로 들어간다.
+
+🔎 핵심 단서
+⭕ CXR 음성: 활동성 폐결핵 소견 없음
+⭕ TST 양성: 결핵 감염 확인
+⭕ TST 시행 이후 상황: 활동성 결핵 확인은 이미 앞단에서 시행된 전제
+⭕ 치료: INH 총 9개월
+
+👣 시험장 사고 흐름
+1단계: 결핵 접촉자 알고리즘은 활동성 결핵 확인이 먼저다.
+2단계: CXR 음성이라 활동성 폐병변은 없다.
+3단계: TST 양성이므로 감염은 확인됐다.
+4단계: 활동성은 아니고 감염은 있으므로 잠복결핵 치료, 즉 INH 총 9개월로 간다.
+
+🧠 쉽게 이해하기
+CXR가 깨끗하다는 건 지금 폐에서 불타는 활동성 결핵은 안 보인다는 뜻이다. 그런데 TST가 양성이면 몸이 결핵균을 이미 만난 흔적이 있다. 어린 소아에서는 이 불씨가 커질 수 있으니, INH를 총 9개월 써서 잠복결핵을 눌러준다.
+
+📊 감별/오답 제거
+| 상황 | 판단 | 답 |
+| CXR 양성 또는 증상/진찰상 활동성 의심 | 활동성 결핵 | 활동성 결핵 치료 |
+| CXR 음성 + TST 음성, 3개월~2세 | window period 가능 | INH 3개월 예방적 투여 후 8주 재검 |
+| CXR 음성 + TST 양성 | 잠복결핵감염 | INH 총 9개월 |
+| TST 양성인데 다시 TST | 이미 양성 결과가 있음 | 오답 |
+
+✅ 3초 Lock line
+CXR 음성 + TST 양성 = 활동성 배제 후 잠복결핵, INH 총 9개월.
+
+🎯 암기 확인 퀴즈
+Q1. TST 양성 이후 문항에서 활동성 결핵 확인은 어떻게 해석하나?
+Q2. CXR 음성 + TST 양성의 치료는?
+Q3. INH 3개월 예방투여와 INH 9개월 치료는 언제 갈리나?
+
+A1. 이미 앞단에서 확인한 전제로 본다
+A2. INH 총 9개월
+A3. TST 음성이면 예방투여/재검, TST 양성이면 잠복결핵 치료""",
+    },
+    "PEDS2-HI2-034": {
+        "answer": "④ 이소니아지드(INH) 9개월 복용",
+        "uncertain": False,
+        "enhanced_explanation": """🧭 Big picture
+18개월 소아가 활동성 결핵 환자인 아버지와 밀접 접촉했고, 가슴 X선은 정상이며 TST가 12mm 양성이다. 이 문항은 이미 병력·진찰·CXR로 활동성 결핵을 확인한 뒤 TST 결과까지 나온 상황으로 봐야 한다. 따라서 ‘2개월 후 TST 재검’이나 ‘INH 2개월 후 TST’가 아니라, 잠복결핵감염 치료인 이소니아지드 9개월 복용이 정답이다.
+
+🔎 핵심 단서
+⭕ 18개월: 3개월~2세, 결핵 진행 위험 높은 연령
+⭕ 아버지 활동성 결핵: 밀접 접촉자
+⭕ 건강해 보이고 진찰/CXR 정상: 활동성 결핵은 앞단에서 확인·배제된 상황
+⭕ TST 12mm: 접촉자에서 양성
+⭕ 보기 중 정답: ④ 이소니아지드 9개월 복용
+
+👣 시험장 사고 흐름
+1단계: 활동성 결핵 접촉자 알고리즘을 연다.
+2단계: 활동성 결핵 확인은 Hx/PEx/CXR로 먼저 한다. 이 지문은 이미 진찰과 CXR 정상까지 준 상태다.
+3단계: TST가 양성이므로 더 기다리거나 다시 TST를 할 단계가 아니다.
+4단계: 잠복결핵감염 치료로 INH 총 9개월을 선택한다.
+
+🧠 쉽게 이해하기
+이 문제의 함정은 “어린 접촉자면 일단 INH 3개월 주고 나중에 TST”를 기계적으로 고르는 것이다. 그런데 이 아이는 이미 TST 결과가 12mm로 나왔다. 즉 기다리며 재검하는 단계가 아니라, 감염이 확인된 단계다. 활동성 결핵은 CXR와 진찰로 앞에서 걸렀고, 남은 답은 잠복결핵 치료다.
+
+📊 감별/오답 제거
+| 선택지 | 판단 |
+| IGRA | 18개월 접촉자에서 이미 TST 양성, 추가 확인으로 우선 선택 아님 |
+| 1개월 후 CXR | 활동성 확인은 이미 CXR 정상으로 제시됨 |
+| 2개월 후 TST | TST가 이미 양성이라 재검 단계 아님 |
+| INH 9개월 | ✅ 활동성 배제 + TST 양성 = 잠복결핵 치료 |
+| INH 2개월 후 TST | TST 음성 window period에서나 생각할 축, 이 지문은 TST 양성 |
+
+✅ 3초 Lock line
+접촉자에서 TST 양성이 이미 나왔으면 활동성 확인은 끝난 전제, INH 총 9개월.
+
+🎯 암기 확인 퀴즈
+Q1. 이 지문에서 활동성 결핵 확인은 어디까지 제시됐나?
+Q2. TST 12mm가 이미 나온 18개월 접촉자의 처치는?
+Q3. INH 2개월 후 TST가 오답인 이유는?
+
+A1. 진찰 정상, CXR 정상
+A2. INH 9개월
+A3. TST가 이미 양성이므로 재검 전 예방투여 단계가 아님""",
+    },
+})
+
+
 def apply_official_unit(card: dict) -> None:
     unit = infer_official_unit(card)
     card["official_unit"] = unit
