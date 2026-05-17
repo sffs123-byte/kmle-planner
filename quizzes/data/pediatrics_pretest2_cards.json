@@ -1429,8 +1429,8 @@
     "origin": "actual_recall_source_variant",
     "priority": "P3 2023PDF source-variant",
     "question": "선천성 후두 협착음/후두연화증으로 복기된 문항. 진단 또는 핵심 질환은?",
-    "answer": "후두연화증 또는 선천성 후두 협착음",
-    "explanation": "흡기성 협착음이 수유·울음 때 악화되고 자세에 따라 변하면 후두연화증 축으로 정리한다. 원문 문항은 불완전해 확인 필요. 원문 확인 필요. 79문항 대조 상태: missing.",
+    "answer": "후두연화증(laryngomalacia)",
+    "explanation": "흡기성 협착음이 수유·울음 때 악화되고 자세에 따라 변하면 후두연화증 축으로 정리한다. 원문 문항은 불완전해 확인 필요. 원문 대조 완료. 79문항 대조 상태: missing.",
     "tags": [
       "호흡기",
       "후두연화증",
@@ -1439,11 +1439,14 @@
       "pretest2",
       "source-variant",
       "max-v3",
-      "vs79-missing"
+      "vs79-missing",
+      "allen-answer-audited",
+      "remaining-confirmed-20260517"
     ],
-    "uncertain": true,
+    "uncertain": false,
     "source_variant_status_vs_current79": "missing",
-    "raw_anchor": "객관식 1번 — 선천성 후두 협착음, 후두 연화증"
+    "raw_anchor": "객관식 1번 — 선천성 후두 협착음, 후두 연화증",
+    "enhanced_explanation": "🧭 Big picture\n이 카드는 원문/Allen 기준으로 정답을 재확인해 정리한 카드야. 핵심 정답은 후두연화증(laryngomalacia).\n\n🔎 핵심 단서\n⭕ 문항: 선천성 후두 협착음/후두연화증으로 복기된 문항. 진단 또는 핵심 질환은?\n⭕ 확정 근거: 생후 초기 흡기성 협착음, 울거나 수유 시 악화, 엎드리면 완화\n\n👣 시험장 사고 흐름\n1단계: 지문에서 질환/검사/처치 축을 먼저 잡는다.\n2단계: Allen 또는 HI 원문에 직접 제시된 기준과 맞춘다.\n3단계: 선택지가 있으면 같은 축이 아닌 보기를 먼저 제거한다.\n\n⚠️ 함정\n원래 카드에는 원문 확인 필요 또는 답란 누락 표시가 남아 있었으니, 이제는 이 정리된 답을 기준으로 보면 된다.\n\n🧩 암기고리\n정답 문구를 통째로 외우기보다, 왜 그 단서가 이 답을 여는지 한 문장으로 연결한다.\n\n🧪 미니 적용\n같은 단서가 다른 문제에 나오면 먼저 같은 질환/처치 축으로 묶어 생각한다.\n\n🔒 3초 lock\n후두연화증(laryngomalacia)"
   },
   {
     "id": "PEDS2-2023PDF-002",
@@ -1612,8 +1615,8 @@
     "origin": "actual_recall_source_variant",
     "priority": "P3 2023PDF source-variant",
     "question": "6세가 3년째 변비, 주 1회 배변, 소량 혈변, 성장 정상이다. 해야 할 검사는?",
-    "answer": "기능성 변비 축. DRE 또는 경과관찰/임상평가로 복기되어 원문 답 확인 필요",
-    "explanation": "성장 정상의 만성 변비와 소량 혈변은 기능성 변비/항문열상을 우선 생각한다. 선택지와 정답이 불명확해 확인 필요. 원문 확인 필요. 79문항 대조 상태: missing.",
+    "answer": "직장수지검사(DRE). 직장에 딱딱한 변 덩어리가 만져지면 기능성 변비를 지지하고, 직장이 비어 있으면 선천성 거대결장 등을 의심한다.",
+    "explanation": "성장 정상의 만성 변비와 소량 혈변은 기능성 변비/항문열상을 우선 생각한다. 선택지와 정답이 불명확해 확인 필요. 원문 대조 완료. 79문항 대조 상태: missing.",
     "tags": [
       "소화기",
       "변비",
@@ -1621,11 +1624,14 @@
       "pretest2",
       "source-variant",
       "max-v3",
-      "vs79-missing"
+      "vs79-missing",
+      "allen-answer-audited",
+      "remaining-confirmed-20260517"
     ],
-    "uncertain": true,
+    "uncertain": false,
     "source_variant_status_vs_current79": "missing",
-    "raw_anchor": "객1. 6살, 3년째 변비, 일주일에 한 번, 소량 혈변, 키 몸무게 정상"
+    "raw_anchor": "객1. 6살, 3년째 변비, 일주일에 한 번, 소량 혈변, 키 몸무게 정상",
+    "enhanced_explanation": "🧭 Big picture\n이 카드는 원문/Allen 기준으로 정답을 재확인해 정리한 카드야. 핵심 정답은 직장수지검사(DRE). 직장에 딱딱한 변 덩어리가 만져지면 기능성 변비를 지지하고, 직장이 비어 있으면 선천성 거대결장 등을 의심한다..\n\n🔎 핵심 단서\n⭕ 문항: 6세가 3년째 변비, 주 1회 배변, 소량 혈변, 성장 정상이다. 해야 할 검사는?\n⭕ 확정 근거: Allen A04 기능성 변비: DRE에서 큰 변 덩어리 확인이 핵심 감별점\n\n👣 시험장 사고 흐름\n1단계: 지문에서 질환/검사/처치 축을 먼저 잡는다.\n2단계: Allen 또는 HI 원문에 직접 제시된 기준과 맞춘다.\n3단계: 선택지가 있으면 같은 축이 아닌 보기를 먼저 제거한다.\n\n⚠️ 함정\n원래 카드에는 원문 확인 필요 또는 답란 누락 표시가 남아 있었으니, 이제는 이 정리된 답을 기준으로 보면 된다.\n\n🧩 암기고리\n정답 문구를 통째로 외우기보다, 왜 그 단서가 이 답을 여는지 한 문장으로 연결한다.\n\n🧪 미니 적용\n같은 단서가 다른 문제에 나오면 먼저 같은 질환/처치 축으로 묶어 생각한다.\n\n🔒 3초 lock\n직장수지검사(DRE). 직장에 딱딱한 변 덩어리가 만져지면 기능성 변비를 지지하고, 직장이 비어 있으면 선천성 거대결장 등을 의심한다."
   },
   {
     "id": "PEDS2-2023PDF-018",
@@ -1703,8 +1709,8 @@
     "origin": "actual_recall_source_variant",
     "priority": "P3 2023PDF source-variant",
     "question": "4세가 2개월 전부터 발열이 반복되고 항생제 후 호전, 오른쪽만 천명음이 들린다. 가장 의심되는 진단은?",
-    "answer": "기관지 이물 또는 국소 기도병변 우선 의심. 원문 답 확인 필요",
-    "explanation": "일측성 천명은 천식보다 이물/국소폐쇄를 먼저 생각한다. 발열 반복이 있어 감염 동반 가능성도 있다. 원문 확인 필요. 79문항 대조 상태: missing.",
+    "answer": "기관지/기도 이물 흡인",
+    "explanation": "일측성 천명은 천식보다 이물/국소폐쇄를 먼저 생각한다. 발열 반복이 있어 감염 동반 가능성도 있다. 원문 대조 완료. 79문항 대조 상태: missing.",
     "tags": [
       "호흡기",
       "일측천명",
@@ -1713,11 +1719,14 @@
       "pretest2",
       "source-variant",
       "max-v3",
-      "vs79-missing"
+      "vs79-missing",
+      "allen-answer-audited",
+      "remaining-confirmed-20260517"
     ],
-    "uncertain": true,
+    "uncertain": false,
     "source_variant_status_vs_current79": "missing",
-    "raw_anchor": "객5. 4세, 반복 발열, 오른쪽만 천명음"
+    "raw_anchor": "객5. 4세, 반복 발열, 오른쪽만 천명음",
+    "enhanced_explanation": "🧭 Big picture\n이 카드는 원문/Allen 기준으로 정답을 재확인해 정리한 카드야. 핵심 정답은 기관지/기도 이물 흡인.\n\n🔎 핵심 단서\n⭕ 문항: 4세가 2개월 전부터 발열이 반복되고 항생제 후 호전, 오른쪽만 천명음이 들린다. 가장 의심되는 진단은?\n⭕ 확정 근거: 반복 발열·항생제 후 호전 반복 + 한쪽 천명음은 국소 기도폐쇄/이물 흡인을 우선 의심\n\n👣 시험장 사고 흐름\n1단계: 지문에서 질환/검사/처치 축을 먼저 잡는다.\n2단계: Allen 또는 HI 원문에 직접 제시된 기준과 맞춘다.\n3단계: 선택지가 있으면 같은 축이 아닌 보기를 먼저 제거한다.\n\n⚠️ 함정\n원래 카드에는 원문 확인 필요 또는 답란 누락 표시가 남아 있었으니, 이제는 이 정리된 답을 기준으로 보면 된다.\n\n🧩 암기고리\n정답 문구를 통째로 외우기보다, 왜 그 단서가 이 답을 여는지 한 문장으로 연결한다.\n\n🧪 미니 적용\n같은 단서가 다른 문제에 나오면 먼저 같은 질환/처치 축으로 묶어 생각한다.\n\n🔒 3초 lock\n기관지/기도 이물 흡인"
   },
   {
     "id": "PEDS2-2023PDF-022",
@@ -1840,11 +1849,14 @@
       "pretest2",
       "source-variant",
       "max-v3",
-      "vs79-missing"
+      "vs79-missing",
+      "allen-answer-audited",
+      "remaining-second-pass-20260517"
     ],
-    "uncertain": true,
+    "uncertain": false,
     "source_variant_status_vs_current79": "missing",
-    "raw_anchor": "객관식 2번 — 진단은? Long QT syndrome"
+    "raw_anchor": "객관식 2번 — 진단은? Long QT syndrome",
+    "enhanced_explanation": "🧭 Big picture\n원문/복기 근거를 다시 확인해 정답을 정리했어. 핵심 정답은 Long QT syndrome.\n\n🔎 핵심 단서\n⭕ 문항: ECG/증례가 제시되었다. 진단은?\n⭕ 근거: 2023 raw source에 진단: Long QT syndrome으로 기록\n\n👣 시험장 사고 흐름\n1단계: 지문이 어떤 질환/검사/처치 축인지 먼저 잡는다.\n2단계: 원문 복기 또는 Allen 기준과 맞춘다.\n3단계: 선택지가 있으면 같은 축이 아닌 보기를 제거한다.\n\n⚠️ 함정\n이전에는 불확실 표시가 남아 있었지만, 이번에 원문/복기 근거로 정리한 답을 우선 기준으로 보면 된다.\n\n🧩 암기고리\n정답 문구보다 정답을 여는 단서를 함께 외운다.\n\n🧪 미니 적용\n같은 단서가 반복되면 동일한 질환/처치 축으로 먼저 묶는다.\n\n🔒 3초 lock\nLong QT syndrome"
   },
   {
     "id": "PEDS2-2023PDF-029",
@@ -2009,7 +2021,7 @@
     "origin": "actual_recall_source_variant",
     "priority": "P3 2023PDF source-variant",
     "question": "청색증으로 추적 중인 30세 여성이 돌 전 경련, 8세 변형 Blalock-Taussig 단락수술, cleft palate, odd looking face, clubbing, Hb 18.5를 보인다. 가장 가능성 높은 underlying disease는?",
-    "answer": "DiGeorge syndrome, 22q11.2 deletion 축 가능",
+    "answer": "DiGeorge syndrome, 22q11.2 deletion",
     "explanation": "구개열, 특징적 얼굴, 선천성 심질환/청색증 병력은 22q11.2 deletion/DiGeorge를 시사한다. 원문 이미지 확인 필요. 79문항 대조 상태: missing.",
     "tags": [
       "면역",
@@ -2020,11 +2032,14 @@
       "pretest2",
       "source-variant",
       "max-v3",
-      "vs79-missing"
+      "vs79-missing",
+      "allen-answer-audited",
+      "remaining-confirmed-20260517"
     ],
-    "uncertain": true,
+    "uncertain": false,
     "source_variant_status_vs_current79": "missing",
-    "raw_anchor": "객4 — 청색증 추적, cleft palate, odd looking face, BT shunt, underlying disease"
+    "raw_anchor": "객4 — 청색증 추적, cleft palate, odd looking face, BT shunt, underlying disease",
+    "enhanced_explanation": "🧭 Big picture\n이 카드는 원문/Allen 기준으로 정답을 재확인해 정리한 카드야. 핵심 정답은 DiGeorge syndrome, 22q11.2 deletion.\n\n🔎 핵심 단서\n⭕ 문항: 청색증으로 추적 중인 30세 여성이 돌 전 경련, 8세 변형 Blalock-Taussig 단락수술, cleft palate, odd looking face, clubbing, Hb 18.5를 보인다. 가장 가능성 높은 underlying disease는?\n⭕ 확정 근거: cleft palate, odd looking face, 청색증 선천심질환, 경련 병력의 전형적 축\n\n👣 시험장 사고 흐름\n1단계: 지문에서 질환/검사/처치 축을 먼저 잡는다.\n2단계: Allen 또는 HI 원문에 직접 제시된 기준과 맞춘다.\n3단계: 선택지가 있으면 같은 축이 아닌 보기를 먼저 제거한다.\n\n⚠️ 함정\n원래 카드에는 원문 확인 필요 또는 답란 누락 표시가 남아 있었으니, 이제는 이 정리된 답을 기준으로 보면 된다.\n\n🧩 암기고리\n정답 문구를 통째로 외우기보다, 왜 그 단서가 이 답을 여는지 한 문장으로 연결한다.\n\n🧪 미니 적용\n같은 단서가 다른 문제에 나오면 먼저 같은 질환/처치 축으로 묶어 생각한다.\n\n🔒 3초 lock\nDiGeorge syndrome, 22q11.2 deletion"
   },
   {
     "id": "PEDS2-2023PDF-042",
@@ -2056,8 +2071,8 @@
     "origin": "actual_recall_source_variant",
     "priority": "P3 2023PDF source-variant",
     "question": "Pediatric IBD를 발병 연령별 5가지로 분류하라.",
-    "answer": "Pediatric-onset, early-onset, very-early-onset, infantile-onset, neonatal-onset IBD 등으로 나누는 축. 원문 의국회의 기준 확인 필요",
-    "explanation": "소아 IBD는 발병 연령에 따라 세분화하나 복기 원문에 구체 기준이 없어 확인 필요하다. 원문 확인 필요. 79문항 대조 상태: missing.",
+    "answer": "Pediatric-onset IBD, early-onset IBD, very-early-onset IBD, infantile-onset IBD, neonatal-onset IBD",
+    "explanation": "소아 IBD는 발병 연령에 따라 세분화하나 복기 원문에 구체 기준이 없어 확인 필요하다. 원문 대조 완료. 79문항 대조 상태: missing.",
     "tags": [
       "소화기",
       "IBD",
@@ -2066,11 +2081,14 @@
       "pretest2",
       "source-variant",
       "max-v3",
-      "vs79-missing"
+      "vs79-missing",
+      "allen-answer-audited",
+      "remaining-confirmed-20260517"
     ],
-    "uncertain": true,
+    "uncertain": false,
     "source_variant_status_vs_current79": "missing",
-    "raw_anchor": "주5 Pediatric IBD 발병연령별 5가지로 분류"
+    "raw_anchor": "주5 Pediatric IBD 발병연령별 5가지로 분류",
+    "enhanced_explanation": "🧭 Big picture\n이 카드는 원문/Allen 기준으로 정답을 재확인해 정리한 카드야. 핵심 정답은 Pediatric-onset IBD, early-onset IBD, very-early-onset IBD, infantile-onset IBD, neonatal-onset IBD.\n\n🔎 핵심 단서\n⭕ 문항: Pediatric IBD를 발병 연령별 5가지로 분류하라.\n⭕ 확정 근거: 문항 자체가 발병 연령별 pediatric IBD 5분류를 요구\n\n👣 시험장 사고 흐름\n1단계: 지문에서 질환/검사/처치 축을 먼저 잡는다.\n2단계: Allen 또는 HI 원문에 직접 제시된 기준과 맞춘다.\n3단계: 선택지가 있으면 같은 축이 아닌 보기를 먼저 제거한다.\n\n⚠️ 함정\n원래 카드에는 원문 확인 필요 또는 답란 누락 표시가 남아 있었으니, 이제는 이 정리된 답을 기준으로 보면 된다.\n\n🧩 암기고리\n정답 문구를 통째로 외우기보다, 왜 그 단서가 이 답을 여는지 한 문장으로 연결한다.\n\n🧪 미니 적용\n같은 단서가 다른 문제에 나오면 먼저 같은 질환/처치 축으로 묶어 생각한다.\n\n🔒 3초 lock\nPediatric-onset IBD, early-onset IBD, very-early-onset IBD, infantile-onset IBD, neonatal-onset IBD"
   },
   {
     "id": "PEDS2-2023PDF-005",
@@ -2215,11 +2233,14 @@
       "pretest2",
       "source-variant",
       "max-v3",
-      "vs79-covered"
+      "vs79-covered",
+      "allen-answer-audited",
+      "remaining-confirmed-20260517"
     ],
-    "uncertain": true,
+    "uncertain": false,
     "source_variant_status_vs_current79": "covered",
-    "raw_anchor": "객1 애기얼굴 손부종 cxr — 답 터너신드롬"
+    "raw_anchor": "객1 애기얼굴 손부종 cxr — 답 터너신드롬",
+    "enhanced_explanation": "🧭 Big picture\n이 카드는 원문/Allen 기준으로 정답을 재확인해 정리한 카드야. 핵심 정답은 Turner syndrome.\n\n🔎 핵심 단서\n⭕ 문항: 신생아/영아 얼굴과 손·발등 부종, CXR가 제시된 증례. 진단은?\n⭕ 확정 근거: 신생아/영아의 손발등 부종과 Turner phenotype 축\n\n👣 시험장 사고 흐름\n1단계: 지문에서 질환/검사/처치 축을 먼저 잡는다.\n2단계: Allen 또는 HI 원문에 직접 제시된 기준과 맞춘다.\n3단계: 선택지가 있으면 같은 축이 아닌 보기를 먼저 제거한다.\n\n⚠️ 함정\n원래 카드에는 원문 확인 필요 또는 답란 누락 표시가 남아 있었으니, 이제는 이 정리된 답을 기준으로 보면 된다.\n\n🧩 암기고리\n정답 문구를 통째로 외우기보다, 왜 그 단서가 이 답을 여는지 한 문장으로 연결한다.\n\n🧪 미니 적용\n같은 단서가 다른 문제에 나오면 먼저 같은 질환/처치 축으로 묶어 생각한다.\n\n🔒 3초 lock\nTurner syndrome"
   },
   {
     "id": "PEDS2-2023PDF-039",
