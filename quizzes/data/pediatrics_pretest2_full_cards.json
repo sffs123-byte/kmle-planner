@@ -203,7 +203,7 @@
     "source_rank": 31,
     "origin": "actual_recall",
     "priority": "P3 누적복기",
-    "question": "거의 동일한 지문과 눈 주위 사진이 제시된 문제에서 원인은?",
+    "question": "객Q. 2세 여아가 발열과 눈 충혈로 병원에 왔다. 결막이 충혈되어 있고, 눈 주위에 황색 분비물과 인두 부위의 발적이 있었다. 목 림프절이 만져진다. 원인은?\n① 리노바이러스 ② 노로바이러스 ③ 파르보바이러스\n④ 아데노바이러스 ⑤ RSV",
     "answer": "아데노바이러스",
     "explanation": "원문에 정답이 아데노바이러스로 적혀 있다.",
     "tags": [
@@ -215,13 +215,14 @@
       "2주차",
       "core79",
       "actual_recall",
+      "curated-front-fix",
       "12장 감염"
     ],
     "uncertain": false,
-    "enhanced_explanation": "🧭 Big picture\n원문에는 “거의 동일한 지문과 눈 주위 사진” 정도만 남아 있고 정답이 아데노바이러스로 제시되어 있어, 상세 stem 원문 확인은 제한적이야. 그래도 소아에서 아데노바이러스는 발열, 인두염, 결막염을 묶는 pharyngoconjunctival fever, 또는 유행각결막염을 일으킬 수 있는 대표 바이러스다. 눈 사진이 있었다면 결막염 단서가 핵심이었을 가능성이 높다.\n\n🔎 핵심 단서\n- ⭕ 눈 주위/눈 사진: 결막염 또는 각결막염 시사\n- ⭕ 원문 정답 아데노바이러스: 복기 답은 adenovirus로 lock\n- ⭕ 소아 감염: 인두염 + 결막염 + 발열 조합을 떠올리기\n- ❌ 세균성 결막염만 생각: 고열/인두염/집단발생이면 adenovirus 가능\n\n👣 시험장 사고 흐름\n1단계: 눈 충혈/분비물 사진이 나오면 결막염 감별부터 시작.\n2단계: 발열, 인두통, URI 증상이 같이 있으면 바이러스성 결막염.\n3단계: pharyngoconjunctival fever 또는 epidemic keratoconjunctivitis → adenovirus.\n4단계: 원문이 부족하므로 사진/지문 확인 시 분비물 양상과 전신증상을 다시 체크.\n\n🧠 쉽게 이해하기\n아데노바이러스는 소아 감염계의 멀티툴 같은 놈이야. 목도 붓게 하고, 눈도 빨갛게 만들고, 열도 나게 한다. 수영장/집단생활과 연결되는 pharyngoconjunctival fever가 유명하고 전염성도 꽤 세다. 눈만 보면 알레르기인지 세균인지 헷갈리지만, “열 + 인두염 + 결막염”이면 아데노가 확 올라온다. 다만 이 카드는 원문 stem이 불완전하니, 확장 공부축은 adenovirus 결막염으로 잡되 실제 시험 복원에서는 사진과 동반 증상을 확인해야 한다.\n\n📊 감별/오답 제거\n비교표\n- Adenovirus: 발열, 인두염, 결막염, 전염성 강함, watery discharge 가능.\n- 세균성 결막염: 화농성 분비물, 눈곱, 양안 전파 가능, 전신 URI 단서 약할 수 있음.\n- 알레르기 결막염: 가려움이 핵심, 양측성, 계절/알레르겐, 발열 없음.\n- HSV 각결막염: 통증, 수지상 병변, 항바이러스 고려.\n- Kawasaki disease: 양측 비화농성 결막충혈 + 5일 이상 발열 + 점막/손발/림프절.\n\n✅ 3초 Lock line\n소아 발열/인두염 + 결막염 사진 느낌 = adenovirus를 먼저 찍는다.\n\n🎯 암기 확인 퀴즈\nQ1. Adenovirus의 유명한 임상 조합은? \nA1. 발열 + 인두염 + 결막염.\nQ2. 알레르기 결막염의 핵심 증상은? \nA2. 가려움.\nQ3. 이 복기 문항의 정답 원인은? \nA3. 아데노바이러스.",
+    "enhanced_explanation": "🧭 Big picture\n발열 + 결막충혈/분비물 + 인두 발적 + 경부림프절이면 아데노바이러스의 인두결막열(pharyngoconjunctival fever)을 먼저 떠올린다.\n\n🔎 핵심 단서\n- 2세 소아의 발열\n- 결막 충혈과 눈 주위 황색 분비물\n- 인두 발적\n- 목 림프절 촉지\n- 선택지 중 adenovirus가 이 조합을 가장 잘 설명\n\n👣 시험장 사고 흐름\n1단계: 눈 증상만 보지 말고 인두/발열을 같이 묶는다.\n2단계: 인두염 + 결막염이면 adenovirus를 먼저 올린다.\n3단계: RSV는 세기관지염, 노로바이러스는 위장관, parvovirus는 발진/혈액 축이라 stem과 거리가 있다.\n\n🧠 쉽게 이해하기\n아데노바이러스는 목과 눈을 동시에 건드리는 바이러스라고 잡으면 된다. 그냥 눈곱 문제처럼 보여도, fever와 pharyngitis가 같이 있으면 bacterial conjunctivitis보다 adenovirus 쪽으로 기운다.\n\n📊 감별/오답 제거\nAdenovirus: 발열, 인두염, 결막염.\nRhinovirus: 감기/콧물 중심.\nNorovirus: 구토·설사 중심.\nParvovirus B19: 전염홍반/혈액질환 축.\nRSV: 영아 세기관지염, wheezing 축.\n\n✅ 3초 Lock line\n소아 발열 + 인두염 + 결막염 = 아데노바이러스.\n\n🎯 암기 확인 퀴즈\nQ. 인두결막열의 대표 원인 바이러스는?\nA. 아데노바이러스.",
     "layer": "core79",
     "mode": "주관식",
-    "display_question": "거의 동일한 지문과 눈 주위 사진이 제시된 문제에서 원인은?",
+    "display_question": "객Q. 2세 여아가 발열과 눈 충혈로 병원에 왔다. 결막이 충혈되어 있고, 눈 주위에 황색 분비물과 인두 부위의 발적이 있었다. 목 림프절이 만져진다. 원인은?\n① 리노바이러스 ② 노로바이러스 ③ 파르보바이러스\n④ 아데노바이러스 ⑤ RSV",
     "section": "P3 누적복기",
     "images": [
       {
@@ -276,8 +277,8 @@
     "source_rank": 41,
     "origin": "uncertain_recall",
     "priority": "P3 누적복기",
-    "question": "사진과 비슷한 병력, 검사소견에 림프구와 비정형 림프구가 많음(20%)이 있었고 보기로 전염단핵구증, 성홍열, 가와사키병 등이 제시되었다. 정답은?",
-    "answer": "원문 확인 필요",
+    "question": "객Q. 10세 여아가 7일간 지속되는 발열과 인후통으로 내원하였다. 편도 비대와 회색 삼출, 입천장 점상출혈이 보이고 양쪽 경부 림프절이 2 cm 정도로 만져지며 압통이 있다. 지라는 갈비뼈 아래 3횡지 만져진다. 몸통과 사타구니에 홍반구진성 발진/점상출혈이 있고, 혈액검사에서 림프구 증가와 비정형 림프구 20%가 보인다. 가장 가능성이 큰 진단은?",
+    "answer": "전염단핵구증(EBV infectious mononucleosis)",
     "explanation": "원문에는 보기 일부만 있고 답이 명시되어 있지 않다.",
     "tags": [
       "감염",
@@ -288,13 +289,14 @@
       "2주차",
       "core79",
       "uncertain_recall",
+      "curated-front-fix",
       "12장 감염"
     ],
-    "uncertain": true,
-    "enhanced_explanation": "🧭 Big picture\n이 카드는 원문 복기가 불완전해서 정답 확정은 조심해야 해. 다만 “림프구 증가 + 비정형 림프구 20%”는 시험장에서 거의 전염단핵구증(infectious mononucleosis)을 떠올리게 하는 강한 단서야. EBV 감염에서 CD8 T cell이 반응하면서 atypical lymphocyte가 보이고, 발열·인후통·림프절비대·간비장비대가 같이 나오면 더 단단해진다.\n\n🔎 핵심 단서\n- ⭕ 비정형 림프구 20%: EBV 전염단핵구증 쪽 핵심 trigger\n- ⭕ 림프구 우세: 바이러스성 감염 패턴\n- ❌ 성홍열: 세균성 인두염 + 딸기혀 + 사포발진이 중심\n- ❌ 가와사키병: 5일 이상 발열 + 결막충혈/입술/손발/발진/림프절\n- ⚠️ 원문 확인 필요: 사진 소견과 나머지 보기, 실제 정답 표시가 없음\n\n👣 시험장 사고 흐름\n1단계: CBC differential에서 림프구/비정형 림프구를 먼저 본다.\n2단계: 인후통, 경부림프절, 간비장비대가 있으면 EBV를 붙인다.\n3단계: 발진·딸기혀·관상동맥 위험 같은 다른 축이 더 강한지 확인한다.\n\n🧠 쉽게 이해하기\n비정형 림프구는 “바이러스 잡으러 출동한 림프구가 흥분해서 커진 모습”이라고 보면 돼. EBV는 B cell을 감염시키고, 몸은 그 B cell을 잡으려고 T cell을 왕창 동원한다. 그래서 피검사에 이상하게 생긴 림프구가 많이 보이는 것. 성홍열은 세균 독소가 피부 발진을 만드는 그림이고, 가와사키병은 혈관염이라 관상동맥 합병증이 포인트라 결이 다르다.\n\n📊 감별/오답 제거\n질환 | 핵심 stem | 검사/단서 | 포인트\n전염단핵구증 | 발열+인후통+림프절비대 | 비정형 림프구, EBV, Monospot | ampicillin 투여 시 발진 가능\n성홍열 | 인후통+딸기혀+사포발진 | GAS | penicillin, 류마티스열 예방\n가와사키병 | 5일 이상 발열+점막/결막/손발 | 염증수치, 혈소판 증가 | IVIG, 관상동맥\n\n✅ 3초 Lock line\n비정형 림프구 20% + 림프구 우세 = 전염단핵구증 의심, 단 원문 정답 확인 필요.\n\n🎯 암기 확인 퀴즈\nQ1. EBV 전염단핵구증에서 증가하는 특징적 세포는?\nQ2. 성홍열의 대표 혀 소견은?\nQ3. 가와사키병에서 가장 무서운 합병증은?\n\nA1. 비정형 림프구\nA2. 딸기혀\nA3. 관상동맥류/관상동맥 병변",
+    "uncertain": false,
+    "enhanced_explanation": "🧭 Big picture\n발열, 인후통, 편도 삼출, 경부림프절비대, 비장비대에 비정형 림프구 20%가 붙으면 전염단핵구증을 고른다. 대표 원인은 EBV다.\n\n🔎 핵심 단서\n- 7일 발열과 인후통\n- 편도 비대와 회색 삼출\n- 경부 림프절비대\n- 비장비대\n- 림프구 증가와 비정형 림프구 20%\n\n👣 시험장 사고 흐름\n1단계: 삼출성 인두염에서 GAS와 EBV를 같이 떠올린다.\n2단계: 림프절비대, 비장비대, 비정형 림프구가 있으면 EBV 쪽으로 잠근다.\n3단계: 성홍열은 딸기혀/사포양 발진, 가와사키병은 5일 이상 발열+점막/손발/관상동맥 축으로 감별한다.\n\n🧠 쉽게 이해하기\n전염단핵구증은 목감기처럼 보이지만 실제로는 림프조직 전체가 반응하는 바이러스 감염이다. 그래서 편도도 붓고, 림프절도 커지고, 비장도 만져질 수 있다. 비정형 림프구는 EBV에 반응한 T세포가 커져 보이는 단서다.\n\n📊 감별/오답 제거\n전염단핵구증: 삼출성 인두염 + 경부림프절 + 비장비대 + 비정형 림프구.\n성홍열: GAS 인두염 + 딸기혀 + 사포양 발진.\n가와사키병: 5일 이상 발열 + 결막/입술/손발 + 관상동맥 위험.\n\n✅ 3초 Lock line\n삼출성 인두염 + 비장비대 + 비정형 림프구 = EBV 전염단핵구증.\n\n🎯 암기 확인 퀴즈\nQ. 전염단핵구증에서 증가하는 특징적 혈액세포는?\nA. 비정형 림프구.",
     "layer": "core79",
     "mode": "주관식",
-    "display_question": "사진과 비슷한 병력, 검사소견에 림프구와 비정형 림프구가 많음(20%)이 있었고 보기로 전염단핵구증, 성홍열, 가와사키병 등이 제시되었다. 정답은?",
+    "display_question": "객Q. 10세 여아가 7일간 지속되는 발열과 인후통으로 내원하였다. 편도 비대와 회색 삼출, 입천장 점상출혈이 보이고 양쪽 경부 림프절이 2 cm 정도로 만져지며 압통이 있다. 지라는 갈비뼈 아래 3횡지 만져진다. 몸통과 사타구니에 홍반구진성 발진/점상출혈이 있고, 혈액검사에서 림프구 증가와 비정형 림프구 20%가 보인다. 가장 가능성이 큰 진단은?",
     "section": "P3 누적복기",
     "images": [
       {
@@ -769,7 +771,7 @@
     "source_rank": 92,
     "origin": "actual_recall_source_variant",
     "priority": "P3 2023PDF source-variant",
-    "question": "Koplik spot이 제시되었다. 진단은?",
+    "question": "객Q. 발열, 기침, 콧물, 결막염 후 구강 점막의 Koplik spot과 얼굴에서 시작해 몸통/사지로 퍼지는 발진이 보인다. 진단은?",
     "answer": "홍역, measles",
     "explanation": "Koplik spot은 홍역의 특징적 구강 점막 소견이다. 79문항 대조 상태: missing.",
     "tags": [
@@ -786,6 +788,7 @@
       "2주차",
       "source2023pdf",
       "actual_recall_source_variant",
+      "curated-front-fix",
       "12장 감염"
     ],
     "uncertain": false,
@@ -793,7 +796,7 @@
     "raw_anchor": "주1. koplik’s spot",
     "layer": "source2023pdf",
     "mode": "주관식",
-    "display_question": "Koplik spot이 제시되었다. 진단은?",
+    "display_question": "객Q. 발열, 기침, 콧물, 결막염 후 구강 점막의 Koplik spot과 얼굴에서 시작해 몸통/사지로 퍼지는 발진이 보인다. 진단은?",
     "enhanced_explanation": "🧭 Big picture\nKoplik spot은 홍역(measles)의 시그니처 소견이다. 발진이 본격적으로 나오기 전, 볼점막에 소금 뿌린 것 같은 작고 하얀 반점이 보일 수 있어. 홍역은 발열, cough, coryza, conjunctivitis의 3C와 Koplik spot, 이후 얼굴에서 시작해 아래로 퍼지는 발진 흐름으로 묶어서 외우면 국시에서 강하다.\n\n🔎 핵심 단서\n⭕ Koplik spot 제시: 홍역 대표 구강 점막 소견\n⭕ 진단을 묻는 단답형: measles 바로 연결\n⭕ 구강 병변이 발진 전 clue가 될 수 있음\n❌ 수족구/HSV 구내염과 섞지 않기\n\n👣 시험장 사고 흐름\n1단계: 구강 점막의 작은 흰 반점이 Koplik spot인지 확인.\n2단계: Koplik spot이면 홍역으로 진단 잠금.\n3단계: 3C(cough, coryza, conjunctivitis)와 고열이 있는지 연결.\n4단계: 발진은 얼굴/귀뒤에서 시작해 몸통·사지로 내려가는 패턴을 떠올린다.\n\n🧠 쉽게 이해하기\nKoplik spot은 홍역이 남기는 ‘예고편 자막’ 같은 거야. 피부 발진이라는 본편이 나오기 전에 입안 볼점막에 하얀 점들이 먼저 뜬다. 그래서 시험에서 Koplik spot만 던져줘도 “아 홍역이구나” 하고 바로 잡아야 해. 이름이 특이한 소견은 대체로 문제 제작자가 답을 박아놓은 힌트다.\n\n📊 감별/오답 제거\n| 질환 | 구강/피부 소견 | 감별 포인트 |\n| 홍역 | Koplik spot, 얼굴→아래로 발진, 3C | ✅ 정답 |\n| 수족구병 | 손·발·입 수포/궤양 | Koplik spot 아님 |\n| HSV gingivostomatitis | 잇몸 염증, 다발성 구강 궤양 | 구강 전체 통증/수포 |\n| 풍진 | 후이개 림프절, 연한 발진 | Koplik spot 아님 |\n\n✅ 3초 Lock line\nKoplik spot = 홍역(measles).\n\n🎯 암기 확인 퀴즈\nQ1. Koplik spot이 특징적인 질환은?\nQ2. 홍역의 3C는 무엇인가?\nQ3. 홍역 발진은 보통 어디서 시작해 퍼지나?\n\nA1. 홍역\nA2. Cough, coryza, conjunctivitis\nA3. 얼굴/귀뒤에서 시작해 아래로",
     "section": "P3 2023PDF source-variant",
     "images": [],
@@ -808,7 +811,7 @@
     "source_rank": 97,
     "origin": "actual_recall_source_variant",
     "priority": "P3 2023PDF source-variant",
-    "question": "구강 병변 사진/증례가 제시되었다. 진단은?",
+    "question": "객Q. 발열과 보챔, 섭취 저하가 있는 소아에서 잇몸과 구강 점막의 다발성 수포/궤양성 병변이 보인다. 가장 가능성이 큰 진단은?",
     "answer": "헤르페스 잇몸구내염, herpetic gingivostomatitis",
     "explanation": "HSV에 의한 치은구내염은 발열, 구강 궤양/수포, 잇몸 염증을 보인다. 원문 사진 확인 필요. 원문 이미지 확인 필요. 79문항 대조 상태: missing.",
     "tags": [
@@ -826,6 +829,7 @@
       "2주차",
       "source2023pdf",
       "actual_recall_source_variant",
+      "curated-front-fix",
       "12장 감염"
     ],
     "uncertain": true,
@@ -834,7 +838,7 @@
     "images": [],
     "layer": "source2023pdf",
     "mode": "주관식",
-    "display_question": "구강 병변 사진/증례가 제시되었다. 진단은?",
+    "display_question": "객Q. 발열과 보챔, 섭취 저하가 있는 소아에서 잇몸과 구강 점막의 다발성 수포/궤양성 병변이 보인다. 가장 가능성이 큰 진단은?",
     "enhanced_explanation": "🧭 Big picture\n헤르페스 잇몸구내염(herpetic gingivostomatitis)은 HSV-1의 원발 감염으로, 어린아이에서 고열과 함께 입안 곳곳의 painful vesicle/ulcer, 잇몸 붓고 피나는 gingivitis가 나타나는 질환이야. 이 카드는 사진/증례 제시 문항이라 원문 사진 확인 필요지만, 복기상 진단은 herpetic gingivostomatitis로 정리되어 있다. 핵심은 ‘구강 궤양 + 잇몸염 + 통증/침흘림’ 패턴.\n\n🔎 핵심 단서\n⭕ 구강 병변 사진/증례: 입안 병변 감별\n⭕ 복기 답: HSV gingivostomatitis\n⭕ 발열 + 구강 수포/궤양 + 잇몸염이면 강력\n⚠️ 원문 사진 없음: 실제 병변 모양은 원문 확인 필요\n\n👣 시험장 사고 흐름\n1단계: 병변 위치를 본다 → 입안 전체/잇몸까지 침범?\n2단계: 통증, 침흘림, 먹기 힘듦, 고열이 있는지 확인.\n3단계: 잇몸이 붓고 피나며 다발성 궤양이면 HSV 치은구내염.\n4단계: 손발 병변이 뚜렷하면 수족구, Koplik spot이면 홍역으로 감별.\n\n🧠 쉽게 이해하기\nHSV gingivostomatitis는 입안이 바이러스한테 단체로 털린 느낌이야. 작은 궤양들이 여러 군데 생기고 잇몸도 빨갛게 붓고 아파서 아이가 침을 흘리고 밥을 못 먹는다. 단순히 입 안에 점 하나가 있는 게 아니라 ‘입안 전체 통증 이벤트’로 기억하면 좋아.\n\n📊 감별/오답 제거\n| 질환 | 구강 소견 | 감별 포인트 |\n| HSV gingivostomatitis | 다발성 수포/궤양, gingivitis, 고열 | ✅ 복기상 정답 |\n| 수족구병 | 구강 궤양 + 손/발 발진 | 손발 병변 확인 |\n| 홍역 | Koplik spot, 3C, 전신 발진 | 잇몸염 중심 아님 |\n| Aphthous ulcer | 국소 재발성 궤양, 전신증상 적음 | 고열/잇몸염 약함 |\n\n✅ 3초 Lock line\n고열 + 다발성 구강 궤양 + 잇몸염/침흘림 = HSV herpetic gingivostomatitis, 사진은 원문 확인 필요.\n\n🎯 암기 확인 퀴즈\nQ1. Herpetic gingivostomatitis의 흔한 원인 바이러스는?\nQ2. HSV 치은구내염에서 잇몸 소견은?\nQ3. 손발 발진이 같이 뚜렷하면 어떤 질환을 감별하나?\n\nA1. HSV-1\nA2. 붓고 빨갛고 쉽게 피나며 통증이 심함\nA3. 수족구병",
     "section": "P3 2023PDF source-variant",
     "has_image": false,
@@ -2718,15 +2722,8 @@
     "mode": "주관식",
     "display_question": "임신 나이 32주, 출생체중 2.7 kg 소아가 지속되는 담즙성 구토로 내원했다. 복부 X선에서 확인할 sign은?",
     "section": "P3 누적복기",
-    "images": [
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-2025-11to14-Q7__non_hi_qimg_041__non_hi_qimg_041.png",
-        "kind": "non_hi_qimg_041",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_image_extract_20260517/curated_question_images/non_hi_qimg_041.png",
-        "caption": "non-HI candidate · score 16 · non_hi_qimg_041"
-      }
-    ],
-    "has_image": true,
+    "images": [],
+    "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
     "num": 73
@@ -2915,15 +2912,8 @@
     "mode": "주관식",
     "display_question": "7세 여아가 설사, 혈변, 발열, 복통으로 내원했고 2개월 전부터 중이염으로 항생제 치료를 받았다. 대장내시경 소견이 제시될 때 진단은?",
     "section": "P3 누적복기",
-    "images": [
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-2023-25to28-Q4__non_hi_qimg_012__non_hi_qimg_012.png",
-        "kind": "non_hi_qimg_012",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_image_extract_20260517/curated_question_images/non_hi_qimg_012.png",
-        "caption": "non-HI candidate · score 5 · non_hi_qimg_012"
-      }
-    ],
-    "has_image": true,
+    "images": [],
+    "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
     "num": 79
@@ -4790,7 +4780,7 @@
     "source_rank": 19,
     "origin": "actual_recall",
     "priority": "P4 최신2026",
-    "question": "화농성중이염 사진이 제시되었다. 진단 및 치료는?",
+    "question": "객Q. 소아에서 발열/귀 통증과 함께 고막 팽윤·화농성 중이염 소견이 제시되었다. 진단과 1차 치료는?",
     "answer": "화농성 중이염, 아목시실린",
     "explanation": "원문에 '화농성 중이염, 아목시실린'으로 정리되어 있다.",
     "tags": [
@@ -4801,6 +4791,7 @@
       "2주차",
       "core79",
       "actual_recall",
+      "curated-front-fix",
       "14장 호흡기",
       "호흡기"
     ],
@@ -4808,17 +4799,10 @@
     "enhanced_explanation": "🧭 Big picture\n급성 화농성 중이염(acute otitis media)은 소아에서 매우 흔한 세균성 상기도 합병증이다. 고막 사진에서 팽윤, 발적, 혼탁, 삼출이 보이면 진단하고, 치료는 나이/중증도에 따라 관찰도 가능하지만 시험에서 ‘화농성 중이염 사진, 진단 및 치료’라고 단순히 물으면 amoxicillin이 기본 1차 항생제다. 흔한 원인은 Streptococcus pneumoniae, nontypeable H. influenzae, Moraxella catarrhalis다.\n\n🔎 핵심 단서\n⭕ 화농성 중이염 사진: 고막 팽윤/발적/삼출을 의미\n⭕ 진단 및 치료 질문: AOM + amoxicillin\n⭕ 소아: 이관이 짧고 수평이라 중이염 흔함\n❌ 외이도 통증/귓바퀴 당김이면 외이도염 쪽\n\n👣 시험장 사고 흐름\n1단계: 귀 사진이 고막 병변인지 외이도 병변인지 본다.\n2단계: 고막 팽윤/화농성 삼출이면 급성 중이염.\n3단계: 1차 치료 항생제는 amoxicillin.\n4단계: 재발/최근 amoxicillin/결막염 동반이면 amoxicillin-clavulanate도 떠올림.\n\n🧠 쉽게 이해하기\n중이는 고막 뒤 작은 방이야. 감기 뒤 코와 귀를 연결하는 이관이 막히면 그 방에 액체가 고이고, 세균이 자라면 고름방이 된다. 고막이 안쪽에서 밀려 빵빵해지는 게 사진 포인트. Amoxicillin은 이 흔한 균들을 겨냥하는 기본 무기라서 국시형 1차 치료로 자주 박힌다.\n\n📊 감별/오답 제거\n| 질환 | 핵심 소견 | 치료 |\n| 급성 중이염 | 고막 팽윤, 발적, 중이 삼출 | ✅ amoxicillin |\n| 삼출성 중이염 | 통증/열 적고 액체만 | 관찰 | 항생제 루틴 아님 |\n| 외이도염 | 귓바퀴 당김 통증, 외이도 부종 | 점이 항생제 | 고막 뒤 문제 아님 |\n| 유양돌기염 | 귀 뒤 부종/돌출 | IV 항생제/ENT | 합병증 |\n\nDecision flow: AOM 진단 → 중증도/나이 평가 → 항생제 필요 시 amoxicillin → 실패/특수상황이면 amox-clav 등.\n\n✅ 3초 Lock line\n화농성 중이염 사진 + 치료 = amoxicillin 1차.\n\n🎯 암기 확인 퀴즈\nQ1. 급성 중이염의 고막 핵심 소견은?\nQ2. 1차 항생제는?\nQ3. 귓바퀴 당길 때 아프면 어느 질환을 생각하나?\n\nA1. 팽윤/발적/삼출\nA2. Amoxicillin\nA3. 외이도염",
     "layer": "core79",
     "mode": "주관식",
-    "display_question": "화농성중이염 사진이 제시되었다. 진단 및 치료는?",
+    "display_question": "객Q. 소아에서 발열/귀 통증과 함께 고막 팽윤·화농성 중이염 소견이 제시되었다. 진단과 1차 치료는?",
     "section": "P4 최신2026",
-    "images": [
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-2026-5to8-Q8__non_hi_qimg_043__non_hi_qimg_043.png",
-        "kind": "non_hi_qimg_043",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_image_extract_20260517/curated_question_images/non_hi_qimg_043.png",
-        "caption": "non-HI candidate · score 4 · non_hi_qimg_043"
-      }
-    ],
-    "has_image": true,
+    "images": [],
+    "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
     "num": 126
@@ -5479,7 +5463,7 @@
     "source_rank": 80,
     "origin": "actual_recall_source_variant",
     "priority": "P3 2023PDF source-variant",
-    "question": "선천성 후두 협착음/후두연화증으로 복기된 문항. 진단 또는 핵심 질환은?",
+    "question": "객Q. 생후 초기부터 흡기 시 그르렁거림/협착음이 있고, 울거나 보채거나 수유할 때 심해지며 엎드리면 완화된다. 가장 가능성이 큰 진단은?",
     "answer": "후두연화증 또는 선천성 후두 협착음",
     "explanation": "흡기성 협착음이 수유·울음 때 악화되고 자세에 따라 변하면 후두연화증 축으로 정리한다. 원문 문항은 불완전해 확인 필요. 원문 확인 필요. 79문항 대조 상태: missing.",
     "tags": [
@@ -5496,6 +5480,7 @@
       "2주차",
       "source2023pdf",
       "actual_recall_source_variant",
+      "curated-front-fix",
       "14장 호흡기"
     ],
     "uncertain": true,
@@ -5503,7 +5488,7 @@
     "raw_anchor": "객관식 1번 — 선천성 후두 협착음, 후두 연화증",
     "layer": "source2023pdf",
     "mode": "주관식",
-    "display_question": "선천성 후두 협착음/후두연화증으로 복기된 문항. 진단 또는 핵심 질환은?",
+    "display_question": "객Q. 생후 초기부터 흡기 시 그르렁거림/협착음이 있고, 울거나 보채거나 수유할 때 심해지며 엎드리면 완화된다. 가장 가능성이 큰 진단은?",
     "enhanced_explanation": "🧭 Big picture\n선천성 후두 협착음에서 시험이 제일 좋아하는 축은 후두연화증(laryngomalacia)이야. 신생아/영아가 태어날 때부터 또는 생후 초기에 흡기성 stridor가 있고, 수유·울음·흥분 때 더 심해지면 후두 입구 구조가 숨 들이쉴 때 안쪽으로 말려 들어가는 그림을 떠올리면 된다. 이 문항은 복기 원문이 불완전해서 확정 답안은 원문 확인 필요지만, 안전한 공부축은 ‘후두연화증 = 가장 흔한 선천성 stridor’야.\n\n🔎 핵심 단서\n⭕ 선천성 후두 협착음: 생후 초기부터 stridor\n⭕ 후두연화증으로 복기: laryngomalacia 축\n⭕ 흡기성 협착음: 상기도, 특히 후두 쪽 힌트\n⚠️ 원문 문항/선택지 없음: 세부 진단은 원문 확인 필요\n\n👣 시험장 사고 흐름\n1단계: 소리가 흡기 때 나는지 확인 → 상기도 폐쇄 쪽.\n2단계: 생후 초기부터 반복되면 선천성 원인 생각.\n3단계: 수유·울음·앙와위에서 악화, 엎드리거나 고개 젖히면 완화 → 후두연화증.\n4단계: 성장부진/청색증/심한 무호흡 있으면 단순 관찰 말고 평가·치료 고려.\n\n🧠 쉽게 이해하기\n후두연화증은 후두 입구가 ‘말랑말랑한 문짝’이라 숨을 들이쉴 때 음압에 빨려 들어가 덜컹거리는 느낌이야. 그래서 숨을 들이마실 때 삐익 소리가 난다. 대부분은 자라면서 구조가 단단해져 좋아지지만, 먹다가 힘들어하고 체중이 안 늘거나 청색증이 있으면 얘기가 달라져.\n\n📊 감별/오답 제거\n| 질환 | 핵심 소리/상황 | 포인트 |\n| 후두연화증 | 흡기성 stridor, 수유·울음 악화 | ✅ 가장 흔한 선천성 stridor |\n| 기관연화증 | 호기성/양상 다양, 기침·천명 | 위치가 더 아래 |\n| 성문하협착 | 지속 stridor, 삽관 병력 가능 | 병력 확인 |\n| 크룹 | 급성 barking cough, 발열 | 선천성/만성 아님 |\n\n✅ 3초 Lock line\n생후 초기 흡기성 stridor + 수유/울음 때 악화 = 후두연화증 우선, 원문은 확인 필요.\n\n🎯 암기 확인 퀴즈\nQ1. 후두연화증의 대표 호흡음은 흡기성인가 호기성인가?\nQ2. 선천성 stridor의 가장 흔한 원인은?\nQ3. 이 카드에서 확정 과장을 피해야 하는 이유는?\n\nA1. 흡기성 stridor\nA2. 후두연화증\nA3. 원문 문항이 불완전해 원문 확인 필요",
     "section": "P3 2023PDF source-variant",
     "images": [],
@@ -7505,7 +7490,7 @@
     "source_rank": 35,
     "origin": "actual_recall",
     "priority": "P3 누적복기",
-    "question": "5번 야마 문항의 정답은?",
+    "question": "객Q. 상지 혈압은 높고 하지 혈압은 낮거나 femoral pulse가 약하게 만져지는 소아 선천심질환을 의심한다. 가장 가능성이 큰 진단은?",
     "answer": "CoA",
     "explanation": "원문에는 상세 지문 없이 '정답: CoA'만 적혀 있다.",
     "tags": [
@@ -7517,6 +7502,7 @@
       "2주차",
       "core79",
       "actual_recall",
+      "curated-front-fix",
       "15장 심혈관",
       "심혈관"
     ],
@@ -7524,7 +7510,7 @@
     "enhanced_explanation": "🧭 Big picture\n원문 상세 지문 없이 정답만 CoA로 남은 unclear stem 카드야. CoA는 aortic coarctation, 대동맥축착을 뜻하고, 시험에서는 상지 고혈압/하지 저혈압, femoral pulse 약화 또는 지연, 영아 심부전, rib notching 같은 단서로 나온다. 상세 stem 확인은 필요하지만, 공부축은 “상하지 혈압 차이와 femoral pulse”로 잡으면 된다.\n\n🔎 핵심 단서\n- ⭕ 정답 CoA: 대동맥축착\n- ⭕ 소아 심장 야마 문항: 선천심질환 감별 가능성\n- ⭕ 원문 상세 없음: 확정 stem trigger는 제한적\n- ❌ 단순 murmur만으로 CoA 확정: 상하지 pulse/BP 단서가 필요\n\n👣 시험장 사고 흐름\n1단계: 선천심질환 문제에서 pulse와 혈압 분포를 확인.\n2단계: 팔 혈압은 높고 다리 혈압은 낮거나 femoral pulse가 약하면 CoA.\n3단계: 신생아에서 ductus 닫히며 shock/심부전이 오면 critical CoA 가능.\n4단계: 큰 아이에서는 두통, 코피, 운동 시 다리 피로, rib notching까지 연결.\n\n🧠 쉽게 이해하기\n대동맥축착은 대동맥이 중간에 꽉 조인 호스라고 보면 된다. 조인 부위 위쪽인 팔과 머리 쪽은 압력이 높고, 아래쪽인 다리는 피가 덜 가서 맥박이 약하다. 그래서 “팔은 고혈압, 다리는 저혈압”이라는 비대칭이 핵심이다. PDA가 열려 있던 신생아는 그나마 우회로가 있다가, ductus가 닫히면 갑자기 하반신 관류가 떨어지고 쇼크가 올 수 있다. Turner syndrome과 연관도 같이 기억하면 좋다.\n\n📊 감별/오답 제거\n비교표\n- CoA: 상지 HTN, 하지 BP 낮음, femoral pulse 약함/지연, rib notching, Turner 연관.\n- PDA: continuous machinery murmur, bounding pulse, wide pulse pressure.\n- TOF: cyanotic spell, boot-shaped heart, VSD/PS/RVH/overriding aorta.\n- ASD: fixed wide splitting S2, LUSB systolic murmur.\n- VSD: holosystolic murmur, LLSB, 작은 결손이 더 시끄러울 수 있음.\n\n✅ 3초 Lock line\nCoA = 팔 혈압 높고 다리 맥박 약한 대동맥 조임.\n\n🎯 암기 확인 퀴즈\nQ1. CoA에서 가장 중요한 진찰 단서는? \nA1. 상하지 혈압 차이와 femoral pulse 약화/지연.\nQ2. CoA와 관련된 염색체 질환은? \nA2. Turner syndrome.\nQ3. 신생아 critical CoA가 ductus closure 후 위험한 이유는? \nA3. 하반신 관류가 급격히 떨어져 shock 가능.",
     "layer": "core79",
     "mode": "주관식",
-    "display_question": "5번 야마 문항의 정답은?",
+    "display_question": "객Q. 상지 혈압은 높고 하지 혈압은 낮거나 femoral pulse가 약하게 만져지는 소아 선천심질환을 의심한다. 가장 가능성이 큰 진단은?",
     "section": "P3 누적복기",
     "images": [],
     "has_image": false,
@@ -7686,25 +7672,12 @@
     ],
     "uncertain": false,
     "enhanced_explanation": "🧭 Big picture\n9세 아이가 갑자기 심박수가 매우 빠르고 심전도가 제시되면 소아 빈맥 알고리즘을 떠올려야 해. PSVT, 즉 paroxysmal supraventricular tachycardia는 소아에서 흔한 발작성 빈맥이고, 보통 narrow QRS regular tachycardia로 나온다. 혈역학적으로 안정하면 vagal maneuver 후 adenosine이 핵심 치료다. 문제의 답은 PSVT; adenosine.\n\n🔎 핵심 단서\n- ⭕️ 감기 치료 중 “심박수가 빠르다” = 약물/발열도 볼 수 있지만 ECG가 핵심\n- ⭕️ 소아 발작성 빠른 심박 = PSVT 빈출\n- ⭕️ 진단과 치료 세트 = PSVT + adenosine\n- ⭕️ Adenosine = AV node를 잠깐 차단해 reentry 회로를 끊음\n- ❌ 단순 sinus tachycardia는 원인 교정이 치료, adenosine이 답이 아님\n\n👣 시험장 사고 흐름\n1단계: ECG에서 regular narrow-complex tachycardia인지 본다.\n2단계: P wave가 잘 안 보이고 갑자기 시작/끝나는 소아 빈맥이면 PSVT를 잡는다.\n3단계: 안정하면 vagal maneuver → 실패 시 adenosine. 불안정하면 synchronized cardioversion.\n\n🧠 쉽게 이해하기\nPSVT는 심장 전기 신호가 AV node 근처에서 뺑뺑이 도는 상황이야. 심장이 “앞으로 가야 하는데 회전교차로에서 무한 회전”하는 느낌. Adenosine은 그 회전교차로를 1초 정도 셧다운해서 회로를 끊는다. 그래서 투여하면 잠깐 심장이 멈춘 듯 보여도 치료 원리는 정확히 그거야. 단, 반감기가 매우 짧아서 빠른 IV push가 중요하다.\n\n📊 감별/오답 제거\n비교표:\n- PSVT | 갑작스러운 regular narrow tachycardia, P wave 불명확 | 치료: vagal → adenosine\n- Sinus tachycardia | 발열/탈수/통증 등 원인, P wave 보임, 속도 변동 | 원인 치료\n- VT | wide QRS tachycardia, 위험 | 전기치료/항부정맥\n- Atrial flutter | sawtooth flutter wave | adenosine은 진단 보조 가능하나 근본 답 아님\n\nDecision flow:\n빈맥 확인 → 혈역학 불안정이면 synchronized cardioversion → 안정 + narrow regular이면 vagal maneuver → 실패 시 adenosine.\n\n✅ 3초 Lock line\n소아 regular narrow tachycardia = PSVT, 안정하면 adenosine.\n\n🎯 암기 확인 퀴즈\nQ1. PSVT 1차 약물 치료는?\nQ2. Adenosine은 어느 부위를 일시 차단?\nQ3. 불안정 PSVT의 처치는?\n\nA1. Adenosine\nA2. AV node\nA3. Synchronized cardioversion",
-    "images": [
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-2023-33to36-SA3__non_hi_qimg_011__non_hi_qimg_011.png",
-        "kind": "non_hi_qimg_011",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_image_extract_20260517/curated_question_images/non_hi_qimg_011.png",
-        "caption": "non-HI candidate · score 4 · non_hi_qimg_011"
-      },
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-2023-33to36-SA3__non_hi_qimg_016__non_hi_qimg_016.png",
-        "kind": "non_hi_qimg_016",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_image_extract_20260517/curated_question_images/non_hi_qimg_016.png",
-        "caption": "non-HI candidate · score 4 · non_hi_qimg_016"
-      }
-    ],
+    "images": [],
     "layer": "core79",
     "mode": "주관식",
     "display_question": "9세 소아가 감기로 치료 중 심박수가 빠르다고 병원에 왔고 심전도 사진이 제시되었다. 진단과 치료는?",
     "section": "P3 누적복기",
-    "has_image": true,
+    "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
     "num": 203

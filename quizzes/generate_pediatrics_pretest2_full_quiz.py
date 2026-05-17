@@ -70,6 +70,54 @@ ORIGIN_LABELS = {
     "hi_bank_raw": "🛡️ HI 원문 bank",
 }
 
+# Manual QC fixes for cases where recall/source-variant metadata was being
+# exposed as the question stem, or low-confidence neighboring images were
+# attached to the wrong card. Keep these local and explicit: the FULL deck is
+# source-faithful, but the learner-facing front must still be an actual quiz
+# prompt, not a harvest note such as "거의 동일한 지문...".
+CURATED_NON_HI_IMAGE_EXCLUDES = {
+    ("PEDS2-2025-11to14-Q7", "non_hi_qimg_041"),  # steeple sign image belongs to Q6 croup, not double-bubble Q7
+    ("PEDS2-2023-25to28-Q4", "non_hi_qimg_012"),  # constipation/hematochezia colonoscopy image, not C. difficile colitis
+    ("PEDS2-2026-5to8-Q8", "non_hi_qimg_043"),    # cellulitis image, not acute otitis media
+    ("PEDS2-2023-33to36-SA3", "non_hi_qimg_011"), # anaphylaxis/cellulitis notes, not PSVT ECG
+    ("PEDS2-2023-33to36-SA3", "non_hi_qimg_016"),
+}
+
+CURATED_CARD_FIXES = {
+    "PEDS2-2025-15to18-Q1": {
+        "question": "객Q. 2세 여아가 발열과 눈 충혈로 병원에 왔다. 결막이 충혈되어 있고, 눈 주위에 황색 분비물과 인두 부위의 발적이 있었다. 목 림프절이 만져진다. 원인은?\n① 리노바이러스 ② 노로바이러스 ③ 파르보바이러스\n④ 아데노바이러스 ⑤ RSV",
+        "answer": "아데노바이러스",
+        "uncertain": False,
+        "enhanced_explanation": "🧭 Big picture\n발열 + 결막충혈/분비물 + 인두 발적 + 경부림프절이면 아데노바이러스의 인두결막열(pharyngoconjunctival fever)을 먼저 떠올린다.\n\n🔎 핵심 단서\n- 2세 소아의 발열\n- 결막 충혈과 눈 주위 황색 분비물\n- 인두 발적\n- 목 림프절 촉지\n- 선택지 중 adenovirus가 이 조합을 가장 잘 설명\n\n👣 시험장 사고 흐름\n1단계: 눈 증상만 보지 말고 인두/발열을 같이 묶는다.\n2단계: 인두염 + 결막염이면 adenovirus를 먼저 올린다.\n3단계: RSV는 세기관지염, 노로바이러스는 위장관, parvovirus는 발진/혈액 축이라 stem과 거리가 있다.\n\n🧠 쉽게 이해하기\n아데노바이러스는 목과 눈을 동시에 건드리는 바이러스라고 잡으면 된다. 그냥 눈곱 문제처럼 보여도, fever와 pharyngitis가 같이 있으면 bacterial conjunctivitis보다 adenovirus 쪽으로 기운다.\n\n📊 감별/오답 제거\nAdenovirus: 발열, 인두염, 결막염.\nRhinovirus: 감기/콧물 중심.\nNorovirus: 구토·설사 중심.\nParvovirus B19: 전염홍반/혈액질환 축.\nRSV: 영아 세기관지염, wheezing 축.\n\n✅ 3초 Lock line\n소아 발열 + 인두염 + 결막염 = 아데노바이러스.\n\n🎯 암기 확인 퀴즈\nQ. 인두결막열의 대표 원인 바이러스는?\nA. 아데노바이러스."
+    },
+    "PEDS2-2025-19to23-Q1": {
+        "question": "객Q. 10세 여아가 7일간 지속되는 발열과 인후통으로 내원하였다. 편도 비대와 회색 삼출, 입천장 점상출혈이 보이고 양쪽 경부 림프절이 2 cm 정도로 만져지며 압통이 있다. 지라는 갈비뼈 아래 3횡지 만져진다. 몸통과 사타구니에 홍반구진성 발진/점상출혈이 있고, 혈액검사에서 림프구 증가와 비정형 림프구 20%가 보인다. 가장 가능성이 큰 진단은?",
+        "answer": "전염단핵구증(EBV infectious mononucleosis)",
+        "uncertain": False,
+        "enhanced_explanation": "🧭 Big picture\n발열, 인후통, 편도 삼출, 경부림프절비대, 비장비대에 비정형 림프구 20%가 붙으면 전염단핵구증을 고른다. 대표 원인은 EBV다.\n\n🔎 핵심 단서\n- 7일 발열과 인후통\n- 편도 비대와 회색 삼출\n- 경부 림프절비대\n- 비장비대\n- 림프구 증가와 비정형 림프구 20%\n\n👣 시험장 사고 흐름\n1단계: 삼출성 인두염에서 GAS와 EBV를 같이 떠올린다.\n2단계: 림프절비대, 비장비대, 비정형 림프구가 있으면 EBV 쪽으로 잠근다.\n3단계: 성홍열은 딸기혀/사포양 발진, 가와사키병은 5일 이상 발열+점막/손발/관상동맥 축으로 감별한다.\n\n🧠 쉽게 이해하기\n전염단핵구증은 목감기처럼 보이지만 실제로는 림프조직 전체가 반응하는 바이러스 감염이다. 그래서 편도도 붓고, 림프절도 커지고, 비장도 만져질 수 있다. 비정형 림프구는 EBV에 반응한 T세포가 커져 보이는 단서다.\n\n📊 감별/오답 제거\n전염단핵구증: 삼출성 인두염 + 경부림프절 + 비장비대 + 비정형 림프구.\n성홍열: GAS 인두염 + 딸기혀 + 사포양 발진.\n가와사키병: 5일 이상 발열 + 결막/입술/손발 + 관상동맥 위험.\n\n✅ 3초 Lock line\n삼출성 인두염 + 비장비대 + 비정형 림프구 = EBV 전염단핵구증.\n\n🎯 암기 확인 퀴즈\nQ. 전염단핵구증에서 증가하는 특징적 혈액세포는?\nA. 비정형 림프구."
+    },
+    "PEDS2-2023PDF-022": {
+        "question": "객Q. 발열, 기침, 콧물, 결막염 후 구강 점막의 Koplik spot과 얼굴에서 시작해 몸통/사지로 퍼지는 발진이 보인다. 진단은?",
+        "answer": "홍역, measles",
+    },
+    "PEDS2-2023PDF-029": {
+        "question": "객Q. 발열과 보챔, 섭취 저하가 있는 소아에서 잇몸과 구강 점막의 다발성 수포/궤양성 병변이 보인다. 가장 가능성이 큰 진단은?",
+        "answer": "헤르페스 잇몸구내염, herpetic gingivostomatitis",
+    },
+    "PEDS2-2026-5to8-Q8": {
+        "question": "객Q. 소아에서 발열/귀 통증과 함께 고막 팽윤·화농성 중이염 소견이 제시되었다. 진단과 1차 치료는?",
+        "answer": "화농성 중이염, 아목시실린",
+    },
+    "PEDS2-2023PDF-001": {
+        "question": "객Q. 생후 초기부터 흡기 시 그르렁거림/협착음이 있고, 울거나 보채거나 수유할 때 심해지며 엎드리면 완화된다. 가장 가능성이 큰 진단은?",
+        "answer": "후두연화증 또는 선천성 후두 협착음",
+    },
+    "PEDS2-2025-15to18-Q5": {
+        "question": "객Q. 상지 혈압은 높고 하지 혈압은 낮거나 femoral pulse가 약하게 만져지는 소아 선천심질환을 의심한다. 가장 가능성이 큰 진단은?",
+        "answer": "CoA",
+    },
+}
+
 # Official 2-week pretest scope from 교수님 공지 PDF:
 # 2주차 = 12~15장: 감염, 소화기, 호흡기, 심혈관.
 # Some all-HI-bank cards are retained even when they look mixed/out-of-scope;
@@ -209,18 +257,42 @@ def load_non_hi_image_map() -> dict[str, list[dict]]:
     rows = json.loads(NON_HI_IMG_MAP.read_text(encoding="utf-8"))
     out: dict[str, list[dict]] = {}
     for row in rows:
+        card_id = row.get("card_id", "")
         cands = row.get("candidates") or []
         usable = []
         for cand in cands[:2]:
             # Conservative: keep only candidates that were at least contextually linked.
+            curated_id = cand.get("curated_id", "")
+            if (card_id, curated_id) in CURATED_NON_HI_IMAGE_EXCLUDES:
+                continue
             if int(cand.get("score", 0)) >= 4 and cand.get("path"):
-                item = copy_asset(cand["path"], row.get("card_id", "nonhi"), cand.get("curated_id", "nonhi"))
+                item = copy_asset(cand["path"], card_id or "nonhi", curated_id or "nonhi")
                 if item:
                     item["caption"] = f"non-HI candidate · score {cand.get('score')} · {cand.get('curated_id', '')}"
                     usable.append(item)
         if usable:
-            out[row.get("card_id", "")] = usable
+            out[card_id] = usable
     return out
+
+
+def apply_curated_card_fixes(card: dict) -> None:
+    fix = CURATED_CARD_FIXES.get(str(card.get("id", "")))
+    if not fix:
+        return
+    if "question" in fix:
+        card["question"] = normalize_multiline(fix["question"])
+        card["display_question"] = normalize_multiline(fix.get("display_question") or fix["question"])
+    elif "display_question" in fix:
+        card["display_question"] = normalize_multiline(fix["display_question"])
+    if "answer" in fix:
+        card["answer"] = normalize_space(fix["answer"])
+    if "enhanced_explanation" in fix:
+        card["enhanced_explanation"] = normalize_multiline(fix["enhanced_explanation"])
+    if "explanation" in fix:
+        card["explanation"] = normalize_multiline(fix["explanation"])
+    if "uncertain" in fix:
+        card["uncertain"] = bool(fix["uncertain"])
+    card["tags"] = list(dict.fromkeys(card.get("tags", []) + ["curated-front-fix"]))
 
 
 def mask_hi_front(raw: str) -> str:
@@ -534,6 +606,7 @@ def load_all_records() -> list[dict]:
         rec["tags"] = list(dict.fromkeys(rec.get("tags", [])))
         if rec.get("id") in existing_enhanced:
             rec["enhanced_explanation"] = existing_enhanced[rec["id"]]
+        apply_curated_card_fixes(rec)
         apply_official_unit(rec)
 
     records.sort(key=lambda r: (OFFICIAL_UNIT_RANK.get(r.get("official_unit"), 99), int(r.get("source_rank", 999999)), str(r.get("id", ""))))
