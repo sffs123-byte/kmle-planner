@@ -2612,6 +2612,8 @@
       "2주차",
       "core79",
       "actual_recall",
+      "curated-front-fix",
+      "manual-image-restored",
       "13장 소화기"
     ],
     "uncertain": false,
@@ -2620,8 +2622,16 @@
     "mode": "주관식",
     "display_question": "임신 36주, 출생체중 3.0 kg 신생아가 수유 후 구토했고 chest X-ray에서 double bubble sign이 제시되었다. 진단은?",
     "section": "P4 최신2026",
-    "images": [],
-    "has_image": false,
+    "images": [
+      {
+        "src": "assets/peds_pretest2_full/peds2_manual_double_bubble_xray_hi2_pdfimg_14_p08R.jpg",
+        "caption": "원문 double bubble X-ray",
+        "kind": "manual_front_xray",
+        "front_visible": true,
+        "curated_id": "manual_double_bubble_xray_20260517"
+      }
+    ],
+    "has_image": true,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
     "num": 69
@@ -2741,6 +2751,8 @@
       "2주차",
       "core79",
       "actual_recall",
+      "curated-front-fix",
+      "manual-image-restored",
       "13장 소화기",
       "소화기"
     ],
@@ -2750,8 +2762,16 @@
     "mode": "주관식",
     "display_question": "임신 나이 32주, 출생체중 2.7 kg 소아가 지속되는 담즙성 구토로 내원했다. 복부 X선에서 확인할 sign은?",
     "section": "P3 누적복기",
-    "images": [],
-    "has_image": false,
+    "images": [
+      {
+        "src": "assets/peds_pretest2_full/peds2_manual_double_bubble_xray_hi2_pdfimg_14_p08R.jpg",
+        "caption": "원문 double bubble X-ray",
+        "kind": "manual_front_xray",
+        "front_visible": true,
+        "curated_id": "manual_double_bubble_xray_20260517"
+      }
+    ],
+    "has_image": true,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
     "num": 73
@@ -4259,12 +4279,6 @@
         "caption": "HI embedded image · hi2_pdfimg_13_p08R.jpg"
       },
       {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-066__embedded__hi2_pdfimg_14_p08R.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_14_p08R.jpg",
-        "caption": "HI embedded image · hi2_pdfimg_14_p08R.jpg"
-      },
-      {
         "src": "assets/peds_pretest2_full/PEDS2-HI2-066__source_crop__hi2_066_p08R.png",
         "kind": "source_crop",
         "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/question_crops/hi2_066_p08R.png",
@@ -4340,12 +4354,22 @@
       "주관식",
       "구토",
       "hi_bank_raw",
+      "curated-front-fix",
+      "manual-image-restored",
       "13장 소화기",
       "소화기"
     ],
     "uncertain": false,
-    "images": [],
-    "has_image": false,
+    "images": [
+      {
+        "src": "assets/peds_pretest2_full/peds2_manual_double_bubble_xray_hi2_pdfimg_14_p08R.jpg",
+        "caption": "원문 double bubble X-ray",
+        "kind": "manual_front_xray",
+        "front_visible": true,
+        "curated_id": "manual_double_bubble_xray_20260517"
+      }
+    ],
+    "has_image": true,
     "hi_id": "hi2_068",
     "page": 8,
     "column": "R",
@@ -4383,12 +4407,6 @@
     ],
     "uncertain": false,
     "images": [
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-069__embedded__hi2_pdfimg_13_p08R.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_13_p08R.jpg",
-        "caption": "HI embedded image · hi2_pdfimg_13_p08R.jpg"
-      },
       {
         "src": "assets/peds_pretest2_full/PEDS2-HI2-069__embedded__hi2_pdfimg_14_p08R.jpg",
         "kind": "embedded",
@@ -4476,18 +4494,6 @@
     ],
     "uncertain": false,
     "images": [
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-071__embedded__hi2_pdfimg_13_p08R.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_13_p08R.jpg",
-        "caption": "HI embedded image · hi2_pdfimg_13_p08R.jpg"
-      },
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-071__embedded__hi2_pdfimg_14_p08R.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_14_p08R.jpg",
-        "caption": "HI embedded image · hi2_pdfimg_14_p08R.jpg"
-      },
       {
         "src": "assets/peds_pretest2_full/PEDS2-HI2-071__source_crop__hi2_071_p08R.png",
         "kind": "source_crop",
@@ -5114,6 +5120,8 @@
       "2주차",
       "core79",
       "actual_recall",
+      "curated-front-fix",
+      "manual-image-restored",
       "14장 호흡기",
       "호흡기"
     ],
@@ -5123,8 +5131,16 @@
     "mode": "주관식",
     "display_question": "생후 2일 남아가 담즙성 구토, 임신 중 양수과다증, 다운증후군, X-ray double bubble sign을 보인다. 진단은?",
     "section": "P3 누적복기",
-    "images": [],
-    "has_image": false,
+    "images": [
+      {
+        "src": "assets/peds_pretest2_full/peds2_manual_double_bubble_xray_hi2_pdfimg_14_p08R.jpg",
+        "caption": "원문 double bubble X-ray",
+        "kind": "manual_front_xray",
+        "front_visible": true,
+        "curated_id": "manual_double_bubble_xray_20260517"
+      }
+    ],
+    "has_image": true,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
     "num": 134

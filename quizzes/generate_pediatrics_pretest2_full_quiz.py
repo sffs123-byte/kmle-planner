@@ -183,6 +183,44 @@ CURATED_MANUAL_CARD_IMAGES = {
             "curated_id": "manual_trunk_rash_photo_20260517",
         }
     ],
+    # 소화기/구토 축: 원문 clean X-ray만 front-visible로 수동 복구.
+    # target sign/대장내시경/achalasia/coin CXR는 현재 원본에서 정답 노출 없는 clean visual을 못 찾아 보류.
+    "PEDS2-2026-9to12-SA2": [
+        {
+            "src": "assets/peds_pretest2_full/peds2_manual_double_bubble_xray_hi2_pdfimg_14_p08R.jpg",
+            "caption": "원문 double bubble X-ray",
+            "kind": "manual_front_xray",
+            "front_visible": True,
+            "curated_id": "manual_double_bubble_xray_20260517",
+        }
+    ],
+    "PEDS2-2025-11to14-Q7": [
+        {
+            "src": "assets/peds_pretest2_full/peds2_manual_double_bubble_xray_hi2_pdfimg_14_p08R.jpg",
+            "caption": "원문 double bubble X-ray",
+            "kind": "manual_front_xray",
+            "front_visible": True,
+            "curated_id": "manual_double_bubble_xray_20260517",
+        }
+    ],
+    "PEDS2-2025-1to2-Q1": [
+        {
+            "src": "assets/peds_pretest2_full/peds2_manual_double_bubble_xray_hi2_pdfimg_14_p08R.jpg",
+            "caption": "원문 double bubble X-ray",
+            "kind": "manual_front_xray",
+            "front_visible": True,
+            "curated_id": "manual_double_bubble_xray_20260517",
+        }
+    ],
+    "PEDS2-HI2-068": [
+        {
+            "src": "assets/peds_pretest2_full/peds2_manual_double_bubble_xray_hi2_pdfimg_14_p08R.jpg",
+            "caption": "원문 double bubble X-ray",
+            "kind": "manual_front_xray",
+            "front_visible": True,
+            "curated_id": "manual_double_bubble_xray_20260517",
+        }
+    ],
 }
 
 # Embedded HI images are front-visible by default only when they are clean
@@ -218,6 +256,12 @@ CURATED_HI_IMAGE_EXCLUDES = {
     # Q57 impetigo scratched lesion: keep leg lesion, drop tetanus table and infant face.
     ("PEDS2-HI2-027", "hi2_pdfimg_04_p04R.jpg"),
     ("PEDS2-HI2-027", "hi2_pdfimg_05_p04R.jpg"),
+    # GI p08R proximity cleanup: pyloric US and double-bubble X-ray sit in the same page column.
+    # Keep only the image that belongs to each stem; do not leak neighboring GI visuals.
+    ("PEDS2-HI2-066", "hi2_pdfimg_14_p08R.jpg"),  # pyloric stenosis card: drop double-bubble X-ray
+    ("PEDS2-HI2-069", "hi2_pdfimg_13_p08R.jpg"),  # double-bubble treatment card: drop pyloric US
+    ("PEDS2-HI2-071", "hi2_pdfimg_13_p08R.jpg"),  # pancreatitis/MRCP card: no clean MRCP asset in source
+    ("PEDS2-HI2-071", "hi2_pdfimg_14_p08R.jpg"),
 }
 
 CURATED_CARD_FIXES = {
@@ -828,7 +872,8 @@ def apply_curated_card_fixes(card: dict) -> None:
     card_id = str(card.get("id", ""))
     fix = CURATED_CARD_FIXES.get(card_id) or {}
     manual_images = CURATED_MANUAL_CARD_IMAGES.get(card_id, [])
-    if not fix and not manual_images and card_id not in CURATED_HI_DUPLICATES:
+    has_hi_duplicate = card_id in CURATED_HI_DUPLICATES
+    if not fix and not manual_images and not has_hi_duplicate:
         return
     if "question" in fix:
         fixed_question = normalize_multiline(fix["question"])
@@ -852,7 +897,7 @@ def apply_curated_card_fixes(card: dict) -> None:
         card["uncertain"] = bool(fix["uncertain"])
     if "same_as_hi" in fix:
         card["same_as_hi"] = normalize_space(fix["same_as_hi"])
-    if card_id in CURATED_HI_DUPLICATES:
+    if has_hi_duplicate:
         card["same_as_hi"] = CURATED_HI_DUPLICATES[card_id]
     extra_tags = ["curated-front-fix"]
     if card.get("same_as_hi"):
