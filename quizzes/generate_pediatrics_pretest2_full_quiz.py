@@ -639,6 +639,53 @@ CURATED_CARD_FIXES.update({
 # 2주차 = 12~15장: 감염, 소화기, 호흡기, 심혈관.
 # Some all-HI-bank cards are retained even when they look mixed/out-of-scope;
 # those are marked separately instead of being forced into a wrong unit.
+
+# 2026-05-18 user correction: Q87 Pediatric IBD age cutoffs must be explicit.
+CURATED_CARD_FIXES.update({
+    "PEDS2-2023PDF-045": {
+        "answer": "Pediatric-onset IBD: 17세 미만(문헌에 따라 18세 미만), early-onset IBD: 10세 미만, very-early-onset IBD: 6세 미만, infantile-onset IBD: 2세 미만, neonatal-onset IBD: 생후 28일 이내",
+        "uncertain": False,
+        "enhanced_explanation": """🧭 Big picture
+Pediatric IBD의 발병 연령 분류는 이름만 나열하는 문제가 아니라 cutoff를 같이 묻는 문제로 봐야 한다. 큰 범주인 pediatric-onset IBD 안에서 더 어린 발병군을 early-onset, very-early-onset, infantile-onset, neonatal-onset으로 점점 좁혀 간다.
+
+🔎 핵심 단서
+⭕ Pediatric-onset IBD: 대개 17세 미만, 문헌에 따라 18세 미만으로도 표기
+⭕ Early-onset IBD, EOIBD: 10세 미만
+⭕ Very-early-onset IBD, VEOIBD: 6세 미만
+⭕ Infantile-onset IBD: 2세 미만
+⭕ Neonatal-onset IBD: 생후 28일 이내
+
+👣 시험장 사고 흐름
+1단계: 문제에서 '발병 연령별'이라고 했으므로 병명 5개만 쓰지 말고 나이 기준을 같이 떠올린다.
+2단계: 가장 큰 틀은 pediatric-onset, 즉 소아청소년기에 발병한 IBD다.
+3단계: 10세 미만이면 early-onset, 6세 미만이면 very-early-onset으로 더 좁힌다.
+4단계: 2세 미만은 infantile, 생후 28일 이내는 neonatal로 가장 좁은 특수군이다.
+
+🧠 쉽게 이해하기
+이 분류는 러시아 인형처럼 안쪽으로 들어가는 구조다. 소아 IBD 전체가 있고, 그 안에서 10세 전 발병군, 그중에서도 6세 전 발병군, 그중에서도 2세 전 영아 발병군, 마지막으로 생후 28일 이내 신생아 발병군으로 좁아진다. 나이가 어릴수록 monogenic IBD나 면역결핍 평가가 더 중요해지는 느낌으로 이해하면 된다.
+
+📊 감별/오답 제거
+| 분류 | 나이 cutoff | 포인트 |
+| Pediatric-onset IBD | <17세 또는 <18세 | 소아청소년 IBD 전체 |
+| Early-onset IBD | <10세 | 어린 발병군 |
+| Very-early-onset IBD | <6세 | VEOIBD, 면역/유전 평가 중요 |
+| Infantile-onset IBD | <2세 | 영아 발병 |
+| Neonatal-onset IBD | 생후 28일 이내 | 신생아 발병, 가장 좁은 범주 |
+
+✅ 3초 Lock line
+Pediatric IBD cutoff = <17/18세, <10세, <6세, <2세, 생후 28일 이내.
+
+🎯 암기 확인 퀴즈
+Q1. VEOIBD의 나이 기준은?
+Q2. Infantile-onset IBD의 기준은?
+Q3. Neonatal-onset IBD의 기준은?
+
+A1. 6세 미만
+A2. 2세 미만
+A3. 생후 28일 이내""",
+    }
+})
+
 OFFICIAL_UNIT_ORDER = ["감염", "소화기", "호흡기", "심혈관", "범위외/확인"]
 
 OFFICIAL_UNIT_CHAPTER = {
