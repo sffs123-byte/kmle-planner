@@ -38,6 +38,152 @@ V3_2023 = TMP / "peds_pretest2_fullhunt_20260517" / "worker_2023_v3_cards.json"
 HI_ALL = TMP / "peds_pretest2_review_20260517" / "hi_extract" / "HI_2차_기출문제_원문+이미지_2026-05-17.json"
 NON_HI_IMG_MAP = TMP / "peds_pretest2_image_extract_20260517" / "NON_HI_current_deck_image_card_link_candidates_2026-05-17.json"
 
+# 2026-05-18 full source audit: 2025 cumulative/raw leftovers that were
+# not represented as exact cards in the FULL deck.  These are intentionally
+# kept separate from CORE79/V3_2025 so the generator remains the source of truth.
+RAW_2025_LEFTOVER_CARDS = [
+    {
+        "id": "PEDS2-2025RAW-2528-Q1-RFCA",
+        "source": "2025 cumulative 2차 raw source / 25~28조 객관식 1번",
+        "origin": "actual_recall",
+        "priority": "P3 누적복기",
+        "section": "2025 raw leftovers · 심혈관",
+        "question": "14세 남아가 컴퓨터 게임을 하다가 심박수가 빠르다고 내원했다. 치료는?\n① 경과관찰 ② ICD ③ flecainide로 추정되는 항부정맥제 ④ cardiac resynchronization therapy ⑤ RFCA",
+        "answer": "RFCA",
+        "explanation": "2025 raw source에 보기와 정답축이 남아 있으나 기존 FULL deck에는 RFCA exact card가 없었다. 증상성/반복성 SVT 계열에서 근치적 치료 선택지는 전극도자절제술(RFCA)이다.",
+        "enhanced_explanation": """🧭 Big picture\n소아·청소년이 갑자기 심박수가 빨라져 내원하고 선택지에 RFCA가 있으면, 단순 빈맥보다 재발성 SVT/PSVT의 근치 치료 축을 생각한다. 약물로 급성 발작을 끊는 문제와, 반복 발작의 definitive treatment를 묻는 문제를 구분해야 한다.\n\n🔎 핵심 단서\n⭕ 14세 청소년\n⭕ 게임 중 갑작스러운 빠른 심박수\n⭕ 보기 중 RFCA 존재\n⭕ ICD/CRT는 구조적 심질환·심부전/치명성 부정맥 축이라 이 stem과 다름\n\n👣 시험장 사고 흐름\n1단계: 단순 sinus tachycardia인지 발작성 빈맥인지 본다.\n2단계: 치료 보기 중 급성 종료인지 근치 치료인지 구분한다.\n3단계: 반복/증상성 SVT 맥락이면 RFCA를 고른다.\n\n📊 감별/오답 제거\n| 보기 | 왜 아님/맞음 |\n| 경과관찰 | 증상성 빠른 심박으로 치료 질문이면 약함 |\n| ICD | 심정지/악성 심실성 부정맥 예방 장치 |\n| CRT | 심부전 동기화 치료 |\n| RFCA | ✅ SVT/PSVT 계열의 definitive treatment |\n\n✅ 3초 Lock line\n청소년 발작성 빈맥 + definitive treatment 보기 = RFCA.""",
+        "tags": ["심혈관", "부정맥", "SVT", "PSVT", "RFCA", "2025-leftover"],
+        "uncertain": False,
+        "raw_anchor": "14세 남아가 컴퓨터 게임을 하다가 심박수가 빠르다고 내원함. 치료는? ... 5. RFCA",
+    },
+    {
+        "id": "PEDS2-2025RAW-2932-Q2-AVF",
+        "source": "2025 cumulative 2차 raw source / 29~32조 객관식 2번",
+        "origin": "uncertain_recall",
+        "priority": "P3 누적복기",
+        "section": "2025 raw leftovers · 심혈관",
+        "question": "29~32조 객관식 2번은 원문에 지문이 거의 남지 않고 '답은 동정맥루'라고만 복기되어 있다. 이 문항의 복기 정답은?",
+        "answer": "동정맥루",
+        "explanation": "raw source가 지문을 보존하지 못하고 답만 남긴 문항이다. 기존 deck에는 동정맥루 exact card가 없어서, 원문 누락 방지용 답보존 카드로 추가했다.",
+        "enhanced_explanation": """🧭 Big picture\n이 카드는 완전한 문제 풀이용이라기보다 raw source에 남아 있던 답을 잃지 않기 위한 보존 카드다. 원문에는 '답은 동정맥루'만 남아 있어 stem 재구성은 과장하지 않는다.\n\n🔎 핵심 단서\n⭕ 2025 cumulative raw source\n⭕ 29~32조 객관식 2번\n⭕ 지문 미복기\n⭕ 답만 동정맥루로 기록\n\n⚠️ 함정\nstem이 없으므로 다른 동정맥 질환으로 확대 해석하지 않는다. 실제 문제 이미지/원문을 찾으면 이 카드는 정확한 stem으로 교체한다.\n\n✅ 3초 Lock line\nraw에 답만 남은 29~32조 객2 = 동정맥루.""",
+        "tags": ["심혈관", "동정맥루", "raw-answer-only", "2025-leftover"],
+        "uncertain": True,
+        "raw_anchor": ", 답은 동정맥루",
+    },
+    {
+        "id": "PEDS2-2025RAW-2932-Q3-HPS-FLUID",
+        "source": "2025 cumulative 2차 raw source / 29~32조 객관식 3번",
+        "origin": "actual_recall",
+        "priority": "P3 누적복기",
+        "section": "2025 raw leftovers · 소화기",
+        "question": "HPS, 즉 비대날문협착증에서 수술 전 탈수·대사성 알칼리증·전해질 이상을 교정하기 위한 수액치료 조합은?",
+        "answer": "0.45~0.5% 식염수 + 5~10% dextrose + KCl 30~50 mEq/L",
+        "explanation": "raw source와 HI 소화기 정리 모두 HPS 수술 전 교정 수액으로 0.45~0.5% 식염수 + 5~10% dextrose + KCl 30~50 mEq/L를 제시한다.",
+        "enhanced_explanation": """🧭 Big picture\n비대날문협착증은 바로 수술방으로 밀어 넣는 병이 아니다. 반복적인 비담즙성 구토 때문에 탈수, 저염소성 대사성 알칼리증, 저칼륨혈증이 생길 수 있어서 먼저 수액과 전해질을 교정한 뒤 날문근육절개술로 간다.\n\n🔎 핵심 단서\n⭕ HPS, projectile vomiting, olive mass 축\n⭕ 수술 전 교정\n⭕ 탈수·산염기·전해질 이상\n⭕ raw 정답: 0.45~0.5% 식염수 + 5~10% dextrose + KCl 30~50 mEq/L\n\n👣 시험장 사고 흐름\n1단계: HPS는 구토로 탈수와 알칼리증이 먼저 문제다.\n2단계: 수술은 definitive지만, 먼저 교정한다.\n3단계: dextrose, saline, KCl 조합을 고른다.\n\n📊 감별/오답 제거\n| 상황 | 처치 |\n| HPS 진단 직후 탈수/알칼리증 | ✅ 수액·전해질 교정 |\n| 교정 후 definitive treatment | 날문근육절개술 |\n| 즉시 수술만 선택 | 수술 전 교정 생략이라 위험 |\n\n✅ 3초 Lock line\nHPS는 수술 전 0.45~0.5% 식염수 + 5~10% dextrose + KCl로 교정.""",
+        "tags": ["소화기", "HPS", "비대날문협착증", "수액", "전해질", "2025-leftover"],
+        "uncertain": False,
+        "raw_anchor": "HPS 수액치료 문제 / 0.45-0.5% 식염수 + 5-10% dextrose +KCl 30-50mEq/L",
+    },
+    {
+        "id": "PEDS2-2025RAW-2932-SA2-EISENMENGER-NOT",
+        "source": "2025 cumulative 2차 raw source / 29~32조 주관식 2번",
+        "origin": "actual_recall",
+        "priority": "P3 누적복기",
+        "section": "2025 raw leftovers · 심혈관",
+        "question": "Eisenmenger syndrome으로 빠르게 진행하는 경우가 아닌 것은?\n① 방실중격결손 ② 완전대혈관전위 + 심실중격결손 ③ 대동맥폐동맥개창 ④ 다운증후군 ⑤ CATCH22/DiGeorge syndrome",
+        "answer": "⑤ CATCH22/DiGeorge syndrome",
+        "explanation": "기존 deck에는 '빠르게 진행하는 경우 5가지' 카드만 있었고, raw source의 polarity인 '아닌 것' 문제는 exact로 없었다. 빠른 Eisenmenger 진행은 큰 post-tricuspid shunt/대혈관 수준 shunt와 Down syndrome에서 중요하며, CATCH22는 TOF 등 원추동맥간 심기형 연관은 있지만 이 목록의 빠른 진행 항목은 아니다.",
+        "enhanced_explanation": """🧭 Big picture\nEisenmenger로 빨리 가는 건 폐혈관이 어릴 때부터 큰 압력·큰 혈류에 오래 맞는 상황이다. 그래서 큰 좌우단락, 대혈관 수준 단락, Down syndrome이 고위험으로 묶인다. 문제는 '아닌 것'을 물었으므로, 빠르게 진행하는 목록에 들어가지 않는 CATCH22를 골라야 한다.\n\n🔎 핵심 단서\n⭕ '빠르게 진행하는 경우가 아닌 것'\n⭕ AVSD, TGA+VSD, aortopulmonary window, Down syndrome은 빠른 진행 축\n⭕ CATCH22/DiGeorge는 conotruncal anomaly 연관이지 빠른 Eisenmenger 진행 목록 자체는 아님\n\n👣 시험장 사고 흐름\n1단계: 문제 polarity를 먼저 확인한다: 아닌 것.\n2단계: 큰 단락/폐혈류 과다 항목을 제거한다.\n3단계: 남는 syndrome association인 CATCH22를 답으로 잡는다.\n\n📊 감별/오답 제거\n| 보기 | 판정 |\n| 방실중격결손 | 빠른 진행 가능 |\n| TGA + VSD | 빠른 진행 가능 |\n| 대동맥폐동맥개창 | 빠른 진행 가능 |\n| Down syndrome | 빠른 진행 위험 증가 |\n| CATCH22/DiGeorge | ✅ 아닌 것 |\n\n✅ 3초 Lock line\nEisenmenger 빠른 진행 '아닌 것' = CATCH22.""",
+        "tags": ["심혈관", "Eisenmenger", "선천심질환", "CATCH22", "polarity", "2025-leftover"],
+        "uncertain": False,
+        "raw_anchor": "Eisenmenger syndrome으로 빠르게 진행하는 경우가 아닌 것은? ... 5. catch 22",
+    },
+    {
+        "id": "PEDS2-2025RAW-2932-SA5-CRE-RISK",
+        "source": "2025 cumulative 2차 raw source / 29~32조 주관식 5번 컨퍼런스",
+        "origin": "actual_recall",
+        "priority": "P3 누적복기",
+        "section": "2025 raw leftovers · 감염관리",
+        "question": "CRE 감염 위험인자 3가지는?",
+        "answer": "중환자실 입원, 장기간/반복적 광범위 항생제 사용, 중심정맥관·도뇨관·기관내관 등 침습적 의료기구 사용",
+        "explanation": "raw source에는 문제만 있고 답은 없었으나, 사용자 제공 정리 이미지의 답과 감염관리 일반 원칙을 반영해 3개 축으로 정리했다.",
+        "enhanced_explanation": """🧭 Big picture\nCRE는 carbapenem-resistant Enterobacteriaceae다. 위험인자는 '병원 안에서 오래, 항생제를 많이, 관을 많이'로 잡으면 된다. 즉 중환자실/장기입원, 광범위 항생제 노출, 침습적 의료기구가 핵심 3축이다.\n\n🔎 핵심 단서\n⭕ CRE 감염 위험 3가지\n⭕ 중환자실 입원 또는 장기 입원\n⭕ 장기간/반복적 광범위 항생제 사용\n⭕ 중심정맥관, 도뇨관, 기관내관 등 침습적 기구\n\n👣 시험장 사고 흐름\n1단계: CRE는 병원획득/의료관련감염 축으로 본다.\n2단계: colonization selection pressure는 항생제 사용.\n3단계: 침입 경로와 biofilm은 의료기구.\n4단계: 고위험 환경은 ICU/장기입원.\n\n📊 감별/오답 제거\n| 축 | 예시 |\n| 환경 | ICU, 장기입원, 요양병원/의료기관 노출 |\n| 선택압 | carbapenem 포함 광범위 항생제 장기 사용 |\n| 침입 경로 | CVC, Foley, E-tube, ventilator 등 |\n\n✅ 3초 Lock line\nCRE 위험 = ICU/장기입원 + 장기 항생제 + 침습적 기구.""",
+        "tags": ["감염", "감염관리", "CRE", "의료관련감염", "컨퍼런스", "2025-leftover"],
+        "uncertain": False,
+        "raw_anchor": "5번(컨퍼런스 문제) CRE 감염 위험 3가지",
+    },
+    {
+        "id": "PEDS2-2025RAW-3336-Q3-WHEEZE-SABA",
+        "source": "2025 cumulative 2차 raw source / 33~36조 객관식 3번",
+        "origin": "actual_recall",
+        "priority": "P3 누적복기",
+        "section": "2025 raw leftovers · 호흡기",
+        "question": "발열, 기침, 콧물이 있고 알레르기 가족력은 없으며 양측 폐야 천명음이 들린다. 다음 처치/약제로 가장 적절한 것은?\n① 진정제 ② 수액 ③ 스테로이드 ④ 항생제 ⑤ SABA",
+        "answer": "⑤ SABA",
+        "explanation": "기존 FULL deck에는 SABA 개념카드는 있었지만, raw source의 exact stem은 빠져 있었다. wheezing이 두드러진 하기도 폐쇄/천명 상황에서 보기 중 우선 고르는 약제는 흡입 속효성 β2 agonist(SABA)다.",
+        "enhanced_explanation": """🧭 Big picture\n소아 wheezing 문제는 먼저 '공기가 좁아진 기도를 지나며 나는 소리'로 이해한다. 원인이 바이러스성이든 천식성이든 보기에서 기관지를 빨리 열어주는 약제를 묻는다면 SABA가 가장 직접적인 선택지다.\n\n🔎 핵심 단서\n⭕ 양측 폐야 천명음\n⭕ 호흡기 증상: 발열, 기침, 콧물\n⭕ 보기 중 기관지확장제는 SABA\n⭕ 진정제/항생제/수액/스테로이드는 이 stem의 즉답축이 아님\n\n👣 시험장 사고 흐름\n1단계: wheezing을 확인한다.\n2단계: 현재 막힌 기도를 열어야 하는지 본다.\n3단계: 보기에서 SABA가 있으면 우선 선택한다.\n\n📊 감별/오답 제거\n| 보기 | 판단 |\n| 진정제 | 호흡 억제 위험, 천명 치료 아님 |\n| 수액 | 탈수/세기관지염 보조치료 축 |\n| 스테로이드 | 천식 악화 보조 가능하지만 즉각 기관지확장은 SABA |\n| 항생제 | 세균성 감염 근거 부족 |\n| SABA | ✅ wheezing 즉시 완화 |\n\n✅ 3초 Lock line\n소아 wheezing + 보기 중 SABA = 기도 먼저 열어라.""",
+        "tags": ["호흡기", "천명", "wheezing", "SABA", "기관지확장제", "2025-leftover"],
+        "uncertain": False,
+        "raw_anchor": "발열, 기침, 콧물, 알레르기 가족력은 없음, 양측 폐야 천명음 ... 5. SABA",
+    },
+    {
+        "id": "PEDS2-2025RAW-3336-SA5-CRRT-INDICATION",
+        "source": "2025 cumulative 2차 raw source / 33~36조 주관식 5번 의국회의",
+        "origin": "actual_recall",
+        "priority": "P3 누적복기",
+        "section": "2025 raw leftovers · 신장/응급",
+        "question": "CRRT indication 3가지는?",
+        "answer": "이뇨제에 반응하지 않는 체액과다/폐부종, 조절되지 않는 고칼륨혈증 등 중증 전해질 이상, 중증 대사성 산증 또는 요독증/AKI. 혈역학적으로 불안정해 간헐적 혈액투석이 어려운 경우 CRRT를 선택한다.",
+        "explanation": "raw source에는 'crrt indication 3개'만 있고 답은 없었다. 카드화에서는 시험에서 쓰기 좋은 3축: fluid overload, refractory electrolyte problem, severe acidosis/uremia/AKI로 정리했다.",
+        "enhanced_explanation": """🧭 Big picture\nCRRT는 continuous renal replacement therapy다. 핵심은 '신장이 못 해서 몸 안에 물·전해질·산이 쌓이는데, 환자가 불안정해서 천천히 지속적으로 빼야 하는 상황'이다. 그래서 indication은 일반 투석 적응증을 CRRT 방식으로 바꾼다고 생각하면 쉽다.\n\n🔎 핵심 단서\n⭕ 이뇨제 불응 체액과다, 폐부종\n⭕ 조절되지 않는 고칼륨혈증 등 중증 전해질 이상\n⭕ 중증 대사성 산증\n⭕ 요독증/AKI, 필요 시 독소 제거\n⭕ 혈역학 불안정하면 intermittent HD보다 CRRT 선호\n\n👣 시험장 사고 흐름\n1단계: 물이 너무 많나? fluid overload.\n2단계: 전해질이 위험한가? 특히 hyperkalemia.\n3단계: 산이 쌓였나? severe metabolic acidosis.\n4단계: uremia/AKI가 있고 환자가 불안정하면 CRRT로 간다.\n\n📊 감별/오답 제거\n| 축 | 예시 |\n| Volume | 폐부종, fluid overload, diuretic failure |\n| Electrolyte | refractory hyperkalemia |\n| Acid-base/uremia | severe acidosis, uremic complication, severe AKI |\n\n✅ 3초 Lock line\nCRRT 적응증 = 물 과다, K/전해질, 산증/요독증을 불안정 환자에서 천천히 빼야 할 때.""",
+        "tags": ["범위외/확인", "신장", "CRRT", "AKI", "전해질", "컨퍼런스", "2025-leftover"],
+        "uncertain": True,
+        "raw_anchor": "주5) (의국회의) crrt indication 3개",
+    },
+    {
+        "id": "PEDS2-2025RAW-3740-Q1-LEFT-BRONCHUS-OBSTRUCTION",
+        "source": "2025 cumulative 2차 raw source / 37~40조 객관식 1번",
+        "origin": "actual_recall",
+        "priority": "P3 누적복기",
+        "section": "2025 raw leftovers · 호흡기",
+        "question": "CXR에서 왼쪽 폐 음영이 저하되어 있는 사진이 제시되었다. 문제가 되는 위치는?",
+        "answer": "왼쪽 기관지 폐쇄",
+        "explanation": "raw source에 '왼쪽 폐 음영 저하 CXR → 왼쪽 기관지 폐쇄'로 복기되어 있었으나 existing FULL deck에는 exact card가 없었다.",
+        "enhanced_explanation": """🧭 Big picture\n한쪽 폐가 더 검게, 즉 과투과성으로 보이면 공기가 그쪽에 갇힌 ball-valve obstruction을 떠올린다. 소아에서는 이물흡인이나 기관지 폐쇄가 대표적이다. raw source는 왼쪽 폐 음영 저하 CXR의 정답을 왼쪽 기관지 폐쇄로 기록했다.\n\n🔎 핵심 단서\n⭕ CXR 한쪽 폐 음영 저하/과투과성\n⭕ 왼쪽 폐가 더 검게 보임\n⭕ 위치를 묻는 문제\n⭕ raw 정답: 왼쪽 기관지 폐쇄\n\n👣 시험장 사고 흐름\n1단계: 한쪽 폐가 더 검은지 본다.\n2단계: 공기 trapping을 생각한다.\n3단계: 해당 쪽 기관지 폐쇄를 답한다.\n\n📊 감별/오답 제거\n| CXR 패턴 | 해석 |\n| 한쪽 과투과성 | 기관지 폐쇄/이물흡인에 의한 air trapping |\n| 한쪽 완전 백색화 | 무기폐, 폐렴, 흉수 등 감별 |\n| 양측 과팽창 | 천식/세기관지염 등 전반적 하기도 폐쇄 |\n\n✅ 3초 Lock line\n왼쪽 폐가 과투과성으로 검다 = 왼쪽 기관지 폐쇄.""",
+        "tags": ["호흡기", "CXR", "기관지폐쇄", "이물흡인", "air_trapping", "2025-leftover"],
+        "uncertain": False,
+        "raw_anchor": "왼쪽 폐 음영 저하되어있는 CXR ... 왼쪽 기관지 폐쇄",
+    },
+    {
+        "id": "PEDS2-2025RAW-3740-Q2-PULMONIC-CONUS-BULGING",
+        "source": "2025 cumulative 2차 raw source / 37~40조 객관식 2번",
+        "origin": "actual_recall",
+        "priority": "P3 누적복기",
+        "section": "2025 raw leftovers · 심혈관",
+        "question": "CXR가 제시되었다. 다음 흉부 X선 소견은?",
+        "answer": "Pulmonic conus bulging",
+        "explanation": "existing deck에는 PS 진단 카드가 있지만, raw source의 exact CXR 소견명 'Pulmonic conus bulging'을 묻는 카드는 없어서 추가했다.",
+        "enhanced_explanation": """🧭 Big picture\n심장 CXR에서는 진단명뿐 아니라 실루엣 소견명을 묻는 문제가 나온다. Pulmonic conus bulging은 좌상부 심장 윤곽, 즉 주폐동맥 부위가 돌출되어 보이는 소견이다. 폐동맥판협착 등 우심실 유출로/폐동맥 축 문제와 연결된다.\n\n🔎 핵심 단서\n⭕ CXR 소견명을 묻는 문제\n⭕ raw 답: Pulmonic conus bulging\n⭕ 유사 카드의 진단축은 PS이지만, 이 카드는 소견명 자체를 묻는다\n\n👣 시험장 사고 흐름\n1단계: 사진 문제에서 진단명인지 소견명인지 확인한다.\n2단계: 좌상부 심장 윤곽/주폐동맥 부위 돌출이면 pulmonic conus bulging.\n3단계: 진단 연결은 PS 등으로 회수한다.\n\n✅ 3초 Lock line\nCXR 주폐동맥 부위 돌출 소견명 = pulmonic conus bulging.""",
+        "tags": ["심혈관", "CXR", "Pulmonic_conus", "PS", "폐동맥", "2025-leftover"],
+        "uncertain": False,
+        "raw_anchor": "다음 CXR의 소견은? Pulmonic conus bulging",
+    },
+    {
+        "id": "PEDS2-2025RAW-3740-SA5-ANOREXIA-BIOCHEM",
+        "source": "2025 cumulative 2차 raw source / 37~40조 주관식 5번 컨퍼런스",
+        "origin": "actual_recall",
+        "priority": "P3 누적복기",
+        "section": "2025 raw leftovers · 영양/정신",
+        "question": "Anorexia nervosa에서 나타나는 생화학적 변화 4가지 이상은?",
+        "answer": "저칼륨혈증, 저염소혈증/대사성 알칼리증, 저혈당, 저인산혈증 또는 저마그네슘혈증, 탈수에 따른 BUN 상승, 저T3/euthyroid sick pattern, 고콜레스테롤혈증 등이 가능하다.",
+        "explanation": "raw source에는 질문만 있고 답은 없었다. 소아청소년 식이장애/재급식 위험에서 자주 쓰는 전해질·대사 이상을 4개 이상 쓸 수 있게 정리했다.",
+        "enhanced_explanation": """🧭 Big picture\nAnorexia nervosa의 lab은 '굶음 + 구토/하제 + 탈수 + 재급식 위험'으로 이해하면 된다. 굶으면 저혈당, 저T3 패턴이 오고, 구토/하제는 전해질 이상을 만든다. 재급식이 시작되면 특히 저인산혈증을 조심해야 한다.\n\n🔎 핵심 단서\n⭕ 신경성 식욕부진\n⭕ 생화학적 변화 4가지 이상\n⭕ 전해질: 저K, 저Cl, 저Mg, 저P\n⭕ 산염기: 구토 시 대사성 알칼리증\n⭕ 대사/내분비: 저혈당, 저T3, 고콜레스테롤\n⭕ 탈수: BUN 상승 가능\n\n👣 시험장 사고 흐름\n1단계: 구토/하제 사용 여부를 떠올린다 → 저K, 저Cl, 알칼리증.\n2단계: 굶음 자체를 떠올린다 → 저혈당, 저T3.\n3단계: 재급식 위험을 떠올린다 → 저인산혈증.\n4단계: 탈수와 영양불량을 붙인다 → BUN 상승, Mg 이상.\n\n📊 감별/오답 제거\n| 기전 | 변화 |\n| 구토 | 저염소혈증, 대사성 알칼리증, 저칼륨혈증 |\n| 굶음 | 저혈당, 저T3/euthyroid sick |\n| 재급식 | 저인산혈증, 저마그네슘혈증, 저칼륨혈증 |\n| 탈수 | BUN 상승 |\n\n✅ 3초 Lock line\nAnorexia lab = 저K·저Cl/알칼리증·저혈당·저P를 먼저 써라.""",
+        "tags": ["소화기", "영양", "anorexia_nervosa", "전해질", "refeeding", "컨퍼런스", "2025-leftover"],
+        "uncertain": True,
+        "raw_anchor": "anorexia nervosa에서 나타나는 생화학적 변화 4가지 이상 (컨퍼런스)",
+    },
+]
+
 LAYER_LABELS = {
     "core79": "✅ Core 79",
     "source2025": "🧩 2025 source-variant",
@@ -1635,6 +1781,15 @@ def load_all_records() -> list[dict]:
         records.append(rec)
         existing_ids.add(rec["id"])
 
+    for i, c in enumerate(RAW_2025_LEFTOVER_CARDS, 1):
+        if c.get("id") in existing_ids:
+            continue
+        rec = normalize_base_card(c, i, "source2025", c.get("priority") or "P3 누적복기", c.get("origin") or "actual_recall")
+        rec["source_rank"] = 2100 + i
+        rec["tags"].extend(["2025-leftover", "actual-raw-leftover"])
+        records.append(rec)
+        existing_ids.add(rec["id"])
+
     extra2023 = json.loads(V3_2023.read_text(encoding="utf-8")) if V3_2023.exists() else []
     for i, c in enumerate(extra2023, 1):
         if c.get("id") in existing_ids:
@@ -1683,7 +1838,7 @@ def add_background_and_stats() -> None:
     )
     filter_html = f"""
     <section class="official-unit-filter clean-home-shell" id="officialUnitFilter">
-        <div class="home-kicker">소아청소년과 2주차 Pretest FULL · 288문항</div>
+        <div class="home-kicker">소아청소년과 2주차 Pretest FULL · {len(data)}문항</div>
         <h1>공식 범위대로 바로 풀기</h1>
         <p class="home-lead">교수님 공지 기준 12~15장 순서로 정돈했습니다. 범위를 고른 뒤 순서대로 공부하거나 랜덤으로 점검하세요.</p>
         <div class="unit-filter-actions">
@@ -1841,7 +1996,7 @@ body.peds-pretest2-full-bg .unit-hidden {{ display:none !important; }}
     text = text.replace("<body>", '<body class="peds-pretest2-full-bg">', 1)
     text = text.replace('        <div class="sb-quiz-btns">', sidebar_html + '\n        <div class="sb-quiz-btns">', 1)
     text = text.replace('    <div class="review-hero" id="reviewHero">', filter_html + '\n' + hi_study_html + '\n    <div class="review-hero" id="reviewHero">', 1)
-    # Clean-home mode: keep QUIZ_DATA for quiz mode, but do not render 288 static cards on the landing page.
+    # Clean-home mode: keep QUIZ_DATA for quiz mode, but do not render static cards on the landing page.
     card_grid_start = text.find('    <div class="card-grid">')
     card_grid_end = text.find('\n</div>\n\n<!-- Quiz overlay -->', card_grid_start)
     if card_grid_start != -1 and card_grid_end != -1:
