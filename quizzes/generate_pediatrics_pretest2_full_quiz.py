@@ -15,6 +15,7 @@ import html
 import json
 import re
 import shutil
+import unicodedata
 from pathlib import Path
 
 from anki_quiz_builder import QuizBuilder
@@ -69,6 +70,36 @@ ORIGIN_LABELS = {
     "hi_bank_raw": "🛡️ HI 원문 bank",
 }
 
+# Official 2-week pretest scope from 교수님 공지 PDF:
+# 2주차 = 12~15장: 감염, 소화기, 호흡기, 심혈관.
+# Some all-HI-bank cards are retained even when they look mixed/out-of-scope;
+# those are marked separately instead of being forced into a wrong unit.
+OFFICIAL_UNIT_ORDER = ["감염", "소화기", "호흡기", "심혈관", "범위외/확인"]
+
+OFFICIAL_UNIT_CHAPTER = {
+    "감염": "12장 감염",
+    "소화기": "13장 소화기",
+    "호흡기": "14장 호흡기",
+    "심혈관": "15장 심혈관",
+    "범위외/확인": "범위외/혼입 확인",
+}
+
+OFFICIAL_UNIT_STYLE = {
+    "감염": "background:#9f1239;color:#fff1f2;border:1px solid #fecdd3;",
+    "소화기": "background:#92400e;color:#fffbeb;border:1px solid #fde68a;",
+    "호흡기": "background:#075985;color:#e0f2fe;border:1px solid #7dd3fc;",
+    "심혈관": "background:#991b1b;color:#fee2e2;border:1px solid #fca5a5;",
+    "범위외/확인": "background:#374151;color:#f9fafb;border:1px solid #d1d5db;",
+}
+
+OFFICIAL_UNIT_RANK = {unit: i for i, unit in enumerate(OFFICIAL_UNIT_ORDER)}
+
+HEART_PATTERN = r"심장|심혈|심질환|심잡음|VSD|ASD|TOF|TGA|AVSD|TAPVR|CoA|PSVT|SVT|ECG|EKG|심전도|심부전|심내막염|가와사키|관상동맥|동맥관|태아순환|태아 순환|폐동맥|대혈관|심도자|murmur|Knee-chest|Tetralogy|혈압"
+RESP_PATTERN = r"호흡기|호흡|폐렴|기관지|세기관지|천식|부비동|중이염|크루프|후두|기도|천명|기침|흉부|CXR|ABGA|PaCO2|산소|SpO2|결핵|TB|객혈|객담|무호흡|bronchio|pneumo|asthma|croup|sinus|otitis|wheezing|흉수|인두후부|상기도|하기도|폐|이물흡인|하임리히|Heimlich"
+GI_PATTERN = r"소화기|위장|장중첩|설사|구토|복통|혈변|변비|식도|장염|식중독|간염|황달|췌장|담도|수유|탈수|수액|전해질|Hirschsprung|선천거대결장|항문|복부|대변|NGT|PEG|아연|경구|위식도|GERD|intussusception|diarrhea|constipation|jaundice|hepatitis|pancrea|esoph|ORS|로타|살모넬라"
+INFECTION_PATTERN = r"감염|발열|불명열|무병소|패혈|균혈|홍역|수두|성홍열|백일해|파상풍|EBV|전염 단핵|전염단핵|포도알균|수막|뇌염|골수염|화농|봉와직염|연조직|농가진|림프절|MRSA|Acyclovir|예방접종|면역글로불린|AIDS|HIV|농양|UTI|요로감염|세균|바이러스|항생제|Koplik|measles|varicella|scarlet|pertussis|tetanus|mening|sepsis|FUO|fever|cellulitis|impetigo|mononucleosis|쯔쯔가무시|HSV|수족구|손위생|수술 60분"
+ALLERGY_OUT_OF_SCOPE_PATTERN = r"아나필락|알레르|두드러기|피부단자|RAST|food allergy|식품\s*(?:제거|유발)|allergic"
+
 
 def e(value: object) -> str:
     return html.escape(str(value or ""), quote=False)
@@ -100,6 +131,58 @@ def fmt(text: object) -> str:
 def pill(text: str, style: str = "") -> str:
     base = "display:inline-block;border-radius:999px;padding:2px 8px;margin:2px 4px 2px 0;font-size:11px;font-weight:900;line-height:1.35;"
     return f'<span style="{base}{style}">{e(text)}</span>'
+
+
+def official_unit_signal_text(card: dict) -> str:
+    """High-signal classification text.
+
+    Do not use enhanced_explanation here: tutor explanations mention many
+    differentials and can leak unrelated systems into the unit classifier.
+    """
+    fields = ["section", "question", "display_question", "answer", "raw_problem"]
+    tags = " ".join(str(t) for t in card.get("tags", []) or [])
+    return unicodedata.normalize("NFC", " ".join([tags] + [str(card.get(k, "") or "") for k in fields]))
+
+
+def infer_official_unit(card: dict) -> str:
+    """Map a card into the official 2-week pretest units from the notice PDF."""
+    tags = [unicodedata.normalize("NFC", str(t)) for t in card.get("tags", []) or []]
+    text = official_unit_signal_text(card)
+    section = unicodedata.normalize("NFC", str(card.get("section") or ""))
+
+    # Official 2주차 is only 12~15장. Allergy/immunology-looking HI cards are
+    # kept because HI full-bank policy says keep all 156, but they should not be
+    # silently mixed into 호흡기/감염.
+    if re.search(ALLERGY_OUT_OF_SCOPE_PATTERN, text, re.I) and not re.search(r"천식|기관지|호흡|하기도|상기도|쌕쌕|천명", text, re.I):
+        return "범위외/확인"
+
+    # Prefer explicit curator tags/HI section names before noisy stem fallback.
+    if any(t in {"심장", "심혈관", "ECG", "EKG", "가와사키병"} for t in tags) or re.search(HEART_PATTERN, section, re.I):
+        return "심혈관"
+    if any(t in {"호흡기", "상기도", "하기도", "이비인후", "흉수", "천식"} for t in tags) or re.search(RESP_PATTERN, section, re.I):
+        return "호흡기"
+    if any(t in {"소화기", "영양", "탈수"} for t in tags) or re.search(GI_PATTERN, section, re.I):
+        return "소화기"
+    if any(t in {"감염", "감염관리", "피부", "신장"} for t in tags) or re.search(INFECTION_PATTERN, section, re.I):
+        return "감염"
+
+    # Fallback: system-specific patterns before generic infection terms.
+    if re.search(HEART_PATTERN, text, re.I):
+        return "심혈관"
+    if re.search(RESP_PATTERN, text, re.I):
+        return "호흡기"
+    if re.search(GI_PATTERN, text, re.I):
+        return "소화기"
+    if re.search(INFECTION_PATTERN, text, re.I):
+        return "감염"
+    return "범위외/확인"
+
+
+def apply_official_unit(card: dict) -> None:
+    unit = infer_official_unit(card)
+    card["official_unit"] = unit
+    card["official_chapter"] = OFFICIAL_UNIT_CHAPTER[unit]
+    card["tags"] = list(dict.fromkeys(card.get("tags", []) + [card["official_chapter"], unit]))
 
 
 def sanitize_name(text: str) -> str:
@@ -186,6 +269,10 @@ def extract_hi_answer(raw: str) -> str:
 
 def card_pills(card: dict) -> str:
     parts = []
+    unit = card.get("official_unit", "")
+    chapter = card.get("official_chapter", OFFICIAL_UNIT_CHAPTER.get(unit, unit))
+    if unit:
+        parts.append(pill(chapter, OFFICIAL_UNIT_STYLE.get(unit, "background:#374151;color:#f9fafb;border:1px solid #d1d5db;")))
     layer = card.get("layer", "")
     parts.append(pill(LAYER_LABELS.get(layer, layer), LAYER_STYLE.get(layer, "background:#334155;color:#e2e8f0;border:1px solid #94a3b8;")))
     pri = card.get("priority", "")
@@ -276,7 +363,7 @@ def answer_html(card: dict) -> str:
     <summary style="cursor:pointer;font-weight:800;">출처 / 태그</summary>
     <h4>출처</h4>
     <p><code>{e(card.get('source', '-'))}</code></p>
-    <p>Section: <code>{e(card.get('section', '-'))}</code> · Mode: <code>{e(card.get('mode', '-'))}</code></p>
+    <p>Official unit: <code>{e(card.get('official_chapter', '-'))}</code> · Section: <code>{e(card.get('section', '-'))}</code> · Mode: <code>{e(card.get('mode', '-'))}</code></p>
     <div class="tag-row">{tags_html(card.get('tags', []))}</div>
   </details>
 </section>
@@ -298,6 +385,7 @@ def guide_html(card: dict) -> str:
   <table>
     <tr><th>Layer</th><td>{e(card.get('layer'))}</td></tr>
     <tr><th>Origin</th><td>{e(card.get('origin'))}</td></tr>
+    <tr><th>Official unit</th><td>{e(card.get('official_chapter'))}</td></tr>
     <tr><th>Source</th><td>{e(card.get('source'))}</td></tr>
     <tr><th>Section</th><td>{e(card.get('section'))}</td></tr>
     <tr><th>Mode</th><td>{e(card.get('mode'))}</td></tr>
@@ -441,12 +529,17 @@ def load_all_records() -> list[dict]:
     for i, src in enumerate(hi, 1):
         records.append(build_hi_card(src, i))
 
-    # Stable output order: core -> 2025 source variant -> 2023 PDF -> HI full bank.
+    # Stable output order: official 2주차 units first, source order inside each unit.
     for n, rec in enumerate(records, 1):
-        rec["num"] = n
         rec["tags"] = list(dict.fromkeys(rec.get("tags", [])))
         if rec.get("id") in existing_enhanced:
             rec["enhanced_explanation"] = existing_enhanced[rec["id"]]
+        apply_official_unit(rec)
+
+    records.sort(key=lambda r: (OFFICIAL_UNIT_RANK.get(r.get("official_unit"), 99), int(r.get("source_rank", 999999)), str(r.get("id", ""))))
+
+    for n, rec in enumerate(records, 1):
+        rec["num"] = n
     return records
 
 
@@ -454,7 +547,9 @@ def add_background_and_stats() -> None:
     text = OUT.read_text(encoding="utf-8")
     data = json.loads(DATA_FULL.read_text(encoding="utf-8"))
     counts = {k: sum(1 for c in data if c.get("layer") == k) for k in ["core79", "source2025", "source2023pdf", "candidate", "hi156"]}
-    stats = f"Core {counts['core79']} · 2025+{counts['source2025']} · 2023PDF {counts['source2023pdf']} · 후보 {counts['candidate']} · HI {counts['hi156']} · Total {len(data)}"
+    unit_counts = {u: sum(1 for c in data if c.get("official_unit") == u) for u in OFFICIAL_UNIT_ORDER}
+    stats = f"공식 2주차: 감염 {unit_counts['감염']} · 소화기 {unit_counts['소화기']} · 호흡기 {unit_counts['호흡기']} · 심혈관 {unit_counts['심혈관']} · 범위외/확인 {unit_counts['범위외/확인']} · Total {len(data)}"
+    source_stats = f"Core {counts['core79']} · 2025+{counts['source2025']} · 2023PDF {counts['source2023pdf']} · 후보 {counts['candidate']} · HI {counts['hi156']}"
     css = f"""
 
 /* Pediatric pretest2 FULL source wall */
@@ -468,6 +563,12 @@ body.peds-pretest2-full-bg::before {{
   padding: 7px 10px; background: rgba(15,23,42,.90); color:#bfdbfe;
   border-top: 1px solid rgba(147,197,253,.35); font-size:12px; font-weight:950;
   letter-spacing:.04em; text-align:center; pointer-events:none;
+}}
+body.peds-pretest2-full-bg::after {{
+  content: '{e(source_stats)}'; position: fixed; left: 8px; top: 8px; z-index: 9999;
+  padding: 5px 8px; border-radius: 999px; background: rgba(15,23,42,.82); color:#dbeafe;
+  border: 1px solid rgba(147,197,253,.30); font-size:11px; font-weight:900;
+  pointer-events:none;
 }}
 body.peds-pretest2-full-bg .main, body.peds-pretest2-full-bg .quiz-header {{ position: relative; z-index: 1; }}
 body.peds-pretest2-full-bg .card, body.peds-pretest2-full-bg .quiz-card {{ box-shadow: 0 18px 44px rgba(2,6,23,.24); }}
@@ -487,7 +588,7 @@ def main() -> None:
     builder = QuizBuilder(
         cards=cards,
         title=TITLE,
-        subtitle="Core 79 + 2025 source variants + 2023 PDF raw + 추가 후보 + HI 2차 156 전체",
+        subtitle="교수님 공지 기준 2주차 12~15장: 감염 → 소화기 → 호흡기 → 심혈관 정렬 · Core 79 + 2025 variants + 2023 PDF + HI 156 전체",
         storage_prefix=STORAGE_PREFIX,
         enable_self_answer=False,
         randomize_review=True,
@@ -499,6 +600,8 @@ def main() -> None:
     print(f"source2023pdf: {sum(1 for c in records if c['layer']=='source2023pdf')}")
     print(f"candidate: {sum(1 for c in records if c['layer']=='candidate')}")
     print(f"hi156: {sum(1 for c in records if c['layer']=='hi156')}")
+    for unit in OFFICIAL_UNIT_ORDER:
+        print(f"unit_{unit}: {sum(1 for c in records if c.get('official_unit') == unit)}")
     print(f"total_cards: {len(cards)}")
     print(f"data: {DATA_FULL}")
     print(f"out: {OUT}")
