@@ -70,6 +70,38 @@ ORIGIN_LABELS = {
     "hi_bank_raw": "🛡️ HI 원문 bank",
 }
 
+HI_STUDY_CSS = r"""
+body.peds-pretest2-full-bg .hi-study-panel { margin:0 auto 18px; max-width:1100px; padding:20px 18px; border-radius:22px; background:rgba(2,6,23,.78); border:1px solid rgba(167,139,250,.34); box-shadow:0 18px 44px rgba(2,6,23,.24); }
+body.peds-pretest2-full-bg .hi-study-head { display:flex; justify-content:space-between; align-items:flex-start; gap:14px; flex-wrap:wrap; }
+body.peds-pretest2-full-bg .hi-study-kicker { display:inline-flex; padding:4px 10px; border-radius:999px; background:rgba(127,29,29,.38); border:1px solid rgba(252,165,165,.42); color:#fecaca; font-size:12px; font-weight:950; letter-spacing:.04em; }
+body.peds-pretest2-full-bg .hi-study-panel h2 { margin:10px 0 6px; color:#f8fafc; font-size:24px; line-height:1.22; }
+body.peds-pretest2-full-bg .hi-study-panel p { color:#cbd5e1; line-height:1.58; }
+body.peds-pretest2-full-bg .hi-study-stats { color:#bfdbfe; font-size:12px; font-weight:850; }
+body.peds-pretest2-full-bg .hi-study-toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:14px 0; }
+body.peds-pretest2-full-bg .hi-study-search { flex:1; min-width:220px; border-radius:12px; border:1px solid rgba(191,219,254,.28); background:rgba(15,23,42,.88); color:#e5e7eb; padding:10px 12px; font-weight:800; }
+body.peds-pretest2-full-bg .hi-study-chip { border:1px solid rgba(219,234,254,.28); background:rgba(30,41,59,.9); color:#e2e8f0; border-radius:999px; padding:7px 11px; font-size:12px; font-weight:900; cursor:pointer; }
+body.peds-pretest2-full-bg .hi-study-chip.active { background:#7c3aed; color:#fff; border-color:#ddd6fe; }
+body.peds-pretest2-full-bg .hi-study-layout { display:grid; grid-template-columns:minmax(220px,320px) minmax(0,1fr); gap:14px; align-items:start; }
+body.peds-pretest2-full-bg .hi-study-list { display:flex; flex-direction:column; gap:7px; max-height:620px; overflow:auto; padding-right:4px; }
+body.peds-pretest2-full-bg .hi-study-part { border:1px solid rgba(148,163,184,.28); background:rgba(15,23,42,.76); color:#e5e7eb; border-radius:14px; padding:10px 11px; text-align:left; cursor:pointer; }
+body.peds-pretest2-full-bg .hi-study-part.active { border-color:#c4b5fd; background:rgba(88,28,135,.62); }
+body.peds-pretest2-full-bg .hi-study-part-title { font-weight:950; line-height:1.35; }
+body.peds-pretest2-full-bg .hi-study-part-meta { margin-top:5px; color:#bfdbfe; font-size:11px; font-weight:850; }
+body.peds-pretest2-full-bg .hi-study-detail { min-height:360px; border-radius:18px; background:rgba(248,250,252,.98); color:#0f172a; padding:18px; box-shadow:0 14px 34px rgba(2,6,23,.22); }
+body.peds-pretest2-full-bg .hi-study-detail h3 { margin:0 0 6px; font-size:24px; color:#111827; }
+body.peds-pretest2-full-bg .hi-study-detail h4 { margin:16px 0 8px; color:#581c87; font-size:15px; }
+body.peds-pretest2-full-bg .hi-study-detail ul, body.peds-pretest2-full-bg .hi-study-detail ol { margin:6px 0 12px; padding-left:20px; }
+body.peds-pretest2-full-bg .hi-study-detail li { margin:6px 0; line-height:1.6; }
+body.peds-pretest2-full-bg .hi-study-detail .hi-lock { border-left:4px solid #16a34a; background:#f0fdf4; border-radius:10px; padding:10px 12px; margin:8px 0; font-weight:900; color:#14532d; }
+body.peds-pretest2-full-bg .hi-study-actions { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 4px; }
+body.peds-pretest2-full-bg .hi-study-actions button { border:none; border-radius:12px; padding:10px 12px; font-weight:950; cursor:pointer; }
+body.peds-pretest2-full-bg .hi-study-primary { background:#7c3aed; color:#fff; }
+body.peds-pretest2-full-bg .hi-study-secondary { background:#e0f2fe; color:#075985; }
+body.peds-pretest2-full-bg .hi-card-mini { border:1px solid #e2e8f0; background:#f8fafc; border-radius:12px; padding:10px 12px; margin:8px 0; }
+body.peds-pretest2-full-bg .hi-card-mini code { color:#7c2d12; font-weight:900; }
+@media (max-width:768px) { body.peds-pretest2-full-bg .hi-study-layout { grid-template-columns:1fr; } body.peds-pretest2-full-bg .hi-study-list { max-height:260px; } body.peds-pretest2-full-bg .hi-study-detail { padding:14px; } }
+"""
+
 # Manual QC fixes for cases where recall/source-variant metadata was being
 # exposed as the question stem, or low-confidence neighboring images were
 # attached to the wrong card. Keep these local and explicit: the FULL deck is
@@ -320,7 +352,14 @@ def apply_curated_card_fixes(card: dict) -> None:
     if not fix:
         return
     if "question" in fix:
-        card["question"] = normalize_multiline(fix["question"])
+        fixed_question = normalize_multiline(fix["question"])
+        card["question"] = fixed_question
+        # normalize_base_card may already have copied a stale source-variant
+        # note into display_question. If we curate the learner-facing question,
+        # keep front display in sync unless an explicit display_question is set.
+        card["display_question"] = normalize_multiline(fix.get("display_question", fixed_question))
+    if "display_question" in fix:
+        card["display_question"] = normalize_multiline(fix["display_question"])
         card["display_question"] = normalize_multiline(fix.get("display_question") or fix["question"])
     elif "display_question" in fix:
         card["display_question"] = normalize_multiline(fix["display_question"])
@@ -543,6 +582,186 @@ def guide_html(card: dict) -> str:
 """.strip()
 
 
+def short_text(value: object, limit: int = 120) -> str:
+    text = normalize_space(value)
+    text = re.sub(r"[①②③④⑤]\s*", "", text)
+    if len(text) <= limit:
+        return text
+    return text[: limit - 1].rstrip() + "…"
+
+
+def extract_tutor_heading(text: object, heading: str) -> str:
+    raw = normalize_multiline(text)
+    if not raw:
+        return ""
+    headings = ["🧭 Big picture", "🔎 핵심 단서", "👣 시험장 사고 흐름", "🧠 쉽게 이해하기", "📊 감별/오답 제거", "✅ 3초 Lock line", "🎯 암기 확인 퀴즈"]
+    try:
+        start = raw.index(heading) + len(heading)
+    except ValueError:
+        return ""
+    end = len(raw)
+    for h in headings:
+        if h == heading:
+            continue
+        pos = raw.find(h, start)
+        if pos != -1:
+            end = min(end, pos)
+    return raw[start:end].strip()
+
+
+def split_study_lines(text: object, limit: int = 6) -> list[str]:
+    raw = normalize_multiline(text)
+    if not raw:
+        return []
+    lines: list[str] = []
+    for line in raw.splitlines():
+        line = normalize_space(re.sub(r"^[\-•⭕❌0-9.①②③④⑤\s]+", "", line))
+        if line and line not in lines:
+            lines.append(line)
+        if len(lines) >= limit:
+            break
+    return lines
+
+
+def unit_study_axis(unit: str) -> str:
+    return {
+        "감염": "나이, 발진 순서, 노출 후 예방, 항생제 선택을 분리해서 본다.",
+        "소화기": "구토·설사·혈변·탈수에서 응급도와 보충/금기 처치를 먼저 가른다.",
+        "호흡기": "상기도/하기도, 산소화, 흉부영상, 치료 escalation 단서를 먼저 잡는다.",
+        "심혈관": "청색증, 심잡음 위치, 맥박/혈압 차이, 심전도 리듬을 축으로 나눈다.",
+        "범위외/확인": "2주차 핵심 범위 밖이 섞였을 수 있으므로 원문 확인 표시를 유지한다.",
+    }.get(unit, "문제 stem의 trigger를 먼저 잡고 정답 단어로 잠근다.")
+
+
+def build_hi_study_parts(cards: list[dict]) -> list[dict]:
+    hi_cards = [c for c in cards if c.get("layer") == "hi156"]
+    groups: dict[tuple[str, str], list[dict]] = {}
+    for card in hi_cards:
+        key = (str(card.get("official_unit") or "범위외/확인"), str(card.get("section") or "HI"))
+        groups.setdefault(key, []).append(card)
+
+    parts: list[dict] = []
+    for (unit, section), rows in groups.items():
+        rows.sort(key=lambda c: int(c.get("source_rank", 999999)))
+        chapter = OFFICIAL_UNIT_CHAPTER.get(unit, unit)
+        first_rank = int(rows[0].get("source_rank", 999999))
+        key_points = []
+        lock_lines = []
+        diff_lines = []
+        easy_lines = []
+        quiz_lines = []
+        card_minis = []
+
+        for card in rows:
+            cue = short_text(card.get("display_question") or card.get("question"), 150)
+            ans = short_text(card.get("answer") or "원문 확인 필요", 90)
+            key_points.append(f"{cue} → {ans}")
+            lock = extract_tutor_heading(card.get("enhanced_explanation"), "✅ 3초 Lock line")
+            if lock:
+                lock_lines.extend(split_study_lines(lock, 2))
+            diff = extract_tutor_heading(card.get("enhanced_explanation"), "📊 감별/오답 제거")
+            if diff:
+                diff_lines.extend(split_study_lines(diff, 3))
+            easy = extract_tutor_heading(card.get("enhanced_explanation"), "🧠 쉽게 이해하기")
+            if easy:
+                easy_lines.extend(split_study_lines(easy, 2))
+            quiz = extract_tutor_heading(card.get("enhanced_explanation"), "🎯 암기 확인 퀴즈")
+            if quiz:
+                quiz_lines.extend(split_study_lines(quiz, 4))
+            card_minis.append(
+                f"<div class='hi-card-mini'><code>{e(card.get('id'))}</code> · {e(cue)}<br><strong>답:</strong> {e(ans)}</div>"
+            )
+
+        key_points = list(dict.fromkeys(key_points))[:10]
+        lock_lines = list(dict.fromkeys(lock_lines))[:8]
+        diff_lines = list(dict.fromkeys(diff_lines))[:8]
+        easy_lines = list(dict.fromkeys(easy_lines))[:5]
+        quiz_lines = list(dict.fromkeys(quiz_lines))[:8]
+        if len(rows) > len(key_points):
+            key_points.append(f"이외 {len(rows) - len(key_points)}문항은 아래 카드 목록에서 이어서 확인")
+        if not lock_lines:
+            lock_lines = [f"{section}: stem trigger를 보고 {unit_study_axis(unit)}"]
+        if not diff_lines:
+            diff_lines = [unit_study_axis(unit)]
+        if not easy_lines:
+            easy_lines = [f"{section} 파트는 문제마다 하나의 trigger와 하나의 정답 단어를 연결하는 식으로 먼저 잠그면 된다."]
+        if not quiz_lines:
+            quiz_lines = [f"Q. {section} 파트에서 가장 먼저 잡을 축은?", f"A. {unit_study_axis(unit)}"]
+
+        html_body = f"""
+<h3>{e(section)}</h3>
+<p><strong>{e(chapter)}</strong> · HI 2차 bank {len(rows)}문항 · 원문 순서 {rows[0].get('hi_id') or rows[0].get('id')}부터</p>
+<div class="hi-study-actions">
+  <button class="hi-study-primary" onclick="startHIStudyPart({len(parts)})">이 파트만 퀴즈 시작</button>
+  <button class="hi-study-secondary" onclick="setOfficialUnitFilter('{e(chapter)}')">{e(chapter)} 전체 보기</button>
+</div>
+<h4>🧭 Big picture</h4>
+<p>이 파트는 <strong>{e(section)}</strong>를 HI 원문 기준으로 묶은 공부 블록이다. 전체 2주차 범위 안에서는 <strong>{e(chapter)}</strong> 축에 들어가며, {e(unit_study_axis(unit))}</p>
+<h4>🔎 핵심 단서</h4>
+<ul>{''.join(f'<li>{e(x)}</li>' for x in key_points)}</ul>
+<h4>👣 시험장 사고 흐름</h4>
+<ol><li>먼저 단원 축을 잡는다: {e(chapter)}.</li><li>stem에서 사진/나이/기간/검사/소견 trigger를 하나 고른다.</li><li>그 trigger를 아래 lock line 중 하나와 연결한다.</li><li>답이 원문 확인 필요인 카드는 외우기보다 원문 crop/해설을 같이 확인한다.</li></ol>
+<h4>🧠 쉽게 이해하기</h4>
+<ul>{''.join(f'<li>{e(x)}</li>' for x in easy_lines)}</ul>
+<h4>📊 감별/오답 제거</h4>
+<ul>{''.join(f'<li>{e(x)}</li>' for x in diff_lines)}</ul>
+<h4>✅ 3초 Lock line</h4>
+{''.join(f'<div class="hi-lock">{e(x)}</div>' for x in lock_lines)}
+<h4>🎯 암기 확인 퀴즈</h4>
+<ul>{''.join(f'<li>{e(x)}</li>' for x in quiz_lines)}</ul>
+<h4>카드 목록</h4>
+{''.join(card_minis)}
+""".strip()
+        parts.append({
+            "unit": unit,
+            "chapter": chapter,
+            "section": section,
+            "count": len(rows),
+            "firstRank": first_rank,
+            "cardIds": [str(c.get("id")) for c in rows],
+            "search": normalize_space(" ".join([unit, chapter, section] + [str(c.get("question", "")) + " " + str(c.get("answer", "")) for c in rows])).lower(),
+            "html": html_body,
+        })
+    parts.sort(key=lambda p: (OFFICIAL_UNIT_RANK.get(p["unit"], 99), p["firstRank"], p["section"]))
+    return parts
+
+
+def hi_study_js(parts: list[dict]) -> str:
+    payload = json.dumps(parts, ensure_ascii=False)
+    return "\nconst HI_STUDY_DATA = " + payload + ";\n" + r"""
+let selectedHIStudyUnit = 'ALL';
+let selectedHIStudyIndex = 0;
+function filteredHIStudyParts() {
+    const q = String(document.getElementById('hiStudySearch')?.value || '').trim().toLowerCase();
+    return HI_STUDY_DATA.map((item, idx) => ({item, idx})).filter(({item}) => {
+        const unitOK = selectedHIStudyUnit === 'ALL' || item.chapter === selectedHIStudyUnit;
+        const queryOK = !q || item.search.includes(q);
+        return unitOK && queryOK;
+    });
+}
+function renderHIStudy() {
+    const list = document.getElementById('hiStudyList');
+    const detail = document.getElementById('hiStudyDetail');
+    if (!list || !detail) return;
+    const rows = filteredHIStudyParts();
+    if (!rows.some(r => r.idx === selectedHIStudyIndex) && rows.length) selectedHIStudyIndex = rows[0].idx;
+    list.innerHTML = rows.map(({item, idx}) => `<button class="hi-study-part ${idx === selectedHIStudyIndex ? 'active' : ''}" onclick="selectHIStudyPart(${idx})"><div class="hi-study-part-title">${item.section}</div><div class="hi-study-part-meta">${item.chapter} · ${item.count}문항</div></button>`).join('') || '<div class="hi-study-part-meta">검색 결과 없음</div>';
+    const selected = HI_STUDY_DATA[selectedHIStudyIndex] || rows[0]?.item;
+    detail.innerHTML = selected ? selected.html : '<p>선택된 파트가 없습니다.</p>';
+    document.querySelectorAll('.hi-study-chip').forEach(btn => btn.classList.toggle('active', btn.dataset.hiunit === selectedHIStudyUnit));
+}
+function selectHIStudyPart(idx) { selectedHIStudyIndex = idx; renderHIStudy(); document.getElementById('hiStudyDetail')?.scrollIntoView({behavior:'smooth', block:'start'}); }
+function setHIStudyUnit(unit) { selectedHIStudyUnit = unit || 'ALL'; renderHIStudy(); }
+function startHIStudyPart(idx) {
+    const item = HI_STUDY_DATA[idx];
+    if (!item || !item.cardIds || !item.cardIds.length) return;
+    closePedsMobileSidebar();
+    startQuizWith(item.cardIds);
+}
+document.addEventListener('DOMContentLoaded', renderHIStudy);
+"""
+
+
 def question_html(card: dict) -> str:
     return f"""
 <div style="display:flex;flex-direction:column;gap:8px;width:100%;">
@@ -704,6 +923,7 @@ def add_background_and_stats() -> None:
     counts = {k: sum(1 for c in data if c.get("layer") == k) for k in ["core79", "source2025", "source2023pdf", "candidate", "hi156"]}
     unit_counts = {u: sum(1 for c in data if c.get("official_unit") == u) for u in OFFICIAL_UNIT_ORDER}
     unit_by_id = {str(c.get("id")): str(c.get("official_chapter")) for c in data}
+    hi_study_parts = build_hi_study_parts(data)
     stats = f"공식 2주차: 감염 {unit_counts['감염']} · 소화기 {unit_counts['소화기']} · 호흡기 {unit_counts['호흡기']} · 심혈관 {unit_counts['심혈관']} · 범위외/확인 {unit_counts['범위외/확인']} · Total {len(data)}"
     source_stats = f"Core {counts['core79']} · 2025+{counts['source2025']} · 2023PDF {counts['source2023pdf']} · 후보 {counts['candidate']} · HI {counts['hi156']}"
     filter_buttons = "".join(
@@ -730,6 +950,31 @@ def add_background_and_stats() -> None:
         <div class="home-selected">현재 범위: <strong id="selectedUnitLabel">전체</strong> · <span id="selectedUnitCount">{len(data)}</span>문항</div>
         <div class="unit-filter-note">범위외/혼입 확인은 HI 전체 포함 정책 때문에 삭제하지 않고 보존한 카드입니다.</div>
         <div class="home-source-stats">{e(source_stats)}</div>
+    </section>
+""".rstrip()
+    hi_unit_buttons = ''.join(
+        f'<button class="hi-study-chip" data-hiunit="{e(OFFICIAL_UNIT_CHAPTER[u])}" onclick="setHIStudyUnit(\'{e(OFFICIAL_UNIT_CHAPTER[u])}\')">{e(OFFICIAL_UNIT_CHAPTER[u])}</button>'
+        for u in OFFICIAL_UNIT_ORDER
+    )
+    hi_study_html = f"""
+    <section class="hi-study-panel" id="hiStudyPanel">
+        <div class="hi-study-head">
+            <div>
+                <div class="hi-study-kicker">HI 2차 원문 bank 공부모드</div>
+                <h2>HI 공부하기</h2>
+                <p>HI 156문항을 원문 section 기준으로 묶고, 각 파트를 퀴즈 해설용 7섹션 형식으로 압축했습니다. 먼저 파트 요약을 보고, 바로 그 파트만 퀴즈로 들어갈 수 있습니다.</p>
+            </div>
+            <div class="hi-study-stats">{len(hi_study_parts)}개 파트 · HI {counts['hi156']}문항</div>
+        </div>
+        <div class="hi-study-toolbar">
+            <input id="hiStudySearch" class="hi-study-search" type="search" placeholder="HI 파트/키워드 검색" oninput="renderHIStudy()" />
+            <button class="hi-study-chip active" data-hiunit="ALL" onclick="setHIStudyUnit('ALL')">전체</button>
+            {hi_unit_buttons}
+        </div>
+        <div class="hi-study-layout">
+            <div class="hi-study-list" id="hiStudyList"></div>
+            <article class="hi-study-detail" id="hiStudyDetail"></article>
+        </div>
     </section>
 """.rstrip()
     sidebar_html = f"""
@@ -810,16 +1055,17 @@ body.peds-pretest2-full-bg .unit-hidden {{ display:none !important; }}
   body.peds-pretest2-full-bg .quiz-q-text {{ font-size:15px; }}
 }}
 """
+    css += HI_STUDY_CSS
     text = text.replace("</style>", css + "\n</style>", 1)
     text = text.replace("<body>", '<body class="peds-pretest2-full-bg">', 1)
     text = text.replace('        <div class="sb-quiz-btns">', sidebar_html + '\n        <div class="sb-quiz-btns">', 1)
-    text = text.replace('    <div class="review-hero" id="reviewHero">', filter_html + '\n    <div class="review-hero" id="reviewHero">', 1)
+    text = text.replace('    <div class="review-hero" id="reviewHero">', filter_html + '\n' + hi_study_html + '\n    <div class="review-hero" id="reviewHero">', 1)
     # Clean-home mode: keep QUIZ_DATA for quiz mode, but do not render 288 static cards on the landing page.
     card_grid_start = text.find('    <div class="card-grid">')
     card_grid_end = text.find('\n</div>\n\n<!-- Quiz overlay -->', card_grid_start)
     if card_grid_start != -1 and card_grid_end != -1:
         text = text[:card_grid_start] + '    <div class="card-grid peds-home-card-grid" aria-hidden="true"></div>' + text[card_grid_end:]
-    unit_js = f"""
+    unit_js = hi_study_js(hi_study_parts) + f"""
 
 const OFFICIAL_UNIT_BY_ID = {json.dumps(unit_by_id, ensure_ascii=False)};
 let selectedOfficialUnit = 'ALL';
