@@ -327,6 +327,76 @@ def pill(text: str, style: str = "") -> str:
     return f'<span style="{base}{style}">{e(text)}</span>'
 
 
+def is_markdown_table_line(line: str) -> bool:
+    s = str(line or "").strip()
+    return s.count("|") >= 2 and len(s.replace("|", "").strip()) > 0
+
+
+def split_markdown_table_row(line: str) -> list[str]:
+    s = str(line or "").strip()
+    if s.startswith("|"):
+        s = s[1:]
+    if s.endswith("|"):
+        s = s[:-1]
+    return [cell.strip() for cell in s.split("|")]
+
+
+def is_markdown_table_separator(cells: list[str]) -> bool:
+    if not cells:
+        return False
+    return all(re.fullmatch(r":?-{2,}:?", re.sub(r"\s+", "", cell or "")) for cell in cells)
+
+
+def render_markdown_table(lines: list[str]) -> str:
+    rows = [split_markdown_table_row(line) for line in lines if is_markdown_table_line(line)]
+    rows = [row for row in rows if any(cell for cell in row)]
+    if len(rows) < 2:
+        return f"<p>{fmt('\n'.join(lines))}</p>"
+    headers = rows[0]
+    body_rows = rows[1:]
+    if body_rows and is_markdown_table_separator(body_rows[0]):
+        body_rows = body_rows[1:]
+    col_count = max(len(headers), *(len(row) for row in body_rows)) if body_rows else len(headers)
+    headers = headers + [""] * (col_count - len(headers))
+    body_rows = [row + [""] * (col_count - len(row)) for row in body_rows]
+    thead = "".join(f"<th>{fmt(cell)}</th>" for cell in headers)
+    tbody = "".join("<tr>" + "".join(f"<td>{fmt(cell)}</td>" for cell in row) + "</tr>" for row in body_rows)
+    return f"<div class='tutor-table-wrap'><table class='tutor-md-table'><thead><tr>{thead}</tr></thead><tbody>{tbody}</tbody></table></div>"
+
+
+def format_tutor_body(text: object) -> str:
+    raw = normalize_multiline(text)
+    if not raw:
+        return ""
+    parts: list[str] = []
+    text_lines: list[str] = []
+    table_lines: list[str] = []
+
+    def flush_text() -> None:
+        nonlocal text_lines
+        chunk = "\n".join(text_lines).strip()
+        if chunk:
+            parts.append(f"<p>{fmt(chunk)}</p>")
+        text_lines = []
+
+    def flush_table() -> None:
+        nonlocal table_lines
+        if table_lines:
+            parts.append(render_markdown_table(table_lines))
+        table_lines = []
+
+    for line in raw.split("\n"):
+        if is_markdown_table_line(line):
+            flush_text()
+            table_lines.append(line)
+        else:
+            flush_table()
+            text_lines.append(line)
+    flush_table()
+    flush_text()
+    return "".join(parts)
+
+
 def official_unit_signal_text(card: dict) -> str:
     """High-signal classification text.
 
@@ -578,9 +648,9 @@ def format_tutor_html(text: object) -> str:
         first = lines[0].strip()
         if re.match(r"^[🧭🔎👣🧠📊✅🎯]", first):
             body = "\n".join(lines[1:]).strip()
-            blocks.append(f"<section class='tutor-section'><h4>{e(first)}</h4><p>{fmt(body)}</p></section>")
+            blocks.append(f"<section class='tutor-section'><h4>{e(first)}</h4>{format_tutor_body(body)}</section>")
         else:
-            blocks.append(f"<p>{fmt(block)}</p>")
+            blocks.append(format_tutor_body(block))
     return "".join(blocks)
 
 
@@ -733,6 +803,37 @@ def unit_study_axis(unit: str) -> str:
     }.get(unit, "문제 stem의 trigger를 먼저 잡고 정답 단어로 잠근다.")
 
 
+def render_hi_study_items(lines: list[str], ordered: bool = False) -> str:
+    parts: list[str] = []
+    text_items: list[str] = []
+    table_lines: list[str] = []
+    tag = "ol" if ordered else "ul"
+
+    def flush_text() -> None:
+        nonlocal text_items
+        if text_items:
+            parts.append(f"<{tag}>" + "".join(f"<li>{e(x)}</li>" for x in text_items) + f"</{tag}>")
+        text_items = []
+
+    def flush_table() -> None:
+        nonlocal table_lines
+        if table_lines:
+            parts.append(render_markdown_table(table_lines))
+        table_lines = []
+
+    for line in lines:
+        if is_markdown_table_line(line):
+            flush_text()
+            table_lines.append(line)
+        else:
+            flush_table()
+            if str(line or "").strip():
+                text_items.append(str(line).strip())
+    flush_table()
+    flush_text()
+    return "".join(parts)
+
+
 def build_hi_study_parts(cards: list[dict]) -> list[dict]:
     hi_cards = [c for c in cards if c.get("layer") == "hi156"]
     groups: dict[tuple[str, str], list[dict]] = {}
@@ -821,13 +922,13 @@ def build_hi_study_parts(cards: list[dict]) -> list[dict]:
 <h4>👣 시험장 사고 흐름</h4>
 <ol><li>먼저 단원 축을 잡는다: {e(chapter)}.</li><li>stem에서 사진/나이/기간/검사/소견 trigger를 하나 고른다.</li><li>그 trigger를 아래 lock line 중 하나와 연결한다.</li><li>답이 원문 확인 필요인 카드는 외우기보다 원문 crop/해설을 같이 확인한다.</li></ol>
 <h4>🧠 쉽게 이해하기</h4>
-<ul>{''.join(f'<li>{e(x)}</li>' for x in easy_lines)}</ul>
+{render_hi_study_items(easy_lines)}
 <h4>📊 감별/오답 제거</h4>
-<ul>{''.join(f'<li>{e(x)}</li>' for x in diff_lines)}</ul>
+{render_hi_study_items(diff_lines)}
 <h4>✅ 3초 Lock line</h4>
 {''.join(f'<div class="hi-lock">{e(x)}</div>' for x in lock_lines)}
 <h4>🎯 암기 확인 퀴즈</h4>
-<ul>{''.join(f'<li>{e(x)}</li>' for x in quiz_lines)}</ul>
+{render_hi_study_items(quiz_lines)}
 <h4>문항 펼쳐보기</h4>
 <p class="hi-part-bottom-note">문항을 누르면 답/lock line이 바로 아래에서 펼쳐집니다. 따로 뒤로가기 하지 않아도 이 파트 안에서 확인할 수 있습니다.</p>
 {''.join(card_minis)}
@@ -1299,6 +1400,12 @@ body.peds-pretest2-full-bg .main, body.peds-pretest2-full-bg .quiz-header {{ pos
 body.peds-pretest2-full-bg .card, body.peds-pretest2-full-bg .quiz-card {{ box-shadow: 0 18px 44px rgba(2,6,23,.24); }}
 body.peds-pretest2-full-bg .tutor-section {{ margin: 12px 0; padding: 10px 12px; background: rgba(255,255,255,.62); border: 1px solid rgba(124,58,237,.14); border-radius: 10px; }}
 body.peds-pretest2-full-bg .tutor-section h4 {{ margin: 0 0 7px; font-size: 15px; color: #581c87; }}
+body.peds-pretest2-full-bg .tutor-section p {{ margin: 0 0 8px; }}
+body.peds-pretest2-full-bg .tutor-table-wrap {{ width:100%; overflow-x:auto; margin:8px 0; border-radius:10px; border:1px solid rgba(124,58,237,.18); background:#fff; }}
+body.peds-pretest2-full-bg table.tutor-md-table {{ width:100%; border-collapse:collapse; min-width:420px; font-size:13px; line-height:1.55; }}
+body.peds-pretest2-full-bg .tutor-md-table th {{ background:#ede9fe; color:#4c1d95; font-weight:950; text-align:left; padding:8px 10px; border:1px solid #ddd6fe; white-space:nowrap; }}
+body.peds-pretest2-full-bg .tutor-md-table td {{ color:#1f2937; padding:8px 10px; border:1px solid #e9d5ff; vertical-align:top; }}
+body.peds-pretest2-full-bg .tutor-md-table tr:nth-child(even) td {{ background:#faf5ff; }}
 body.peds-pretest2-full-bg .source-images img {{ max-height: 520px; object-fit: contain; }}
 body.peds-pretest2-full-bg::before, body.peds-pretest2-full-bg::after {{ display:none !important; content:none !important; }}
 body.peds-pretest2-full-bg .mobile-review-start, body.peds-pretest2-full-bg .review-hero, body.peds-pretest2-full-bg .card-grid, body.peds-pretest2-full-bg .sidebar .sb-quiz-btns, body.peds-pretest2-full-bg .sidebar .sb-item {{ display:none !important; }}
