@@ -115,6 +115,7 @@ CURATED_CARD_FIXES = {
     "PEDS2-2025-15to18-Q5": {
         "question": "객Q. 상지 혈압은 높고 하지 혈압은 낮거나 femoral pulse가 약하게 만져지는 소아 선천심질환을 의심한다. 가장 가능성이 큰 진단은?",
         "answer": "CoA",
+        "enhanced_explanation": "🧭 Big picture\n상지 고혈압, 하지 저혈압, femoral pulse 약화/지연이 보이면 대동맥축착(CoA)을 의심한다. 대동맥이 좁아져 협착부 위쪽은 압력이 높고 아래쪽은 관류가 떨어지는 구조다.\n\n🔎 핵심 단서\n- 상지 혈압이 상대적으로 높음\n- 하지 혈압이 낮거나 femoral pulse가 약함\n- 영아에서는 ductus가 닫히며 shock/심부전 가능\n- 큰 아이에서는 두통, 코피, 운동 시 다리 피로 가능\n\n👣 시험장 사고 흐름\n1단계: 선천심질환 문제에서 산소포화도와 murmur만 보지 말고 pulse/BP를 확인한다.\n2단계: 팔과 다리 차이가 있으면 CoA를 올린다.\n3단계: Turner syndrome, rib notching, collateral circulation 단서를 연결한다.\n\n🧠 쉽게 이해하기\nCoA는 대동맥 중간이 조인 호스라고 생각하면 된다. 조인 곳 위쪽인 머리와 팔 쪽은 압력이 높아지고, 아래쪽인 다리는 피가 덜 가서 맥박이 약하다. 그래서 “팔은 높고 다리는 낮다”가 핵심 그림이다.\n\n📊 감별/오답 제거\nCoA: 상하지 혈압 차이, femoral pulse 약화/지연.\nPDA: continuous machinery murmur, bounding pulse, wide pulse pressure.\nTOF: 청색증, boot-shaped heart, cyanotic spell.\nASD: fixed wide splitting S2.\nVSD: holosystolic murmur at LLSB.\n\n✅ 3초 Lock line\n상지 고혈압 + 하지 맥박 약함 = 대동맥축착.\n\n🎯 암기 확인 퀴즈\nQ. CoA에서 반드시 비교해야 하는 진찰 소견은?\nA. 상지/하지 혈압과 femoral pulse."
     },
 }
 
