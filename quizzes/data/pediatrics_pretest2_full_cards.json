@@ -843,47 +843,6 @@
     "num": 25
   },
   {
-    "id": "PEDS2-2023PDF-036",
-    "source": "2023 17~20조 주5 의국회의 / 2023년 소아청소년과 pretest 2차 복기",
-    "source_rank": 101,
-    "origin": "actual_recall_source_variant",
-    "priority": "P3 2023PDF source-variant",
-    "question": "Alport 증후군에서 신장/내이/안구 기능 문제와 관련된 공통 용어는?",
-    "answer": "Collagen type IV",
-    "explanation": "Alport syndrome은 type IV collagen 유전자 이상으로 사구체기저막, 내이, 안구 이상이 생긴다. 79문항 대조 상태: missing.",
-    "tags": [
-      "신장",
-      "Alport",
-      "collagen_IV",
-      "의국회의",
-      "2023PDF",
-      "pretest2",
-      "source-variant",
-      "max-v3",
-      "vs79-missing",
-      "소아과",
-      "pretest",
-      "2주차",
-      "source2023pdf",
-      "actual_recall_source_variant",
-      "12장 감염",
-      "감염"
-    ],
-    "uncertain": false,
-    "source_variant_status_vs_current79": "missing",
-    "raw_anchor": "주관식 5번 — 알포트 증후군, 공통으로 들어가는 용어 collagen type IV",
-    "layer": "source2023pdf",
-    "mode": "주관식",
-    "display_question": "Alport 증후군에서 신장/내이/안구 기능 문제와 관련된 공통 용어는?",
-    "enhanced_explanation": "🧭 Big picture\nAlport syndrome은 신장, 귀, 눈을 한 묶음으로 침범하는 유전성 기저막 질환이야. 공통 키워드는 type IV collagen. 이 콜라겐은 사구체기저막, 와우, 수정체/망막 주변 구조처럼 ‘얇고 정교한 basement membrane’에 중요하다. 그래서 혈뇨로 시작하는 신장 문제, 감각신경성 난청, 전방 원추수정체 같은 안과 문제가 한 줄로 연결된다.\n\n🔎 핵심 단서\n⭕ Alport syndrome: 유전성 신염 + 난청 + 안구 이상\n⭕ 신장/내이/안구의 공통 구조: basement membrane\n⭕ 핵심 단백: collagen type IV\n⭕ X-linked COL4A5가 대표적이나 COL4A3/4도 가능\n\n👣 시험장 사고 흐름\n1단계: Alport를 보면 혈뇨만 보지 말고 귀·눈을 같이 떠올린다.\n2단계: 여러 장기를 잇는 구조가 basement membrane임을 잡는다.\n3단계: basement membrane collagen = type IV collagen.\n4단계: 답은 Collagen type IV로 쓴다.\n\n🧠 쉽게 이해하기\n우리 몸의 여러 필터와 감각기관에는 아주 얇은 ‘받침막’이 있어. Alport는 이 받침막을 만드는 철근, 즉 type IV collagen이 약한 병이라고 보면 된다. 신장 필터가 약하면 혈뇨, 귀의 진동 감지 구조가 약하면 난청, 눈의 렌즈 지지 구조가 약하면 안구 이상이 생기는 식이야.\n\n📊 감별/오답 제거\n헷갈리는 포인트\n- Type I collagen: osteogenesis imperfecta, 뼈/청색공막 쪽.\n- Type II collagen: cartilage 관련 질환 축.\n- Type III collagen: vascular EDS와 연결.\n- Type IV collagen: basement membrane, Alport syndrome 정답.\n- Goodpasture도 GBM이 나오지만 자가항체 질환이고 Alport의 유전성 collagen 결함과 다르다.\n\n✅ 3초 Lock line\nAlport = 신장 + 난청 + 눈 = type IV collagen 결함.\n\n🎯 암기 확인 퀴즈\nQ1. Alport syndrome의 대표 신장 소견은?\nQ2. Alport에서 동반되는 청각 문제는?\nQ3. 공통 핵심 단백은?\n\nA1. 혈뇨/진행성 신염\nA2. 감각신경성 난청\nA3. Collagen type IV",
-    "section": "P3 2023PDF source-variant",
-    "images": [],
-    "has_image": false,
-    "official_unit": "감염",
-    "official_chapter": "12장 감염",
-    "num": 26
-  },
-  {
     "id": "PEDS2-2023PDF-038",
     "source": "2023 1~4조 객2 / 2023년 소아청소년과 pretest 2차 복기",
     "source_rank": 102,
@@ -920,7 +879,7 @@
     "has_image": false,
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 27
+    "num": 26
   },
   {
     "id": "PEDS2-2023PDF-005",
@@ -959,7 +918,7 @@
     "has_image": false,
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 28
+    "num": 27
   },
   {
     "id": "PEDS2-2023PDF-034",
@@ -999,7 +958,7 @@
     "has_image": false,
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 29
+    "num": 28
   },
   {
     "id": "PEDS2-2023PDF-039",
@@ -1039,47 +998,7 @@
     "has_image": false,
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 30
-  },
-  {
-    "id": "PEDS2-2023PDF-041",
-    "source": "2023 1~4조 주1 / 2023년 소아청소년과 pretest 2차 복기",
-    "source_rank": 113,
-    "origin": "actual_recall_source_variant",
-    "priority": "P2 covered-variant",
-    "question": "청소년 혈압 분류 표를 채우라.",
-    "answer": "정상 90 미만백분위수. 고혈압 전단계/elevated ≥90~95 미만백분위수 또는 120/80 이상. 1단계 95 이상백분위수~95백분위수+12 또는 130/80~139/89. 2단계 95 이상백분위수+12 또는 140 이상/90",
-    "explanation": "소아청소년 혈압은 연령·성별·키 백분위수와 절대 기준을 함께 사용한다. 79문항 대조 상태: covered.",
-    "tags": [
-      "신장",
-      "고혈압",
-      "혈압분류",
-      "2023PDF",
-      "pretest2",
-      "source-variant",
-      "max-v3",
-      "vs79-covered",
-      "소아과",
-      "pretest",
-      "2주차",
-      "source2023pdf",
-      "actual_recall_source_variant",
-      "12장 감염",
-      "감염"
-    ],
-    "uncertain": false,
-    "source_variant_status_vs_current79": "covered",
-    "raw_anchor": "주1 청소년혈압기분류 표를 채우시오",
-    "layer": "source2023pdf",
-    "mode": "주관식",
-    "display_question": "청소년 혈압 분류 표를 채우라.",
-    "enhanced_explanation": "🧭 Big picture\n소아청소년 혈압 분류는 성인처럼 숫자 하나로 끝나지 않고, 나이·성별·키 백분위수에 따른 혈압 백분위수를 사용한다. 다만 청소년에서는 120/80, 130/80, 140/90 같은 절대 기준도 같이 등장해. 이 카드의 답안 축은 정상 <90백분위수, elevated/고혈압 전단계 ≥90~<95백분위수 또는 120/80 이상, 1단계 ≥95백분위수~95백분위수+12 또는 130/80~139/89, 2단계 ≥95백분위수+12 또는 ≥140/90이다.\n\n🔎 핵심 단서\n⭕ 청소년 혈압 분류 표 채우기\n⭕ 소아는 percentile 기반\n⭕ 청소년은 성인형 절대 기준도 병행\n⭕ 정상/elevated/stage 1/stage 2 순서 암기\n\n👣 시험장 사고 흐름\n1단계: 정상은 90백분위수 미만으로 시작.\n2단계: 90~95 미만 또는 120/80 이상이면 elevated.\n3단계: 95 이상부터 stage 1, 단 95+12 또는 140/90 전까지.\n4단계: 95+12 이상 또는 140/90 이상이면 stage 2.\n\n🧠 쉽게 이해하기\n아이 혈압은 키가 큰 아이와 작은 아이의 정상 범위가 다르기 때문에 백분위수 표를 본다. 그런데 청소년은 성인 기준으로 넘어가는 과도기라 130/80 같은 숫자도 같이 쓰는 느낌이야. 시험에서는 ‘90, 95, 95+12’ 계단과 ‘120/80, 130/80, 140/90’ 계단을 같이 외우면 된다.\n\n📊 감별/오답 제거\n헷갈리는 포인트\n- 정상: <90th percentile.\n- Elevated: ≥90th to <95th percentile 또는 120/80 이상이지만 stage 1 미만.\n- Stage 1 HTN: ≥95th to <95th+12 mmHg 또는 130/80~139/89.\n- Stage 2 HTN: ≥95th+12 mmHg 또는 ≥140/90.\n- 한 번 측정만으로 확진하지 말고 반복 측정/상황 평가가 필요하다.\n\n✅ 3초 Lock line\n소아혈압 계단 = 90th, 95th, 95th+12; 청소년 숫자 = 120/80, 130/80, 140/90.\n\n🎯 암기 확인 퀴즈\nQ1. 정상 혈압은 몇 백분위수 미만?\nQ2. Stage 2 기준의 percentile 표현은?\nQ3. 청소년 stage 1의 절대혈압 범위는?\n\nA1. 90백분위수 미만\nA2. 95백분위수+12 mmHg 이상\nA3. 130/80~139/89",
-    "section": "P2 covered-variant",
-    "images": [],
-    "has_image": false,
-    "official_unit": "감염",
-    "official_chapter": "12장 감염",
-    "num": 31
+    "num": 29
   },
   {
     "id": "PEDS2-2023PDF-023",
@@ -1118,7 +1037,7 @@
     "has_image": false,
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 32
+    "num": 30
   },
   {
     "id": "PEDS2-HI2-001",
@@ -1155,7 +1074,7 @@
     "column": "L",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 33
+    "num": 31
   },
   {
     "id": "PEDS2-HI2-002",
@@ -1192,7 +1111,7 @@
     "column": "L",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 34
+    "num": 32
   },
   {
     "id": "PEDS2-HI2-003",
@@ -1229,7 +1148,7 @@
     "column": "L",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 35
+    "num": 33
   },
   {
     "id": "PEDS2-HI2-004",
@@ -1266,7 +1185,7 @@
     "column": "L",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 36
+    "num": 34
   },
   {
     "id": "PEDS2-HI2-005",
@@ -1316,7 +1235,7 @@
     "column": "L",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 37
+    "num": 35
   },
   {
     "id": "PEDS2-HI2-006",
@@ -1366,7 +1285,7 @@
     "column": "L",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 38
+    "num": 36
   },
   {
     "id": "PEDS2-HI2-007",
@@ -1403,7 +1322,7 @@
     "column": "L",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 39
+    "num": 37
   },
   {
     "id": "PEDS2-HI2-008",
@@ -1440,7 +1359,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 40
+    "num": 38
   },
   {
     "id": "PEDS2-HI2-009",
@@ -1477,7 +1396,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 41
+    "num": 39
   },
   {
     "id": "PEDS2-HI2-010",
@@ -1514,7 +1433,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 42
+    "num": 40
   },
   {
     "id": "PEDS2-HI2-011",
@@ -1551,7 +1470,7 @@
     "column": "L",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 43
+    "num": 41
   },
   {
     "id": "PEDS2-HI2-012",
@@ -1588,7 +1507,7 @@
     "column": "L",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 44
+    "num": 42
   },
   {
     "id": "PEDS2-HI2-013",
@@ -1638,7 +1557,7 @@
     "column": "L",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 45
+    "num": 43
   },
   {
     "id": "PEDS2-HI2-014",
@@ -1675,7 +1594,7 @@
     "column": "L",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 46
+    "num": 44
   },
   {
     "id": "PEDS2-HI2-015",
@@ -1712,7 +1631,7 @@
     "column": "L",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 47
+    "num": 45
   },
   {
     "id": "PEDS2-HI2-016",
@@ -1749,7 +1668,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 48
+    "num": 46
   },
   {
     "id": "PEDS2-HI2-017",
@@ -1786,7 +1705,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 49
+    "num": 47
   },
   {
     "id": "PEDS2-HI2-018",
@@ -1823,7 +1742,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 50
+    "num": 48
   },
   {
     "id": "PEDS2-HI2-019",
@@ -1860,7 +1779,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 51
+    "num": 49
   },
   {
     "id": "PEDS2-HI2-020",
@@ -1897,7 +1816,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 52
+    "num": 50
   },
   {
     "id": "PEDS2-HI2-021",
@@ -1934,7 +1853,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 53
+    "num": 51
   },
   {
     "id": "PEDS2-HI2-022",
@@ -1971,7 +1890,7 @@
     "column": "L",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 54
+    "num": 52
   },
   {
     "id": "PEDS2-HI2-023",
@@ -2021,7 +1940,7 @@
     "column": "L",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 55
+    "num": 53
   },
   {
     "id": "PEDS2-HI2-024",
@@ -2058,7 +1977,7 @@
     "column": "L",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 56
+    "num": 54
   },
   {
     "id": "PEDS2-HI2-025",
@@ -2114,7 +2033,7 @@
     "column": "L",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 57
+    "num": 55
   },
   {
     "id": "PEDS2-HI2-026",
@@ -2170,7 +2089,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 58
+    "num": 56
   },
   {
     "id": "PEDS2-HI2-027",
@@ -2232,7 +2151,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 59
+    "num": 57
   },
   {
     "id": "PEDS2-HI2-028",
@@ -2269,7 +2188,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 60
+    "num": 58
   },
   {
     "id": "PEDS2-HI2-029",
@@ -2306,7 +2225,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 61
+    "num": 59
   },
   {
     "id": "PEDS2-HI2-030",
@@ -2343,7 +2262,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 62
+    "num": 60
   },
   {
     "id": "PEDS2-HI2-038",
@@ -2380,7 +2299,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 63
+    "num": 61
   },
   {
     "id": "PEDS2-HI2-039",
@@ -2417,7 +2336,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 64
+    "num": 62
   },
   {
     "id": "PEDS2-HI2-040",
@@ -2454,7 +2373,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 65
+    "num": 63
   },
   {
     "id": "PEDS2-HI2-041",
@@ -2491,7 +2410,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 66
+    "num": 64
   },
   {
     "id": "PEDS2-HI2-042",
@@ -2528,7 +2447,7 @@
     "column": "R",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 67
+    "num": 65
   },
   {
     "id": "PEDS2-HI2-082",
@@ -2572,7 +2491,7 @@
     "column": "L",
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 68
+    "num": 66
   },
   {
     "id": "PEDS2-2025-19to23-Q6-SOURCEVAR",
@@ -2607,7 +2526,7 @@
     "has_image": false,
     "official_unit": "감염",
     "official_chapter": "12장 감염",
-    "num": 69
+    "num": 67
   },
   {
     "id": "PEDS2-2026-9to12-MCQ2",
@@ -2641,7 +2560,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 70
+    "num": 68
   },
   {
     "id": "PEDS2-2026-9to12-SA2",
@@ -2675,7 +2594,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 71
+    "num": 69
   },
   {
     "id": "PEDS2-2026-5to8-Q2",
@@ -2707,7 +2626,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 72
+    "num": 70
   },
   {
     "id": "PEDS2-2026-5to8-Q7",
@@ -2738,7 +2657,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 73
+    "num": 71
   },
   {
     "id": "PEDS2-2025-11to14-Q2",
@@ -2770,7 +2689,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 74
+    "num": 72
   },
   {
     "id": "PEDS2-2025-11to14-Q7",
@@ -2810,7 +2729,7 @@
     "has_image": true,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 75
+    "num": 73
   },
   {
     "id": "PEDS2-2025-15to18-Q2",
@@ -2841,7 +2760,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 76
+    "num": 74
   },
   {
     "id": "PEDS2-2025-15to18-SA2",
@@ -2872,7 +2791,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 77
+    "num": 75
   },
   {
     "id": "PEDS2-2025-19to23-Q2",
@@ -2905,7 +2824,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 78
+    "num": 76
   },
   {
     "id": "PEDS2-2025-19to23-Q7",
@@ -2937,7 +2856,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 79
+    "num": 77
   },
   {
     "id": "PEDS2-2025-1to2-SA2",
@@ -2968,7 +2887,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 80
+    "num": 78
   },
   {
     "id": "PEDS2-2023-25to28-Q4",
@@ -3007,7 +2926,7 @@
     "has_image": true,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 81
+    "num": 79
   },
   {
     "id": "PEDS2-2023-33to36-Q5",
@@ -3039,7 +2958,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 82
+    "num": 80
   },
   {
     "id": "PEDS2-2023-21to24-SA2",
@@ -3070,7 +2989,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 83
+    "num": 81
   },
   {
     "id": "PEDS2-2023-21to24-SA5",
@@ -3102,7 +3021,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 84
+    "num": 82
   },
   {
     "id": "PEDS2-2023PDF-004",
@@ -3141,7 +3060,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 85
+    "num": 83
   },
   {
     "id": "PEDS2-2023PDF-017",
@@ -3179,7 +3098,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 86
+    "num": 84
   },
   {
     "id": "PEDS2-2023PDF-035",
@@ -3218,7 +3137,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 87
+    "num": 85
   },
   {
     "id": "PEDS2-2023PDF-045",
@@ -3257,7 +3176,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 88
+    "num": 86
   },
   {
     "id": "PEDS2-2023PDF-009",
@@ -3297,7 +3216,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 89
+    "num": 87
   },
   {
     "id": "PEDS2-2023PDF-010",
@@ -3337,7 +3256,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 90
+    "num": 88
   },
   {
     "id": "PEDS2-2023PDF-016",
@@ -3377,7 +3296,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 91
+    "num": 89
   },
   {
     "id": "PEDS2-2023PDF-043",
@@ -3416,7 +3335,7 @@
     "has_image": false,
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 92
+    "num": 90
   },
   {
     "id": "PEDS2-HI2-043",
@@ -3453,7 +3372,7 @@
     "column": "L",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 93
+    "num": 91
   },
   {
     "id": "PEDS2-HI2-044",
@@ -3490,7 +3409,7 @@
     "column": "L",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 94
+    "num": 92
   },
   {
     "id": "PEDS2-HI2-045",
@@ -3527,7 +3446,7 @@
     "column": "L",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 95
+    "num": 93
   },
   {
     "id": "PEDS2-HI2-046",
@@ -3564,7 +3483,7 @@
     "column": "L",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 96
+    "num": 94
   },
   {
     "id": "PEDS2-HI2-047",
@@ -3601,7 +3520,7 @@
     "column": "R",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 97
+    "num": 95
   },
   {
     "id": "PEDS2-HI2-048",
@@ -3638,7 +3557,7 @@
     "column": "R",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 98
+    "num": 96
   },
   {
     "id": "PEDS2-HI2-049",
@@ -3675,7 +3594,7 @@
     "column": "L",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 99
+    "num": 97
   },
   {
     "id": "PEDS2-HI2-050",
@@ -3725,7 +3644,7 @@
     "column": "L",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 100
+    "num": 98
   },
   {
     "id": "PEDS2-HI2-051",
@@ -3775,7 +3694,7 @@
     "column": "L",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 101
+    "num": 99
   },
   {
     "id": "PEDS2-HI2-052",
@@ -3825,7 +3744,7 @@
     "column": "L",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 102
+    "num": 100
   },
   {
     "id": "PEDS2-HI2-053",
@@ -3875,7 +3794,7 @@
     "column": "L",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 103
+    "num": 101
   },
   {
     "id": "PEDS2-HI2-054",
@@ -3925,7 +3844,7 @@
     "column": "L",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 104
+    "num": 102
   },
   {
     "id": "PEDS2-HI2-055",
@@ -3962,7 +3881,7 @@
     "column": "L",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 105
+    "num": 103
   },
   {
     "id": "PEDS2-HI2-056",
@@ -3999,7 +3918,7 @@
     "column": "R",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 106
+    "num": 104
   },
   {
     "id": "PEDS2-HI2-057",
@@ -4043,7 +3962,7 @@
     "column": "R",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 107
+    "num": 105
   },
   {
     "id": "PEDS2-HI2-058",
@@ -4087,7 +4006,7 @@
     "column": "R",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 108
+    "num": 106
   },
   {
     "id": "PEDS2-HI2-059",
@@ -4131,7 +4050,7 @@
     "column": "R",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 109
+    "num": 107
   },
   {
     "id": "PEDS2-HI2-060",
@@ -4175,7 +4094,7 @@
     "column": "L",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 110
+    "num": 108
   },
   {
     "id": "PEDS2-HI2-061",
@@ -4219,7 +4138,7 @@
     "column": "L",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 111
+    "num": 109
   },
   {
     "id": "PEDS2-HI2-062",
@@ -4263,7 +4182,7 @@
     "column": "L",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 112
+    "num": 110
   },
   {
     "id": "PEDS2-HI2-066",
@@ -4319,7 +4238,7 @@
     "column": "R",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 113
+    "num": 111
   },
   {
     "id": "PEDS2-HI2-067",
@@ -4356,7 +4275,7 @@
     "column": "R",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 114
+    "num": 112
   },
   {
     "id": "PEDS2-HI2-068",
@@ -4393,7 +4312,7 @@
     "column": "R",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 115
+    "num": 113
   },
   {
     "id": "PEDS2-HI2-069",
@@ -4449,7 +4368,7 @@
     "column": "R",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 116
+    "num": 114
   },
   {
     "id": "PEDS2-HI2-070",
@@ -4486,7 +4405,7 @@
     "column": "R",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 117
+    "num": 115
   },
   {
     "id": "PEDS2-HI2-071",
@@ -4542,7 +4461,7 @@
     "column": "R",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 118
+    "num": 116
   },
   {
     "id": "PEDS2-HI2-072",
@@ -4586,7 +4505,7 @@
     "column": "L",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 119
+    "num": 117
   },
   {
     "id": "PEDS2-HI2-073",
@@ -4623,7 +4542,7 @@
     "column": "L",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 120
+    "num": 118
   },
   {
     "id": "PEDS2-HI2-076",
@@ -4660,7 +4579,7 @@
     "column": "R",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 121
+    "num": 119
   },
   {
     "id": "PEDS2-HI2-077",
@@ -4697,7 +4616,7 @@
     "column": "R",
     "official_unit": "소화기",
     "official_chapter": "13장 소화기",
-    "num": 122
+    "num": 120
   },
   {
     "id": "PEDS2-2026-9to12-MCQ3",
@@ -4730,7 +4649,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 123
+    "num": 121
   },
   {
     "id": "PEDS2-2026-9to12-MCQ4",
@@ -4762,7 +4681,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 124
+    "num": 122
   },
   {
     "id": "PEDS2-2026-9to12-SA3",
@@ -4797,7 +4716,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 125
+    "num": 123
   },
   {
     "id": "PEDS2-2026-5to8-Q3",
@@ -4829,7 +4748,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 126
+    "num": 124
   },
   {
     "id": "PEDS2-2026-5to8-Q4",
@@ -4863,7 +4782,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 127
+    "num": 125
   },
   {
     "id": "PEDS2-2026-5to8-Q8",
@@ -4902,7 +4821,7 @@
     "has_image": true,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 128
+    "num": 126
   },
   {
     "id": "PEDS2-2025-11to14-Q3",
@@ -4936,7 +4855,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 129
+    "num": 127
   },
   {
     "id": "PEDS2-2025-11to14-Q4",
@@ -4968,7 +4887,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 130
+    "num": 128
   },
   {
     "id": "PEDS2-2025-11to14-Q6",
@@ -5008,7 +4927,7 @@
     "has_image": true,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 131
+    "num": 129
   },
   {
     "id": "PEDS2-2025-11to14-Q8",
@@ -5040,7 +4959,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 132
+    "num": 130
   },
   {
     "id": "PEDS2-2025-15to18-Q3",
@@ -5071,7 +4990,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 133
+    "num": 131
   },
   {
     "id": "PEDS2-2025-15to18-Q4",
@@ -5104,7 +5023,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 134
+    "num": 132
   },
   {
     "id": "PEDS2-2025-19to23-Q4",
@@ -5136,7 +5055,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 135
+    "num": 133
   },
   {
     "id": "PEDS2-2025-1to2-Q1",
@@ -5169,7 +5088,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 136
+    "num": 134
   },
   {
     "id": "PEDS2-2025-1to2-Q2",
@@ -5201,7 +5120,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 137
+    "num": 135
   },
   {
     "id": "PEDS2-2025-1to2-SA1",
@@ -5233,7 +5152,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 138
+    "num": 136
   },
   {
     "id": "PEDS2-2023-25to28-Q3",
@@ -5265,7 +5184,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 139
+    "num": 137
   },
   {
     "id": "PEDS2-2023-25to28-SA2",
@@ -5296,7 +5215,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 140
+    "num": 138
   },
   {
     "id": "PEDS2-2023-25to28-SA3",
@@ -5328,7 +5247,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 141
+    "num": 139
   },
   {
     "id": "PEDS2-2023-29to32-SA4",
@@ -5360,7 +5279,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 142
+    "num": 140
   },
   {
     "id": "PEDS2-2023-33to36-SA2",
@@ -5392,7 +5311,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 143
+    "num": 141
   },
   {
     "id": "PEDS2-2023-37to40-Q5",
@@ -5425,7 +5344,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 144
+    "num": 142
   },
   {
     "id": "PEDS2-2023-37to40-SA4",
@@ -5457,7 +5376,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 145
+    "num": 143
   },
   {
     "id": "PEDS2-2023-21to24-Q3",
@@ -5489,7 +5408,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 146
+    "num": 144
   },
   {
     "id": "PEDS2-2023-21to24-Q5",
@@ -5521,7 +5440,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 147
+    "num": 145
   },
   {
     "id": "PEDS2-2023-21to24-SA3",
@@ -5552,7 +5471,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 148
+    "num": 146
   },
   {
     "id": "PEDS2-2023PDF-001",
@@ -5591,7 +5510,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 149
+    "num": 147
   },
   {
     "id": "PEDS2-2023PDF-021",
@@ -5630,7 +5549,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 150
+    "num": 148
   },
   {
     "id": "PEDS2-2023PDF-026",
@@ -5670,7 +5589,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 151
+    "num": 149
   },
   {
     "id": "PEDS2-2023PDF-030",
@@ -5709,7 +5628,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 152
+    "num": 150
   },
   {
     "id": "PEDS2-2023PDF-008",
@@ -5748,7 +5667,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 153
+    "num": 151
   },
   {
     "id": "PEDS2-2023PDF-012",
@@ -5787,7 +5706,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 154
+    "num": 152
   },
   {
     "id": "PEDS2-2023PDF-037",
@@ -5827,7 +5746,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 155
+    "num": 153
   },
   {
     "id": "PEDS2-2023PDF-044",
@@ -5866,7 +5785,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 156
+    "num": 154
   },
   {
     "id": "PEDS2-2023PDF-031",
@@ -5905,7 +5824,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 157
+    "num": 155
   },
   {
     "id": "PEDS2-EXTRA-HI-RESP-ANATOMY",
@@ -5937,7 +5856,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 158
+    "num": 156
   },
   {
     "id": "PEDS2-HI2-031",
@@ -5974,7 +5893,7 @@
     "column": "L",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 159
+    "num": 157
   },
   {
     "id": "PEDS2-HI2-032",
@@ -6024,7 +5943,7 @@
     "column": "L",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 160
+    "num": 158
   },
   {
     "id": "PEDS2-HI2-033",
@@ -6074,7 +5993,7 @@
     "column": "L",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 161
+    "num": 159
   },
   {
     "id": "PEDS2-HI2-034",
@@ -6124,7 +6043,7 @@
     "column": "L",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 162
+    "num": 160
   },
   {
     "id": "PEDS2-HI2-035",
@@ -6174,7 +6093,7 @@
     "column": "L",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 163
+    "num": 161
   },
   {
     "id": "PEDS2-HI2-036",
@@ -6224,7 +6143,7 @@
     "column": "L",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 164
+    "num": 162
   },
   {
     "id": "PEDS2-HI2-037",
@@ -6274,7 +6193,7 @@
     "column": "L",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 165
+    "num": 163
   },
   {
     "id": "PEDS2-HI2-063",
@@ -6311,7 +6230,7 @@
     "column": "L",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 166
+    "num": 164
   },
   {
     "id": "PEDS2-HI2-064",
@@ -6361,7 +6280,7 @@
     "column": "L",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 167
+    "num": 165
   },
   {
     "id": "PEDS2-HI2-065",
@@ -6398,7 +6317,7 @@
     "column": "L",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 168
+    "num": 166
   },
   {
     "id": "PEDS2-HI2-078",
@@ -6448,7 +6367,7 @@
     "column": "R",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 169
+    "num": 167
   },
   {
     "id": "PEDS2-HI2-079",
@@ -6485,7 +6404,7 @@
     "column": "L",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 170
+    "num": 168
   },
   {
     "id": "PEDS2-HI2-080",
@@ -6522,7 +6441,7 @@
     "column": "L",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 171
+    "num": 169
   },
   {
     "id": "PEDS2-HI2-081",
@@ -6559,7 +6478,7 @@
     "column": "L",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 172
+    "num": 170
   },
   {
     "id": "PEDS2-HI2-083",
@@ -6596,7 +6515,7 @@
     "column": "R",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 173
+    "num": 171
   },
   {
     "id": "PEDS2-HI2-084",
@@ -6633,7 +6552,7 @@
     "column": "R",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 174
+    "num": 172
   },
   {
     "id": "PEDS2-HI2-085",
@@ -6670,7 +6589,7 @@
     "column": "R",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 175
+    "num": 173
   },
   {
     "id": "PEDS2-HI2-086",
@@ -6720,7 +6639,7 @@
     "column": "R",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 176
+    "num": 174
   },
   {
     "id": "PEDS2-HI2-087",
@@ -6757,7 +6676,7 @@
     "column": "R",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 177
+    "num": 175
   },
   {
     "id": "PEDS2-HI2-088",
@@ -6801,7 +6720,7 @@
     "column": "L",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 178
+    "num": 176
   },
   {
     "id": "PEDS2-HI2-089",
@@ -6838,7 +6757,7 @@
     "column": "L",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 179
+    "num": 177
   },
   {
     "id": "PEDS2-HI2-090",
@@ -6875,7 +6794,7 @@
     "column": "L",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 180
+    "num": 178
   },
   {
     "id": "PEDS2-HI2-091",
@@ -6919,7 +6838,7 @@
     "column": "L",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 181
+    "num": 179
   },
   {
     "id": "PEDS2-HI2-092",
@@ -6956,7 +6875,7 @@
     "column": "L",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 182
+    "num": 180
   },
   {
     "id": "PEDS2-HI2-093",
@@ -6993,7 +6912,7 @@
     "column": "R",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 183
+    "num": 181
   },
   {
     "id": "PEDS2-HI2-094",
@@ -7037,7 +6956,7 @@
     "column": "R",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 184
+    "num": 182
   },
   {
     "id": "PEDS2-HI2-095",
@@ -7074,7 +6993,7 @@
     "column": "R",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 185
+    "num": 183
   },
   {
     "id": "PEDS2-HI2-096",
@@ -7124,7 +7043,7 @@
     "column": "R",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 186
+    "num": 184
   },
   {
     "id": "PEDS2-HI2-101",
@@ -7161,7 +7080,7 @@
     "column": "R",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 187
+    "num": 185
   },
   {
     "id": "PEDS2-HI2-102",
@@ -7198,7 +7117,7 @@
     "column": "R",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 188
+    "num": 186
   },
   {
     "id": "PEDS2-HI2-103",
@@ -7235,7 +7154,7 @@
     "column": "R",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 189
+    "num": 187
   },
   {
     "id": "PEDS2-HI2-104",
@@ -7272,7 +7191,7 @@
     "column": "R",
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 190
+    "num": 188
   },
   {
     "id": "PEDS2-2025-19to23-Q3-SOURCEVAR",
@@ -7308,7 +7227,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 191
+    "num": 189
   },
   {
     "id": "PEDS2-2025-19to23-Q8-SOURCEVAR",
@@ -7344,7 +7263,7 @@
     "has_image": false,
     "official_unit": "호흡기",
     "official_chapter": "14장 호흡기",
-    "num": 192
+    "num": 190
   },
   {
     "id": "PEDS2-2026-9to12-MCQ5",
@@ -7379,7 +7298,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 193
+    "num": 191
   },
   {
     "id": "PEDS2-2026-9to12-SA4",
@@ -7414,7 +7333,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 194
+    "num": 192
   },
   {
     "id": "PEDS2-2026-5to8-Q10",
@@ -7447,7 +7366,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 195
+    "num": 193
   },
   {
     "id": "PEDS2-2026-5to8-Q5",
@@ -7480,7 +7399,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 196
+    "num": 194
   },
   {
     "id": "PEDS2-2026-5to8-Q9",
@@ -7513,7 +7432,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 197
+    "num": 195
   },
   {
     "id": "PEDS2-2025-11to14-Q5",
@@ -7546,7 +7465,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 198
+    "num": 196
   },
   {
     "id": "PEDS2-2025-11to14-Q9",
@@ -7578,7 +7497,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 199
+    "num": 197
   },
   {
     "id": "PEDS2-2025-15to18-Q5",
@@ -7611,7 +7530,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 200
+    "num": 198
   },
   {
     "id": "PEDS2-2025-15to18-SA4A",
@@ -7643,7 +7562,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 201
+    "num": 199
   },
   {
     "id": "PEDS2-2025-15to18-SA4B",
@@ -7675,7 +7594,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 202
+    "num": 200
   },
   {
     "id": "PEDS2-2025-15to18-SA5",
@@ -7708,7 +7627,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 203
+    "num": 201
   },
   {
     "id": "PEDS2-2025-1to2-SA4",
@@ -7742,7 +7661,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 204
+    "num": 202
   },
   {
     "id": "PEDS2-2023-33to36-SA3",
@@ -7788,7 +7707,7 @@
     "has_image": true,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 205
+    "num": 203
   },
   {
     "id": "PEDS2-2023-37to40-SA1",
@@ -7820,7 +7739,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 206
+    "num": 204
   },
   {
     "id": "PEDS2-2023-21to24-Q2",
@@ -7855,7 +7774,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 207
+    "num": 205
   },
   {
     "id": "PEDS2-2023PDF-002",
@@ -7896,7 +7815,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 208
+    "num": 206
   },
   {
     "id": "PEDS2-2023PDF-003",
@@ -7936,7 +7855,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 209
+    "num": 207
   },
   {
     "id": "PEDS2-2023PDF-006",
@@ -7976,7 +7895,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 210
+    "num": 208
   },
   {
     "id": "PEDS2-2023PDF-011",
@@ -8017,7 +7936,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 211
+    "num": 209
   },
   {
     "id": "PEDS2-2023PDF-014",
@@ -8057,7 +7976,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 212
+    "num": 210
   },
   {
     "id": "PEDS2-2023PDF-019",
@@ -8097,7 +8016,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 213
+    "num": 211
   },
   {
     "id": "PEDS2-2023PDF-020",
@@ -8137,7 +8056,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 214
+    "num": 212
   },
   {
     "id": "PEDS2-2023PDF-024",
@@ -8177,7 +8096,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 215
+    "num": 213
   },
   {
     "id": "PEDS2-2023PDF-027",
@@ -8218,7 +8137,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 216
+    "num": 214
   },
   {
     "id": "PEDS2-2023PDF-028",
@@ -8258,7 +8177,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 217
+    "num": 215
   },
   {
     "id": "PEDS2-2023PDF-033",
@@ -8298,7 +8217,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 218
+    "num": 216
   },
   {
     "id": "PEDS2-2023PDF-040",
@@ -8339,7 +8258,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 219
+    "num": 217
   },
   {
     "id": "PEDS2-2023PDF-042",
@@ -8379,7 +8298,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 220
+    "num": 218
   },
   {
     "id": "PEDS2-2023PDF-032",
@@ -8419,7 +8338,47 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 221
+    "num": 219
+  },
+  {
+    "id": "PEDS2-2023PDF-041",
+    "source": "2023 1~4조 주1 / 2023년 소아청소년과 pretest 2차 복기",
+    "source_rank": 113,
+    "origin": "actual_recall_source_variant",
+    "priority": "P2 covered-variant",
+    "question": "청소년 혈압 분류 표를 채우라.",
+    "answer": "정상 90 미만백분위수. 고혈압 전단계/elevated ≥90~95 미만백분위수 또는 120/80 이상. 1단계 95 이상백분위수~95백분위수+12 또는 130/80~139/89. 2단계 95 이상백분위수+12 또는 140 이상/90",
+    "explanation": "소아청소년 혈압은 연령·성별·키 백분위수와 절대 기준을 함께 사용한다. 79문항 대조 상태: covered.",
+    "tags": [
+      "신장",
+      "고혈압",
+      "혈압분류",
+      "2023PDF",
+      "pretest2",
+      "source-variant",
+      "max-v3",
+      "vs79-covered",
+      "소아과",
+      "pretest",
+      "2주차",
+      "source2023pdf",
+      "actual_recall_source_variant",
+      "15장 심혈관",
+      "심혈관"
+    ],
+    "uncertain": false,
+    "source_variant_status_vs_current79": "covered",
+    "raw_anchor": "주1 청소년혈압기분류 표를 채우시오",
+    "layer": "source2023pdf",
+    "mode": "주관식",
+    "display_question": "청소년 혈압 분류 표를 채우라.",
+    "enhanced_explanation": "🧭 Big picture\n소아청소년 혈압 분류는 성인처럼 숫자 하나로 끝나지 않고, 나이·성별·키 백분위수에 따른 혈압 백분위수를 사용한다. 다만 청소년에서는 120/80, 130/80, 140/90 같은 절대 기준도 같이 등장해. 이 카드의 답안 축은 정상 <90백분위수, elevated/고혈압 전단계 ≥90~<95백분위수 또는 120/80 이상, 1단계 ≥95백분위수~95백분위수+12 또는 130/80~139/89, 2단계 ≥95백분위수+12 또는 ≥140/90이다.\n\n🔎 핵심 단서\n⭕ 청소년 혈압 분류 표 채우기\n⭕ 소아는 percentile 기반\n⭕ 청소년은 성인형 절대 기준도 병행\n⭕ 정상/elevated/stage 1/stage 2 순서 암기\n\n👣 시험장 사고 흐름\n1단계: 정상은 90백분위수 미만으로 시작.\n2단계: 90~95 미만 또는 120/80 이상이면 elevated.\n3단계: 95 이상부터 stage 1, 단 95+12 또는 140/90 전까지.\n4단계: 95+12 이상 또는 140/90 이상이면 stage 2.\n\n🧠 쉽게 이해하기\n아이 혈압은 키가 큰 아이와 작은 아이의 정상 범위가 다르기 때문에 백분위수 표를 본다. 그런데 청소년은 성인 기준으로 넘어가는 과도기라 130/80 같은 숫자도 같이 쓰는 느낌이야. 시험에서는 ‘90, 95, 95+12’ 계단과 ‘120/80, 130/80, 140/90’ 계단을 같이 외우면 된다.\n\n📊 감별/오답 제거\n헷갈리는 포인트\n- 정상: <90th percentile.\n- Elevated: ≥90th to <95th percentile 또는 120/80 이상이지만 stage 1 미만.\n- Stage 1 HTN: ≥95th to <95th+12 mmHg 또는 130/80~139/89.\n- Stage 2 HTN: ≥95th+12 mmHg 또는 ≥140/90.\n- 한 번 측정만으로 확진하지 말고 반복 측정/상황 평가가 필요하다.\n\n✅ 3초 Lock line\n소아혈압 계단 = 90th, 95th, 95th+12; 청소년 숫자 = 120/80, 130/80, 140/90.\n\n🎯 암기 확인 퀴즈\nQ1. 정상 혈압은 몇 백분위수 미만?\nQ2. Stage 2 기준의 percentile 표현은?\nQ3. 청소년 stage 1의 절대혈압 범위는?\n\nA1. 90백분위수 미만\nA2. 95백분위수+12 mmHg 이상\nA3. 130/80~139/89",
+    "section": "P2 covered-variant",
+    "images": [],
+    "has_image": false,
+    "official_unit": "심혈관",
+    "official_chapter": "15장 심혈관",
+    "num": 220
   },
   {
     "id": "PEDS2-2023PDF-007",
@@ -8459,7 +8418,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 222
+    "num": 221
   },
   {
     "id": "PEDS2-2023PDF-013",
@@ -8500,7 +8459,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 223
+    "num": 222
   },
   {
     "id": "PEDS2-2023PDF-025",
@@ -8540,7 +8499,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 224
+    "num": 223
   },
   {
     "id": "PEDS2-HI2-108",
@@ -8577,7 +8536,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 225
+    "num": 224
   },
   {
     "id": "PEDS2-HI2-109",
@@ -8614,7 +8573,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 226
+    "num": 225
   },
   {
     "id": "PEDS2-HI2-110",
@@ -8651,7 +8610,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 227
+    "num": 226
   },
   {
     "id": "PEDS2-HI2-111",
@@ -8688,7 +8647,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 228
+    "num": 227
   },
   {
     "id": "PEDS2-HI2-112",
@@ -8725,7 +8684,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 229
+    "num": 228
   },
   {
     "id": "PEDS2-HI2-113",
@@ -8762,7 +8721,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 230
+    "num": 229
   },
   {
     "id": "PEDS2-HI2-114",
@@ -8799,7 +8758,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 231
+    "num": 230
   },
   {
     "id": "PEDS2-HI2-115",
@@ -8855,7 +8814,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 232
+    "num": 231
   },
   {
     "id": "PEDS2-HI2-116",
@@ -8911,7 +8870,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 233
+    "num": 232
   },
   {
     "id": "PEDS2-HI2-117",
@@ -8948,7 +8907,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 234
+    "num": 233
   },
   {
     "id": "PEDS2-HI2-118",
@@ -9004,7 +8963,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 235
+    "num": 234
   },
   {
     "id": "PEDS2-HI2-119",
@@ -9041,7 +9000,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 236
+    "num": 235
   },
   {
     "id": "PEDS2-HI2-120",
@@ -9078,7 +9037,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 237
+    "num": 236
   },
   {
     "id": "PEDS2-HI2-121",
@@ -9115,7 +9074,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 238
+    "num": 237
   },
   {
     "id": "PEDS2-HI2-122",
@@ -9177,7 +9136,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 239
+    "num": 238
   },
   {
     "id": "PEDS2-HI2-123",
@@ -9239,7 +9198,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 240
+    "num": 239
   },
   {
     "id": "PEDS2-HI2-124",
@@ -9301,7 +9260,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 241
+    "num": 240
   },
   {
     "id": "PEDS2-HI2-125",
@@ -9363,7 +9322,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 242
+    "num": 241
   },
   {
     "id": "PEDS2-HI2-126",
@@ -9425,7 +9384,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 243
+    "num": 242
   },
   {
     "id": "PEDS2-HI2-127",
@@ -9487,7 +9446,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 244
+    "num": 243
   },
   {
     "id": "PEDS2-HI2-128",
@@ -9531,7 +9490,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 245
+    "num": 244
   },
   {
     "id": "PEDS2-HI2-129",
@@ -9575,7 +9534,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 246
+    "num": 245
   },
   {
     "id": "PEDS2-HI2-130",
@@ -9619,7 +9578,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 247
+    "num": 246
   },
   {
     "id": "PEDS2-HI2-131",
@@ -9663,7 +9622,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 248
+    "num": 247
   },
   {
     "id": "PEDS2-HI2-132",
@@ -9700,7 +9659,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 249
+    "num": 248
   },
   {
     "id": "PEDS2-HI2-133",
@@ -9737,7 +9696,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 250
+    "num": 249
   },
   {
     "id": "PEDS2-HI2-134",
@@ -9781,7 +9740,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 251
+    "num": 250
   },
   {
     "id": "PEDS2-HI2-135",
@@ -9825,7 +9784,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 252
+    "num": 251
   },
   {
     "id": "PEDS2-HI2-136",
@@ -9862,7 +9821,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 253
+    "num": 252
   },
   {
     "id": "PEDS2-HI2-137",
@@ -9906,7 +9865,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 254
+    "num": 253
   },
   {
     "id": "PEDS2-HI2-138",
@@ -9943,7 +9902,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 255
+    "num": 254
   },
   {
     "id": "PEDS2-HI2-139",
@@ -9980,7 +9939,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 256
+    "num": 255
   },
   {
     "id": "PEDS2-HI2-140",
@@ -10017,7 +9976,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 257
+    "num": 256
   },
   {
     "id": "PEDS2-HI2-141",
@@ -10067,7 +10026,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 258
+    "num": 257
   },
   {
     "id": "PEDS2-HI2-142",
@@ -10117,7 +10076,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 259
+    "num": 258
   },
   {
     "id": "PEDS2-HI2-143",
@@ -10154,7 +10113,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 260
+    "num": 259
   },
   {
     "id": "PEDS2-HI2-144",
@@ -10191,7 +10150,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 261
+    "num": 260
   },
   {
     "id": "PEDS2-HI2-145",
@@ -10253,7 +10212,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 262
+    "num": 261
   },
   {
     "id": "PEDS2-HI2-146",
@@ -10315,7 +10274,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 263
+    "num": 262
   },
   {
     "id": "PEDS2-HI2-147",
@@ -10352,7 +10311,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 264
+    "num": 263
   },
   {
     "id": "PEDS2-HI2-148",
@@ -10389,7 +10348,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 265
+    "num": 264
   },
   {
     "id": "PEDS2-HI2-149",
@@ -10451,7 +10410,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 266
+    "num": 265
   },
   {
     "id": "PEDS2-HI2-150",
@@ -10488,7 +10447,7 @@
     "column": "L",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 267
+    "num": 266
   },
   {
     "id": "PEDS2-HI2-151",
@@ -10525,7 +10484,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 268
+    "num": 267
   },
   {
     "id": "PEDS2-HI2-152",
@@ -10562,7 +10521,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 269
+    "num": 268
   },
   {
     "id": "PEDS2-HI2-153",
@@ -10599,7 +10558,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 270
+    "num": 269
   },
   {
     "id": "PEDS2-HI2-154",
@@ -10636,7 +10595,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 271
+    "num": 270
   },
   {
     "id": "PEDS2-HI2-155",
@@ -10673,7 +10632,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 272
+    "num": 271
   },
   {
     "id": "PEDS2-HI2-156",
@@ -10710,7 +10669,7 @@
     "column": "R",
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 273
+    "num": 272
   },
   {
     "id": "PEDS2-2025-19to23-Q5-SOURCEVAR",
@@ -10749,7 +10708,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 274
+    "num": 273
   },
   {
     "id": "PEDS2-2025-19to23-Q9-SOURCEVAR",
@@ -10787,7 +10746,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 275
+    "num": 274
   },
   {
     "id": "PEDS2-2025-1to2-Q4-SOURCEVAR",
@@ -10824,7 +10783,7 @@
     "has_image": false,
     "official_unit": "심혈관",
     "official_chapter": "15장 심혈관",
-    "num": 276
+    "num": 275
   },
   {
     "id": "PEDS2-2025-11to14-Q10",
@@ -10853,6 +10812,47 @@
     "mode": "주관식",
     "display_question": "정상 신생아에서 선천성 갑상샘저하증 선별검사의 적절한 시기는?",
     "section": "P3 누적복기",
+    "images": [],
+    "has_image": false,
+    "official_unit": "범위외/확인",
+    "official_chapter": "범위외/혼입 확인",
+    "num": 276
+  },
+  {
+    "id": "PEDS2-2023PDF-036",
+    "source": "2023 17~20조 주5 의국회의 / 2023년 소아청소년과 pretest 2차 복기",
+    "source_rank": 101,
+    "origin": "actual_recall_source_variant",
+    "priority": "P3 2023PDF source-variant",
+    "question": "Alport 증후군에서 신장/내이/안구 기능 문제와 관련된 공통 용어는?",
+    "answer": "Collagen type IV",
+    "explanation": "Alport syndrome은 type IV collagen 유전자 이상으로 사구체기저막, 내이, 안구 이상이 생긴다. 79문항 대조 상태: missing.",
+    "tags": [
+      "신장",
+      "Alport",
+      "collagen_IV",
+      "의국회의",
+      "2023PDF",
+      "pretest2",
+      "source-variant",
+      "max-v3",
+      "vs79-missing",
+      "소아과",
+      "pretest",
+      "2주차",
+      "source2023pdf",
+      "actual_recall_source_variant",
+      "범위외/혼입 확인",
+      "범위외/확인"
+    ],
+    "uncertain": false,
+    "source_variant_status_vs_current79": "missing",
+    "raw_anchor": "주관식 5번 — 알포트 증후군, 공통으로 들어가는 용어 collagen type IV",
+    "layer": "source2023pdf",
+    "mode": "주관식",
+    "display_question": "Alport 증후군에서 신장/내이/안구 기능 문제와 관련된 공통 용어는?",
+    "enhanced_explanation": "🧭 Big picture\nAlport syndrome은 신장, 귀, 눈을 한 묶음으로 침범하는 유전성 기저막 질환이야. 공통 키워드는 type IV collagen. 이 콜라겐은 사구체기저막, 와우, 수정체/망막 주변 구조처럼 ‘얇고 정교한 basement membrane’에 중요하다. 그래서 혈뇨로 시작하는 신장 문제, 감각신경성 난청, 전방 원추수정체 같은 안과 문제가 한 줄로 연결된다.\n\n🔎 핵심 단서\n⭕ Alport syndrome: 유전성 신염 + 난청 + 안구 이상\n⭕ 신장/내이/안구의 공통 구조: basement membrane\n⭕ 핵심 단백: collagen type IV\n⭕ X-linked COL4A5가 대표적이나 COL4A3/4도 가능\n\n👣 시험장 사고 흐름\n1단계: Alport를 보면 혈뇨만 보지 말고 귀·눈을 같이 떠올린다.\n2단계: 여러 장기를 잇는 구조가 basement membrane임을 잡는다.\n3단계: basement membrane collagen = type IV collagen.\n4단계: 답은 Collagen type IV로 쓴다.\n\n🧠 쉽게 이해하기\n우리 몸의 여러 필터와 감각기관에는 아주 얇은 ‘받침막’이 있어. Alport는 이 받침막을 만드는 철근, 즉 type IV collagen이 약한 병이라고 보면 된다. 신장 필터가 약하면 혈뇨, 귀의 진동 감지 구조가 약하면 난청, 눈의 렌즈 지지 구조가 약하면 안구 이상이 생기는 식이야.\n\n📊 감별/오답 제거\n헷갈리는 포인트\n- Type I collagen: osteogenesis imperfecta, 뼈/청색공막 쪽.\n- Type II collagen: cartilage 관련 질환 축.\n- Type III collagen: vascular EDS와 연결.\n- Type IV collagen: basement membrane, Alport syndrome 정답.\n- Goodpasture도 GBM이 나오지만 자가항체 질환이고 Alport의 유전성 collagen 결함과 다르다.\n\n✅ 3초 Lock line\nAlport = 신장 + 난청 + 눈 = type IV collagen 결함.\n\n🎯 암기 확인 퀴즈\nQ1. Alport syndrome의 대표 신장 소견은?\nQ2. Alport에서 동반되는 청각 문제는?\nQ3. 공통 핵심 단백은?\n\nA1. 혈뇨/진행성 신염\nA2. 감각신경성 난청\nA3. Collagen type IV",
+    "section": "P3 2023PDF source-variant",
     "images": [],
     "has_image": false,
     "official_unit": "범위외/확인",

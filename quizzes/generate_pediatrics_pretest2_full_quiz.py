@@ -163,7 +163,7 @@ def infer_official_unit(card: dict) -> str:
         return "호흡기"
     if any(t in {"소화기", "영양", "탈수"} for t in tags) or re.search(GI_PATTERN, section, re.I):
         return "소화기"
-    if any(t in {"감염", "감염관리", "피부", "신장"} for t in tags) or re.search(INFECTION_PATTERN, section, re.I):
+    if any(t in {"감염", "감염관리", "피부"} for t in tags) or re.search(INFECTION_PATTERN, section, re.I):
         return "감염"
 
     # Fallback: system-specific patterns before generic infection terms.
@@ -548,8 +548,23 @@ def add_background_and_stats() -> None:
     data = json.loads(DATA_FULL.read_text(encoding="utf-8"))
     counts = {k: sum(1 for c in data if c.get("layer") == k) for k in ["core79", "source2025", "source2023pdf", "candidate", "hi156"]}
     unit_counts = {u: sum(1 for c in data if c.get("official_unit") == u) for u in OFFICIAL_UNIT_ORDER}
+    unit_by_id = {str(c.get("id")): str(c.get("official_chapter")) for c in data}
     stats = f"공식 2주차: 감염 {unit_counts['감염']} · 소화기 {unit_counts['소화기']} · 호흡기 {unit_counts['호흡기']} · 심혈관 {unit_counts['심혈관']} · 범위외/확인 {unit_counts['범위외/확인']} · Total {len(data)}"
     source_stats = f"Core {counts['core79']} · 2025+{counts['source2025']} · 2023PDF {counts['source2023pdf']} · 후보 {counts['candidate']} · HI {counts['hi156']}"
+    filter_buttons = "".join(
+        f'<button class="unit-filter-chip" data-unit="{e(OFFICIAL_UNIT_CHAPTER[u])}" onclick="setOfficialUnitFilter(\'{e(OFFICIAL_UNIT_CHAPTER[u])}\')">{e(OFFICIAL_UNIT_CHAPTER[u])} <b>{unit_counts[u]}</b></button>'
+        for u in OFFICIAL_UNIT_ORDER
+    )
+    filter_html = f"""
+    <section class="official-unit-filter" id="officialUnitFilter">
+        <div class="unit-filter-title">교수님 공지 기준 2주차 범위: 12장 감염 → 13장 소화기 → 14장 호흡기 → 15장 심혈관</div>
+        <div class="unit-filter-actions">
+            <button class="unit-filter-chip active" data-unit="ALL" onclick="setOfficialUnitFilter('ALL')">전체 <b>{len(data)}</b></button>
+            {filter_buttons}
+        </div>
+        <div class="unit-filter-note">범위외/혼입 확인은 HI 전체 포함 정책 때문에 보존한 카드입니다.</div>
+    </section>
+""".rstrip()
     css = f"""
 
 /* Pediatric pretest2 FULL source wall */
@@ -575,9 +590,37 @@ body.peds-pretest2-full-bg .card, body.peds-pretest2-full-bg .quiz-card {{ box-s
 body.peds-pretest2-full-bg .tutor-section {{ margin: 12px 0; padding: 10px 12px; background: rgba(255,255,255,.62); border: 1px solid rgba(124,58,237,.14); border-radius: 10px; }}
 body.peds-pretest2-full-bg .tutor-section h4 {{ margin: 0 0 7px; font-size: 15px; color: #581c87; }}
 body.peds-pretest2-full-bg .source-images img {{ max-height: 520px; object-fit: contain; }}
+body.peds-pretest2-full-bg .official-unit-filter {{ margin: 0 0 18px; padding: 14px 16px; border-radius: 16px; background: rgba(15,23,42,.78); border: 1px solid rgba(191,219,254,.28); box-shadow: 0 12px 30px rgba(2,6,23,.18); }}
+body.peds-pretest2-full-bg .unit-filter-title {{ font-weight: 950; color: #dbeafe; margin-bottom: 10px; line-height: 1.45; }}
+body.peds-pretest2-full-bg .unit-filter-actions {{ display:flex; flex-wrap:wrap; gap:8px; }}
+body.peds-pretest2-full-bg .unit-filter-chip {{ border:1px solid rgba(219,234,254,.34); background: rgba(30,41,59,.92); color:#e2e8f0; border-radius:999px; padding:7px 11px; font-size:12px; font-weight:900; cursor:pointer; }}
+body.peds-pretest2-full-bg .unit-filter-chip b {{ color:#fef3c7; margin-left:4px; }}
+body.peds-pretest2-full-bg .unit-filter-chip.active {{ background:#2563eb; color:#fff; border-color:#bfdbfe; }}
+body.peds-pretest2-full-bg .unit-filter-note {{ margin-top:8px; color:#bfdbfe; font-size:12px; opacity:.88; }}
+body.peds-pretest2-full-bg .unit-hidden {{ display:none !important; }}
 """
     text = text.replace("</style>", css + "\n</style>", 1)
     text = text.replace("<body>", '<body class="peds-pretest2-full-bg">', 1)
+    text = text.replace('    <div class="review-hero" id="reviewHero">', filter_html + '\n    <div class="review-hero" id="reviewHero">', 1)
+    unit_js = f"""
+
+const OFFICIAL_UNIT_BY_ID = {json.dumps(unit_by_id, ensure_ascii=False)};
+function setOfficialUnitFilter(unit) {{
+    document.querySelectorAll('.unit-filter-chip').forEach(btn => btn.classList.toggle('active', btn.dataset.unit === unit));
+    document.querySelectorAll('.card[id^="card-"]').forEach(card => {{
+        const id = card.id.replace(/^card-/, '');
+        const chapter = OFFICIAL_UNIT_BY_ID[id] || '';
+        card.classList.toggle('unit-hidden', unit !== 'ALL' && chapter !== unit);
+    }});
+    document.querySelectorAll('.sb-item').forEach(item => {{
+        const m = String(item.getAttribute('onclick') || '').match(/scrollToCard[(]'([^']+)'[)]/);
+        const chapter = m ? (OFFICIAL_UNIT_BY_ID[m[1]] || '') : '';
+        item.classList.toggle('unit-hidden', unit !== 'ALL' && chapter !== unit);
+    }});
+}}
+document.addEventListener('DOMContentLoaded', () => setOfficialUnitFilter('ALL'));
+"""
+    text = text.replace("// ── Card View Functions ──", unit_js + "\n// ── Card View Functions ──", 1)
     OUT.write_text(text, encoding="utf-8")
 
 
