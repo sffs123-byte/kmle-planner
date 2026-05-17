@@ -264,6 +264,10 @@ CURATED_CARD_FIXES.setdefault("PEDS2-2023PDF-029", {}).update({
 CURATED_CARD_FIXES.update({'PEDS2-HI2-031': {'answer': '소아: 폐 하부 병변·초감염 결핵·치유 시 석회화 / 성인: 폐첨 또는 쇄골상부 병변·재감염/재활성화 결핵·치유 시 섬유화', 'uncertain': False}, 'PEDS2-HI2-032': {'answer': 'Chest X-ray와 TST; 정상/활동성 결핵 배제 시 isoniazid 예방치료', 'uncertain': False}, 'PEDS2-HI2-034': {'answer': '이소니아지드 9개월 복용', 'uncertain': False}, 'PEDS2-HI2-037': {'answer': 'Isoniazid + Rifampicin + Pyrazinamide + Ethambutol 2개월 후 Isoniazid + Rifampicin 4개월', 'uncertain': False}, 'PEDS2-HI2-065': {'answer': '기관루 동반 식도폐쇄', 'uncertain': False}, 'PEDS2-HI2-078': {'answer': '니스타틴', 'uncertain': False}, 'PEDS2-HI2-081': {'answer': '경과관찰', 'uncertain': False}, 'PEDS2-HI2-087': {'answer': '부비동염; Streptococcus pneumoniae', 'uncertain': False}, 'PEDS2-HI2-088': {'answer': '크룹; Parainfluenza virus', 'uncertain': False}, 'PEDS2-HI2-090': {'answer': '에피네프린', 'uncertain': False}, 'PEDS2-HI2-091': {'answer': '수액치료', 'uncertain': False}, 'PEDS2-HI2-093': {'answer': '바이러스성 폐렴', 'uncertain': False}, 'PEDS2-HI2-094': {'answer': '암피실린-설박탐', 'uncertain': False}, 'PEDS2-HI2-095': {'answer': '마이코플라즈마 폐렴', 'uncertain': False}, 'PEDS2-HI2-101': {'answer': 'ICS + LABA', 'uncertain': False}, 'PEDS2-HI2-102': {'answer': '흡입형 속효성 β2 항진제(SABA)', 'uncertain': False}, 'PEDS2-HI2-104': {'answer': 'A: Formoterol / B: Budesonide-Formoterol 복합제', 'uncertain': False}, 'PEDS2-2025-19to23-Q3-SOURCEVAR': {'answer': '4번', 'uncertain': False}})
 # END RESPIRATORY_ANSWER_AUDIT_FIXES_20260517
 
+# BEGIN CARDIOVASCULAR_ANSWER_AUDIT_FIXES_20260517
+CURATED_CARD_FIXES.update({'PEDS2-HI2-108': {'answer': '태아 순환: 태반 산소공급, 정맥관·난원공·동맥관을 통한 병렬 순환 / 출생 후: 폐혈관저항 감소·체혈관저항 증가, 동맥관·난원공·정맥관 폐쇄', 'uncertain': False}, 'PEDS2-HI2-113': {'answer': '도약맥박: PDA, 대동맥판 역류, 동정맥 샛길 / 맥박 약화: 심장눌림증, 좌심실 유출로 협착, 심근병증', 'uncertain': False}, 'PEDS2-HI2-114': {'answer': 'VSD > ASD > PDA > TOF > PS', 'uncertain': False}, 'PEDS2-HI2-116': {'answer': '생리적 폐동맥 분지 협착 잡음, 스틸 심잡음, 정맥 잡음; 무해성 아님: 이완기 잡음, 강도 3도 이상 잡음', 'uncertain': False}, 'PEDS2-HI2-118': {'answer': '정맥 잡음(venous hum)', 'uncertain': False}, 'PEDS2-HI2-119': {'answer': '생리적 폐동맥 분지 협착 잡음', 'uncertain': False}, 'PEDS2-HI2-124': {'answer': 'Adenosine 정주', 'uncertain': False}, 'PEDS2-HI2-132': {'answer': '작은 결손은 생후 1~2년 또는 2년간 30~50% 자연폐쇄; 큰 결손은 심부전·폐동맥고혈압, 잦은 호흡기 감염, Eisenmenger syndrome·감염성 심내막염·대동맥판 역류가 생길 수 있음', 'uncertain': False}, 'PEDS2-HI2-135': {'answer': '좌상흉골연 수축기 박출성 잡음, 고정성 넓은 S2 분열, 좌하흉골연 rumbling mid-diastolic murmur', 'uncertain': False}, 'PEDS2-HI2-141': {'answer': 'CXR: 폐동맥 팽대/확장; 진단: 폐동맥판 협착', 'uncertain': False}, 'PEDS2-HI2-142': {'answer': '경과관찰', 'uncertain': False}, 'PEDS2-HI2-143': {'answer': '대동맥판 협착(AS)', 'uncertain': False}, 'PEDS2-HI2-146': {'answer': 'CXR snowman sign; 총폐정맥환류이상(TAPVR)', 'uncertain': False}, 'PEDS2-HI2-147': {'answer': '무릎-가슴 자세, morphine, 산소/안정, 필요 시 propranolol·ketamine·phenylephrine, 탈수/산증 교정', 'uncertain': False}, 'PEDS2-HI2-151': {'answer': '5일 이상 발열 + 비화농성 양측 결막충혈, 입술/구강 변화, 다양한 발진, 비화농성 경부림프절 비대, 손발 변화 중 4개 이상', 'uncertain': False}, 'PEDS2-HI2-153': {'answer': '인두결막열, 성홍열, 홍역, EBV 감염, 스티븐스-존슨 증후군, 독성 쇼크 증후군, 특발 소아 관절염 등', 'uncertain': False}})
+# END CARDIOVASCULAR_ANSWER_AUDIT_FIXES_20260517
+
 # Official 2-week pretest scope from 교수님 공지 PDF:
 # 2주차 = 12~15장: 감염, 소화기, 호흡기, 심혈관.
 # Some all-HI-bank cards are retained even when they look mixed/out-of-scope;
@@ -551,6 +555,14 @@ def mask_hi_front(raw: str) -> str:
     front = re.sub(r"(정답\s*[:：])\s*[^\n]+", r"\1 [답 숨김]", front)
     # Hide direct answer after a question mark on the same line, common in HI source.
     front = re.sub(r"([?？])\s{1,}([^\n①②③④⑤]{1,80})(?=\n|$)", r"\1 [답 숨김]", front)
+    # Hide HI short-answer labels where the answer follows a colon, e.g.
+    # "(1) 원인균 : Bordetella pertussis" or "(2) 치료 약제 : Erythromycin".
+    answer_label = r"(?:원인균|원인|병원체|진단|치료\s*약제|치료제|약제|항생제|치료|검사|처치|소견)"
+    front = re.sub(
+        rf"(?im)^(\s*(?:\(?\d+\)?|[①-⑤])?\s*[^\n:：]{{0,45}}{answer_label}[^\n:：]{{0,45}}\s*[:：])\s*(?!\[답 숨김\])\S[^\n]*$",
+        r"\1 [답 숨김]",
+        front,
+    )
     # Hide answer-only dash lines after stems.
     front = re.sub(r"(?m)^\s*[-·]\s*([^\n]{2,100})$", r"- [답 숨김]", front)
     return front
