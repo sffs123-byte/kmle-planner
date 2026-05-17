@@ -227,11 +227,11 @@
     "section": "P3 누적복기",
     "images": [
       {
-        "src": "assets/peds_pretest2_full/PEDS2-2025-15to18-Q1__nonhi_exact__non_hi_qimg_038.png",
-        "kind": "nonhi_exact",
+        "src": "assets/peds_pretest2_full/PEDS2-2025-15to18-Q1__answer_only_source__non_hi_qimg_038.png",
+        "kind": "answer_only_source",
         "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_image_extract_20260517/curated_question_images/non_hi_qimg_038.png",
-        "caption": "원문 문제 이미지",
-        "front_visible": true,
+        "caption": "답 체크 원문 이미지",
+        "answer_only": true,
         "curated_id": "non_hi_qimg_038"
       }
     ],

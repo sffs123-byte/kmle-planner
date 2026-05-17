@@ -87,9 +87,12 @@ CURATED_NON_HI_IMAGE_EXCLUDES = {
 # They should appear before answer reveal because the visual finding is part
 # of the question stem.
 CURATED_FRONT_IMAGE_EXACT = {
-    ("PEDS2-2025-15to18-Q1", "non_hi_qimg_038"),  # adenovirus eye/periorbital photo
     ("PEDS2-2025-19to23-Q1", "non_hi_qimg_037"),  # infectious mononucleosis/PBS source image
     ("PEDS2-2025-11to14-Q6", "non_hi_qimg_041"),  # croup steeple sign
+}
+
+CURATED_ANSWER_ONLY_IMAGES = {
+    ("PEDS2-2025-15to18-Q1", "non_hi_qimg_038"),  # original capture has checked/circled answer
 }
 
 CURATED_HI_DUPLICATES = {
@@ -284,12 +287,16 @@ def load_non_hi_image_map() -> dict[str, list[dict]]:
                 continue
             if int(cand.get("score", 0)) >= 4 and cand.get("path"):
                 is_front_exact = (card_id, curated_id) in CURATED_FRONT_IMAGE_EXACT
-                item_kind = "nonhi_exact" if is_front_exact else (curated_id or "nonhi")
+                is_answer_only = (card_id, curated_id) in CURATED_ANSWER_ONLY_IMAGES
+                item_kind = "nonhi_exact" if is_front_exact else ("answer_only_source" if is_answer_only else (curated_id or "nonhi"))
                 item = copy_asset(cand["path"], card_id or "nonhi", item_kind)
                 if item:
-                    item["caption"] = "원문 문제 이미지" if is_front_exact else f"non-HI candidate · score {cand.get('score')} · {cand.get('curated_id', '')}"
+                    item["caption"] = "원문 문제 이미지" if is_front_exact else ("답 체크 원문 이미지" if is_answer_only else f"non-HI candidate · score {cand.get('score')} · {cand.get('curated_id', '')}")
                     if is_front_exact:
                         item["front_visible"] = True
+                        item["curated_id"] = curated_id
+                    if is_answer_only:
+                        item["answer_only"] = True
                         item["curated_id"] = curated_id
                     usable.append(item)
         if usable:
@@ -441,6 +448,7 @@ def duplicate_answer_html(card: dict) -> str:
     <div style="font-size:12px;font-weight:900;color:#1d4ed8;margin-bottom:6px;letter-spacing:.04em;">답</div>
     <div style="font-size:20px;line-height:1.55;color:#052e16;"><strong>HI와 동일 문항입니다.</strong></div>
     <div style="margin-top:8px;font-size:13px;line-height:1.65;color:#334155;">{e(same)} 카드와 같은 원문이라, 여기서는 중복 해설을 반복하지 않습니다.</div>
+    {images_html(card, 'answer')}
   </div>
 </section>
 """.strip()
@@ -496,6 +504,7 @@ def guide_html(card: dict) -> str:
   <h4>답</h4>
   <p><strong>HI와 동일 문항입니다.</strong></p>
   <p>{e(card.get('same_as_hi'))} 카드와 같은 원문이라 중복 해설을 반복하지 않습니다.</p>
+  {images_html(card, 'answer')}
 </section>
 """.strip()
     return f"""
