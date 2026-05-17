@@ -99,6 +99,36 @@ body.peds-pretest2-full-bg .hi-study-primary { background:#7c3aed; color:#fff; }
 body.peds-pretest2-full-bg .hi-study-secondary { background:#e0f2fe; color:#075985; }
 body.peds-pretest2-full-bg .hi-card-mini { border:1px solid #e2e8f0; background:#f8fafc; border-radius:12px; padding:10px 12px; margin:8px 0; }
 body.peds-pretest2-full-bg .hi-card-mini code { color:#7c2d12; font-weight:900; }
+
+body.peds-pretest2-full-bg .hi-flow-start-row { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:10px; margin:14px 0 10px; }
+body.peds-pretest2-full-bg .hi-flow-start-row button { border:none; border-radius:16px; min-height:52px; padding:12px 14px; font-size:14px; font-weight:950; cursor:pointer; }
+body.peds-pretest2-full-bg .hi-flow-start-primary { background:linear-gradient(135deg,#c4b5fd,#93c5fd); color:#111827; }
+body.peds-pretest2-full-bg .hi-flow-start-secondary { background:rgba(15,23,42,.88); color:#e0f2fe; border:1px solid rgba(196,181,253,.36) !important; }
+body.peds-pretest2-full-bg .hi-study-resume { margin:10px 0 12px; padding:12px 13px; border-radius:16px; background:rgba(88,28,135,.34); border:1px solid rgba(196,181,253,.38); color:#ede9fe; }
+body.peds-pretest2-full-bg .hi-study-resume-title { font-weight:950; color:#f8fafc; margin-bottom:4px; }
+body.peds-pretest2-full-bg .hi-study-resume-detail { font-size:12px; color:#ddd6fe; line-height:1.45; }
+body.peds-pretest2-full-bg .hi-study-progress { margin-top:10px; height:8px; border-radius:999px; background:rgba(15,23,42,.72); overflow:hidden; border:1px solid rgba(196,181,253,.22); }
+body.peds-pretest2-full-bg .hi-study-progress-fill { width:0%; height:100%; background:linear-gradient(90deg,#a78bfa,#5eead4); transition:width .18s ease; }
+body.peds-pretest2-full-bg .hi-flow-status { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; margin:0 0 12px; padding:10px 12px; border-radius:14px; background:#eef2ff; border:1px solid #c7d2fe; color:#312e81; font-size:13px; font-weight:900; }
+body.peds-pretest2-full-bg .hi-flow-nav { position:sticky; bottom:8px; z-index:5; display:grid; grid-template-columns:1fr 1.15fr 1fr; gap:8px; margin:14px 0; padding:8px; border-radius:16px; background:rgba(15,23,42,.92); border:1px solid rgba(196,181,253,.34); box-shadow:0 14px 36px rgba(2,6,23,.24); }
+body.peds-pretest2-full-bg .hi-flow-nav button { border:none; border-radius:12px; padding:10px 9px; font-size:13px; font-weight:950; cursor:pointer; }
+body.peds-pretest2-full-bg .hi-flow-prev, body.peds-pretest2-full-bg .hi-flow-next { background:#e0f2fe; color:#075985; }
+body.peds-pretest2-full-bg .hi-flow-done { background:#86efac; color:#14532d; }
+body.peds-pretest2-full-bg .hi-study-part.done .hi-study-part-title::before { content:'✓ '; color:#86efac; }
+body.peds-pretest2-full-bg .hi-card-mini { border:1px solid #e2e8f0; background:#f8fafc; border-radius:12px; padding:0; margin:8px 0; overflow:hidden; }
+body.peds-pretest2-full-bg .hi-card-mini summary { list-style:none; cursor:pointer; padding:11px 12px; font-weight:850; line-height:1.48; display:flex; justify-content:space-between; gap:10px; align-items:flex-start; }
+body.peds-pretest2-full-bg .hi-card-mini summary::-webkit-details-marker { display:none; }
+body.peds-pretest2-full-bg .hi-card-mini summary::after { content:'펼침'; flex:0 0 auto; font-size:11px; color:#6d28d9; background:#ede9fe; border-radius:999px; padding:3px 7px; font-weight:950; }
+body.peds-pretest2-full-bg .hi-card-mini[open] summary::after { content:'접기'; }
+body.peds-pretest2-full-bg .hi-card-mini code { color:#7c2d12; font-weight:900; }
+body.peds-pretest2-full-bg .hi-card-body { border-top:1px solid #e2e8f0; padding:11px 12px 12px; background:#fff; }
+body.peds-pretest2-full-bg .hi-answer-line { border-left:4px solid #16a34a; background:#f0fdf4; border-radius:10px; padding:9px 10px; color:#14532d; line-height:1.58; }
+body.peds-pretest2-full-bg .hi-mini-lock { margin-top:9px; color:#312e81; background:#eef2ff; border-radius:10px; padding:8px 10px; line-height:1.55; font-weight:850; }
+body.peds-pretest2-full-bg .hi-inline-actions { display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+body.peds-pretest2-full-bg .hi-inline-actions button { border:none; border-radius:10px; padding:8px 10px; background:#7c3aed; color:#fff; font-weight:900; cursor:pointer; }
+body.peds-pretest2-full-bg .hi-part-bottom-note { color:#64748b; font-size:12px; line-height:1.5; margin-top:10px; }
+@media (max-width:768px) { body.peds-pretest2-full-bg .hi-flow-start-row { grid-template-columns:1fr; } body.peds-pretest2-full-bg .hi-flow-nav { bottom:4px; grid-template-columns:1fr 1.1fr 1fr; gap:6px; padding:6px; } body.peds-pretest2-full-bg .hi-flow-nav button { padding:9px 5px; font-size:12px; } }
+
 @media (max-width:768px) { body.peds-pretest2-full-bg .hi-study-layout { grid-template-columns:1fr; } body.peds-pretest2-full-bg .hi-study-list { max-height:260px; } body.peds-pretest2-full-bg .hi-study-detail { padding:14px; } }
 """
 
@@ -680,8 +710,20 @@ def build_hi_study_parts(cards: list[dict]) -> list[dict]:
             quiz = extract_tutor_heading(card.get("enhanced_explanation"), "🎯 암기 확인 퀴즈")
             if quiz:
                 quiz_lines.extend(split_study_lines(quiz, 4))
+            card_lock = extract_tutor_heading(card.get("enhanced_explanation"), "✅ 3초 Lock line")
+            card_lock_lines = split_study_lines(card_lock, 2) if card_lock else []
+            card_ids_js = json.dumps([str(card.get("id"))], ensure_ascii=False)
             card_minis.append(
-                f"<div class='hi-card-mini'><code>{e(card.get('id'))}</code> · {e(cue)}<br><strong>답:</strong> {e(ans)}</div>"
+                f"""
+<details class='hi-card-mini'>
+  <summary><span><code>{e(card.get('id'))}</code> · {e(cue)}</span></summary>
+  <div class='hi-card-body'>
+    <div class='hi-answer-line'><strong>답:</strong> {e(ans)}</div>
+    {''.join(f'<div class="hi-mini-lock">{e(x)}</div>' for x in card_lock_lines)}
+    <div class='hi-inline-actions'><button onclick='startHIStudyCards({card_ids_js})'>이 카드만 퀴즈</button></div>
+  </div>
+</details>
+""".strip()
             )
 
         key_points = list(dict.fromkeys(key_points))[:10]
@@ -700,12 +742,19 @@ def build_hi_study_parts(cards: list[dict]) -> list[dict]:
         if not quiz_lines:
             quiz_lines = [f"Q. {section} 파트에서 가장 먼저 잡을 축은?", f"A. {unit_study_axis(unit)}"]
 
+        chapter_js = json.dumps(chapter, ensure_ascii=False)
         html_body = f"""
 <h3>{e(section)}</h3>
 <p><strong>{e(chapter)}</strong> · HI 2차 bank {len(rows)}문항 · 원문 순서 {rows[0].get('hi_id') or rows[0].get('id')}부터</p>
+<div class="hi-flow-status"><span id="hiFlowStatusText">HI Flow</span><span>{e(chapter)} · {len(rows)}문항</span></div>
 <div class="hi-study-actions">
   <button class="hi-study-primary" onclick="startHIStudyPart({len(parts)})">이 파트만 퀴즈 시작</button>
-  <button class="hi-study-secondary" onclick="setOfficialUnitFilter('{e(chapter)}')">{e(chapter)} 전체 보기</button>
+  <button class="hi-study-secondary" onclick='startHIStudyChapterQuiz({chapter_js})'>현재 단원 HI 전체 퀴즈</button>
+</div>
+<div class="hi-flow-nav" aria-label="HI 연속 학습 이동">
+  <button class="hi-flow-prev" onclick="prevHIStudyPart()">← 이전</button>
+  <button class="hi-flow-done" onclick="markHIStudyDone()">완료하고 다음</button>
+  <button class="hi-flow-next" onclick="nextHIStudyPart()">다음 →</button>
 </div>
 <h4>🧭 Big picture</h4>
 <p>이 파트는 <strong>{e(section)}</strong>를 HI 원문 기준으로 묶은 공부 블록이다. 전체 2주차 범위 안에서는 <strong>{e(chapter)}</strong> 축에 들어가며, {e(unit_study_axis(unit))}</p>
@@ -721,8 +770,14 @@ def build_hi_study_parts(cards: list[dict]) -> list[dict]:
 {''.join(f'<div class="hi-lock">{e(x)}</div>' for x in lock_lines)}
 <h4>🎯 암기 확인 퀴즈</h4>
 <ul>{''.join(f'<li>{e(x)}</li>' for x in quiz_lines)}</ul>
-<h4>카드 목록</h4>
+<h4>문항 펼쳐보기</h4>
+<p class="hi-part-bottom-note">문항을 누르면 답/lock line이 바로 아래에서 펼쳐집니다. 따로 뒤로가기 하지 않아도 이 파트 안에서 확인할 수 있습니다.</p>
 {''.join(card_minis)}
+<div class="hi-flow-nav" aria-label="HI 연속 학습 이동 하단">
+  <button class="hi-flow-prev" onclick="prevHIStudyPart()">← 이전</button>
+  <button class="hi-flow-done" onclick="markHIStudyDone()">완료하고 다음</button>
+  <button class="hi-flow-next" onclick="nextHIStudyPart()">다음 →</button>
+</div>
 """.strip()
         parts.append({
             "unit": unit,
@@ -741,8 +796,40 @@ def build_hi_study_parts(cards: list[dict]) -> list[dict]:
 def hi_study_js(parts: list[dict]) -> str:
     payload = json.dumps(parts, ensure_ascii=False)
     return "\nconst HI_STUDY_DATA = " + payload + ";\n" + r"""
+const HI_STUDY_PROGRESS_KEY = STORAGE_PREFIX + 'hi_study_progress_v2';
 let selectedHIStudyUnit = 'ALL';
 let selectedHIStudyIndex = 0;
+let hiStudyDoneKeys = new Set();
+
+function hiPartKey(item) {
+    return item ? (item.chapter + '|' + item.section) : '';
+}
+function loadHIStudyProgress() {
+    try {
+        const state = JSON.parse(localStorage.getItem(HI_STUDY_PROGRESS_KEY) || '{}');
+        if (state && typeof state === 'object') {
+            selectedHIStudyUnit = state.unit || 'ALL';
+            selectedHIStudyIndex = Number.isInteger(state.index) ? state.index : 0;
+            hiStudyDoneKeys = new Set(Array.isArray(state.done) ? state.done : []);
+        }
+    } catch (err) {
+        console.warn('HI progress load failed', err);
+    }
+}
+function saveHIStudyProgress() {
+    try {
+        localStorage.setItem(HI_STUDY_PROGRESS_KEY, JSON.stringify({
+            version: 2,
+            unit: selectedHIStudyUnit,
+            index: selectedHIStudyIndex,
+            done: [...hiStudyDoneKeys],
+            savedAt: Date.now()
+        }));
+    } catch (err) {
+        console.warn('HI progress save failed', err);
+    }
+    updateHIStudyResume();
+}
 function filteredHIStudyParts() {
     const q = String(document.getElementById('hiStudySearch')?.value || '').trim().toLowerCase();
     return HI_STUDY_DATA.map((item, idx) => ({item, idx})).filter(({item}) => {
@@ -751,26 +838,133 @@ function filteredHIStudyParts() {
         return unitOK && queryOK;
     });
 }
+function selectedHIStudyPosition(rows) {
+    return rows.findIndex(r => r.idx === selectedHIStudyIndex);
+}
+function hiUnitLabel() {
+    return selectedHIStudyUnit === 'ALL' ? 'HI 전체' : selectedHIStudyUnit;
+}
+function updateHIStudyResume() {
+    const total = HI_STUDY_DATA.length || 1;
+    const done = HI_STUDY_DATA.filter(item => hiStudyDoneKeys.has(hiPartKey(item))).length;
+    const percent = Math.round((done / total) * 100);
+    const current = HI_STUDY_DATA[selectedHIStudyIndex];
+    const resumeTitle = document.getElementById('hiStudyResumeTitle');
+    const resumeDetail = document.getElementById('hiStudyResumeDetail');
+    const progressFill = document.getElementById('hiStudyProgressFill');
+    if (resumeTitle) resumeTitle.textContent = current ? `이어서 보기: ${current.section}` : 'HI 연속 학습 시작';
+    if (resumeDetail) resumeDetail.textContent = `${hiUnitLabel()} · 완료 ${done}/${total}파트 (${percent}%) · 현재 ${current ? current.chapter : '-'}`;
+    if (progressFill) progressFill.style.width = percent + '%';
+}
+function updateHIStudyNav(rows) {
+    const selected = HI_STUDY_DATA[selectedHIStudyIndex];
+    const pos = selectedHIStudyPosition(rows);
+    const status = document.getElementById('hiFlowStatusText');
+    if (status && selected) {
+        status.textContent = `${hiUnitLabel()} · ${pos >= 0 ? pos + 1 : 1}/${Math.max(rows.length, 1)} · 완료 ${hiStudyDoneKeys.has(hiPartKey(selected)) ? '됨' : '전'}`;
+    }
+}
 function renderHIStudy() {
     const list = document.getElementById('hiStudyList');
     const detail = document.getElementById('hiStudyDetail');
     if (!list || !detail) return;
     const rows = filteredHIStudyParts();
     if (!rows.some(r => r.idx === selectedHIStudyIndex) && rows.length) selectedHIStudyIndex = rows[0].idx;
-    list.innerHTML = rows.map(({item, idx}) => `<button class="hi-study-part ${idx === selectedHIStudyIndex ? 'active' : ''}" onclick="selectHIStudyPart(${idx})"><div class="hi-study-part-title">${item.section}</div><div class="hi-study-part-meta">${item.chapter} · ${item.count}문항</div></button>`).join('') || '<div class="hi-study-part-meta">검색 결과 없음</div>';
+    list.innerHTML = rows.map(({item, idx}) => {
+        const done = hiStudyDoneKeys.has(hiPartKey(item));
+        return `<button class="hi-study-part ${idx === selectedHIStudyIndex ? 'active' : ''} ${done ? 'done' : ''}" onclick="selectHIStudyPart(${idx})"><div class="hi-study-part-title">${item.section}</div><div class="hi-study-part-meta">${item.chapter} · ${item.count}문항</div></button>`;
+    }).join('') || '<div class="hi-study-part-meta">검색 결과 없음</div>';
     const selected = HI_STUDY_DATA[selectedHIStudyIndex] || rows[0]?.item;
     detail.innerHTML = selected ? selected.html : '<p>선택된 파트가 없습니다.</p>';
     document.querySelectorAll('.hi-study-chip').forEach(btn => btn.classList.toggle('active', btn.dataset.hiunit === selectedHIStudyUnit));
+    updateHIStudyNav(rows);
+    saveHIStudyProgress();
 }
-function selectHIStudyPart(idx) { selectedHIStudyIndex = idx; renderHIStudy(); document.getElementById('hiStudyDetail')?.scrollIntoView({behavior:'smooth', block:'start'}); }
-function setHIStudyUnit(unit) { selectedHIStudyUnit = unit || 'ALL'; renderHIStudy(); }
+function scrollHIStudyDetail() {
+    document.getElementById('hiStudyDetail')?.scrollIntoView({behavior:'smooth', block:'start'});
+}
+function selectHIStudyPart(idx, options = {}) {
+    selectedHIStudyIndex = idx;
+    renderHIStudy();
+    if (options.scroll !== false) scrollHIStudyDetail();
+}
+function setHIStudyUnit(unit) {
+    selectedHIStudyUnit = unit || 'ALL';
+    const rows = filteredHIStudyParts();
+    if (rows.length && !rows.some(r => r.idx === selectedHIStudyIndex)) selectedHIStudyIndex = rows[0].idx;
+    renderHIStudy();
+}
+function startHIFlow(unit = 'ALL') {
+    selectedHIStudyUnit = unit || 'ALL';
+    const rows = filteredHIStudyParts();
+    if (rows.length && !rows.some(r => r.idx === selectedHIStudyIndex)) selectedHIStudyIndex = rows[0].idx;
+    renderHIStudy();
+    document.getElementById('hiStudyPanel')?.scrollIntoView({behavior:'smooth', block:'start'});
+}
+function nextHIStudyPart() {
+    const rows = filteredHIStudyParts();
+    if (!rows.length) return;
+    let pos = selectedHIStudyPosition(rows);
+    if (pos < 0) pos = 0;
+    if (pos < rows.length - 1) {
+        selectHIStudyPart(rows[pos + 1].idx);
+    } else {
+        const current = HI_STUDY_DATA[selectedHIStudyIndex];
+        const status = document.getElementById('hiFlowStatusText');
+        if (status) status.textContent = `${hiUnitLabel()} 마지막 파트입니다 · ${current ? current.section : ''}`;
+    }
+}
+function prevHIStudyPart() {
+    const rows = filteredHIStudyParts();
+    if (!rows.length) return;
+    let pos = selectedHIStudyPosition(rows);
+    if (pos <= 0) pos = 0;
+    if (pos > 0) selectHIStudyPart(rows[pos - 1].idx);
+}
+function markHIStudyDone() {
+    const item = HI_STUDY_DATA[selectedHIStudyIndex];
+    if (!item) return;
+    hiStudyDoneKeys.add(hiPartKey(item));
+    saveHIStudyProgress();
+    nextHIStudyPart();
+}
+function clearHIStudyProgress() {
+    hiStudyDoneKeys = new Set();
+    selectedHIStudyIndex = 0;
+    selectedHIStudyUnit = 'ALL';
+    localStorage.removeItem(HI_STUDY_PROGRESS_KEY);
+    renderHIStudy();
+}
+function startHIStudyCards(ids) {
+    const clean = (ids || []).filter(id => QUIZ_DATA[id]);
+    if (!clean.length) return;
+    closePedsMobileSidebar();
+    startQuizWith(clean);
+}
 function startHIStudyPart(idx) {
     const item = HI_STUDY_DATA[idx];
     if (!item || !item.cardIds || !item.cardIds.length) return;
-    closePedsMobileSidebar();
-    startQuizWith(item.cardIds);
+    startHIStudyCards(item.cardIds);
 }
-document.addEventListener('DOMContentLoaded', renderHIStudy);
+function startHIStudyCurrentUnitQuiz() {
+    const ids = [];
+    filteredHIStudyParts().forEach(({item}) => (item.cardIds || []).forEach(id => ids.push(id)));
+    startHIStudyCards(ids);
+}
+function startHIStudyChapterQuiz(chapter) {
+    const ids = [];
+    HI_STUDY_DATA.filter(item => item.chapter === chapter).forEach(item => (item.cardIds || []).forEach(id => ids.push(id)));
+    startHIStudyCards(ids);
+}
+function startHIStudyAllQuiz() {
+    const ids = [];
+    HI_STUDY_DATA.forEach(item => (item.cardIds || []).forEach(id => ids.push(id)));
+    startHIStudyCards(ids);
+}
+document.addEventListener('DOMContentLoaded', () => {
+    loadHIStudyProgress();
+    renderHIStudy();
+});
 """
 
 
@@ -982,10 +1176,19 @@ def add_background_and_stats() -> None:
         <div class="hi-study-head">
             <div>
                 <div class="hi-study-kicker">HI 2차 원문 bank 공부모드</div>
-                <h2>HI 공부하기</h2>
-                <p>HI 156문항을 원문 section 기준으로 묶고, 각 파트를 퀴즈 해설용 7섹션 형식으로 압축했습니다. 먼저 파트 요약을 보고, 바로 그 파트만 퀴즈로 들어갈 수 있습니다.</p>
+                <h2>HI 연속 학습 Flow</h2>
+                <p>파트를 하나 보고 다시 목록으로 돌아오는 방식 대신, 이전/다음 버튼으로 책 넘기듯 이어갑니다. 문항은 파트 안에서 바로 펼쳐 답과 lock line을 확인하고, 필요할 때만 퀴즈모드로 들어갑니다.</p>
             </div>
             <div class="hi-study-stats">{len(hi_study_parts)}개 파트 · HI {counts['hi156']}문항</div>
+        </div>
+        <div class="hi-flow-start-row">
+            <button class="hi-flow-start-primary" onclick="startHIFlow('ALL')">HI 전체 이어서 공부하기</button>
+            <button class="hi-flow-start-secondary" onclick="startHIStudyAllQuiz()">HI 156 전체 퀴즈</button>
+        </div>
+        <div class="hi-study-resume" id="hiStudyResume">
+            <div class="hi-study-resume-title" id="hiStudyResumeTitle">HI 연속 학습 시작</div>
+            <div class="hi-study-resume-detail" id="hiStudyResumeDetail">완료한 파트와 마지막 위치를 저장합니다.</div>
+            <div class="hi-study-progress"><div class="hi-study-progress-fill" id="hiStudyProgressFill"></div></div>
         </div>
         <div class="hi-study-toolbar">
             <input id="hiStudySearch" class="hi-study-search" type="search" placeholder="HI 파트/키워드 검색" oninput="renderHIStudy()" />
@@ -1006,6 +1209,7 @@ def add_background_and_stats() -> None:
             <div class="peds-side-actions">
                 <button onclick="startOfficialUnitOrdered()">순서대로 시작</button>
                 <button onclick="startOfficialUnitRandom()">랜덤 시작</button>
+                <button onclick="startHIFlow('ALL')">HI 연속 학습</button>
             </div>
         </div>
 """.rstrip()
