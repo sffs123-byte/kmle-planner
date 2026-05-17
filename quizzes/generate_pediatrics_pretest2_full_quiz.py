@@ -165,7 +165,7 @@ CURATED_MANUAL_CARD_IMAGES = {
     "PEDS2-2023PDF-029": [
         {
             "src": "assets/peds_pretest2_full/PEDS2-2023PDF-029__front_crop__hsv_gingivostomatitis_perioral.png",
-            "caption": "원문 사진 crop: HSV 잇몸구내염 의심 입주위 병변",
+            "caption": "원문 병변 사진 crop",
             "kind": "manual_front_crop",
             "front_visible": True,
             "curated_id": "manual_hsv_gingivostomatitis_crop_20260517",
