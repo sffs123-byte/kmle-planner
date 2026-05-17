@@ -737,6 +737,7 @@ body.drawing-active * {{
     font-size: 13px; font-weight: 800;
     box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }}
+body.quiz-mode-active .mobile-review-start {{ display: none !important; }}
 .review-hero {{
     margin: 0 0 20px;
     padding: 18px 18px;
@@ -1191,12 +1192,14 @@ function startQuizWith(ids, options = {{}}) {{
         if (Number.isFinite(dueTime) && dueTime > 0) pending.push({{ id: item.id, dueTime }});
     }});
     pending.sort(sortByDueThenOrder);
+    document.body.classList.add('quiz-mode-active');
     document.getElementById('quizOverlay').classList.add('active');
     showNextCard();
 }}
 
 function exitQuiz() {{
     if (waitTimer) {{ clearInterval(waitTimer); waitTimer = null; }}
+    document.body.classList.remove('quiz-mode-active');
     document.getElementById('quizOverlay').classList.remove('active');
     updateReviewBtn();
 }}
