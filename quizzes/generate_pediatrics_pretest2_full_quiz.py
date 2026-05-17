@@ -95,6 +95,19 @@ CURATED_ANSWER_ONLY_IMAGES = {
     ("PEDS2-2025-15to18-Q1", "non_hi_qimg_038"),  # original capture has checked/circled answer
 }
 
+# Embedded HI images are front-visible by default only when they are clean
+# diagnostic material (CXR/ECG/US/lesion photo). These embedded pages contain
+# diagnosis/treatment tables, labeled murmur diagrams, or annotated teaching
+# ECG images, so they must stay behind answer reveal.
+EMBEDDED_ANSWER_ONLY_FILENAMES = {
+    "hi2_pdfimg_10_p05L.jpg",  # pediatric TB comparison/treatment table
+    "hi2_pdfimg_16_p10R.jpg",  # URI/otitis teaching table, not an otoscopy photo
+    "hi2_pdfimg_20_p13R.jpg",  # labeled cardiac lesion/murmur diagram
+    "hi2_pdfimg_21_p13R.jpg",  # labeled innocent murmur diagram
+    "hi2_pdfimg_22_p14L.jpg",  # annotated pediatric ECG teaching chart
+    "hi2_pdfimg_23_p14L.jpg",  # annotated ECG crop; clean rhythm strip is pdfimg_24
+}
+
 CURATED_HI_DUPLICATES = {
     # Same original question as HI2-021. Keep the original image on the front,
     # but do not duplicate the whole answer/explanation on reveal.
@@ -406,6 +419,8 @@ def images_html(card: dict, where: str) -> str:
         return ""
     figs = []
     for img in imgs:
+        if where == "front" and img.get("answer_only"):
+            continue
         # Avoid text-answer crops on the front. Embedded images are safer; source crops stay answer/guide only.
         if where == "front" and not (img.get("front_visible") or img.get("kind") in {"embedded", "linked", "nonhi_exact"}):
             continue
@@ -570,7 +585,12 @@ def build_hi_card(src: dict, idx: int) -> dict:
     for p in src.get("linked_images") or []:
         item = copy_asset(p, card_id, "embedded")
         if item:
-            item["caption"] = f"HI embedded image · {Path(p).name}"
+            src_name = Path(p).name
+            if src_name in EMBEDDED_ANSWER_ONLY_FILENAMES:
+                item["answer_only"] = True
+                item["caption"] = f"답/해설 포함 원문 이미지 · {src_name}"
+            else:
+                item["caption"] = f"HI embedded image · {src_name}"
             images.append(item)
     if src.get("question_crop"):
         item = copy_asset(src.get("question_crop"), card_id, "source_crop")
