@@ -338,6 +338,56 @@ CURATED_CARD_FIXES.setdefault("PEDS2-HI2-027", {}).update({
     "uncertain": False,
 })
 
+
+# 2026-05-17 user request: add normal CSF glucose/protein values to Q62 and
+# restore the CSF result line on the front. These lab values are not answers;
+# they are required to classify viral vs bacterial meningitis.
+CURATED_CARD_FIXES.setdefault("PEDS2-HI2-039", {}).update({
+    "display_question": """주Q. 7세 여아 두통을 주소로 내원. 이틀 전 상기도감염 증세. 하루 전 심한 두통과
+구토. 신체검진 상 경부강직. Kernig sign & Brudzinski sign 양성.
+· 뇌척수액 검사 결과 압력 100, WBC 350 (단핵구 90%), 단백 55, 당 75
+(1) 진단명? [답 숨김]
+(2) 가장 흔한 원인? [답 숨김]""",
+    "enhanced_explanation": """🧭 Big picture
+두통, 구토, 경부강직, Kernig/Brudzinski 양성이면 수막염을 생각한다. 여기서 CSF가 압력 100, WBC 350 중 단핵구 90%, 단백 55, 당 75이면 세균보다 바이러스수막염 패턴이다. 정상 CSF glucose는 대략 45~80 mg/dL 또는 혈당의 약 2/3 이상이고, 정상 CSF protein은 대략 15~45 mg/dL로 본다. 이 문제의 당 75는 정상 범위이고, 단백 55는 살짝 상승한 정도라 바이러스수막염 쪽에 더 맞다. 바이러스수막염의 소아 흔한 원인은 Enterovirus다.
+
+🔎 핵심 단서
+⭕ 상기도감염 후 두통/구토: 바이러스 감염 선행 가능
+⭕ 경부강직, Kernig/Brudzinski: meningeal irritation
+⭕ WBC 350, 단핵구 90%: 림프구/단핵구 우세 → 바이러스 쪽
+⭕ CSF glucose 75: 정상 범위, 세균수막염의 저당 소견과 다름
+⭕ CSF protein 55: 정상 15~45보다 약간 상승, 세균수막염처럼 크게 상승한 패턴은 아님
+
+👣 시험장 사고 흐름
+1단계: 수막자극 징후 확인 → 수막염.
+2단계: CSF 세포 종류 확인 → 단핵구/림프구 우세면 바이러스 쪽.
+3단계: CSF glucose 확인 → 정상치 45~80 mg/dL 정도, 또는 혈당의 2/3 이상이면 보존.
+4단계: CSF protein 확인 → 정상 15~45 mg/dL 정도, 55는 경도 상승.
+5단계: 바이러스수막염이면 가장 흔한 원인 Enterovirus로 정리.
+
+🧠 쉽게 이해하기
+세균수막염은 뇌척수액 안에서 세균과 중성구가 거칠게 싸우는 상황이라 PMN이 우세하고, 단백이 크게 오르고, glucose가 떨어진다. 반대로 바이러스수막염은 림프구/단핵구 중심 반응이고 glucose가 대체로 보존된다. 이 문제는 당 75가 정상이고 단백 55도 약간 오른 정도라 “세균의 저당·고단백 폭발”이 아니다.
+
+📊 감별/오답 제거
+| 항목 | 정상 CSF 기준 | 이 문제 | 바이러스 수막염 | 세균 수막염 |
+| WBC/세포 | 거의 없음, 림프구 소수 | WBC 350, 단핵구 90% | 림프구/단핵구 우세 | PMN 우세 |
+| Glucose | 약 45~80 mg/dL 또는 혈당의 약 2/3 이상 | 75 | 대개 정상 | 감소 |
+| Protein | 약 15~45 mg/dL | 55 | 정상~경도 증가 | 크게 증가 |
+| 흔한 원인 | - | - | Enterovirus | 폐렴알균/수막알균 등 |
+
+✅ 3초 Lock line
+수막염 증상 + CSF 단핵구 우세 + glucose 정상(45~80) + protein 경도 상승 = 바이러스수막염, 원인 m/c는 Enterovirus.
+
+🎯 암기 확인 퀴즈
+Q1. 정상 CSF glucose는 대략 어느 범위인가?
+Q2. 정상 CSF protein은 대략 어느 범위인가?
+Q3. 바이러스수막염의 대표 원인은?
+
+A1. 약 45~80 mg/dL 또는 혈당의 약 2/3 이상
+A2. 약 15~45 mg/dL
+A3. Enterovirus""",
+})
+
 # BEGIN DIGESTIVE_ANSWER_AUDIT_FIXES_20260517
 CURATED_CARD_FIXES.update({'PEDS2-2026-5to8-Q7': {'answer': '만성복통 alarm symptom: 야간 각성 복통, 지속적 우상복부/우하복부 통증 또는 국소 압통, 연하곤란, 혈변/위장관 실혈, 의미 있는 담즙성·주기적·지속적 구토, 만성 중증/야간 설사, 발열, 체중감소/성장속도 감소, 사춘기 지연, IBD/소화성궤양 가족력 등에서 2개 이상', 'uncertain': False}, 'PEDS2-2025-19to23-Q2': {'answer': '중증 탈수로 보이면 등장성 IV 수액(0.9% 생리식염수 등)을 우선 투여한다. 중등도 이하 탈수는 ORS 50–100 mL/kg를 3–4시간에 투여한다.', 'uncertain': False}, 'PEDS2-2023PDF-035': {'answer': '중간창자 꼬임(midgut volvulus)', 'uncertain': False}, 'PEDS2-HI2-043': {'answer': '로타바이러스 백신', 'uncertain': False}, 'PEDS2-HI2-044': {'answer': '바이러스 위장관염; 가장 흔한 바이러스는 로타바이러스', 'uncertain': False}, 'PEDS2-HI2-045': {'answer': '로타바이러스', 'uncertain': False}, 'PEDS2-HI2-046': {'answer': 'Salmonella typhi; ceftriaxone 또는 3세대 cephalosporin', 'uncertain': False}, 'PEDS2-HI2-047': {'answer': '수유모의 항원 제한 식사', 'uncertain': False}, 'PEDS2-HI2-048': {'answer': '젖당 제한 식이', 'uncertain': False}, 'PEDS2-HI2-056': {'answer': '만성복통 red flag: 야간 각성 복통, 지속적 RUQ/RLQ 통증 또는 국소 압통, 연하곤란, 혈변/위장관 실혈, 의미 있는 구토, 야간/중증 설사, 발열, 체중감소/성장속도 감소, 사춘기 지연, IBD/소화성궤양 가족력 등에서 4개 이상', 'uncertain': False}, 'PEDS2-HI2-057': {'answer': '복부초음파', 'uncertain': False}, 'PEDS2-HI2-059': {'answer': '장중첩증; 복부초음파', 'uncertain': False}, 'PEDS2-HI2-060': {'answer': '연소 용종 의심; 대장내시경', 'uncertain': False}, 'PEDS2-HI2-062': {'answer': '메켈 게실; 99mTc-pertechnetate scan(메켈 스캔)', 'uncertain': False}, 'PEDS2-HI2-069': {'answer': '전해질 및 수분 공급 후 수술적 치료', 'uncertain': False}, 'PEDS2-HI2-073': {'answer': '비타민 D', 'uncertain': False}, 'PEDS2-HI2-076': {'answer': '아연', 'uncertain': False}, 'PEDS2-HI2-077': {'answer': '아연', 'uncertain': False}})
 # END DIGESTIVE_ANSWER_AUDIT_FIXES_20260517
