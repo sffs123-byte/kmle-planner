@@ -181,6 +181,10 @@ CURATED_CARD_FIXES = {
     },
 }
 
+# BEGIN INFECTION_ANSWER_AUDIT_FIXES_20260517
+CURATED_CARD_FIXES.update({'PEDS2-2025-15to18-Q1': {'question': '객Q. 2세 여아가 발열과 눈 충혈로 병원에 왔다. 결막이 충혈되어 있고, 눈 주위에\n황색 분비물과 인두 부위의 발적이 있었다. 목 림프절이 만져진다. 원인은?\n① 리노바이러스 ② 노로바이러스 ③ 파르보바이러스\n④ 아데노바이러스 ⑤ RSV', 'display_question': '객Q. 2세 여아가 발열과 눈 충혈로 병원에 왔다. 결막이 충혈되어 있고, 눈 주위에\n황색 분비물과 인두 부위의 발적이 있었다. 목 림프절이 만져진다. 원인은?\n① 리노바이러스 ② 노로바이러스 ③ 파르보바이러스\n④ 아데노바이러스 ⑤ RSV', 'answer': '아데노바이러스', 'uncertain': False}, 'PEDS2-2023PDF-029': {'answer': '헤르페스 잇몸구내염, herpetic gingivostomatitis', 'uncertain': False}, 'PEDS2-2023PDF-038': {'answer': '급성 중이염 1차 치료: Amoxicillin', 'uncertain': False}, 'PEDS2-HI2-001': {'answer': '직장 체온 38℃ 이상', 'uncertain': False}, 'PEDS2-HI2-002': {'answer': '감염, 류마티즘/자가염증성질환, 종양', 'uncertain': False}, 'PEDS2-HI2-003': {'answer': '1~3개월: E. coli, enterovirus, parechovirus / 3~36개월: S. pneumoniae, N. meningitidis, Salmonella', 'uncertain': False}, 'PEDS2-HI2-004': {'answer': '항생제 내성 증가, 정상균총 파괴, 부작용/불필요한 경제적 부담 증가', 'uncertain': False}, 'PEDS2-HI2-005': {'answer': '홍역; 생후 4개월 남동생은 노출 6일 이내 면역글로불린', 'uncertain': False}, 'PEDS2-HI2-008': {'answer': 'Mumps virus; 대증치료/acetaminophen', 'uncertain': False}, 'PEDS2-HI2-009': {'answer': '수족구병; Coxsackievirus A16', 'uncertain': False}, 'PEDS2-HI2-010': {'answer': '돌발진(장미진); HHV-6', 'uncertain': False}, 'PEDS2-HI2-014': {'answer': '엡스타인바 바이러스(EBV)', 'uncertain': False}, 'PEDS2-HI2-015': {'answer': 'Acetaminophen 등 대증치료', 'uncertain': False}, 'PEDS2-HI2-016': {'answer': 'A군 사슬알균(Streptococcus pyogenes); 류마티스열 예방', 'uncertain': False}, 'PEDS2-HI2-017': {'answer': '고름 사슬알균(Streptococcus pyogenes)', 'uncertain': False}, 'PEDS2-HI2-018': {'answer': '아목시실린', 'uncertain': False}, 'PEDS2-HI2-021': {'answer': '아데노바이러스', 'uncertain': False}, 'PEDS2-HI2-022': {'answer': 'Bordetella pertussis; erythromycin 또는 macrolide', 'uncertain': False}, 'PEDS2-HI2-023': {'answer': '클라리트로마이신', 'uncertain': False}, 'PEDS2-HI2-024': {'question': '주Q. 12세 환자가 2일 전부터 시작된 발열과 무릎 통증을 주소로 내원하였다. 신체검사상 압통은 있었고, 발적과 열감은 없었다.\n(1) 진단은? 급성 골수염\n(2) 원인균? S. aureus', 'display_question': '주Q. 12세 환자가 2일 전부터 시작된 발열과 무릎 통증을 주소로 내원하였다. 신체검사상 압통은 있었고, 발적과 열감은 없었다.\n(1) 진단은? [답 숨김]\n(2) 원인균? [답 숨김]', 'answer': '급성 골수염; Staphylococcus aureus', 'uncertain': False}, 'PEDS2-HI2-025': {'answer': '나프실린', 'uncertain': False}, 'PEDS2-HI2-026': {'answer': '농가진; S. aureus 및 Group A Streptococcus', 'uncertain': False}, 'PEDS2-HI2-028': {'answer': '파상풍 백신 X, 파상풍 면역글로불린 X; 상처 소독', 'uncertain': False}, 'PEDS2-HI2-039': {'answer': '바이러스 수막염; Enterovirus', 'uncertain': False}, 'PEDS2-HI2-041': {'answer': '엔테로바이러스', 'uncertain': False}, 'PEDS2-HI2-042': {'answer': 'B군 사슬알균(Group B Streptococcus)', 'uncertain': False}, 'PEDS2-HI2-082': {'answer': '인두 후부 농양 - Neck lateral view', 'uncertain': False}, 'PEDS2-2023-37to40-Q3': {'answer': '수막알균(Neisseria meningitidis)', 'uncertain': False}, 'PEDS2-HI2-030': {'answer': '반응성/세균성 림프절염, EBV 전염단핵구증, 결핵/비정형 마이코박테리아, Kawasaki disease, 악성질환 등에서 3가지 이상', 'uncertain': False}, 'PEDS2-HI2-038': {'answer': 'S. pneumoniae, H. influenzae type b, N. meningitidis', 'uncertain': False}})
+# END INFECTION_ANSWER_AUDIT_FIXES_20260517
+
 # Official 2-week pretest scope from 교수님 공지 PDF:
 # 2주차 = 12~15장: 감염, 소화기, 호흡기, 심혈관.
 # Some all-HI-bank cards are retained even when they look mixed/out-of-scope;
@@ -494,11 +498,19 @@ def format_tutor_html(text: object) -> str:
 
 def duplicate_answer_html(card: dict) -> str:
     same = normalize_space(card.get("same_as_hi"))
+    answer = normalize_space(card.get("answer"))
+    answer_line = ""
+    if answer and "동일 문항" not in answer and not answer.startswith("HI2-"):
+        answer_line = f"""
+    <div style="margin-top:8px;font-size:13px;font-weight:900;color:#166534;">정답</div>
+    <div style="font-size:20px;line-height:1.55;color:#052e16;"><strong>{e(answer)}</strong></div>
+""".rstrip()
     return f"""
 <section class="kmle-answer" style="display:flex;flex-direction:column;gap:12px;">
   <div style="border-left:4px solid #2563eb;background:#eff6ff;padding:12px 14px;border-radius:10px;">
     <div style="font-size:12px;font-weight:900;color:#1d4ed8;margin-bottom:6px;letter-spacing:.04em;">답</div>
     <div style="font-size:20px;line-height:1.55;color:#052e16;"><strong>HI와 동일 문항입니다.</strong></div>
+    {answer_line}
     <div style="margin-top:8px;font-size:13px;line-height:1.65;color:#334155;">{e(same)} 카드와 같은 원문이라, 여기서는 중복 해설을 반복하지 않습니다.</div>
     {images_html(card, 'answer')}
   </div>
@@ -947,6 +959,15 @@ def add_background_and_stats() -> None:
             <button class="home-start-primary" onclick="startOfficialUnitOrdered()">선택 범위 순서대로 시작 <b id="orderedStartCount">{len(data)}</b></button>
             <button class="home-start-secondary" onclick="startOfficialUnitRandom()">랜덤으로 점검 <b id="randomStartCount">{len(data)}</b></button>
         </div>
+        <div class="resume-quiz-card" id="resumeQuizPanel" hidden>
+            <div class="resume-quiz-meta">진행 중인 퀴즈가 있어요</div>
+            <div class="resume-quiz-title" id="resumeQuizTitle">퀴즈 이어하기</div>
+            <div class="resume-quiz-detail" id="resumeQuizDetail">방금 보던 카드로 돌아갑니다.</div>
+            <div class="resume-quiz-actions">
+                <button class="resume-quiz-btn" onclick="resumeQuizSession()">퀴즈 이어하기</button>
+                <button class="resume-clear-btn" onclick="clearQuizResumeState()">이어하기 지우기</button>
+            </div>
+        </div>
         <div class="home-selected">현재 범위: <strong id="selectedUnitLabel">전체</strong> · <span id="selectedUnitCount">{len(data)}</span>문항</div>
         <div class="unit-filter-note">범위외/혼입 확인은 HI 전체 포함 정책 때문에 삭제하지 않고 보존한 카드입니다.</div>
         <div class="home-source-stats">{e(source_stats)}</div>
@@ -1032,6 +1053,15 @@ body.peds-pretest2-full-bg .home-start-primary {{ background:linear-gradient(135
 body.peds-pretest2-full-bg .home-start-secondary {{ background:rgba(15,23,42,.88); color:#e0f2fe; border:1px solid rgba(125,211,252,.34) !important; }}
 body.peds-pretest2-full-bg .home-selected {{ color:#e2e8f0; font-size:13px; font-weight:850; }}
 body.peds-pretest2-full-bg .home-source-stats {{ margin-top:10px; color:#94a3b8; font-size:12px; }}
+body.peds-pretest2-full-bg .resume-quiz-card[hidden] {{ display:none !important; }}
+body.peds-pretest2-full-bg .resume-quiz-card {{ margin:12px 0 10px; padding:13px 14px; border-radius:16px; background:linear-gradient(135deg, rgba(20,184,166,.22), rgba(37,99,235,.20)); border:1px solid rgba(125,211,252,.42); box-shadow:0 12px 30px rgba(14,165,233,.14); color:#e0f2fe; }}
+body.peds-pretest2-full-bg .resume-quiz-meta {{ font-size:11px; font-weight:950; letter-spacing:.05em; color:#bae6fd; margin-bottom:4px; }}
+body.peds-pretest2-full-bg .resume-quiz-title {{ font-size:17px; font-weight:950; color:#f8fafc; }}
+body.peds-pretest2-full-bg .resume-quiz-detail {{ margin-top:3px; font-size:12px; line-height:1.45; color:#cbd5e1; }}
+body.peds-pretest2-full-bg .resume-quiz-actions {{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }}
+body.peds-pretest2-full-bg .resume-quiz-actions button {{ border:none; border-radius:12px; padding:10px 12px; font-size:13px; font-weight:950; cursor:pointer; }}
+body.peds-pretest2-full-bg .resume-quiz-btn {{ background:#5eead4; color:#0f172a; }}
+body.peds-pretest2-full-bg .resume-clear-btn {{ background:rgba(15,23,42,.82); color:#bae6fd; border:1px solid rgba(186,230,253,.32) !important; }}
 body.peds-pretest2-full-bg .peds-sidebar-launcher {{ margin-top:14px; display:flex; flex-direction:column; gap:8px; }}
 body.peds-pretest2-full-bg .peds-side-title {{ color:#93c5fd; font-size:12px; font-weight:950; letter-spacing:.05em; }}
 body.peds-pretest2-full-bg .peds-side-unit {{ width:100%; text-align:left; border-radius:10px; }}
@@ -1066,6 +1096,95 @@ body.peds-pretest2-full-bg .unit-hidden {{ display:none !important; }}
     if card_grid_start != -1 and card_grid_end != -1:
         text = text[:card_grid_start] + '    <div class="card-grid peds-home-card-grid" aria-hidden="true"></div>' + text[card_grid_end:]
     unit_js = hi_study_js(hi_study_parts) + f"""
+
+const QUIZ_RESUME_KEY = STORAGE_PREFIX + 'quiz_resume_v1';
+let currentQuizId = null;
+let currentQuizAnswerVisible = false;
+
+function safeQuizResumeState() {{
+    try {{
+        const raw = sessionStorage.getItem(QUIZ_RESUME_KEY);
+        if (!raw) return null;
+        const state = JSON.parse(raw);
+        if (!state || state.version !== 1) return null;
+        const validQueue = Array.isArray(state.queue) ? state.queue.filter(id => QUIZ_DATA[id]) : [];
+        const validPending = Array.isArray(state.pending) ? state.pending.filter(item => item && QUIZ_DATA[item.id]) : [];
+        const currentId = QUIZ_DATA[state.currentId] ? state.currentId : null;
+        if (!currentId && validQueue.length === 0 && validPending.length === 0) return null;
+        return {{...state, currentId, queue: validQueue, pending: validPending}};
+    }} catch (err) {{
+        console.warn('resume state parse failed', err);
+        return null;
+    }}
+}}
+
+function saveQuizResumeState() {{
+    const hasCurrent = currentQuizId && QUIZ_DATA[currentQuizId];
+    if (!hasCurrent && queue.length === 0 && pending.length === 0) {{
+        clearQuizResumeState({{silent:true}});
+        return;
+    }}
+    const state = {{
+        version: 1,
+        currentId: hasCurrent ? currentQuizId : null,
+        answerVisible: Boolean(currentQuizAnswerVisible),
+        queue: [...queue],
+        pending: pending.map(item => ({{id:item.id, dueTime:Number(item.dueTime || 0)}})).filter(item => QUIZ_DATA[item.id]),
+        bonusMode: Boolean(bonusMode),
+        savedAt: Date.now()
+    }};
+    sessionStorage.setItem(QUIZ_RESUME_KEY, JSON.stringify(state));
+    updateResumeQuizButton();
+}}
+
+function clearQuizResumeState(options = {{}}) {{
+    sessionStorage.removeItem(QUIZ_RESUME_KEY);
+    if (!options.silent) {{
+        currentQuizId = null;
+        currentQuizAnswerVisible = false;
+        updateResumeQuizButton();
+    }}
+}}
+
+function resumeQuizSession() {{
+    const state = safeQuizResumeState();
+    if (!state) {{ clearQuizResumeState(); return; }}
+    bonusMode = Boolean(state.bonusMode);
+    queue = [...state.queue];
+    pending = [...state.pending].sort(sortByDueThenOrder);
+    currentQuizId = state.currentId;
+    currentQuizAnswerVisible = Boolean(state.answerVisible);
+    closePedsMobileSidebar();
+    document.body.classList.add('quiz-mode-active');
+    document.getElementById('quizOverlay').classList.add('active');
+    if (currentQuizId && QUIZ_DATA[currentQuizId]) {{
+        const restoreAnswer = currentQuizAnswerVisible;
+        renderQuizCard(currentQuizId);
+        if (restoreAnswer) {{
+            setTimeout(() => showQuizAnswer(currentQuizId), 40);
+        }}
+    }} else {{
+        showNextCard();
+    }}
+    updateResumeQuizButton();
+}}
+
+function updateResumeQuizButton() {{
+    const panel = document.getElementById('resumeQuizPanel');
+    if (!panel) return;
+    const state = safeQuizResumeState();
+    if (!state || document.body.classList.contains('quiz-mode-active')) {{
+        panel.hidden = true;
+        return;
+    }}
+    const detail = document.getElementById('resumeQuizDetail');
+    const title = document.getElementById('resumeQuizTitle');
+    const currentLabel = state.currentId && QUIZ_DATA[state.currentId] ? 'Q' + QUIZ_DATA[state.currentId].num : '대기 중인 카드';
+    const remain = (state.currentId ? 1 : 0) + state.queue.length + state.pending.length;
+    if (title) title.textContent = currentLabel + '부터 퀴즈 이어하기';
+    if (detail) detail.textContent = '남은 카드 ' + remain + '개 · ' + (state.answerVisible ? '정답 공개 상태까지 복원' : '문제 풀이 상태로 복원');
+    panel.hidden = false;
+}}
 
 const OFFICIAL_UNIT_BY_ID = {json.dumps(unit_by_id, ensure_ascii=False)};
 let selectedOfficialUnit = 'ALL';
@@ -1119,9 +1238,26 @@ function startOfficialUnitRandom() {{
     closePedsMobileSidebar();
     startQuizWith(shuffledCopy(ids));
 }}
-document.addEventListener('DOMContentLoaded', () => setOfficialUnitFilter('ALL'));
+document.addEventListener('DOMContentLoaded', () => {{
+    setOfficialUnitFilter('ALL');
+    updateResumeQuizButton();
+}});
 """
     text = text.replace("// ── Card View Functions ──", unit_js + "\n// ── Card View Functions ──", 1)
+    resume_patches = [
+        ("function startQuizWith(ids, options = {}) {", "function startQuizWith(ids, options = {}) {\n    clearQuizResumeState({silent:true});\n    currentQuizId = null;\n    currentQuizAnswerVisible = false;"),
+        ("    document.getElementById('quizOverlay').classList.add('active');\n    showNextCard();\n}", "    document.getElementById('quizOverlay').classList.add('active');\n    showNextCard();\n    saveQuizResumeState();\n}"),
+        ("function exitQuiz() {\n    if (waitTimer) { clearInterval(waitTimer); waitTimer = null; }", "function exitQuiz() {\n    saveQuizResumeState();\n    if (waitTimer) { clearInterval(waitTimer); waitTimer = null; }"),
+        ("    document.getElementById('quizOverlay').classList.remove('active');\n    updateReviewBtn();\n}", "    document.getElementById('quizOverlay').classList.remove('active');\n    updateReviewBtn();\n    updateResumeQuizButton();\n}"),
+        ("function renderQuizCard(id) {\n    const data = QUIZ_DATA[id];", "function renderQuizCard(id) {\n    currentQuizId = id;\n    currentQuizAnswerVisible = false;\n    saveQuizResumeState();\n    const data = QUIZ_DATA[id];"),
+        ("function showQuizAnswer(id) {\n    document.getElementById('quizAnswer').classList.add('visible');", "function showQuizAnswer(id) {\n    currentQuizId = id;\n    currentQuizAnswerVisible = true;\n    saveQuizResumeState();\n    document.getElementById('quizAnswer').classList.add('visible');"),
+        ("function renderWaiting() {\n    if (waitTimer) { clearInterval(waitTimer); waitTimer = null; }", "function renderWaiting() {\n    currentQuizId = null;\n    currentQuizAnswerVisible = false;\n    saveQuizResumeState();\n    if (waitTimer) { clearInterval(waitTimer); waitTimer = null; }"),
+        ("function renderComplete() {\n    const masteredIds = ALL_IDS.filter(id => srs[id] && srs[id].mastered);", "function renderComplete() {\n    currentQuizId = null;\n    currentQuizAnswerVisible = false;\n    clearQuizResumeState({silent:true});\n    const masteredIds = ALL_IDS.filter(id => srs[id] && srs[id].mastered);"),
+    ]
+    for old, new in resume_patches:
+        if old not in text:
+            raise RuntimeError(f"resume patch anchor missing: {old[:80]}")
+        text = text.replace(old, new, 1)
     OUT.write_text(text, encoding="utf-8")
 
 

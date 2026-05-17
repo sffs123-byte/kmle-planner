@@ -571,16 +571,18 @@
     "source_rank": 4,
     "origin": "actual_recall",
     "priority": "P3 누적복기",
-    "question": "거의 동일한 지문과 눈 주위 사진이 제시된 문제에서 원인은?",
+    "question": "객Q. 2세 여아가 발열과 눈 충혈로 병원에 왔다. 결막이 충혈되어 있고, 눈 주위에 황색 분비물과 인두 부위의 발적이 있었다. 목 림프절이 만져진다. 원인은? ① 리노바이러스 ② 노로바이러스 ③ 파르보바이러스 ④ 아데노바이러스 ⑤ RSV",
     "answer": "아데노바이러스",
     "explanation": "원문에 정답이 아데노바이러스로 적혀 있다.",
     "tags": [
       "감염",
       "아데노바이러스",
-      "unclear_stem"
+      "unclear_stem",
+      "allen-answer-audited"
     ],
     "uncertain": false,
-    "enhanced_explanation": "🧭 Big picture\n원문에는 “거의 동일한 지문과 눈 주위 사진” 정도만 남아 있고 정답이 아데노바이러스로 제시되어 있어, 상세 stem 원문 확인은 제한적이야. 그래도 소아에서 아데노바이러스는 발열, 인두염, 결막염을 묶는 pharyngoconjunctival fever, 또는 유행각결막염을 일으킬 수 있는 대표 바이러스다. 눈 사진이 있었다면 결막염 단서가 핵심이었을 가능성이 높다.\n\n🔎 핵심 단서\n- ⭕ 눈 주위/눈 사진: 결막염 또는 각결막염 시사\n- ⭕ 원문 정답 아데노바이러스: 복기 답은 adenovirus로 lock\n- ⭕ 소아 감염: 인두염 + 결막염 + 발열 조합을 떠올리기\n- ❌ 세균성 결막염만 생각: 고열/인두염/집단발생이면 adenovirus 가능\n\n👣 시험장 사고 흐름\n1단계: 눈 충혈/분비물 사진이 나오면 결막염 감별부터 시작.\n2단계: 발열, 인두통, URI 증상이 같이 있으면 바이러스성 결막염.\n3단계: pharyngoconjunctival fever 또는 epidemic keratoconjunctivitis → adenovirus.\n4단계: 원문이 부족하므로 사진/지문 확인 시 분비물 양상과 전신증상을 다시 체크.\n\n🧠 쉽게 이해하기\n아데노바이러스는 소아 감염계의 멀티툴 같은 놈이야. 목도 붓게 하고, 눈도 빨갛게 만들고, 열도 나게 한다. 수영장/집단생활과 연결되는 pharyngoconjunctival fever가 유명하고 전염성도 꽤 세다. 눈만 보면 알레르기인지 세균인지 헷갈리지만, “열 + 인두염 + 결막염”이면 아데노가 확 올라온다. 다만 이 카드는 원문 stem이 불완전하니, 확장 공부축은 adenovirus 결막염으로 잡되 실제 시험 복원에서는 사진과 동반 증상을 확인해야 한다.\n\n📊 감별/오답 제거\n비교표\n- Adenovirus: 발열, 인두염, 결막염, 전염성 강함, watery discharge 가능.\n- 세균성 결막염: 화농성 분비물, 눈곱, 양안 전파 가능, 전신 URI 단서 약할 수 있음.\n- 알레르기 결막염: 가려움이 핵심, 양측성, 계절/알레르겐, 발열 없음.\n- HSV 각결막염: 통증, 수지상 병변, 항바이러스 고려.\n- Kawasaki disease: 양측 비화농성 결막충혈 + 5일 이상 발열 + 점막/손발/림프절.\n\n✅ 3초 Lock line\n소아 발열/인두염 + 결막염 사진 느낌 = adenovirus를 먼저 찍는다.\n\n🎯 암기 확인 퀴즈\nQ1. Adenovirus의 유명한 임상 조합은? \nA1. 발열 + 인두염 + 결막염.\nQ2. 알레르기 결막염의 핵심 증상은? \nA2. 가려움.\nQ3. 이 복기 문항의 정답 원인은? \nA3. 아데노바이러스."
+    "enhanced_explanation": "🧭 Big picture\n원문에는 “거의 동일한 지문과 눈 주위 사진” 정도만 남아 있고 정답이 아데노바이러스로 제시되어 있어, 상세 stem 원문 확인은 제한적이야. 그래도 소아에서 아데노바이러스는 발열, 인두염, 결막염을 묶는 pharyngoconjunctival fever, 또는 유행각결막염을 일으킬 수 있는 대표 바이러스다. 눈 사진이 있었다면 결막염 단서가 핵심이었을 가능성이 높다.\n\n🔎 핵심 단서\n- ⭕ 눈 주위/눈 사진: 결막염 또는 각결막염 시사\n- ⭕ 원문 정답 아데노바이러스: 복기 답은 adenovirus로 lock\n- ⭕ 소아 감염: 인두염 + 결막염 + 발열 조합을 떠올리기\n- ❌ 세균성 결막염만 생각: 고열/인두염/집단발생이면 adenovirus 가능\n\n👣 시험장 사고 흐름\n1단계: 눈 충혈/분비물 사진이 나오면 결막염 감별부터 시작.\n2단계: 발열, 인두통, URI 증상이 같이 있으면 바이러스성 결막염.\n3단계: pharyngoconjunctival fever 또는 epidemic keratoconjunctivitis → adenovirus.\n4단계: 원문이 부족하므로 사진/지문 확인 시 분비물 양상과 전신증상을 다시 체크.\n\n🧠 쉽게 이해하기\n아데노바이러스는 소아 감염계의 멀티툴 같은 놈이야. 목도 붓게 하고, 눈도 빨갛게 만들고, 열도 나게 한다. 수영장/집단생활과 연결되는 pharyngoconjunctival fever가 유명하고 전염성도 꽤 세다. 눈만 보면 알레르기인지 세균인지 헷갈리지만, “열 + 인두염 + 결막염”이면 아데노가 확 올라온다. 다만 이 카드는 원문 stem이 불완전하니, 확장 공부축은 adenovirus 결막염으로 잡되 실제 시험 복원에서는 사진과 동반 증상을 확인해야 한다.\n\n📊 감별/오답 제거\n비교표\n- Adenovirus: 발열, 인두염, 결막염, 전염성 강함, watery discharge 가능.\n- 세균성 결막염: 화농성 분비물, 눈곱, 양안 전파 가능, 전신 URI 단서 약할 수 있음.\n- 알레르기 결막염: 가려움이 핵심, 양측성, 계절/알레르겐, 발열 없음.\n- HSV 각결막염: 통증, 수지상 병변, 항바이러스 고려.\n- Kawasaki disease: 양측 비화농성 결막충혈 + 5일 이상 발열 + 점막/손발/림프절.\n\n✅ 3초 Lock line\n소아 발열/인두염 + 결막염 사진 느낌 = adenovirus를 먼저 찍는다.\n\n🎯 암기 확인 퀴즈\nQ1. Adenovirus의 유명한 임상 조합은? \nA1. 발열 + 인두염 + 결막염.\nQ2. 알레르기 결막염의 핵심 증상은? \nA2. 가려움.\nQ3. 이 복기 문항의 정답 원인은? \nA3. 아데노바이러스.",
+    "display_question": "객Q. 2세 여아가 발열과 눈 충혈로 병원에 왔다. 결막이 충혈되어 있고, 눈 주위에\n황색 분비물과 인두 부위의 발적이 있었다. 목 림프절이 만져진다. 원인은?\n① 리노바이러스 ② 노로바이러스 ③ 파르보바이러스\n④ 아데노바이러스 ⑤ RSV"
   },
   {
     "id": "PEDS2-2025-15to18-Q2",
@@ -1199,11 +1201,12 @@
     "origin": "actual_recall",
     "priority": "P3 누적복기",
     "question": "15세가 남아프리카 방문 후 발열, 두통, 경부 강직을 보이고 CSF PMN 증가, 당 감소, Gram negative 쌍알균이 확인된다. 원인균은?",
-    "answer": "수막알균(Neisseria meningitis)",
+    "answer": "수막알균(Neisseria meningitidis)",
     "explanation": "원문 보기에서 수막알균 - Neisseria meningitis가 정답으로 제시되어 있다.",
     "tags": [
       "감염",
-      "뇌수막염"
+      "뇌수막염",
+      "allen-answer-audited"
     ],
     "uncertain": false,
     "enhanced_explanation": "🧭 Big picture\n발열, 두통, 경부강직은 meningitis 3종 세트고, CSF에서 PMN 증가와 당 감소가 나오면 세균성 뇌수막염 쪽이야. 여기에 Gram negative diplococci, 즉 그람음성 쌍알균이 보이면 Neisseria meningitidis, 수막알균을 찍어야 한다. 청소년/군대/기숙사/여행/집단생활 맥락과 잘 붙고, 급격한 패혈증·자반까지 연결될 수 있는 중요한 균이다.\n\n🔎 핵심 단서\n- ⭕️ 발열 + 두통 + 경부강직 = meningitis\n- ⭕️ CSF PMN 증가 = bacterial meningitis\n- ⭕️ CSF glucose 감소 = 세균이 당을 먹고 염증이 심함\n- ⭕️ Gram negative diplococci = Neisseria meningitidis\n- ⭕️ 남아프리카 방문 = 지역/여행 노출 단서, 답은 균 형태가 결정\n\n👣 시험장 사고 흐름\n1단계: meningeal sign이 있으면 CSF 패턴으로 세균/바이러스 구분.\n2단계: PMN 증가 + 당 감소면 세균성.\n3단계: Gram stain 형태를 본다. 그람음성 쌍알균이면 수막알균.\n\n🧠 쉽게 이해하기\n수막알균은 이름부터 meningitis에 최적화된 빌런이야. 현미경에서 커피콩 두 개 붙은 듯한 그람음성 쌍알균으로 보이는 게 포인트. 세균성 뇌수막염은 CSF에 백혈구, 특히 neutrophil이 몰려오고 당이 떨어진다. 바이러스성은 보통 lymphocyte 위주, 당 정상 쪽이라 여기서 갈린다.\n\n📊 감별/오답 제거\n비교표:\n- Neisseria meningitidis | Gram negative diplococci | 청소년/집단생활 | meningitis, meningococcemia\n- Streptococcus pneumoniae | Gram positive lancet diplococci | 소아/성인 흔한 원인 | 폐렴·중이염 병력 가능\n- H. influenzae type b | Gram negative coccobacilli | 미접종 소아 | Hib 백신 후 감소\n- Viral meningitis | lymphocyte 우세, glucose 대개 정상 | 경과 비교적 양호\n\n✅ 3초 Lock line\n세균성 meningitis + CSF 당 감소 + 그람음성 쌍알균 = 수막알균 Neisseria meningitidis.\n\n🎯 암기 확인 퀴즈\nQ1. 수막알균의 Gram stain 형태는?\nQ2. 세균성 뇌수막염 CSF에서 우세한 세포는?\nQ3. CSF glucose는 세균성에서 보통 증가할까 감소할까?\n\nA1. 그람음성 쌍알균\nA2. PMN/neutrophil\nA3. 감소"
@@ -1859,9 +1862,10 @@
       "source-variant",
       "max-v3",
       "vs79-missing",
-      "image_attached"
+      "image_attached",
+      "allen-answer-audited"
     ],
-    "uncertain": true,
+    "uncertain": false,
     "source_variant_status_vs_current79": "missing",
     "raw_anchor": "객관식 3번 — 진단은? 헤르페스 잇몸구내염",
     "images": [
@@ -1873,7 +1877,8 @@
         "asset_id": "non_hi_qimg_014",
         "source": "총괄 자비스 이미지 추출 2026-05-17"
       }
-    ]
+    ],
+    "enhanced_explanation": ""
   },
   {
     "id": "PEDS2-2023PDF-030",
@@ -1975,7 +1980,7 @@
     "origin": "actual_recall_source_variant",
     "priority": "P3 2023PDF source-variant",
     "question": "급성중이염 문항에서 적절한 항생제/용량은?",
-    "answer": "Amoxicillin 40~45 mg/kg/day 축",
+    "answer": "급성 중이염 1차 치료: Amoxicillin",
     "explanation": "복기상 급성중이염 치료로 amoxicillin 용량이 제시되어 있다. 원문 기준 용량 확인 필요. 원문 확인 필요. 79문항 대조 상태: missing.",
     "tags": [
       "감염",
@@ -1985,11 +1990,13 @@
       "pretest2",
       "source-variant",
       "max-v3",
-      "vs79-missing"
+      "vs79-missing",
+      "allen-answer-audited"
     ],
-    "uncertain": true,
+    "uncertain": false,
     "source_variant_status_vs_current79": "missing",
-    "raw_anchor": "객2 — 중이염, amoxicillin 40~45mg/kg/day"
+    "raw_anchor": "객2 — 중이염, amoxicillin 40~45mg/kg/day",
+    "enhanced_explanation": ""
   },
   {
     "id": "PEDS2-2023PDF-040",
