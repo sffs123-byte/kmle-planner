@@ -170,7 +170,19 @@ CURATED_MANUAL_CARD_IMAGES = {
             "front_visible": True,
             "curated_id": "manual_hsv_gingivostomatitis_crop_20260517",
         }
-    ]
+    ],
+    # The original HI PDF source crop for this card contains the answer text and
+    # the only embedded neighboring image is an EBV smear. Use a neutral,
+    # answer-safe trunk rash photo as the learner-facing image.
+    "PEDS2-HI2-013": [
+        {
+            "src": "assets/peds_pretest2_full/PEDS2-HI2-013__front_rash_trunk_20260517.jpg",
+            "caption": "몸통 발진 사진 · Jonnymccullagh / CC BY-SA 3.0",
+            "kind": "manual_front_image",
+            "front_visible": True,
+            "curated_id": "manual_trunk_rash_photo_20260517",
+        }
+    ],
 }
 
 # Embedded HI images are front-visible by default only when they are clean
@@ -733,8 +745,10 @@ def load_non_hi_image_map() -> dict[str, list[dict]]:
 
 
 def apply_curated_card_fixes(card: dict) -> None:
-    fix = CURATED_CARD_FIXES.get(str(card.get("id", "")))
-    if not fix:
+    card_id = str(card.get("id", ""))
+    fix = CURATED_CARD_FIXES.get(card_id) or {}
+    manual_images = CURATED_MANUAL_CARD_IMAGES.get(card_id, [])
+    if not fix and not manual_images and card_id not in CURATED_HI_DUPLICATES:
         return
     if "question" in fix:
         fixed_question = normalize_multiline(fix["question"])
@@ -758,12 +772,11 @@ def apply_curated_card_fixes(card: dict) -> None:
         card["uncertain"] = bool(fix["uncertain"])
     if "same_as_hi" in fix:
         card["same_as_hi"] = normalize_space(fix["same_as_hi"])
-    if card.get("id") in CURATED_HI_DUPLICATES:
-        card["same_as_hi"] = CURATED_HI_DUPLICATES[str(card.get("id"))]
+    if card_id in CURATED_HI_DUPLICATES:
+        card["same_as_hi"] = CURATED_HI_DUPLICATES[card_id]
     extra_tags = ["curated-front-fix"]
     if card.get("same_as_hi"):
         extra_tags.append("HI-duplicate")
-    manual_images = CURATED_MANUAL_CARD_IMAGES.get(str(card.get("id", "")), [])
     if manual_images:
         existing_srcs = {str(img.get("src", "")) for img in card.get("images", []) or []}
         for img in manual_images:

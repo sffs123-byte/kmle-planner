@@ -1570,12 +1570,22 @@
       "주관식",
       "수두",
       "hi_bank_raw",
+      "curated-front-fix",
+      "manual-image-restored",
       "12장 감염",
       "감염"
     ],
     "uncertain": false,
-    "images": [],
-    "has_image": false,
+    "images": [
+      {
+        "src": "assets/peds_pretest2_full/PEDS2-HI2-013__front_rash_trunk_20260517.jpg",
+        "caption": "몸통 발진 사진 · Jonnymccullagh / CC BY-SA 3.0",
+        "kind": "manual_front_image",
+        "front_visible": true,
+        "curated_id": "manual_trunk_rash_photo_20260517"
+      }
+    ],
+    "has_image": true,
     "hi_id": "hi2_013",
     "page": 3,
     "column": "L",
