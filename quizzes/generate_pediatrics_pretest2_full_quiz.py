@@ -380,12 +380,19 @@ EMBEDDED_ANSWER_ONLY_FILENAMES = {
     "hi2_pdfimg_21_p13R.jpg",  # labeled innocent murmur diagram
     "hi2_pdfimg_22_p14L.jpg",  # annotated pediatric ECG teaching chart
     "hi2_pdfimg_23_p14L.jpg",  # annotated ECG crop; clean rhythm strip is pdfimg_24
+    "hi2_pdfimg_26_p15R.jpg",  # TAPVR teaching snowman/Olaf image; answer cue, keep behind reveal
 }
 
 CURATED_HI_DUPLICATES = {
     # Same original question as HI2-021. Keep the original image on the front,
     # but do not duplicate the whole answer/explanation on reveal.
     "PEDS2-2025-15to18-Q1": "PEDS2-HI2-021",
+}
+
+# Some images are answer-only globally because they are annotated teaching crops,
+# but one card may still need a clean-enough crop as the actual question image.
+CURATED_HI_IMAGE_FRONT_OVERRIDES = {
+    ("PEDS2-HI2-122", "hi2_pdfimg_23_p14L.jpg"),  # neonatal ECG question image
 }
 
 # HI PDF image extraction is proximity-based, so images from the same page/column
@@ -408,6 +415,35 @@ CURATED_HI_IMAGE_EXCLUDES = {
     ("PEDS2-HI2-069", "hi2_pdfimg_13_p08R.jpg"),  # double-bubble treatment card: drop pyloric US
     ("PEDS2-HI2-071", "hi2_pdfimg_13_p08R.jpg"),  # pancreatitis/MRCP card: no clean MRCP asset in source
     ("PEDS2-HI2-071", "hi2_pdfimg_14_p08R.jpg"),
+    # 2026-05-18 HI embedded-image full audit: proximity extraction leaked
+    # diagnostic images into neighboring cards. Prefer no image over a misleading front image.
+    # p07L image is an anorectal malformation/imperforate-anus invertogram, not Hirschsprung.
+    ("PEDS2-HI2-050", "hi2_pdfimg_11_p07L.jpg"),
+    ("PEDS2-HI2-051", "hi2_pdfimg_11_p07L.jpg"),
+    ("PEDS2-HI2-052", "hi2_pdfimg_11_p07L.jpg"),
+    ("PEDS2-HI2-053", "hi2_pdfimg_11_p07L.jpg"),
+    ("PEDS2-HI2-054", "hi2_pdfimg_11_p07L.jpg"),
+    # ECG p14L: pdfimg_24 is PSVT strip, so keep it only on PSVT/adenosine cards.
+    ("PEDS2-HI2-122", "hi2_pdfimg_24_p14L.jpg"),
+    ("PEDS2-HI2-123", "hi2_pdfimg_22_p14L.jpg"),
+    ("PEDS2-HI2-123", "hi2_pdfimg_23_p14L.jpg"),
+    ("PEDS2-HI2-123", "hi2_pdfimg_24_p14L.jpg"),
+    ("PEDS2-HI2-124", "hi2_pdfimg_22_p14L.jpg"),
+    ("PEDS2-HI2-124", "hi2_pdfimg_23_p14L.jpg"),
+    ("PEDS2-HI2-125", "hi2_pdfimg_22_p14L.jpg"),
+    ("PEDS2-HI2-125", "hi2_pdfimg_23_p14L.jpg"),
+    ("PEDS2-HI2-126", "hi2_pdfimg_22_p14L.jpg"),
+    ("PEDS2-HI2-126", "hi2_pdfimg_23_p14L.jpg"),
+    ("PEDS2-HI2-127", "hi2_pdfimg_22_p14L.jpg"),
+    ("PEDS2-HI2-127", "hi2_pdfimg_23_p14L.jpg"),
+    ("PEDS2-HI2-127", "hi2_pdfimg_24_p14L.jpg"),
+    # p15R cardiac CXR images: 25=PS PA bulging, 26=TAPVR teaching/answer cue, 27=TAPVR question CXR.
+    ("PEDS2-HI2-142", "hi2_pdfimg_25_p15R.jpg"),
+    ("PEDS2-HI2-145", "hi2_pdfimg_25_p15R.jpg"),
+    ("PEDS2-HI2-145", "hi2_pdfimg_26_p15R.jpg"),
+    ("PEDS2-HI2-145", "hi2_pdfimg_27_p15R.jpg"),
+    ("PEDS2-HI2-146", "hi2_pdfimg_25_p15R.jpg"),
+
 }
 
 CURATED_CARD_FIXES = {
@@ -1745,6 +1781,10 @@ def build_hi_card(src: dict, idx: int) -> dict:
                 item["answer_only"] = True
                 item["caption"] = f"답/해설 포함 원문 이미지 · {src_name}"
             else:
+                item["caption"] = f"HI embedded image · {src_name}"
+            if (card_id, src_name) in CURATED_HI_IMAGE_FRONT_OVERRIDES:
+                item.pop("answer_only", None)
+                item["front_visible"] = True
                 item["caption"] = f"HI embedded image · {src_name}"
             images.append(item)
     if src.get("question_crop"):

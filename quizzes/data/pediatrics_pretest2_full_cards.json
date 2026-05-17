@@ -3717,12 +3717,6 @@
     "uncertain": false,
     "images": [
       {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-050__embedded__hi2_pdfimg_11_p07L.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_11_p07L.jpg",
-        "caption": "HI embedded image · hi2_pdfimg_11_p07L.jpg"
-      },
-      {
         "src": "assets/peds_pretest2_full/PEDS2-HI2-050__source_crop__hi2_050_p07L.png",
         "kind": "source_crop",
         "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/question_crops/hi2_050_p07L.png",
@@ -3766,12 +3760,6 @@
     ],
     "uncertain": false,
     "images": [
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-051__embedded__hi2_pdfimg_11_p07L.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_11_p07L.jpg",
-        "caption": "HI embedded image · hi2_pdfimg_11_p07L.jpg"
-      },
       {
         "src": "assets/peds_pretest2_full/PEDS2-HI2-051__source_crop__hi2_051_p07L.png",
         "kind": "source_crop",
@@ -3817,12 +3805,6 @@
     "uncertain": false,
     "images": [
       {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-052__embedded__hi2_pdfimg_11_p07L.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_11_p07L.jpg",
-        "caption": "HI embedded image · hi2_pdfimg_11_p07L.jpg"
-      },
-      {
         "src": "assets/peds_pretest2_full/PEDS2-HI2-052__source_crop__hi2_052_p07L.png",
         "kind": "source_crop",
         "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/question_crops/hi2_052_p07L.png",
@@ -3867,12 +3849,6 @@
     "uncertain": false,
     "images": [
       {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-053__embedded__hi2_pdfimg_11_p07L.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_11_p07L.jpg",
-        "caption": "HI embedded image · hi2_pdfimg_11_p07L.jpg"
-      },
-      {
         "src": "assets/peds_pretest2_full/PEDS2-HI2-053__source_crop__hi2_053_p07L.png",
         "kind": "source_crop",
         "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/question_crops/hi2_053_p07L.png",
@@ -3916,12 +3892,6 @@
     ],
     "uncertain": false,
     "images": [
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-054__embedded__hi2_pdfimg_11_p07L.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_11_p07L.jpg",
-        "caption": "HI embedded image · hi2_pdfimg_11_p07L.jpg"
-      },
       {
         "src": "assets/peds_pretest2_full/PEDS2-HI2-054__source_crop__hi2_054_p07L.png",
         "kind": "source_crop",
@@ -9471,14 +9441,8 @@
         "src": "assets/peds_pretest2_full/PEDS2-HI2-122__embedded__hi2_pdfimg_23_p14L.jpg",
         "kind": "embedded",
         "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_23_p14L.jpg",
-        "answer_only": true,
-        "caption": "답/해설 포함 원문 이미지 · hi2_pdfimg_23_p14L.jpg"
-      },
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-122__embedded__hi2_pdfimg_24_p14L.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_24_p14L.jpg",
-        "caption": "HI embedded image · hi2_pdfimg_24_p14L.jpg"
+        "caption": "HI embedded image · hi2_pdfimg_23_p14L.jpg",
+        "front_visible": true
       },
       {
         "src": "assets/peds_pretest2_full/PEDS2-HI2-122__source_crop__hi2_122_p14L.png",
@@ -9526,26 +9490,6 @@
     "uncertain": false,
     "images": [
       {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-123__embedded__hi2_pdfimg_22_p14L.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_22_p14L.jpg",
-        "answer_only": true,
-        "caption": "답/해설 포함 원문 이미지 · hi2_pdfimg_22_p14L.jpg"
-      },
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-123__embedded__hi2_pdfimg_23_p14L.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_23_p14L.jpg",
-        "answer_only": true,
-        "caption": "답/해설 포함 원문 이미지 · hi2_pdfimg_23_p14L.jpg"
-      },
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-123__embedded__hi2_pdfimg_24_p14L.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_24_p14L.jpg",
-        "caption": "HI embedded image · hi2_pdfimg_24_p14L.jpg"
-      },
-      {
         "src": "assets/peds_pretest2_full/PEDS2-HI2-123__source_crop__hi2_123_p14L.png",
         "kind": "source_crop",
         "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/question_crops/hi2_123_p14L.png",
@@ -9590,20 +9534,6 @@
     ],
     "uncertain": false,
     "images": [
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-124__embedded__hi2_pdfimg_22_p14L.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_22_p14L.jpg",
-        "answer_only": true,
-        "caption": "답/해설 포함 원문 이미지 · hi2_pdfimg_22_p14L.jpg"
-      },
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-124__embedded__hi2_pdfimg_23_p14L.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_23_p14L.jpg",
-        "answer_only": true,
-        "caption": "답/해설 포함 원문 이미지 · hi2_pdfimg_23_p14L.jpg"
-      },
       {
         "src": "assets/peds_pretest2_full/PEDS2-HI2-124__embedded__hi2_pdfimg_24_p14L.jpg",
         "kind": "embedded",
@@ -9655,20 +9585,6 @@
     "uncertain": false,
     "images": [
       {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-125__embedded__hi2_pdfimg_22_p14L.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_22_p14L.jpg",
-        "answer_only": true,
-        "caption": "답/해설 포함 원문 이미지 · hi2_pdfimg_22_p14L.jpg"
-      },
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-125__embedded__hi2_pdfimg_23_p14L.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_23_p14L.jpg",
-        "answer_only": true,
-        "caption": "답/해설 포함 원문 이미지 · hi2_pdfimg_23_p14L.jpg"
-      },
-      {
         "src": "assets/peds_pretest2_full/PEDS2-HI2-125__embedded__hi2_pdfimg_24_p14L.jpg",
         "kind": "embedded",
         "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_24_p14L.jpg",
@@ -9718,20 +9634,6 @@
     ],
     "uncertain": false,
     "images": [
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-126__embedded__hi2_pdfimg_22_p14L.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_22_p14L.jpg",
-        "answer_only": true,
-        "caption": "답/해설 포함 원문 이미지 · hi2_pdfimg_22_p14L.jpg"
-      },
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-126__embedded__hi2_pdfimg_23_p14L.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_23_p14L.jpg",
-        "answer_only": true,
-        "caption": "답/해설 포함 원문 이미지 · hi2_pdfimg_23_p14L.jpg"
-      },
       {
         "src": "assets/peds_pretest2_full/PEDS2-HI2-126__embedded__hi2_pdfimg_24_p14L.jpg",
         "kind": "embedded",
@@ -9783,26 +9685,6 @@
     ],
     "uncertain": false,
     "images": [
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-127__embedded__hi2_pdfimg_22_p14L.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_22_p14L.jpg",
-        "answer_only": true,
-        "caption": "답/해설 포함 원문 이미지 · hi2_pdfimg_22_p14L.jpg"
-      },
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-127__embedded__hi2_pdfimg_23_p14L.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_23_p14L.jpg",
-        "answer_only": true,
-        "caption": "답/해설 포함 원문 이미지 · hi2_pdfimg_23_p14L.jpg"
-      },
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-127__embedded__hi2_pdfimg_24_p14L.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_24_p14L.jpg",
-        "caption": "HI embedded image · hi2_pdfimg_24_p14L.jpg"
-      },
       {
         "src": "assets/peds_pretest2_full/PEDS2-HI2-127__source_crop__hi2_127_p14L.png",
         "kind": "source_crop",
@@ -10437,12 +10319,6 @@
     "uncertain": false,
     "images": [
       {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-142__embedded__hi2_pdfimg_25_p15R.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_25_p15R.jpg",
-        "caption": "HI embedded image · hi2_pdfimg_25_p15R.jpg"
-      },
-      {
         "src": "assets/peds_pretest2_full/PEDS2-HI2-142__source_crop__hi2_142_p15R.png",
         "kind": "source_crop",
         "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/question_crops/hi2_142_p15R.png",
@@ -10564,24 +10440,6 @@
     "uncertain": false,
     "images": [
       {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-145__embedded__hi2_pdfimg_25_p15R.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_25_p15R.jpg",
-        "caption": "HI embedded image · hi2_pdfimg_25_p15R.jpg"
-      },
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-145__embedded__hi2_pdfimg_26_p15R.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_26_p15R.jpg",
-        "caption": "HI embedded image · hi2_pdfimg_26_p15R.jpg"
-      },
-      {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-145__embedded__hi2_pdfimg_27_p15R.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_27_p15R.jpg",
-        "caption": "HI embedded image · hi2_pdfimg_27_p15R.jpg"
-      },
-      {
         "src": "assets/peds_pretest2_full/PEDS2-HI2-145__source_crop__hi2_145_p15R.png",
         "kind": "source_crop",
         "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/question_crops/hi2_145_p15R.png",
@@ -10627,16 +10485,11 @@
     "uncertain": false,
     "images": [
       {
-        "src": "assets/peds_pretest2_full/PEDS2-HI2-146__embedded__hi2_pdfimg_25_p15R.jpg",
-        "kind": "embedded",
-        "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_25_p15R.jpg",
-        "caption": "HI embedded image · hi2_pdfimg_25_p15R.jpg"
-      },
-      {
         "src": "assets/peds_pretest2_full/PEDS2-HI2-146__embedded__hi2_pdfimg_26_p15R.jpg",
         "kind": "embedded",
         "source_path": "/Users/sffs123gmail.com/.openclaw/workspace/.tmp/peds_pretest2_review_20260517/hi_extract/embedded_images/hi2_pdfimg_26_p15R.jpg",
-        "caption": "HI embedded image · hi2_pdfimg_26_p15R.jpg"
+        "answer_only": true,
+        "caption": "답/해설 포함 원문 이미지 · hi2_pdfimg_26_p15R.jpg"
       },
       {
         "src": "assets/peds_pretest2_full/PEDS2-HI2-146__embedded__hi2_pdfimg_27_p15R.jpg",
