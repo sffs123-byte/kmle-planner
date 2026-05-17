@@ -555,15 +555,38 @@ def add_background_and_stats() -> None:
         f'<button class="unit-filter-chip" data-unit="{e(OFFICIAL_UNIT_CHAPTER[u])}" onclick="setOfficialUnitFilter(\'{e(OFFICIAL_UNIT_CHAPTER[u])}\')">{e(OFFICIAL_UNIT_CHAPTER[u])} <b>{unit_counts[u]}</b></button>'
         for u in OFFICIAL_UNIT_ORDER
     )
+    sidebar_buttons = "".join(
+        f'<button class="peds-side-unit unit-filter-chip" data-unit="{e(OFFICIAL_UNIT_CHAPTER[u])}" onclick="setOfficialUnitFilter(\'{e(OFFICIAL_UNIT_CHAPTER[u])}\')">{e(OFFICIAL_UNIT_CHAPTER[u])} <b>{unit_counts[u]}</b></button>'
+        for u in OFFICIAL_UNIT_ORDER
+    )
     filter_html = f"""
-    <section class="official-unit-filter" id="officialUnitFilter">
-        <div class="unit-filter-title">교수님 공지 기준 2주차 범위: 12장 감염 → 13장 소화기 → 14장 호흡기 → 15장 심혈관</div>
+    <section class="official-unit-filter clean-home-shell" id="officialUnitFilter">
+        <div class="home-kicker">소아청소년과 2주차 Pretest FULL · 288문항</div>
+        <h1>공식 범위대로 바로 풀기</h1>
+        <p class="home-lead">교수님 공지 기준 12~15장 순서로 정돈했습니다. 범위를 고른 뒤 순서대로 공부하거나 랜덤으로 점검하세요.</p>
         <div class="unit-filter-actions">
             <button class="unit-filter-chip active" data-unit="ALL" onclick="setOfficialUnitFilter('ALL')">전체 <b>{len(data)}</b></button>
             {filter_buttons}
         </div>
-        <div class="unit-filter-note">범위외/혼입 확인은 HI 전체 포함 정책 때문에 보존한 카드입니다.</div>
+        <div class="home-start-row">
+            <button class="home-start-primary" onclick="startOfficialUnitOrdered()">선택 범위 순서대로 시작 <b id="orderedStartCount">{len(data)}</b></button>
+            <button class="home-start-secondary" onclick="startOfficialUnitRandom()">랜덤으로 점검 <b id="randomStartCount">{len(data)}</b></button>
+        </div>
+        <div class="home-selected">현재 범위: <strong id="selectedUnitLabel">전체</strong> · <span id="selectedUnitCount">{len(data)}</span>문항</div>
+        <div class="unit-filter-note">범위외/혼입 확인은 HI 전체 포함 정책 때문에 삭제하지 않고 보존한 카드입니다.</div>
+        <div class="home-source-stats">{e(source_stats)}</div>
     </section>
+""".rstrip()
+    sidebar_html = f"""
+        <div class="peds-sidebar-launcher">
+            <div class="peds-side-title">공식 단원</div>
+            <button class="peds-side-unit unit-filter-chip active" data-unit="ALL" onclick="setOfficialUnitFilter('ALL')">전체 <b>{len(data)}</b></button>
+            {sidebar_buttons}
+            <div class="peds-side-actions">
+                <button onclick="startOfficialUnitOrdered()">순서대로 시작</button>
+                <button onclick="startOfficialUnitRandom()">랜덤 시작</button>
+            </div>
+        </div>
 """.rstrip()
     css = f"""
 
@@ -590,22 +613,78 @@ body.peds-pretest2-full-bg .card, body.peds-pretest2-full-bg .quiz-card {{ box-s
 body.peds-pretest2-full-bg .tutor-section {{ margin: 12px 0; padding: 10px 12px; background: rgba(255,255,255,.62); border: 1px solid rgba(124,58,237,.14); border-radius: 10px; }}
 body.peds-pretest2-full-bg .tutor-section h4 {{ margin: 0 0 7px; font-size: 15px; color: #581c87; }}
 body.peds-pretest2-full-bg .source-images img {{ max-height: 520px; object-fit: contain; }}
-body.peds-pretest2-full-bg .official-unit-filter {{ margin: 0 0 18px; padding: 14px 16px; border-radius: 16px; background: rgba(15,23,42,.78); border: 1px solid rgba(191,219,254,.28); box-shadow: 0 12px 30px rgba(2,6,23,.18); }}
+body.peds-pretest2-full-bg::before, body.peds-pretest2-full-bg::after {{ display:none !important; content:none !important; }}
+body.peds-pretest2-full-bg .mobile-review-start, body.peds-pretest2-full-bg .review-hero, body.peds-pretest2-full-bg .card-grid, body.peds-pretest2-full-bg .sidebar .sb-quiz-btns, body.peds-pretest2-full-bg .sidebar .sb-item {{ display:none !important; }}
+body.peds-pretest2-full-bg .main {{ padding-bottom: 42px; }}
+body.peds-pretest2-full-bg .official-unit-filter {{ margin: 0 auto 18px; max-width: 980px; padding: 20px 18px; border-radius: 22px; background: rgba(15,23,42,.82); border: 1px solid rgba(191,219,254,.28); box-shadow: 0 18px 44px rgba(2,6,23,.22); }}
+body.peds-pretest2-full-bg .home-kicker {{ display:inline-flex; padding:4px 10px; border-radius:999px; background:rgba(37,99,235,.20); border:1px solid rgba(147,197,253,.32); color:#bfdbfe; font-size:12px; font-weight:950; letter-spacing:.04em; }}
+body.peds-pretest2-full-bg .official-unit-filter h1 {{ margin:12px 0 8px; color:#f8fafc; font-size:26px; line-height:1.22; }}
+body.peds-pretest2-full-bg .home-lead {{ margin:0 0 16px; color:#cbd5e1; line-height:1.58; font-size:14px; }}
 body.peds-pretest2-full-bg .unit-filter-title {{ font-weight: 950; color: #dbeafe; margin-bottom: 10px; line-height: 1.45; }}
 body.peds-pretest2-full-bg .unit-filter-actions {{ display:flex; flex-wrap:wrap; gap:8px; }}
 body.peds-pretest2-full-bg .unit-filter-chip {{ border:1px solid rgba(219,234,254,.34); background: rgba(30,41,59,.92); color:#e2e8f0; border-radius:999px; padding:7px 11px; font-size:12px; font-weight:900; cursor:pointer; }}
 body.peds-pretest2-full-bg .unit-filter-chip b {{ color:#fef3c7; margin-left:4px; }}
 body.peds-pretest2-full-bg .unit-filter-chip.active {{ background:#2563eb; color:#fff; border-color:#bfdbfe; }}
 body.peds-pretest2-full-bg .unit-filter-note {{ margin-top:8px; color:#bfdbfe; font-size:12px; opacity:.88; }}
+body.peds-pretest2-full-bg .home-start-row {{ display:grid; grid-template-columns: minmax(0,1.2fr) minmax(0,1fr); gap:10px; margin:18px 0 10px; }}
+body.peds-pretest2-full-bg .home-start-row button {{ border:none; border-radius:16px; min-height:56px; padding:14px 16px; font-size:15px; font-weight:950; cursor:pointer; }}
+body.peds-pretest2-full-bg .home-start-primary {{ background:linear-gradient(135deg,#5eead4,#93c5fd); color:#0f172a; box-shadow:0 12px 30px rgba(45,212,191,.18); }}
+body.peds-pretest2-full-bg .home-start-secondary {{ background:rgba(15,23,42,.88); color:#e0f2fe; border:1px solid rgba(125,211,252,.34) !important; }}
+body.peds-pretest2-full-bg .home-selected {{ color:#e2e8f0; font-size:13px; font-weight:850; }}
+body.peds-pretest2-full-bg .home-source-stats {{ margin-top:10px; color:#94a3b8; font-size:12px; }}
+body.peds-pretest2-full-bg .peds-sidebar-launcher {{ margin-top:14px; display:flex; flex-direction:column; gap:8px; }}
+body.peds-pretest2-full-bg .peds-side-title {{ color:#93c5fd; font-size:12px; font-weight:950; letter-spacing:.05em; }}
+body.peds-pretest2-full-bg .peds-side-unit {{ width:100%; text-align:left; border-radius:10px; }}
+body.peds-pretest2-full-bg .peds-side-actions {{ display:grid; grid-template-columns:1fr; gap:7px; margin-top:6px; }}
+body.peds-pretest2-full-bg .peds-side-actions button {{ border:none; border-radius:10px; padding:9px 10px; color:#0f172a; background:#93c5fd; font-weight:900; cursor:pointer; }}
+body.peds-pretest2-full-bg.quiz-mode-active .sb-mobile-toggle, body.peds-pretest2-full-bg.quiz-mode-active .mobile-review-start {{ display:none !important; }}
+body.peds-pretest2-full-bg .quiz-overlay.active {{ z-index:10000; }}
+body.peds-pretest2-full-bg .quiz-header {{ z-index:10001; background:rgba(15,23,42,.96); backdrop-filter: blur(10px); }}
+body.peds-pretest2-full-bg .quiz-card {{ max-width:920px; margin:18px auto 84px; padding:18px; }}
+body.peds-pretest2-full-bg .quiz-q {{ padding:14px; border:1px solid rgba(147,197,253,.18); border-radius:16px; background:rgba(15,23,42,.62); }}
+body.peds-pretest2-full-bg .quiz-q-text {{ font-size:18px; }}
 body.peds-pretest2-full-bg .unit-hidden {{ display:none !important; }}
+@media (max-width: 768px) {{
+  body.peds-pretest2-full-bg .official-unit-filter {{ margin-top:4px; padding:18px 14px; border-radius:18px; }}
+  body.peds-pretest2-full-bg .official-unit-filter h1 {{ font-size:22px; }}
+  body.peds-pretest2-full-bg .home-start-row {{ grid-template-columns:1fr; }}
+  body.peds-pretest2-full-bg .home-start-row button {{ min-height:52px; }}
+  body.peds-pretest2-full-bg .unit-filter-chip {{ padding:8px 10px; }}
+  body.peds-pretest2-full-bg .quiz-card {{ width:100%; margin:8px auto 72px; padding:10px; }}
+  body.peds-pretest2-full-bg .quiz-q {{ padding:10px; border-radius:14px; }}
+  body.peds-pretest2-full-bg .quiz-q-text {{ font-size:15px; }}
+}}
 """
     text = text.replace("</style>", css + "\n</style>", 1)
     text = text.replace("<body>", '<body class="peds-pretest2-full-bg">', 1)
+    text = text.replace('        <div class="sb-quiz-btns">', sidebar_html + '\n        <div class="sb-quiz-btns">', 1)
     text = text.replace('    <div class="review-hero" id="reviewHero">', filter_html + '\n    <div class="review-hero" id="reviewHero">', 1)
+    # Clean-home mode: keep QUIZ_DATA for quiz mode, but do not render 288 static cards on the landing page.
+    card_grid_start = text.find('    <div class="card-grid">')
+    card_grid_end = text.find('\n</div>\n\n<!-- Quiz overlay -->', card_grid_start)
+    if card_grid_start != -1 and card_grid_end != -1:
+        text = text[:card_grid_start] + '    <div class="card-grid peds-home-card-grid" aria-hidden="true"></div>' + text[card_grid_end:]
     unit_js = f"""
 
 const OFFICIAL_UNIT_BY_ID = {json.dumps(unit_by_id, ensure_ascii=False)};
+let selectedOfficialUnit = 'ALL';
+function getOfficialUnitIds() {{
+    return ALL_IDS.filter(id => selectedOfficialUnit === 'ALL' || OFFICIAL_UNIT_BY_ID[id] === selectedOfficialUnit);
+}}
+function updateOfficialUnitLauncher() {{
+    const ids = getOfficialUnitIds();
+    const label = selectedOfficialUnit === 'ALL' ? '전체' : selectedOfficialUnit;
+    const labelEl = document.getElementById('selectedUnitLabel');
+    const countEl = document.getElementById('selectedUnitCount');
+    const orderedEl = document.getElementById('orderedStartCount');
+    const randomEl = document.getElementById('randomStartCount');
+    if (labelEl) labelEl.textContent = label;
+    if (countEl) countEl.textContent = ids.length;
+    if (orderedEl) orderedEl.textContent = ids.length;
+    if (randomEl) randomEl.textContent = ids.length;
+}}
 function setOfficialUnitFilter(unit) {{
+    selectedOfficialUnit = unit || 'ALL';
     document.querySelectorAll('.unit-filter-chip').forEach(btn => btn.classList.toggle('active', btn.dataset.unit === unit));
     document.querySelectorAll('.card[id^="card-"]').forEach(card => {{
         const id = card.id.replace(/^card-/, '');
@@ -617,6 +696,27 @@ function setOfficialUnitFilter(unit) {{
         const chapter = m ? (OFFICIAL_UNIT_BY_ID[m[1]] || '') : '';
         item.classList.toggle('unit-hidden', unit !== 'ALL' && chapter !== unit);
     }});
+    updateOfficialUnitLauncher();
+}}
+function closePedsMobileSidebar() {{
+    const sb = document.getElementById('sidebar');
+    const overlay = document.getElementById('sbOverlay');
+    const btn = document.getElementById('sbMobileToggle');
+    if (sb) sb.classList.remove('mobile-open');
+    if (overlay) overlay.classList.remove('active');
+    if (btn) btn.textContent = '☰';
+}}
+function startOfficialUnitOrdered() {{
+    const ids = getOfficialUnitIds();
+    if (!ids.length) return;
+    closePedsMobileSidebar();
+    startQuizWith(ids);
+}}
+function startOfficialUnitRandom() {{
+    const ids = getOfficialUnitIds();
+    if (!ids.length) return;
+    closePedsMobileSidebar();
+    startQuizWith(shuffledCopy(ids));
 }}
 document.addEventListener('DOMContentLoaded', () => setOfficialUnitFilter('ALL'));
 """

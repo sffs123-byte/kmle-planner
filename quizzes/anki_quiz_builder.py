@@ -383,8 +383,13 @@ body {{
 .quiz-q {{
     font-size: 20px; font-weight: 700;
     margin-bottom: 20px;
-    display: flex; align-items: center; gap: 10px;
+    display: flex; flex-direction: column; gap: 12px;
 }}
+.quiz-q-top {{
+    display: flex; align-items: center; gap: 8px; width: 100%;
+}}
+.quiz-q-actions {{ margin-left: auto; display: flex; align-items: center; gap: 6px; flex-shrink: 0; }}
+.quiz-q-text {{ width: 100%; line-height: 1.62; overflow-wrap: anywhere; }}
 .quiz-q .card-num {{ width: 40px; height: 40px; font-size: 18px; }}
 .quiz-answer {{
     background: #eff1f5; color: #4c4f69; border-radius: 12px; padding: 20px;
@@ -785,6 +790,17 @@ body.quiz-mode-active .mobile-review-start {{ display: none !important; }}
     .card-grid {{ grid-template-columns: 1fr; }}
     .review-hero {{ flex-direction: column; align-items: stretch; margin-top: 2px; }}
     .review-hero-btn {{ width: 100%; min-height: 48px; }}
+    .quiz-header {{ padding: 8px 10px; gap: 6px; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; }}
+    .quiz-header .back-btn {{ flex: 0 0 auto; padding: 7px 10px; font-size: 12px; }}
+    .quiz-header .stat {{ flex: 0 0 auto; font-size: 12px; }}
+    .quiz-card {{ margin: 10px auto 24px; padding: 12px; }}
+    .quiz-q {{ font-size: 16px; gap: 10px; margin-bottom: 12px; }}
+    .quiz-q .card-num {{ width: 34px; height: 34px; font-size: 15px; }}
+    .quiz-q-text {{ font-size: 16px; line-height: 1.62; }}
+    .quiz-answer {{ padding: 12px; font-size: 13px; line-height: 1.72; }}
+    .show-answer-btn {{ width: 100%; margin: 14px auto; min-height: 48px; }}
+    .rating-btns {{ display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }}
+    .rating-btns button {{ width: 100%; min-width: 0; padding: 11px 8px; font-size: 13px; }}
 }}
 </style>
 </head>
@@ -1005,23 +1021,30 @@ function saveEdit(id) {{
     saveEdits();
 }}
 
+function stripHtml(value) {{
+    const tmp = document.createElement('div');
+    tmp.innerHTML = String(value || '');
+    return (tmp.innerText || tmp.textContent || '').replace(/\\s+/g, ' ').trim();
+}}
+
 // ── Copy Q&A for AI ──
 function copyQA(id) {{
     const card = document.getElementById('card-' + id);
-    const q = card.querySelector('.card-title').textContent;
-    const num = card.querySelector('.card-num').textContent;
-    const ansEl = document.getElementById('ans-content-' + id);
-    const a = ansEl.innerText || ansEl.textContent;
+    const data = QUIZ_DATA[id] || {{ num: id, q: '', a: '' }};
+    const q = card?.querySelector('.card-title')?.textContent || stripHtml(data.q || '');
+    const num = card?.querySelector('.card-num')?.textContent || data.num || id;
+    const ansEl = document.getElementById('ans-content-' + id) || document.getElementById('quizAnsContent');
+    const a = ansEl ? (ansEl.innerText || ansEl.textContent) : stripHtml(edits[id] || data.a || '');
     const text = `Q${{num}}. ${{q}}\n\n${{a}}`;
     navigator.clipboard.writeText(text).then(() => {{
-        const btn = card.querySelector('.copy-btn');
+        const btn = card?.querySelector('.copy-btn') || document.querySelector('.quiz-card .copy-btn');
         if (btn) {{ btn.textContent = '✅'; setTimeout(() => btn.textContent = '📋', 1500); }}
     }}).catch(() => {{
         const ta = document.createElement('textarea');
         ta.value = text; document.body.appendChild(ta);
         ta.select(); document.execCommand('copy');
         document.body.removeChild(ta);
-        const btn = card.querySelector('.copy-btn');
+        const btn = card?.querySelector('.copy-btn') || document.querySelector('.quiz-card .copy-btn');
         if (btn) {{ btn.textContent = '✅'; setTimeout(() => btn.textContent = '📋', 1500); }}
     }});
 }}
@@ -1257,12 +1280,16 @@ function renderQuizCard(id) {{
     document.getElementById('quizBody').innerHTML = `
         <div class="quiz-card">
             <div class="quiz-q">
-                <span class="card-num">Q${{data.num}}</span>
-                <span>${{data.q}}</span>
-                ${{badge}}
-                <button class="draw-btn" onclick="toggleQuizDraw('${{id}}')" title="필기 모드">🍎</button>
-                <button class="edit-btn" onclick="toggleQuizEdit('${{id}}')" title="편집">✏️</button>
-                <button class="copy-btn" onclick="copyQA('${{id}}')" title="문제+답 복사">📋</button>
+                <div class="quiz-q-top">
+                    <span class="card-num">Q${{data.num}}</span>
+                    ${{badge}}
+                    <div class="quiz-q-actions">
+                        <button class="draw-btn" onclick="toggleQuizDraw('${{id}}')" title="필기 모드">🍎</button>
+                        <button class="edit-btn" onclick="toggleQuizEdit('${{id}}')" title="편집">✏️</button>
+                        <button class="copy-btn" onclick="copyQA('${{id}}')" title="문제+답 복사">📋</button>
+                    </div>
+                </div>
+                <div class="quiz-q-text">${{data.q}}</div>
             </div>
 {self_answer_html}
             <button class="show-answer-btn" id="showAnsBtn" onclick="showQuizAnswer('${{id}}')">정답 보기 ▼</button>
