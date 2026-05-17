@@ -308,6 +308,20 @@ A3. S. pneumoniae, N. meningitidis, Salmonella""",
     },
 })
 
+
+# 2026-05-17 user report: Q44 front display masked the vital sign and lab
+# result lines as [답 숨김]. The source question is an MCQ, so the lab values
+# and answer choices should remain visible on the learner-facing front.
+CURATED_CARD_FIXES.setdefault("PEDS2-HI2-014", {}).update({
+    "display_question": """객Q. 17세 남자가 1주 전부터 열이 나고 목이 아파서 병원에 왔다. 110/70 - 95 - 18 - 38.5.
+편도가 부어있고 삼출물이 관찰되었다. 양측 목에서 압통이 없는 최대 1cm 크기의 림프절이 만져졌다.
+혈액검사 결과는 다음과 같다. 원인 바이러스는?
+· 혈색소 11.5 / 백혈구 19,000 (중성구 32%, 림프구 60%, 단핵구 7%, 호산구 1%)
+· 혈소판 110,000 / AST 186 / ALT 236
+① 단순 헤르페스 바이러스 ② 뎅기 바이러스
+③ 엔테로 바이러스 ④ 엡스타인바 바이러스 ⑤ A형 간염 바이러스""",
+})
+
 # BEGIN DIGESTIVE_ANSWER_AUDIT_FIXES_20260517
 CURATED_CARD_FIXES.update({'PEDS2-2026-5to8-Q7': {'answer': '만성복통 alarm symptom: 야간 각성 복통, 지속적 우상복부/우하복부 통증 또는 국소 압통, 연하곤란, 혈변/위장관 실혈, 의미 있는 담즙성·주기적·지속적 구토, 만성 중증/야간 설사, 발열, 체중감소/성장속도 감소, 사춘기 지연, IBD/소화성궤양 가족력 등에서 2개 이상', 'uncertain': False}, 'PEDS2-2025-19to23-Q2': {'answer': '중증 탈수로 보이면 등장성 IV 수액(0.9% 생리식염수 등)을 우선 투여한다. 중등도 이하 탈수는 ORS 50–100 mL/kg를 3–4시간에 투여한다.', 'uncertain': False}, 'PEDS2-2023PDF-035': {'answer': '중간창자 꼬임(midgut volvulus)', 'uncertain': False}, 'PEDS2-HI2-043': {'answer': '로타바이러스 백신', 'uncertain': False}, 'PEDS2-HI2-044': {'answer': '바이러스 위장관염; 가장 흔한 바이러스는 로타바이러스', 'uncertain': False}, 'PEDS2-HI2-045': {'answer': '로타바이러스', 'uncertain': False}, 'PEDS2-HI2-046': {'answer': 'Salmonella typhi; ceftriaxone 또는 3세대 cephalosporin', 'uncertain': False}, 'PEDS2-HI2-047': {'answer': '수유모의 항원 제한 식사', 'uncertain': False}, 'PEDS2-HI2-048': {'answer': '젖당 제한 식이', 'uncertain': False}, 'PEDS2-HI2-056': {'answer': '만성복통 red flag: 야간 각성 복통, 지속적 RUQ/RLQ 통증 또는 국소 압통, 연하곤란, 혈변/위장관 실혈, 의미 있는 구토, 야간/중증 설사, 발열, 체중감소/성장속도 감소, 사춘기 지연, IBD/소화성궤양 가족력 등에서 4개 이상', 'uncertain': False}, 'PEDS2-HI2-057': {'answer': '복부초음파', 'uncertain': False}, 'PEDS2-HI2-059': {'answer': '장중첩증; 복부초음파', 'uncertain': False}, 'PEDS2-HI2-060': {'answer': '연소 용종 의심; 대장내시경', 'uncertain': False}, 'PEDS2-HI2-062': {'answer': '메켈 게실; 99mTc-pertechnetate scan(메켈 스캔)', 'uncertain': False}, 'PEDS2-HI2-069': {'answer': '전해질 및 수분 공급 후 수술적 치료', 'uncertain': False}, 'PEDS2-HI2-073': {'answer': '비타민 D', 'uncertain': False}, 'PEDS2-HI2-076': {'answer': '아연', 'uncertain': False}, 'PEDS2-HI2-077': {'answer': '아연', 'uncertain': False}})
 # END DIGESTIVE_ANSWER_AUDIT_FIXES_20260517
