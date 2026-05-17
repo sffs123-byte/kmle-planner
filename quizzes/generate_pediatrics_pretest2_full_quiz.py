@@ -1160,17 +1160,49 @@ def mask_hi_front(raw: str) -> str:
     front = re.sub(r"(답\s*[:：])\s*[^\n]+", r"\1 [답 숨김]", front)
     front = re.sub(r"(정답\s*[:：])\s*[^\n]+", r"\1 [답 숨김]", front)
     # Hide direct answer after a question mark on the same line, common in HI source.
-    front = re.sub(r"([?？])\s{1,}([^\n①②③④⑤]{1,80})(?=\n|$)", r"\1 [답 숨김]", front)
+    front = re.sub(r"([?？])[ \t]{1,}([^\n①②③④⑤]{1,80})(?=\n|$)", r"\1 [답 숨김]", front)
+    result_line_pattern = re.compile(
+        r"혈액|혈색소|백혈구|중성구|림프구|호산구|혈소판|WBC|Hb|Hgb|Plt|Ptl|platelet|CRP|C-\s*반응|ESR|적혈구침강|"
+        r"CSF|뇌척수액|포도당|Glucose|단백|AST|ALT|빌리루빈|bilirubin|amylase|lipase|"
+        r"세룰로플라스민|ceruloplasmin|대변|소변|배양|잠혈|pH|PaCO2|HCO3|BUN|Cr|"
+        r"총빌리루빈|직접|간접|검사\s*결과|검사\s*상",
+        re.I,
+    )
+
     # Hide HI short-answer labels where the answer follows a colon, e.g.
     # "(1) 원인균 : Bordetella pertussis" or "(2) 치료 약제 : Erythromycin".
     answer_label = r"(?:원인균|원인|병원체|진단|치료\s*약제|치료제|약제|항생제|치료|검사|처치|소견)"
+    def _mask_answer_label_line(match: re.Match) -> str:
+        line = match.group(0)
+        # "검사:" may be a result label, not an answer label.
+        if result_line_pattern.search(line):
+            return line
+        return f"{match.group(1)} [답 숨김]"
+
     front = re.sub(
         rf"(?im)^(\s*(?:\(?\d+\)?|[①-⑤])?\s*[^\n:：]{{0,45}}{answer_label}[^\n:：]{{0,45}}\s*[:：])\s*(?!\[답 숨김\])\S[^\n]*$",
-        r"\1 [답 숨김]",
+        _mask_answer_label_line,
         front,
     )
-    # Hide answer-only dash lines after stems.
-    front = re.sub(r"(?m)^\s*[-·]\s*([^\n]{2,100})$", r"- [답 숨김]", front)
+    # Hide answer-only dash/bullet lines after stems, but preserve objective
+    # lab/imaging/result bullets. HI source frequently writes lab results as
+    # "· WBC ..." or "· AST ..."; masking every bullet removed required stem data.
+    result_line_pattern = re.compile(
+        r"혈액|혈색소|백혈구|중성구|림프구|호산구|혈소판|WBC|Hb|Hgb|Plt|Ptl|platelet|CRP|C-\s*반응|ESR|적혈구침강|"
+        r"CSF|뇌척수액|포도당|Glucose|단백|AST|ALT|빌리루빈|bilirubin|amylase|lipase|"
+        r"세룰로플라스민|ceruloplasmin|대변|소변|배양|잠혈|pH|PaCO2|HCO3|BUN|Cr|"
+        r"총빌리루빈|직접|간접|검사\s*결과|검사\s*상",
+        re.I,
+    )
+
+    def _mask_dash_line(match: re.Match) -> str:
+        line = match.group(0)
+        body = match.group(1)
+        if result_line_pattern.search(body):
+            return line
+        return "- [답 숨김]"
+
+    front = re.sub(r"(?m)^\s*[-·]\s*([^\n]{2,160})$", _mask_dash_line, front)
     return front
 
 
