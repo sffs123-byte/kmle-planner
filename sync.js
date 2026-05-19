@@ -608,6 +608,10 @@ function startRealtimeSubscription() {
       try { localEventSource.close(); } catch {}
       localEventSource = null;
     }
+    if (getLocalApiBase()) {
+      setStatus('Local DB polling 연결됨. Cloudflare tunnel은 15초 주기로 변경을 확인한다.', 'connected');
+      return;
+    }
     try {
       localEventSource = new EventSource(localApiUrl(`/api/events?user_id=${encodeURIComponent(PLANNER_USER_ID)}`));
       localEventSource.addEventListener('update', (event) => {
