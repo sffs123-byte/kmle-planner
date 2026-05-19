@@ -206,6 +206,7 @@ let immediateSyncTimer = null;
 let immediateSyncReason = '';
 let localHash = hashStateRaw(getRawPlannerState());
 let syncing = false;
+let forceLocalPullActive = urlForceLocalPull;
 
 function injectStyles() {
   if (document.getElementById('planner-sync-style')) return;
@@ -704,6 +705,7 @@ function stopLoops() {
 }
 
 async function checkLocalStateChange() {
+  if (forceLocalPullActive && (localDbMode || getLocalApiBase() || localDbRequired())) return;
   const config = readConfig();
   const raw = getRawPlannerState();
   const nextHash = hashStateRaw(raw);
@@ -731,6 +733,10 @@ async function checkLocalStateChange() {
 }
 
 async function flushImmediateSync(reason = '즉시 업로드') {
+  if (forceLocalPullActive && (localDbMode || getLocalApiBase() || localDbRequired())) {
+    setStatus('강제 Local DB 새로받기 중이라 오래된 브라우저 상태 업로드를 막았다.', 'pending');
+    return;
+  }
   const config = readConfig();
   const raw = getRawPlannerState();
   const nextHash = hashStateRaw(raw);
@@ -753,6 +759,7 @@ async function flushImmediateSync(reason = '즉시 업로드') {
 }
 
 function scheduleImmediateSync(reason = '즉시 업로드') {
+  if (forceLocalPullActive && (localDbMode || getLocalApiBase() || localDbRequired())) return;
   const config = readConfig();
   const raw = getRawPlannerState();
   const nextHash = hashStateRaw(raw);
@@ -873,6 +880,10 @@ async function retryPendingSync(reason = '자동 재시도 업로드') {
 }
 
 async function pushPlannerUserState(reason = '수동 업로드') {
+  if (forceLocalPullActive && (localDbMode || getLocalApiBase() || localDbRequired())) {
+    setStatus('강제 Local DB 새로받기 중이라 오래된 브라우저 상태 업로드를 막았다.', 'pending');
+    return;
+  }
   if (syncing) return;
   if (!supabase && !localDbMode) {
     setStatus('동기화 서버 연결이 아직 안 잡혔다.', 'error');
@@ -976,6 +987,7 @@ async function pullPlannerUserState({ force = false, reason = '수동 새로받�
     if (force || (remoteHash !== localCurrentHash && (remoteIsNewer || !localIsDirty || firstSync))) {
       setRawPlannerState(remoteRaw);
       localHash = remoteHash;
+      forceLocalPullActive = false;
       meta.lastHash = remoteHash;
       meta.lastUserStateAppliedAt = remoteUpdatedAt;
       saveMeta(meta);
@@ -1011,6 +1023,7 @@ async function pullPlannerUserState({ force = false, reason = '수동 새로받�
   } catch (error) {
     setStatus(`${stateStoreLabel()} user state 불러오기 실패: ${error.message || error}`, 'error');
   } finally {
+    if (force) forceLocalPullActive = false;
     syncing = false;
     renderSessionText();
   }
