@@ -1100,12 +1100,18 @@ function bootstrapMetaFromCurrentState() {
 }
 
 function resumeAggressiveSync(reason = '포그라운드 복귀') {
-  void initializeSupabase();
-  void flushImmediateSync(`${reason} 업로드`);
-  void pullPlannerUserState({ reason });
-  if (readConfig().syncCode) {
-    void pullRemoteState({ reason: `legacy ${reason}` });
-  }
+  void (async () => {
+    await initializeSupabase();
+    if (urlForceLocalPull && localDbMode) {
+      await pullPlannerUserState({ force: true, reason: `${reason} 강제 Local DB 새로받기` });
+      return;
+    }
+    await flushImmediateSync(`${reason} 업로드`);
+    await pullPlannerUserState({ reason });
+    if (readConfig().syncCode) {
+      await pullRemoteState({ reason: `legacy ${reason}` });
+    }
+  })();
 }
 
 window.addEventListener('visibilitychange', () => {
