@@ -14,9 +14,19 @@ const DEFAULT_LOCAL_API_BASE = '';
 const urlLocalToken = urlParams.get('localToken') || urlParams.get('token') || '';
 const urlLocalApiBase = urlParams.get('localApiBase') || urlParams.get('localApi') || '';
 const urlLocalDbMode = urlParams.get('localDb') || '';
+const urlForceLocalPull = urlParams.get('forceLocalPull') === '1' || urlParams.get('forcePull') === '1';
 if (urlLocalToken) localStorage.setItem(LOCAL_TOKEN_KEY, urlLocalToken);
 if (urlLocalApiBase) localStorage.setItem(LOCAL_API_BASE_KEY, urlLocalApiBase.replace(/\/+$/, ''));
 if (urlLocalDbMode) localStorage.setItem(LOCAL_DB_REQUIRED_KEY, urlLocalDbMode === 'off' || urlLocalDbMode === '0' ? 'false' : 'true');
+if (urlForceLocalPull) {
+  try {
+    const meta = JSON.parse(localStorage.getItem(META_KEY) || '{}');
+    meta.lastLocalChangeAt = 0;
+    meta.pendingUserStateHash = '';
+    meta.pendingLegacyHash = '';
+    localStorage.setItem(META_KEY, JSON.stringify(meta));
+  } catch {}
+}
 
 const defaultConfig = {
   supabaseUrl: 'https://fqvmubjivjyohrwqfbdk.supabase.co',
@@ -558,10 +568,13 @@ async function initializeSupabase() {
     localDbMode = true;
     supabase = null;
     renderSessionText();
-    kickOffLoops();
     setStatus('Local DB 연결됨. Mac mini SQLite 상태를 확인 중이다.', 'connected');
-    await pullPlannerUserState({ reason: '초기 확인' });
+    await pullPlannerUserState({
+      force: urlForceLocalPull,
+      reason: urlForceLocalPull ? '강제 Local DB 새로받기' : '초기 확인'
+    });
     if (config.syncCode) await pullRemoteState({ reason: 'legacy 초기 확인' });
+    kickOffLoops();
     return;
   }
 
