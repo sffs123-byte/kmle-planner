@@ -1,0 +1,5852 @@
+[
+  {
+    "id": "PEDS3-2026-Q01-HEMOPHILIA",
+    "source": "2026 소청과 3차 pretest 복기(update 2026.04.10) / 객관식 1번",
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "official_unit": "혈액-종양",
+    "question": "12개월 남아가 예방접종 맞은 부위의 부종과 열감으로 응급실에 왔다. 기어다닐 무렵부터 멍이 잘 들기 시작했다. 진찰에서 건강해 보였으나 오른쪽 허벅지 부종과 열감이 있었고 만지면 많이 아파하진 않았으나 움직이려 하지 않았다. 혈액검사: WBC 10,500, Hb 10.8, Plt 345,000, PT 11.1, aPTT 89, mixing test 후 aPTT 32. 진단은?\n1) 빈혈\n2) 혈우병\n3) 연조직염\n4) 알레르기 반응\n5) 횡문근육종",
+    "answer": "2) 혈우병",
+    "explanation": "PT 정상, aPTT 연장, mixing test 교정은 응고인자 결핍을 시사한다. 예방접종 후 혈종/부종, 멍이 잘 드는 병력까지 합치면 혈우병이 가장 적절하다.",
+    "enhanced_explanation": "🧭 Big picture\n소아 출혈 문제에서 PT 정상+aPTT 연장+mixing 교정은 inhibitor보다 factor deficiency 쪽이다. 남아, 멍/근육혈종, 주사 후 부종이면 혈우병으로 잠근다.\n\n🔎 핵심 단서\n- 12개월 남아\n- 기기 시작 후 멍\n- 예방접종 부위 부종/움직임 회피\n- PT 정상, aPTT 89로 연장\n- mixing 후 aPTT 32로 교정\n\n✅ 3초 Lock line\n남아 + 깊은 혈종 + aPTT 연장 교정 = 혈우병.",
+    "tags": [
+      "2026",
+      "혈액-종양",
+      "혈우병",
+      "aPTT",
+      "mixing_test"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객1. 12개월 남아... PT 11.1 / aPTT 89 / Mixing test 후 aPTT 32 ... 2) 혈우병",
+    "source_page": "2026 docx",
+    "source_rank": 1,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-2026-SA01-INFANT-TUMORS",
+    "source": "2026 소청과 3차 pretest 복기(update 2026.04.10) / 주관식 1번",
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "official_unit": "혈액-종양",
+    "question": "영유아기에 주로 진단받는 종양을 3가지 이상 쓰시오.",
+    "answer": "신경모세포종, Wilms tumor, 망막모세포종",
+    "explanation": "복기 정답은 신경모세포종, Wilms tumor, 망막모세포종이다. 영유아기 종양 연령분포를 묻는 주관식이다.",
+    "enhanced_explanation": "🧭 Big picture\n소아 종양은 연령대가 힌트다. 영유아기에는 배아성 종양 계열이 자주 묶인다.\n\n🔎 핵심 단서\n- 영유아기에 주로 진단\n- 3가지 이상\n\n✅ 3초 Lock line\n영유아 종양 3개 = neuroblastoma, Wilms, retinoblastoma.",
+    "tags": [
+      "2026",
+      "혈액-종양",
+      "소아종양",
+      "영유아"
+    ],
+    "uncertain": false,
+    "raw_anchor": "주1. 영유아기에 주로 진단받는 종양... 정답: 신경모세포종, Wilm’s tumor, 망막모세포종",
+    "source_page": "2026 docx",
+    "source_rank": 6,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P01-001",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "조혈모세포 이식을 받지 말아야 되는 환자는?\n① AML, complex karyotype, 9세 ② rhabdomyosarcoma stage IV, 6세 남아 ③ neuroblastoma stage IV, N-myc(+), 28개월 여아 ④ ALL induction failure, 16세 여아 ⑤ medulloblastoma high risk complete remission, 3세 남아",
+    "answer": "② rhabdomyosarcoma, stage IV, 6세 남아",
+    "explanation": "원문 답: 2번.",
+    "enhanced_explanation": "### 핵심\n조혈모세포 이식 적응증을 묻는 복기 문항. 원문에는 답만 제시됨.",
+    "tags": [
+      "조혈모세포이식",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "1. 조혈모세포 이식을 받지 말아야 되는 환자는?... 답 : 2번",
+    "source_page": 1,
+    "source_rank": 11,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P01-005",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "Microcytic hypochromic anemia에서 감별진단해야 하는 질환 2가지 이상은?",
+    "answer": "철결핍빈혈(IDA), 지중해빈혈(thalassemia)",
+    "explanation": "원문 답: ida, thalassemia.",
+    "enhanced_explanation": "### 핵심\n소구성 저색소성 빈혈 감별로 IDA와 thalassemia가 원문에 제시됨.",
+    "tags": [
+      "소구성빈혈",
+      "IDA",
+      "thalassemia"
+    ],
+    "uncertain": false,
+    "raw_anchor": "6. Microcytic hypochromic anemia에서 감별진단해야 하는 질환 2가지 이상 / 답 : ida, thalassemia",
+    "source_page": 1,
+    "source_rank": 15,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P02-004",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "PT 정상, aPTT 약 60초. Mixing test 후 aPTT가 35초로 교정됨. 다음 검사는?",
+    "answer": "Factor VIII 검사",
+    "explanation": "원문 답: Factor VIII.",
+    "enhanced_explanation": "### 핵심\nmixing test에서 교정되면 응고인자 결핍 쪽을 평가하는 흐름. 원문 정답은 Factor VIII.",
+    "tags": [
+      "aPTT",
+      "mixing test",
+      "Factor VIII",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "1번(야마) PT 정상. aPTT 60초 정도... 다음 검사는? Factor VIII",
+    "source_page": 2,
+    "source_rank": 19,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P02-008",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "16개월 소아가 복부에 어른 크기 덩어리가 만져져 내원. 감별해야 할 악성종양 3가지는?",
+    "answer": "Wilms tumor, neuroblastoma, hepatoblastoma",
+    "explanation": "원문: Wilms tumor, Neuroblastoma, Hepatoblastoma (+Germ cell tumor).",
+    "enhanced_explanation": "### 핵심\n복부 종괴를 보이는 소아 악성종양 감별 목록을 묻는 카드.",
+    "tags": [
+      "복부종괴",
+      "Wilms",
+      "neuroblastoma",
+      "hepatoblastoma"
+    ],
+    "uncertain": false,
+    "raw_anchor": "1번 16개월 소아가 복부에 어른 크기 덩어리... Wilms’s tumor, Neuroblastoma, Hepatoblastoma (+Germ cell tumor)",
+    "source_page": 2,
+    "source_rank": 23,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P02-013",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "4세 아이, 발열 지속/경부림프절 비대, WBC 7400, immature cell 20%, Hb 8.4, PLT 16000. 다음 검사 선택지는 Coombs, mixing, antiplatelet Ab, bone marrow, osmotic fragility. 답은?",
+    "answer": "Bone marrow 검사",
+    "explanation": "원문 흐름상 4번이 정답으로 배치됨.",
+    "enhanced_explanation": "### 주의\n페이지 배치가 두 열로 섞여 있으나, 제시된 선택지 중 골수검사가 답으로 보인다.",
+    "tags": [
+      "골수검사",
+      "백혈병"
+    ],
+    "uncertain": false,
+    "raw_anchor": "1번 4세 아이... 미성숙세포 20프로... 4. Bone marrow 검사",
+    "source_page": 2,
+    "source_rank": 28,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-007",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "32개월 남아, 간비대와 창백함, PBS에서 blast 15% 관찰. 다음으로 시행해야 할 검사는?",
+    "answer": "골수검사",
+    "explanation": "원문 답: 골수검사.",
+    "enhanced_explanation": "### 핵심\n말초혈액 blast가 보이는 소아에서 골수검사로 평가.",
+    "tags": [
+      "blast",
+      "골수검사"
+    ],
+    "uncertain": false,
+    "raw_anchor": "4번 32개월 남아... PBS에서 blast 15%... 답: 골수검사",
+    "source_page": 3,
+    "source_rank": 38,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-012",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "aPTT 65초, PT 정상. 다음으로 시행해야 할 검사는?",
+    "answer": "Mixing test",
+    "explanation": "원문 답: mixing test.",
+    "enhanced_explanation": "### 핵심\n단독 aPTT 연장 시 mixing test로 결핍/억제인자 감별.",
+    "tags": [
+      "aPTT",
+      "mixing test"
+    ],
+    "uncertain": false,
+    "raw_anchor": "4번 검사에서 aPTT 65초, PT 정상 / 다음으로 시행해야 할 검사는? 답: mixing test",
+    "source_page": 3,
+    "source_rank": 43,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P04-001",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "2세 이전에 가장 흔한 악성 종양 3가지는?",
+    "answer": "신경모세포종, Wilms tumor, 망막모세포종, 원시신경내배엽종양",
+    "explanation": "원문에 네 항목이 제시됨.",
+    "enhanced_explanation": "### 주의\n문항은 3가지를 묻지만 원문 답에는 4개가 적혀 있어 그대로 보존.",
+    "tags": [
+      "소아종양"
+    ],
+    "uncertain": false,
+    "raw_anchor": "2세 이전에 가장 흔한 악성 종양 3가지 / 신경모세포종, Wilm’s tumor, 망막모세포종, 원시신경 내배엽 종양",
+    "source_page": 4,
+    "source_rank": 52,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P04-003",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "급성림프구성백혈병 진단 환아에서 예후가 나쁠 것으로 예상되는 요인은? 9세 / chromosome 44 등 제시",
+    "answer": "Chromosome 개수 44",
+    "explanation": "원문 답: chromosome 개수 44.",
+    "enhanced_explanation": "### 핵심\nALL 예후 인자 문항. 원문 정답을 그대로 보존.",
+    "tags": [
+      "ALL",
+      "예후"
+    ],
+    "uncertain": false,
+    "raw_anchor": "1번 급성림프구성백혈병... 답 chromosome 개수 44",
+    "source_page": 4,
+    "source_rank": 54,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P04-006",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "선천 골수성 부전 종류를 쓰시오.",
+    "answer": "Fanconi anemia, dyskeratosis congenita, aplastic anemia",
+    "explanation": "원문 답 그대로.",
+    "enhanced_explanation": "### 주의\n원문은 “선천 골수성 부전”이라고 되어 있으나 제시 답을 그대로 보존.",
+    "tags": [
+      "골수부전",
+      "Fanconi"
+    ],
+    "uncertain": false,
+    "raw_anchor": "1번 선천 골수성 부전 종류 / Fanconi anemia, Dyskeratosis congenita, Aplastic Anemia",
+    "source_page": 4,
+    "source_rank": 57,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P05-001",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "청소년 시기에 진단되는 암종은? ① 골육종 ② 간모세포종 ③ 신경모세포종 ④ 망막모세포종 ⑤ ALL",
+    "answer": "골육종",
+    "explanation": "원문에서 1번이 해당 답으로 배치됨.",
+    "enhanced_explanation": "### 핵심\n청소년기 암종으로 골육종을 고르는 문항.",
+    "tags": [
+      "골육종",
+      "청소년암",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "4번 청소년시기에 진단되는 암종 (야마) 1. 골육종...",
+    "source_page": 5,
+    "source_rank": 62,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P05-004",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "수술 전 검사에서 PT 1.12 INR, aPTT 60대. Mixing test 결과 aPTT 29초로 교정됨. 다음 검사는?",
+    "answer": "Factor VIII 검사",
+    "explanation": "원문 답: Factor 8 검사.",
+    "enhanced_explanation": "### 핵심\n교정되는 aPTT 연장 후 Factor VIII 검사로 이어지는 변형.",
+    "tags": [
+      "aPTT",
+      "mixing test",
+      "Factor VIII",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "2번 수술 전 시행한 검사에서... Factor 8 검사",
+    "source_page": 5,
+    "source_rank": 65,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P05-009",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "철분제 과거 복용 후에도 빈혈 지속. Thalassemia 감별 필요. 추가검사는?",
+    "answer": "원문 확인 필요",
+    "explanation": "페이지 5 해당 위치에는 정답/선지가 보이지 않음.",
+    "enhanced_explanation": "### 주의\n페이지 7 유사 문항은 혈색소 전기영동검사지만, 이 페이지의 원문 답은 공란.",
+    "tags": [
+      "소구성빈혈",
+      "thalassemia",
+      "야마"
+    ],
+    "uncertain": true,
+    "raw_anchor": "2번 철분제 지속 복용중이라는 문구 대신 과거 철분제 복용했다는 문구가 있음. 추가검사? (야마)",
+    "source_page": 5,
+    "source_rank": 70,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P05-011",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "항암제-부작용 매칭에서 틀린 것은? Vincristine-변비, Cisplatin-청력 손상, L-asparaginase-췌장염, Doxorubicin-심장 독성, Cyclophosphamide-시신경 손상",
+    "answer": "Cyclophosphamide – 시신경 손상",
+    "explanation": "원문 상 5번이 이상 매칭으로 보임.",
+    "enhanced_explanation": "### 핵심\n앞의 네 매칭은 원문 괄호 설명과 부합하고, cyclophosphamide-시신경 손상이 부적절한 매칭으로 보존됨.",
+    "tags": [
+      "항암제부작용",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "3번 항암제-부작용 매칭... 5. Cyclophosphamide – 시신경 손상",
+    "source_page": 5,
+    "source_rank": 72,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P06-001",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "항암 치료 중인 면역저하자에서 TMP/SMX 혹은 셉트린을 쓰는 이유는?",
+    "answer": "Pneumocystis jirovecii 예방",
+    "explanation": "원문 답 그대로.",
+    "enhanced_explanation": "### 핵심\n면역저하 환자의 PJP 예방 목적.",
+    "tags": [
+      "TMP-SMX",
+      "PJP",
+      "항암치료"
+    ],
+    "uncertain": false,
+    "raw_anchor": "1번 항암 치료중인 면역저하자에서 tmp/smx 혹은 셉트린... Pneumocystis jirovecii 예방",
+    "source_page": 6,
+    "source_rank": 74,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P07-002",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "12세, Hb 9.0, MCV 68, reticulocyte 3.5, PLT 155000, WBC 7800. 철분제 복용에도 빈혈 지속, thalassemia 감별 필요. 검사는?",
+    "answer": "혈색소 전기영동검사",
+    "explanation": "원문 선지 5. 혈색소 전기영동검사.",
+    "enhanced_explanation": "### 핵심\nThalassemia 감별을 위한 검사로 복기됨.",
+    "tags": [
+      "thalassemia",
+      "혈색소전기영동"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객관식 2번 ... thalassemia 감별 필요 검사는?... 5)혈색소 전기영동검사",
+    "source_page": 7,
+    "source_rank": 78,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P07-006",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "정상분만 정상체중 출생, 생후 2개월 예방접종하러 왔는데 얼굴이 창백. WBC 8700, PLT 300k, Hb 9, MCV 92. 가장 처음 고려할 진단은?",
+    "answer": "생리적 빈혈",
+    "explanation": "원문 답: 생리적 빈혈.",
+    "enhanced_explanation": "### 핵심\n생후 2개월 Hb 9 전후의 생리적 빈혈을 묻는 문항.",
+    "tags": [
+      "생리적빈혈"
+    ],
+    "uncertain": false,
+    "raw_anchor": "주관식1번 ... 생후 2개월... Hb:9, mcv: 92... 답: 생리적 빈혈",
+    "source_page": 7,
+    "source_rank": 82,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P07-011",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "14세 여아, B세포 ALL. WBC 12000, 골수 blast 90%, 염색체검사 45,X,-X[18],46,XX[16]. 예후가 나쁜 요인은?",
+    "answer": "나이",
+    "explanation": "원문 답: 나이.",
+    "enhanced_explanation": "### 핵심\n원문 메모: 성별 좋은 예후, 나이 나쁜 예후, 백혈구/모세포비율/염색체수 의미없음.",
+    "tags": [
+      "ALL",
+      "예후"
+    ],
+    "uncertain": false,
+    "raw_anchor": "2023년... 객관식 1번 14세 여아... 답 나이",
+    "source_page": 7,
+    "source_rank": 87,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P08-001",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 13-16조 pretest 3차 복기 객관식1",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "코피가 자주 나고 멍이 잘 드는 소아. Hb/WBC 정상, Plt >300,000, PT 12초, aPTT 28초, bleeding time 5분, thrombin time 10초일 때 다음으로 시행할 검사?\n1. (복기 불명)\n2. VWF:Ag\n3. Factor 7\n4. Factor 8\n5. Factor 9",
+    "answer": "VWF:Ag",
+    "explanation": "응고인자는 정상이고 bleeding time 연장 소견으로 혈소판 기능 장애/vWD 평가가 필요하다는 복기.",
+    "enhanced_explanation": "핵심: PT/aPTT/TT 정상 + BT 연장 → 혈소판 기능/vWF 쪽. 원문 답은 2번 VWF:Ag.",
+    "tags": [
+      "bleeding_time",
+      "vWD"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객관식 1번 ... BT 연장 : 혈소판 기능 장애 ... 답 : 2번",
+    "source_page": 8,
+    "source_rank": 89,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P08-004",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 13-16조 pretest 3차 복기 주관식1",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "면역 억제 소아에서 P. jiroveci를 예방하는 약물은?",
+    "answer": "TMP-SMX (bactrim)",
+    "explanation": "원문 답: TMP-SMX.",
+    "enhanced_explanation": "면역저하자 P. jirovecii 예방은 TMP-SMX가 표준으로 복기됨.",
+    "tags": [
+      "PJP",
+      "prophylaxis"
+    ],
+    "uncertain": false,
+    "raw_anchor": "면역 억제 소아 P. jiroveci 예방하는 약물은? TMP-SMX",
+    "source_page": 8,
+    "source_rank": 92,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P09-001",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "페이지 상단 잔여 문항",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "IDA와 thalassemia를 감별진단하시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 구체 답안은 페이지에 없음.",
+    "enhanced_explanation": "철결핍빈혈과 지중해빈혈 감별 문항. 원문 답안 확인 필요.",
+    "tags": [
+      "microcytic_anemia"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주관식 1번 IDA, thalassemia 감별진단",
+    "source_page": 9,
+    "source_rank": 99,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P09-002",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "페이지 상단 잔여 문항",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "빈혈 주소 환자. 말초혈액도말에서 구상적혈구, 망상적혈구 증가, 총빌리루빈 증가, Coombs 음성. 의심 질환과 다음 검사는?",
+    "answer": "Hereditary spherocytosis; 삼투압 취약성 검사",
+    "explanation": "원문에 hereditary spherocytosis 및 다음 검사 삼투압 취약성 검사로 복기.",
+    "enhanced_explanation": "Coombs 음성 용혈 + spherocyte → HS. 확인 검사로 osmotic fragility가 복기됨.",
+    "tags": [
+      "HS",
+      "osmotic_fragility"
+    ],
+    "uncertain": false,
+    "raw_anchor": "구상적혈구 ... 쿰즈검사 음성 hereditary spherocytosis 다음으로 할 검사는? 삼투압 취약성 검사",
+    "source_page": 9,
+    "source_rank": 100,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P09-006",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 17-20조 pretest 3차 복기 객관식2",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "14세 여아, 창백/어지러움, 생리 과다. Hb 5.7, MCV 66, ferritin 3, TIBC 460. 치료는?",
+    "answer": "철분 보충",
+    "explanation": "Low Hb/MCV, low ferritin, high TIBC → IDA로 복기.",
+    "enhanced_explanation": "철결핍빈혈 패턴이므로 치료는 철분 보충.",
+    "tags": [
+      "IDA"
+    ],
+    "uncertain": false,
+    "raw_anchor": "Hb: 5.7, MCV 66 ferritin 3 TIBC 460 ... 치료는? 철분 보충",
+    "source_page": 9,
+    "source_rank": 104,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P09-010",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 17-20조 pretest 3차 복기 주관식1",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "Fanconi 빈혈의 특징적인 소견 3가지 이상을 쓰시오.",
+    "answer": "작은 키, 엄지손가락 결여 또는 형성부전, 소두증, 밀크커피색 반점 등",
+    "explanation": "원문 답안.",
+    "enhanced_explanation": "Fanconi anemia 단서: 저신장, 요골/엄지 이상, 소두증, café-au-lait 반점.",
+    "tags": [
+      "Fanconi_anemia"
+    ],
+    "uncertain": false,
+    "raw_anchor": "판코니 빈혈 ... 작은 키, 엄지손가락 결여 또는 형성부전, 소두증, 밀크 커피색 반점",
+    "source_page": 9,
+    "source_rank": 108,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P09-015",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 17-20조 pretest 3차 복기 객관식1",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "12세 남아 창백. 최근 감기, 어머니 지라절제술 병력. BP 90/50, HR112. WBC 6400, RBC 6.2, Plt 390000, retic 1.1%, Coombs 음성, PBS central pallor 없는 RBC 다수(HS). 즉각 처치는?",
+    "answer": "적혈구 수혈",
+    "explanation": "저혈압/빈혈 증상 및 HS 복기. 원문 답으로 적혈구 수혈 표시.",
+    "enhanced_explanation": "증상성/급성 빈혈 상황으로 pRBC 수혈이 복기 답.",
+    "tags": [
+      "HS",
+      "transfusion"
+    ],
+    "uncertain": false,
+    "raw_anchor": "즉각적으로 처치해야 할 것은? ... 1. 적혈구수혈",
+    "source_page": 9,
+    "source_rank": 113,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P10-001",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 1-4조 pretest 3차 복기 객1",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "조혈모세포 이식 때 예방적으로 쓰는 항생제/항바이러스제 조합으로 맞는 것은?\n1 CMV-foscarnet\n2 E.coli-imipenem\n3 C.difficile-metronidazole\n4 P.jirovecii-ampicillin/sulbactam\n5 VZV-acyclovir",
+    "answer": "VZV - acyclovir",
+    "explanation": "원문 선지 중 명확한 예방 조합은 VZV-acyclovir로 판단.",
+    "enhanced_explanation": "주의: P. jirovecii 예방은 TMP-SMX이지 ampicillin/sulbactam이 아님.",
+    "tags": [
+      "HSCT",
+      "prophylaxis"
+    ],
+    "uncertain": false,
+    "raw_anchor": "조혈모세포 이식 할때 예방적으로 쓰는 항생제 ... 5. vzv-acyclovir",
+    "source_page": 10,
+    "source_rank": 114,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P10-002",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 1-4조 pretest 3차 복기 객2",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "32개월 다운증후군. 창백, 간비비대. WBC 37000, Hb 9.8, Plt 13000, blast 15% → myeloproliferative disorder. 옳은 설명은?",
+    "answer": "GATA1 gene 관련",
+    "explanation": "원문에 GATA1 gene 및 거대핵모구 백혈병 관련이 표시됨.",
+    "enhanced_explanation": "다운증후군 관련 transient abnormal myelopoiesis/MPD에서 GATA1 변이가 단서.",
+    "tags": [
+      "Down_syndrome",
+      "GATA1"
+    ],
+    "uncertain": false,
+    "raw_anchor": "Blast 15% → myeloproliferative disorder ... GATA1 gene",
+    "source_page": 10,
+    "source_rank": 115,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P10-006",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 1-4조 pretest 3차 복기 주1",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "ALL 치료를 간단히 기술하시오.",
+    "answer": "관해유도: vincristine, prednisone, L-asparaginase 복합요법. 공고요법/관해유지: MTX, 6-mercaptopurine 추가. 지속적 면역결핍 예상 시 TMP-SMX 예방. 조혈모세포이식: 표준위험군 ALL 재발 후 두 번째 관해, 고위험군 첫 번째 관해 시.",
+    "explanation": "원문 답안 및 홍창의 12판 17장 종양질환 975-976p 출처.",
+    "enhanced_explanation": "구조: induction → consolidation/maintenance → 감염예방 → HSCT 적응증.",
+    "tags": [
+      "ALL",
+      "chemotherapy"
+    ],
+    "uncertain": false,
+    "raw_anchor": "ALL 치료 간단히 ... vincristine, prednisone, L-asparaginase ... MTX, 6-mercaptopurine",
+    "source_page": 10,
+    "source_rank": 119,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P10-010",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 1-4조 pretest 3차 복기 주5",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "혈소판 및 적혈구 수혈 제제의 목적을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "의국회의 문항으로 답안이 페이지에 없음.",
+    "enhanced_explanation": "수혈제제 목적의 구체 문구는 원문 확인 필요.",
+    "tags": [
+      "transfusion"
+    ],
+    "uncertain": true,
+    "raw_anchor": "혈소판 및 적혈구 수혈 제제의 목적",
+    "source_page": 10,
+    "source_rank": 123,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-002",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 25-28조 객1",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "8세 남아 ALL. WBC 25000, 말초 모세포 10%, 골수 모세포 90%, B-ALL, 46XY. 예후가 좋을 것으로 예상되는 요인은?",
+    "answer": "환자 나이",
+    "explanation": "ALL 예후인자 중 1-10세 연령은 좋은 예후.",
+    "enhanced_explanation": "원문 답안 표시는 없으나 선지 중 8세는 좋은 예후 인자에 해당.",
+    "tags": [
+      "ALL",
+      "prognosis"
+    ],
+    "uncertain": false,
+    "raw_anchor": "이 환자에서 예후가 좋을 것으로 예상되는 요인은? 1) 환자나이",
+    "source_page": 11,
+    "source_rank": 125,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-003",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 25-28조 객2",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "생후 24개월 다운증후군 야마 유사 문항. 1번 보기가 GATA1 유전자로 바뀌고 나머지는 비슷.",
+    "answer": "GATA1 관련",
+    "explanation": "원문에 “야마 유사” 및 GATA1 보기 변경만 제시.",
+    "enhanced_explanation": "다운증후군 transient myeloproliferative disorder/AML 관련 GATA1 포인트.",
+    "tags": [
+      "Down_syndrome",
+      "GATA1"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객2. (야마 유사) 생후 24개월 다운증후군. 1번 보기 GATA1",
+    "source_page": 11,
+    "source_rank": 126,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-006",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 25-28조 주1",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "Microcytic anemia 감별진단 3가지 이상을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안 없음.",
+    "enhanced_explanation": "철결핍빈혈, 지중해빈혈 등 감별을 묻는 문항이나 원문 답안 확인 필요.",
+    "tags": [
+      "microcytic_anemia"
+    ],
+    "uncertain": true,
+    "raw_anchor": "microcytic anemia 감별진단 3가지 이상",
+    "source_page": 11,
+    "source_rank": 129,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-007",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 25-28조 주2",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "생후 10개월 남아 상복부 덩이. 감별해야 할 악성종양 2가지를 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안 없음.",
+    "enhanced_explanation": "소아 복부종괴 악성종양 감별 문항. 원문 확인 필요.",
+    "tags": [
+      "abdominal_mass"
+    ],
+    "uncertain": true,
+    "raw_anchor": "상복부 덩이 ... 악성종양 2가지",
+    "source_page": 11,
+    "source_rank": 130,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-011",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 29-32조 객1",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "면역저하자에서 감염될 수 있는 병원체와 예방적 항생제 묶음으로 옳은 것을 고르시오.",
+    "answer": "P. jirovecii - TMP-SMX",
+    "explanation": "원문 답안.",
+    "enhanced_explanation": "PJP 예방 = TMP-SMX.",
+    "tags": [
+      "PJP",
+      "prophylaxis"
+    ],
+    "uncertain": false,
+    "raw_anchor": "P jiroveci, TMP-SMX",
+    "source_page": 11,
+    "source_rank": 134,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-012",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 29-32조 객2",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "저신장, 어릴 때부터 숨참, 엄마가 아랍계, MCV 65 fL, Hb 9인 6세 남아. 진단을 위해 할 검사?",
+    "answer": "혈색소 전기영동검사",
+    "explanation": "지중해빈혈 의심 복기.",
+    "enhanced_explanation": "Microcytosis + 아랍계 가족력 → thalassemia; Hb electrophoresis.",
+    "tags": [
+      "thalassemia"
+    ],
+    "uncertain": false,
+    "raw_anchor": "아마도 지중해성 빈혈 ... 혈색소 전기영동검사",
+    "source_page": 11,
+    "source_rank": 135,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-016",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 29-32조 주1",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "MCV 작은 빈혈 환자에서 할 수 있는 혈액검사 4가지 이상을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안 없음.",
+    "enhanced_explanation": "원문 검사 목록 확인 필요.",
+    "tags": [
+      "microcytic_anemia"
+    ],
+    "uncertain": true,
+    "raw_anchor": "MCV 작은 빈혈환자 할수있는 혈액검사 4가지 이상",
+    "source_page": 11,
+    "source_rank": 139,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-020",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 33-36조 객1",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "aPTT 연장, mixing test 시 교정. 추가 검사는?",
+    "answer": "Factor 9 검사",
+    "explanation": "원문 답: factor 9 검사. intrinsic pathway 이상으로 8/9/11/12 평가 가능.",
+    "enhanced_explanation": "Mixing correction → factor deficiency. 복기 답은 factor 9.",
+    "tags": [
+      "aPTT",
+      "hemophilia"
+    ],
+    "uncertain": false,
+    "raw_anchor": "aPTT연장, mixing test시 교정, 추가검사? factor 9 검사",
+    "source_page": 11,
+    "source_rank": 143,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-021",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 33-36조 객2",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "36개월 hereditary spherocytosis 사진 제시. 치료는?",
+    "answer": "엽산",
+    "explanation": "원문 답: 엽산.",
+    "enhanced_explanation": "HS에서 만성 용혈로 folate 보충이 복기됨.",
+    "tags": [
+      "HS"
+    ],
+    "uncertain": false,
+    "raw_anchor": "36개월 HS 사진 주고 치료는? 엽산",
+    "source_page": 11,
+    "source_rank": 144,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-025",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 33-36조 주1",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "면역저하자 수혈 시 반드시 필요한 조치 2가지는?",
+    "answer": "방사선 조사, 백혈구 여과 제거",
+    "explanation": "원문 답안.",
+    "enhanced_explanation": "면역저하자 수혈 관련 조치로 irradiation/leukoreduction이 복기됨.",
+    "tags": [
+      "transfusion"
+    ],
+    "uncertain": false,
+    "raw_anchor": "면역저하자 수혈시 ... 방사선 조사, 백혈구 여과 제거",
+    "source_page": 11,
+    "source_rank": 148,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-026",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 33-36조 주2",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "소아청소년기 급성림프모구백혈병의 치료에 대해 기술하시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안 없음. 페이지 10 주1 유사 답안 참고 가능하나 이 카드 자체 답은 원문 확인 필요.",
+    "enhanced_explanation": "ALL 치료 기술형 문항. 원문 답안 확인 필요.",
+    "tags": [
+      "ALL"
+    ],
+    "uncertain": true,
+    "raw_anchor": "소아청소년기 급성림프모구백혈병의 치료에 대해 기술",
+    "source_page": 11,
+    "source_rank": 149,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P12-004",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 37-40조 객1",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "10대 이후 주로 발생하는 암은?\n1 골육종 2 윌름종양 3 신경모세포종 4 간모세포종 5 망막모세포종",
+    "answer": "골육종",
+    "explanation": "10대 이후 호발 암으로 골육종이 적합.",
+    "enhanced_explanation": "다른 선지는 주로 더 어린 연령에서 흔함.",
+    "tags": [
+      "osteosarcoma"
+    ],
+    "uncertain": false,
+    "raw_anchor": "10대 이후 주로 발생하는 암은 1) 골육종",
+    "source_page": 12,
+    "source_rank": 153,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P12-005",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 37-40조 객2",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "15세 여아. 철결핍빈혈로 철분제 한 달 복용 후 중단, 겨울방학에 빈혈 재발. 여름/겨울 모두 microcytic, ferritin 낮음. 해야 할 조치는?",
+    "answer": "철분제",
+    "explanation": "원문 선지 중 철분제가 답으로 복기됨.",
+    "enhanced_explanation": "철결핍빈혈 재발/치료 부족 상황으로 철분 치료 지속.",
+    "tags": [
+      "IDA"
+    ],
+    "uncertain": false,
+    "raw_anchor": "철결핍빈혈 ... 빈혈 재발 ... 2) 철분제",
+    "source_page": 12,
+    "source_rank": 154,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P12-009",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 37-40조 주1",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "소아청소년암 환자의 후기 합병증 3가지 이상을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안 없음.",
+    "enhanced_explanation": "후기 합병증 목록은 원문 확인 필요.",
+    "tags": [
+      "cancer_late_effects"
+    ],
+    "uncertain": true,
+    "raw_anchor": "소아청소년암 환자의 후기 합병증",
+    "source_page": 12,
+    "source_rank": 158,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P12-010",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 37-40조 주2",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "aPTT 증가. 다음 시행할 검사는?",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안 없음. 페이지 11 유사 문항은 factor 9 검사.",
+    "enhanced_explanation": "유사 복기상 factor assay 가능하나 이 문항의 원문 답은 확인 필요.",
+    "tags": [
+      "aPTT"
+    ],
+    "uncertain": true,
+    "raw_anchor": "APTT증가함. 다음 시행할 검사는?",
+    "source_page": 12,
+    "source_rank": 159,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P13-004",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 21-24조 주1",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "수혈 중 발열, 오한이 있을 때 처치는?",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안 없음.",
+    "enhanced_explanation": "수혈반응 처치 문항. 원문 답안 확인 필요.",
+    "tags": [
+      "transfusion_reaction"
+    ],
+    "uncertain": true,
+    "raw_anchor": "수혈하는 상황에서 발열, 오한이 있을 때 처치는?",
+    "source_page": 13,
+    "source_rank": 166,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-001",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 5-8조 객1",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "4세 여아 2주 발열, 간비비대, WBC 55000, Hb 4.5, Plt 25000, PBS 모세포 10%, 골수 B모세포 90%로 ALL, 염색체 46XX. 예후 평가 인자 중 이 증례에서 불량/관련 인자는?\n1 나이 2 진단 시 WBC 3 말초혈액 모세포비율 4 골수 모세포비율 5 염색체",
+    "answer": "진단 시 혈액검사 백혈구 수",
+    "explanation": "원문 답 표시는 없으나 ALL 예후에서 높은 WBC는 불량 인자. 4세 나이는 좋은 예후, 46XX는 특별한 좋은 예후 아님.",
+    "enhanced_explanation": "복기상 정확 답 표시는 없어 해석 기반.",
+    "tags": [
+      "ALL",
+      "prognosis"
+    ],
+    "uncertain": false,
+    "raw_anchor": "WBC 55000 ... 예후 ... 진단 시 혈액검사 백혈구 수",
+    "source_page": 14,
+    "source_rank": 171,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-007",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 5-8조 주2",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "생후 10개월. Microcytic hypochromic anemia의 감별진단 3가지 이상을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안 없음.",
+    "enhanced_explanation": "원문 확인 필요.",
+    "tags": [
+      "microcytic_anemia"
+    ],
+    "uncertain": true,
+    "raw_anchor": "Microcytic hypochromic anemia의 감별진단 3가지 이상",
+    "source_page": 14,
+    "source_rank": 177,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-010",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 5-8조 주5",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "Neuroblastoma 위험군 분류 기준 4가지 이상과 최근 치료약제로 새롭게 사용되는 단일클론항체를 쓰시오.",
+    "answer": "단일클론항체: GD2 antibody. 위험군 분류 기준은 원문 확인 필요",
+    "explanation": "원문에 단일클론항체 답만 명시. 위험군 기준 답안은 없음.",
+    "enhanced_explanation": "GD2 antibody는 보존. 위험군 기준은 원문 확인 필요.",
+    "tags": [
+      "neuroblastoma",
+      "GD2"
+    ],
+    "uncertain": true,
+    "raw_anchor": "Neuroblastoma의 위험군 ... 단일클론항체 답은 GD2 antibody",
+    "source_page": 14,
+    "source_rank": 180,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-011",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 9-12조 객1",
+    "priority": "high",
+    "official_unit": "혈액-종양",
+    "question": "24개월 남아 늘어짐. 최근 감기. 어머니 담낭절제술 병력. Plt 27k, retic 2%, Coombs 음성, PBS spherocytosis. 치료는?",
+    "answer": "적혈구 수혈(pRBC)",
+    "explanation": "원문 설명: HS인데 감기 후 현저히 낮은 retic으로 적혈구 생산 저하, 급한 처치로 pRBC 필요.",
+    "enhanced_explanation": "HS aplastic crisis 의심 상황에서는 수혈.",
+    "tags": [
+      "HS",
+      "aplastic_crisis"
+    ],
+    "uncertain": false,
+    "raw_anchor": "HS ... reticulocyte 2% ... 치료는? 적혈구 수혈",
+    "source_page": 14,
+    "source_rank": 181,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-014",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 9-12조 주1",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "18개월 소아에서 상복부 덩이가 만져질 때 감별해야 할 악성종양 2가지를 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안 없음.",
+    "enhanced_explanation": "원문 확인 필요.",
+    "tags": [
+      "abdominal_mass"
+    ],
+    "uncertain": true,
+    "raw_anchor": "18개월 소아에서 상복부 덩이 ... 악성종양 2가지",
+    "source_page": 14,
+    "source_rank": 184,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-019",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 13-16조 객1",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "6세 남아. 혈액검사 이상, 저신장, 소두/역삼각형 얼굴, 커피반점, Hb 8.5 WBC 2800 Plt 55000. 진단 위해 필요한 검사는?",
+    "answer": "염색체 파손 검사",
+    "explanation": "Fanconi anemia 의심.",
+    "enhanced_explanation": "골수부전 + 저신장/소두/카페오레 반점 → Fanconi anemia; chromosome breakage test.",
+    "tags": [
+      "Fanconi_anemia"
+    ],
+    "uncertain": false,
+    "raw_anchor": "염색체 파손 검사",
+    "source_page": 14,
+    "source_rank": 189,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-020",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 13-16조 객2",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "14세 여아, 겨울 철결핍빈혈로 1달 약 복용 후 회복, 여름 재발. Hb 8.3, MCV 65, ferritin 15, TIBC 460. 진단/원인은?",
+    "answer": "철복용기간 부족",
+    "explanation": "원문 선지 중 4. 철복용기간이 답으로 보임.",
+    "enhanced_explanation": "철분은 Hb 회복 후에도 저장철 보충을 위해 지속해야 함.",
+    "tags": [
+      "IDA"
+    ],
+    "uncertain": false,
+    "raw_anchor": "겨울에 철결핍빈혈 ... 1달정도 약 복용 후 회복 ... 여름에 재발 ... 4. 철복용기간",
+    "source_page": 14,
+    "source_rank": 190,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-024",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 13-16조 주1",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "면역저하자에서 RBC 수혈할 때 취해야 할 조치 2가지는?",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안이 다음 페이지로 이어질 가능성. 페이지 11 유사 답: 방사선 조사, 백혈구 여과 제거.",
+    "enhanced_explanation": "이 카드의 원문 답은 확인 필요.",
+    "tags": [
+      "transfusion"
+    ],
+    "uncertain": true,
+    "raw_anchor": "면역저하자에서 rbc 수혈할 때 취해야 할 조치 2가지",
+    "source_page": 14,
+    "source_rank": 194,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-005",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "2개월 영아가 창백해 보여 검사했다. 38주 3500g 출생, 모유수유 중, Hb 9.5, WBC/PLT 정상, MCV 82, reticulocyte 1.1%. 처치는?\n1 경과관찰 2 엽산 3 철분제 4 적혈구 수혈 5 모유수유중단",
+    "answer": "1. 경과관찰",
+    "explanation": "객1. 2개월 아이... Hb 9.5 wbc plt normal MCV 82 reticulocyte 1.1% / 1. 경과관찰 ...",
+    "enhanced_explanation": "생후 2개월 전후 경한 빈혈과 정상 MCV, 낮은 망상적혈구는 원문 선택지상 경과관찰 카드로 정리했습니다.",
+    "tags": [
+      "physiologic_anemia"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객1. 2개월 아이... Hb 9.5 wbc plt normal MCV 82 reticulocyte 1.1% / 1. 경과관찰 ...",
+    "source_page": 15,
+    "source_rank": 199,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-008",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "소아 항암제와 부작용 연결이 알맞은 것은?\n1 빈크리스틴-말초신경증 2 시스플라틴-출혈성방광염 3 L-asparaginase-심부전 4 독소루비신-쿠싱증후군 5 cyclophosphamide-청력이상",
+    "answer": "1. 빈크리스틴-말초신경증",
+    "explanation": "객5. 소아 항암제와 부작용이 알맞게 연결된 것? 1.빈크리스틴-말초신경증...",
+    "enhanced_explanation": "원문 선택지 중 빈크리스틴-말초신경증 연결을 정답으로 보존했습니다.",
+    "tags": [
+      "chemo_adverse"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객5. 소아 항암제와 부작용이 알맞게 연결된 것? 1.빈크리스틴-말초신경증...",
+    "source_page": 15,
+    "source_rank": 202,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-009",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "5개월 남아, 몸통에 멍이 많고 aPTT 연장, mixing test 결과 정상 교정. 다음으로 할 검사 2가지는?",
+    "answer": "원문 확인 필요",
+    "explanation": "주1. 5개월 남아, 몸통에 멍이 많음. aPPT 연장, mixing test 결과 정상 교정. 다음으로 할 검사 2가지?",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "aptt_mixing"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주1. 5개월 남아, 몸통에 멍이 많음. aPPT 연장, mixing test 결과 정상 교정. 다음으로 할 검사 2가지?",
+    "source_page": 15,
+    "source_rank": 203,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-012",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "수혈 시 발열이 났을 때 조치를 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주4. 수혈 시 발열이 났을 때 조치",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "transfusion_fever"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주4. 수혈 시 발열이 났을 때 조치",
+    "source_page": 15,
+    "source_rank": 206,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-014",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "생후 6일 다운증후군 신생아가 복부팽만으로 내원. WBC 44,000, Hb 9.8, PLT 감소, peripheral blood blast 15%. 옳은 설명은?\n1 MLL 유전자 2 주로 ALL로 진단 3 3개월 내 자연 치유 4 10년 이상 표적치료 5 빈크리스틴 포함 항암화학요법",
+    "answer": "3. 3개월 내 자연 치유",
+    "explanation": "객1. 생후 6일 다운증후군... blast 15%... 3. 3개월 내 자연 치유",
+    "enhanced_explanation": "다운증후군 신생아의 일과성 비정상 골수증식 관련 문항으로, 원문 선택지의 자연 호전 설명을 보존했습니다.",
+    "tags": [
+      "down_transient_abnormal_myelopoiesis"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객1. 생후 6일 다운증후군... blast 15%... 3. 3개월 내 자연 치유",
+    "source_page": 15,
+    "source_rank": 208,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-015",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "환자 설명 후 mixing test 이후 진행할 검사는?\n1 골수생검 2 factor VII 3 factor VIII 4 vitamin K 5 anti-cardiolipin Ab",
+    "answer": "원문 확인 필요",
+    "explanation": "객2. (환자설명) mixing test 이후 진행할 검사는? 1 골수생검 2 factor vii 3 factor viii 4 vitamin K 5 anti-cardiolipin ab",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "mixing_test_next"
+    ],
+    "uncertain": true,
+    "raw_anchor": "객2. (환자설명) mixing test 이후 진행할 검사는? 1 골수생검 2 factor vii 3 factor viii 4 vitamin K 5 anti-cardiolipin ab",
+    "source_page": 15,
+    "source_rank": 209,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-019",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "ALL의 나쁜 예후를 나타내는 소견 3가지 이상을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주1. ALL 나쁜 예후 나타내는 소견 3가지 이상 쓰시오",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "all_poor_prognosis"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주1. ALL 나쁜 예후 나타내는 소견 3가지 이상 쓰시오",
+    "source_page": 15,
+    "source_rank": 213,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-026",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "Wilms 종양에서 동반증상 3가지를 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주관식 4번 wilm 종양에서 동반증상 3가지(야마)",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "wilms_symptoms"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주관식 4번 wilm 종양에서 동반증상 3가지(야마)",
+    "source_page": 16,
+    "source_rank": 220,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-031",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "18개월 여아 복부팽만, 2주 전부터 양쪽 눈 아래 멍, 윗배 단단한 덩어리. CT 및 검사에서 VMA 698 mg. 예후를 보기 위해 해야 할 검사는?\n1 N-myc 2 p53 3 NF1 4 RB 5 BRAF",
+    "answer": "1. N-myc",
+    "explanation": "18개월 된 여아... 소변 바닐릴만델산 698mg... 예후를 보기 위해 해야할 검사는? 1. N-myc",
+    "enhanced_explanation": "신경모세포종 예후인자 문항으로 원문 선택지를 보존했습니다.",
+    "tags": [
+      "neuroblastoma_nmyc"
+    ],
+    "uncertain": false,
+    "raw_anchor": "18개월 된 여아... 소변 바닐릴만델산 698mg... 예후를 보기 위해 해야할 검사는? 1. N-myc",
+    "source_page": 16,
+    "source_rank": 225,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-033",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "Microcytic hypochromic anemia의 감별진단을 3가지 이상 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주관식) microcytic hypochromic anemia의 감별진단을 세가지 이상 쓰시오",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "microcytic_hypochromic_ddx"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주관식) microcytic hypochromic anemia의 감별진단을 세가지 이상 쓰시오",
+    "source_page": 16,
+    "source_rank": 227,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-039",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "항암요법 중인 환자에서 기회감염 예방을 위해 투여하는 항생제와 원인균 연결은?\n1 CMV-ganciclovir 2 E. coli-imipenem 3 VZV-acyclovir 4 P. jiroveci-bactrim",
+    "answer": "4. P. jiroveci – bactrim",
+    "explanation": "객관식) 항암요법 시행중인 환자 기회감염 예방... 4) p. jiroveci – bactrim",
+    "enhanced_explanation": "원문 선택지상 P. jiroveci 예방에 bactrim 연결을 보존했습니다.",
+    "tags": [
+      "pcp_prophylaxis"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객관식) 항암요법 시행중인 환자 기회감염 예방... 4) p. jiroveci – bactrim",
+    "source_page": 16,
+    "source_rank": 233,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-046",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.17",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "표준위험군 급성림프모구백혈병 관해유도 약제 3개 이상을 쓰시오.",
+    "answer": "Vincristine, Prednisone, L-asparaginase",
+    "explanation": "표준위험군 급성림프모구백혈병 관해유도 약제... Vincristine, Prednisone, L-asparaginase(홍창의 소아과학)",
+    "enhanced_explanation": "원문 답을 그대로 보존했습니다.",
+    "tags": [
+      "all_induction"
+    ],
+    "uncertain": false,
+    "raw_anchor": "표준위험군 급성림프모구백혈병 관해유도 약제... Vincristine, Prednisone, L-asparaginase(홍창의 소아과학)",
+    "source_page": 17,
+    "source_rank": 240,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-056",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.18",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "범혈구감소증, 엄지손가락 없음, 소두증, 저신장이 있을 때 가능성 높은 진단은?",
+    "answer": "Fanconi 빈혈",
+    "explanation": "주관식 4번. 범혈구감소증, 엄지손가락 없는 기형, 소두증, 저신장 가능성높은 진단? 답 fanconi 빈혈",
+    "enhanced_explanation": "원문 답을 그대로 보존했습니다.",
+    "tags": [
+      "fanconi_anemia"
+    ],
+    "uncertain": false,
+    "raw_anchor": "주관식 4번. 범혈구감소증, 엄지손가락 없는 기형, 소두증, 저신장 가능성높은 진단? 답 fanconi 빈혈",
+    "source_page": 18,
+    "source_rank": 250,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-060",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.18",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "ALL에서 나쁜 예후를 나타내는 것은? 선택지 일부: 1 7세, 2 남아, 3 백혈구 25,000개, 4 TEM/AML 재배열, 5 골수검사 시 모세포 비율.",
+    "answer": "원문 확인 필요",
+    "explanation": "객관식 4번. ALL에서 나쁜 예후를 나타내는 것은? 1.7세 2. 남아 3. 검사 결과 백혈구 25000개 4. TEM/AML 재배열 5. 골수검사시 모세포 비율",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "all_poor_prognosis_mcq"
+    ],
+    "uncertain": true,
+    "raw_anchor": "객관식 4번. ALL에서 나쁜 예후를 나타내는 것은? 1.7세 2. 남아 3. 검사 결과 백혈구 25000개 4. TEM/AML 재배열 5. 골수검사시 모세포 비율",
+    "source_page": 18,
+    "source_rank": 254,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-065",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.18",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "유전구상적혈구증 의심 환자에서 PBS상 구상적혈구, 망상적혈구 증가, 총빌리루빈 증가. 다음 할 검사는?",
+    "answer": "삼투압취약성 검사",
+    "explanation": "주관식 4번... 답: 삼투압취약성 검사",
+    "enhanced_explanation": "원문 답을 그대로 보존했습니다.",
+    "tags": [
+      "hereditary_spherocytosis_test"
+    ],
+    "uncertain": false,
+    "raw_anchor": "주관식 4번... 답: 삼투압취약성 검사",
+    "source_page": 18,
+    "source_rank": 259,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-073",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "3세 아이가 감기 후 회복되어 아파 보이지 않으나 몸에 멍이 많다. Hb 11.8, WBC 5300, PLT 5000. 치료는?\n1 전혈 수혈 2 혈소판 수혈 5 IVIG",
+    "answer": "5. IVIG",
+    "explanation": "객5. 3세 아이... 혈소판 5000... 치료는?... 5. IVIG",
+    "enhanced_explanation": "ITP 양상 문항으로 원문 선택지 IVIG를 답으로 정리했습니다.",
+    "tags": [
+      "itp_ivig"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객5. 3세 아이... 혈소판 5000... 치료는?... 5. IVIG",
+    "source_page": 19,
+    "source_rank": 267,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-078",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "소아 급성림프구성 백혈병에서 예후 불량인자 5개 이상을 서술하시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주4. 소아 급성림프구성 백혈병에서 예후 불량인자 5개 이상 서술하세요",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "all_poor_prognosis_5"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주4. 소아 급성림프구성 백혈병에서 예후 불량인자 5개 이상 서술하세요",
+    "source_page": 19,
+    "source_rank": 272,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-079",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "선천용혈빈혈을 3가지로 분류하고, 각각 질병 예시를 하나 이상 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주5. 선천용혈빈혈을 3가지로 분류하고, 각각 질병 예시를 하나 이상 쓰시오",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "congenital_hemolytic_anemia"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주5. 선천용혈빈혈을 3가지로 분류하고, 각각 질병 예시를 하나 이상 쓰시오",
+    "source_page": 19,
+    "source_rank": 273,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-091",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.20",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "9세 여아 복부팽만/단단함, 2차 성징 없음. 우측 난소 위치에 석회화 포함 8 cm 이상 낭성 덩이, AFP 정상, β-hCG 정상. 진단은?\n1 배아암종 2 성숙기형종 3 과립막세포종 4 이상종자세포종 5 내배엽동 종양",
+    "answer": "2. 성숙기형종",
+    "explanation": "객5) 9세 여아... 석회화 병변... AFP 정상... beta-hCG 정상... 2. 성숙기형종",
+    "enhanced_explanation": "석회화 포함 난소 종괴와 정상 종양표지자 단서로 원문 선택지를 보존했습니다.",
+    "tags": [
+      "mature_teratoma"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객5) 9세 여아... 석회화 병변... AFP 정상... beta-hCG 정상... 2. 성숙기형종",
+    "source_page": 20,
+    "source_rank": 285,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-094",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.20",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "신경모세포종 진단을 위해 시행하는 검사 중 진단검사의학과로 나가는 검사 3가지를 모두 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주3) 신경모세포종의 진단을 위하여 시행하는 검사 중 진단검사의학과로 나가는 검사 3가지를 모두 쓰시오.",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "neuroblastoma_lab_tests"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주3) 신경모세포종의 진단을 위하여 시행하는 검사 중 진단검사의학과로 나가는 검사 3가지를 모두 쓰시오.",
+    "source_page": 20,
+    "source_rank": 288,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-095",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.20",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "급성림프모구백혈병으로 항암치료를 받는 소아 환자에서 사용하는 예방적 항생제를 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주4) 급성림프모구백혈병으로 항암치료를 받는 소아 환자에서 사용하는 예방적 항생제를 쓰시오.",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "all_prophylactic_antibiotic"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주4) 급성림프모구백혈병으로 항암치료를 받는 소아 환자에서 사용하는 예방적 항생제를 쓰시오.",
+    "source_page": 20,
+    "source_rank": 289,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-097",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.21",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "4세 여아, Hb 9.2 외 다른 소견 정상. PBS상 저색소성 소구성 빈혈. 경구 철분치료 3개월 후 빈혈 호전 없음. 추가로 필요한 검사는? 선택지: 혈중납, 혈색소전기영동, 혈중 vitamin B12, 골수검사, 삼투압취약성검사.",
+    "answer": "원문 확인 필요",
+    "explanation": "5. 4세 여아. Hb9.2... 경구철분치료 3개월 후 빈혈 호전 없음. 추가로 필요한 검사? 혈중납 / 혈색소전기영동 / 혈중 vit.B12 / 골수검사 / 삼투압취약성검사",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "microcytic_no_iron_response"
+    ],
+    "uncertain": true,
+    "raw_anchor": "5. 4세 여아. Hb9.2... 경구철분치료 3개월 후 빈혈 호전 없음. 추가로 필요한 검사? 혈중납 / 혈색소전기영동 / 혈중 vit.B12 / 골수검사 / 삼투압취약성검사",
+    "source_page": 21,
+    "source_rank": 291,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-100",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.21",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "철결핍빈혈에서 철분 복용 후 반응을 시간순으로 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "[주관식] 3. 철결피빈혈애서 철먹고 반응 시간순으로",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "iron_response_timeline"
+    ],
+    "uncertain": true,
+    "raw_anchor": "[주관식] 3. 철결피빈혈애서 철먹고 반응 시간순으로",
+    "source_page": 21,
+    "source_rank": 294,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-102",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.21",
+    "priority": "medium",
+    "official_unit": "혈액-종양",
+    "question": "신생아 수혈 시에는 ( ) 조사 혈액제제, ( ) 제거 혈액을 사용하며 적정 용량은 ( ) mL/kg이다.",
+    "answer": "원문 확인 필요",
+    "explanation": "[주관식] 5. 신생아에서 수혈 시에는( )조사 혈액제제, ( ) 제거 혈액을 사용하며 적정 용량은 ( )ml/kg 이다 / 傘선 백 사 5",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "neonate_transfusion_product"
+    ],
+    "uncertain": true,
+    "raw_anchor": "[주관식] 5. 신생아에서 수혈 시에는(   )조사 혈액제제, (   ) 제거 혈액을 사용하며 적정 용량은 (   )ml/kg 이다 / 傘선 백 사 5",
+    "source_page": 21,
+    "source_rank": 296,
+    "official_chapter": "혈액-종양"
+  },
+  {
+    "id": "PEDS3-YAMA-P02-001",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "신요로",
+    "question": "신증후군 치료 중인 4세 여아가 갑자기 복통과 다량 혈뇨를 보임. 혈압 83/48, Alb 1.2, Protein 4+, RBC many, UPCR 3.4. 질환은?",
+    "answer": "Renal vein thrombosis",
+    "explanation": "원문 정답: Renal vein thrombosis.",
+    "enhanced_explanation": "### 핵심\n신증후군 환자에서 급성 복통과 혈뇨가 동반된 혈전 합병증으로 제시됨.",
+    "tags": [
+      "신증후군",
+      "renal vein thrombosis"
+    ],
+    "uncertain": false,
+    "raw_anchor": "7. 신증후군으로 치료를 받던 4세 여아... 질환은? 정답 : Renal vein thrombosis",
+    "source_page": 2,
+    "source_rank": 16,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P02-003",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "2단계 고혈압 이상에서 구토, 두통 등 증상이 동반되고 뇌병증/망막병증/심부전 위험이 있는 고혈압 상태를 일컫는 용어는?",
+    "answer": "Hypertensive emergency",
+    "explanation": "원문 답: HTN emergency.",
+    "enhanced_explanation": "### 핵심\n증상과 표적장기 손상 위험이 있는 중증 고혈압 상태의 명칭을 묻는다.",
+    "tags": [
+      "고혈압",
+      "의국회의"
+    ],
+    "uncertain": false,
+    "raw_anchor": "(의국회의 문제)10. 2단계 고혈압... 답 : HTN emergency",
+    "source_page": 2,
+    "source_rank": 18,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P02-009",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "단백뇨 평가 관련 문항. 정답으로 제시된 검사는?",
+    "answer": "단회뇨 단백질/크레아티닌 비",
+    "explanation": "원문 정답: 단회뇨 단백질/크레아티닌.",
+    "enhanced_explanation": "### 주의\n페이지 2 원문은 주변 stem이 OCR로 흐려져 있으므로 raw anchor를 보존.",
+    "tags": [
+      "단백뇨",
+      "UPCR"
+    ],
+    "uncertain": false,
+    "raw_anchor": "2번 ... 정답 : 단회뇨 단백질/크레아티닌",
+    "source_page": 2,
+    "source_rank": 24,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P02-016",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "신증후군 증례인데 CVAT 언급 없고, 복부 Td/rTd(-), 혈압 80/50. 진단은?",
+    "answer": "원문 확인 필요",
+    "explanation": "옆에 “7번 문제 증례”라고 되어 있으나 정답이 명시되지 않음.",
+    "enhanced_explanation": "### 주의\n비슷한 앞 문항은 renal vein thrombosis지만 이 변형의 원문 답은 공란.",
+    "tags": [
+      "신증후군",
+      "복통"
+    ],
+    "uncertain": true,
+    "raw_anchor": "7번 신증후군 증례인데 CVAT 언급 없고, 복부 Td/rTd(-), 혈압 80/50이었음. 진단은?",
+    "source_page": 2,
+    "source_rank": 31,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-008",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "발열/변비, 신기능 저하 없음. UA blood(+), nitrite(+), microscopy WBC many/HPF. UTI의 가장 흔한 원인균은?",
+    "answer": "E. coli",
+    "explanation": "원문에는 E.coli O157:H7로 적혀 있음.",
+    "enhanced_explanation": "### 주의\n원문 표기는 “E.coli O157:H7”이나 UTI 원인균 문맥의 핵심은 E. coli로 보존.",
+    "tags": [
+      "UTI",
+      "E.coli"
+    ],
+    "uncertain": false,
+    "raw_anchor": "5번 ... Urinalysis에서 blood (+), nitrate(+), WBC many/HPF (UTI 문제) 가장 흔한 원인균은? 답: E.coli O157:H7",
+    "source_page": 3,
+    "source_rank": 39,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-010",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "신요로",
+    "question": "7세 남아, 10일 전부터 거품뇨/부종, 체중 10kg 증가, 혈구 정상, albumin 1.9, UA상 단백뇨. 가장 가능성 높은 진단은?",
+    "answer": "Minimal Change Disorder",
+    "explanation": "원문 답: Minimal Change Disorder.",
+    "enhanced_explanation": "### 핵심\n소아 신증후군의 가장 흔한 원인으로 복기됨.",
+    "tags": [
+      "신증후군",
+      "minimal change disease",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "2번 (야마) 7세 남아... 추정 진단 중 가장 가능성 높은 것 / 답: Minimal Change Disorder",
+    "source_page": 3,
+    "source_rank": 41,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-013",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "신요로",
+    "question": "9세 여아, 10일 전 인후통 후 안면부종/육안적 혈뇨. ASO 640, C3 15, RBC cast(+). 가장 오랫동안 지속되는 증상은?",
+    "answer": "현미경적 혈뇨",
+    "explanation": "원문 선지 중 5. 현미경적 혈뇨.",
+    "enhanced_explanation": "### 핵심\nPSGN 회복 과정에서 현미경적 혈뇨가 오래 지속되는 항목으로 복기.",
+    "tags": [
+      "PSGN",
+      "현미경적혈뇨",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "1번 (야마) 9세 여아... 가장 오랫동안 지속되는 증상은?... 5. 현미경적 혈뇨",
+    "source_page": 3,
+    "source_rank": 44,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P04-005",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "14세 남아 학교 검진에서 단백뇨. 혈압 105/65, 부종 없음, UA protein 2+, RBC 0-1, BUN/Cr 10/0.5, albumin 4. 아침 첫 소변 단백뇨, 낮에는 없음. 치료는?",
+    "answer": "치료 없음",
+    "explanation": "원문 선지 1) 치료 x.",
+    "enhanced_explanation": "### 핵심\n기립성 단백뇨 맥락으로 치료하지 않는 선택지가 제시됨.",
+    "tags": [
+      "단백뇨",
+      "기립성단백뇨"
+    ],
+    "uncertain": false,
+    "raw_anchor": "5번 14세 남아... 아침 첫 소변 단백뇨 나왓는데 낮에는 안나옴 치료는? 1) 치료 x",
+    "source_page": 4,
+    "source_rank": 56,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P05-002",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "신요로",
+    "question": "헬스장에서 운동 후 검붉은빛 혈뇨 주소로 내원. 소변 잠혈 양성. 진단은?",
+    "answer": "Myoglobulinemia / myoglobinuria 가능성",
+    "explanation": "원문 선지 1. Myoglobulinemia, 2. hemoglobulinemia 등. 정답 배치는 1번으로 보임.",
+    "enhanced_explanation": "### 주의\n원문은 “Myoglobulinemia”라고 적었지만 운동 후 소변잠혈 양성 문맥은 myoglobin 관련 질환으로 보존.",
+    "tags": [
+      "운동후혈뇨",
+      "myoglobin",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "5번 헬스장에서 운동 후 검붉은빛 혈뇨... 1. Myoglobulinemia",
+    "source_page": 5,
+    "source_rank": 63,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P05-006",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "HUS의 특징 3가지는?",
+    "answer": "MAHA, thrombocytopenia, AKI",
+    "explanation": "원문 답: MAHA, thrombocytopenia, AKI.",
+    "enhanced_explanation": "### 핵심\nHUS의 3대 특징을 묻는 주관식.",
+    "tags": [
+      "HUS",
+      "MAHA",
+      "AKI"
+    ],
+    "uncertain": false,
+    "raw_anchor": "4번 HUS의 특징 3가지 적는 문제 / MAHA, thrombocytopenia, AKI",
+    "source_page": 5,
+    "source_rank": 67,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P05-007",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "신요로",
+    "question": "Td/RTd(+/+), CVAT(-), nephrotic syndrome 양상, hypercholesterolemia, 거품뇨/전신부종/10kg 증가. 진단은?",
+    "answer": "Renal vein thrombosis",
+    "explanation": "원문 답: Renal vein thrombosis.",
+    "enhanced_explanation": "### 주의\n비슷한 다른 변형에서는 복통/압통 양상 차이가 있어 별도 카드로 보존.",
+    "tags": [
+      "신증후군",
+      "renal vein thrombosis"
+    ],
+    "uncertain": false,
+    "raw_anchor": "4번 Td/RTd (+/+), CVAT(-) nephrotic syndrome 양상... Renal vein thrombosis",
+    "source_page": 5,
+    "source_rank": 68,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P05-012",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "신요로",
+    "question": "7세 남아 신증후군 입원 중 갑자기 복통, Fever(+), Abdomen Tenderness/RTd(+/+), CVAT(-), 소변 색 변화 없음. 원인은?",
+    "answer": "Spontaneous bacterial peritonitis",
+    "explanation": "원문 선지 4가 답으로 배치된 것으로 보임.",
+    "enhanced_explanation": "### 주의\n복통+발열+복막자극 양상으로 신증후군 합병증 중 SBP를 묻는 변형.",
+    "tags": [
+      "신증후군",
+      "SBP"
+    ],
+    "uncertain": false,
+    "raw_anchor": "4번 7세 남아... Fever (+), Abdomen Tenderness/RTd (+/+), CVAT는 (-)... 4. Spontaneous bacterial peritonitis",
+    "source_page": 5,
+    "source_rank": 73,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P07-001",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "1세 여아, 3일 전부터 물설사, 구토 없음. Skin turgor 감소, capillary refill time 증가, 소변량 감소. 적절한 상태는?",
+    "answer": "혈중 BUN/Cr 증가",
+    "explanation": "원문 선지 5. 혈중 bun/cr 증가.",
+    "enhanced_explanation": "### 핵심\n탈수 소견에서 prerenal pattern으로 BUN/Cr 증가가 제시됨.",
+    "tags": [
+      "탈수",
+      "BUNCr"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객관식 1번 ... Skin tugor 감소... 5) 혈중 bun/cr 증가",
+    "source_page": 7,
+    "source_rank": 77,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P07-003",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "신생아 신장의 수준이 성인 수준의 기능과 유사해지는 나이는?",
+    "answer": "2-3세",
+    "explanation": "원문 선지 3) 2-3세 및 주석: 사구체여과율은 만 2세까지 증가.",
+    "enhanced_explanation": "### 핵심\n신장 기능 성숙 시점을 묻는 문항.",
+    "tags": [
+      "신장발달",
+      "GFR"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객관식 3번 신생아 신장의 수준이... 3) 2-3세",
+    "source_page": 7,
+    "source_rank": 79,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P07-007",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "신요로",
+    "question": "7세 남아, 일주일 전부터 거품뇨/부종, 복통/설사/lethargy, 체중 10kg 증가, albumin 1.9, urine protein 4+, hematuria 없음, UPCR 15. 진단은?",
+    "answer": "Minimal change disease",
+    "explanation": "원문: nephrotic syndrome, 이중 m/c: minimal change disease.",
+    "enhanced_explanation": "### 핵심\n소아 신증후군의 가장 흔한 원인으로 MCD가 제시됨.",
+    "tags": [
+      "신증후군",
+      "minimal change disease"
+    ],
+    "uncertain": false,
+    "raw_anchor": "주관식2번 ... 주관식 2번 진단은? 이중 m/c : minimal change disease",
+    "source_page": 7,
+    "source_rank": 83,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P07-008",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "신요로",
+    "question": "위 신증후군 환자에게 albumin replacement를 실시하였다. First-line treatment는?",
+    "answer": "Prednisolone",
+    "explanation": "원문 답: Prednisolone.",
+    "enhanced_explanation": "### 핵심\n소아 신증후군 초기 치료로 steroid가 복기됨.",
+    "tags": [
+      "신증후군",
+      "prednisolone"
+    ],
+    "uncertain": false,
+    "raw_anchor": "주관식 3번. 환자에게 albumin replacement를 실시하였다. first line treatment는? Prednisolone",
+    "source_page": 7,
+    "source_rank": 84,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P07-012",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "고열, 변비, 신기능저하 없음. UA SG 1.015, pH 6, hematuria, albumin trace, leukocyte esterase(+), nitrite(+), microscopy RBC 4-6/HPF, WBC many/HPF. 진단은?",
+    "answer": "Acute cystitis",
+    "explanation": "원문 선지 1. Acute cystitis.",
+    "enhanced_explanation": "### 핵심\n고열 외 옆구리 통증/구토 등 APN 특징이 부족하다는 주석과 함께 acute cystitis가 제시됨.",
+    "tags": [
+      "UTI",
+      "급성방광염"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객관식 2번 고열, 변비... 1. Acute cystitis",
+    "source_page": 7,
+    "source_rank": 88,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P09-003",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "페이지 상단 잔여 문항",
+    "priority": "high",
+    "official_unit": "신요로",
+    "question": "6세 남아. 미세혈뇨/단백뇨, 어머니와 삼촌의 신질환 가족력, 약한 청력저하, EM상 GBM basket-weave pattern. 의심 질환은?",
+    "answer": "Alport syndrome",
+    "explanation": "원문 답: alport syndrome.",
+    "enhanced_explanation": "혈뇨 + 청력저하 + GBM basket-weave pattern → Alport syndrome.",
+    "tags": [
+      "Alport"
+    ],
+    "uncertain": false,
+    "raw_anchor": "basket weave pattern ... alport syndrome",
+    "source_page": 9,
+    "source_rank": 101,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P09-007",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 17-20조 pretest 3차 복기 객관식3",
+    "priority": "high",
+    "official_unit": "신요로",
+    "question": "PSGN의 임상 증상/검사 소견 중 가장 오랫동안 지속되는 것은?\n1 부종 수일\n2 고혈압 일시적\n3 C3 저하 6-8주\n4 현미경적 혈뇨 6개월-1년\n5 ASO 상승 2-4주",
+    "answer": "현미경적 혈뇨 6개월-1년",
+    "explanation": "원문 선지에 기간이 제시되어 있고 가장 오래 지속되는 항목은 현미경적 혈뇨.",
+    "enhanced_explanation": "PSGN 추적에서 현미경적 혈뇨가 가장 오래 남을 수 있음.",
+    "tags": [
+      "PSGN"
+    ],
+    "uncertain": false,
+    "raw_anchor": "PSGN ... 가장 오랫동안 지속 ... 현미경적 혈뇨 6개월~1년",
+    "source_page": 9,
+    "source_rank": 105,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P09-011",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 17-20조 pretest 3차 복기 주관식2",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "Na+, K+, Cl-, HCO3- 등이 주어졌을 때 plasma anion gap 계산식을 쓰시오.",
+    "answer": "Anion gap = [Na+] - [Cl-] - [HCO3-] (+ 2.5 × [4 - albumin] if hypoalbuminemia)",
+    "explanation": "원문 계산식.",
+    "enhanced_explanation": "알부민 보정까지 원문에 포함됨.",
+    "tags": [
+      "anion_gap"
+    ],
+    "uncertain": false,
+    "raw_anchor": "anion gap = [Na+] - [Cl-] - [HCO3-] (+2.5[4-알부민])",
+    "source_page": 9,
+    "source_rank": 109,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P10-003",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 1-4조 pretest 3차 복기 객3",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "8개월 남아. 2일 발열 후 설사, 구토 없음. 평소 8.2 kg, 내원 7.5 kg, 전해질/산염기 모두 정상. 처치는?\n1 NS 200mL 정주 2 지사제 3 정장제 4 ORS 100mL/kg 4시간 5 분유 희석",
+    "answer": "ORS 100 mL/kg을 4시간 동안 먹임",
+    "explanation": "체중감소 약 8.5%로 중등도 탈수로 복기되어 ORS가 표시됨.",
+    "enhanced_explanation": "중등도 탈수에서 경구수분보충요법(ORS) 선택.",
+    "tags": [
+      "dehydration",
+      "ORS"
+    ],
+    "uncertain": false,
+    "raw_anchor": "중등도 탈수 ... Ors 100ml/kg 4시간 동안 먹임",
+    "source_page": 10,
+    "source_rank": 116,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P10-007",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 1-4조 pretest 3차 복기 주2",
+    "priority": "high",
+    "official_unit": "신요로",
+    "question": "용혈요독증후군(HUS) 야마 문제.",
+    "answer": "원문 확인 필요",
+    "explanation": "페이지에 “용혈 요독 증후군 야마 문제”만 있고 구체 stem/답이 없음.",
+    "enhanced_explanation": "HUS 관련 문항. 원문 확인 필요.",
+    "tags": [
+      "HUS"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주2 용혈 요독 증후군 야마 문제",
+    "source_page": 10,
+    "source_rank": 120,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-004",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 25-28조 객3",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "소아의 사구체여과율은 성인보다 낮다. 성인과 비슷해지는 시기는?\n1 6개월 2 1세 3 2-3세 4 4-5세 5 6-7세",
+    "answer": "2-3세",
+    "explanation": "소아 GFR은 대략 2세 무렵 성인 수준에 근접.",
+    "enhanced_explanation": "원문 답 표시는 없으나 선지상 2-3세가 적합.",
+    "tags": [
+      "GFR"
+    ],
+    "uncertain": false,
+    "raw_anchor": "사구체여과율이 성인과 비슷해지는 시기는?",
+    "source_page": 11,
+    "source_rank": 127,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-008",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 25-28조 주3",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "신증후군 치료 중인 7세 남아가 갑자기 복통. 복부 압통/반발통 없음, 오른쪽 CVAT. 의심 진단은?",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안 없음.",
+    "enhanced_explanation": "신증후군 합병증/감염 관련으로 보이나 원문 답 확인 필요.",
+    "tags": [
+      "nephrotic_syndrome",
+      "CVA_tenderness"
+    ],
+    "uncertain": true,
+    "raw_anchor": "신증후군 ... 복통 ... 오른쪽 CVAT",
+    "source_page": 11,
+    "source_rank": 131,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-013",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 29-32조 객3",
+    "priority": "high",
+    "official_unit": "신요로",
+    "question": "탈수 남아 Na 170 mEq/L. 수액 교정 24시간 후 적절한 Na 농도는? 보기: 170/160/150/140/130",
+    "answer": "160 mEq/L",
+    "explanation": "고나트륨혈증은 천천히 교정해야 하며 원문 답은 160으로 복기.",
+    "enhanced_explanation": "급격한 교정은 경련/뇌부종 위험. 24시간에 약 10 mEq/L 감소.",
+    "tags": [
+      "hypernatremia"
+    ],
+    "uncertain": false,
+    "raw_anchor": "Na+ 170 ... 24시간 ... 답은 160",
+    "source_page": 11,
+    "source_rank": 136,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-018",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 29-32조 주3",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "14 kg 소아 수액 주입속도까지 계산하는 문제.",
+    "answer": "원문 확인 필요",
+    "explanation": "구체 수치/답안 없음.",
+    "enhanced_explanation": "계산 자료가 없어 원문 확인 필요.",
+    "tags": [
+      "fluid"
+    ],
+    "uncertain": true,
+    "raw_anchor": "수액 주입속도까지 계산, 14kg",
+    "source_page": 11,
+    "source_rank": 141,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-022",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 33-36조 객3",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "15세 남아. 헬스장에서 운동 후 대퇴부 동통과 혈뇨. RBC cast 음성, dysmorphic RBC 음성. 진단은?",
+    "answer": "Myoglobinuria",
+    "explanation": "원문 답: Myoglobinuria.",
+    "enhanced_explanation": "운동 후 근육통 + 혈뇨처럼 보이나 사구체성 소견 없음 → myoglobinuria.",
+    "tags": [
+      "myoglobinuria"
+    ],
+    "uncertain": false,
+    "raw_anchor": "대퇴부 동통과 혈뇨 ... Myoglobiniria",
+    "source_page": 11,
+    "source_rank": 145,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P12-001",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 33-36조 주3",
+    "priority": "high",
+    "official_unit": "신요로",
+    "question": "심한 탈수로 내원한 3세 남아가 수액공급 중 경련 발생. 치료 전 Na 180 mEq, 이후 140 mEq. (1) 경련 원인 (2) 치료는?",
+    "answer": "원문 확인 필요",
+    "explanation": "급격한 Na 교정으로 인한 경련이 의심되나 원문 답안은 없음.",
+    "enhanced_explanation": "고나트륨혈증을 너무 빠르게 교정하면 뇌부종/경련 위험. 치료 세부는 원문 확인 필요.",
+    "tags": [
+      "hypernatremia",
+      "seizure"
+    ],
+    "uncertain": true,
+    "raw_anchor": "Na 180mEq, 이후 140mEq (1) 경련 원인 (2) 치료",
+    "source_page": 12,
+    "source_rank": 150,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P12-006",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 37-40조 객3",
+    "priority": "high",
+    "official_unit": "신요로",
+    "question": "7세 아이. 구토/설사로 늘어져 옴. 6 kg→5.4 kg, Na 125, K 3.5, pH 7.25, PCO2 30, HCO3 15. 적절한 수액은?\n1 NaHCO3 2 0.9% NaCl 3 3% NaCl 4 0.45% NaCl 5 0.45% NaCl+KCl",
+    "answer": "0.9% NaCl",
+    "explanation": "탈수 초기 수액으로 생리식염수 선택.",
+    "enhanced_explanation": "저나트륨이 있어도 탈수 쇼크/중증 탈수 교정의 phase 1은 isotonic saline.",
+    "tags": [
+      "dehydration",
+      "fluid"
+    ],
+    "uncertain": false,
+    "raw_anchor": "구토, 설사 ... Na 125 ... 2) 0.9% NaCl",
+    "source_page": 12,
+    "source_rank": 155,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P12-011",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 37-40조 주3",
+    "priority": "high",
+    "official_unit": "신요로",
+    "question": "복통/설사/혈변 후 소변량 감소. WBC 1.8만, Hb 6.5, Plt 1만, Retic 5.3, BUN/Cr 40/2, PBS schistocyte, haptoglobin <10%, ADAMTS13 normal, Coombs negative. 진단은?",
+    "answer": "용혈요독증후군(HUS)",
+    "explanation": "혈변 후 AKI + MAHA + thrombocytopenia, ADAMTS13 normal.",
+    "enhanced_explanation": "전형적 HUS 패턴.",
+    "tags": [
+      "HUS"
+    ],
+    "uncertain": false,
+    "raw_anchor": "혈변 ... schistocyte ... ADAMTS13 normal ... 진단은?",
+    "source_page": 12,
+    "source_rank": 160,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P13-001",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 21-24조 객3 추정",
+    "priority": "high",
+    "official_unit": "신요로",
+    "question": "외과 수술 후 소변량 100 mL뿐이고 Na 133, K 6 이상, 심전도 이상. 처치는?",
+    "answer": "IV calcium gluconate",
+    "explanation": "원문 답: iv ca gluconate.",
+    "enhanced_explanation": "고칼륨혈증 + ECG 이상 → 심근 안정화 위해 IV calcium gluconate 우선.",
+    "tags": [
+      "hyperkalemia"
+    ],
+    "uncertain": false,
+    "raw_anchor": "Na 133 / k 6 이상 심전도 이상 답 - iv ca gluconate",
+    "source_page": 13,
+    "source_rank": 163,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P13-006",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 21-24조 주3",
+    "priority": "high",
+    "official_unit": "신요로",
+    "question": "폐렴 치료 중인 7세 여아가 경련으로 내원. 부모 보기에 부종/탈수 없음. 혈액 Na 115, K 4.0, Osm 255. 소변 Na 40, Osm 400. 진단은?",
+    "answer": "SIADH",
+    "explanation": "저삼투성 저나트륨혈증 + 소변 Na/Osm 부적절하게 높고 euvolemic.",
+    "enhanced_explanation": "폐렴 관련 SIADH 패턴.",
+    "tags": [
+      "hyponatremia",
+      "SIADH"
+    ],
+    "uncertain": false,
+    "raw_anchor": "폐렴 ... Na 115 ... 소변 Na 40, 삼투압 400 진단은?",
+    "source_page": 13,
+    "source_rank": 168,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-018",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "Nephronal 혈뇨를 시사하는 소견은?\n1 선홍색 2 clot 있음 3 terminal hematuria 4 요중 알부민(++) 5 isomorphic RBC",
+    "answer": "4. 요중 알부민(++)",
+    "explanation": "객5. Nephronal 혈뇨 시사하는 소견은?... 4. 요중 알부민 (++)",
+    "enhanced_explanation": "사구체성 혈뇨는 단백뇨 동반이 단서가 됩니다. 원문 선택지 표현을 유지했습니다.",
+    "tags": [
+      "glomerular_hematuria"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객5. Nephronal 혈뇨 시사하는 소견은?... 4. 요중 알부민 (++)",
+    "source_page": 15,
+    "source_rank": 212,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-027",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "소아 신증후군에서 가장 흔한 질환 종류 1가지와 병리학적 소견 1가지를 쓰시오.",
+    "answer": "MCD, foot process 미만성 융합",
+    "explanation": "주관식 5번 소아 신증후군... —> MCD , foot process 미만성 융합",
+    "enhanced_explanation": "원문 답을 그대로 보존했습니다.",
+    "tags": [
+      "nephrotic_mcd"
+    ],
+    "uncertain": false,
+    "raw_anchor": "주관식 5번 소아 신증후군... —> MCD , foot process 미만성 융합",
+    "source_page": 16,
+    "source_rank": 221,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-032",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "12세 남아, 10일 전 감염 후 오목부종, 혈뇨/단백뇨+, C3 감소, C4 정상. PSGN 증례의 치료는?",
+    "answer": "고리작용이뇨제",
+    "explanation": "객관식 5번 12세 남아... PSGN 증례케이스. 치료는? (2)고리작용이뇨제",
+    "enhanced_explanation": "원문 답을 그대로 보존했습니다.",
+    "tags": [
+      "psgn_treatment"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객관식 5번 12세 남아... PSGN 증례케이스. 치료는? (2)고리작용이뇨제",
+    "source_page": 16,
+    "source_rank": 226,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-037",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "HUS의 3대 임상상과 원인균을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주관식) hus 3대임상상이랑 원인균",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "hus_triads_pathogen"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주관식) hus 3대임상상이랑 원인균",
+    "source_page": 16,
+    "source_rank": 231,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-042",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "학교 신체검진에서 단백뇨가 발견된 남자아이. 다음 처치는?",
+    "answer": "원문 확인 필요",
+    "explanation": "객관식) 학교 신체검진에서 단백뇨 발견된 남자아이 다음으로 해야할 처치는?(야마)",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "school_proteinuria"
+    ],
+    "uncertain": true,
+    "raw_anchor": "객관식) 학교 신체검진에서 단백뇨 발견된 남자아이 다음으로 해야할 처치는?(야마)",
+    "source_page": 16,
+    "source_rank": 236,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-052",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.18",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "소아 신증후군에서 가장 흔한 조직학적 분류는?",
+    "answer": "원문 확인 필요",
+    "explanation": "객관식 5번 소아신증후군에서 가장 흔한 조직학적 분류 여신참조!",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "nephrotic_histology"
+    ],
+    "uncertain": true,
+    "raw_anchor": "객관식 5번 소아신증후군에서 가장 흔한 조직학적 분류 여신참조!",
+    "source_page": 18,
+    "source_rank": 246,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-057",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.18",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "육안적 혈뇨의 감별질환 3가지를 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주관식 5번. 육안적 혈뇨의 감별질환 3가지는?",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "gross_hematuria_ddx"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주관식 5번. 육안적 혈뇨의 감별질환 3가지는?",
+    "source_page": 18,
+    "source_rank": 251,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-061",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.18",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "16세 여아, 검붉은색 혈뇨와 수면제 복용, BUN/Cr 32/1.9, AST/ALT 85/42, CK 2500, 소변 잠혈 3+이나 적혈구 0~1. 처치는?\n1 항생제 2 혈액투석 3 0.9% 생리식염수 4 고리작용이뇨제 5 ARB",
+    "answer": "3. 0.9% 생리식염수",
+    "explanation": "객5. 16/F 검붉은색 혈뇨... CK 2500... 소변 잠혈(3+)... 적혈구 0~1... 3.0.9% 생리식염수",
+    "enhanced_explanation": "횡문근융해/마이오글로빈뇨 양상으로 원문 선택지 중 생리식염수 처치를 카드화했습니다.",
+    "tags": [
+      "rhabdomyolysis_myoglobinuria"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객5. 16/F 검붉은색 혈뇨... CK 2500... 소변 잠혈(3+)... 적혈구 0~1... 3.0.9% 생리식염수",
+    "source_page": 18,
+    "source_rank": 255,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-066",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.18",
+    "priority": "medium",
+    "official_unit": "신요로",
+    "question": "7세 남아가 햄버거 섭취 후 복통/설사/육안적 혈뇨, 이후 핍뇨/부종/어지러움, PBS fragmented RBC. 원인균은?",
+    "answer": "원문 확인 필요",
+    "explanation": "주관식 5번. 7세남아가 햄버거 먹고... pbs사진(fragmented RBC) 주고 원인균은?",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "hus_pathogen_variant"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주관식 5번. 7세남아가 햄버거 먹고... pbs사진(fragmented RBC) 주고 원인균은?",
+    "source_page": 18,
+    "source_rank": 260,
+    "official_chapter": "신요로"
+  },
+  {
+    "id": "PEDS3-2026-Q02-KALLMANN",
+    "source": "2026 소청과 3차 pretest 복기(update 2026.04.10) / 객관식 2번",
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "official_unit": "내분비",
+    "question": "16세 남자, 178 cm, 고환 2 cc, Tanner stage 1, 성호르몬(LH, FSH, testosterone)이 사춘기 이전 수치였다. 골연령 15세, 염색체 46,XY, 후각 검사에서 떨어져 있음. 진단은?\n1) 누난 증후군\n2) 칼만 증후군\n3) 클라인펠터 증후군\n4) 프레더윌리 증후군\n5) ?",
+    "answer": "2) 칼만 증후군",
+    "explanation": "사춘기 지연 + 낮은 LH/FSH/testosterone + 후각 저하는 GnRH neuron migration 이상인 Kallmann syndrome을 시사한다.",
+    "enhanced_explanation": "🧭 Big picture\n남아 사춘기 지연에서 gonadotropin이 낮으면 중추성, 높으면 원발성 고환부전이다. 여기에 후각 저하가 붙으면 Kallmann syndrome이다.\n\n🔎 핵심 단서\n- 16세, 고환 2 cc, Tanner I\n- LH/FSH/testosterone 사춘기 이전 수치\n- 46,XY\n- 후각 저하\n\n✅ 3초 Lock line\n사춘기 지연 + 저성선자극성 + 후각저하 = Kallmann.",
+    "tags": [
+      "2026",
+      "내분비",
+      "사춘기지연",
+      "Kallmann",
+      "후각저하"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객2. 16세 남자... 성호르몬 사춘기 이전수치... 후각 검사에서 떨어져 있음... 2) 칼만 증후군",
+    "source_page": "2026 docx",
+    "source_rank": 2,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-2026-Q04-THYROTOXIC-PERIODIC-PARALYSIS",
+    "source": "2026 소청과 3차 pretest 복기(update 2026.04.10) / 객관식 4번",
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "official_unit": "내분비",
+    "question": "15세 남아가 간헐적인 다리 저림과 근력저하로 내원했다. 안구 돌출, 가슴 두근거림, 갑상선 미만성 종대가 있고 혈압 140/95이다. Hb 14.5, BUN/Cr 15/0.8, Na 140, K 2.5, Cl 112. 이 환자의 저칼륨혈증에 대한 기저질환으로 감별해야 할 질환은?\n1) 판코니 증후군\n2) 선천 부신 과형성증\n3) 갑상샘 기능 항진증\n4) 일과성 부갑상샘 기능 저하증\n5) 리워니 증후군",
+    "answer": "3) 갑상샘 기능 항진증",
+    "explanation": "안구돌출, 심계항진, 갑상샘 미만성 종대가 있고 저칼륨성 주기마비 양상이므로 갑상샘 기능 항진증을 감별해야 한다.",
+    "enhanced_explanation": "🧭 Big picture\n저칼륨+근력저하 문제에서 갑상샘 항진 증상이 같이 나오면 thyrotoxic periodic paralysis를 떠올린다.\n\n🔎 핵심 단서\n- 다리 저림/근력저하\n- K 2.5\n- 안구돌출, 두근거림\n- 갑상샘 미만성 종대\n\n✅ 3초 Lock line\n저칼륨 마비 + Graves 단서 = 갑상샘 기능 항진증.",
+    "tags": [
+      "2026",
+      "내분비",
+      "저칼륨혈증",
+      "갑상샘기능항진증",
+      "주기마비"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객4. 안구 돌출... 갑상선의 미만성 종대... K 2.5... 3) 갑상샘 기능 항진증",
+    "source_page": "2026 docx",
+    "source_rank": 4,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-2026-SA03-SOMOGYI-DAWN",
+    "source": "2026 소청과 3차 pretest 복기(update 2026.04.10) / 주관식 3번",
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "official_unit": "내분비",
+    "question": "다음 괄호를 채우시오. 2개 다 맞아야 함.\n(1)은 새벽에 저혈당이 생긴 뒤 길항작용으로 아침에 고혈당이 생기는 것으로, 취침 전 투여 인슐린 용량을 줄여야 한다.\n(2)는 새벽에 저혈당 없이 아침에 고혈당이 발생하는 것으로, 취침 전 투여 인슐린 용량을 늘린다.",
+    "answer": "1) Somogyi effect, 소모기 현상\n2) Dawn phenomenon, 새벽 현상",
+    "explanation": "새벽 저혈당 뒤 반동성 고혈당은 Somogyi effect, 새벽 저혈당 없이 성장호르몬 등으로 아침 고혈당이 생기는 것은 dawn phenomenon이다.",
+    "enhanced_explanation": "🧭 Big picture\n아침 고혈당은 새벽 혈당을 봐야 갈린다. 새벽에 낮았다가 높으면 Somogyi, 낮지 않았는데 높으면 dawn이다.\n\n📊 감별\n- Somogyi: nocturnal hypoglycemia 후 rebound hyperglycemia → bedtime insulin 줄임\n- Dawn: nocturnal hypoglycemia 없음 → bedtime insulin 늘림\n\n✅ 3초 Lock line\n새벽 저혈당 있으면 Somogyi, 없으면 Dawn.",
+    "tags": [
+      "2026",
+      "내분비",
+      "당뇨",
+      "Somogyi",
+      "Dawn"
+    ],
+    "uncertain": false,
+    "raw_anchor": "주3. (1)는 새벽에 저혈당... (2)는 새벽에 저혈당 없이... 1) Somogyi effect 2) Dawn phenomenon",
+    "source_page": "2026 docx",
+    "source_rank": 8,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P01-002",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "T3/T4 감소, TSH 증가, TBG 정상이며 갑상샘 스캔 사진이 제시된 선천성 갑상샘저하증 의심 문항. 진단/답은?",
+    "answer": "원문 확인 필요",
+    "explanation": "페이지 1 원문에는 답이 명시되지 않음.",
+    "enhanced_explanation": "### 주의\n동일 계열 변형이 뒤쪽에 있으나, 이 카드의 페이지 1 원문 자체에는 정답이 보이지 않는다.",
+    "tags": [
+      "갑상샘",
+      "선천성갑상샘저하증",
+      "야마"
+    ],
+    "uncertain": true,
+    "raw_anchor": "2. t3 t4 감소 tsh 증가 tbg 정상 / 갑상샘 스캔 사진 위 그림과 비슷",
+    "source_page": 1,
+    "source_rank": 12,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P02-005",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "16세 남아, 176 cm 60 kg, 후각 이상 없음, 골연령 14세, 고환 2 cc, LH 20, FSH 65, T 0.1. 진단은?",
+    "answer": "클라인펠터 증후군",
+    "explanation": "원문 답: 클라인펠터 증후군.",
+    "enhanced_explanation": "### 핵심\n고성선자극호르몬성 성선기능저하 패턴으로 제시된 복기.",
+    "tags": [
+      "사춘기지연",
+      "Klinefelter",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "2번(야마) 16세 남아... LH 20, FSH 65, T 0.1 진단은? 클라인펠터 증후군",
+    "source_page": 2,
+    "source_rank": 20,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P02-010",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "장염 후 장시간 금식한 4세 여아가 식은땀, 의식저하. pH 7.28, glucose 30, cortisol/GH/TSH/T4 정상, urine ketone 3+. 진단은?",
+    "answer": "케톤 저혈당증",
+    "explanation": "원문 답: 케톤 저혈당증.",
+    "enhanced_explanation": "### 핵심\n감염/금식 후 저혈당과 케톤뇨가 단서로 제시됨.",
+    "tags": [
+      "케톤저혈당증",
+      "저혈당"
+    ],
+    "uncertain": false,
+    "raw_anchor": "3번 2일 전부터 장염... glucose 30... Ketone (3+) / 진단은? 케톤 저혈당증",
+    "source_page": 2,
+    "source_rank": 25,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P02-014",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "7세 여아, 유방 발달 Tanner II, 키/체중 증가, GnRH 자극검사 LH 1.4→18, FSH 3.4→20, E2 20→50, 갑상선 정상. 가장 적절한 약물 치료는?",
+    "answer": "GnRH analogue",
+    "explanation": "원문 선택지 1) GnRH analogue.",
+    "enhanced_explanation": "### 핵심\n중추성 성조숙증 치료로 복기된 문항.",
+    "tags": [
+      "성조숙증",
+      "GnRH analogue"
+    ],
+    "uncertain": false,
+    "raw_anchor": "2번 7세 여자아이... 이 환아의 가장 적절한 약물 치료는? 1) GnRH analogue",
+    "source_page": 2,
+    "source_rank": 29,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-001",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "10세 저신장, 키 1백분위수/체중 10백분위수, 골연령 7세, 성장호르몬 자극검사 GH <7. 치료는?",
+    "answer": "GH 치료",
+    "explanation": "원문 답: GH.",
+    "enhanced_explanation": "### 핵심\n성장호르몬 결핍 치료를 묻는 복기.",
+    "tags": [
+      "저신장",
+      "GH"
+    ],
+    "uncertain": false,
+    "raw_anchor": "8번 10세 저신장... gh <7 / 치료는? 답: GH",
+    "source_page": 3,
+    "source_rank": 32,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-005",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "생후 20일 여아, 심한 탈수/늘어짐/검은 피부 착색, 17-OH progesterone 상승. 치료는?",
+    "answer": "Hydrocortisone",
+    "explanation": "원문 보기 ㄱ ACTH ㄴ Aldosterone ㄷ Estrogen ㄹ Hydrocortisone, 답: ㄹ.",
+    "enhanced_explanation": "### 핵심\n선천성 부신과다형성 의심 문항. 원문 정답은 hydrocortisone.",
+    "tags": [
+      "CAH",
+      "17-OHP",
+      "hydrocortisone",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "2번 (야마) 생후 20일... 17-OH progesterone 상승... 답: 4, ㄹ",
+    "source_page": 3,
+    "source_rank": 36,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-009",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "10세 여아, 피부 착색/나트륨 소실/탈수 등 증상. 시행해야 할 선별검사는?",
+    "answer": "17-hydroxyprogesterone",
+    "explanation": "원문 답: 17-hydroxyprogesterone.",
+    "enhanced_explanation": "### 핵심\nCAH 선별검사로 복기됨.",
+    "tags": [
+      "CAH",
+      "17-OHP",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "1번 (야마) 10세 여아, 피부 착색, 나트륨 소실, 탈수... 답: 17-hydroxyprogesterone",
+    "source_page": 3,
+    "source_rank": 40,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-015",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "범뇌하수체 기능저하증 치료 시 필요한 투여 호르몬 중 가장 우선시해야 할 것은?",
+    "answer": "Steroid / corticosteroid",
+    "explanation": "원문 답: steroid.",
+    "enhanced_explanation": "### 핵심\n여러 호르몬 보충 전 steroid 우선이라는 복기.",
+    "tags": [
+      "범뇌하수체기능저하증",
+      "steroid",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "3번 (야마) 범뇌하수체 기능저하증 치료시 필요한 투여 호르몬 중 가장 우선시해야 할 것은? steroid",
+    "source_page": 3,
+    "source_rank": 46,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-020",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "1차성 부갑상샘기능저하증의 혈액학적 변화는?",
+    "answer": "Ca 감소, P 증가, Vit.D 감소, PTH 감소",
+    "explanation": "원문 화살표: Ca(-), P(+), Vit.D(-), PTH(-).",
+    "enhanced_explanation": "### 핵심\n원문에 제시된 화살표 방향을 그대로 카드화.",
+    "tags": [
+      "부갑상샘저하증",
+      "Ca",
+      "PTH",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "3번(야마) 1차성 부갑상샘기능 저하증의 혈액학전 변화... Ca (-) , P (+), Vit.D (-), PTH(-)",
+    "source_page": 3,
+    "source_rank": 51,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P04-004",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "6세 여아, 유방발달과 골연령 증가, 성호르몬 자극검사 LH 21. 치료는?",
+    "answer": "GnRH agonist",
+    "explanation": "원문 답: GnRH agonist.",
+    "enhanced_explanation": "### 핵심\n성조숙증 치료 문항의 변형.",
+    "tags": [
+      "성조숙증",
+      "GnRH agonist",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "2번 (야마) 6세 여아 유방발달... LH21, 치료는? GnRH agonist",
+    "source_page": 4,
+    "source_rank": 55,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P04-007",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "선천성 갑상선저하증 환자에서 초음파로 갑상선이 보이지 않는다. 다음으로 해야 할 검사는?",
+    "answer": "갑상샘 스캔 검사",
+    "explanation": "원문 답: 갑상샘 스캔 검사.",
+    "enhanced_explanation": "### 핵심\n초음파에서 갑상샘 미확인 시 스캔으로 위치/섭취를 평가하는 흐름으로 복기.",
+    "tags": [
+      "선천성갑상샘저하증",
+      "갑상샘스캔"
+    ],
+    "uncertain": false,
+    "raw_anchor": "2번 선천성 갑상선 저하증 환자에서 초음파로 갑상선 보이지 않는다. 다음으로 해야할 검사는? 갑상샘 스캔 검사",
+    "source_page": 4,
+    "source_rank": 58,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P04-010",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "성장호르몬 치료 관련 야마 문항의 구체적 답은?",
+    "answer": "원문 확인 필요",
+    "explanation": "“성장호르몬 치료 (야마)”라는 제목만 있고 stem/정답이 없음.",
+    "enhanced_explanation": "### 주의\n다른 페이지의 GH 치료 문항과 별도 카드로 보존하되 확인 필요.",
+    "tags": [
+      "성장호르몬",
+      "야마"
+    ],
+    "uncertain": true,
+    "raw_anchor": "2번 성장호르몬 치료 (야마)",
+    "source_page": 4,
+    "source_rank": 61,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P05-008",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "15세 남아, 고환 2 cc, 골연령 12세, 후각 저하, FSH/LH/프로게스테론 모두 저하. 진단은?",
+    "answer": "칼만 증후군",
+    "explanation": "원문 선지 1. 칼만 증후군.",
+    "enhanced_explanation": "### 핵심\n저성선자극호르몬성 성선기능저하 + 후각저하 문항.",
+    "tags": [
+      "Kallmann",
+      "사춘기지연"
+    ],
+    "uncertain": false,
+    "raw_anchor": "1번 15세 남아... 후각 저하됨... 1. 칼만 증후군",
+    "source_page": 5,
+    "source_rank": 69,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P07-004",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "생후 15일 여아, 신생아 대사이상 선별검사 이상. T3/Free T4 낮고 TSH 높음, TBG 정상, 갑상선스캔 정상 uptake. 답은?",
+    "answer": "갑상선호르몬 합성 장애",
+    "explanation": "원문 답: 갑상선호르몬 합성 장애.",
+    "enhanced_explanation": "### 핵심\n갑상샘 존재/섭취가 있으나 호르몬 생성 장애로 복기됨.",
+    "tags": [
+      "선천성갑상샘저하증",
+      "갑상샘스캔",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객관식 4번 ... 갑상선스캔 상 정상 uptake / 답 갑상선호르몬 합성 장애",
+    "source_page": 7,
+    "source_rank": 80,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P07-009",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "7세 여아, 키 3%, 출생 당시 정상. 부 172, 모 160, 골연령 7, GH 결핍 없음, 연간 성장속도 4.5cm. 진단은?",
+    "answer": "가족성 저신장",
+    "explanation": "원문 답: 가족성 저신장.",
+    "enhanced_explanation": "### 핵심\n골연령 지연 없음/GH 결핍 없음/부모 키 맥락으로 가족성 저신장 복기.",
+    "tags": [
+      "저신장",
+      "가족성저신장"
+    ],
+    "uncertain": false,
+    "raw_anchor": "주관식 4번 7세 여아 키 3%... 진단은? 연간 성장속도 4.5cm 가족성 저신장",
+    "source_page": 7,
+    "source_rank": 85,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P08-002",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 13-16조 pretest 3차 복기 객관식4",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "생후 20일 여아. 심한 탈수와 늘어짐, 검은 피부 착색, 17-OH progesterone 상승. 치료는? 보기: ACTH, aldosterone, estrogen, hydrocortisone",
+    "answer": "hydrocortisone",
+    "explanation": "21-hydroxylase 결핍 CAH로 복기되어 치료는 hydrocortisone.",
+    "enhanced_explanation": "핵심: 신생아 탈수/색소침착 + 17-OH progesterone 상승 → CAH. 원문 치료: hydrocortisone.",
+    "tags": [
+      "CAH",
+      "17OHP"
+    ],
+    "uncertain": false,
+    "raw_anchor": "생후 20일 여아 ... 17-OH progesterone 상승 ... 치료 : hydrocortisone",
+    "source_page": 8,
+    "source_rank": 90,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P08-006",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 13-16조 pretest 3차 복기 주관식3",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "당뇨병성 케톤산증(DKA)을 정의하시오.",
+    "answer": "당뇨병 임상 양상과 함께 혈당 200 mg/dL 이상, 케톤뇨/케톤혈증, ABGA상 pH <7.3 또는 HCO3 <15",
+    "explanation": "원문 복기 정의.",
+    "enhanced_explanation": "정의 요소: 고혈당 + 케톤 + 산증. 원문 기준은 pH <7.3, HCO3 <15.",
+    "tags": [
+      "DKA"
+    ],
+    "uncertain": false,
+    "raw_anchor": "혈당이 200mg/dL 이상 ... 케톤뇨, 케톤혈증 ... pH <7.3, HCO3 <15",
+    "source_page": 8,
+    "source_rank": 94,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P08-009",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 13-16조 pretest 3차 복기 객관식3",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "10세 여아. 9세부터 유방돌출, 5개월 전부터 음모, 초경 없음. 성성숙도 유방 2단계/음모 3단계, 골연령 11세. 진단은?\n1 사춘기지연 2 정상사춘기 3 조기음모증 4 진성성조숙증 5 조기유방발육증",
+    "answer": "정상사춘기",
+    "explanation": "10세 여아에서 유방 발달이 8세 이후 시작되어 정상 범위로 보임.",
+    "enhanced_explanation": "핵심: 여아 성조숙증은 8세 전 유방 발달. 이 증례는 9세 시작으로 정상 사춘기에 해당.",
+    "tags": [
+      "puberty"
+    ],
+    "uncertain": false,
+    "raw_anchor": "10세 여아 ... 9세부터 유방돌출 ... 골연령 11세",
+    "source_page": 8,
+    "source_rank": 97,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P09-004",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "페이지 상단 잔여 문항",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "7세 여아, 3백분위수 저신장. 부모 172/160, 출생체중 3.5 kg, 1년 성장속도 4.5 cm, GH 결핍검사 정상, 골연령 7세. 진단은?",
+    "answer": "가족성 저신장",
+    "explanation": "원문 답: 가족성 저신장.",
+    "enhanced_explanation": "골연령이 역연령과 같고 GH 검사 정상인 저신장으로 복기상 가족성 저신장.",
+    "tags": [
+      "short_stature"
+    ],
+    "uncertain": false,
+    "raw_anchor": "진단은? 가족성 저신장",
+    "source_page": 9,
+    "source_rank": 102,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P09-005",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "페이지 상단 잔여 문항",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "혈당조절 목표인 target of glycemic level의 범위를 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안은 보이지 않음.",
+    "enhanced_explanation": "원문 기준 범위 확인 필요.",
+    "tags": [
+      "diabetes"
+    ],
+    "uncertain": true,
+    "raw_anchor": "혈당조절 목표인 target of glycemic level의 범위를 쓰시오",
+    "source_page": 9,
+    "source_rank": 103,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P09-008",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 17-20조 pretest 3차 복기 객관식4",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "11세 남아. 다음/다뇨/탈수, 혈당 400, pH 7.12로 DKA 의심. 24시간 안에 투여해야 하는 것이 아닌 것은?\n1 수분 2 나트륨 3 칼륨 4 중탄산염 5 인슐린",
+    "answer": "중탄산염",
+    "explanation": "DKA에서 수액, 전해질, 인슐린은 치료의 축이나 중탄산염은 routine 투여가 아님.",
+    "enhanced_explanation": "원문 맥락상 DKA 24시간 내 투여하지 않는 것: 중탄산염.",
+    "tags": [
+      "DKA"
+    ],
+    "uncertain": false,
+    "raw_anchor": "DKA ... 24시간 안에 투여해야 하는 것이 아닌 것은 ... 중탄산염",
+    "source_page": 9,
+    "source_rank": 106,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P09-012",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 17-20조 pretest 3차 복기 주관식3",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "남녀로 구분하여 성조숙증의 정의를 쓰시오.",
+    "answer": "남아: 9세 전에 고환 용적 4 cc 이상(성성숙도 2단계). 여아: 8세 전에 유방 발달 시작",
+    "explanation": "원문 답안.",
+    "enhanced_explanation": "성조숙증 기준 연령: 여아 8세 전, 남아 9세 전.",
+    "tags": [
+      "precocious_puberty"
+    ],
+    "uncertain": false,
+    "raw_anchor": "남 : 9세 전에 ... 고환 용적 4cc 이상 / 여 : 8세 전에 유방 발달 시작",
+    "source_page": 9,
+    "source_rank": 110,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P10-008",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 1-4조 pretest 3차 복기 주3",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "CAH의 선별검사는?",
+    "answer": "혈액 내 17-hydroxyprogesterone 검사",
+    "explanation": "원문 답안.",
+    "enhanced_explanation": "CAH 선별검사로 17-OHP가 복기됨.",
+    "tags": [
+      "CAH",
+      "17OHP"
+    ],
+    "uncertain": false,
+    "raw_anchor": "cah의 선별검사 혈액 내 17-hydroxyprogesterone 검사",
+    "source_page": 10,
+    "source_rank": 121,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-005",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 25-28조 객4",
+    "priority": "low",
+    "official_unit": "내분비",
+    "question": "신생아 갑상샘 선별검사 이상으로 내원. 치료는?",
+    "answer": "원문 확인 필요",
+    "explanation": "문제에서 혈액검사 결과가 없어 무효처리로 복기됨.",
+    "enhanced_explanation": "무효처리 문항. 카드에는 원문 확인 필요로 보존.",
+    "tags": [
+      "thyroid_screening"
+    ],
+    "uncertain": true,
+    "raw_anchor": "신생아갑상샘선별검사 이상 ... 무효처리",
+    "source_page": 11,
+    "source_rank": 128,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-009",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 25-28조 주4",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "성조숙증 진단기준을 남아/여아별로 쓰시오.",
+    "answer": "남아 9세 전, 여아 8세 전 성발달 시작",
+    "explanation": "페이지의 이전 복기와 같은 야마 문항.",
+    "enhanced_explanation": "여아 8세 전 유방발달, 남아 9세 전 고환용적 증가 기준으로 정리.",
+    "tags": [
+      "precocious_puberty"
+    ],
+    "uncertain": false,
+    "raw_anchor": "주4. 성조숙증 진단기준. 남아 여아",
+    "source_page": 11,
+    "source_rank": 132,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-014",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 29-32조 객4",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "5세 남아 부당경량아, 따라잡기 성장 실패.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안 없음.",
+    "enhanced_explanation": "SGA catch-up failure 관련 진단/치료 문항으로 보이나 원문 필요.",
+    "tags": [
+      "SGA",
+      "short_stature"
+    ],
+    "uncertain": true,
+    "raw_anchor": "5세 남아 부당경량아 따라잡기 실패",
+    "source_page": 11,
+    "source_rank": 137,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-019",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 29-32조 주4",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "부갑상샘저하증에서 Ca, P, VitD, ALP 증감을 체크하시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안 없음.",
+    "enhanced_explanation": "원문 답안 확인 필요.",
+    "tags": [
+      "hypoparathyroidism"
+    ],
+    "uncertain": true,
+    "raw_anchor": "부갑상선저하증 Ca P VitD ALP 증감 체크",
+    "source_page": 11,
+    "source_rank": 142,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-023",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 33-36조 객4",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "남아, 사춘기 발달 지연, 강한 후각 자극에도 반응 없음. 진단명은?",
+    "answer": "Kallmann syndrome",
+    "explanation": "후각저하/무후각 + 사춘기 지연.",
+    "enhanced_explanation": "GnRH 결핍성 성선기능저하와 후각 이상 조합.",
+    "tags": [
+      "Kallmann"
+    ],
+    "uncertain": false,
+    "raw_anchor": "사춘기 발달 지연, 강한 후각 자극에도 반응 없음",
+    "source_page": 11,
+    "source_rank": 146,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P12-002",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 33-36조 주4",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "괄호 안 부등호: 가족성 저신장, 성장호르몬 결핍, 체질성 성장지연에서 역연령과 골연령 관계는?",
+    "answer": "가족성 저신장: 역연령 = 골연령. 성장호르몬 결핍: 역연령 > 골연령. 체질성 성장지연: 역연령 > 골연령",
+    "explanation": "원문 답안.",
+    "enhanced_explanation": "골연령 지연 여부로 저신장 감별.",
+    "tags": [
+      "short_stature",
+      "bone_age"
+    ],
+    "uncertain": false,
+    "raw_anchor": "가족성 저신장: 역연령 (=) 골연령 ...",
+    "source_page": 12,
+    "source_rank": 151,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P12-007",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 37-40조 객4",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "수모세포종 수술/항암/방사선 후 범뇌하수체기능저하증 발생. 가장 먼저 투여해야 할 것은?",
+    "answer": "코티코스테로이드",
+    "explanation": "원문 정답 표시.",
+    "enhanced_explanation": "범뇌하수체저하증에서는 갑상샘호르몬보다 먼저 부신축 보충을 고려.",
+    "tags": [
+      "panhypopituitarism"
+    ],
+    "uncertain": false,
+    "raw_anchor": "범뇌하수체기능저하증 ... 정답 : 코티코스테로이드",
+    "source_page": 12,
+    "source_rank": 156,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P13-002",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 21-24조 객4",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "성조숙증 증례. 골연령 > 역연령인 여자, LH surge. 치료는?",
+    "answer": "GnRH agonist",
+    "explanation": "원문 답 선지 1.",
+    "enhanced_explanation": "진성 성조숙증 치료로 GnRH agonist 사용.",
+    "tags": [
+      "precocious_puberty"
+    ],
+    "uncertain": false,
+    "raw_anchor": "성조숙증 증례 ... LH surge ... GnRH agonist",
+    "source_page": 13,
+    "source_rank": 164,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P13-005",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 21-24조 주2",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "TG가 500 mg/dL 이상일 때 생길 수 있는 위장관계 질환 1가지와 식이요법 후에도 조절되지 않는 dyslipidemia에서 시도할 수 있는 약물 1가지는?",
+    "answer": "원문 확인 필요",
+    "explanation": "의국회의 문항. 답안 없음.",
+    "enhanced_explanation": "고중성지방혈증 합병증/약물 문항. 원문 확인 필요.",
+    "tags": [
+      "dyslipidemia"
+    ],
+    "uncertain": true,
+    "raw_anchor": "TG가 500mg/dl 이상 ... 위장관계 질환 ... 약물",
+    "source_page": 13,
+    "source_rank": 167,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P13-007",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 21-24조 주4",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "DKA 정의를 쓰시오.",
+    "answer": "혈당 200 mg/dL 이상, 케톤뇨/케톤혈증, 대사성 산증(pH <7.3 또는 HCO3 <15)",
+    "explanation": "페이지 8 주관식3과 같은 정의 복기.",
+    "enhanced_explanation": "고혈당 + 케톤 + 산증.",
+    "tags": [
+      "DKA"
+    ],
+    "uncertain": false,
+    "raw_anchor": "주4. dka 정의",
+    "source_page": 13,
+    "source_rank": 169,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-002",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 5-8조 객2",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "12일 남아. 신생아 대사검사 T4 감소, TSH 정상. 재검 Free T4 정상, T4 감소, TSH 정상, TBG 감소. 진단은?",
+    "answer": "TBG 결핍",
+    "explanation": "원문 선지 4. TBG 결핍.",
+    "enhanced_explanation": "Total T4 낮지만 Free T4/TSH 정상 + TBG 감소 → TBG deficiency.",
+    "tags": [
+      "thyroid",
+      "TBG"
+    ],
+    "uncertain": false,
+    "raw_anchor": "Free T4 정상, T4 감소, TSH 정상, TBG 감소",
+    "source_page": 14,
+    "source_rank": 172,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-006",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 5-8조 주1",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "부갑상샘 저하증에서 혈액학적 변화: Ca, P, Vit D, ALP 증감은?",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 일부 표식이 불명확함.",
+    "enhanced_explanation": "원문 답안 확인 필요.",
+    "tags": [
+      "hypoparathyroidism"
+    ],
+    "uncertain": true,
+    "raw_anchor": "Ca : 증가/감소 P : 증가/감소 Vit D : 증가/감소 ALP : 증가/감소",
+    "source_page": 14,
+    "source_rank": 176,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-013",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 9-12조 객5",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "16세 남아, FSH 등 수치는 사춘기 이전, 고환 2cc, 골연령 14세, 46XY, 냄새를 잘 못 맡음. 진단은?",
+    "answer": "Kallmann syndrome",
+    "explanation": "원문 답: 칼만 신드롬.",
+    "enhanced_explanation": "사춘기 지연 + 후각저하/무후각.",
+    "tags": [
+      "Kallmann"
+    ],
+    "uncertain": false,
+    "raw_anchor": "냄새를 잘 못 맡음. 진단은? 칼만 신드롬",
+    "source_page": 14,
+    "source_rank": 183,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-017",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 9-12조 주4",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "1형 당뇨 치료 중. 자기 전 정상 혈당인데 다음 아침 고혈당. Somogyi 현상과 dawn phenomenon 감별법은?",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안 없음.",
+    "enhanced_explanation": "새벽 시간 혈당 측정 등 감별이 예상되나 원문 답안 확인 필요.",
+    "tags": [
+      "diabetes",
+      "Somogyi",
+      "dawn"
+    ],
+    "uncertain": true,
+    "raw_anchor": "소모기 현상과 새벽현상을 감별해야한다. 감별법은?",
+    "source_page": 14,
+    "source_rank": 187,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-022",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 13-16조 객4",
+    "priority": "high",
+    "official_unit": "내분비",
+    "question": "범뇌하수체저하증에서 가장 처음 줘야 하는 호르몬은?",
+    "answer": "코티코스테로이드",
+    "explanation": "페이지 12 객4와 같은 포인트.",
+    "enhanced_explanation": "부신위기 예방을 위해 glucocorticoid 우선.",
+    "tags": [
+      "panhypopituitarism"
+    ],
+    "uncertain": false,
+    "raw_anchor": "범뇌하수체저하증에서 가장 처음 줘야하는 호르몬",
+    "source_page": 14,
+    "source_rank": 192,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-001",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "성장호르몬 결핍과 체질성 성장지연에서 역연령과 골연령의 관계 빈칸을 채우시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주2. 성장호르몬 결핍: 역연령 ( ) 골연령 / 체질성 성장지연: 역연령 ( 3 ) 골연령",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "growth_bone_age"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주2. 성장호르몬 결핍: 역연령 ( ) 골연령 / 체질성 성장지연: 역연령 ( 3 ) 골연령",
+    "source_page": 15,
+    "source_rank": 195,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-003",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "당뇨병성 케톤산증의 정의에 대해 서술하시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주4. 당뇨병성 케톤산증의 정의에 대해 서술",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "dka_definition"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주4. 당뇨병성 케톤산증의 정의에 대해 서술",
+    "source_page": 15,
+    "source_rank": 197,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-013",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "가족성 저신장, 성장호르몬 결핍, 체질성 성장지연에서 역연령과 골연령의 부등호를 채우시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주5. 괄호 안에 알맞은 부등호... 가족성 저신장: 역연령 ( ) 골연령 / 성장호르몬 결핍... / 체질성 성장지연...",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "short_stature_bone_age"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주5. 괄호 안에 알맞은 부등호... 가족성 저신장: 역연령 ( ) 골연령 / 성장호르몬 결핍... / 체질성 성장지연...",
+    "source_page": 15,
+    "source_rank": 207,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-017",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "5세 남아 저신장. 39주 2.4 kg 둔위분만, 아빠 174 cm 엄마 153 cm, 골연령 5세, 음모 없음, 1년에 5 cm 성장. 원인은?\n1 갑상선 2 체질성 성장지연 3 가족성 저신장 4 성장호르몬 결핍 5 부당경량아",
+    "answer": "원문 확인 필요",
+    "explanation": "객4. 5세 남아 저신장... 39주 2.4kg... 골연령 5세... 1년에 5cm 성장했다. 원인?",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "short_stature_sga"
+    ],
+    "uncertain": true,
+    "raw_anchor": "객4. 5세 남아 저신장... 39주 2.4kg... 골연령 5세... 1년에 5cm 성장했다. 원인?",
+    "source_page": 15,
+    "source_rank": 211,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-023",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "성조숙증의 정의를 남녀별로 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주5. 성조숙증의 정의를 남여별로 정의하시오",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "precocious_puberty_definition"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주5. 성조숙증의 정의를 남여별로 정의하시오",
+    "source_page": 15,
+    "source_rank": 217,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-025",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "부갑상샘 기능저하증의 혈액학적 변화를 쓰시오.",
+    "answer": "Ca 감소, P 증가, PTH 감소",
+    "explanation": "주관식 3번 부갑상샘 기능저하증 혈액학적 변화 => Ca 감소 P증가 PTH감소",
+    "enhanced_explanation": "원문에 적힌 변화 그대로입니다.",
+    "tags": [
+      "hypoparathyroidism_lab"
+    ],
+    "uncertain": false,
+    "raw_anchor": "주관식 3번 부갑상샘 기능저하증 혈액학적 변화 => Ca 감소 P증가 PTH감소",
+    "source_page": 16,
+    "source_rank": 219,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-030",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "5세 여아가 유방비대로 내원. 키/몸무게 97백분위수, 유방망울 촉지, TSH/T4 정상, LH와 estradiol 상승, GnRH 검사 시 LH surging. 감별진단 위해 더 시행할 검사는?",
+    "answer": "Brain MRI",
+    "explanation": "객관식 3번... 답 : Brain MRI",
+    "enhanced_explanation": "중추성 성조숙증 평가 문항으로 원문 답을 보존했습니다.",
+    "tags": [
+      "central_precocious_puberty_mri"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객관식 3번... 답 : Brain MRI",
+    "source_page": 16,
+    "source_rank": 224,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-036",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "성장호르몬 결핍증을 의심하게 하는 소견 3가지 이상을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주관식) 성장호르몬 결핍증을 의심하게 하는 소견을 3가지 이상 쓰시오",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "gh_deficiency_features"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주관식) 성장호르몬 결핍증을 의심하게 하는 소견을 3가지 이상 쓰시오",
+    "source_page": 16,
+    "source_rank": 230,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-041",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "17-hydroxyprogesterone 관련 야마 객관식 문항의 정답/핵심은?",
+    "answer": "원문 확인 필요",
+    "explanation": "객관식) 17hydroxyprogesterone (야마)",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "cah_17ohp"
+    ],
+    "uncertain": true,
+    "raw_anchor": "객관식) 17hydroxyprogesterone (야마)",
+    "source_page": 16,
+    "source_rank": 235,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-045",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.17",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "뇌하수체 전엽과 후엽에서 분비되는 호르몬을 열거하시오.",
+    "answer": "전엽: GH, ACTH, TSH, FSH, LH, PRL / 후엽: 옥시토신, 바소프레신",
+    "explanation": "뇌하수체 전엽 – GH, ACTH, TSH, FSH, LH, PRL / 후엽 – 옥시토신, 바소프레신",
+    "enhanced_explanation": "원문 답을 그대로 보존했습니다.",
+    "tags": [
+      "pituitary_hormones"
+    ],
+    "uncertain": false,
+    "raw_anchor": "뇌하수체 전엽 – GH, ACTH, TSH, FSH, LH, PRL / 후엽 – 옥시토신, 바소프레신",
+    "source_page": 17,
+    "source_rank": 239,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-050",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.17",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "12세 환자, 골연령 12세, 성성숙도 Tanner 2기(유방/음모), 초경이 없어 내원. 시행할 검사는? 선택지: 경과관찰, 생식샘자극호르몬, 성장호르몬자극검사.",
+    "answer": "원문 확인 필요",
+    "explanation": "객관식 3번 12세 환자 골연령 12세 성성숙도 2기... 초경이 없어서 내원. 시행할 검사는?",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "delayed_puberty_eval"
+    ],
+    "uncertain": true,
+    "raw_anchor": "객관식 3번 12세 환자 골연령 12세 성성숙도 2기... 초경이 없어서 내원. 시행할 검사는?",
+    "source_page": 17,
+    "source_rank": 244,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-055",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.18",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "6세 여아가 유방발달로 내원. 키 97백분위수 이상, 유방 Tanner 2기, 골나이 9세. 진단을 위해 가장 먼저 시행할 검사는?",
+    "answer": "원문 확인 필요",
+    "explanation": "주관식3. 6세 여아가 유방발달... 골나이는 9세였다. 진단을 위해 가장 먼저 시행할 검사는?",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "precocious_puberty_first_test"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주관식3. 6세 여아가 유방발달... 골나이는 9세였다. 진단을 위해 가장 먼저 시행할 검사는?",
+    "source_page": 18,
+    "source_rank": 249,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-059",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.18",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "12세 여아가 무월경으로 내원. 골연령 12세, 음모와 유방발달 Tanner 2기. 다음으로 시행할 검사는?\n1 경과관찰 2 생식샘자극호르몬검사 3 성장호르몬자극검사",
+    "answer": "원문 확인 필요",
+    "explanation": "객3. 12세 여아가 무월경... 다음으로 시행할 검사는?",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "amenorrhea_eval_variant"
+    ],
+    "uncertain": true,
+    "raw_anchor": "객3. 12세 여아가 무월경... 다음으로 시행할 검사는?",
+    "source_page": 18,
+    "source_rank": 253,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-064",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.18",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "갑상선 신생아 선별검사의 적절한 시기와 의의를 서술하시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주관식 3번. 갑상선 신생아 선별검사 적절한 시기와 의의를 서술하시오.",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "newborn_thyroid_screen"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주관식 3번. 갑상선 신생아 선별검사 적절한 시기와 의의를 서술하시오.",
+    "source_page": 18,
+    "source_rank": 258,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-072",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "7세 남아, Tanner 2기, 작은 키, 골연령 10세, LH 38 증가. 치료는?\n1 GnRH agonist 2 관찰 3 bromocriptine 4 aromatase inhibitor",
+    "answer": "1. GnRH agonist",
+    "explanation": "객4. 7세 남아... LH 38... 치료는? 1. GnRH agonist",
+    "enhanced_explanation": "원문 선택지와 임상상에 맞춰 GnRH agonist를 답으로 보존했습니다.",
+    "tags": [
+      "precocious_puberty_treatment"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객4. 7세 남아... LH 38... 치료는? 1. GnRH agonist",
+    "source_page": 19,
+    "source_rank": 266,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-074",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "Nondiabetic hyperglycemia를 분류하고, stress hyperglycemia/약물 유발성 고혈당/내분비 질환(쿠싱, 갈색세포종)을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주1. nondiabetic hyperglycemia를 분류하고 스트레스성 고혈당/약물 유발성 고혈당/내분비 질환(쿠싱, 갈색세포종)",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "nondiabetic_hyperglycemia"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주1. nondiabetic hyperglycemia를 분류하고 스트레스성 고혈당/약물 유발성 고혈당/내분비 질환(쿠싱, 갈색세포종)",
+    "source_page": 19,
+    "source_rank": 268,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-081",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "복통 있던 남자아이, 전날 잠든 후 깨워도 깨어나지 않아 응급실 내원. 혈압 85/50?, 혈당 45, 소변 ketone 3+. 처치는?",
+    "answer": "원문 확인 필요",
+    "explanation": "주1) 복통 있던 남자아이... glucose 45, 소변 ketone 3+ 일때 처치는?",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "hypoglycemia_ketosis"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주1) 복통 있던 남자아이... glucose 45, 소변 ketone 3+ 일때 처치는?",
+    "source_page": 19,
+    "source_rank": 275,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-085",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "두개인두종 수술 후 범뇌하수체기능저하증 진단 남아에게 가장 먼저 투여해야 하는 것은?\n1 갑상선호르몬 2 성호르몬 3 성장호르몬 4 항이뇨호르몬 5 corticosteroid",
+    "answer": "5. corticosteroid",
+    "explanation": "객1) 두개인두종... 범뇌하수체기능저하증... 가장 먼저 투여... 5. corticosteroid",
+    "enhanced_explanation": "뇌하수체기능저하에서 부신축 보충을 먼저 고려하는 문항으로 원문 선택지를 정리했습니다.",
+    "tags": [
+      "panhypopituitarism_steroid_first"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객1) 두개인두종... 범뇌하수체기능저하증... 가장 먼저 투여... 5. corticosteroid",
+    "source_page": 19,
+    "source_rank": 279,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-090",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.20",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "16세 남자 사춘기 지연. 키 176 cm, 고환 2 cc, 여성형유방, LH/FSH 증가, testosterone 감소, 골연령 15세, 후각 정상. 가능성 높은 진단은?\n1 누난 2 칼만 3 클라인펠터 4 프레더윌리 5 체질성 성장지연",
+    "answer": "3. 클라인펠터 증후군",
+    "explanation": "객4) 16세 남자... LH와 FSH 증가... testosterone 감소... 냄새는 잘 맡았다... 3. 클라인펠터 증후군",
+    "enhanced_explanation": "고성선자극호르몬성 성선기능저하와 여성형유방 조합을 원문 답으로 정리했습니다.",
+    "tags": [
+      "klinefelter"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객4) 16세 남자... LH와 FSH 증가... testosterone 감소... 냄새는 잘 맡았다... 3. 클라인펠터 증후군",
+    "source_page": 20,
+    "source_rank": 284,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-092",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.20",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "성조숙증의 진단기준 빈칸: 남아 ( )세 전에 고환 성숙도 2단계, 기준 고환 용적 ( )cc 이상 증가, 여아에서는 ( )세 전에 이차성징인 ( )이다.",
+    "answer": "원문 확인 필요",
+    "explanation": "주1) 성조숙증의 진단기준은 남아 ( )세 전에 고환 성숙도 2단계 기준은 고환 용적 ( )cc 이상 증가와 여아에서는 ( ) 세 전에 이차 성징인 ( )이다.",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "precocious_puberty_criteria_blank"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주1) 성조숙증의 진단기준은 남아 ( )세 전에 고환 성숙도 2단계 기준은 고환 용적 ( )cc 이상 증가와 여아에서는 ( ) 세 전에 이차 성징인 ( )이다.",
+    "source_page": 20,
+    "source_rank": 286,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-098",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.21",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "CAH에서의 효소결핍 빈칸문제를 풀어 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "[주관식] 1. CAH에서의 효소결핍 (빈칸문제-야마)",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "cah_enzyme_defect"
+    ],
+    "uncertain": true,
+    "raw_anchor": "[주관식] 1. CAH에서의 효소결핍 (빈칸문제-야마)",
+    "source_page": 21,
+    "source_rank": 292,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-103",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.21",
+    "priority": "medium",
+    "official_unit": "내분비",
+    "question": "생후 10일 선천성 갑상샘저하증 진단 아기의 갑상선스캔 소견과 질환 연결: ectopic thyroid, thyroglossal duct cyst, TBG deficiency, dyshormonogenesis, 모체 TSH inhibiting Ab를 구분하시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "객관식 1. 생후 10일 선천성 감상샘저하증 진단아기 갑상선스캔 / ectopic thyroid... TBG deficiency... dyshormonogenesis... 모체의 TSH inhibiting ab...",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "congenital_hypothyroidism_scan"
+    ],
+    "uncertain": true,
+    "raw_anchor": "객관식 1. 생후 10일 선천성 감상샘저하증 진단아기 갑상선스캔 / ectopic thyroid... TBG deficiency... dyshormonogenesis... 모체의 TSH inhibiting ab...",
+    "source_page": 21,
+    "source_rank": 297,
+    "official_chapter": "내분비"
+  },
+  {
+    "id": "PEDS3-2026-Q03-ABSENCE-ETHOSUXIMIDE",
+    "source": "2026 소청과 3차 pretest 복기(update 2026.04.10) / 객관식 3번",
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "official_unit": "신경-근육",
+    "question": "7세 여아가 수업 중 10초간 멍때리는 것이 하루에도 여러 번 관찰되어 내원했다. 격렬한 운동 후에 더 심하고, 발작 중엔 눈을 깜빡이고 바로 정상으로 돌아온다. 적절한 약은?\n1) 로라제팜\n2) 레비티라세탐\n3) 옥스카바제핀\n4) 페노바르비탈\n5) 에토쑥시마이드",
+    "answer": "5) 에토쑥시마이드",
+    "explanation": "짧은 staring spell이 반복되고 바로 회복되는 양상은 결신발작이다. 전형 결신발작의 1차 약제는 ethosuximide이다.",
+    "enhanced_explanation": "🧭 Big picture\n결신발작은 짧게 멍해지고 바로 정상으로 돌아오는 발작이다. 국시에서는 3 Hz spike-wave, 과호흡 유발, ethosuximide가 한 묶음이다.\n\n🔎 핵심 단서\n- 7세\n- 하루 여러 번 10초간 멍함\n- 눈 깜빡임\n- 발작 후 바로 정상\n\n✅ 3초 Lock line\n소아 결신발작 치료 = ethosuximide.",
+    "tags": [
+      "2026",
+      "신경-근육",
+      "결신발작",
+      "ethosuximide"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객3. 7세 여아... 10초간 멍때리는 것... 적절한 약... 5) 에토쑥시마이드",
+    "source_page": "2026 docx",
+    "source_rank": 3,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-2026-SA04-DUCHENNE",
+    "source": "2026 소청과 3차 pretest 복기(update 2026.04.10) / 주관식 4번",
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "official_unit": "신경-근육",
+    "question": "4세 남아가 계단을 오르기 힘들어하고 자주 넘어졌다. 일어날 때 허벅지를 잡고 일어났으며 종아리 근육도 비대해져 있었다. CK 15,600일 때 가장 추정되는 진단은?",
+    "answer": "Duchenne muscular dystrophy",
+    "explanation": "남아, Gowers sign, 종아리 가성비대, CK 현저 상승은 Duchenne muscular dystrophy의 전형적인 단서다.",
+    "enhanced_explanation": "🧭 Big picture\nDMD는 어린 남아에서 proximal muscle weakness로 계단/일어서기가 힘들고, Gowers sign과 calf pseudohypertrophy가 나온다. CK가 크게 오른다.\n\n🔎 핵심 단서\n- 4세 남아\n- 계단 오르기 어려움, 자주 넘어짐\n- 허벅지를 짚고 일어남\n- 종아리 비대\n- CK 15,600\n\n✅ 3초 Lock line\n남아+Gowers+calf pseudohypertrophy+CK 폭증 = DMD.",
+    "tags": [
+      "2026",
+      "신경-근육",
+      "DMD",
+      "Gowers",
+      "CK"
+    ],
+    "uncertain": false,
+    "raw_anchor": "주4. 4세 남아... 허벅지를 잡고 일어났으며 종아리근육도 비대... CK 15,600... Duchenne muscular dystrophy",
+    "source_page": "2026 docx",
+    "source_rank": 9,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P01-003",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "결절경화증/신경섬유종증/스터지-웨버 등과 West syndrome 또는 Lennox-Gastaut syndrome을 매칭하는 문항의 답은?",
+    "answer": "결절경화증 + 웨스트증후군",
+    "explanation": "원문 답: 결절경화증+웨스트증후군.",
+    "enhanced_explanation": "### 핵심\n원문 선지에는 결절경화증, 신경섬유종증, 스터지-웨버 증후군과 West/Lennox-Gastaut 조합이 제시됨.",
+    "tags": [
+      "결절경화증",
+      "West syndrome"
+    ],
+    "uncertain": false,
+    "raw_anchor": "답 : 결절경화증+웨스트증후군(다른 선지...)",
+    "source_page": 1,
+    "source_rank": 13,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P02-002",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "9세 남아, 감기 후 양쪽 다리 근력 약화. EMG에서 상지는 정상, 하지는 3/5. 뇌척수액검사에서 가장 중요한 소견 6글자는?",
+    "answer": "단백 세포 해리",
+    "explanation": "원문 답: 단백 세포 해리. 길랑-바레 증후군 문맥.",
+    "enhanced_explanation": "### 핵심\nGBS 의심 상황에서 CSF의 albuminocytologic dissociation을 묻는 복기.",
+    "tags": [
+      "길랑바레",
+      "CSF"
+    ],
+    "uncertain": false,
+    "raw_anchor": "9. 9세 남아 6일 전 감기증상 후 양쪽 다리 근력 약화... 답 : 단백 세포 해리",
+    "source_page": 2,
+    "source_rank": 17,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P02-006",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "신경-근육",
+    "question": "8세 여아, 졸림/의식저하, 미열 후 말 어눌함과 보행실조. CSF WBC 45/RBC 70/단백 42/당 60, MRI multifocal high signal lesion. 치료는?",
+    "answer": "Methylprednisolone",
+    "explanation": "원문 선지 3: Methylprednisolone (ADEM).",
+    "enhanced_explanation": "### 핵심\nADEM으로 복기된 문항이며 정답은 steroid pulse로 제시됨.",
+    "tags": [
+      "ADEM",
+      "methylprednisolone",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "3번... MRI상 뇌 이곳저곳에 high signal lesion. 치료는?... 3) Methylprednisolone (ADEM)",
+    "source_page": 2,
+    "source_rank": 21,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P02-007",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "신경-근육",
+    "question": "1달 전부터 자다가 깨서 컥컥거림, 왼쪽 볼 씰룩거림과 침 흘림. 깬 뒤 기억 못 함. 중심측두엽 고진폭극파 EEG. 진단은?",
+    "answer": "중심측두엽극파를 동반한 양성 소아 뇌전증",
+    "explanation": "원문 정답 그대로.",
+    "enhanced_explanation": "### 핵심\n수면 중 안면부 발작 양상과 centrotemporal spike가 단서.",
+    "tags": [
+      "양성롤란도뇌전증",
+      "EEG"
+    ],
+    "uncertain": false,
+    "raw_anchor": "4번 1달 전부터 자다가 깨서... 정답 : 중심측두엽극파를 동반한 양성 소아 뇌전증",
+    "source_page": 2,
+    "source_rank": 22,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P02-011",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "신경-근육",
+    "question": "영아연축 + 결절성 경화증 증례(멜라닌 저하 반점). 가장 처음 써야 할 약제를 영어로 쓰시오.",
+    "answer": "Vigabatrin",
+    "explanation": "원문 답: Vigabatrin.",
+    "enhanced_explanation": "### 핵심\n결절성 경화증 관련 영아연축의 1차 약제로 복기됨.",
+    "tags": [
+      "영아연축",
+      "결절성경화증",
+      "vigabatrin"
+    ],
+    "uncertain": false,
+    "raw_anchor": "4번 결절사 영연축... 가장 처음 써야 할 약제를 영어로 쓰시오 / Vigabatrin",
+    "source_page": 2,
+    "source_rank": 26,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P02-015",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "사진 보고 6개월 영유아 근긴장도 검사와 결과를 맞추는 문항. 답은?",
+    "answer": "원문 확인 필요",
+    "explanation": "사진/정답이 불명확함.",
+    "enhanced_explanation": "### 주의\n선지: Horizontal suspension 저하/상승, Traction response 저하/정상/상승. 원문에 “죄송합니다ㅠ”가 있어 정답 확인 불가.",
+    "tags": [
+      "영유아검진",
+      "근긴장도"
+    ],
+    "uncertain": true,
+    "raw_anchor": "3. 사진 보고 6개월 영유아 근긴장도 검사랑 결과 맞는 거?... 죄송합니다ㅠ",
+    "source_page": 2,
+    "source_rank": 30,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-002",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "열성경련이 5분 이상 지속되거나 연이어 발생하면 정주할 수 있는 약은?",
+    "answer": "Diazepam",
+    "explanation": "원문 답: diazepam.",
+    "enhanced_explanation": "### 핵심\n지속/군발 열성경련에서 급성 중단 약제를 묻는다.",
+    "tags": [
+      "열성경련",
+      "diazepam"
+    ],
+    "uncertain": false,
+    "raw_anchor": "9번 열성경련은... 5분이상... 답 : diazepam",
+    "source_page": 3,
+    "source_rank": 33,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-004",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "신경-근육",
+    "question": "7세 여아, 멍때림. 3Hz spike & wave complex 사진. 이 발작을 유발하는 가장 효과적인 방법은?",
+    "answer": "과호흡",
+    "explanation": "원문 답: 과호흡.",
+    "enhanced_explanation": "### 핵심\n결신발작 유발 검사로 과호흡이 원문 정답.",
+    "tags": [
+      "결신발작",
+      "3Hz spike wave",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "1번 (야마) 7세 여아, 멍때림... 답: 과호흡",
+    "source_page": 3,
+    "source_rank": 35,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-016",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "신경-근육",
+    "question": "5세 여아, 3개월 전부터 유치원에서 하루 4~5회, 10초 이내 멍함. 이후 하던 행동 이어감. 진단은?",
+    "answer": "결신발작",
+    "explanation": "원문 선지 3. 결신발작.",
+    "enhanced_explanation": "### 핵심\n짧은 staring spell 후 즉시 행동 재개가 단서.",
+    "tags": [
+      "결신발작",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "4번 (야마) 건강하던 5세 여아... 진단은?... 3. 결신발작",
+    "source_page": 3,
+    "source_rank": 47,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-018",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "신경-근육",
+    "question": "신생아기 이후 세균성 뇌수막염의 흔한 원인균 3가지는?",
+    "answer": "Streptococcus pneumoniae, Haemophilus influenzae, Neisseria meningitidis",
+    "explanation": "원문 답 그대로.",
+    "enhanced_explanation": "### 핵심\n신생아기 이후 세균성 수막염 원인균 3가지를 묻는 주관식.",
+    "tags": [
+      "뇌수막염",
+      "세균성수막염",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "1번(야마) 신생아기 이후 세균성 뇌수막염의 흔한 원인균 3가지는? S. Pneumoniae, H. influenzae, N. meningitides",
+    "source_page": 3,
+    "source_rank": 49,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P04-002",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "Status epilepticus의 조작적 정의는?",
+    "answer": "원문 확인 필요",
+    "explanation": "컨퍼런스 문제로 stem만 있고 답이 없음.",
+    "enhanced_explanation": "### 주의\n답이 페이지에 보이지 않으므로 확인 필요.",
+    "tags": [
+      "status epilepticus",
+      "컨퍼런스"
+    ],
+    "uncertain": true,
+    "raw_anchor": "5번(컨퍼런스 문제) Status epilepticus의 조작적 정의",
+    "source_page": 4,
+    "source_rank": 53,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P05-005",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "신경-근육",
+    "question": "열성경련이 뇌전증으로 이행될 위험인자들을 쓰시오.",
+    "answer": "뇌전증 가족력, 발달지연/신경학적 지연, 복합 열성경련",
+    "explanation": "원문 답 그대로.",
+    "enhanced_explanation": "### 핵심\n복합 열성경련, 신경발달 이상, 가족력이 위험인자로 제시됨.",
+    "tags": [
+      "열성경련",
+      "뇌전증",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "3번 열성경련이 뇌전증으로 이행될 위험인자... 뇌전증의 가족력 / 발달지연이나 신경학적 지연 / 복합 열성 경련",
+    "source_page": 5,
+    "source_rank": 66,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P07-005",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "뇌수막염 관련 객관식 5번. “당이 떨어지면 세균 / 단백질이 뜨면 결핵 / 정상 같으면 바이러스?” 주석이 있는 문항의 답은?",
+    "answer": "바이러스 뇌수막염 가능성",
+    "explanation": "원문에 “단백이 높지 않아서 바이러스 뇌수막염?”이라고만 적혀 있음.",
+    "enhanced_explanation": "### 주의\n정확한 stem/선지/정답이 불완전하여 원문 확인 필요 성격이 강함.",
+    "tags": [
+      "뇌수막염"
+    ],
+    "uncertain": true,
+    "raw_anchor": "객관식 5번 * 당이 떨어지면 세균... 단백이 높지 않아서 바이러스 뇌수막염?",
+    "source_page": 7,
+    "source_rank": 81,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P08-005",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 13-16조 pretest 3차 복기 주관식2",
+    "priority": "high",
+    "official_unit": "신경-근육",
+    "question": "결신발작. 하루 수십 회, 수초간 의식소실, 3Hz spike-and-wave 양상. 발작을 유발하는 방법은?",
+    "answer": "과호흡",
+    "explanation": "원문 답: 과호흡.",
+    "enhanced_explanation": "결신발작은 과호흡으로 유발될 수 있고 3Hz spike-and-wave와 연결됨.",
+    "tags": [
+      "absence_seizure"
+    ],
+    "uncertain": false,
+    "raw_anchor": "결신발작 ... 유발 ... 과호흡",
+    "source_page": 8,
+    "source_rank": 93,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P09-009",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 17-20조 pretest 3차 복기 객관식5",
+    "priority": "high",
+    "official_unit": "신경-근육",
+    "question": "14세 여아 의식저하, 안저검사 유두부종. 원인 평가를 위해 시행해야 할 검사는?",
+    "answer": "CT",
+    "explanation": "유두부종은 두개내압 상승 소견으로 요추천자 금기. 원문에 CT가 표시됨.",
+    "enhanced_explanation": "두개내압 상승 의심 시 LP 전 영상검사. 원문 답: CT.",
+    "tags": [
+      "papilledema",
+      "ICP"
+    ],
+    "uncertain": false,
+    "raw_anchor": "유두 부종 있어서 CSF X ... CT",
+    "source_page": 9,
+    "source_rank": 107,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P10-005",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 1-4조 pretest 3차 복기 객5",
+    "priority": "high",
+    "official_unit": "신경-근육",
+    "question": "Duchenne muscular dystrophy 야마 객관식 문제.",
+    "answer": "원문 확인 필요",
+    "explanation": "페이지에 “DMD 야마”만 있고 구체 stem/정답이 없음.",
+    "enhanced_explanation": "DMD 문항임은 보이나 답안 확인 필요.",
+    "tags": [
+      "DMD"
+    ],
+    "uncertain": true,
+    "raw_anchor": "객5 DMD 야마",
+    "source_page": 10,
+    "source_rank": 118,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-010",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 25-28조 주5",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "경부강직, Brudzinski sign, Kernig sign 설명을 주고 괄호에 각 이름 쓰기.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항 설명과 답안 매칭 세부가 페이지에 없음.",
+    "enhanced_explanation": "수막자극징후 명칭 매칭 문항. 원문 확인 필요.",
+    "tags": [
+      "meningeal_sign"
+    ],
+    "uncertain": true,
+    "raw_anchor": "경부강직, brudzinski sign, kernig sign 설명",
+    "source_page": 11,
+    "source_rank": 133,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-015",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 29-32조 객5",
+    "priority": "high",
+    "official_unit": "신경-근육",
+    "question": "소아기 소발작을 유발하는 것은?",
+    "answer": "과호흡",
+    "explanation": "원문 답: 과호흡.",
+    "enhanced_explanation": "결신발작 유발 = 과호흡.",
+    "tags": [
+      "absence_seizure"
+    ],
+    "uncertain": false,
+    "raw_anchor": "소아기소발작 유발 무엇으로? 과호흡",
+    "source_page": 11,
+    "source_rank": 138,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-024",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 33-36조 객5",
+    "priority": "high",
+    "official_unit": "신경-근육",
+    "question": "Duchenne muscular dystrophy 야마 문항.",
+    "answer": "원문 확인 필요",
+    "explanation": "페이지에 문항명만 있음.",
+    "enhanced_explanation": "DMD 문항이나 구체 stem/정답 확인 필요.",
+    "tags": [
+      "DMD"
+    ],
+    "uncertain": true,
+    "raw_anchor": "듀시엔형 근이영양증(Duchenne muscular dystrophy) 야마",
+    "source_page": 11,
+    "source_rank": 147,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P12-003",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 33-36조 주5",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "Acute leukoencephalopathy with restricted diffusion의 두 가지 type과 더 예후가 나쁜 type은?",
+    "answer": "Diffuse type, central-sparing type; diffuse type이 더 예후 불량",
+    "explanation": "원문 답안.",
+    "enhanced_explanation": "Diffuse type은 급격한 의식저하/깊은 혼수 등으로 예후 불량하다고 복기됨.",
+    "tags": [
+      "leukoencephalopathy"
+    ],
+    "uncertain": false,
+    "raw_anchor": "Diffuse type ... Central-sparing type ... diffuse type 예후가 훨씬 불량",
+    "source_page": 12,
+    "source_rank": 152,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P12-013",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 37-40조 주5",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "6세 여아 30분 지속 경련. 응급실에서도 멈추지 않음. 1) 먼저 줄 수 있는 1차 약제 2가지는? 2) 지속 시 사용할 약제 2가지는?",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안 없음.",
+    "enhanced_explanation": "Status epilepticus 약제 문항. 원문 답안 확인 필요.",
+    "tags": [
+      "status_epilepticus"
+    ],
+    "uncertain": true,
+    "raw_anchor": "30분간 지속되는 경련 ... 1차 약제 ... 지속될 경우",
+    "source_page": 12,
+    "source_rank": 162,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P13-003",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 21-24조 객5",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "야경증 객관식 문제. 옳은 설명은? 보기: REM 수면, 주간졸림, 무서운 꿈, 경련 배제 위해 수면뇌파, 혼란상태 멈추기 위해 각성 등",
+    "answer": "원문 확인 필요",
+    "explanation": "원문에 NREM 메모만 있고 정답 표시는 없음.",
+    "enhanced_explanation": "야경증은 NREM 수면에서 발생한다는 단서가 있음. 정확 선지/답 확인 필요.",
+    "tags": [
+      "night_terror"
+    ],
+    "uncertain": true,
+    "raw_anchor": "야경증 객관식문제 ... NREM",
+    "source_page": 13,
+    "source_rank": 165,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-004",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 5-8조 객4",
+    "priority": "high",
+    "official_unit": "신경-근육",
+    "question": "9세 여아. 하루 수십 회 몇 초간 의식소실. 보기 중 진단은?",
+    "answer": "소발작(결신발작)",
+    "explanation": "객4-5 공통 보기 중 하루 수십 회 짧은 의식소실은 소발작.",
+    "enhanced_explanation": "Absence seizure 전형 양상.",
+    "tags": [
+      "absence_seizure"
+    ],
+    "uncertain": false,
+    "raw_anchor": "9세 여아. 하루 수십회 몇초간 의식소실",
+    "source_page": 14,
+    "source_rank": 174,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-005",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 5-8조 객5",
+    "priority": "high",
+    "official_unit": "신경-근육",
+    "question": "8세 여아가 밤에 자다가 볼을 씰룩거리고, 불러도 반응 없이 침을 흘렸다. 보기 중 진단은?",
+    "answer": "양성 롤란딕 발작",
+    "explanation": "야간 안면 twitching/침흘림은 benign rolandic epilepsy 양상.",
+    "enhanced_explanation": "보기 8 양성 롤란딕 발작이 적합.",
+    "tags": [
+      "benign_rolandic_epilepsy"
+    ],
+    "uncertain": false,
+    "raw_anchor": "밤에 자다가 볼을 씰룩 ... 침을 흘렸다",
+    "source_page": 14,
+    "source_rank": 175,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-009",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 5-8조 주4",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "발작과 뇌전증의 정의를 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안 없음.",
+    "enhanced_explanation": "정의 문항. 원문 확인 필요.",
+    "tags": [
+      "seizure",
+      "epilepsy"
+    ],
+    "uncertain": true,
+    "raw_anchor": "발작과 뇌전증의 정의",
+    "source_page": 14,
+    "source_rank": 179,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-012",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 9-12조 객2",
+    "priority": "high",
+    "official_unit": "신경-근육",
+    "question": "의식을 수시로 잃고 눈 깜빡임, 3Hz 극서파. 발작 유발에 가장 효과적인 방법은?",
+    "answer": "과호흡",
+    "explanation": "결신발작 유발.",
+    "enhanced_explanation": "3Hz spike-wave + brief staring → absence seizure; hyperventilation.",
+    "tags": [
+      "absence_seizure"
+    ],
+    "uncertain": false,
+    "raw_anchor": "3hz 극서파 ... 유발 ... 과호흡",
+    "source_page": 14,
+    "source_rank": 182,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-015",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 9-12조 주2",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "6세 여아 30분 지속 경련. 1차 약제와 2차 약제는?",
+    "answer": "원문 확인 필요",
+    "explanation": "야마 문항이나 답안 없음.",
+    "enhanced_explanation": "Status epilepticus 치료 약제 원문 확인 필요.",
+    "tags": [
+      "status_epilepticus"
+    ],
+    "uncertain": true,
+    "raw_anchor": "6세여아 30분간 지속되는 경련 1차약제 2차약제 야마",
+    "source_page": 14,
+    "source_rank": 185,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-021",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 13-16조 객3",
+    "priority": "high",
+    "official_unit": "신경-근육",
+    "question": "일어설 때 잘 못 일어나고 장딴지가 딴딴한 소아. 진단은?",
+    "answer": "Duchenne muscular dystrophy",
+    "explanation": "원문 답: 듀센 근 디스트로피.",
+    "enhanced_explanation": "Gowers sign/가성비대 단서.",
+    "tags": [
+      "DMD"
+    ],
+    "uncertain": false,
+    "raw_anchor": "일어설때 잘 못일어나고 장딴지 딴딴 답. 듀센 근 디스트로피",
+    "source_page": 14,
+    "source_rank": 191,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-002",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "neck stiffness, Brudzinski sign, Kernig sign의 설명을 보고 이름을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주3. neck stiffness, brudzinski sign, kernig sign 설명주고 이름쓰기",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "meningeal_sign"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주3. neck stiffness, brudzinski sign, kernig sign 설명주고 이름쓰기",
+    "source_page": 15,
+    "source_rank": 196,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-006",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "15개월 여아가 발열 동반 전신경련 3분 후 내원했다. 열성경련 가족력, 성장/발달 및 뇌신경검사 정상, 체온 39.5도. 처음 해야 할 검사는? 선택지: 발열조절 및 경과관찰, 뇌파, 뇌 MRI, 뇌척수액, 호흡기바이러스 PCR.",
+    "answer": "원문 확인 필요",
+    "explanation": "객2. 15개월 여아가 경련... 처음 해야할 검사는? WBC 125,000...",
+    "enhanced_explanation": "줄 배치상 WBC 수치가 다른 문항과 섞였을 가능성이 있어 정답은 원문 확인 필요로 두었습니다.",
+    "tags": [
+      "febrile_seizure"
+    ],
+    "uncertain": true,
+    "raw_anchor": "객2. 15개월 여아가 경련... 처음 해야할 검사는? WBC 125,000...",
+    "source_page": 15,
+    "source_rank": 200,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-011",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "신생아기 이후 급성 세균수막염 원인균 3가지를 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주3. 신생아기 이후 급성 세균 수막염 원인 3가지",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "bacterial_meningitis_pathogen"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주3. 신생아기 이후 급성 세균 수막염 원인 3가지",
+    "source_page": 15,
+    "source_rank": 205,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-020",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "다음 질환의 1차 항경련제를 한 가지 이상 쓰시오: 1) 양성 롤란딕 뇌전증 2) 청소년 근간대성 뇌전증",
+    "answer": "원문 확인 필요",
+    "explanation": "주2. 다음 질환의 1차 항경련제를 한 가지 이상 쓰시오. 1) 양성 롤란딕 뇌전증 2) 청소년 근간대성 뇌전증",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "epilepsy_drug"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주2. 다음 질환의 1차 항경련제를 한 가지 이상 쓰시오. 1) 양성 롤란딕 뇌전증 2) 청소년 근간대성 뇌전증",
+    "source_page": 15,
+    "source_rank": 214,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-021",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "West syndrome의 세 가지 특징 빈칸을 채우시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주3. 빈칸 채우기. West syndrome의 세 가지 특징",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "west_syndrome_triad"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주3. 빈칸 채우기. West syndrome의 세 가지 특징",
+    "source_page": 15,
+    "source_rank": 215,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-024",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "뇌전증 지속증의 정의와 첫 치료 2가지를 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주관식 2번 뇌전증 지속증의 정의와 첫 치료 2개(야마)",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "status_epilepticus"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주관식 2번 뇌전증 지속증의 정의와 첫 치료 2개(야마)",
+    "source_page": 16,
+    "source_rank": 218,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-028",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "14세 여아가 경련으로 내원. 3일 전부터 수막염 치료 중, 발열/구토/시신경유두부종이 있다. 검사는? 선택지: 근전도, 근조직생검, 뇌척수액검사, CT, 호흡기바이러스 검사.",
+    "answer": "4. CT",
+    "explanation": "객관식 1번 14세 여아 경련... 시신경유두부종... 검사는?... 4. CT",
+    "enhanced_explanation": "시신경유두부종 등 두개내압 상승 소견이 있으면 뇌척수액검사 전 영상 평가가 우선입니다.",
+    "tags": [
+      "papilledema_ct_before_lumbar"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객관식 1번 14세 여아 경련... 시신경유두부종... 검사는?... 4. CT",
+    "source_page": 16,
+    "source_rank": 222,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-029",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "남아가 일어날 때 손을 짚고 일어나며(Gower sign), 종아리 가성비대가 관찰된다. 진단은?",
+    "answer": "Duchenne muscular dystrophy",
+    "explanation": "객관식 2번 남아 일어날때 손을 짚고 일어남(gower sign), 종아리에 비대... 진단은? duchenne muscular dystrophy",
+    "enhanced_explanation": "원문 기재 진단입니다.",
+    "tags": [
+      "duchenne"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객관식 2번 남아 일어날때 손을 짚고 일어남(gower sign), 종아리에 비대... 진단은? duchenne muscular dystrophy",
+    "source_page": 16,
+    "source_rank": 223,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-034",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "Guillain-Barre 증후군의 뇌척수액 소견과 근전도 검사 소견을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주관식) 길랭바레증후군의 뇌척수액 소견과 근전도 검사 소견",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "gbs_csf_emg"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주관식) 길랭바레증후군의 뇌척수액 소견과 근전도 검사 소견",
+    "source_page": 16,
+    "source_rank": 228,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-035",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "중증근무력증 완해의 정의와 치료를 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주관식) 중증근무력증 완해의 정의, 치료",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "myasthenia_remission"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주관식) 중증근무력증 완해의 정의, 치료",
+    "source_page": 16,
+    "source_rank": 229,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-038",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "6세 여아가 3달 전부터 밤에 자다가 오른쪽 볼을 씰룩거리며 소리를 내고, 반응 없이 침을 흘리며, 왼쪽 팔 떨림 후 양쪽 팔다리를 뻗고 떨었다. 다음날 기억하지 못했다. 진단은?",
+    "answer": "원문 확인 필요",
+    "explanation": "객관식) 건강하던 6세 여아... 오른쪽 볼... 침... 다음날 기억하지 못할 때 진단은?",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "rolandic_seizure_case"
+    ],
+    "uncertain": true,
+    "raw_anchor": "객관식) 건강하던 6세 여아... 오른쪽 볼... 침... 다음날 기억하지 못할 때 진단은?",
+    "source_page": 16,
+    "source_rank": 232,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-040",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.16",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "15세 여아 열성경련으로 내원. 가장 먼저 해야 할 검사는?",
+    "answer": "뇌척수액 검사",
+    "explanation": "객관식) 15세 여아 열성경련으로 내원, 가장먼저 해야할 검사? (야마) 뇌척수액 검사",
+    "enhanced_explanation": "원문 답을 그대로 보존했습니다.",
+    "tags": [
+      "febrile_seizure_lumbar"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객관식) 15세 여아 열성경련으로 내원, 가장먼저 해야할 검사? (야마) 뇌척수액 검사",
+    "source_page": 16,
+    "source_rank": 234,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-043",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.17",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "양성 롤란딕 발작, 결신발작, 영아연축의 1차 항경련제를 쓰시오.",
+    "answer": "양성 롤란딕 발작: carbamazepine / 결신발작: ethosuximide / 영아연축: ACTH 또는 스테로이드",
+    "explanation": "양성 롤란딕 발작 - carbamazepine/ 결신발작 – Ethosuximide/ 영아연축 – ACTH, 스테로이드",
+    "enhanced_explanation": "원문에 적힌 약제를 그대로 정리했습니다.",
+    "tags": [
+      "epilepsy_first_drugs"
+    ],
+    "uncertain": false,
+    "raw_anchor": "양성 롤란딕 발작 - carbamazepine/ 결신발작 – Ethosuximide/ 영아연축 – ACTH, 스테로이드",
+    "source_page": 17,
+    "source_rank": 237,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-048",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.17",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "5세 남아가 두 달 전부터 새벽 1시경 소리 지르고 난리치며, 불러도 모르고 다음날 기억하지 못한다. 진단은?",
+    "answer": "야경증",
+    "explanation": "객관식 1번 5살남아... 다음날 기억 못함 / 1. 야경증",
+    "enhanced_explanation": "원문 선택지 및 답을 보존했습니다.",
+    "tags": [
+      "night_terror"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객관식 1번 5살남아... 다음날 기억 못함 / 1. 야경증",
+    "source_page": 17,
+    "source_rank": 242,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-049",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.17",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "하루 중에도 변동하는 근력약화, 운동 후 심한 피로감, 복시가 있다. 진단은?",
+    "answer": "중증근무력증",
+    "explanation": "객관식 2번 하루중에도 변동하는 근력약화... 두개로 보여요. 중증근무력증",
+    "enhanced_explanation": "원문 답을 그대로 보존했습니다.",
+    "tags": [
+      "myasthenia_case"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객관식 2번 하루중에도 변동하는 근력약화... 두개로 보여요. 중증근무력증",
+    "source_page": 17,
+    "source_rank": 243,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-054",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.18",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "일차 뇌전증 항경련제: 양성 롤란딕 뇌전증과 결신 발작의 약제는?",
+    "answer": "원문 확인 필요",
+    "explanation": "주관식 2. 일차 뇌전증 항경련제로 다음은 무엇인가요 / 양성 롤란딕 뇌전증 / 결신 발작",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "epilepsy_first_drugs_variant"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주관식 2. 일차 뇌전증 항경련제로 다음은 무엇인가요 / 양성 롤란딕 뇌전증 / 결신 발작",
+    "source_page": 18,
+    "source_rank": 248,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-058",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.18",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "호흡중지발작 야마: 아이가 떼쓰다가 청색증이 왔다. 진단은?",
+    "answer": "호흡중지발작",
+    "explanation": "객관식 2번. 호흡중지발작 야마 그대로 / 아이가 떼쓰다 청색증 옴 답: 호흡중지발작",
+    "enhanced_explanation": "원문 답을 그대로 보존했습니다.",
+    "tags": [
+      "breath_holding_spell"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객관식 2번. 호흡중지발작 야마 그대로 / 아이가 떼쓰다 청색증 옴 답: 호흡중지발작",
+    "source_page": 18,
+    "source_rank": 252,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-062",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.18",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "발작의 정의와 뇌전증의 정의에 대해 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주관식 1번. 발작의 정의와 뇌전증의 정의에 대해 쓰시오.",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "seizure_epilepsy_definition"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주관식 1번. 발작의 정의와 뇌전증의 정의에 대해 쓰시오.",
+    "source_page": 18,
+    "source_rank": 256,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-063",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.18",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "열성경련이 뇌전증으로 이어질 수 있는 위험인자를 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주관식 2번. 열성경련이 뇌전증으로 이어질 수 있는 위험인자에 대해 쓰시오.",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "febrile_to_epilepsy_risk"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주관식 2번. 열성경련이 뇌전증으로 이어질 수 있는 위험인자에 대해 쓰시오.",
+    "source_page": 18,
+    "source_rank": 257,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-067",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.18",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "바이러스 뇌수막염이 답인 야마 객관식 문항의 정답은?",
+    "answer": "바이러스 뇌수막염",
+    "explanation": "객관식 1번. 바이러스 뇌수막염이 답인 야마(여신 참조!)",
+    "enhanced_explanation": "원문에 답이 명시된 단서형 카드입니다.",
+    "tags": [
+      "viral_meningitis_yama"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객관식 1번. 바이러스 뇌수막염이 답인 야마(여신 참조!)",
+    "source_page": 18,
+    "source_rank": 261,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-068",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.18",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "9세 여아, 아침에는 정상이나 오후에 눈이 감기고 다리에 힘이 빠짐. 반복 기립 동작이 점점 느려지고, 1분 상방주시 시 복시, 누운 자세 고개 들기 유지 어려움. 진단은?",
+    "answer": "중증근무력증",
+    "explanation": "객관식 2번. 9세 여아... 진단은? 3. 중증근무력증",
+    "enhanced_explanation": "원문 답을 그대로 보존했습니다.",
+    "tags": [
+      "myasthenia_case_variant"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객관식 2번. 9세 여아... 진단은? 3. 중증근무력증",
+    "source_page": 18,
+    "source_rank": 262,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-069",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "아기가 자다가 움찔거리고 다음날 기억하지 못한다. 진단은?",
+    "answer": "양성 롤란딕 발작",
+    "explanation": "객1. 애기 자다가 움찔거리는데 다음날 기억 못함. 양성롤란딕발작(야마)",
+    "enhanced_explanation": "원문 답을 그대로 보존했습니다.",
+    "tags": [
+      "rolandic_variant"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객1. 애기 자다가 움찔거리는데 다음날 기억 못함. 양성롤란딕발작(야마)",
+    "source_page": 19,
+    "source_rank": 263,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-070",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "호흡중지발작 야마 객관식의 정답은?",
+    "answer": "호흡중지발작",
+    "explanation": "객2 호흡 중지 발작(야마)",
+    "enhanced_explanation": "원문 답을 그대로 보존했습니다.",
+    "tags": [
+      "breath_holding_variant"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객2 호흡 중지 발작(야마)",
+    "source_page": 19,
+    "source_rank": 264,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-077",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "신생아기 이후 급성 세균성수막염을 유발하는 원인균 3가지를 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주3. 신생아기 이후 급성 세균성수막염을 유발하는 원인균 3가지",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "bacterial_meningitis_pathogens_variant"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주3. 신생아기 이후 급성 세균성수막염을 유발하는 원인균 3가지",
+    "source_page": 19,
+    "source_rank": 271,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-080",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "15개월 여아 발열 경련. Hb/PLT 정상, WBC 12,500(중성구 30%, 림프구 70%), CRP 정상. 검사는?",
+    "answer": "뇌척수액 검사",
+    "explanation": "객4) 15개월 여아 경련 발열... 답 뇌척수액 검사",
+    "enhanced_explanation": "원문 답을 그대로 보존했습니다.",
+    "tags": [
+      "febrile_seizure_lumbar_variant"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객4) 15개월 여아 경련 발열... 답 뇌척수액 검사",
+    "source_page": 19,
+    "source_rank": 274,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-082",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "경련이 30분 이상 지속될 때 처음 투여하는 약제 2가지와, 호전 없을 때 투여하는 약제 2가지를 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주2) 경련 30분 이상 지속될 때 처음 투여하는 약제 2가지. 호전 없을때 투여하는 약제 2가지",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "status_epilepticus_drugs_variant"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주2) 경련 30분 이상 지속될 때 처음 투여하는 약제 2가지. 호전 없을때 투여하는 약제 2가지",
+    "source_page": 19,
+    "source_rank": 276,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-088",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "16세 여아 경련. 3일 전 눈주위 연조직염 치료, 구토, 의식저하, 발열, 시신경유두부종, 깊은힘줄반사 증가, 바빈스키 양성. 가장 먼저 고려해야 할 검사는? 선택지: 근전도, 근조직생검, 뇌척수액, 뇌CT, 호흡기바이러스검사.",
+    "answer": "4. 뇌컴퓨터단층촬영",
+    "explanation": "객2) 16세 여아... 시신경유두부종... 가장 먼저 고려해야 할 검사는? / page20 4. 뇌컴퓨터단층촬영",
+    "enhanced_explanation": "두개내압 상승 의심 소견이 있어 요추천자 전 CT가 우선입니다.",
+    "tags": [
+      "papilledema_ct_variant"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객2) 16세 여아... 시신경유두부종... 가장 먼저 고려해야 할 검사는? / page20 4. 뇌컴퓨터단층촬영",
+    "source_page": 19,
+    "source_rank": 282,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-089",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.20",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "3세 여아, 발열/인후통 후 심한 두통과 구토, 목경직과 Kernig 양성. CSF 압력 230, WBC 25(림프구 80%), 단백 25, 포도당 68. 진단은?\n1 열성경련 2 결핵수막염 3 머리속 출혈 4 세균뇌수막염 5 바이러스뇌수막염",
+    "answer": "5. 바이러스뇌수막염",
+    "explanation": "3. 3세 여아... 뇌척수액... 5. 바이러스뇌수막염",
+    "enhanced_explanation": "림프구 우세, 정상 포도당/단백 양상으로 원문 선택지의 바이러스뇌수막염을 답으로 정리했습니다.",
+    "tags": [
+      "viral_meningitis_case"
+    ],
+    "uncertain": false,
+    "raw_anchor": "3. 3세 여아... 뇌척수액... 5. 바이러스뇌수막염",
+    "source_page": 20,
+    "source_rank": 283,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-093",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.20",
+    "priority": "medium",
+    "official_unit": "신경-근육",
+    "question": "Guillain-Barre 증후군의 뇌척수액 및 근전도 소견을 설명하시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주2) Gullain Barre 증후군의 뇌척수액 및 근전도 소견을 설명하시오.",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "gbs_csf_emg_variant"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주2) Gullain Barre 증후군의 뇌척수액 및 근전도 소견을 설명하시오.",
+    "source_page": 20,
+    "source_rank": 287,
+    "official_chapter": "신경-근육"
+  },
+  {
+    "id": "PEDS3-YAMA-P12-008",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 37-40조 객5",
+    "priority": "medium",
+    "official_unit": "골격",
+    "question": "아이 머리 사진이 앞뒤로 길어진 형태. 어느 봉합선 문제인가?",
+    "answer": "시상봉합(sagittal suture)",
+    "explanation": "원문 옆 설명: sagittal suture 폐쇄 → 머리가 앞뒤로 길어짐.",
+    "enhanced_explanation": "두개골 조기유합: sagittal 폐쇄는 scaphocephaly/장두증.",
+    "tags": [
+      "craniosynostosis"
+    ],
+    "uncertain": false,
+    "raw_anchor": "머리 사진이 앞뒤로 길어져 ... sagittal suture",
+    "source_page": 12,
+    "source_rank": 157,
+    "official_chapter": "골격"
+  },
+  {
+    "id": "PEDS3-YAMA-P13-008",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 21-24조 주5",
+    "priority": "medium",
+    "official_unit": "골격",
+    "question": "발달성 고관절 이형성증(DDH)의 임상 소견 빈칸: 대퇴 내측 ( ), 무릎 높이가 다른 ( ) 징후, 정복 느낌의 ( ) 징후, 탈구 느낌의 ( ) test.",
+    "answer": "피부 주름 비대칭, Allis 징후, Ortolani 징후, Barlow test",
+    "explanation": "원문 빈칸 답안.",
+    "enhanced_explanation": "DDH 신체진찰 핵심: thigh fold asymmetry, Allis/Galeazzi, Ortolani, Barlow.",
+    "tags": [
+      "DDH"
+    ],
+    "uncertain": false,
+    "raw_anchor": "피부 주름 ... Allis ... Ortolani ... Barlow",
+    "source_page": 13,
+    "source_rank": 170,
+    "official_chapter": "골격"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-075",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "골격",
+    "question": "Infantile cortical hyperosteosis와 osteogenesis imperfecta를 유발하는 유전자의 이름은?",
+    "answer": "COL1A1 유전자",
+    "explanation": "infantile cortical hyperosteosis & osteogenesis imperfecta 유발? : COL1A1 유전자",
+    "enhanced_explanation": "원문 답을 그대로 보존했습니다.",
+    "tags": [
+      "col1a1"
+    ],
+    "uncertain": false,
+    "raw_anchor": "infantile cortical hyperosteosis & osteogenesis imperfecta 유발? : COL1A1 유전자",
+    "source_page": 19,
+    "source_rank": 269,
+    "official_chapter": "골격"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-076",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "골격",
+    "question": "16개월 동안 모유수유하던 아이가 O자 다리로 내원, vitamin D 결핍. Ca, P, PTH, ALP 각각 증가/정상/감소를 표시하시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주2. 16개월?동안 모유수유하던 아이가 다리가 o자로... vit d결핍... ca p pth alp 각각",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "vitamin_d_rickets_labs"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주2. 16개월?동안 모유수유하던 아이가 다리가 o자로... vit d결핍... ca p pth alp 각각",
+    "source_page": 19,
+    "source_rank": 270,
+    "official_chapter": "골격"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-096",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.20",
+    "priority": "medium",
+    "official_unit": "골격",
+    "question": "골육종의 호발 부위 3가지를 순서대로 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주5) 골육종의 호발 부위 3가지를 순서대로 쓰시오.",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "osteosarcoma_sites"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주5) 골육종의 호발 부위 3가지를 순서대로 쓰시오.",
+    "source_page": 20,
+    "source_rank": 290,
+    "official_chapter": "골격"
+  },
+  {
+    "id": "PEDS3-2026-Q05-EGG-SPECIFIC-IGE",
+    "source": "2026 소청과 3차 pretest 복기(update 2026.04.10) / 객관식 5번",
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "official_unit": "알레르기",
+    "question": "6개월 영아가 계란을 먹고 두드러기와 구토를 보였다. 식품 알레르기 확인을 위해 해야 하는 검사는?\n1) 총 IgE 검사\n2) 총 IgA 검사\n3) 절대 호중구 수치\n4) 계란 특이 IgE 검사\n5) 계란 특이 IgG 검사",
+    "answer": "4) 계란 특이 IgE 검사",
+    "explanation": "특정 식품 섭취 후 즉시형 알레르기 증상이 있으면 원인 식품에 대한 specific IgE 검사가 도움이 된다.",
+    "enhanced_explanation": "🧭 Big picture\n식품 알레르기 검사는 '총 IgE'가 아니라 의심 식품에 대한 specific IgE 또는 피부단자시험으로 접근한다.\n\n🔎 핵심 단서\n- 계란 섭취 후 두드러기와 구토\n- 원인 식품이 계란으로 특정됨\n\n✅ 3초 Lock line\n계란 먹고 즉시 알레르기 = 계란 specific IgE.",
+    "tags": [
+      "2026",
+      "알레르기",
+      "식품알레르기",
+      "specific_IgE",
+      "계란"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객5. 6개월 영아가 계란을 먹고 두드러기와 구토... 4) 계란 특이 IgE검사",
+    "source_page": "2026 docx",
+    "source_rank": 5,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P01-004",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "알레르기",
+    "question": "알레르기 피부단자시험에서 고려하지 않아야 할 약제는? 보기: H1/H2 receptor 길항제, 에페드린, 스테로이드, 비강내 항히스타민제",
+    "answer": "H1 receptor 길항제, H2 receptor 길항제",
+    "explanation": "원문 답: H1 Rc 길항제, H2 Rc 길항제(복수정답).",
+    "enhanced_explanation": "### 주의\n원문은 “고려하지 않아야 할 것”이라고 되어 있어 표현이 애매하지만, 제시 정답은 H1/H2 수용체 길항제.",
+    "tags": [
+      "피부단자시험",
+      "항히스타민제",
+      "복수정답"
+    ],
+    "uncertain": false,
+    "raw_anchor": "5. 알레르기 피부단자시험 고려하지 않아야할것은?... 답 : H1 Rc 길항제, H2 Rc 길항제(복수정답)",
+    "source_page": 1,
+    "source_rank": 14,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-006",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "알레르기",
+    "question": "피부단자시험 결과에 영향을 끼치는 약물은?",
+    "answer": "H1 수용체 길항제",
+    "explanation": "원문 답: H1 수용체 길항제.",
+    "enhanced_explanation": "### 핵심\n피부단자시험 해석/시행 전 약물 영향 문항.",
+    "tags": [
+      "피부단자시험",
+      "H1 blocker",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "3번 (야마, 끼치지 않는 -> 끼치는) 피부단자시험 결과에 영향을 ... 답: H1 수용체 길항제",
+    "source_page": 3,
+    "source_rank": 37,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-011",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "알레르기",
+    "question": "메밀알레르기 있는 6세 남아가 메밀밥 먹고 아나필락시스 증상. 치료와 용량은?",
+    "answer": "Epinephrine 0.01 mg/kg",
+    "explanation": "원문 답: Epinephrine, 0.01mg/kg.",
+    "enhanced_explanation": "### 핵심\n아나필락시스 1차 치료와 kg당 용량을 묻는 문항.",
+    "tags": [
+      "아나필락시스",
+      "epinephrine"
+    ],
+    "uncertain": false,
+    "raw_anchor": "3번 메밀알레르기... 답: Epinephrine, 0.01mg/kg",
+    "source_page": 3,
+    "source_rank": 42,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-017",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "알레르기",
+    "question": "소아 알레르기에 대해 알맞은 설명은?",
+    "answer": "나이가 들면서 알레르기 증상이 달라지는 것을 알레르기 행진이라고 한다.",
+    "explanation": "원문 선지 5가 알맞은 설명으로 제시됨.",
+    "enhanced_explanation": "### 핵심\n알레르기 행진의 정의를 묻는 문항.",
+    "tags": [
+      "알레르기행진"
+    ],
+    "uncertain": false,
+    "raw_anchor": "5번 알레르기에 대해서 알맞은 설명은?... 5. 나이가 들면서 알레르기 증상이 달라지는 것을 알레르기 행진이라고 한다.",
+    "source_page": 3,
+    "source_rank": 48,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-019",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "알레르기",
+    "question": "아나필락시스 1차 투여약제 이름과 kg당 투여량은?",
+    "answer": "Epinephrine 0.01 mg/kg",
+    "explanation": "원문 답: Epinephrine 0.01mg/kg.",
+    "enhanced_explanation": "### 핵심\n메밀알레르기 변형과 별개로 같은 답이 독립 출제됨.",
+    "tags": [
+      "아나필락시스",
+      "epinephrine",
+      "야마"
+    ],
+    "uncertain": false,
+    "raw_anchor": "2번(야마) 아나필락시스 1차 투여약제 이름과 Kg 당 투여량? Epinephrine 0.01mg/kg",
+    "source_page": 3,
+    "source_rank": 50,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P04-008",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "알레르기",
+    "question": "천식 이행 factor를 묻는 문항의 답은?",
+    "answer": "원문 확인 필요",
+    "explanation": "문항 제목만 있고 답이 없음.",
+    "enhanced_explanation": "### 주의\n페이지 4 우측 상단에 “천식 이행 factor”만 보이며 정답/보기 없음.",
+    "tags": [
+      "천식",
+      "알레르기"
+    ],
+    "uncertain": true,
+    "raw_anchor": "4번 천식 이행 factor",
+    "source_page": 4,
+    "source_rank": 59,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P04-009",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "알레르기",
+    "question": "피부단자시험 등에 영향을 끼치는 것은? (야마)",
+    "answer": "원문 확인 필요",
+    "explanation": "문항 제목만 있고 정답이 없음.",
+    "enhanced_explanation": "### 주의\n유사 문항은 H1 blocker이나, 이 위치의 원문 답은 비어 있음.",
+    "tags": [
+      "피부단자시험",
+      "야마"
+    ],
+    "uncertain": true,
+    "raw_anchor": "1번 영향을 끼치는 것은(야마)",
+    "source_page": 4,
+    "source_rank": 60,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P05-010",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "알레르기",
+    "question": "초콜릿 섭취 30분 후 알레르기 반응. 식품라벨 알레르기 정보: 우유/대두. 이전에도 요거트 급성 알레르기. 필요한 검사는?",
+    "answer": "Specific IgE",
+    "explanation": "원문 선지 5. specific IgE.",
+    "enhanced_explanation": "### 핵심\n즉시형 식품 알레르기 평가로 specific IgE가 제시됨.",
+    "tags": [
+      "식품알레르기",
+      "specific IgE"
+    ],
+    "uncertain": false,
+    "raw_anchor": "2번 소아가 초콜릿을 먹고 30분만에... 필요한 검사는?... 5. specific IgE",
+    "source_page": 5,
+    "source_rank": 71,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P06-002",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "알레르기",
+    "question": "알레르기 비염의 증상을 3가지 이상 쓰시오.",
+    "answer": "Allergic shiner, allergic salute, transverse nasal crease, rabbit nose, Dennie line, allergic clurks",
+    "explanation": "원문 답 그대로 보존.",
+    "enhanced_explanation": "### 주의\n“Allergic clurks”는 OCR/원문 표기 그대로 보존. 필요 시 원문 확인.",
+    "tags": [
+      "알레르기비염"
+    ],
+    "uncertain": false,
+    "raw_anchor": "4번 알레르기 비염의 증상을 3가지 이상... Allergic shiner, Allergic salute, Transverse nasal crease, rabbit nose, Dennie line, Allergic clurks",
+    "source_page": 6,
+    "source_rank": 75,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P06-003",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "high",
+    "official_unit": "알레르기",
+    "question": "항히스타민제나 면역조절제로 조절되지 않는 만성 두드러기 환자에서 추가로 고려할 수 있는 약제는?",
+    "answer": "Omalizumab",
+    "explanation": "원문 답: Omalizumab.",
+    "enhanced_explanation": "### 핵심\n난치성 만성 두드러기에서 추가 치료 약제로 복기됨.",
+    "tags": [
+      "만성두드러기",
+      "omalizumab"
+    ],
+    "uncertain": false,
+    "raw_anchor": "5번 항히스타민제나 면역조절제로 조절되지 않는 만성 두드러기... Omalizumab",
+    "source_page": 6,
+    "source_rank": 76,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P08-003",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 13-16조 pretest 3차 복기 객관식5",
+    "priority": "high",
+    "official_unit": "알레르기",
+    "question": "(A)는 흡입 시 10분 이내 최대 기관지확장 효과와 지속효과를 보이고, (B)는 중등증 이상 천식 유지치료에 사용하지만 중증 천식 급성 악화에도 추가적으로 사용 가능. A와 B는?",
+    "answer": "A: formoterol / B: budesonide-formoterol 복합제",
+    "explanation": "원문에 A Formoterol, B Budesonide/Formoterol 복합제로 복기.",
+    "enhanced_explanation": "핵심: 빠른 onset LABA인 formoterol + ICS/LABA 복합제.",
+    "tags": [
+      "asthma",
+      "formoterol"
+    ],
+    "uncertain": false,
+    "raw_anchor": "A : Formoterol B : Budesonide / Formoterol 복합제",
+    "source_page": 8,
+    "source_rank": 91,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P08-007",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 13-16조 pretest 3차 복기 주관식4",
+    "priority": "medium",
+    "official_unit": "알레르기",
+    "question": "피부단자검사 결과에 영향을 미칠 수 있는 약물을 한 가지 쓰시오.",
+    "answer": "H1/H2 receptor 길항제, 에페드린, 검사부위 국소 스테로이드 중 하나",
+    "explanation": "원문에 영향 약물로 제시됨.",
+    "enhanced_explanation": "피부단자검사는 항히스타민제 등으로 반응이 억제될 수 있음.",
+    "tags": [
+      "skin_prick_test"
+    ],
+    "uncertain": false,
+    "raw_anchor": "피부단자검사 ... H1 & H2 Rc 길항제, 에페드린, 검사부위 국소 스테로이드",
+    "source_page": 8,
+    "source_rank": 95,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P08-010",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 13-16조 pretest 3차 복기 객관식5",
+    "priority": "medium",
+    "official_unit": "알레르기",
+    "question": "우유 알레르기로 온 환아의 치료는?",
+    "answer": "우유 섭취 제한",
+    "explanation": "원문 답: 우유 섭취 제한.",
+    "enhanced_explanation": "식품 알레르기의 기본 치료는 원인 식품 회피.",
+    "tags": [
+      "food_allergy"
+    ],
+    "uncertain": false,
+    "raw_anchor": "우유 알러지로 온 환아. 치료는? A) 우유 섭취 제한",
+    "source_page": 8,
+    "source_rank": 98,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P09-014",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 17-20조 pretest 3차 복기 주관식5",
+    "priority": "medium",
+    "official_unit": "알레르기",
+    "question": "식품 알레르기의 감작 경로 3가지 이상을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안이 페이지에 없음.",
+    "enhanced_explanation": "감작 경로의 구체 답안은 원문 확인 필요.",
+    "tags": [
+      "food_allergy"
+    ],
+    "uncertain": true,
+    "raw_anchor": "식품 알레르기의 감작 경로에 대해서 쓰시오",
+    "source_page": 9,
+    "source_rank": 112,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-008",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 5-8조 주3",
+    "priority": "medium",
+    "official_unit": "알레르기",
+    "question": "예측할 수 없는 약물반응(type B) 3가지 이상과 예측할 수 있는 약물반응(type A) 3가지 이상을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안 없음.",
+    "enhanced_explanation": "약물 이상반응 분류 문항. 원문 확인 필요.",
+    "tags": [
+      "drug_reaction"
+    ],
+    "uncertain": true,
+    "raw_anchor": "예측할 수 없는 약물반응(type B) ... type A",
+    "source_page": 14,
+    "source_rank": 178,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-016",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 9-12조 주3",
+    "priority": "medium",
+    "official_unit": "알레르기",
+    "question": "알레르기비염에서 나타날 수 있는 특징적 임상소견 3가지를 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안 없음.",
+    "enhanced_explanation": "원문 확인 필요.",
+    "tags": [
+      "allergic_rhinitis"
+    ],
+    "uncertain": true,
+    "raw_anchor": "알레르기비염 ... 임상소견 3가지",
+    "source_page": 14,
+    "source_rank": 186,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-023",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 13-16조 객5",
+    "priority": "medium",
+    "official_unit": "알레르기",
+    "question": "천식 과거력: 1년 전 악화로 응급실 방문 및 기관삽관, 최근 SABA 1달 1통 이상, ICS/경구 스테로이드 사용 중. 다음 중 고위험군이 아닌 것은?",
+    "answer": "ICS 사용",
+    "explanation": "원문 선지 중 다른 항목은 천식 사망/악화 고위험 인자, ICS 사용은 고위험군 인자 자체가 아님.",
+    "enhanced_explanation": "고위험: 이전 삽관/응급실, SABA 과다, 경구 스테로이드 등.",
+    "tags": [
+      "asthma",
+      "risk"
+    ],
+    "uncertain": false,
+    "raw_anchor": "다음 중 고위험군이 아닌 것은? ... 3) ICS 사용",
+    "source_page": 14,
+    "source_rank": 193,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-004",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "알레르기",
+    "question": "면역요법의 적응증 또는 도움이 되는 질환을 2가지 이상 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주5 면역요법의 적응증 또는 도윰이 되는 질환 2가지 이상",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "immunotherapy"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주5 면역요법의 적응증 또는 도윰이 되는 질환 2가지 이상",
+    "source_page": 15,
+    "source_rank": 198,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-007",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "알레르기",
+    "question": "A는 흡입 시 10분 이내 최대 확장효과와 지속효과가 있고, B는 중등증 이상 천식 유지치료 및 중증 천식 급성 악화에 추가 사용된다. A와 B는?",
+    "answer": "1. formoterol, budesonide/formoterol 복합제",
+    "explanation": "객4. A는 흡입 시 10분 이내... / 1. formoterol, budesonide/formoterol 복합제",
+    "enhanced_explanation": "빠른 작용 LABA인 formoterol과 ICS-formoterol 복합제에 대한 원문 선택지를 카드화했습니다.",
+    "tags": [
+      "asthma_formoterol"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객4. A는 흡입 시 10분 이내... / 1. formoterol, budesonide/formoterol 복합제",
+    "source_page": 15,
+    "source_rank": 201,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-022",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "알레르기",
+    "question": "알레르기 비염의 3가지 전형적 증상을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주4. 알레르기 비염의 3가지 전형적 증상을 쓰시오.",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "allergic_rhinitis_symptoms"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주4. 알레르기 비염의 3가지 전형적 증상을 쓰시오.",
+    "source_page": 15,
+    "source_rank": 216,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-071",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "알레르기",
+    "question": "알레르기 야마 객관식: 틀린 것은?",
+    "answer": "가장 흔한 알레르기 원인은 꽃가루이다",
+    "explanation": "객3 알레르기 야마 객관식(틀린 것 고르는 문제. ‘가장 흔한 알레르기 원인은 꽃가루이다’ 가 답)",
+    "enhanced_explanation": "원문에 적힌 오답 선택지를 그대로 보존했습니다.",
+    "tags": [
+      "allergy_common_cause_false"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객3 알레르기 야마 객관식(틀린 것 고르는 문제. ‘가장 흔한 알레르기 원인은 꽃가루이다’ 가 답)",
+    "source_page": 19,
+    "source_rank": 265,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-083",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "알레르기",
+    "question": "Allergic rhinitis 진찰 시 보이는 특징적인 소견 3가지 이상을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주4) allergic rhinitis 진찰 시 보이는 특징적인 소견 3가지 이상",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "allergic_rhinitis_exam"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주4) allergic rhinitis 진찰 시 보이는 특징적인 소견 3가지 이상",
+    "source_page": 19,
+    "source_rank": 277,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-086",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "알레르기",
+    "question": "14세 여아 천식/호흡곤란. 매일 증상, 주 2회 이상 야간발작, 일상생활과 운동 지장. 알맞은 치료는?",
+    "answer": "원문 확인 필요",
+    "explanation": "객2) 14세 여아 호흡곤란?천식?... 알맞은 치료는? -저용량 흡입 스테로이드 -저용량 흡입 스테로이드+LABA",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "asthma_controller_step"
+    ],
+    "uncertain": true,
+    "raw_anchor": "객2) 14세 여아 호흡곤란?천식?... 알맞은 치료는? -저용량 흡입 스테로이드 -저용량 흡입 스테로이드+LABA",
+    "source_page": 19,
+    "source_rank": 280,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-087",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "알레르기",
+    "question": "알레르기 피부단자시험 전에 피부 반응을 저해하는 약물을 피해야 한다. 피부시험 결과에 별다른 영향을 미치지 않는 약물은?\n1 H1 길항제 2 H2 길항제 3 비강내 항히스타민제 4 에페드린 5 검사부위 국소 스테로이드",
+    "answer": "원문 확인 필요",
+    "explanation": "객1) 알레르기 피부시험... 별다른 영향을 미치지 않는 약물을 고르시오...",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "skin_prick_drug_interference"
+    ],
+    "uncertain": true,
+    "raw_anchor": "객1) 알레르기 피부시험... 별다른 영향을 미치지 않는 약물을 고르시오...",
+    "source_page": 19,
+    "source_rank": 281,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-104",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.21",
+    "priority": "medium",
+    "official_unit": "알레르기",
+    "question": "7세 남아 천식. 작년 응급실/입원 치료 중 악화되어 PICU 기관삽관 후 퇴원. 최근 SABA 한 통/월, 경구 스테로이드 및 흡입 스테로이드 사용 중. 고위험에 해당되지 않는 것은?\n1 작년 응급실 또는 입원 2 기관삽관 3 흡입 스테로이드 4 경구 스테로이드 5 속효성 1달",
+    "answer": "3. 흡입 스테로이드 제제",
+    "explanation": "2. 7세 남아... 고위험에 해당되지 않는 것은? 1) 작년 응급실... 3) 흡입 스테로이드 제제...",
+    "enhanced_explanation": "과거 중환자실/기관삽관, 잦은 SABA, 경구 스테로이드는 고위험 단서입니다. 흡입 스테로이드 사용 자체는 고위험 항목으로 보기 어려워 원문 선택지 3을 답으로 정리했습니다.",
+    "tags": [
+      "asthma_high_risk_not"
+    ],
+    "uncertain": false,
+    "raw_anchor": "2. 7세 남아... 고위험에 해당되지 않는 것은? 1) 작년 응급실... 3) 흡입 스테로이드 제제...",
+    "source_page": 21,
+    "source_rank": 298,
+    "official_chapter": "알레르기"
+  },
+  {
+    "id": "PEDS3-2026-SA02-HSP",
+    "source": "2026 소청과 3차 pretest 복기(update 2026.04.10) / 주관식 2번",
+    "origin": "actual_recall",
+    "priority": "P4 최신2026",
+    "official_unit": "결체조직",
+    "question": "7세 여아가 일주일 전 감기를 앓고 이틀 전부터 무릎 통증과 발목·허벅지 주변 발진이 생겼다. 혈압 102/72, 활력징후 안정, 체온 36.8도. 발진은 누르면 그대로 있고 무릎은 부어 있으나 관절 운동범위 제한은 없다. WBC 8700, Hb 12.8, Plt 192,000, C3/C4 정상 범위, ANA 음성. 소변 잠혈/단백 음성, RBC 1~4/HPF, WBC 1~4/HPF. 진단은?",
+    "answer": "Henoch-Schönlein purpura, IgA vasculitis",
+    "explanation": "감기 후 촉지자반, 관절통/관절부종이 나타난 소아에서 혈소판이 정상이라면 HSP/IgA vasculitis가 가장 적절하다.",
+    "enhanced_explanation": "🧭 Big picture\nHSP는 감염 후 소아에서 palpable purpura, 관절통, 복통, 신장 침범이 묶이는 IgA vasculitis다. 혈소판 감소성 자반과 달리 platelet은 정상이다.\n\n🔎 핵심 단서\n- 감기 후\n- 누르면 사라지지 않는 발진\n- 무릎/발목 주변 관절 증상\n- Plt 정상\n- 소변 이상은 거의 없음 또는 경미\n\n✅ 3초 Lock line\n소아 감기 후 촉지자반+관절통+혈소판 정상 = HSP.",
+    "tags": [
+      "2026",
+      "결체조직",
+      "HSP",
+      "IgA_vasculitis",
+      "자반"
+    ],
+    "uncertain": false,
+    "raw_anchor": "주2. ... 발진은 누르면 그대로... Plt 192,000... 정답: Henoch Schonlein purpura",
+    "source_page": "2026 docx",
+    "source_rank": 7,
+    "official_chapter": "결체조직"
+  },
+  {
+    "id": "PEDS3-YAMA-P12-012",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 37-40조 주4",
+    "priority": "medium",
+    "official_unit": "결체조직",
+    "question": "Marfan syndrome 관련 gene, cardiovascular 합병증, 사용할 수 있는 약물 두 가지는?",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 괄호 답안 없음.",
+    "enhanced_explanation": "Marfan 관련 세부 답안은 원문/컨퍼런스 확인 필요.",
+    "tags": [
+      "Marfan"
+    ],
+    "uncertain": true,
+    "raw_anchor": "Marfan syndrome ... gene ... cardiovascular 합병증 ... 약물 두가지",
+    "source_page": 12,
+    "source_rank": 161,
+    "official_chapter": "결체조직"
+  },
+  {
+    "id": "PEDS3-YAMA-P05-003",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "피부",
+    "question": "아토피피부염 주 증상 2가지는?",
+    "answer": "심한 가려움증, 피부 건조증, 특징적인 모양의 습진",
+    "explanation": "원문 답에 세 항목이 제시됨.",
+    "enhanced_explanation": "### 핵심\n문항은 2가지를 묻지만 원문 답 세 항목을 그대로 보존.",
+    "tags": [
+      "아토피피부염"
+    ],
+    "uncertain": false,
+    "raw_anchor": "1번 아토피피부염 주 증상 2가지 / 심한 가려움증, 피부 건조증, 특징적인 모양의 습진",
+    "source_page": 5,
+    "source_rank": 64,
+    "official_chapter": "피부"
+  },
+  {
+    "id": "PEDS3-YAMA-P09-013",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 17-20조 pretest 3차 복기 주관식4",
+    "priority": "medium",
+    "official_unit": "피부",
+    "question": "아토피피부염의 주증상 2가지 이상을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안이 페이지에 없음.",
+    "enhanced_explanation": "주증상 항목은 원문/교재 확인 필요.",
+    "tags": [
+      "atopic_dermatitis"
+    ],
+    "uncertain": true,
+    "raw_anchor": "아토피 피부염의 주증상 2가지 이상 쓰시오",
+    "source_page": 9,
+    "source_rank": 111,
+    "official_chapter": "피부"
+  },
+  {
+    "id": "PEDS3-YAMA-P10-009",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 1-4조 pretest 3차 복기 주4",
+    "priority": "medium",
+    "official_unit": "피부",
+    "question": "아토피피부염의 주증상 2가지 이상을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안 없음.",
+    "enhanced_explanation": "원문/교재 확인 필요.",
+    "tags": [
+      "atopic_dermatitis"
+    ],
+    "uncertain": true,
+    "raw_anchor": "아토피피부염의 주증상 2가지 이상",
+    "source_page": 10,
+    "source_rank": 122,
+    "official_chapter": "피부"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-044",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.17",
+    "priority": "medium",
+    "official_unit": "피부",
+    "question": "피부신경증후군 3가지와 특징적인 피부증상을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주관식 2번 피부신경증후군 3가지와 특징적인 피부증상 적으세요. 여신참조!",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "neurocutaneous_syndrome"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주관식 2번 피부신경증후군 3가지와 특징적인 피부증상 적으세요. 여신참조!",
+    "source_page": 17,
+    "source_rank": 238,
+    "official_chapter": "피부"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-053",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.18",
+    "priority": "medium",
+    "official_unit": "피부",
+    "question": "피부신경증후군의 특징적인 피부증상을 각각 1가지 이상 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "주관식 1번. 야마 피부신경증후군 특징적인 피부증상 갹각 1가지 이상 기술",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "neurocutaneous_skin"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주관식 1번. 야마 피부신경증후군 특징적인 피부증상 갹각 1가지 이상 기술",
+    "source_page": 18,
+    "source_rank": 247,
+    "official_chapter": "피부"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-051",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.17",
+    "priority": "medium",
+    "official_unit": "안과",
+    "question": "망막아세포종의 2차암으로 관련 있는 것은?\n1 골육종 2 신경모세포종 3 간종양",
+    "answer": "골육종",
+    "explanation": "객4. 망막아세포종의 2차암... 골육종(홍창의 소아과학)",
+    "enhanced_explanation": "원문 답을 그대로 보존했습니다.",
+    "tags": [
+      "retinoblastoma_second_cancer"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객4. 망막아세포종의 2차암... 골육종(홍창의 소아과학)",
+    "source_page": 17,
+    "source_rank": 245,
+    "official_chapter": "안과"
+  },
+  {
+    "id": "PEDS3-YAMA-P02-012",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "통일/기타",
+    "question": "소아청소년 완화의료의 특징을 성인을 대상으로 한 완화의료와 비교하여 자유롭게 기술하시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "의국회의 주관식으로 보이나 페이지에 모범답안이 없음.",
+    "enhanced_explanation": "### 주의\n답안이 원문에 보이지 않으므로 확인 필요 처리.",
+    "tags": [
+      "완화의료",
+      "의국회의"
+    ],
+    "uncertain": true,
+    "raw_anchor": "5번(의국회의) 소아청소년 완화의료의 특징을 성인을 대상으로 한 완화의료와 비교하여 자유롭게 기술하시오",
+    "source_page": 2,
+    "source_rank": 27,
+    "official_chapter": "통일/기타"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-003",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "통일/기타",
+    "question": "Ceruloplasmin <4일 때 진단은?",
+    "answer": "원문 확인 필요",
+    "explanation": "원문에 답이 보이지 않음.",
+    "enhanced_explanation": "### 주의\nWilson disease가 떠오르지만 원문 정답이 없어 확인 필요로 둠.",
+    "tags": [
+      "ceruloplasmin",
+      "의국회의"
+    ],
+    "uncertain": true,
+    "raw_anchor": "10번 (의국회의 문제) ceruloplasmin <4 진단은?",
+    "source_page": 3,
+    "source_rank": 34,
+    "official_chapter": "통일/기타"
+  },
+  {
+    "id": "PEDS3-YAMA-P03-014",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "통일/기타",
+    "question": "선지 4번이 GATA4로 출제된 문항. 정확한 질문과 답은?",
+    "answer": "원문 확인 필요",
+    "explanation": "해당 부분은 stem/정답이 OCR상 분리되어 확인 불가.",
+    "enhanced_explanation": "### 주의\nGATA4 관련 선지만 보이고 문제 본문과 답이 없음.",
+    "tags": [
+      "GATA4",
+      "야마"
+    ],
+    "uncertain": true,
+    "raw_anchor": "2번 (야마) 선지 4번이 GATA 4로 출제됨",
+    "source_page": 3,
+    "source_rank": 45,
+    "official_chapter": "통일/기타"
+  },
+  {
+    "id": "PEDS3-YAMA-P08-008",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 13-16조 pretest 3차 복기 주관식5",
+    "priority": "medium",
+    "official_unit": "통일/기타",
+    "question": "의국회의: 1) 체온을 측정하는 두 가지 방법 2) 사용할 수 있는 해열제 두 가지를 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "문항만 있고 답안은 페이지에 명시되지 않음.",
+    "enhanced_explanation": "원문 답안 부재. 실제 답은 원문/의국회의 자료 확인 필요.",
+    "tags": [
+      "fever"
+    ],
+    "uncertain": true,
+    "raw_anchor": "체온을 측정하는 두가지 방법 ... 해열제 두가지",
+    "source_page": 8,
+    "source_rank": 96,
+    "official_chapter": "통일/기타"
+  },
+  {
+    "id": "PEDS3-YAMA-P10-004",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "2023 1-4조 pretest 3차 복기 객4",
+    "priority": "low",
+    "official_unit": "통일/기타",
+    "question": "객관식 4번 문항. 원문 OCR/복기가 불명확함.",
+    "answer": "원문 확인 필요",
+    "explanation": "페이지에 식별 가능한 문항과 답이 없음.",
+    "enhanced_explanation": "원문 이미지 확인 필요.",
+    "tags": [],
+    "uncertain": true,
+    "raw_anchor": "객4 faintest ...",
+    "source_page": 10,
+    "source_rank": 117,
+    "official_chapter": "통일/기타"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-001",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 주5",
+    "priority": "medium",
+    "official_unit": "통일/기타",
+    "question": "결핵균 항원 면역학적 반응은 지속되지만 임상 증상이 없을 때 무엇이라 하며, 지표환자 진단 시점 기준 몇 개월 안 같은 주거공간에 있었던 사람을 가족밀접접촉자라 하는가? TST는 생백신 접종 후 언제 시행해야 하는가?",
+    "answer": "잠복 결핵; 3개월; 생백신 접종 4주 후",
+    "explanation": "원문 괄호 답안.",
+    "enhanced_explanation": "잠복결핵/접촉자/TST 시행 시점 복합 문항.",
+    "tags": [
+      "TB"
+    ],
+    "uncertain": false,
+    "raw_anchor": "잠복 결핵 ... 3개월 ... 생백신 접종 후 4주 후",
+    "source_page": 11,
+    "source_rank": 124,
+    "official_chapter": "통일/기타"
+  },
+  {
+    "id": "PEDS3-YAMA-P11-017",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 2학기 29-32조 주2",
+    "priority": "medium",
+    "official_unit": "통일/기타",
+    "question": "Peptic ulcer 위험인자 2가지와 그 치료법을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "의국회의 문항. 답안 없음.",
+    "enhanced_explanation": "소화기 범위로 보이나 원문 확인 필요.",
+    "tags": [
+      "peptic_ulcer"
+    ],
+    "uncertain": true,
+    "raw_anchor": "peptic ulcer 위험인자 2가지 쓰고 그 치료법",
+    "source_page": 11,
+    "source_rank": 140,
+    "official_chapter": "통일/기타"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-003",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 5-8조 객3",
+    "priority": "low",
+    "official_unit": "통일/기타",
+    "question": "객3 문항. 원문 OCR/복기 불명확.",
+    "answer": "원문 확인 필요",
+    "explanation": "페이지에 식별 가능한 stem/답이 없음.",
+    "enhanced_explanation": "원문 확인 필요.",
+    "tags": [],
+    "uncertain": true,
+    "raw_anchor": "객3.",
+    "source_page": 14,
+    "source_rank": 173,
+    "official_chapter": "통일/기타"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-016",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "통일/기타",
+    "question": "코로나19 관련 소아청소년 다기관 염증 증후군(MIS-C)에 관해 틀린 것은?\n1 19세 이하 24시간 이상 38도 발열 2 호중구/피브리노겐/CRP/LDH 증가 3 lymphocyte/albumin 증가 4 다른 염증 원인 없음 5 최근 또는 현재 코로나 감염/한 달 이내 노출력",
+    "answer": "3. lymphocyte albumin 증가",
+    "explanation": "객3. 코로나 19관련 소아청소년 다기관 염증 증후군... 3) lymphocyte albumin 증가",
+    "enhanced_explanation": "MIS-C에서는 림프구와 알부민 증가가 아니라 감소 쪽이 특징이므로 원문상 틀린 선택지로 정리했습니다.",
+    "tags": [
+      "misc_mis_c"
+    ],
+    "uncertain": false,
+    "raw_anchor": "객3. 코로나 19관련 소아청소년 다기관 염증 증후군... 3) lymphocyte albumin 증가",
+    "source_page": 15,
+    "source_rank": 210,
+    "official_chapter": "통일/기타"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-047",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.17",
+    "priority": "medium",
+    "official_unit": "통일/기타",
+    "question": "27 kg 소아의 하루 수분섭취량은?",
+    "answer": "원문 확인 필요",
+    "explanation": "주관식 5번 27kg 소아 하루 수분섭취량 여신참조",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "maintenance_fluid"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주관식 5번 27kg 소아 하루 수분섭취량 여신참조",
+    "source_page": 17,
+    "source_rank": 241,
+    "official_chapter": "통일/기타"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-084",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.19",
+    "priority": "medium",
+    "official_unit": "통일/기타",
+    "question": "Myocarditis를 일으키는 가장 흔한 바이러스 3가지와, myocarditis가 cardiomyopathy로 진행되는 경우 가장 많이 나타나는 타입은?",
+    "answer": "원문 확인 필요",
+    "explanation": "주5) Myocarditis 일으키는 가장 흔한 바이러스 세가지... progression되는경우 가장 많이나타나는 타입",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "myocarditis_virus_cardiomyopathy"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주5) Myocarditis 일으키는 가장 흔한 바이러스 세가지... progression되는경우 가장 많이나타나는 타입",
+    "source_page": 19,
+    "source_rank": 278,
+    "official_chapter": "통일/기타"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-099",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.21",
+    "priority": "medium",
+    "official_unit": "통일/기타",
+    "question": "약물 이상반응 중 예측할 수 있는 type A 이상반응 3가지 이상을 쓰시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "[주관식] 2. 약물의 이상 반응 중 예측할 수 있는 type A 이상반응 3가지 이상",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "type_a_adr"
+    ],
+    "uncertain": true,
+    "raw_anchor": "[주관식] 2. 약물의 이상 반응 중 예측할 수 있는 type A 이상반응 3가지 이상",
+    "source_page": 21,
+    "source_rank": 293,
+    "official_chapter": "통일/기타"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-101",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.21",
+    "priority": "medium",
+    "official_unit": "통일/기타",
+    "question": "가와사키병에서 거대동맥류가 있을 때 추가해야 하는 약제와 검사는?",
+    "answer": "와파린, LMWH, 관상동맥조영술",
+    "explanation": "[주관식] 4. 가와사키병에서 거대동맥류가 있을때 추가해야하는 약제, 검사 항응고제 와파린 MWH 관상동맥조영술",
+    "enhanced_explanation": "원문 메모의 항응고제와 검사명을 보존했습니다. LMWH 표기는 원문 MWH의 의미로 정리했습니다.",
+    "tags": [
+      "kawasaki_giant_aneurysm"
+    ],
+    "uncertain": false,
+    "raw_anchor": "[주관식] 4. 가와사키병에서 거대동맥류가 있을때 추가해야하는 약제, 검사 항응고제 와파린 MWH 관상동맥조영술",
+    "source_page": 21,
+    "source_rank": 295,
+    "official_chapter": "통일/기타"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-105",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.21",
+    "priority": "medium",
+    "official_unit": "통일/기타",
+    "question": "21~24조 객관식 3번은 페이지 21 말미에서 '3.'까지만 보인다. 원문 내용을 확인하시오.",
+    "answer": "원문 확인 필요",
+    "explanation": "21~24조 객관식 ... 3.",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "truncated_question"
+    ],
+    "uncertain": true,
+    "raw_anchor": "21~24조 객관식 ... 3.",
+    "source_page": 21,
+    "source_rank": 299,
+    "official_chapter": "통일/기타"
+  },
+  {
+    "id": "PEDS3-2026-SA05-NRP-RIGHT-HAND-SPO2",
+    "source": "2026 소청과 3차 pretest 복기(update 2026.04.10) / 주관식 5번 의국회의",
+    "origin": "conference_candidate",
+    "priority": "P4 최신2026",
+    "official_unit": "범위외/집담회",
+    "question": "의국회의 문제. 신생아소생술에서 맞는 것은?\n1) 85%에서 기관삽관이 필요하다\n2) 무호흡이 있으면 CPAP을 한다\n3) 즉각적인 소생술이 필요한 신생아에게 지연제대결찰을 한다\n4) 산소포화도는 우측 손이나 손목에서 측정한다\n5) 가슴압박과 환기의 비율은 30:2이다",
+    "answer": "4) 산소포화도는 우측 손이나 손목에서 측정한다",
+    "explanation": "신생아 소생술에서 산소포화도는 preductal saturation을 보기 위해 우측 손/손목에 pulse oximeter를 부착한다. 무호흡은 CPAP이 아니라 PPV가 우선이며, 가슴압박:환기 비율은 3:1이다.",
+    "enhanced_explanation": "🧭 Big picture\nNRP 문제는 preductal SpO2, PPV, 3:1 compression-to-ventilation ratio를 묶어서 본다.\n\n🔎 핵심 단서\n- 맞는 것 고르기\n- 산소포화도 측정 위치\n\n📊 오답 제거\n- 대부분 기관삽관 필요 아님\n- 무호흡이면 CPAP보다 PPV\n- 즉각 소생술 필요하면 지연제대결찰보다 소생 우선\n- 가슴압박:환기 = 3:1, 30:2 아님\n\n✅ 3초 Lock line\n신생아 SpO2는 preductal, 우측 손/손목.",
+    "tags": [
+      "2026",
+      "의국회의",
+      "신생아소생술",
+      "NRP",
+      "SpO2"
+    ],
+    "uncertain": false,
+    "raw_anchor": "주5. (의국회의 문제) 신생아소생술 맞는 것은?... 4) 산소포화도는 우측 손이나 손목에서 측정한다",
+    "source_page": "2026 docx",
+    "source_rank": 10,
+    "official_chapter": "범위외/집담회 확인"
+  },
+  {
+    "id": "PEDS3-YAMA-P07-010",
+    "source": "3차 야마 25-21 최신",
+    "origin": "source_layout.txt pages 1-7 (form-feed split)",
+    "priority": "medium",
+    "official_unit": "범위외/집담회",
+    "question": "BPD에서 소아 폐고혈압 기준 MAP은 몇 mmHg 이상이고, echo로 어떤 regurgitation을 보는가?",
+    "answer": "MAP 20 mmHg 이상, tricuspid regurgitation",
+    "explanation": "원문 답: a 20, b tricuspid.",
+    "enhanced_explanation": "### 주의\n호흡기/BPD 문항이나 공식 단원 목록에 호흡기가 없어 범위외/집담회로 분류.",
+    "tags": [
+      "BPD",
+      "폐고혈압",
+      "의국회의"
+    ],
+    "uncertain": false,
+    "raw_anchor": "주관식 5번 (의국회의) BPD에서 소아 폐고혈압 기준 MAP (a)mmHg 이상이고, echo로 (b) regurgitation... 답. a 20, b tricuspid",
+    "source_page": 7,
+    "source_rank": 86,
+    "official_chapter": "범위외/집담회 확인"
+  },
+  {
+    "id": "PEDS3-YAMA-P14-018",
+    "source": "3차 야마 25-21 최신 (2026 제외)",
+    "origin": "22년도 1학기 9-12조 주5",
+    "priority": "medium",
+    "official_unit": "범위외/집담회",
+    "question": "Meckel diverticulum의 Rule of 2s 세 가지 이상을 쓰시오.",
+    "answer": "인구의 2%, ileocecal valve 2 feet proximal, 길이 2 inches, 흔한 ectopic tissue 2종(gastric/pancreatic), 2세에서 presentation 많음, 여자보다 남자에서 2배 흔함",
+    "explanation": "원문 bullet.",
+    "enhanced_explanation": "의국 집담회 문항. 원문에는 “여자에서 2배”라고 OCR되나 통상 남자 우세 가능성이 있어 raw_anchor 보존.",
+    "tags": [
+      "Meckel"
+    ],
+    "uncertain": false,
+    "raw_anchor": "Rule of 2s ... 인구의 2% ... 2 feet ... 2 inches ...",
+    "source_page": 14,
+    "source_rank": 188,
+    "official_chapter": "범위외/집담회 확인"
+  },
+  {
+    "id": "PEDS3-YAMA-P15-010",
+    "source": "3차 야마 25-21 최신",
+    "origin": "3차 야마 25-21 최신 p.15",
+    "priority": "medium",
+    "official_unit": "범위외/집담회",
+    "question": "UC에서 감마GT 상승이 있을 때 고려할 수 있는 질환은?",
+    "answer": "원문 확인 필요",
+    "explanation": "주2. UC에서 감마GT상승해있을 때 고려할 수 있는 질환은? (라디올로지 컨퍼런스)",
+    "enhanced_explanation": "원문에서 정답 근거가 명시되지 않아 원문 확인이 필요합니다.",
+    "tags": [
+      "uc_ggt"
+    ],
+    "uncertain": true,
+    "raw_anchor": "주2. UC에서 감마GT상승해있을 때 고려할 수 있는 질환은? (라디올로지 컨퍼런스)",
+    "source_page": 15,
+    "source_rank": 204,
+    "official_chapter": "범위외/집담회 확인"
+  }
+]
