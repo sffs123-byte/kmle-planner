@@ -2874,8 +2874,8 @@
 
   <script>
     const STORAGE_KEY = 'kmlePlannerState.v2';
-    const APP_VERSION = '20260517T184231Z';
-    const APP_VERSION_LABEL = '2026-05-18 03:42 KST';
+    const APP_VERSION = '20260519T192500KST';
+    const APP_VERSION_LABEL = '2026-05-19 19:25 KST';
     const STAGES = [
       { id: 'lecture', label: '강의 듣기', short: '강의', note: '강의/팟캐스트/기본 인강 소화' },
       { id: 'framework', label: '개념 틀 짜기', short: '개념틀', note: '총정리 구조, 도식, 로직 프레임 정리' },
@@ -3889,7 +3889,7 @@
         renderCalendarBoard();
         renderCalendarEventDetailScreen();
       }
-      return refreshedResp || refreshedCardio;
+      return refreshedResp || refreshedCardio || refreshedPeds;
     }
 
     function loadState() {
@@ -3941,10 +3941,23 @@
       renderAll();
     }
 
+    function prefersLocalDbStateSource() {
+      try {
+        const params = new URLSearchParams(location.search);
+        const localDbParam = String(params.get('localDb') || '').toLowerCase();
+        return Boolean(params.get('localApiBase') || params.get('localApi'))
+          || localDbParam === '1'
+          || localDbParam === 'true'
+          || localStorage.getItem('kmlePlannerLocalDbRequired.v1') === 'true';
+      } catch (error) {
+        return false;
+      }
+    }
+
     window.__kmlePlannerApplyRemoteState = function applyRemoteStateBridge(remoteState) {
       try {
         applyExternalState(remoteState, { preserveSelection: true });
-        void ensureLoadedBundlesHaveLatestChecklist();
+        if (!prefersLocalDbStateSource()) void ensureLoadedBundlesHaveLatestChecklist();
         return true;
       } catch (error) {
         console.error('failed to apply remote state', error);
@@ -8220,7 +8233,7 @@
     window.__kmlePlannerState = state;
     renderAll();
     void ensureRespiratoryBundlePresent();
-    void ensureLoadedBundlesHaveLatestChecklist();
+    if (!prefersLocalDbStateSource()) void ensureLoadedBundlesHaveLatestChecklist();
     void checkForAppUpdate({ silent: !plannerStandaloneMode() });
     window.setInterval(() => { void checkForAppUpdate(); }, 60000);
 
@@ -8295,6 +8308,6 @@
       });
     }
   </script>
-  <script type="module" src="./sync.js?v=20260519-force-local-pull-2"></script>
+  <script type="module" src="./sync.js?v=20260519-peds-schedule-localdb-guard"></script>
 </body>
 </html>

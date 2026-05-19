@@ -3,7 +3,7 @@
     "clerkship_id": "pediatrics-2026-05-track-bca",
     "subject": "소아청소년과",
     "track": "2026-05 B→C→A rotation",
-    "generated_at": "2026-05-10T12:58:00+09:00",
+    "generated_at": "2026-05-19T19:23:32+09:00",
     "content_source": {
       "subject": "소아청소년과 실습",
       "purpose": "평가 점수 방어 + 수면 방어 + 국시 공부 시간 확보",
@@ -2137,11 +2137,11 @@
       "week": "2주차 C분과",
       "day": "화요일",
       "date": "2026-05-19",
-      "time_raw": "09:30~13:00(전날 확인)",
+      "time_raw": "09:30~13:00(당일 지시 우선)",
       "start_time": "09:30",
       "end_time": "13:00",
-      "time_label": "09:30~13:00(전날 확인)",
-      "title": "C분과 감염 병동: 김경민 교수님 회진/입원환자 배정",
+      "time_label": "09:30~13:00(당일 지시 우선)",
+      "title": "C분과 감염 병동: 김경민 교수님 회진/입원환아 배정",
       "professor": "김경민 교수님",
       "event_type": "session",
       "difficulty": 10,
@@ -2150,8 +2150,8 @@
       "needs_confirmation": true,
       "site": "대전",
       "location": "341병동 스테이션",
-      "summary": "병동실습 입원환자 1건 확보 D-day. 최신 앞조 자료상 UTI/APN/발열 환자가 가장 흔함.",
-      "note": "병동실습 입원환자 1건 확보 D-day. 최신 앞조 자료상 UTI/APN/발열 환자가 가장 흔함. · 체크: 전날 341병동 09:30 확인 문자 / 입원환자 1건 확보 / 회진 전 EMR 진단명 확인",
+      "summary": "최신 2026 인계 기준: 전날/당일 확인 후 09:30 341병동 스테이션, 회진 뒤 입원환아 배정. 기본 제출은 POMR 우선이며 직접 문진·신체진찰 내용을 반영한다.",
+      "note": "09:30 341병동 스테이션 확인 → 회진/설명 → 입원환아 배정 → 직접 문진·진찰 → POMR 초안. 구글폼은 최신 흐름에서는 사라진 경우가 많고, 홍창의 발열/무병소/FUO 보고서는 당일 지시가 있으면 추가한다.",
       "calendar_body_short": "병동실습 입원환자 1건 확보 D-day. 최신 앞조 자료상 UTI/APN/발열 환자가 가장 흔함.",
       "evaluation_items": [
         "병동실습 입원환자 1건",
@@ -2160,9 +2160,10 @@
       ],
       "sections": {
         "카드 표시": [
-          "전날 341병동 09:30 확인 문자",
-          "입원환자 1건 확보",
-          "회진 전 EMR 진단명 확인"
+          "09:30 341병동 스테이션 확인",
+          "입원환아 배정",
+          "직접 문진·신체진찰",
+          "POMR 우선"
         ],
         "상세 접기": [
           "앞조 병동 POMR 24개 중 UTI/APN/수신증 발열 계열이 17개.",
@@ -2178,11 +2179,27 @@
           "병동실습 입원환자 1건",
           "예진/대면 환자 평가 20%",
           "개인 실습 평가"
+        ],
+        "오늘 할 행동": [
+          "회진 전 환아 진단명/입원 사유만 빠르게 파악",
+          "배정 즉시 보호자 문진과 가능한 신체진찰 시행",
+          "Problem list를 먼저 세우고 POMR 틀 잡기"
+        ],
+        "확인할 것": [
+          "교수님 실제 지시가 POMR만인지",
+          "홍창의 발열/무병소/FUO 보고서 추가 여부",
+          "제출 위치가 POMR 기록지인지 예진기록지인지"
+        ],
+        "최신 인계 우선 결론": [
+          "2026 최신 조들은 김경민 교수님 감염을 병동회진+POMR 중심으로 기록했다.",
+          "POMR 작성 시 직접 문진·신체진찰과 Problem list가 핵심이다.",
+          "구글폼은 과거 방식으로 보고, 홍창의 보고서는 당일 지시가 있을 때 별도 과제로 승격한다."
         ]
       },
       "source_refs": [
         "inpatient_pomr_inference",
-        "C_handoff:P60-P65/P330-P363"
+        "C_handoff:P60-P65/P330-P363",
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
       ],
       "boardSignalOverrides": {
         "assignment": "high",
@@ -2201,7 +2218,7 @@
       "start_time": "14:00",
       "end_time": "18:00",
       "time_label": "14:00~18:00",
-      "title": "감염 병동 POMR/예진기록지 작성",
+      "title": "감염 병동 POMR 초안 + 홍창의 보고서 지시 확인",
       "professor": "김경민 교수님",
       "event_type": "assignment",
       "difficulty": 9,
@@ -2210,8 +2227,8 @@
       "needs_confirmation": true,
       "site": "대전",
       "location": "341병동/PK실/의국",
-      "summary": "배정 환자 문진·신체진찰 후 POMR 또는 예진기록지 작성 시작. 금요일까지 제출.",
-      "note": "배정 환자 문진·신체진찰 후 POMR 또는 예진기록지 작성 시작. 금요일까지 제출. · 체크: 문진/신체진찰 / Problem list / 금요일 제출 초안",
+      "summary": "배정 환아 문진·신체진찰 후 감염 병동 POMR을 금요일 17시 전 제출 후보로 작성한다. 홍창의 발열/무병소/FUO 보고서는 당일 지시가 있을 때만 별도 과제로 처리한다.",
+      "note": "오후는 공식 일정이 없을 수 있으나, 배정 환아 문진/진찰과 POMR 초안을 시작하는 시간으로 둔다. Hospital course는 모든 날짜를 다 쓰기보다 직접 본 날 중심으로 정리 가능하다는 인계가 있다.",
       "calendar_body_short": "배정 환자 문진·신체진찰 후 POMR 또는 예진기록지 작성 시작. 금요일까지 제출.",
       "evaluation_items": [
         "병동실습 입원환자 1건",
@@ -2219,18 +2236,31 @@
       ],
       "sections": {
         "카드 표시": [
-          "문진/신체진찰",
+          "감염 POMR 초안",
           "Problem list",
-          "금요일 제출 초안"
+          "직접 본 날 hospital course",
+          "홍창의 과제 지시 확인"
         ],
         "상세 접기": [],
         "전날/당일 준비": [],
         "점수 연결": [
           "병동실습 입원환자 1건",
           "포트폴리오/예진기록지"
+        ],
+        "오늘 할 행동": [
+          "문진·진찰 메모를 POMR S/O로 분리",
+          "Assessment는 관련 있는 문제만 올리기",
+          "홍창의 보고서 지시가 있으면 즉시 별도 파일 큐 생성"
+        ],
+        "과제·평가 연결": [
+          "C분과 감염 병동 POMR",
+          "병동실습 입원환자 1건",
+          "2주차 포트폴리오 핵심 소재"
         ]
       },
-      "source_refs": [],
+      "source_refs": [
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ],
       "boardSignalOverrides": {
         "assignment": "high",
         "presentation": "auto",
@@ -2291,14 +2321,14 @@
       "title": "소화기영양: 김현진 교수님 외래",
       "professor": "김현진 교수님",
       "event_type": "session",
-      "difficulty": 8,
+      "difficulty": 9,
       "status": "active",
       "kind": "",
       "needs_confirmation": false,
       "site": "대전",
       "location": "외래 3번방",
-      "summary": "외래 예진 후보. 복통/변비/IBD/간염 질문 가능.",
-      "note": "외래 예진 후보. 복통/변비/IBD/간염 질문 가능. · 체크: 초진/신환 예진 후보 / SOAP 양식 / 복통 red flag",
+      "summary": "김현진 교수님 소화기/영양 외래. SOAP 예진기록지 형식, 복통 red flag·변비·IBD·간염/영양 질문 대비가 핵심이며 예진자는 당일 제출 경향.",
+      "note": "예진기록지는 SOAP 양식으로 준비. Present illness에 ROS/PE를 섞지 않기. 모의환자 case 주제는 교수님이 바꿀 수 있고, AI 티 나는 문장은 강하게 감점 리스크.",
       "calendar_body_short": "외래 예진 후보. 복통/변비/IBD/간염 질문 가능.",
       "evaluation_items": [
         "외래 예진 20%",
@@ -2306,24 +2336,37 @@
       ],
       "sections": {
         "카드 표시": [
-          "초진/신환 예진 후보",
-          "SOAP 양식",
-          "복통 red flag"
+          "SOAP 예진지",
+          "복통 red flag",
+          "변비/IBD/간염/영양 질문",
+          "AI 티 금지"
         ],
         "상세 접기": [],
         "전날/당일 준비": [],
         "점수 연결": [
           "외래 예진 20%",
           "개인 실습 평가"
+        ],
+        "오늘 할 행동": [
+          "초진/신환 예진 가능성 확인",
+          "예진기록지 사진 백업",
+          "case 희망 주제와 실제 배정 주제 공유"
+        ],
+        "확인할 것": [
+          "예진기록지 당일 제출 여부",
+          "모의환자 case 주제",
+          "모유수유 레포트 제출 entry"
         ]
       },
-      "source_refs": [],
+      "source_refs": [
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ],
       "boardSignalOverrides": {
         "assignment": "high",
         "presentation": "auto",
         "exam": "auto"
       },
-      "boardDifficultyOverride": 8
+      "boardDifficultyOverride": 9
     },
     {
       "id": "peds-w2-wed-gi-pm",
@@ -2335,17 +2378,17 @@
       "start_time": "14:00",
       "end_time": "18:00",
       "time_label": "14:00~18:00",
-      "title": "소화기영양: 모의환자 증례 작성/피드백",
+      "title": "소화기영양: 모유수유 레포트 + 모의환자 case 작성",
       "professor": "김현진 교수님",
       "event_type": "session",
-      "difficulty": 7,
+      "difficulty": 9,
       "status": "active",
       "kind": "",
       "needs_confirmation": false,
       "site": "대전",
       "location": "의국",
-      "summary": "모유수유 레포트/모의환자 case 과제 확인.",
-      "note": "모유수유 레포트/모의환자 case 과제 확인. · 체크: 모의환자 case / 모유수유 레포트 / 예진기록지 당일 제출 여부",
+      "summary": "김현진 교수님 과제는 모유수유 레포트와 모의환자 case를 금요일까지 함께 제출하는 흐름. 예진자는 SOAP 예진기록지를 당일 제출 후보로 둔다.",
+      "note": "모유수유 레포트 entry에 모유수유 레포트 + 모의환자 case 두 파일을 같이 제출하는 인계가 반복된다. 모의환자 case는 교과서적 증상과 review를 붙이고, AI 사용 티가 나지 않게 자기 문장으로 작성한다.",
       "calendar_body_short": "모유수유 레포트/모의환자 case 과제 확인.",
       "evaluation_items": [
         "개인평가",
@@ -2353,24 +2396,38 @@
       ],
       "sections": {
         "카드 표시": [
-          "모의환자 case",
           "모유수유 레포트",
-          "예진기록지 당일 제출 여부"
+          "모의환자 case",
+          "SOAP 예진기록지",
+          "금요일 17시"
         ],
         "상세 접기": [],
         "전날/당일 준비": [],
         "점수 연결": [
           "개인평가",
           "포트폴리오"
+        ],
+        "오늘 할 행동": [
+          "배정 주제 확정",
+          "case skeleton 작성",
+          "review 근거 정리",
+          "예진자는 기록지 당일 제출"
+        ],
+        "과제·평가 연결": [
+          "C분과 소화기 개인평가",
+          "2주차 포트폴리오",
+          "외래 예진 3건 후보"
         ]
       },
-      "source_refs": [],
+      "source_refs": [
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ],
       "boardSignalOverrides": {
         "assignment": "auto",
         "presentation": "auto",
         "exam": "auto"
       },
-      "boardDifficultyOverride": 7
+      "boardDifficultyOverride": 9
     },
     {
       "id": "peds-w2-thu-conference",
@@ -2430,8 +2487,8 @@
       "needs_confirmation": false,
       "site": "대전",
       "location": "외래 2번방",
-      "summary": "발작/두통/발달장애 중심. 국시 연계 강함.",
-      "note": "발작/두통/발달장애 중심. 국시 연계 강함. · 체크: 발작 정의 / 뇌파 / 질문 1개",
+      "summary": "강준원 교수님 신경 외래/mini-lecture. 발작·뇌전증·EEG 질문야마가 핵심이고 분위기는 비교적 친절하나 답이 나올 때까지 질문할 수 있다.",
+      "note": "의국회의 후 바로 외래. 진료실이 좁아 의자 세팅 필요. 질문야마: 발작 vs 뇌전증, 결신발작 과호흡, 영아연축-결절경화증, EEG 전극 좌우/부위, status epilepticus 약제.",
       "calendar_body_short": "발작/두통/발달장애 중심. 국시 연계 강함.",
       "evaluation_items": [
         "개인평가",
@@ -2439,8 +2496,9 @@
       ],
       "sections": {
         "카드 표시": [
-          "발작 정의",
-          "뇌파",
+          "질문야마",
+          "발작/뇌전증",
+          "EEG",
           "질문 1개"
         ],
         "상세 접기": [],
@@ -2448,9 +2506,16 @@
         "점수 연결": [
           "개인평가",
           "국시 연계"
+        ],
+        "오늘 할 행동": [
+          "의자 세팅",
+          "질문야마 빠른 복습",
+          "의국회의 내용 3줄 메모"
         ]
       },
-      "source_refs": [],
+      "source_refs": [
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ],
       "boardSignalOverrides": {
         "assignment": "auto",
         "presentation": "auto",
@@ -2477,8 +2542,8 @@
       "needs_confirmation": false,
       "site": "대전",
       "location": "외래 2번방",
-      "summary": "초진/신환이 있으면 예진 후보. 환자 수대로 분배.",
-      "note": "초진/신환이 있으면 예진 후보. 환자 수대로 분배. · 체크: 외래 예진 후보 / 예진기록지 프린트 / 환자 수대로 분배",
+      "summary": "정승연 교수님 신경 외래. 초진/신환이 있으면 예진 후보이며, 환자 수 기준으로 2/2 교대한다. 예진기록지는 프린트와 사진 백업이 안전하다.",
+      "note": "학생에게 관심은 적은 편이나 초진 예진이 생길 수 있다. 예진기록지는 진료 중 참고 후 돌려줄 수 있으니 사진 백업 후 자유기록/예진기록 계열 제출 후보로 보관한다.",
       "calendar_body_short": "초진/신환이 있으면 예진 후보. 환자 수대로 분배.",
       "evaluation_items": [
         "외래 예진 20%",
@@ -2486,18 +2551,26 @@
       ],
       "sections": {
         "카드 표시": [
-          "외래 예진 후보",
+          "초진/신환 예진 후보",
+          "환자 수 기준 교대",
           "예진기록지 프린트",
-          "환자 수대로 분배"
+          "사진 백업"
         ],
         "상세 접기": [],
         "전날/당일 준비": [],
         "점수 연결": [
           "외래 예진 20%",
           "개인평가"
+        ],
+        "확인할 것": [
+          "예진 시행 여부",
+          "예진 못한 경우 대체 과제 여부",
+          "제출 교수님/entry"
         ]
       },
-      "source_refs": [],
+      "source_refs": [
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ],
       "boardSignalOverrides": {
         "assignment": "auto",
         "presentation": "auto",
@@ -2511,21 +2584,21 @@
       "week": "2주차 C분과",
       "day": "금요일",
       "date": "2026-05-22",
-      "time_raw": "09:00~13:00(공지 확인)",
-      "start_time": "09:00",
-      "end_time": "13:00",
-      "time_label": "09:00~13:00(공지 확인)",
-      "title": "공통강의: 아나필락시스 교육 및 실습",
+      "time_raw": "09:30 전후(공지 확인)",
+      "start_time": "09:30",
+      "end_time": "10:30",
+      "time_label": "09:30 전후(공지 확인)",
+      "title": "공통강의 후보: 아나필락시스 교육/실습 확인",
       "professor": "정은희 교수님/교육센터",
       "event_type": "session",
-      "difficulty": 6,
+      "difficulty": 7,
       "status": "active",
       "kind": "",
       "needs_confirmation": true,
       "site": "대전",
       "location": "의국 또는 공지 장소",
-      "summary": "공식상 2주차 금 오전. 일정 대체 가능성 있어 확인 필요.",
-      "note": "공식상 2주차 금 오전. 일정 대체 가능성 있어 확인 필요. · 체크: 흡입제/에피네프린 / 소감 기록 / 주간포트폴리오 17:00",
+      "summary": "총조장 인계상 2주차 금요일 오전 9시 30분 전후 아나필락시스 교육 가능성이 있다. 실제 공지 확인 전까지 확인 필요로 둔다.",
+      "note": "금요일은 공통강의보다 제출 마감 관리가 더 중요하다. 17시 전 C분과 데일리, 감염 POMR, 소화기 과제, 예진기록지, 주간포트폴리오를 닫는다.",
       "calendar_body_short": "공식상 2주차 금 오전. 일정 대체 가능성 있어 확인 필요.",
       "evaluation_items": [
         "포트폴리오",
@@ -2533,24 +2606,31 @@
       ],
       "sections": {
         "카드 표시": [
-          "흡입제/에피네프린",
-          "소감 기록",
-          "주간포트폴리오 17:00"
+          "아나필락시스 09:30 확인",
+          "제출 마감 17:00",
+          "C분과 과제 닫기"
         ],
         "상세 접기": [],
         "전날/당일 준비": [],
         "점수 연결": [
           "포트폴리오",
           "A분과 호흡기 개인평가에도 재사용 가능"
+        ],
+        "오늘 할 행동": [
+          "공통강의 시간 확인",
+          "2주차 제출상황판 완료표시",
+          "주간성찰 초안 작성"
         ]
       },
-      "source_refs": [],
+      "source_refs": [
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ],
       "boardSignalOverrides": {
         "assignment": "auto",
         "presentation": "auto",
         "exam": "auto"
       },
-      "boardDifficultyOverride": 6
+      "boardDifficultyOverride": 7
     },
     {
       "id": "peds-w3-mon-pretest",
@@ -2781,36 +2861,43 @@
       "start_time": "08:20",
       "end_time": "13:00",
       "time_label": "08:20~13:00",
-      "title": "아침집담회 + 심도자/PICU 실습",
-      "professor": "김지나/배은영 교수님",
+      "title": "아침집담회 + 심도자 참관 여부 확인",
+      "professor": "배은영/최아영 교수님",
       "event_type": "session",
-      "difficulty": 7,
+      "difficulty": 8,
       "status": "active",
       "kind": "",
-      "needs_confirmation": false,
+      "needs_confirmation": true,
       "site": "대전",
       "location": "의국/심혈관조영실/PICU",
-      "summary": "심도자 일정이 없으면 PICU 실습 가능.",
-      "note": "심도자 일정이 없으면 PICU 실습 가능. · 체크: 집담회 / 심도자 여부 확인 / PICU 대체 가능",
+      "summary": "수요일 의국회의 후 배은영 교수님 심도자 참관이 있으면 심혈관조영실3로 이동. 심도자 일정이 없으면 최아영 교수님 소아소생술/PICU 일정으로 대체될 수 있어 확인 필요.",
+      "note": "A분과 인계상 전날 문자보다 수요일 의국회의 후 확인이 더 안전하다. “오후 3시 의국 예정으로 전달받았는데 변동 없는지 확인” 식으로 확인.",
       "calendar_body_short": "심도자 일정이 없으면 PICU 실습 가능.",
       "evaluation_items": [],
       "sections": {
         "카드 표시": [
-          "집담회",
           "심도자 여부 확인",
-          "PICU 대체 가능"
+          "심혈관조영실3",
+          "최아영 소아소생술 대체 가능"
         ],
         "상세 접기": [],
         "전날/당일 준비": [],
-        "점수 연결": []
+        "점수 연결": [],
+        "확인할 것": [
+          "심도자 실제 일정",
+          "오후 소아소생술/PICU 시간",
+          "유폴리오 자유기록 필요 여부"
+        ]
       },
-      "source_refs": [],
+      "source_refs": [
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ],
       "boardSignalOverrides": {
         "assignment": "auto",
         "presentation": "auto",
         "exam": "auto"
       },
-      "boardDifficultyOverride": 7
+      "boardDifficultyOverride": 8
     },
     {
       "id": "peds-w3-wed-picu-pm",
@@ -2822,17 +2909,17 @@
       "start_time": "14:00",
       "end_time": "18:00",
       "time_label": "14:00~18:00",
-      "title": "PICU 실습",
+      "title": "최아영 교수님 소아소생술/PICU 수업 후보",
       "professor": "최아영 교수님",
       "event_type": "session",
       "difficulty": 7,
       "status": "active",
       "kind": "",
-      "needs_confirmation": false,
+      "needs_confirmation": true,
       "site": "대전",
       "location": "소아중환자실",
-      "summary": "소아소생술/중환자 평가 경험. OSCE 연계 가능.",
-      "note": "소아소생술/중환자 평가 경험. OSCE 연계 가능. · 체크: PICU 동선 / 소아 BLS / 중환자 소감",
+      "summary": "심도자 일정 여부에 따라 오후 소아소생술 또는 PICU 관련 수업/과제로 이어질 수 있다. 강의 후 유폴리오 자유기록 작성 지시 가능성.",
+      "note": "인계에는 오후 2시 또는 3시 의국에서 40~50분 소아소생술 수업이 반복된다. 당일 의국회의 후 변동 확인.",
       "calendar_body_short": "소아소생술/중환자 평가 경험. OSCE 연계 가능.",
       "evaluation_items": [
         "OSCE 연계",
@@ -2840,18 +2927,24 @@
       ],
       "sections": {
         "카드 표시": [
-          "PICU 동선",
-          "소아 BLS",
-          "중환자 소감"
+          "오후 시간 확인",
+          "소아소생술",
+          "유폴리오 자유기록 후보"
         ],
         "상세 접기": [],
         "전날/당일 준비": [],
         "점수 연결": [
           "OSCE 연계",
           "개인평가"
+        ],
+        "오늘 할 행동": [
+          "강의 내용 5줄 메모",
+          "소감/자유기록 소재 확보"
         ]
       },
-      "source_refs": [],
+      "source_refs": [
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ],
       "boardSignalOverrides": {
         "assignment": "auto",
         "presentation": "auto",
@@ -2869,8 +2962,8 @@
       "start_time": "08:20",
       "end_time": "13:00",
       "time_label": "08:20~13:00",
-      "title": "아침집담회 + 알레르기·호흡기/대면진료 보충",
-      "professor": "정은희/양은애 교수님",
+      "title": "아침집담회 + 양은애 교수님 병동회진/호흡기 보강",
+      "professor": "양은애 교수님",
       "event_type": "session",
       "difficulty": 7,
       "status": "active",
@@ -2878,21 +2971,27 @@
       "needs_confirmation": true,
       "site": "대전",
       "location": "의국/외래",
-      "summary": "대면진료실습/보충학습 가능. 부족한 예진/기록 보완 후보.",
-      "note": "대면진료실습/보충학습 가능. 부족한 예진/기록 보완 후보. · 체크: 집담회 / 부족 예진 확인 / 보충 일정",
+      "summary": "A분과 목요일 오전은 양은애 교수님 병동회진/호흡기·알레르기 실습 흐름으로 본다. POMR/병동실습 기록과 부족한 예진 보완 후보.",
+      "note": "인계상 양은애 교수님 병동회진 후 외래로 이어지며, 호흡기알레르기 POMR/개인평가 소재를 확보한다.",
       "calendar_body_short": "대면진료실습/보충학습 가능. 부족한 예진/기록 보완 후보.",
       "evaluation_items": [],
       "sections": {
         "카드 표시": [
-          "집담회",
-          "부족 예진 확인",
-          "보충 일정"
+          "양은애 병동회진",
+          "호흡기알레르기 POMR",
+          "부족 예진 확인"
         ],
         "상세 접기": [],
         "전날/당일 준비": [],
-        "점수 연결": []
+        "점수 연결": [],
+        "오늘 할 행동": [
+          "POMR 환자/주제 확인",
+          "병동실습 기록 소재 확보"
+        ]
       },
-      "source_refs": [],
+      "source_refs": [
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ],
       "boardSignalOverrides": {
         "assignment": "auto",
         "presentation": "auto",
@@ -2954,17 +3053,17 @@
       "start_time": "09:00",
       "end_time": "18:00",
       "time_label": "09:00~18:00 + 17:00 제출",
-      "title": "3주차 금요일: 보충/대면진료/CPX 준비 buffer + 주간포트폴리오",
+      "title": "3주차 금요일: A분과 POMR 피드백/보충 + 주간포트폴리오 마감",
       "professor": "",
       "event_type": "assignment",
-      "difficulty": 8,
+      "difficulty": 9,
       "status": "active",
       "kind": "",
-      "needs_confirmation": false,
+      "needs_confirmation": true,
       "site": "대전",
       "location": "의국/공지 장소",
-      "summary": "4주차 전 마지막 buffer. 부족한 예진·POMR·대면진료증례보고서 초안·CPX 스크립트를 여기서 정리.",
-      "note": "4주차 전 마지막 buffer. 부족한 예진·POMR·대면진료증례보고서 초안·CPX 스크립트를 여기서 정리. · 체크: 부족 예진 0 만들기 / CPX 5개 주제 1회독 / 주간포트폴리오 17:00",
+      "summary": "A분과 금요일은 정은희 교수님 POMR 피드백 또는 공통/보충 일정 가능성이 있어 확인 필요. 17시 전 A분과 개인평가·POMR·주간포트폴리오를 닫는다.",
+      "note": "인계상 정은희 교수님 POMR 피드백은 프린트 2부와 현장 수정이 반복된다. 일정 변동 가능성이 있으므로 금요일 전 확인.",
       "calendar_body_short": "4주차 전 마지막 buffer. 부족한 예진·POMR·대면진료증례보고서 초안·CPX 스크립트를 여기서 정리.",
       "evaluation_items": [
         "포트폴리오 P/F",
@@ -2973,9 +3072,10 @@
       ],
       "sections": {
         "카드 표시": [
-          "부족 예진 0 만들기",
-          "CPX 5개 주제 1회독",
-          "주간포트폴리오 17:00"
+          "POMR 피드백 확인",
+          "프린트 2부",
+          "A분과 제출 17:00",
+          "CPX 준비 buffer"
         ],
         "상세 접기": [],
         "전날/당일 준비": [],
@@ -2983,15 +3083,22 @@
           "포트폴리오 P/F",
           "CPX/OSCE 40% 준비",
           "예진 20% 마감"
+        ],
+        "오늘 할 행동": [
+          "POMR 수정본 반영",
+          "A분과 개인평가 제출",
+          "3주차 주간성찰 완료"
         ]
       },
-      "source_refs": [],
+      "source_refs": [
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ],
       "boardSignalOverrides": {
         "assignment": "high",
         "presentation": "auto",
         "exam": "high"
       },
-      "boardDifficultyOverride": 8
+      "boardDifficultyOverride": 9
     },
     {
       "id": "peds-w4-mon-cpx-1",
@@ -3430,15 +3537,20 @@
       "needs_confirmation": false,
       "difficulty_content": 7,
       "difficulty_operational": 7,
-      "difficulty_total": 7,
+      "difficulty_total": 8,
       "linked_session_ids": [
         "peds-w2-fri-common-anaphylaxis"
       ],
       "linked_professors": [],
       "milestones": [],
-      "notes": [],
-      "content_summary": "C분과 감염 병동 POMR, 내분비/소화기/신경 개인평가 정리.",
-      "source_ids": []
+      "notes": [
+        "데일리 기록과 예진기록지/POMR 제출 entry를 분리해서 확인.",
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ],
+      "content_summary": "C분과 2주차: 월 내분비 예진/데일리, 화 감염 POMR, 수 소화기 모유수유+모의환자+SOAP 예진, 목 신경, 주간성찰을 금요일 17시 전 닫는다.",
+      "source_ids": [
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ]
     },
     {
       "id": "peds-week3-portfolio",
@@ -3455,15 +3567,17 @@
       "needs_confirmation": false,
       "difficulty_content": 8,
       "difficulty_operational": 8,
-      "difficulty_total": 8,
+      "difficulty_total": 9,
       "linked_session_ids": [
         "peds-w3-fri-common-buffer"
       ],
       "linked_professors": [],
       "milestones": [],
       "notes": [],
-      "content_summary": "A분과 과제와 부족 예진 마감, 4주차 CPX 준비 전 마지막 정리.",
-      "source_ids": []
+      "content_summary": "A분과 주간포트폴리오. 호흡기알레르기 POMR/개인평가, 심장/심초음파 관찰, 소아소생술/PICU 기록, 부족 예진 보완을 금요일 17시 전 닫는다.",
+      "source_ids": [
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ]
     },
     {
       "id": "peds-final-portfolio",
@@ -3526,9 +3640,14 @@
           "due": "2026-05-29T16:00:00"
         }
       ],
-      "notes": [],
-      "content_summary": "공식 예진환자 보고서: 외래 매주 1명씩 총 3건. 기회 생기면 바로 확보.",
-      "source_ids": []
+      "notes": [
+        "예진자만 제출하는 기록지는 당일 제출을 기본 안전선으로 둔다.",
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ],
+      "content_summary": "외래 예진 3건. C분과에서는 임한혁·김현진·정승연이 후보이며, 예진 즉시 사진+보정본을 남긴다. 김현진은 SOAP 당일 제출 경향.",
+      "source_ids": [
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ]
     },
     {
       "id": "peds-inpatient-ward-case",
@@ -3640,7 +3759,7 @@
       "name": "C분과 감염 병동 POMR",
       "priority_label": "최상",
       "priority_score": 10,
-      "format": "병동 POMR/예진기록지",
+      "format": "POMR 또는 교수님 지시 양식. 최신 2026 기준 POMR 우선.",
       "raw_deadline": "2026-05-22T17:00:00",
       "start_when": "2026-05-19T09:30:00",
       "start_at": "2026-05-19T09:30:00",
@@ -3649,7 +3768,7 @@
       "follow_up": "",
       "needs_confirmation": false,
       "difficulty_content": 10,
-      "difficulty_operational": 10,
+      "difficulty_operational": 9,
       "difficulty_total": 10,
       "linked_session_ids": [
         "peds-w2-tue-infection-ward-am",
@@ -3657,9 +3776,15 @@
       ],
       "linked_professors": [],
       "milestones": [],
-      "notes": [],
-      "content_summary": "공식 병동 입원환자 1건의 핵심 제출물.",
-      "source_ids": []
+      "notes": [
+        "최신 2026 인계는 POMR만 받겠다는 흐름이 강함.",
+        "과거 구글폼은 최신 흐름에서는 사라진 경우가 많음.",
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ],
+      "content_summary": "김경민 교수님 감염 병동회진 후 배정 환아 POMR. 직접 문진·신체진찰, Problem list, 직접 본 날 hospital course가 핵심. 홍창의 보고서는 당일 지시가 있으면 별도 처리.",
+      "source_ids": [
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ]
     },
     {
       "id": "peds-a-division-tasks",
@@ -3676,15 +3801,21 @@
       "needs_confirmation": true,
       "difficulty_content": 8,
       "difficulty_operational": 8,
-      "difficulty_total": 8,
+      "difficulty_total": 9,
       "linked_session_ids": [
         "peds-w3-fri-common-buffer"
       ],
       "linked_professors": [],
       "milestones": [],
-      "notes": [],
-      "content_summary": "A분과 인계 추가 확인 전까지 skeleton. 3주차 금요일 전 부족 예진/과제 마감.",
-      "source_ids": []
+      "notes": [
+        "수요일 심도자/소아소생술은 당일 확인 필요.",
+        "금요일 POMR 피드백/제출 17시 전 관리.",
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ],
+      "content_summary": "A분과: 정은희/양은애 호흡기알레르기 POMR·개인평가, 배은영 심초음파/심장 외래, 수요일 심도자 여부, 최아영 소아소생술/PICU 변동을 관리한다.",
+      "source_ids": [
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ]
     },
     {
       "id": "peds-cpx-prep",
@@ -3737,6 +3868,177 @@
       "notes": [],
       "content_summary": "금요일 12:00 제출. 목요일 밤까지 사실상 완료해야 CPX #5를 망치지 않음.",
       "source_ids": []
+    },
+    {
+      "id": "peds-c-daily-records",
+      "name": "C분과 데일리 기록 4개",
+      "priority_label": "상",
+      "priority_score": 8,
+      "format": "U-Folio 자유기록: 내분비/병동실습/소화기/신경과",
+      "raw_deadline": "2026-05-22T17:00:00",
+      "start_when": "2026-05-19T18:00:00",
+      "start_at": "2026-05-19T18:00:00",
+      "soft_deadline": "2026-05-22T12:00:00",
+      "hard_deadline": "2026-05-22T17:00:00",
+      "follow_up": "각 날짜 실제 일정과 교수님 지시를 3~4줄로 정리",
+      "needs_confirmation": false,
+      "difficulty_content": 6,
+      "difficulty_operational": 8,
+      "difficulty_total": 8,
+      "linked_session_ids": [
+        "peds-w2-mon-endo-am",
+        "peds-w2-tue-infection-ward-am",
+        "peds-w2-wed-gi-am",
+        "peds-w2-thu-neuro-am"
+      ],
+      "linked_professors": [
+        "임한혁 교수님",
+        "김경민 교수님",
+        "김현진 교수님",
+        "강준원/정승연 교수님"
+      ],
+      "milestones": [
+        {
+          "title": "월·화 실제 지시 반영",
+          "due": "2026-05-20T21:00:00"
+        },
+        {
+          "title": "수·목 기록 합본 점검",
+          "due": "2026-05-22T12:00:00"
+        }
+      ],
+      "notes": [
+        "월 내분비, 화 병동실습, 수 소화기, 목 신경과 entry.",
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ],
+      "content_summary": "C분과 월~목 데일리 자유기록. 금요일 17시 전 완료 기준."
+    },
+    {
+      "id": "peds-c-gi-breastfeeding-case",
+      "name": "김현진 소화기 모유수유 레포트 + 모의환자 case",
+      "priority_label": "최상",
+      "priority_score": 10,
+      "format": "모유수유 레포트 entry에 모유수유 레포트 + 모의환자 case 함께 제출",
+      "raw_deadline": "2026-05-22T17:00:00",
+      "start_when": "2026-05-20T14:00:00",
+      "start_at": "2026-05-20T14:00:00",
+      "soft_deadline": "2026-05-22T12:00:00",
+      "hard_deadline": "2026-05-22T17:00:00",
+      "follow_up": "모의환자 주제/Review 범위 당일 확정",
+      "needs_confirmation": true,
+      "difficulty_content": 9,
+      "difficulty_operational": 9,
+      "difficulty_total": 10,
+      "linked_session_ids": [
+        "peds-w2-wed-gi-am",
+        "peds-w2-wed-gi-pm"
+      ],
+      "linked_professors": [
+        "김현진 교수님"
+      ],
+      "milestones": [
+        {
+          "title": "case 주제 확정",
+          "due": "2026-05-20T18:00:00"
+        },
+        {
+          "title": "초안 1차",
+          "due": "2026-05-21T22:00:00"
+        }
+      ],
+      "notes": [
+        "AI 티 나는 문장 금지. 교과서적 증상과 review를 자기 문장으로 작성.",
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ],
+      "content_summary": "김현진 교수님 소화기 과제. 모유수유 레포트와 모의환자 case를 금요일까지 함께 제출."
+    },
+    {
+      "id": "peds-c-outpatient-records",
+      "name": "C분과 예진기록지 사진/보정본 정리",
+      "priority_label": "상",
+      "priority_score": 8,
+      "format": "임한혁/김현진/정승연 예진기록지 사진 + SOAP/보정본",
+      "raw_deadline": "2026-05-22T17:00:00",
+      "start_when": "2026-05-19T18:00:00",
+      "start_at": "2026-05-19T18:00:00",
+      "soft_deadline": "2026-05-22T12:00:00",
+      "hard_deadline": "2026-05-22T17:00:00",
+      "follow_up": "예진자는 당일 제출 우선. 김현진은 SOAP 구조 확인.",
+      "needs_confirmation": false,
+      "difficulty_content": 7,
+      "difficulty_operational": 8,
+      "difficulty_total": 8,
+      "linked_session_ids": [
+        "peds-w2-mon-endo-am",
+        "peds-w2-wed-gi-am",
+        "peds-w2-thu-neuro-pm"
+      ],
+      "linked_professors": [
+        "임한혁 교수님",
+        "김현진 교수님",
+        "정승연 교수님"
+      ],
+      "milestones": [],
+      "notes": [
+        "원본 사진 백업 후 제출용 보정본 생성.",
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ],
+      "content_summary": "C분과 외래 예진기록지 관리. 예진 즉시 사진 백업, 김현진은 SOAP 당일 제출 경향."
+    },
+    {
+      "id": "peds-c-infection-report-optional",
+      "name": "감염 홍창의 발열/무병소/FUO 보고서 [확인 필요]",
+      "priority_label": "확인 필요",
+      "priority_score": 7,
+      "format": "홍창의 소아과학 발열/무병소 발열/FUO 요약 보고서",
+      "raw_deadline": "2026-05-22T17:00:00",
+      "start_when": "2026-05-19T18:00:00",
+      "start_at": "2026-05-19T18:00:00",
+      "soft_deadline": "2026-05-22T12:00:00",
+      "hard_deadline": "2026-05-22T17:00:00",
+      "follow_up": "김경민 교수님이 실제 지시한 경우에만 작성 큐로 승격",
+      "needs_confirmation": true,
+      "difficulty_content": 7,
+      "difficulty_operational": 6,
+      "difficulty_total": 7,
+      "linked_session_ids": [
+        "peds-w2-tue-infection-ward-am",
+        "peds-w2-tue-infection-ward-pm"
+      ],
+      "linked_professors": [
+        "김경민 교수님"
+      ],
+      "milestones": [],
+      "notes": [
+        "최신 2026 일부 조는 사라졌고, 일부 조는 추가 지시 받음. 확정 전 제출물로 단정하지 않음.",
+        "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md"
+      ],
+      "content_summary": "감염 홍창의 보고서는 확인 필요. 당일 지시가 있으면 발열/무병소/FUO 중심으로 금요일 전 작성."
     }
-  ]
+  ],
+  "analysis_appendix": {
+    "peds_schedule_patch_2026_05_19": {
+      "source_lock": "source lock: outputs/clerkship/소아_일정관리앱_반영_source_lock_2026-05-19.md",
+      "patched_sessions": [
+        "peds-w2-tue-infection-ward-am",
+        "peds-w2-tue-infection-ward-pm",
+        "peds-w2-wed-gi-am",
+        "peds-w2-wed-gi-pm",
+        "peds-w2-thu-neuro-am",
+        "peds-w2-thu-neuro-pm",
+        "peds-w2-fri-common-anaphylaxis",
+        "peds-w3-wed-conference-cath-picu",
+        "peds-w3-wed-picu-pm",
+        "peds-w3-thu-conference-allergy",
+        "peds-w3-fri-common-buffer"
+      ],
+      "added_assignments": [
+        "peds-c-daily-records",
+        "peds-c-gi-breastfeeding-case",
+        "peds-c-outpatient-records",
+        "peds-c-infection-report-optional"
+      ],
+      "policy": "targeted local DB patch; latest 2026 handoff > 2025 support; professor day-of instruction wins"
+    }
+  }
 }
