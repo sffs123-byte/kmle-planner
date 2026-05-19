@@ -93,15 +93,18 @@ function sendText(res, status, text, type = 'text/plain; charset=utf-8') {
 
 function readBody(req) {
   return new Promise((resolve, reject) => {
-    let raw = '';
+    const chunks = [];
+    let totalBytes = 0;
     req.on('data', (chunk) => {
-      raw += chunk;
-      if (raw.length > 20 * 1024 * 1024) {
+      const buffer = Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk);
+      chunks.push(buffer);
+      totalBytes += buffer.length;
+      if (totalBytes > 20 * 1024 * 1024) {
         reject(new Error('request body too large'));
         req.destroy();
       }
     });
-    req.on('end', () => resolve(safeJsonParse(raw, {})));
+    req.on('end', () => resolve(safeJsonParse(Buffer.concat(chunks).toString('utf8'), {})));
     req.on('error', reject);
   });
 }
@@ -136,7 +139,28 @@ function getUserState(userId) {
   };
 }
 
+function pediatricsAssignmentCount(stateJson) {
+  return Number(stateJson?.clerkshipBundles?.['pediatrics-2026-05-track-bca']?.assignments?.length || 0);
+}
+
+function replacementCharCount(stateJson) {
+  return (JSON.stringify(stateJson || {}).match(/�/g) || []).length;
+}
+
 function setUserState({ userId, stateJson, stateVersion = 'planner-user-state.v1', updatedBy = 'unknown', updatedAt = nowIso() }) {
+  const existing = getUserState(userId);
+  const existingPedsAssignments = pediatricsAssignmentCount(existing?.state_json);
+  const nextPedsAssignments = pediatricsAssignmentCount(stateJson || {});
+  const trustedOpenClawWrite = String(updatedBy || '').startsWith('openclaw-main-peds-schedule-patch')
+    || String(updatedBy || '').startsWith('openclaw-main-peds-clean-rebuild');
+  if (existingPedsAssignments >= 20 && nextPedsAssignments < existingPedsAssignments && !trustedOpenClawWrite) {
+    return { ...existing, ignored_stale_pediatrics_push: true, ignored_updated_by: updatedBy, ignored_updated_at: updatedAt };
+  }
+  const existingReplacementChars = replacementCharCount(existing?.state_json);
+  const nextReplacementChars = replacementCharCount(stateJson || {});
+  if (existing && nextReplacementChars > existingReplacementChars && nextReplacementChars > 0 && !trustedOpenClawWrite) {
+    return { ...existing, ignored_replacement_char_push: true, ignored_updated_by: updatedBy, ignored_updated_at: updatedAt };
+  }
   const stateRaw = JSON.stringify(stateJson || {});
   db.prepare(`
     INSERT INTO planner_user_state (user_id, state_json, state_version, updated_by, updated_at)
