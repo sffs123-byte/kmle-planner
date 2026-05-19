@@ -987,7 +987,7 @@ async function pullPlannerUserState({ force = false, reason = '수동 새로받�
     if (force || (remoteHash !== localCurrentHash && (remoteIsNewer || !localIsDirty || firstSync))) {
       setRawPlannerState(remoteRaw);
       localHash = remoteHash;
-      forceLocalPullActive = false;
+      if (!urlForceLocalPull) forceLocalPullActive = false;
       meta.lastHash = remoteHash;
       meta.lastUserStateAppliedAt = remoteUpdatedAt;
       saveMeta(meta);
@@ -1010,7 +1010,15 @@ async function pullPlannerUserState({ force = false, reason = '수동 새로받�
       );
       renderSessionText();
 
-      if (!appliedInPlace) {
+      if (urlForceLocalPull) {
+        setTimeout(() => {
+          const nextUrl = new URL(location.href);
+          nextUrl.searchParams.delete('forceLocalPull');
+          nextUrl.searchParams.delete('forcePull');
+          nextUrl.searchParams.set('forcedPullApplied', '1');
+          location.replace(nextUrl.toString());
+        }, 250);
+      } else if (!appliedInPlace) {
         setTimeout(() => location.reload(), 250);
       }
       return;
@@ -1023,7 +1031,7 @@ async function pullPlannerUserState({ force = false, reason = '수동 새로받�
   } catch (error) {
     setStatus(`${stateStoreLabel()} user state 불러오기 실패: ${error.message || error}`, 'error');
   } finally {
-    if (force) forceLocalPullActive = false;
+    if (force && !urlForceLocalPull) forceLocalPullActive = false;
     syncing = false;
     renderSessionText();
   }
