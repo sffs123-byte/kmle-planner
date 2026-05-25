@@ -869,6 +869,7 @@ const SRS_KEY = STORAGE_PREFIX + 'srs_v1';
 const HIST_KEY = STORAGE_PREFIX + 'hist_v1';
 const EDITS_KEY = STORAGE_PREFIX + 'edits_v1';
 const USER_ANS_KEY = STORAGE_PREFIX + 'user_answers_v1';
+const QUIZ_SESSION_KEY = STORAGE_PREFIX + 'quiz_session_v1';
 
 // ── SRS State ──
 let srs = JSON.parse(localStorage.getItem(SRS_KEY) || '{{}}');
@@ -881,11 +882,100 @@ let pending = [];
 let bonusMode = false;
 let bonusSrs = {{}};
 let waitTimer = null;
+let activeQuizCardId = null;
+let resumeQuizUiState = null;
 
 function saveSrs() {{ localStorage.setItem(SRS_KEY, JSON.stringify(srs)); }}
 function saveHist() {{ localStorage.setItem(HIST_KEY, JSON.stringify(history)); }}
 function saveEdits() {{ localStorage.setItem(EDITS_KEY, JSON.stringify(edits)); }}
 function saveUserAnswers() {{ localStorage.setItem(USER_ANS_KEY, JSON.stringify(userAnswers)); }}
+
+function sanitizeQuizQueue(ids) {{
+    const out = [];
+    const seen = new Set();
+    (ids || []).forEach(id => {{
+        if (!QUIZ_DATA[id] || seen.has(id)) return;
+        seen.add(id);
+        out.push(id);
+    }});
+    return out;
+}}
+
+function sanitizeQuizPending(items, blockedIds = new Set()) {{
+    const out = [];
+    const seen = new Set();
+    (items || []).forEach(item => {{
+        if (!item || !QUIZ_DATA[item.id] || blockedIds.has(item.id) || seen.has(item.id)) return;
+        const dueTime = Number(item.dueTime || 0);
+        if (!Number.isFinite(dueTime) || dueTime <= 0) return;
+        seen.add(item.id);
+        out.push({{ id: item.id, dueTime }});
+    }});
+    out.sort(sortByDueThenOrder);
+    return out;
+}}
+
+function loadQuizSession() {{
+    try {{
+        const raw = localStorage.getItem(QUIZ_SESSION_KEY);
+        if (!raw) return null;
+        const data = JSON.parse(raw);
+        if (!data || typeof data !== 'object') return null;
+        return data;
+    }} catch (err) {{
+        console.warn('Failed to load quiz session', err);
+        return null;
+    }}
+}}
+
+function clearQuizSession() {{
+    activeQuizCardId = null;
+    resumeQuizUiState = null;
+    localStorage.removeItem(QUIZ_SESSION_KEY);
+}}
+
+function saveQuizSession() {{
+    const hasState = Boolean(activeQuizCardId) || queue.length > 0 || pending.length > 0;
+    if (!hasState) {{
+        clearQuizSession();
+        return;
+    }}
+
+    if (activeQuizCardId) {{
+        const userAnswerEl = document.getElementById('quizUserAnswer');
+        if (userAnswerEl) {{
+            userAnswers[activeQuizCardId] = userAnswerEl.value;
+            saveUserAnswers();
+        }}
+    }}
+
+    const answerEl = document.getElementById('quizAnswer');
+    const guideEl = document.getElementById('quizGuide');
+    const payload = {{
+        version: 1,
+        currentId: activeQuizCardId || null,
+        queue: sanitizeQuizQueue(queue),
+        pending: sanitizeQuizPending(pending, new Set(activeQuizCardId ? [activeQuizCardId] : [])),
+        bonusMode: Boolean(bonusMode),
+        bonusSrs: bonusMode ? bonusSrs : {{}},
+        answerVisible: Boolean(answerEl && answerEl.classList.contains('visible')),
+        guideVisible: Boolean(guideEl && guideEl.style.display !== 'none'),
+        savedAt: Date.now()
+    }};
+    localStorage.setItem(QUIZ_SESSION_KEY, JSON.stringify(payload));
+}}
+
+function resumeSavedQuizIfAny() {{
+    const saved = loadQuizSession();
+    if (!saved) return;
+    startQuizWith(saved.queue || [], {{
+        pending: saved.pending || [],
+        restoreCurrentId: saved.currentId || null,
+        restoreState: saved,
+        bonusMode: Boolean(saved.bonusMode),
+        bonusSrs: saved.bonusSrs || {{}}
+    }});
+}}
 
 // ── Card View Functions ──
 function toggleAnswer(id) {{
@@ -1200,9 +1290,15 @@ function doResetQuiz() {{
 }}
 
 function startQuizWith(ids, options = {{}}) {{
-    bonusMode = false;
+    bonusMode = Boolean(options.bonusMode);
+    bonusSrs = bonusMode && options.bonusSrs && typeof options.bonusSrs === 'object' ? options.bonusSrs : {{}};
     const queued = new Set();
     queue = [];
+    const restoreCurrentId = options.restoreCurrentId;
+    if (restoreCurrentId && QUIZ_DATA[restoreCurrentId] && !queued.has(restoreCurrentId)) {{
+        queued.add(restoreCurrentId);
+        queue.push(restoreCurrentId);
+    }}
     ids.forEach(id => {{
         if (!QUIZ_DATA[id] || queued.has(id)) return;
         queued.add(id);
@@ -1215,8 +1311,11 @@ function startQuizWith(ids, options = {{}}) {{
         if (Number.isFinite(dueTime) && dueTime > 0) pending.push({{ id: item.id, dueTime }});
     }});
     pending.sort(sortByDueThenOrder);
+    resumeQuizUiState = options.restoreState || null;
+    activeQuizCardId = null;
     document.body.classList.add('quiz-mode-active');
     document.getElementById('quizOverlay').classList.add('active');
+    saveQuizSession();
     showNextCard();
 }}
 
@@ -1224,6 +1323,7 @@ function exitQuiz() {{
     if (waitTimer) {{ clearInterval(waitTimer); waitTimer = null; }}
     document.body.classList.remove('quiz-mode-active');
     document.getElementById('quizOverlay').classList.remove('active');
+    saveQuizSession();
     updateReviewBtn();
 }}
 
@@ -1242,10 +1342,15 @@ function showNextCard() {{
     updateStats();
 
     if (queue.length > 0) {{
-        renderQuizCard(queue.shift());
+        const nextId = queue.shift();
+        activeQuizCardId = nextId;
+        saveQuizSession();
+        renderQuizCard(nextId);
     }} else if (pending.length > 0) {{
+        activeQuizCardId = null;
         renderWaiting();
     }} else {{
+        activeQuizCardId = null;
         renderComplete();
     }}
 }}
@@ -1315,9 +1420,26 @@ function renderQuizCard(id) {{
         userAnswerEl.addEventListener('input', () => {{
             userAnswers[id] = userAnswerEl.value;
             saveUserAnswers();
+            saveQuizSession();
         }});
     }}
+    const restoreState = resumeQuizUiState && resumeQuizUiState.currentId === id ? resumeQuizUiState : null;
+    resumeQuizUiState = null;
+    if (restoreState && restoreState.answerVisible) {{
+        document.getElementById('quizAnswer').classList.add('visible');
+        document.getElementById('showAnsBtn').style.display = 'none';
+        const rr = document.getElementById('ratingBtns');
+        if (rr) rr.style.display = 'flex';
+        if (restoreState.guideVisible) {{
+            const g = document.getElementById('quizGuide');
+            const btn = g?.previousElementSibling;
+            if (g) g.style.display = 'block';
+            if (btn) btn.textContent = '📖 Study Guide 닫기';
+        }}
+        setTimeout(() => showQuizStaticDraw(id), 30);
+    }}
     updateStats();
+    saveQuizSession();
 }}
 
 function showQuizAnswer(id) {{
@@ -1326,6 +1448,7 @@ function showQuizAnswer(id) {{
     const rr = document.getElementById('ratingBtns');
     if (rr) rr.style.display = 'flex';
     setTimeout(() => showQuizStaticDraw(id), 30);
+    saveQuizSession();
 }}
 
 function toggleQuizGuide() {{
@@ -1339,6 +1462,7 @@ function toggleQuizGuide() {{
         g.style.display = 'none';
         if (btn) btn.textContent = '📖 Study Guide 보기';
     }}
+    saveQuizSession();
 }}
 
 const GRADE_STOPWORDS = new Set([
@@ -1789,6 +1913,7 @@ function renderWaiting() {{
     const body = document.getElementById('quizBody');
     const minDue = Math.min(...pending.map(p => p.dueTime));
     const waitCount = pending.length;
+    saveQuizSession();
 
     function tick() {{
         const sec = Math.max(0, Math.ceil((minDue - Date.now()) / 1000));
@@ -1818,6 +1943,7 @@ function skipWait() {{
 }}
 
 function renderComplete() {{
+    clearQuizSession();
     const masteredIds = ALL_IDS.filter(id => srs[id] && srs[id].mastered);
     const bonusSection = bonusMode
         ? '<p style="color:var(--green);margin-top:12px;font-size:16px">🌟 추가 퀴즈 완료!</p>'
@@ -3458,6 +3584,8 @@ const guideObserver = new MutationObserver(function(mutations) {{
 window.addEventListener('DOMContentLoaded', function() {{
     document.addEventListener('click', startReviewFromEvent, true);
     document.addEventListener('touchend', startReviewFromEvent, true);
+    window.addEventListener('pagehide', saveQuizSession);
+    window.addEventListener('beforeunload', saveQuizSession);
     applyEdits();
     updateReviewBtn();
     showDrawIndicators();
@@ -3475,6 +3603,8 @@ window.addEventListener('DOMContentLoaded', function() {{
 
     // Also observe quiz body for quiz mode guide images
     guideObserver.observe(document.getElementById('quizBody'), {{ childList: true, subtree: true }});
+
+    resumeSavedQuizIfAny();
 }});
 </script>
 </body>
