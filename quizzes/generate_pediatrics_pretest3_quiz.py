@@ -28,8 +28,8 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 OUT = QUIZ_DIR / "소아청소년과_3주차_pretest_quiz.html"
 DATA = DATA_DIR / "pediatrics_pretest3_cards.json"
 TITLE = "소아청소년과 3주차 Pretest SRS"
-STORAGE_PREFIX = "peds_pretest3_20260525_full_v6_concept"
-LOCK_LINE = "3주차 Pretest Anki v6 · 309문항 · 개념/정의/판단흐름 심화 해설 + Allen PDF 근거 동시 제공 · 불완전 복기는 원문확인 표시"
+STORAGE_PREFIX = "peds_pretest3_20260526_full_v7_images"
+LOCK_LINE = "3주차 Pretest Anki v7 · 309문항 · 이미지 3건 추가 · 개념/정의/판단흐름 심화 해설 + Allen PDF 근거 동시 제공 · 불완전 복기는 원문확인 표시"
 
 OFFICIAL_RANGE_LABEL = "공식 3주차 16~28장"
 OFFICIAL_UNIT_ORDER = [
@@ -548,7 +548,7 @@ body.peds3-quiz-isolated .quiz-card {{ min-height: calc(100dvh - 64px); box-sizi
     )
     scaffold_note = f"""
 <div class="peds3-scaffold-note" style="margin:12px 0 18px;padding:14px 16px;border:1px solid rgba(221,214,254,.55);background:rgba(248,250,252,.92);border-radius:16px;box-shadow:0 12px 30px rgba(15,23,42,.16);">
-  <div style="font-size:13px;font-weight:950;color:#4c1d95;margin-bottom:6px;">소아청소년과 3주차 Pretest Anki v6 Concept Deepen</div>
+  <div style="font-size:13px;font-weight:950;color:#4c1d95;margin-bottom:6px;">소아청소년과 3주차 Pretest Anki v7 Images</div>
   <div style="font-size:13px;line-height:1.6;color:#334155;">공식 범위는 <strong>16~28장</strong>입니다. 현재 카드 <strong>{source_count}</strong>개를 최신 2026 복기, 25-21 야마/source layout, 2023 PDF audit 기준으로 묶었습니다. 각 카드에는 <strong>개념/정의/판단흐름을 보강한 튜터식 심화 해설 + Allen PDF 기준 해설/근거</strong>를 함께 붙였습니다. <strong>추정답/원문 확인</strong> 표시는 복기가 불완전하거나 직접 근거가 약해 재확인이 필요한 카드입니다.</div>
   <div style="margin-top:8px;">{summary}</div>
 </div>
