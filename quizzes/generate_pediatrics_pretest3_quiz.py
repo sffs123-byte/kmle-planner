@@ -28,8 +28,8 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 OUT = QUIZ_DIR / "소아청소년과_3주차_pretest_quiz.html"
 DATA = DATA_DIR / "pediatrics_pretest3_cards.json"
 TITLE = "소아청소년과 3주차 Pretest SRS"
-STORAGE_PREFIX = "peds_pretest3_20260525_full_v4_allen"
-LOCK_LINE = "3주차 Pretest Anki v4 · 309문항 · Allen PDF 기준 해설/근거 추가 · 불완전 복기는 원문확인 표시"
+STORAGE_PREFIX = "peds_pretest3_20260525_full_v5_hybrid"
+LOCK_LINE = "3주차 Pretest Anki v5 · 309문항 · 기존 튜터식 보강 해설 + Allen PDF 근거 동시 제공 · 불완전 복기는 원문확인 표시"
 
 OFFICIAL_RANGE_LABEL = "공식 3주차 16~28장"
 OFFICIAL_UNIT_ORDER = [
@@ -343,13 +343,12 @@ def answer_html(card: dict) -> str:
     parts = [
         f"<div class='answer-final'><h3>정답</h3><p>{e(card.get('answer', '원문 확인 필요'))}</p></div>"
     ]
+    if explanation:
+        parts.append(f"<section class='answer-section'><h4>기존 방식 보강 해설</h4><p>{e(explanation).replace(chr(10), '<br>')}</p></section>")
+    if enhanced:
+        parts.append(f"<section class='answer-section enhanced'><h4>튜터식 상세 해설</h4>{format_tutor_html(enhanced)}</section>")
     if allen_block:
         parts.append(allen_block)
-    else:
-        if explanation:
-            parts.append(f"<section class='answer-section'><h4>짧은 해설</h4><p>{e(explanation).replace(chr(10), '<br>')}</p></section>")
-        if enhanced:
-            parts.append(f"<section class='answer-section enhanced'><h4>상세 해설</h4>{format_tutor_html(enhanced)}</section>")
     parts.append(image_block_html(card, "answer"))
     if card.get("uncertain"):
         parts.append("<section class='answer-section warning'><h4>원문 확인 필요</h4><p>이 문항은 복기가 불완전하거나 이미지/선지 확인이 필요합니다. 원본이 들어오면 stem과 정답을 source-faithful하게 교체합니다.</p></section>")
@@ -525,8 +524,8 @@ body.peds-pretest3-bg .peds3-clear-filter {{ border:none; border-radius:999px; p
     )
     scaffold_note = f"""
 <div class="peds3-scaffold-note" style="margin:12px 0 18px;padding:14px 16px;border:1px solid rgba(221,214,254,.55);background:rgba(248,250,252,.92);border-radius:16px;box-shadow:0 12px 30px rgba(15,23,42,.16);">
-  <div style="font-size:13px;font-weight:950;color:#4c1d95;margin-bottom:6px;">소아청소년과 3주차 Pretest Anki v3</div>
-  <div style="font-size:13px;line-height:1.6;color:#334155;">공식 범위는 <strong>16~28장</strong>입니다. 현재 카드 <strong>{source_count}</strong>개를 최신 2026 복기, 25-21 야마/source layout, 2023 PDF audit 기준으로 묶었습니다. <strong>추정답/원문 확인</strong> 표시는 복기가 불완전하지만 시험 직전용으로 최대한 답을 채운 카드입니다.</div>
+  <div style="font-size:13px;font-weight:950;color:#4c1d95;margin-bottom:6px;">소아청소년과 3주차 Pretest Anki v5 Hybrid</div>
+  <div style="font-size:13px;line-height:1.6;color:#334155;">공식 범위는 <strong>16~28장</strong>입니다. 현재 카드 <strong>{source_count}</strong>개를 최신 2026 복기, 25-21 야마/source layout, 2023 PDF audit 기준으로 묶었습니다. 각 카드에는 <strong>기존 튜터식 보강 해설 + Allen PDF 기준 해설/근거</strong>를 함께 붙였습니다. <strong>추정답/원문 확인</strong> 표시는 복기가 불완전하거나 직접 근거가 약해 재확인이 필요한 카드입니다.</div>
   <div style="margin-top:8px;">{summary}</div>
 </div>
 """.strip()
