@@ -508,6 +508,30 @@ body.peds-pretest3-bg .peds3-home-btn.seq {{ background: rgba(15,23,42,.88); col
 body.peds-pretest3-bg .peds3-active-filter {{ margin-top: 12px; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; padding: 10px 12px; border-radius: 14px; background: rgba(15,23,42,.42); border:1px solid rgba(191,219,254,.2); }}
 body.peds-pretest3-bg .peds3-active-filter .meta {{ font-size: 13px; color: #dbeafe; line-height:1.5; }}
 body.peds-pretest3-bg .peds3-clear-filter {{ border:none; border-radius:999px; padding: 9px 12px; background:#e2e8f0; color:#0f172a; font-size:12px; font-weight:900; cursor:pointer; }}
+html.peds3-quiz-isolated, body.peds3-quiz-isolated {{ min-height: 100%; overflow: hidden !important; background: var(--bg) !important; }}
+body.peds3-quiz-isolated::before {{ display: none !important; content: none !important; }}
+body.peds3-quiz-isolated .sidebar,
+body.peds3-quiz-isolated .main,
+body.peds3-quiz-isolated .sb-mobile-toggle,
+body.peds3-quiz-isolated .mobile-review-start,
+body.peds3-quiz-isolated .sb-overlay {{ display: none !important; visibility: hidden !important; }}
+body.peds3-quiz-isolated #quizOverlay.quiz-overlay.active {{
+  display: flex !important;
+  position: fixed !important;
+  top: 0 !important; right: 0 !important; bottom: 0 !important; left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  min-height: 100svh !important;
+  max-height: 100dvh !important;
+  z-index: 100000 !important;
+  background: var(--bg) !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}}
+body.peds3-quiz-isolated #quizBody {{ flex: 1 0 auto; width: 100%; background: var(--bg); }}
+body.peds3-quiz-isolated .quiz-card {{ min-height: calc(100dvh - 64px); box-sizing: border-box; margin: 0 auto !important; padding-bottom: max(92px, env(safe-area-inset-bottom) + 72px) !important; background: var(--bg); }}
 
 @media (max-width: 768px) {{
   body.peds-pretest3-bg .peds3-home-grid {{ grid-template-columns: 1fr; }}
@@ -620,6 +644,55 @@ body.peds-pretest3-bg .peds3-clear-filter {{ border:none; border-radius:999px; p
   window.peds3ClearGroupFilter = function() {{
     applyGroupFilter('all');
   }};
+
+  function enterIsolatedQuizPage() {{
+    document.documentElement.classList.add('peds3-quiz-isolated');
+    document.body.classList.add('peds3-quiz-isolated');
+    if (!document.body.dataset.peds3ScrollY) document.body.dataset.peds3ScrollY = String(window.scrollY || 0);
+    try {{
+      if (location.hash !== '#quiz') history.pushState({{ peds3Quiz: true }}, '', '#quiz');
+    }} catch (err) {{}}
+    setTimeout(() => {{
+      const overlay = document.getElementById('quizOverlay');
+      if (overlay) overlay.scrollTop = 0;
+      window.scrollTo(0, 0);
+    }}, 0);
+  }}
+
+  function leaveIsolatedQuizPage() {{
+    document.documentElement.classList.remove('peds3-quiz-isolated');
+    document.body.classList.remove('peds3-quiz-isolated');
+    const y = parseInt(document.body.dataset.peds3ScrollY || '0', 10);
+    delete document.body.dataset.peds3ScrollY;
+    try {{
+      if (location.hash === '#quiz') history.replaceState(null, '', location.pathname + location.search);
+    }} catch (err) {{}}
+    setTimeout(() => window.scrollTo(0, Number.isFinite(y) ? y : 0), 0);
+  }}
+
+  const baseStartQuizWith = window.startQuizWith;
+  if (typeof baseStartQuizWith === 'function') {{
+    window.startQuizWith = function(...args) {{
+      enterIsolatedQuizPage();
+      return baseStartQuizWith.apply(this, args);
+    }};
+  }}
+
+  const baseExitQuiz = window.exitQuiz;
+  if (typeof baseExitQuiz === 'function') {{
+    window.exitQuiz = function(...args) {{
+      const result = baseExitQuiz.apply(this, args);
+      leaveIsolatedQuizPage();
+      return result;
+    }};
+  }}
+
+  window.addEventListener('popstate', () => {{
+    const overlay = document.getElementById('quizOverlay');
+    if (overlay && overlay.classList.contains('active') && location.hash !== '#quiz' && typeof window.exitQuiz === 'function') {{
+      window.exitQuiz();
+    }}
+  }});
 
   assignSidebarIds();
   applyGroupFilter('all');
