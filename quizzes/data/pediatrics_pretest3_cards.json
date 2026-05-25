@@ -4827,20 +4827,23 @@
     "priority": "medium",
     "official_unit": "신요로",
     "question": "고열, 변비, 신기능저하 없음. UA SG 1.015, pH 6, hematuria, albumin trace, leukocyte esterase(+), nitrite(+), microscopy RBC 4-6/HPF, WBC many/HPF. 진단은?",
-    "answer": "Acute cystitis",
-    "explanation": "Leukocyte esterase 양성, nitrite 양성, WBC many/HPF는 세균성 요로감염을 강하게 지지한다. Nitrite는 E. coli 같은 장내 그람음성균이 nitrate를 nitrite로 바꾸는 반응이라 UTI 특이도가 높은 단서다. 신기능 저하, CVAT, 구토 같은 신우신염/상부요로 침범 단서가 약하면 하부요로감염인 acute cystitis로 정리한다. 소량 혈뇨는 방광염에서도 가능하므로 사구체신염으로 바로 가면 안 된다.",
-    "enhanced_explanation": "🧭 Big picture\nUTI 문제는 먼저 ‘감염이 맞는가’를 요검사로 확인하고, 그다음 ‘상부요로냐 하부요로냐’를 임상 단서로 나눈다. 이 문항은 leukocyte esterase, nitrite, WBC many가 모두 있어 세균성 UTI 쪽으로 강하게 간다. 이후 신장 침범 단서가 약하면 acute cystitis, 즉 방광염으로 정리한다.\n\n🔰 용어/개념 먼저\nLeukocyte esterase는 소변에 백혈구가 있다는 뜻이고, nitrite는 일부 장내 그람음성균이 nitrate를 nitrite로 환원한다는 뜻이다. 둘이 같이 양성이면 pyuria와 bacteriuria를 모두 지지한다. Acute cystitis는 방광까지의 하부요로감염으로, 신우신염처럼 신실질 침범과 전신 독성 소견이 뚜렷하지 않다.\n\n🔎 핵심 단서\n⭕ Leukocyte esterase 양성\n⭕ Nitrite 양성\n⭕ Microscopy에서 WBC many/HPF\n⭕ 신기능저하 없음\n⭕ Allen: 방광염은 하부요로감염, UTI에서 WBC/nitrite/leukocyte esterase 증가\n❌ RBC 4-6/HPF만 보고 사구체신염으로 가면 pyuria와 nitrite 단서를 놓친다.\n\n👣 시험장 사고 흐름\n1단계: LE, nitrite, WBC many로 UTI를 진단한다.\n2단계: fever, CVAT, 구토, 신기능저하 등 상부요로 단서가 있는지 본다.\n3단계: 신장 침범 단서가 약하고 하부요로감염 양상이므로 acute cystitis를 고른다.\n\n📊 감별/오답 제거\n- Acute pyelonephritis: 고열, 옆구리 통증/CVAT, 구토, 전신 독성, 신장 침범이 더 필요하다.\n- Glomerulonephritis: RBC cast, dysmorphic RBC, 저보체, 부종/고혈압 축이다.\n- Acute cystitis: LE/nitrite/WBC many와 하부요로감염 양상을 가장 잘 설명한다.\n\n🧠 외울 것 / 함정\nNitrite 양성은 E. coli 같은 장내 그람음성균 UTI를 강하게 시사한다. 혈뇨가 조금 있어도 감염성 방광염에서 흔하다.\n\n✅ 3초 Lock line\nLE+ nitrite+ WBC many, 신장 침범 단서 약함 = acute cystitis.",
+    "answer": "Acute pyelonephritis (APN, 급성 신우신염)",
+    "explanation": "Leukocyte esterase 양성, nitrite 양성, WBC many/HPF는 세균성 요로감염을 강하게 지지한다. 여기서 결정 단서는 “고열”이다. 소아에서 고열이 동반된 UTI는 방광염 같은 하부요로감염보다 신실질 침범, 즉 acute pyelonephritis/상부 UTI 쪽으로 보아야 한다. 신기능저하가 없다는 말은 중증 합병증이나 AKI가 없다는 뜻이지 APN을 배제하는 단서가 아니다. Acute cystitis는 보통 배뇨통·빈뇨·절박뇨 같은 하부요로 증상이 중심이고 고열/전신 증상이 뚜렷하지 않다.",
+    "enhanced_explanation": "🧭 Big picture\n이 문항은 “UTI인가?”보다 “하부 UTI인지 상부 UTI인지”를 가르는 문제다. LE(+), nitrite(+), WBC many/HPF로 세균성 UTI는 확정적으로 잡고, 그다음 고열이 붙어 있으면 방광염보다 급성 신우신염(APN)을 먼저 본다.\n\n🔰 용어/개념 먼저\nAcute cystitis는 방광 중심의 하부요로감염이다. 배뇨통, 빈뇨, 절박뇨, 하복부 불편감이 전형이고 고열이나 전신 독성은 상대적으로 약하다. Acute pyelonephritis는 신우와 신실질을 침범하는 상부요로감염이라 고열, 오한, 옆구리 통증/CVAT, 구토, 전신 증상이 더 잘 붙는다.\n\n🔎 핵심 단서\n⭕ 고열\n⭕ Leukocyte esterase 양성\n⭕ Nitrite 양성\n⭕ Microscopy WBC many/HPF\n⭕ Hematuria는 UTI에서도 동반 가능\n❌ 신기능저하 없음은 APN 배제 단서가 아니다. APN이어도 Cr이 정상일 수 있다.\n\n👣 시험장 사고 흐름\n1단계: LE(+), nitrite(+), WBC many로 세균성 UTI를 잡는다.\n2단계: 고열이 있으면 하부 UTI보다 상부 UTI/APN 쪽으로 올린다.\n3단계: 보기에서 acute cystitis와 acute pyelonephritis가 함께 있으면 APN을 고른다.\n\n📊 감별/오답 제거\n- Acute cystitis: 하부요로 증상 중심이고 고열이 핵심 단서로 나오면 우선순위가 내려간다.\n- Acute pyelonephritis: 고열을 동반한 UTI에서 가장 맞는 답이다.\n- Acute interstitial nephritis: 약물/알레르기, eosinophiluria, 신기능저하 단서가 필요하다.\n- Glomerulonephritis: RBC cast, 부종, 고혈압, 저보체 축이 중심이다.\n\n🧠 외울 것 / 함정\n“신기능저하 없음”은 APN이 아니라는 뜻이 아니다. 소아 UTI에서 고열은 상부요로감염 쪽으로 당기는 강한 단서다.\n\n✅ 3초 Lock line\nLE+ nitrite+ pyuria에 고열까지 있으면 acute cystitis보다 APN.",
     "tags": [
       "UTI",
-      "급성방광염"
+      "APN",
+      "급성신우신염",
+      "상부요로감염",
+      "수정_20260526"
     ],
     "uncertain": false,
-    "raw_anchor": "객관식 2번 고열, 변비... 1. Acute cystitis",
+    "raw_anchor": "객관식 2번. 고열, 변비, 신기능저하 없음, LE(+), nitrite(+), WBC many/HPF. 보기 1 Acute cystitis, 2 Acute pyelonephritis. 고열 단서상 APN로 수정.",
     "source_page": 7,
     "source_rank": 88,
     "official_chapter": "신요로",
-    "allen_answer": "급성 방광염, 즉 하부 요로감염.",
-    "allen_explanation": "Leukocyte esterase와 nitrite 양성, WBC 증가가 있어 요로감염에 맞다. 고열이나 옆구리 통증/구토 같은 신우신염 소견이 없고 하부요로감염 양상이므로 방광염으로 본다.",
+    "allen_answer": "급성 신우신염(APN), 즉 고열을 동반한 상부 요로감염.",
+    "allen_explanation": "요검사상 LE/nitrite 양성 및 WBC many로 세균성 UTI가 맞고, 문항에 “고열”이 명시되어 있어 하부 방광염보다 급성 신우신염으로 보아야 한다. 원문 주변에도 연장아 급성신우신염 특징으로 39도 이상 고열, 옆구리 통증, 동통 및 구토가 제시되어 있었다. 신기능저하가 없다는 소견은 APN을 배제하지 않는다.",
     "allen_refs": [
       {
         "page_file": "Needle - 소아과/source/pages/A31_신요로_질환_요로감염.md",
@@ -4857,7 +4860,7 @@
     ],
     "allen_confidence": "high",
     "allen_needs_original_source": false,
-    "allen_notes": "직접근거 있음",
+    "allen_notes": "2026-05-26 사용자 피드백 반영: 기존 acute cystitis 판정을 APN으로 수정. 핵심 교정점은 고열 단서.",
     "original_explanation_v4": "원문 선지 1. Acute cystitis.",
     "original_enhanced_explanation_v4": "🧭 Big picture\n소아 UTI는 소변검사에서 leukocyte esterase, nitrite, pyuria가 핵심 단서다. nitrite 양성은 장내 그람음성균, 특히 E. coli를 강하게 시사하며, 신기능 저하나 CVAT가 두드러지지 않으면 하부요로감염/방광염으로 정리한다.\n\n🔎 핵심 단서\n⭕ 발열 또는 배뇨/전신 증상\n⭕ UA nitrite 양성, leukocyte esterase 양성 또는 WBC many\n⭕ 신기능 저하 없음\n⭕ 정답: Acute cystitis\n\n👣 시험장 사고 흐름\n1단계: 소변검사에서 pyuria와 nitrite를 확인한다.\n2단계: 가장 흔한 원인균을 묻는지 진단명을 묻는지 구분한다.\n3단계: 원인균이면 E. coli, 진단이면 Acute cystitis로 답한다.\n\n🧠 쉽게 이해하기\nE. coli는 장에서 요도로 올라오는 UTI의 대표 주자다. nitrite 양성은 이 균들이 nitrate를 nitrite로 바꾼 흔적처럼 생각하면 된다.\n\n📊 감별/오답 제거\n| 구분 | 핵심 차이 | 이 문제에서 판단 |\n|---|---|---|\n| E. coli | 소아 UTI 가장 흔한 원인균 | ✅ nitrite 양성과 잘 맞음 |\n| Acute cystitis | 하부요로감염, pyuria/nitrite 양성 | ✅ CVAT·신기능저하 없으면 가능 |\n| 사구체신염 | RBC cast, 저보체, 부종/고혈압 축 | ❌ pyuria/nitrite 중심이 아님 |\n\n✅ 3초 Lock line\n소아 UTI + nitrite 양성 = E. coli; CVAT 없고 하부 증상이면 acute cystitis.\n\n🎯 암기 확인 퀴즈\nQ1. 소아 UTI 가장 흔한 균은?\nQ2. nitrite 양성은 무엇을 시사하나?\nQ3. 방광염과 신우신염 구분 단서는?\n\nA1. E. coli.\nA2. 장내 그람음성균 UTI 가능성.\nA3. CVAT, 고열, 신장 침범/신기능 이상 여부.",
     "original_answer_pre_hybrid_v4": "Acute cystitis",
@@ -4869,7 +4872,8 @@
     "pre_v6_answer": "Acute cystitis",
     "concept_deepen_confidence": "high",
     "concept_deepen_needs_original_source": false,
-    "concept_deepen_qc_notes": "Allen direct: UTI 검사와 방광염 분류 근거 있음. nitrite 생화학 의미와 상하부 요로감염 분기 보강."
+    "concept_deepen_qc_notes": "수정됨(2026-05-26): 기존 v6/v7에서 acute cystitis로 잘못 분류. 고열이 있는 UTI이므로 APN/상부 UTI가 더 타당함. 신기능저하 없음은 APN 배제 단서가 아님.",
+    "pre_apn_correction_answer": "Acute cystitis"
   },
   {
     "id": "PEDS3-YAMA-P09-003",
