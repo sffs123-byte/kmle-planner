@@ -28,8 +28,8 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 OUT = QUIZ_DIR / "소아청소년과_3주차_pretest_quiz.html"
 DATA = DATA_DIR / "pediatrics_pretest3_cards.json"
 TITLE = "소아청소년과 3주차 Pretest SRS"
-STORAGE_PREFIX = "peds_pretest3_20260525_full_v3_guess"
-LOCK_LINE = "3주차 Pretest Anki v3 · 2026 최신복기/야마/2023 PDF 반영 · 불완전 복기는 추정답 표시"
+STORAGE_PREFIX = "peds_pretest3_20260525_full_v4_allen"
+LOCK_LINE = "3주차 Pretest Anki v4 · 309문항 · Allen PDF 기준 해설/근거 추가 · 불완전 복기는 원문확인 표시"
 
 OFFICIAL_RANGE_LABEL = "공식 3주차 16~28장"
 OFFICIAL_UNIT_ORDER = [
@@ -76,6 +76,51 @@ OFFICIAL_UNIT_STYLE = {
     "통일/기타": "background:#334155;color:#e2e8f0;border:1px solid #94a3b8;",
     "범위외/집담회": "background:#374151;color:#f9fafb;border:1px solid #d1d5db;",
 }
+
+HOME_GROUPS = [
+    {
+        "key": "all",
+        "label": "전체",
+        "units": OFFICIAL_UNIT_ORDER,
+        "description": "전체 카드를 한 번에 봅니다.",
+        "accent": "linear-gradient(135deg, #1d4ed8, #7c3aed)",
+    },
+    {
+        "key": "heme",
+        "label": "혈종",
+        "units": ["혈액-종양"],
+        "description": "빈혈, 혈소판, 백혈병/종양 축.",
+        "accent": "linear-gradient(135deg, #991b1b, #dc2626)",
+    },
+    {
+        "key": "renal",
+        "label": "신요로",
+        "units": ["신요로"],
+        "description": "단백뇨, 혈뇨, 신증후군, UTI 축.",
+        "accent": "linear-gradient(135deg, #075985, #0284c7)",
+    },
+    {
+        "key": "endo",
+        "label": "내분비",
+        "units": ["내분비"],
+        "description": "갑상선, 당뇨, 성조숙, 부신 축.",
+        "accent": "linear-gradient(135deg, #166534, #16a34a)",
+    },
+    {
+        "key": "neuro",
+        "label": "신경근육",
+        "units": ["신경-근육"],
+        "description": "발작, 근육병, 뇌/신경 문제 축.",
+        "accent": "linear-gradient(135deg, #5b21b6, #7c3aed)",
+    },
+    {
+        "key": "other",
+        "label": "나머지",
+        "units": ["골격", "알레르기", "결체조직", "피부", "안과", "손상", "통일/기타", "범위외/집담회"],
+        "description": "골격·알레르기·류마·피부·안과·손상·기타 묶음.",
+        "accent": "linear-gradient(135deg, #475569, #0f172a)",
+    },
+]
 
 ORIGIN_LABELS = {
     "actual_recall": "✅ 실제 복기",
@@ -256,16 +301,55 @@ def question_html(card: dict) -> str:
 """.strip()
 
 
+def allen_pdf_section_html(card: dict) -> str:
+    allen_explanation = normalize_multiline(card.get("allen_explanation"))
+    allen_answer = normalize_multiline(card.get("allen_answer"))
+    refs = card.get("allen_refs") or []
+    confidence = normalize_space(card.get("allen_confidence") or "")
+    notes = normalize_multiline(card.get("allen_notes"))
+    needs_original = bool(card.get("allen_needs_original_source"))
+    if not (allen_explanation or allen_answer or refs or notes):
+        return ""
+
+    chunks: list[str] = ["<section class='answer-section allen-pdf'>"]
+    badge = f" <span class='allen-confidence'>{e(confidence)}</span>" if confidence else ""
+    chunks.append(f"<h4>Allen PDF 기준 해설{badge}</h4>")
+    if allen_answer:
+        chunks.append(f"<p><strong>Allen 기준 답:</strong> {e(allen_answer).replace(chr(10), '<br>')}</p>")
+    if allen_explanation:
+        chunks.append(f"<p>{e(allen_explanation).replace(chr(10), '<br>')}</p>")
+    if refs:
+        chunks.append("<div class='allen-refs'><strong>Allen 근거</strong><ul>")
+        for ref in refs:
+            page = ref.get("page_code") or ref.get("page_file") or "Allen"
+            topic = ref.get("topic") or ""
+            quote = ref.get("quote") or ""
+            label = " · ".join(x for x in [str(page), str(topic)] if x)
+            chunks.append(f"<li><span>{e(label)}</span>{': ' if quote else ''}{e(str(quote))}</li>")
+        chunks.append("</ul></div>")
+    if needs_original or notes:
+        note_text = notes or "Allen 직접근거가 약하거나 복기 원문 확인이 필요합니다."
+        if needs_original:
+            note_text = "원문확인 필요 — " + note_text
+        chunks.append(f"<p class='allen-note'>{e(note_text).replace(chr(10), '<br>')}</p>")
+    chunks.append("</section>")
+    return "".join(chunks)
+
+
 def answer_html(card: dict) -> str:
     explanation = normalize_multiline(card.get("explanation"))
     enhanced = normalize_multiline(card.get("enhanced_explanation"))
+    allen_block = allen_pdf_section_html(card)
     parts = [
         f"<div class='answer-final'><h3>정답</h3><p>{e(card.get('answer', '원문 확인 필요'))}</p></div>"
     ]
-    if explanation:
-        parts.append(f"<section class='answer-section'><h4>짧은 해설</h4><p>{e(explanation).replace(chr(10), '<br>')}</p></section>")
-    if enhanced:
-        parts.append(f"<section class='answer-section enhanced'><h4>상세 해설</h4>{format_tutor_html(enhanced)}</section>")
+    if allen_block:
+        parts.append(allen_block)
+    else:
+        if explanation:
+            parts.append(f"<section class='answer-section'><h4>짧은 해설</h4><p>{e(explanation).replace(chr(10), '<br>')}</p></section>")
+        if enhanced:
+            parts.append(f"<section class='answer-section enhanced'><h4>상세 해설</h4>{format_tutor_html(enhanced)}</section>")
     parts.append(image_block_html(card, "answer"))
     if card.get("uncertain"):
         parts.append("<section class='answer-section warning'><h4>원문 확인 필요</h4><p>이 문항은 복기가 불완전하거나 이미지/선지 확인이 필요합니다. 원본이 들어오면 stem과 정답을 source-faithful하게 교체합니다.</p></section>")
@@ -357,6 +441,21 @@ def scaffold_records() -> list[dict]:
 def add_background_and_unit_filter(records: list[dict], source_count: int) -> None:
     text = OUT.read_text(encoding="utf-8")
     lock = e(LOCK_LINE)
+    group_payload = []
+    for g in HOME_GROUPS:
+        ids = [c["id"] for c in records] if g["key"] == "all" else [c["id"] for c in records if c.get("official_unit") in g["units"]]
+        group_payload.append(
+            {
+                "key": g["key"],
+                "label": g["label"],
+                "units": g["units"],
+                "description": g["description"],
+                "accent": g["accent"],
+                "ids": ids,
+                "count": len(ids),
+            }
+        )
+    group_json = json.dumps(group_payload, ensure_ascii=False)
     css = f"""
 
 /* Pediatric 3-week pretest scaffold */
@@ -383,10 +482,37 @@ body.peds-pretest3-bg .answer-final h3 {{ margin: 0 0 6px; color: #1d4ed8; }}
 body.peds-pretest3-bg .answer-final p {{ margin: 0; font-size: 18px; font-weight: 900; }}
 body.peds-pretest3-bg .answer-section {{ margin: 12px 0; padding: 10px 12px; border: 1px solid #e2e8f0; background: rgba(255,255,255,.72); border-radius: 10px; }}
 body.peds-pretest3-bg .answer-section h4 {{ margin: 0 0 7px; color: #334155; }}
+body.peds-pretest3-bg .answer-section.allen-pdf {{ border-color:#bbf7d0; background:#f0fdf4; }}
+body.peds-pretest3-bg .allen-confidence {{ display:inline-block; margin-left:6px; padding:2px 7px; border-radius:999px; background:#dcfce7; color:#166534; font-size:11px; font-weight:900; text-transform:uppercase; }}
+body.peds-pretest3-bg .allen-refs ul {{ margin:6px 0 0 18px; padding:0; }}
+body.peds-pretest3-bg .allen-refs li {{ margin:4px 0; color:#334155; }}
+body.peds-pretest3-bg .allen-refs span {{ font-weight:900; color:#166534; }}
+body.peds-pretest3-bg .allen-note {{ margin-top:8px; padding:8px 10px; border-radius:9px; background:#fff7ed; color:#9a3412; font-weight:800; }}
 body.peds-pretest3-bg .answer-section.warning {{ border-color: #fecaca; background:#fff1f2; }}
 body.peds-pretest3-bg .study-guide-block ul {{ margin-top: 4px; padding-left: 1.2em; }}
 body.peds-pretest3-bg .tutor-pre {{ white-space: pre-wrap; font-family: inherit; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:8px; }}
 body.peds-pretest3-bg .peds3-source-count::after {{ content: 'source cards: {source_count}'; }}
+body.peds-pretest3-bg .peds3-home-wrap {{ margin: 0 0 16px; padding: 16px; border: 1px solid rgba(191,219,254,.32); background: rgba(15,23,42,.45); border-radius: 18px; box-shadow: 0 18px 40px rgba(2,6,23,.18); }}
+body.peds-pretest3-bg .peds3-home-head {{ display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:12px; flex-wrap:wrap; }}
+body.peds-pretest3-bg .peds3-home-title {{ font-size: 18px; font-weight: 950; color: #eff6ff; }}
+body.peds-pretest3-bg .peds3-home-sub {{ font-size: 13px; line-height: 1.6; color: #cbd5e1; max-width: 780px; }}
+body.peds-pretest3-bg .peds3-home-grid {{ display:grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }}
+body.peds-pretest3-bg .peds3-home-card {{ border-radius: 16px; padding: 14px; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.05); color: #f8fafc; box-shadow: 0 10px 24px rgba(15,23,42,.15); }}
+body.peds-pretest3-bg .peds3-home-card.active {{ outline: 2px solid rgba(255,255,255,.9); outline-offset: 1px; }}
+body.peds-pretest3-bg .peds3-home-label {{ font-size: 16px; font-weight: 950; margin-bottom: 4px; }}
+body.peds-pretest3-bg .peds3-home-desc {{ font-size: 12px; line-height: 1.55; color: rgba(255,255,255,.88); min-height: 38px; }}
+body.peds-pretest3-bg .peds3-home-count {{ margin-top: 8px; font-size: 13px; font-weight: 900; color: #e2e8f0; }}
+body.peds-pretest3-bg .peds3-home-actions {{ display:flex; gap:8px; margin-top:12px; flex-wrap:wrap; }}
+body.peds-pretest3-bg .peds3-home-btn {{ border:none; border-radius: 999px; padding: 10px 13px; font-size: 12px; font-weight: 900; cursor: pointer; }}
+body.peds-pretest3-bg .peds3-home-btn.view {{ background: rgba(255,255,255,.92); color: #0f172a; }}
+body.peds-pretest3-bg .peds3-home-btn.seq {{ background: rgba(15,23,42,.88); color: #e0f2fe; border: 1px solid rgba(191,219,254,.55); }}
+body.peds-pretest3-bg .peds3-active-filter {{ margin-top: 12px; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; padding: 10px 12px; border-radius: 14px; background: rgba(15,23,42,.42); border:1px solid rgba(191,219,254,.2); }}
+body.peds-pretest3-bg .peds3-active-filter .meta {{ font-size: 13px; color: #dbeafe; line-height:1.5; }}
+body.peds-pretest3-bg .peds3-clear-filter {{ border:none; border-radius:999px; padding: 9px 12px; background:#e2e8f0; color:#0f172a; font-size:12px; font-weight:900; cursor:pointer; }}
+
+@media (max-width: 768px) {{
+  body.peds-pretest3-bg .peds3-home-grid {{ grid-template-columns: 1fr; }}
+}}
 
 """
     text = text.replace("</style>", css + "\n</style>", 1)
@@ -404,12 +530,104 @@ body.peds-pretest3-bg .peds3-source-count::after {{ content: 'source cards: {sou
   <div style="margin-top:8px;">{summary}</div>
 </div>
 """.strip()
+    home_cards = []
+    for group in group_payload:
+        home_cards.append(
+            f"""
+<div class="peds3-home-card" id="peds3-home-card-{e(group['key'])}" style="background:{e(group['accent'])};">
+  <div class="peds3-home-label">{e(group['label'])}</div>
+  <div class="peds3-home-desc">{e(group['description'])}</div>
+  <div class="peds3-home-count">{group['count']} cards</div>
+  <div class="peds3-home-actions">
+    <button class="peds3-home-btn view" onclick="peds3SelectHomeGroup('{e(group['key'])}')">카드 보기</button>
+    <button class="peds3-home-btn seq" onclick="peds3StartGroupSequential('{e(group['key'])}')">순서대로 시작</button>
+  </div>
+</div>
+""".strip()
+        )
+    home_html = f"""
+<div class="peds3-home-wrap" id="peds3HomeWrap">
+  <div class="peds3-home-head">
+    <div>
+      <div class="peds3-home-title">계통별 Anki 시작</div>
+      <div class="peds3-home-sub">2주차처럼 계통별로 묶어서 볼 수 있게 홈에서 바로 선택합니다. 각 묶음은 <strong>카드 보기</strong>로 필터링하거나, <strong>순서대로 시작</strong>으로 그 계통만 번호 순서대로 바로 풀 수 있습니다.</div>
+    </div>
+  </div>
+  <div class="peds3-home-grid">
+    {''.join(home_cards)}
+  </div>
+  <div class="peds3-active-filter" id="peds3ActiveFilter">
+    <div class="meta" id="peds3FilterMeta">현재: 전체 카드 표시 중</div>
+    <button class="peds3-clear-filter" onclick="peds3ClearGroupFilter()">전체로 복귀</button>
+  </div>
+</div>
+""".strip()
     if '<div class="main" id="mainContent">' in text:
         text = text.replace('<div class="main" id="mainContent">', '<div class="main" id="mainContent">\n' + scaffold_note, 1)
     elif '<div class="card-grid">' in text:
         text = text.replace('<div class="card-grid">', scaffold_note + '\n<div class="card-grid">', 1)
     elif '<main' in text:
         text = text.replace('<main', scaffold_note + '\n<main', 1)
+    text = text.replace('<div class="review-hero" id="reviewHero">', home_html + '\n<div class="review-hero" id="reviewHero">', 1)
+    injected_script = f"""
+<script>
+(function() {{
+  const HOME_GROUPS = {group_json};
+  const GROUP_MAP = Object.fromEntries(HOME_GROUPS.map(g => [g.key, g]));
+  let currentGroup = 'all';
+
+  function assignSidebarIds() {{
+    const items = Array.from(document.querySelectorAll('.sb-item'));
+    items.forEach((el, idx) => {{
+      el.dataset.cardId = ALL_IDS[idx] || '';
+    }});
+  }}
+
+  function updateActiveCards() {{
+    document.querySelectorAll('.peds3-home-card').forEach(el => el.classList.toggle('active', el.id === 'peds3-home-card-' + currentGroup));
+  }}
+
+  function applyGroupFilter(key) {{
+    currentGroup = GROUP_MAP[key] ? key : 'all';
+    const group = GROUP_MAP[currentGroup] || GROUP_MAP.all;
+    const allowed = new Set(group.ids || []);
+    ALL_IDS.forEach(id => {{
+      const card = document.getElementById('card-' + id);
+      if (card) card.style.display = (currentGroup === 'all' || allowed.has(id)) ? '' : 'none';
+    }});
+    document.querySelectorAll('.sb-item').forEach(el => {{
+      const id = el.dataset.cardId;
+      if (!id) return;
+      el.style.display = (currentGroup === 'all' || allowed.has(id)) ? '' : 'none';
+    }});
+    const meta = document.getElementById('peds3FilterMeta');
+    if (meta) meta.innerHTML = '현재: <strong>' + group.label + '</strong> · ' + group.count + ' cards · ' + group.description;
+    updateActiveCards();
+  }}
+
+  window.peds3SelectHomeGroup = function(key) {{
+    applyGroupFilter(key);
+    const main = document.getElementById('mainContent');
+    if (main) main.scrollIntoView({{ behavior: 'smooth', block: 'start' }});
+  }};
+
+  window.peds3StartGroupSequential = function(key) {{
+    applyGroupFilter(key);
+    const group = GROUP_MAP[key] || GROUP_MAP.all;
+    if (!group.ids || !group.ids.length) return;
+    startQuizWith([...(group.ids || [])]);
+  }};
+
+  window.peds3ClearGroupFilter = function() {{
+    applyGroupFilter('all');
+  }};
+
+  assignSidebarIds();
+  applyGroupFilter('all');
+}})();
+</script>
+""".strip()
+    text = text.replace('</body>', injected_script + '\n</body>', 1)
     OUT.write_text(text, encoding="utf-8")
 
 
