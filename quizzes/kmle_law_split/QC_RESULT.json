@@ -1,0 +1,12 @@
+{
+  "topics": 66,
+  "cards": 333,
+  "sourcepack_cards": 247,
+  "seed_cards": 86,
+  "title_ok": true,
+  "topic_count_ok": true,
+  "card_count_ok": true,
+  "todo_in_data": false,
+  "noise_in_data": false,
+  "topic_minima_bad_count": 0
+}
