@@ -1,25 +1,12 @@
-# 의료법규 Allen Split Quiz + Concept App
+# 의료법규 split standalone — deprecated
 
-## 산출물
+이 디렉터리의 split standalone UI는 폐기했다.
 
-- `medical_law_split_quiz_concept.html` — 위 퀴즈 / 아래 개념 split standalone HTML
-- `medical_law_split_app_data.json` — 66 sourcepack + 247 sourcepack 후보 + 기존 pretest seed 86 통합 데이터
+Canonical 의료법규 퀴즈는 기존 로그인/SRS가 붙은 국시 퀴즈 사이트의 동일 셸을 사용한다.
 
-## 포함 범위
+- Production: https://vercelpedsquiz.vercel.app/law
+- Source generator: `quizzes/generate_medical_law_concept_quiz.py`
+- Source data: `quizzes/data/medical_law_split_app_data.json`
+- Generated HTML artifact: `quizzes/의료법규_국시개념_퀴즈.html`
 
-- Sourcepack topics: 66
-- Sourcepack-generated quiz candidates: 247
-- Existing pretest seed cards: 86
-- Total quiz cards: 333
-
-## UX
-
-- 기본 모드: sourcepack 후보를 순서대로 학습
-- deck 전환: sourcepack 후보 / 기존 pretest seed / 전체
-- 법령 필터, 검색, 순서/랜덤, 정답공개, 하단 개념 패널
-- 하단 개념 패널은 현재 카드의 sourcepack switch map, stem trigger, 오답 제거, 문제 후보, 원문 excerpt 표시
-
-## 주의
-
-- 기존 86카드는 full bank가 아니라 고빈도/함정 seed layer다.
-- 495문항 full bank가 들어오면 sourcepack topic id에 추가 매핑해 확장한다.
+`index.html`과 `medical_law_split_quiz_concept.html`은 위 production URL로 즉시 redirect한다.
