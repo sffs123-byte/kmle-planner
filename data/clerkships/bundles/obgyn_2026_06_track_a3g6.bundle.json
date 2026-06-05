@@ -1,0 +1,2720 @@
+{
+  "meta": {
+    "clerkship_id": "obgyn-2026-06-track-a3g6",
+    "subject": "산부인과",
+    "track": "A반 3조 6번 / 2026-06 rotation",
+    "generated_at": "2026-06-05T23:12:00+09:00",
+    "content_source": {
+      "subject": "산부인과 인계",
+      "purpose": "실습 중앙 데이터센터: 일정, 과제, pretest, 현장 질문, ufolio/CPX 관리",
+      "source_inventory": "outputs/clerkship/obgyn_ingest_2026-06-05/source_inventory.md",
+      "extraction_manifest": "outputs/clerkship/obgyn_ingest_2026-06-05/extraction_manifest.json"
+    },
+    "paperclip": {
+      "epic": "AI-6",
+      "siteops": "AI-7",
+      "ingest": "AI-8",
+      "bundle": "AI-9",
+      "ui": "AI-10",
+      "smoke": "AI-11",
+      "routine": "AI-12",
+      "resident1_matrix": "AI-13",
+      "resident2_pack": "AI-14",
+      "resident3_oncall": "AI-15",
+      "schema": "AI-16"
+    }
+  },
+  "global_rules": [
+    "GitHub JSON is the central source of truth; small changes are made via Jarvis commit/push, not realtime multi-user editing.",
+    "Paperclip is the operating board, not the full data store.",
+    "전공의 1/2 handle scheduled work; 전공의 3 is reserved for on-call field questions.",
+    "Do not overwrite existing cardiology/pediatrics/respiratory bundles."
+  ],
+  "fixed_info": {
+    "student_affiliation": "A반 3조 6번 배강렬",
+    "primary_locations": [
+      "소아동 3층 분만실/수술실",
+      "소아동 5층 산부인과 병동",
+      "소아동 1층 산부인과 외래",
+      "6층 의국",
+      "약리학 406호"
+    ],
+    "source_root": "~/Desktop/의학과 공부 파일/본3/산부인과/(0) 26년도 인계/"
+  },
+  "source_refs": [
+    {
+      "id": "source-inventory",
+      "path": "outputs/clerkship/obgyn_ingest_2026-06-05/source_inventory.md"
+    },
+    {
+      "id": "extraction-manifest",
+      "path": "outputs/clerkship/obgyn_ingest_2026-06-05/extraction_manifest.json"
+    },
+    {
+      "id": "schema-plan",
+      "path": "outputs/planner_ops/obgyn_datacenter_schema_plan_2026-06-05.md"
+    },
+    {
+      "id": "resident1-matrix",
+      "path": "/Users/sffs123gmail.com/.openclaw/workspace/outputs/clerkship/obgyn_ingest_2026-06-05/resident1_schedule_assignment_matrix.md"
+    },
+    {
+      "id": "resident2-pack",
+      "path": "/Users/sffs123gmail.com/.openclaw/workspace/outputs/clerkship/obgyn_ingest_2026-06-05/resident2_cpx_ufolio_pretest_pack.md"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "obgyn-rot-delivery",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "A1/B4/C3/D2, 소아동 3층 분만실/331병동",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "A1/B4/C3/D2, 소아동 3층 분만실/331병동",
+      "title": "분만 rotation",
+      "professor": "",
+      "event_type": "rotation",
+      "difficulty": 10,
+      "priority_label": "P0",
+      "status": "draft",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": false,
+      "site": "",
+      "location": "A1/B4/C3/D2, 소아동 3층 분만실/331병동",
+      "summary": "분만주에는 산과 CASE 배정·발표, NST 관련 공지 수신, 분만실 출퇴근서명 흐름이 핵심.",
+      "note": "분만주에는 산과 CASE 배정·발표, NST 관련 공지 수신, 분만실 출퇴근서명 흐름이 핵심. / 분만조 조장이 퇴근서명 담당. 질식분만/회음절개, 태아심음 감시장치 등 ufolio 관찰 항목을 이 주에 확보.",
+      "calendar_body_short": "분만주에는 산과 CASE 배정·발표, NST 관련 공지 수신, 분만실 출퇴근서명 흐름이 핵심.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL §조별일정; SCHED"
+      ],
+      "sections": {
+        "인계 내용": [
+          "분만주에는 산과 CASE 배정·발표, NST 관련 공지 수신, 분만실 출퇴근서명 흐름이 핵심."
+        ],
+        "주의사항 / 확인 필요": [
+          "분만조 조장이 퇴근서명 담당. 질식분만/회음절개, 태아심음 감시장치 등 ufolio 관찰 항목을 이 주에 확보."
+        ],
+        "source": [
+          "ALL §조별일정; SCHED"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-rot-outpatient",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "A2/B1/C4/D3, 소아동 1층 외래",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "A2/B1/C4/D3, 소아동 1층 외래",
+      "title": "외래 rotation",
+      "professor": "",
+      "event_type": "rotation",
+      "difficulty": 7,
+      "priority_label": "P1",
+      "status": "draft",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": false,
+      "site": "",
+      "location": "A2/B1/C4/D3, 소아동 1층 외래",
+      "summary": "외래에서 부인과·산과 ufolio 관찰 항목 확보 가능. 다음 병동주 세종 일정 사전연락을 외래주 조장이 챙기는 인계가 있음.",
+      "note": "외래에서 부인과·산과 ufolio 관찰 항목 확보 가능. 다음 병동주 세종 일정 사전연락을 외래주 조장이 챙기는 인계가 있음. / 교수님이 일정을 조원 개인에게 전달할 수 있어 연락 대기·공유 필수.",
+      "calendar_body_short": "외래에서 부인과·산과 ufolio 관찰 항목 확보 가능. 다음 병동주 세종 일정 사전연락을 외래주 조장이 챙기는 인계가 있음.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL §장소/유폴; LEADER_SUM"
+      ],
+      "sections": {
+        "인계 내용": [
+          "외래에서 부인과·산과 ufolio 관찰 항목 확보 가능. 다음 병동주 세종 일정 사전연락을 외래주 조장이 챙기는 인계가 있음."
+        ],
+        "주의사항 / 확인 필요": [
+          "교수님이 일정을 조원 개인에게 전달할 수 있어 연락 대기·공유 필수."
+        ],
+        "source": [
+          "ALL §장소/유폴; LEADER_SUM"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-rot-ward",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "A3/B2/C1/D4, 소아동 5층 병동",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "A3/B2/C1/D4, 소아동 5층 병동",
+      "title": "병동 rotation",
+      "professor": "",
+      "event_type": "rotation",
+      "difficulty": 10,
+      "priority_label": "P0",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "",
+      "location": "A3/B2/C1/D4, 소아동 5층 병동",
+      "summary": "병동주에는 부인과 CASE 배정, 세종 OSCE 평가&CASE 발표, 병동 회진이 핵심.",
+      "note": "병동주에는 부인과 CASE 배정, 세종 OSCE 평가&CASE 발표, 병동 회진이 핵심. / 병동조는 아침 출첵 장소 대신 5층 회진 대기 가능. 병동 위치가 ALL `351병동`, SCHED `5층(352)`로 불일치 → **[확인 필요]**.",
+      "calendar_body_short": "병동주에는 부인과 CASE 배정, 세종 OSCE 평가&CASE 발표, 병동 회진이 핵심.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL; SCHED; WHOLE_SCHED"
+      ],
+      "sections": {
+        "인계 내용": [
+          "병동주에는 부인과 CASE 배정, 세종 OSCE 평가&CASE 발표, 병동 회진이 핵심."
+        ],
+        "주의사항 / 확인 필요": [
+          "병동조는 아침 출첵 장소 대신 5층 회진 대기 가능. 병동 위치가 ALL `351병동`, SCHED `5층(352)`로 불일치 → **[확인 필요]**."
+        ],
+        "source": [
+          "ALL; SCHED; WHOLE_SCHED"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-rot-surgery",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "A4/B3/C2/D1, 소아동 3층 수술실/로봇수술 본관 3층",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "A4/B3/C2/D1, 소아동 3층 수술실/로봇수술 본관 3층",
+      "title": "수술 rotation",
+      "professor": "",
+      "event_type": "rotation",
+      "difficulty": 7,
+      "priority_label": "P1",
+      "status": "draft",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": false,
+      "site": "",
+      "location": "A4/B3/C2/D1, 소아동 3층 수술실/로봇수술 본관 3층",
+      "summary": "수술주에는 부인과 수술보조/제왕절개술 참관 등 ufolio 관찰 항목 확보 가능.",
+      "note": "수술주에는 부인과 수술보조/제왕절개술 참관 등 ufolio 관찰 항목 확보 가능. / 환자용` 엘리베이터 및 소아동 수술실 식당 사용 금지. 수술조만 수술실 식당 이용 가능.",
+      "calendar_body_short": "수술주에는 부인과 수술보조/제왕절개술 참관 등 ufolio 관찰 항목 확보 가능.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL §장소요약; UFOLIO"
+      ],
+      "sections": {
+        "인계 내용": [
+          "수술주에는 부인과 수술보조/제왕절개술 참관 등 ufolio 관찰 항목 확보 가능."
+        ],
+        "주의사항 / 확인 필요": [
+          "환자용` 엘리베이터 및 소아동 수술실 식당 사용 금지. 수술조만 수술실 식당 이용 가능."
+        ],
+        "source": [
+          "ALL §장소요약; UFOLIO"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-evt-ward-rounds",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "병동주 월/화/금 07:40 전후, 5층",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "병동주 월/화/금 07:40 전후, 5층",
+      "title": "병동 회진",
+      "professor": "",
+      "event_type": "admin",
+      "difficulty": 10,
+      "priority_label": "P0",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "",
+      "location": "병동주 월/화/금 07:40 전후, 5층",
+      "summary": "개인 일정표: `월,화,금) 회진-5층(352) (07:40)`. 전체인계: 병동조는 `7시 30분까지 바로 5층가서 회진 대기`.",
+      "note": "개인 일정표: `월,화,금) 회진-5층(352) (07:40)`. 전체인계: 병동조는 `7시 30분까지 바로 5층가서 회진 대기`. / 정확한 회진 대기 시간·병동호수 **[확인 필요]**. 조장이 인턴에게 병동조 회진 일정 설명 후 전원 출첵 받기.",
+      "calendar_body_short": "개인 일정표: `월,화,금) 회진-5층(352) (07:40)`. 전체인계: 병동조는 `7시 30분까지 바로 5층가서 회진 대기`.",
+      "resident_owner": "clerk1",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL §출석; SCHED"
+      ],
+      "sections": {
+        "인계 내용": [
+          "개인 일정표: `월,화,금) 회진-5층(352) (07:40)`. 전체인계: 병동조는 `7시 30분까지 바로 5층가서 회진 대기`."
+        ],
+        "주의사항 / 확인 필요": [
+          "정확한 회진 대기 시간·병동호수 **[확인 필요]**. 조장이 인턴에게 병동조 회진 일정 설명 후 전원 출첵 받기."
+        ],
+        "source": [
+          "ALL §출석; SCHED"
+        ],
+        "owner_slot": [
+          "clerk1"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-evt-obst-case-assign",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "각 조 분만주 월요일, 이경노 교수님 회진 전후",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "각 조 분만주 월요일, 이경노 교수님 회진 전후",
+      "title": "산과 CASE 받기",
+      "professor": "",
+      "event_type": "case",
+      "difficulty": 10,
+      "priority_label": "P0",
+      "status": "draft",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": false,
+      "site": "",
+      "location": "각 조 분만주 월요일, 이경노 교수님 회진 전후",
+      "summary": "분만조 첫날 이경노 교수님이 이민아/강병헌/이경노 Pf 케이스를 배정하고 발표 포인트를 알려줌.",
+      "note": "분만조 첫날 이경노 교수님이 이민아/강병헌/이경노 Pf 케이스를 배정하고 발표 포인트를 알려줌. / 케이스 받자마자 EMR/진단기준 공부. 환자 전화문진 금지.",
+      "calendar_body_short": "분만조 첫날 이경노 교수님이 이민아/강병헌/이경노 Pf 케이스를 배정하고 발표 포인트를 알려줌.",
+      "resident_owner": "clerk1",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL §산과 CASE; WHOLE_SCHED; SCHED"
+      ],
+      "sections": {
+        "인계 내용": [
+          "분만조 첫날 이경노 교수님이 이민아/강병헌/이경노 Pf 케이스를 배정하고 발표 포인트를 알려줌."
+        ],
+        "주의사항 / 확인 필요": [
+          "케이스 받자마자 EMR/진단기준 공부. 환자 전화문진 금지."
+        ],
+        "source": [
+          "ALL §산과 CASE; WHOLE_SCHED; SCHED"
+        ],
+        "owner_slot": [
+          "clerk1"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-evt-obst-case-xr-presentation",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "분만주 목/금, XR 임상실습센터",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "분만주 목/금, XR 임상실습센터",
+      "title": "산과 CASE 발표 + XR 체험",
+      "professor": "",
+      "event_type": "case",
+      "difficulty": 10,
+      "priority_label": "P0",
+      "status": "draft",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": false,
+      "site": "",
+      "location": "분만주 목/금, XR 임상실습센터",
+      "summary": "XR센터 VR 체험 후 이경노 교수님 케발 진행. 10분 이내 PPT, USB/메일 준비. 발표자 외 조원도 질문받을 수 있음.",
+      "note": "XR센터 VR 체험 후 이경노 교수님 케발 진행. 10분 이내 PPT, USB/메일 준비. 발표자 외 조원도 질문받을 수 있음. / 질문 3–4개 이상 준비. 발표자료 공유. 교수님이 5초 내 답변 요구한 인계 있음. 필요 자료 분실 시 이민아 교수님께 직접 말하라는 인계.",
+      "calendar_body_short": "XR센터 VR 체험 후 이경노 교수님 케발 진행. 10분 이내 PPT, USB/메일 준비. 발표자 외 조원도 질문받을 수 있음.",
+      "resident_owner": "clerk1",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL §산과 CASE; SCHED"
+      ],
+      "sections": {
+        "인계 내용": [
+          "XR센터 VR 체험 후 이경노 교수님 케발 진행. 10분 이내 PPT, USB/메일 준비. 발표자 외 조원도 질문받을 수 있음."
+        ],
+        "주의사항 / 확인 필요": [
+          "질문 3–4개 이상 준비. 발표자료 공유. 교수님이 5초 내 답변 요구한 인계 있음. 필요 자료 분실 시 이민아 교수님께 직접 말하라는 인계."
+        ],
+        "source": [
+          "ALL §산과 CASE; SCHED"
+        ],
+        "owner_slot": [
+          "clerk1"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-evt-gyn-case-assign",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "병동주 월요일 회진 후, 이건우 교수님",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "병동주 월요일 회진 후, 이건우 교수님",
+      "title": "부인과 CASE 받기",
+      "professor": "",
+      "event_type": "case",
+      "difficulty": 10,
+      "priority_label": "P0",
+      "status": "draft",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": false,
+      "site": "",
+      "location": "병동주 월요일 회진 후, 이건우 교수님",
+      "summary": "C 1주차는 B/C조 CASE, A 3주차는 A/D조 CASE를 같이 받는 흐름.",
+      "note": "C 1주차는 B/C조 CASE, A 3주차는 A/D조 CASE를 같이 받는 흐름. / 해당 주 부인과 수술 목록을 수술명·질환명 잘 보이게 프린트해가야 함. 케이스 부족 시 교육치프 전공의 연락. 환자 전화문진 금지.",
+      "calendar_body_short": "C 1주차는 B/C조 CASE, A 3주차는 A/D조 CASE를 같이 받는 흐름.",
+      "resident_owner": "clerk1",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL §부인과 CASE; WHOLE_SCHED; LEADER_SUM"
+      ],
+      "sections": {
+        "인계 내용": [
+          "C 1주차는 B/C조 CASE, A 3주차는 A/D조 CASE를 같이 받는 흐름."
+        ],
+        "주의사항 / 확인 필요": [
+          "해당 주 부인과 수술 목록을 수술명·질환명 잘 보이게 프린트해가야 함. 케이스 부족 시 교육치프 전공의 연락. 환자 전화문진 금지."
+        ],
+        "source": [
+          "ALL §부인과 CASE; WHOLE_SCHED; LEADER_SUM"
+        ],
+        "owner_slot": [
+          "clerk1"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-evt-sejong-gyn-osce-case",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "병동주 세종 파견 수/목 중 보통 목요일, 세종 9층 의국 등",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "병동주 세종 파견 수/목 중 보통 목요일, 세종 9층 의국 등",
+      "title": "세종 부인과 OSCE 평가 & CASE 발표",
+      "professor": "",
+      "event_type": "case",
+      "difficulty": 10,
+      "priority_label": "P0",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "",
+      "location": "병동주 세종 파견 수/목 중 보통 목요일, 세종 9층 의국 등",
+      "summary": "병동주 전주에 송수연 교수님께 담당 세종 교수님·시간·장소 확인 후 담당 교수님과 일정 확정. 케발 후 OSCE 영상 평가.",
+      "note": "병동주 전주에 송수연 교수님께 담당 세종 교수님·시간·장소 확인 후 담당 교수님과 일정 확정. 케발 후 OSCE 영상 평가. / OSCE는 인당 7분 이내 영상, pap endo/ecto + wet 동시 진행. 세종 노트북 코덱 문제 인계 → 아이패드/개인기기 준비. 담당 교수·시간·장소 **[확인 필요]**.",
+      "calendar_body_short": "병동주 전주에 송수연 교수님께 담당 세종 교수님·시간·장소 확인 후 담당 교수님과 일정 확정. 케발 후 OSCE 영상 평가.",
+      "resident_owner": "clerk1",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL §OSCE평가/부인과CASE; SCHED; UFOLIO"
+      ],
+      "sections": {
+        "인계 내용": [
+          "병동주 전주에 송수연 교수님께 담당 세종 교수님·시간·장소 확인 후 담당 교수님과 일정 확정. 케발 후 OSCE 영상 평가."
+        ],
+        "주의사항 / 확인 필요": [
+          "OSCE는 인당 7분 이내 영상, pap endo/ecto + wet 동시 진행. 세종 노트북 코덱 문제 인계 → 아이패드/개인기기 준비. 담당 교수·시간·장소 **[확인 필요]**."
+        ],
+        "source": [
+          "ALL §OSCE평가/부인과CASE; SCHED; UFOLIO"
+        ],
+        "owner_slot": [
+          "clerk1"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-evt-gyn-cpx",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "보통 2–3주차, 조별 담당 교수와 상의",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "보통 2–3주차, 조별 담당 교수와 상의",
+      "title": "부인과 CPX",
+      "professor": "",
+      "event_type": "cpx",
+      "difficulty": 10,
+      "priority_label": "P0",
+      "status": "draft",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": false,
+      "site": "",
+      "location": "보통 2–3주차, 조별 담당 교수와 상의",
+      "summary": "최근 예시: A 이건우, B 김유진, C 박미아, D 김혜윤. 1주차 박미아 교수님께 담당 교수 확인 후 각 조장이 일정 조율.",
+      "note": "최근 예시: A 이건우, B 김유진, C 박미아, D 김혜윤. 1주차 박미아 교수님께 담당 교수 확인 후 각 조장이 일정 조율. / 담당 교수 변동 가능. 대면진료증례보고서 제출 여부·방식은 교수마다 다르므로 사전/당일 확인.",
+      "calendar_body_short": "최근 예시: A 이건우, B 김유진, C 박미아, D 김혜윤. 1주차 박미아 교수님께 담당 교수 확인 후 각 조장이 일정 조율.",
+      "resident_owner": "clerk1",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL §부인과 CPX; CPX; SCHED"
+      ],
+      "sections": {
+        "인계 내용": [
+          "최근 예시: A 이건우, B 김유진, C 박미아, D 김혜윤. 1주차 박미아 교수님께 담당 교수 확인 후 각 조장이 일정 조율."
+        ],
+        "주의사항 / 확인 필요": [
+          "담당 교수 변동 가능. 대면진료증례보고서 제출 여부·방식은 교수마다 다르므로 사전/당일 확인."
+        ],
+        "source": [
+          "ALL §부인과 CPX; CPX; SCHED"
+        ],
+        "owner_slot": [
+          "clerk1"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-common-daily-attendance",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "기본 월/화/금 07:50, OT/의국회의 있는 날 07:40, 소아동 3층 엘리베이터 앞",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "기본 월/화/금 07:50, OT/의국회의 있는 날 07:40, 소아동 3층 엘리베이터 앞",
+      "title": "매일 출근 서명",
+      "professor": "",
+      "event_type": "admin",
+      "difficulty": 10,
+      "priority_label": "P0",
+      "status": "draft",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": false,
+      "site": "",
+      "location": "기본 월/화/금 07:50, OT/의국회의 있는 날 07:40, 소아동 3층 엘리베이터 앞",
+      "summary": "조장이 분만실 담당 인턴에게 대면 출석/출근서명 받음. 병동조는 5층 회진으로 바로 이동 가능하나 조장이 인턴에게 설명.",
+      "note": "조장이 분만실 담당 인턴에게 대면 출석/출근서명 받음. 병동조는 5층 회진으로 바로 이동 가능하나 조장이 인턴에게 설명. / 의국회의 여부에 따라 출근시간 조정. 첫 주 분만조가 전체조장에게서 출석부 받음.",
+      "calendar_body_short": "조장이 분만실 담당 인턴에게 대면 출석/출근서명 받음. 병동조는 5층 회진으로 바로 이동 가능하나 조장이 인턴에게 설명.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL §출석부; LEADER_SUM"
+      ],
+      "sections": {
+        "인계 내용": [
+          "조장이 분만실 담당 인턴에게 대면 출석/출근서명 받음. 병동조는 5층 회진으로 바로 이동 가능하나 조장이 인턴에게 설명."
+        ],
+        "주의사항 / 확인 필요": [
+          "의국회의 여부에 따라 출근시간 조정. 첫 주 분만조가 전체조장에게서 출석부 받음."
+        ],
+        "source": [
+          "ALL §출석부; LEADER_SUM"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-common-dismissal-sign",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "공식 퇴근 18:00, 분만실 스테이션",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "공식 퇴근 18:00, 분만실 스테이션",
+      "title": "매일 퇴근 서명",
+      "professor": "",
+      "event_type": "admin",
+      "difficulty": 10,
+      "priority_label": "P0",
+      "status": "draft",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": false,
+      "site": "",
+      "location": "공식 퇴근 18:00, 분만실 스테이션",
+      "summary": "분만조 조장이 분만실 담당 레지던트에게 12명 전원 퇴근서명 받고 전공의 톡방에 공지해야 퇴근 가능.",
+      "note": "분만조 조장이 분만실 담당 레지던트에게 12명 전원 퇴근서명 받고 전공의 톡방에 공지해야 퇴근 가능. / 17:40 전후 인수인계 방해하지 말고 이후 요청. 인수인계 늦어지면 18시 이후 대기. 불시점검 가능, 17시부터 병원 대기 권고.",
+      "calendar_body_short": "분만조 조장이 분만실 담당 레지던트에게 12명 전원 퇴근서명 받고 전공의 톡방에 공지해야 퇴근 가능.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL §퇴근서명; LEADER_SUM"
+      ],
+      "sections": {
+        "인계 내용": [
+          "분만조 조장이 분만실 담당 레지던트에게 12명 전원 퇴근서명 받고 전공의 톡방에 공지해야 퇴근 가능."
+        ],
+        "주의사항 / 확인 필요": [
+          "17:40 전후 인수인계 방해하지 말고 이후 요청. 인수인계 늦어지면 18시 이후 대기. 불시점검 가능, 17시부터 병원 대기 권고."
+        ],
+        "source": [
+          "ALL §퇴근서명; LEADER_SUM"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-common-ot",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "실습 첫날 08:00, 6층 의국, 07:40 출첵 후 이동",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "실습 첫날 08:00, 6층 의국, 07:40 출첵 후 이동",
+      "title": "OT",
+      "professor": "",
+      "event_type": "admin",
+      "difficulty": 10,
+      "priority_label": "P0",
+      "status": "draft",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": false,
+      "site": "",
+      "location": "실습 첫날 08:00, 6층 의국, 07:40 출첵 후 이동",
+      "summary": "커튼/의자/PC/빔/OT 파일 세팅. 교수님·전공의 모두 참석.",
+      "note": "커튼/의자/PC/빔/OT 파일 세팅. 교수님·전공의 모두 참석. / 소아동 지하1층 PK실만 이용. OT날 출근시간 07:40.",
+      "calendar_body_short": "커튼/의자/PC/빔/OT 파일 세팅. 교수님·전공의 모두 참석.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL §OT; SCHED; LEADER_SUM"
+      ],
+      "sections": {
+        "인계 내용": [
+          "커튼/의자/PC/빔/OT 파일 세팅. 교수님·전공의 모두 참석."
+        ],
+        "주의사항 / 확인 필요": [
+          "소아동 지하1층 PK실만 이용. OT날 출근시간 07:40."
+        ],
+        "source": [
+          "ALL §OT; SCHED; LEADER_SUM"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-common-pretest",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "보통 실습 첫날 10:00, 1시간 5문항",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "보통 실습 첫날 10:00, 1시간 5문항",
+      "title": "Pre-test",
+      "professor": "",
+      "event_type": "exam",
+      "difficulty": 10,
+      "priority_label": "P0",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "",
+      "location": "보통 실습 첫날 10:00, 1시간 5문항",
+      "summary": "감염생물학교실에 전주 연락해 시간·장소 확인. 실습 전 시험 20항목 중심이나 탈야 가능.",
+      "note": "감염생물학교실에 전주 연락해 시간·장소 확인. 실습 전 시험 20항목 중심이나 탈야 가능. / 장소 인계가 `도서관동 405`, `약리학406`, `본관/감염생물학교실 405`로 불일치 → **[확인 필요]**. 전자기기 모두 off. 틀린 답을 똑같이 쓰면 0점 처리 인계.",
+      "calendar_body_short": "감염생물학교실에 전주 연락해 시간·장소 확인. 실습 전 시험 20항목 중심이나 탈야 가능.",
+      "resident_owner": "clerk1",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL §Pre-test; WHOLE_SCHED; SCHED; PREPOST"
+      ],
+      "sections": {
+        "인계 내용": [
+          "감염생물학교실에 전주 연락해 시간·장소 확인. 실습 전 시험 20항목 중심이나 탈야 가능."
+        ],
+        "주의사항 / 확인 필요": [
+          "장소 인계가 `도서관동 405`, `약리학406`, `본관/감염생물학교실 405`로 불일치 → **[확인 필요]**. 전자기기 모두 off. 틀린 답을 똑같이 쓰면 0점 처리 인계."
+        ],
+        "source": [
+          "ALL §Pre-test; WHOLE_SCHED; SCHED; PREPOST"
+        ],
+        "owner_slot": [
+          "clerk1"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-common-dept-conf-main",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "원문상 수/목 08:00 또는 26년 3월 화/수 재개, 6층 의국",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "원문상 수/목 08:00 또는 26년 3월 화/수 재개, 6층 의국",
+      "title": "본원 의국회의",
+      "professor": "",
+      "event_type": "conference",
+      "difficulty": 7,
+      "priority_label": "P1",
+      "status": "draft",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": false,
+      "site": "",
+      "location": "원문상 수/목 08:00 또는 26년 3월 화/수 재개, 6층 의국",
+      "summary": "의국세팅·Zoom 세팅. 교수님 의국회의 내용이 시험에 나올 수 있다는 인계.",
+      "note": "의국세팅·Zoom 세팅. 교수님 의국회의 내용이 시험에 나올 수 있다는 인계. / 요일/실시 여부가 파일별로 다름 → OT 때 확인, 안 알려주면 교육담당 전공의에게 확인. 07:40 출첵·07:50 의국 도착 세팅.",
+      "calendar_body_short": "의국세팅·Zoom 세팅. 교수님 의국회의 내용이 시험에 나올 수 있다는 인계.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL §의국회의; SCHED; WHOLE_SCHED; PREPOST"
+      ],
+      "sections": {
+        "인계 내용": [
+          "의국세팅·Zoom 세팅. 교수님 의국회의 내용이 시험에 나올 수 있다는 인계."
+        ],
+        "주의사항 / 확인 필요": [
+          "요일/실시 여부가 파일별로 다름 → OT 때 확인, 안 알려주면 교육담당 전공의에게 확인. 07:40 출첵·07:50 의국 도착 세팅."
+        ],
+        "source": [
+          "ALL §의국회의; SCHED; WHOLE_SCHED; PREPOST"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-common-sejong-conf",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "수/목 08:00, 세종 9층 의국",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "수/목 08:00, 세종 9층 의국",
+      "title": "세종 의국회의",
+      "professor": "",
+      "event_type": "conference",
+      "difficulty": 7,
+      "priority_label": "P1",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "",
+      "location": "수/목 08:00, 세종 9층 의국",
+      "summary": "개인 일정표에 세종 의국회의 항목 존재. 병동/세종 파견 주와 연결되는 것으로 보임.",
+      "note": "개인 일정표에 세종 의국회의 항목 존재. 병동/세종 파견 주와 연결되는 것으로 보임. / 어떤 조/주차에 필수 참석인지 **[확인 필요]**.",
+      "calendar_body_short": "개인 일정표에 세종 의국회의 항목 존재. 병동/세종 파견 주와 연결되는 것으로 보임.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "SCHED"
+      ],
+      "sections": {
+        "인계 내용": [
+          "개인 일정표에 세종 의국회의 항목 존재. 병동/세종 파견 주와 연결되는 것으로 보임."
+        ],
+        "주의사항 / 확인 필요": [
+          "어떤 조/주차에 필수 참석인지 **[확인 필요]**."
+        ],
+        "source": [
+          "SCHED"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-common-gyn-osce-lecture",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "1주차, 보통 시작 1–3일 내, 6층 의국 또는 소아동 수술실 세미나실",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "1주차, 보통 시작 1–3일 내, 6층 의국 또는 소아동 수술실 세미나실",
+      "title": "부인과 OSCE 강의",
+      "professor": "",
+      "event_type": "osce",
+      "difficulty": 10,
+      "priority_label": "P0",
+      "status": "draft",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": false,
+      "site": "",
+      "location": "1주차, 보통 시작 1–3일 내, 6층 의국 또는 소아동 수술실 세미나실",
+      "summary": "박미아 교수님. pap ecto/endo + wet smear 세팅, 조장+1명 정도 시연 후 피드백.",
+      "note": "박미아 교수님. pap ecto/endo + wet smear 세팅, 조장+1명 정도 시연 후 피드백. / 박미아 교수님께 전주/초반에 시간·장소 확인. 골반진찰 모형·슬라이드·장갑·물통·연필 등 준비.",
+      "calendar_body_short": "박미아 교수님. pap ecto/endo + wet smear 세팅, 조장+1명 정도 시연 후 피드백.",
+      "resident_owner": "clerk1",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL §OSCE강의; SCHED; LEADER_SUM"
+      ],
+      "sections": {
+        "인계 내용": [
+          "박미아 교수님. pap ecto/endo + wet smear 세팅, 조장+1명 정도 시연 후 피드백."
+        ],
+        "주의사항 / 확인 필요": [
+          "박미아 교수님께 전주/초반에 시간·장소 확인. 골반진찰 모형·슬라이드·장갑·물통·연필 등 준비."
+        ],
+        "source": [
+          "ALL §OSCE강의; SCHED; LEADER_SUM"
+        ],
+        "owner_slot": [
+          "clerk1"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-common-nst-lecture",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "1주차 예정이나 변동 가능, 강병헌 교수님, 의국 등",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "1주차 예정이나 변동 가능, 강병헌 교수님, 의국 등",
+      "title": "NST 강의",
+      "professor": "",
+      "event_type": "exam",
+      "difficulty": 7,
+      "priority_label": "P1",
+      "status": "draft",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": false,
+      "site": "",
+      "location": "1주차 예정이나 변동 가능, 강병헌 교수님, 의국 등",
+      "summary": "분만조 통해 공지. 약 30분, 질문 가능. 강의 때 NST 시험 일정 확인.",
+      "note": "분만조 통해 공지. 약 30분, 질문 가능. 강의 때 NST 시험 일정 확인. / 26년 3/4월에는 2주차/화요일 등 변동. 별도 공지 없으면 첫날/분만주에 여쭙기.",
+      "calendar_body_short": "분만조 통해 공지. 약 30분, 질문 가능. 강의 때 NST 시험 일정 확인.",
+      "resident_owner": "clerk1",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL §NST강의; SCHED; NST"
+      ],
+      "sections": {
+        "인계 내용": [
+          "분만조 통해 공지. 약 30분, 질문 가능. 강의 때 NST 시험 일정 확인."
+        ],
+        "주의사항 / 확인 필요": [
+          "26년 3/4월에는 2주차/화요일 등 변동. 별도 공지 없으면 첫날/분만주에 여쭙기."
+        ],
+        "source": [
+          "ALL §NST강의; SCHED; NST"
+        ],
+        "owner_slot": [
+          "clerk1"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-common-nst-exam",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "2주차 예정이나 변동 가능, 강병헌 교수님, 의국 등",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "2주차 예정이나 변동 가능, 강병헌 교수님, 의국 등",
+      "title": "NST 시험",
+      "professor": "",
+      "event_type": "exam",
+      "difficulty": 10,
+      "priority_label": "P0",
+      "status": "draft",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": false,
+      "site": "",
+      "location": "2주차 예정이나 변동 가능, 강병헌 교수님, 의국 등",
+      "summary": "9–10문항, HI/야마 기반. 시험 직후 조원별 복기 분담 권장.",
+      "note": "9–10문항, HI/야마 기반. 시험 직후 조원별 복기 분담 권장. / 그래프 해석/early·late·variable decel/MVU 계산 변형 가능. 강의 때 일정 확인.",
+      "calendar_body_short": "9–10문항, HI/야마 기반. 시험 직후 조원별 복기 분담 권장.",
+      "resident_owner": "clerk1",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL §NST시험; SCHED; NST"
+      ],
+      "sections": {
+        "인계 내용": [
+          "9–10문항, HI/야마 기반. 시험 직후 조원별 복기 분담 권장."
+        ],
+        "주의사항 / 확인 필요": [
+          "그래프 해석/early·late·variable decel/MVU 계산 변형 가능. 강의 때 일정 확인."
+        ],
+        "source": [
+          "ALL §NST시험; SCHED; NST"
+        ],
+        "owner_slot": [
+          "clerk1"
+        ]
+      }
+    },
+    {
+      "id": "obgyn-common-posttest",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "variable",
+      "day": "",
+      "date": "",
+      "time_raw": "실습 마지막날 오후, 인계상 금 16:00, 1시간",
+      "start_time": "",
+      "end_time": "",
+      "time_label": "실습 마지막날 오후, 인계상 금 16:00, 1시간",
+      "title": "Post-test",
+      "professor": "",
+      "event_type": "exam",
+      "difficulty": 10,
+      "priority_label": "P0",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "",
+      "location": "실습 마지막날 오후, 인계상 금 16:00, 1시간",
+      "summary": "전 범위 49항목, 5문항 서술형 형태. 감염생물학교실에 시간·장소 확인.",
+      "note": "전 범위 49항목, 5문항 서술형 형태. 감염생물학교실에 시간·장소 확인. / 시험 후 바로 퇴근 금지. 각자 일정 진행 후 18시 퇴근서명 공지 시 퇴근. 장소 인계 불일치 → **[확인 필요]**.",
+      "calendar_body_short": "전 범위 49항목, 5문항 서술형 형태. 감염생물학교실에 시간·장소 확인.",
+      "resident_owner": "clerk1",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "ALL §Post-test; SCHED; WHOLE_SCHED; PREPOST"
+      ],
+      "sections": {
+        "인계 내용": [
+          "전 범위 49항목, 5문항 서술형 형태. 감염생물학교실에 시간·장소 확인."
+        ],
+        "주의사항 / 확인 필요": [
+          "시험 후 바로 퇴근 금지. 각자 일정 진행 후 18시 퇴근서명 공지 시 퇴근. 장소 인계 불일치 → **[확인 필요]**."
+        ],
+        "source": [
+          "ALL §Post-test; SCHED; WHOLE_SCHED; PREPOST"
+        ],
+        "owner_slot": [
+          "clerk1"
+        ]
+      }
+    }
+  ],
+  "assignments": [
+    {
+      "id": "obgyn-asg-preweek-read-handoffs",
+      "name": "전체/분과/유폴리오/CPX/NST/프테포테 인계 숙지",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "조장·분과조장이 인계 숙지. 분과별 세부는 대략이라도 알고 특이사항 조원 공지.",
+      "raw_deadline": "실습 전주 주중",
+      "start_when": "실습 전주 주중",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "실습 전주 주중",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "조장·분과조장이 인계 숙지. 분과별 세부는 대략이라도 알고 특이사항 조원 공지.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "조장·분과조장이 인계 숙지. 분과별 세부는 대략이라도 알고 특이사항 조원 공지."
+      ],
+      "resident_owner": "clerk1",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "LEADER_SUM; ALL; UFOLIO; CPX; NST; PREPOST"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-profile-contact-file",
+      "name": "실습생 프로필 및 연락처 파일 제작",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "조원 연락처·증명사진 수합, 전체 톡방 업로드. 민감정보이므로 원본 관리 주의.",
+      "raw_deadline": "실습 전주 주중",
+      "start_when": "실습 전주 주중",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "실습 전주 주중",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "조원 연락처·증명사진 수합, 전체 톡방 업로드. 민감정보이므로 원본 관리 주의.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "조원 연락처·증명사진 수합, 전체 톡방 업로드. 민감정보이므로 원본 관리 주의."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "LEADER_SUM; INV"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-overall-schedule-file",
+      "name": "전체 일정표 제작",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "ABCD 4주 rotation과 공통일정 반영. 확정된 공통일정 시간·장소 기재.",
+      "raw_deadline": "실습 전주 주중",
+      "start_when": "실습 전주 주중",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "실습 전주 주중",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "ABCD 4주 rotation과 공통일정 반영. 확정된 공통일정 시간·장소 기재.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "ABCD 4주 rotation과 공통일정 반영. 확정된 공통일정 시간·장소 기재."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "LEADER_SUM; SCHED; WHOLE_SCHED"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-outpatient-schedule-file",
+      "name": "외래 일정표 제작",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "format": "조장 폴더 원문에 외래 일정표 파일 존재. 실제 외래 배정은 별도 이미지/파일 확인 필요.",
+      "raw_deadline": "실습 전주 주중",
+      "start_when": "실습 전주 주중",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "실습 전주 주중",
+      "follow_up": "",
+      "needs_confirmation": true,
+      "difficulty_total": 7,
+      "content_summary": "조장 폴더 원문에 외래 일정표 파일 존재. 실제 외래 배정은 별도 이미지/파일 확인 필요.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "조장 폴더 원문에 외래 일정표 파일 존재. 실제 외래 배정은 별도 이미지/파일 확인 필요."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "LEADER_SUM; INV"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-abcd-group-leaders",
+      "name": "ABCD조 편성 및 분과 조장 지정",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "첫 주 병동조(C조) 분과 조장에게 세종 CASE/OSCE 일정 사전연락 안내.",
+      "raw_deadline": "실습 전주 주중",
+      "start_when": "실습 전주 주중",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "실습 전주 주중",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "첫 주 병동조(C조) 분과 조장에게 세종 CASE/OSCE 일정 사전연락 안내.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "첫 주 병동조(C조) 분과 조장에게 세종 CASE/OSCE 일정 사전연락 안내."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "LEADER_SUM; ALL"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-sejong-emr-inquiry-if-needed",
+      "name": "세종 EMR/의학교육실 문의",
+      "priority_label": "P2",
+      "priority_score": 4,
+      "format": "조장 인계에 세종 EMR 의학교육실 문의 항목 있음. 필요성은 실제 조 편성 방식에 따라 **[확인 필요]**.",
+      "raw_deadline": "ABCD조 추첨 등 필요 시",
+      "start_when": "ABCD조 추첨 등 필요 시",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "",
+      "follow_up": "",
+      "needs_confirmation": true,
+      "difficulty_total": 4,
+      "content_summary": "조장 인계에 세종 EMR 의학교육실 문의 항목 있음. 필요성은 실제 조 편성 방식에 따라 **[확인 필요]**.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "조장 인계에 세종 EMR 의학교육실 문의 항목 있음. 필요성은 실제 조 편성 방식에 따라 **[확인 필요]**."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "LEADER_SUM"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-prepost-confirm-microbio",
+      "name": "Pre-test/Post-test 시간·장소 확인",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "감염생물학교실에 연락해 안내받고 조원 공지. 장소·시간 변동 가능.",
+      "raw_deadline": "실습 전주",
+      "start_when": "실습 전주",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "실습 전주",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "감염생물학교실에 연락해 안내받고 조원 공지. 장소·시간 변동 가능.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "감염생물학교실에 연락해 안내받고 조원 공지. 장소·시간 변동 가능."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "ALL; LEADER_SUM; PREPOST"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-first-week-intern-roster",
+      "name": "첫 주 분만실 담당 인턴 번호/근무표 확인",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "소아동 3층 분만실 스테이션 또는 수술방 앞 근무표 확인. 못 찾으면 간호사에게 문의.",
+      "raw_deadline": "실습 전주 주중/일요일",
+      "start_when": "실습 전주 주중/일요일",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "실습 전주 주중/일요일",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "소아동 3층 분만실 스테이션 또는 수술방 앞 근무표 확인. 못 찾으면 간호사에게 문의.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "소아동 3층 분만실 스테이션 또는 수술방 앞 근무표 확인. 못 찾으면 간호사에게 문의."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "LEADER_SUM; ALL"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-osce-lecture-contact",
+      "name": "박미아 교수님께 OSCE 강의 일정 확인",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "원문 문자양식 활용하되 개인정보/연락처는 원문 참조. 안내받으면 조원 공지, 피드백 받을 조원 정하기.",
+      "raw_deadline": "실습 전주",
+      "start_when": "실습 전주",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "실습 전주",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "원문 문자양식 활용하되 개인정보/연락처는 원문 참조. 안내받으면 조원 공지, 피드백 받을 조원 정하기.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "원문 문자양식 활용하되 개인정보/연락처는 원문 참조. 안내받으면 조원 공지, 피드백 받을 조원 정하기."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "LEADER_SUM; ALL"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-contact-save-all",
+      "name": "산부인과 교수님·전공의 연락처 저장 안내",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "format": "일정이 조원 개인에게 전달될 수 있어 조원 모두 연락 대기. 새 연락처 알면 톡방 공유.",
+      "raw_deadline": "실습 전주",
+      "start_when": "실습 전주",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "실습 전주",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 7,
+      "content_summary": "일정이 조원 개인에게 전달될 수 있어 조원 모두 연락 대기. 새 연락처 알면 톡방 공유.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "일정이 조원 개인에게 전달될 수 있어 조원 모두 연락 대기. 새 연락처 알면 톡방 공유."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "LEADER_SUM; ALL"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-resident-chat-greeting-upload",
+      "name": "전공의 포함 전체 톡방 인사 및 파일 업로드",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "조장만 인사, 프로필/연락처·전체 일정표·외래 일정표·확정 공통일정 업로드.",
+      "raw_deadline": "전체 톡방 초대 후/주말",
+      "start_when": "전체 톡방 초대 후/주말",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "전체 톡방 초대 후/주말",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "조장만 인사, 프로필/연락처·전체 일정표·외래 일정표·확정 공통일정 업로드.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "조장만 인사, 프로필/연락처·전체 일정표·외래 일정표·확정 공통일정 업로드."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "LEADER_SUM"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-sunday-attendance-print",
+      "name": "출석부 1부 인쇄",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "필요 시 프로필/연락처, 일정표도 인쇄.",
+      "raw_deadline": "실습 전 일요일",
+      "start_when": "실습 전 일요일",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "실습 전 일요일",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "필요 시 프로필/연락처, 일정표도 인쇄.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "필요 시 프로필/연락처, 일정표도 인쇄."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "LEADER_SUM; ALL"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-sunday-intern-message",
+      "name": "분만실 인턴에게 출근서명 일정 안내",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "다음 주 담당 인턴에게 시간·장소 안내. OT/의국회의 있으면 07:40 반영.",
+      "raw_deadline": "매주 일요일",
+      "start_when": "매주 일요일",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "다음 주 담당 인턴에게 시간·장소 안내. OT/의국회의 있으면 07:40 반영.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "다음 주 담당 인턴에게 시간·장소 안내. OT/의국회의 있으면 07:40 반영."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "LEADER_SUM; ALL"
+      ],
+      "onsite_required": true
+    },
+    {
+      "id": "obgyn-asg-ot-osce-room-precheck",
+      "name": "의국 위치/OT 세팅/OSCE 세팅 사전 확인",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "6층 의국 비번, 커튼·의자·PC·빔·OT 파일, OSCE 물품 위치 확인.",
+      "raw_deadline": "실습 전 일요일",
+      "start_when": "실습 전 일요일",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "실습 전 일요일",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "6층 의국 비번, 커튼·의자·PC·빔·OT 파일, OSCE 물품 위치 확인.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "6층 의국 비번, 커튼·의자·PC·빔·OT 파일, OSCE 물품 위치 확인."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "LEADER_SUM; ALL"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-daily-morning-sign",
+      "name": "매일 출근서명/출첵 운영",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "조장이 인턴에게 출근서명. 병동조는 회진 일정 설명 후 전원 출첵 처리.",
+      "raw_deadline": "매 실습일 아침",
+      "start_when": "매 실습일 아침",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "조장이 인턴에게 출근서명. 병동조는 회진 일정 설명 후 전원 출첵 처리.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "조장이 인턴에게 출근서명. 병동조는 회진 일정 설명 후 전원 출첵 처리."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "ALL; LEADER_SUM"
+      ],
+      "onsite_required": true
+    },
+    {
+      "id": "obgyn-asg-daily-dismissal-sign",
+      "name": "매일 퇴근서명 운영 및 퇴근 공지",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "분만조 조장이 레지던트에게 12명 전원 퇴근서명 받고 전공의 톡방 공지 후 퇴근.",
+      "raw_deadline": "매 실습일 18:00 전후",
+      "start_when": "매 실습일 18:00 전후",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "매 실습일 18:00 전후",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "분만조 조장이 레지던트에게 12명 전원 퇴근서명 받고 전공의 톡방 공지 후 퇴근.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "분만조 조장이 레지던트에게 12명 전원 퇴근서명 받고 전공의 톡방 공지 후 퇴근."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "ALL; LEADER_SUM"
+      ],
+      "onsite_required": true
+    },
+    {
+      "id": "obgyn-asg-schedule-change-share",
+      "name": "변경/개별공지 일정 즉시 공유",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "조원 아무에게나 공지되는 경우 있음. 조원방 + 전공의 톡방에 양식 맞춰 공유: 조/일정명/시간/장소/담당교수.",
+      "raw_deadline": "일정 수신 즉시",
+      "start_when": "일정 수신 즉시",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "조원 아무에게나 공지되는 경우 있음. 조원방 + 전공의 톡방에 양식 맞춰 공유: 조/일정명/시간/장소/담당교수.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "조원 아무에게나 공지되는 경우 있음. 조원방 + 전공의 톡방에 양식 맞춰 공유: 조/일정명/시간/장소/담당교수."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "ALL; LEADER_SUM"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-common-event-leave-return-notice",
+      "name": "공통일정 참석 전 현장 이탈/복귀 보고",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "현장 전공의/교수님께 `공통일정으로 나갔다가 언제 복귀` 말하고 이동.",
+      "raw_deadline": "공통일정 전",
+      "start_when": "공통일정 전",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "공통일정 전",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "현장 전공의/교수님께 `공통일정으로 나갔다가 언제 복귀` 말하고 이동.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "현장 전공의/교수님께 `공통일정으로 나갔다가 언제 복귀` 말하고 이동."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "ALL; LEADER_SUM"
+      ],
+      "onsite_required": true
+    },
+    {
+      "id": "obgyn-asg-conference-setup-zoom",
+      "name": "의국회의 의국/Zoom 세팅",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "format": "OT 때 세팅 기준으로 준비, Zoom까지 완료. 실시 여부는 OT/교육담당 전공의 확인.",
+      "raw_deadline": "의국회의 있는 날 07:50 전후",
+      "start_when": "의국회의 있는 날 07:50 전후",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "의국회의 있는 날 07:50 전후",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 7,
+      "content_summary": "OT 때 세팅 기준으로 준비, Zoom까지 완료. 실시 여부는 OT/교육담당 전공의 확인.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "OT 때 세팅 기준으로 준비, Zoom까지 완료. 실시 여부는 OT/교육담당 전공의 확인."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "ALL; LEADER_SUM"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-pretest-reminder-study",
+      "name": "Pre-test 전날/당일 리마인드 및 공부팩",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "format": "시험장 착석시간 공지. C/D는 OT-프테 사이 일정 참여. 야마 그대로 베끼기/틀린답 공유 주의.",
+      "raw_deadline": "실습 전날~첫날 09:45",
+      "start_when": "실습 전날~첫날 09:45",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "실습 전날~첫날 09:45",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 7,
+      "content_summary": "시험장 착석시간 공지. C/D는 OT-프테 사이 일정 참여. 야마 그대로 베끼기/틀린답 공유 주의.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "시험장 착석시간 공지. C/D는 OT-프테 사이 일정 참여. 야마 그대로 베끼기/틀린답 공유 주의."
+      ],
+      "resident_owner": "clerk1",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "LEADER_SUM; ALL; PREPOST"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-posttest-reminder-study",
+      "name": "Post-test 리마인드 및 전범위 공부팩",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "format": "마지막날 16:00 전후 시험 가능. 시험 후 바로 퇴근 금지, 18시 퇴근서명 대기.",
+      "raw_deadline": "마지막날 전날~당일",
+      "start_when": "마지막날 전날~당일",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "마지막날 전날~당일",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 7,
+      "content_summary": "마지막날 16:00 전후 시험 가능. 시험 후 바로 퇴근 금지, 18시 퇴근서명 대기.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "마지막날 16:00 전후 시험 가능. 시험 후 바로 퇴근 금지, 18시 퇴근서명 대기."
+      ],
+      "resident_owner": "clerk1",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "LEADER_SUM; ALL; PREPOST"
+      ],
+      "onsite_required": true
+    },
+    {
+      "id": "obgyn-asg-osce-lecture-prep",
+      "name": "OSCE 강의 사전공부·물품 준비",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "format": "pap ecto/endo + wet smear 대본/영상 숙지. 골반모형·슬라이드 3개·장갑 S/M·물통·연필 준비.",
+      "raw_deadline": "OSCE 강의 전",
+      "start_when": "OSCE 강의 전",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "OSCE 강의 전",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 7,
+      "content_summary": "pap ecto/endo + wet smear 대본/영상 숙지. 골반모형·슬라이드 3개·장갑 S/M·물통·연필 준비.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "pap ecto/endo + wet smear 대본/영상 숙지. 골반모형·슬라이드 3개·장갑 S/M·물통·연필 준비."
+      ],
+      "resident_owner": "clerk1",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "ALL; LEADER_SUM; UFOLIO"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-osce-video-film",
+      "name": "세종 OSCE 평가 영상 촬영",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "인당 7분 이내, pap ecto/endo + wet 한 코스로 촬영. 아이패드/개인기기 재생 준비.",
+      "raw_deadline": "병동주 월/화 의국 대기 중 권장",
+      "start_when": "병동주 월/화 의국 대기 중 권장",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "인당 7분 이내, pap ecto/endo + wet 한 코스로 촬영. 아이패드/개인기기 재생 준비.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "인당 7분 이내, pap ecto/endo + wet 한 코스로 촬영. 아이패드/개인기기 재생 준비."
+      ],
+      "resident_owner": "clerk1",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "ALL; LEADER_SUM; UFOLIO"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-nst-lecture-arrange",
+      "name": "NST 강의 일정 확인/공지",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "format": "강병헌 교수님 강의 일정·장소 수신 후 공지. 강의 때 시험 일정 여쭙기.",
+      "raw_deadline": "1주차 분만조 통해 공지 또는 직접 확인",
+      "start_when": "1주차 분만조 통해 공지 또는 직접 확인",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 7,
+      "content_summary": "강병헌 교수님 강의 일정·장소 수신 후 공지. 강의 때 시험 일정 여쭙기.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "강병헌 교수님 강의 일정·장소 수신 후 공지. 강의 때 시험 일정 여쭙기."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "ALL; LEADER_SUM; NST"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-nst-exam-prep-recall",
+      "name": "NST 시험 대비 및 문제복기 분담",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "9–10문항 예상, 그래프 용지/주관식 용지 제출. 조원 번호순 복기 분담, 시험 직후 공유.",
+      "raw_deadline": "NST 시험 전날/당일",
+      "start_when": "NST 시험 전날/당일",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "NST 시험 전날/당일",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "9–10문항 예상, 그래프 용지/주관식 용지 제출. 조원 번호순 복기 분담, 시험 직후 공유.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "9–10문항 예상, 그래프 용지/주관식 용지 제출. 조원 번호순 복기 분담, 시험 직후 공유."
+      ],
+      "resident_owner": "clerk1",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "ALL; LEADER_SUM; NST"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-obst-case-receive",
+      "name": "산과 CASE 배정 받기",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "이경노 교수님 회진 전후 케이스 인원수대로 요청/수령, 발표 포인트 기록.",
+      "raw_deadline": "각 조 분만주 월요일",
+      "start_when": "각 조 분만주 월요일",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "이경노 교수님 회진 전후 케이스 인원수대로 요청/수령, 발표 포인트 기록.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "이경노 교수님 회진 전후 케이스 인원수대로 요청/수령, 발표 포인트 기록."
+      ],
+      "resident_owner": "clerk1",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "ALL; WHOLE_SCHED; SCHED"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-obst-case-ppt-present",
+      "name": "산과 CASE PPT 제작·XR 발표",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "10분 이내 PPT, USB/메일 준비, 조원 질문 준비, NST 봉투/자료 사진 사용 후 제자리.",
+      "raw_deadline": "분만주 목/금 전",
+      "start_when": "분만주 목/금 전",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "분만주 목/금 전",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "10분 이내 PPT, USB/메일 준비, 조원 질문 준비, NST 봉투/자료 사진 사용 후 제자리.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "10분 이내 PPT, USB/메일 준비, 조원 질문 준비, NST 봉투/자료 사진 사용 후 제자리."
+      ],
+      "resident_owner": "clerk1",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "ALL; SCHED; UFOLIO"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-gyn-case-receive-surgery-list",
+      "name": "부인과 CASE 배정 + 수술목록 프린트",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "이건우 교수님께 CASE 받기 전 해당 주 부인과 수술 목록을 수술명·질환명 보이게 프린트.",
+      "raw_deadline": "병동주 월요일",
+      "start_when": "병동주 월요일",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "이건우 교수님께 CASE 받기 전 해당 주 부인과 수술 목록을 수술명·질환명 보이게 프린트.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "이건우 교수님께 CASE 받기 전 해당 주 부인과 수술 목록을 수술명·질환명 보이게 프린트."
+      ],
+      "resident_owner": "clerk1",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "ALL; WHOLE_SCHED; LEADER_SUM"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-sejong-osce-case-schedule",
+      "name": "세종 CASE/OSCE 담당 교수·시간·장소 확정",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "송수연 교수님께 담당 교수 확인 → 담당 교수에게 일정/장소 확인 → 조원 공지.",
+      "raw_deadline": "병동주 전주 목~주말",
+      "start_when": "병동주 전주 목~주말",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "병동주 전주 목~주말",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "송수연 교수님께 담당 교수 확인 → 담당 교수에게 일정/장소 확인 → 조원 공지.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "송수연 교수님께 담당 교수 확인 → 담당 교수에게 일정/장소 확인 → 조원 공지."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "ALL; LEADER_SUM; UFOLIO"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-gyn-case-ppt-present",
+      "name": "부인과 CASE PPT 제작·세종 발표",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "PPT 형식. USB 준비. 교수별 발표 포인트: 영상소견/검사 전 내용/병리/치료 질문 등.",
+      "raw_deadline": "병동주 세종 발표 전",
+      "start_when": "병동주 세종 발표 전",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "병동주 세종 발표 전",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "PPT 형식. USB 준비. 교수별 발표 포인트: 영상소견/검사 전 내용/병리/치료 질문 등.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "PPT 형식. USB 준비. 교수별 발표 포인트: 영상소견/검사 전 내용/병리/치료 질문 등."
+      ],
+      "resident_owner": "clerk1",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "ALL; UFOLIO"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-gyn-cpx-schedule-report-check",
+      "name": "부인과 CPX 일정 및 대면진료증례보고서 여부 확인",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "박미아 교수님께 조별 담당 교수 확인 후 각 교수와 일정 조율. 보고서 제출 여부·방식 사전 확인.",
+      "raw_deadline": "1주차~CPX 전",
+      "start_when": "1주차~CPX 전",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "1주차~CPX 전",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "박미아 교수님께 조별 담당 교수 확인 후 각 교수와 일정 조율. 보고서 제출 여부·방식 사전 확인.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "박미아 교수님께 조별 담당 교수 확인 후 각 교수와 일정 조율. 보고서 제출 여부·방식 사전 확인."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "ALL; CPX; LEADER_SUM"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-gyn-cpx-case-report-conditional",
+      "name": "부인과 CPX 대면진료증례보고서 작성/스캔/제출",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "format": "교수별로 현장제출/유폴리오 업로드/미제출이 다름. 실습지침서 뒤 2장 양식, 본인서명, 평가자란 불필요 인계.",
+      "raw_deadline": "CPX 교수 지시 시",
+      "start_when": "CPX 교수 지시 시",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 7,
+      "content_summary": "교수별로 현장제출/유폴리오 업로드/미제출이 다름. 실습지침서 뒤 2장 양식, 본인서명, 평가자란 불필요 인계.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "교수별로 현장제출/유폴리오 업로드/미제출이 다름. 실습지침서 뒤 2장 양식, 본인서명, 평가자란 불필요 인계."
+      ],
+      "resident_owner": "clerk1",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "CPX; UFOLIO; ALL"
+      ],
+      "onsite_required": true
+    },
+    {
+      "id": "obgyn-asg-ufolio-observed-skills-12",
+      "name": "u-folio 임상술기(관찰) 12항목 현장 승인",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "외래/분만/수술에서 12항목 확보. 현장 전공의 2–4년차 승인 가능 여부는 해당 주 확인. 느낀점 빈칸 금지, 제출→승인번호→확인.",
+      "raw_deadline": "실습 중 분산해서",
+      "start_when": "실습 중 분산해서",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "외래/분만/수술에서 12항목 확보. 현장 전공의 2–4년차 승인 가능 여부는 해당 주 확인. 느낀점 빈칸 금지, 제출→승인번호→확인.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "외래/분만/수술에서 12항목 확보. 현장 전공의 2–4년차 승인 가능 여부는 해당 주 확인. 느낀점 빈칸 금지, 제출→승인번호→확인."
+      ],
+      "resident_owner": "clerk1",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "UFOLIO; ALL"
+      ],
+      "onsite_required": true
+    },
+    {
+      "id": "obgyn-asg-ufolio-portfolio-12-handwrite-scan",
+      "name": "u-folio 자유기록(과제) 포트폴리오 12항목 수기 작성·스캔",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "부인과6+산과6. 환자번호 앞4자리+별표, 이니셜, 공부한 내용 하단 본인서명. 하나씩 업로드, 합본 금지. 미리 제출 금지.",
+      "raw_deadline": "실습 마지막날 실습 종료 후 자정 전",
+      "start_when": "실습 마지막날 실습 종료 후 자정 전",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "실습 마지막날 실습 종료 후 자정 전",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "부인과6+산과6. 환자번호 앞4자리+별표, 이니셜, 공부한 내용 하단 본인서명. 하나씩 업로드, 합본 금지. 미리 제출 금지.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "부인과6+산과6. 환자번호 앞4자리+별표, 이니셜, 공부한 내용 하단 본인서명. 하나씩 업로드, 합본 금지. 미리 제출 금지."
+      ],
+      "resident_owner": "clerk1",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "UFOLIO; ALL"
+      ],
+      "onsite_required": true
+    },
+    {
+      "id": "obgyn-asg-ufolio-onsite-evals",
+      "name": "OSCE/CPX/산과CASE/부인과CASE 현장평가 받기",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "휴대폰/패드에 u-folio 띄워 해당 교수님께 점수 입력/승인. 산과 CPX는 2026.01 이후 안 받는다는 인계가 있어 **[확인 필요]**.",
+      "raw_deadline": "각 평가 직후",
+      "start_when": "각 평가 직후",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "",
+      "follow_up": "",
+      "needs_confirmation": true,
+      "difficulty_total": 10,
+      "content_summary": "휴대폰/패드에 u-folio 띄워 해당 교수님께 점수 입력/승인. 산과 CPX는 2026.01 이후 안 받는다는 인계가 있어 **[확인 필요]**.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "휴대폰/패드에 u-folio 띄워 해당 교수님께 점수 입력/승인. 산과 CPX는 2026.01 이후 안 받는다는 인계가 있어 **[확인 필요]**."
+      ],
+      "resident_owner": "clerk1",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "UFOLIO; ALL"
+      ],
+      "onsite_required": true
+    },
+    {
+      "id": "obgyn-asg-survey-print-collect",
+      "name": "설문지 프린트·작성 수합",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "조장이 마지막날 조원 수대로 프린트, 조원 작성, 포테 때 분만조 조장에게 전달. 양식은 실습지침서 뒤.",
+      "raw_deadline": "마지막 주 월~금",
+      "start_when": "마지막 주 월~금",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "마지막 주 월~금",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "조장이 마지막날 조원 수대로 프린트, 조원 작성, 포테 때 분만조 조장에게 전달. 양식은 실습지침서 뒤.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "조장이 마지막날 조원 수대로 프린트, 조원 작성, 포테 때 분만조 조장에게 전달. 양식은 실습지침서 뒤."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "ALL; LEADER_SUM"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-final-attendance-survey-submit",
+      "name": "출석부·설문지 마지막날 대면 제출",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "format": "분만조 조장이 출석부·설문지를 분만실 담당 레지던트에게 제출.",
+      "raw_deadline": "마지막날 Post-test 후/18시 퇴근서명 시",
+      "start_when": "마지막날 Post-test 후/18시 퇴근서명 시",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "마지막날 Post-test 후/18시 퇴근서명 시",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 10,
+      "content_summary": "분만조 조장이 출석부·설문지를 분만실 담당 레지던트에게 제출.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "분만조 조장이 출석부·설문지를 분만실 담당 레지던트에게 제출."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "ALL; LEADER_SUM"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-dropbox-upload-handoff",
+      "name": "실습 후 드롭박스 인계자료 업로드",
+      "priority_label": "P2",
+      "priority_score": 4,
+      "format": "조원에게 케발 PPT 수합 후 학년 드롭박스 업로드.",
+      "raw_deadline": "실습 끝나는 주 일요일까지",
+      "start_when": "실습 끝나는 주 일요일까지",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 4,
+      "content_summary": "조원에게 케발 PPT 수합 후 학년 드롭박스 업로드.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "조원에게 케발 PPT 수합 후 학년 드롭박스 업로드."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "LEADER_SUM"
+      ],
+      "onsite_required": false
+    },
+    {
+      "id": "obgyn-asg-next-team-transition",
+      "name": "다음 산부인과 조 인계·톡방 전환",
+      "priority_label": "P2",
+      "priority_score": 4,
+      "format": "전공의 단톡방 조원 탈퇴 요청, 다음 조 초대, 감사인사, 다음 조장에게 OSCE 일정/프로필/인턴연락 등 인계.",
+      "raw_deadline": "마지막 주 금요일 포테 후~주말",
+      "start_when": "마지막 주 금요일 포테 후~주말",
+      "start_at": "",
+      "soft_deadline": "",
+      "hard_deadline": "마지막 주 금요일 포테 후~주말",
+      "follow_up": "",
+      "needs_confirmation": false,
+      "difficulty_total": 4,
+      "content_summary": "전공의 단톡방 조원 탈퇴 요청, 다음 조 초대, 감사인사, 다음 조장에게 OSCE 일정/프로필/인턴연락 등 인계.",
+      "linked_session_ids": [],
+      "linked_professors": [],
+      "milestones": [],
+      "notes": [
+        "전공의 단톡방 조원 탈퇴 요청, 다음 조 초대, 감사인사, 다음 조장에게 OSCE 일정/프로필/인턴연락 등 인계."
+      ],
+      "resident_owner": "secretary",
+      "paperclip_issue": "AI-13",
+      "source_ids": [
+        "LEADER_SUM"
+      ],
+      "onsite_required": false
+    }
+  ],
+  "study_items": [
+    {
+      "id": "obgyn-cpx-universal-checklist",
+      "title": "부인과 CPX 공통 체크리스트: 이름/등록번호, 임신 가능성, 요약, PE 구두, 교육",
+      "category": "study",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "resident_owner": "clerk2",
+      "why": "CPX 인계 공통 + 박미아/김혜윤 피드백",
+      "source_refs": [
+        "CPX 인계 공통 + 박미아/김혜윤 피드백"
+      ],
+      "linked_sessions": [],
+      "linked_assignments": [],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-cpx-a-lee-aub-amenorrhea-dysmenorrhea",
+      "title": "이건우 CPX: 질출혈/무월경/과다월경/월경통 접근",
+      "category": "study",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "resident_owner": "clerk2",
+      "why": "CPX A조 이건우 2026.01/04 복기",
+      "source_refs": [
+        "CPX A조 이건우 2026.01/04 복기"
+      ],
+      "linked_sessions": [],
+      "linked_assignments": [],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-cpx-b-kim-menorrhagia-fibroid-adenomyosis",
+      "title": "김유진 CPX: 과다월경, 자궁근종 vs 자궁선근증 vs 폴립/내막증",
+      "category": "study",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "resident_owner": "clerk2",
+      "why": "CPX B조 2026.01/03/04 복기",
+      "source_refs": [
+        "CPX B조 2026.01/03/04 복기"
+      ],
+      "linked_sessions": [],
+      "linked_assignments": [],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-cpx-c-park-pcos-aub-discharge",
+      "title": "박미아 CPX: PCOS 무월경, AUB/자궁근종, 칸디다/질분비물",
+      "category": "study",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "resident_owner": "clerk2",
+      "why": "CPX C조 2026.01/03 복기",
+      "source_refs": [
+        "CPX C조 2026.01/03 복기"
+      ],
+      "linked_sessions": [],
+      "linked_assignments": [],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-cpx-d-kimhye-vaginal-discharge",
+      "title": "김혜윤 CPX: BV/Trichomonas/Candida 질분비물",
+      "category": "study",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "resident_owner": "clerk2",
+      "why": "CPX D조 2026.01/03/04 복기",
+      "source_refs": [
+        "CPX D조 2026.01/03/04 복기"
+      ],
+      "linked_sessions": [],
+      "linked_assignments": [],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-nst-normal-reactive",
+      "title": "정상/reactive NST 기준",
+      "category": "study",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "resident_owner": "clerk2",
+      "why": "NST 복기 2025.09/2026.01/04 Q1",
+      "source_refs": [
+        "NST 복기 2025.09/2026.01/04 Q1"
+      ],
+      "linked_sessions": [],
+      "linked_assignments": [],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-nst-nonreactive-interpretation",
+      "title": "Non-reactive NST 그래프 정상/비정상 판단",
+      "category": "study",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "resident_owner": "clerk2",
+      "why": "NST 복기 반복 Q2",
+      "source_refs": [
+        "NST 복기 반복 Q2"
+      ],
+      "linked_sessions": [],
+      "linked_assignments": [],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-nst-variability-definition",
+      "title": "FHR variability 정의와 의미",
+      "category": "study",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "resident_owner": "clerk2",
+      "why": "NST 복기 반복 Q3",
+      "source_refs": [
+        "NST 복기 반복 Q3"
+      ],
+      "linked_sessions": [],
+      "linked_assignments": [],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-nst-sinusoidal-pattern",
+      "title": "Sinusoidal pattern 명칭/원인",
+      "category": "study",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "resident_owner": "clerk2",
+      "why": "NST 복기 반복 Q4",
+      "source_refs": [
+        "NST 복기 반복 Q4"
+      ],
+      "linked_sessions": [],
+      "linked_assignments": [],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-nst-decelerations-early-variable-late",
+      "title": "Early/variable/late deceleration 판독과 원인",
+      "category": "study",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "resident_owner": "clerk2",
+      "why": "NST 복기 Q5-8",
+      "source_refs": [
+        "NST 복기 Q5-8"
+      ],
+      "linked_sessions": [],
+      "linked_assignments": [],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-nst-intrauterine-resuscitation",
+      "title": "Intrauterine resuscitation / nonreassuring FHR 처치",
+      "category": "study",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "resident_owner": "clerk2",
+      "why": "NST 2025.09 Q6, Q7",
+      "source_refs": [
+        "NST 2025.09 Q6, Q7"
+      ],
+      "linked_sessions": [],
+      "linked_assignments": [],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-nst-mvu-calculation",
+      "title": "MVU 계산: 강도·빈도·10분 합산",
+      "category": "study",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "resident_owner": "clerk2",
+      "why": "NST 복기 반복 Q9",
+      "source_refs": [
+        "NST 복기 반복 Q9"
+      ],
+      "linked_sessions": [],
+      "linked_assignments": [],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    }
+  ],
+  "pretest_items": [
+    {
+      "id": "obgyn-test-cervical-cancer-cin-colposcopy",
+      "exam": "pretest/posttest",
+      "prompt": "자궁경부암/CIN/colposcopy: 역학-병기-치료-추적",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "frequency_hint": "Pre 2026.04/03/2025 반복, Post 2026.04 탈야",
+      "answer_source": "산부인과 pre/post-test 복기",
+      "study_status": "todo",
+      "source_refs": [
+        "Pre 2026.04/03/2025 반복, Post 2026.04 탈야"
+      ],
+      "paperclip_issue": "AI-14"
+    },
+    {
+      "id": "obgyn-test-prenatal-care-screening-sonography",
+      "exam": "pretest/posttest",
+      "prompt": "임신 초기 기본검사, 시기별 정규검사, 산과초음파, 다운증후군 선별",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "frequency_hint": "Pre 2026.04/03/2025, Post 2025.10",
+      "answer_source": "산부인과 pre/post-test 복기",
+      "study_status": "todo",
+      "source_refs": [
+        "Pre 2026.04/03/2025, Post 2025.10"
+      ],
+      "paperclip_issue": "AI-14"
+    },
+    {
+      "id": "obgyn-test-preterm-birth-preterm-labor",
+      "exam": "pretest/posttest",
+      "prompt": "조산의 의의, 조기진통 진단·약물·분만 관리",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "frequency_hint": "Pre 2026.04, Post 2026.02",
+      "answer_source": "산부인과 pre/post-test 복기",
+      "study_status": "todo",
+      "source_refs": [
+        "Pre 2026.04, Post 2026.02"
+      ],
+      "paperclip_issue": "AI-14"
+    },
+    {
+      "id": "obgyn-test-pih-preeclampsia",
+      "exam": "pretest/posttest",
+      "prompt": "임신성고혈압 분류/진단, 전자간증 중증도 지표",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "frequency_hint": "Pre 2025 반복, Post 2026.04/2025.09",
+      "answer_source": "산부인과 pre/post-test 복기",
+      "study_status": "todo",
+      "source_refs": [
+        "Pre 2025 반복, Post 2026.04/2025.09"
+      ],
+      "paperclip_issue": "AI-14"
+    },
+    {
+      "id": "obgyn-test-normal-labor-dystocia",
+      "exam": "pretest/posttest",
+      "prompt": "정상분만 1·2기, 난산 분류·원인·대처",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "frequency_hint": "Pre 2026.03/2025.10",
+      "answer_source": "산부인과 pre/post-test 복기",
+      "study_status": "todo",
+      "source_refs": [
+        "Pre 2026.03/2025.10"
+      ],
+      "paperclip_issue": "AI-14"
+    },
+    {
+      "id": "obgyn-test-csection-induction-bishop",
+      "exam": "pretest/posttest",
+      "prompt": "제왕절개 합병증·자궁절개, 유도분만/Bishop score",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "frequency_hint": "Pre 2026.01/2025.10, Post 2026.05/2025",
+      "answer_source": "산부인과 pre/post-test 복기",
+      "study_status": "todo",
+      "source_refs": [
+        "Pre 2026.01/2025.10, Post 2026.05/2025"
+      ],
+      "paperclip_issue": "AI-14"
+    },
+    {
+      "id": "obgyn-test-pph-acute-obstetric-bleeding",
+      "exam": "pretest/posttest",
+      "prompt": "산후출혈/급성산과출혈: 4T, 지혈기전, 초기·내외과 처치",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "frequency_hint": "Pre 2026.01, Post 2026.05",
+      "answer_source": "산부인과 pre/post-test 복기",
+      "study_status": "todo",
+      "source_refs": [
+        "Pre 2026.01, Post 2026.05"
+      ],
+      "paperclip_issue": "AI-14"
+    },
+    {
+      "id": "obgyn-test-aub-dysmenorrhea-postcoital-bleeding",
+      "exam": "pretest/posttest",
+      "prompt": "가임기 AUB, 성교후 질출혈, 원발/속발 월경통",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "owner_slot": "clerk2",
+      "frequency_hint": "Pre 2026.01/2025 반복",
+      "answer_source": "산부인과 pre/post-test 복기",
+      "study_status": "todo",
+      "source_refs": [
+        "Pre 2026.01/2025 반복"
+      ],
+      "paperclip_issue": "AI-14"
+    },
+    {
+      "id": "obgyn-test-contraception-hpo-axis",
+      "exam": "pretest/posttest",
+      "prompt": "복합경구피임제 기전/적응증/절대금기, HPO axis",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "owner_slot": "clerk2",
+      "frequency_hint": "Pre 2026.04/2025.10",
+      "answer_source": "산부인과 pre/post-test 복기",
+      "study_status": "todo",
+      "source_refs": [
+        "Pre 2026.04/2025.10"
+      ],
+      "paperclip_issue": "AI-14"
+    },
+    {
+      "id": "obgyn-test-ovarian-tumors-markers-staging",
+      "exam": "pretest/posttest",
+      "prompt": "상피성/생식세포/성삭간질 난소종양 분류, marker, 병기, 상담",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "owner_slot": "clerk2",
+      "frequency_hint": "Pre 2026.04/03/2025, Post 2026.05/2025",
+      "answer_source": "산부인과 pre/post-test 복기",
+      "study_status": "todo",
+      "source_refs": [
+        "Pre 2026.04/03/2025, Post 2026.05/2025"
+      ],
+      "paperclip_issue": "AI-14"
+    },
+    {
+      "id": "obgyn-test-endometriosis-infertility",
+      "exam": "pretest/posttest",
+      "prompt": "자궁내막증 문제·치료효과, 불임 부부 평가",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "owner_slot": "clerk2",
+      "frequency_hint": "Post 2026.05/02/2025 반복",
+      "answer_source": "산부인과 pre/post-test 복기",
+      "study_status": "todo",
+      "source_refs": [
+        "Post 2026.05/02/2025 반복"
+      ],
+      "paperclip_issue": "AI-14"
+    },
+    {
+      "id": "obgyn-test-endometrial-disease-pelvic-mass",
+      "exam": "pretest/posttest",
+      "prompt": "자궁내막암/증식증, 폐경 여성 골반종괴 접근",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "owner_slot": "clerk2",
+      "frequency_hint": "Pre 2026.01, Post 2026.04/2025",
+      "answer_source": "산부인과 pre/post-test 복기",
+      "study_status": "todo",
+      "source_refs": [
+        "Pre 2026.01, Post 2026.04/2025"
+      ],
+      "paperclip_issue": "AI-14"
+    },
+    {
+      "id": "obgyn-test-abortion-recurrent-abortion",
+      "exam": "pretest/posttest",
+      "prompt": "자연유산 분류/원인, 반복유산 원인별 검사·치료",
+      "priority_label": "P2",
+      "priority_score": 4,
+      "owner_slot": "clerk2",
+      "frequency_hint": "Post 2025.10/09",
+      "answer_source": "산부인과 pre/post-test 복기",
+      "study_status": "todo",
+      "source_refs": [
+        "Post 2025.10/09"
+      ],
+      "paperclip_issue": "AI-14"
+    },
+    {
+      "id": "obgyn-test-postpartum-fever-gdm-chemo-hysterectomy",
+      "exam": "pretest/posttest",
+      "prompt": "산욕열, 임신성 당뇨병, 항암치료 전 고려사항, 자궁절제술",
+      "priority_label": "P2",
+      "priority_score": 4,
+      "owner_slot": "clerk2",
+      "frequency_hint": "Post 2026.04/02/2025 반복",
+      "answer_source": "산부인과 pre/post-test 복기",
+      "study_status": "todo",
+      "source_refs": [
+        "Post 2026.04/02/2025 반복"
+      ],
+      "paperclip_issue": "AI-14"
+    }
+  ],
+  "ufolio_items": [
+    {
+      "id": "obgyn-ufolio-gyn-colposcopy-biopsy-conization",
+      "title": "질확대경검사/펀치생검/원추절제술",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "area": "부인과",
+      "source_refs": [
+        "U-Folio 12항목: 부인과 1"
+      ],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-ufolio-gyn-endometrial-biopsy",
+      "title": "자궁내막조직검사",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "area": "부인과",
+      "source_refs": [
+        "U-Folio 12항목: 부인과 2"
+      ],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-ufolio-gyn-ultrasound",
+      "title": "부인과 초음파검사",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "owner_slot": "clerk2",
+      "area": "부인과",
+      "source_refs": [
+        "U-Folio 12항목: 부인과 3"
+      ],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-ufolio-gyn-iud-insert-remove",
+      "title": "자궁내 피임장치 삽입 및 제거",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "area": "부인과",
+      "source_refs": [
+        "U-Folio 12항목: 부인과 4"
+      ],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-ufolio-gyn-surgical-assist",
+      "title": "부인과 수술보조",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "owner_slot": "clerk2",
+      "area": "부인과",
+      "source_refs": [
+        "U-Folio 12항목: 부인과 5"
+      ],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-ufolio-gyn-pelvic-exam",
+      "title": "골반진찰",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "owner_slot": "clerk2",
+      "area": "부인과",
+      "source_refs": [
+        "U-Folio 12항목: 부인과 6"
+      ],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-ufolio-ob-first-trimester-nt",
+      "title": "임신 1삼분기 초음파 및 NT 측정",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "owner_slot": "clerk2",
+      "area": "산과",
+      "source_refs": [
+        "U-Folio 12항목: 산과 1"
+      ],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-ufolio-ob-second-third-trimester-cl",
+      "title": "임신 2,3삼분기 초음파 및 자궁경부 길이 측정",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "owner_slot": "clerk2",
+      "area": "산과",
+      "source_refs": [
+        "U-Folio 12항목: 산과 2"
+      ],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-ufolio-ob-doppler",
+      "title": "초음파 도플러 검사",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "owner_slot": "clerk2",
+      "area": "산과",
+      "source_refs": [
+        "U-Folio 12항목: 산과 3"
+      ],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-ufolio-ob-vaginal-delivery-episiotomy",
+      "title": "질식분만 참관 및 회음절개 봉합관찰",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "area": "산과",
+      "source_refs": [
+        "U-Folio 12항목: 산과 4"
+      ],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-ufolio-ob-cesarean-observation",
+      "title": "제왕절개술 참관",
+      "priority_label": "P1",
+      "priority_score": 7,
+      "owner_slot": "clerk2",
+      "area": "산과",
+      "source_refs": [
+        "U-Folio 12항목: 산과 5"
+      ],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    },
+    {
+      "id": "obgyn-ufolio-ob-fhr-uterine-contraction-monitor",
+      "title": "태아심음 자궁수축 감시장치의 이해",
+      "priority_label": "P0",
+      "priority_score": 10,
+      "owner_slot": "clerk2",
+      "area": "산과",
+      "source_refs": [
+        "U-Folio 12항목: 산과 6"
+      ],
+      "paperclip_issue": "AI-14",
+      "status": "todo"
+    }
+  ],
+  "field_questions": [],
+  "resident_queue": [
+    {
+      "id": "rq-obgyn-001",
+      "owner": "clerk1",
+      "paperclip_issue": "AI-13",
+      "task": "산부인과 인계 → 4주 일정/과제 matrix 정리",
+      "input_paths": [
+        "outputs/clerkship/obgyn_ingest_2026-06-05/extracted_text/산부인과_전체인계_2026.05.09_업데이트_.docx.txt",
+        "outputs/clerkship/obgyn_ingest_2026-06-05/extracted_text/조장_산부인과_일정표_개인_참고용_.docx.txt"
+      ],
+      "output_path": "outputs/clerkship/obgyn_ingest_2026-06-05/resident1_schedule_assignment_matrix.md",
+      "status": "queued",
+      "done_gate": "총괄 QC 후 bundle sessions/assignments 반영"
+    },
+    {
+      "id": "rq-obgyn-002",
+      "owner": "clerk2",
+      "paperclip_issue": "AI-14",
+      "task": "산부인과 CPX/ufolio/pretest/NST study pack 정리",
+      "input_paths": [
+        "outputs/clerkship/obgyn_ingest_2026-06-05/extracted_text/산부인과_CPX_인계_2026.05.09_업데이트_.docx.txt",
+        "outputs/clerkship/obgyn_ingest_2026-06-05/extracted_text/산부인과_ufolio_인계_2026.05.09_업데이트_.docx.txt",
+        "outputs/clerkship/obgyn_ingest_2026-06-05/extracted_text/pre-test_post-test_복기_2026.05.09_update_.docx.txt",
+        "outputs/clerkship/obgyn_ingest_2026-06-05/extracted_text/nst_시험_복기_2026.05.09_update_.docx.txt"
+      ],
+      "output_path": "outputs/clerkship/obgyn_ingest_2026-06-05/resident2_cpx_ufolio_pretest_pack.md",
+      "status": "queued",
+      "done_gate": "총괄 QC 후 study_items/pretest_items/ufolio_items 반영"
+    },
+    {
+      "id": "rq-obgyn-003",
+      "owner": "clerk3-reserve",
+      "paperclip_issue": "AI-15",
+      "task": "현장 돌발 질문 on-call reserve",
+      "input_paths": [],
+      "output_path": "outputs/clerkship/obgyn_ingest_2026-06-05/field_questions_log.md",
+      "status": "reserve",
+      "done_gate": "돌발 질문 발생 시만 호출"
+    }
+  ],
+  "daily_briefing_seed": {
+    "mode": "obgyn-central-datacenter",
+    "count_summary": {
+      "sessions": 20,
+      "assignments": 39,
+      "study_items": 12,
+      "pretest_items": 14,
+      "ufolio_items": 12
+    },
+    "routing": {
+      "clerk1": "scheduled work: 일정/과제/제출/출석 matrix",
+      "clerk2": "study pack: CPX/U-Folio/Pretest/NST",
+      "clerk3-reserve": "field questions only"
+    }
+  },
+  "day_reminders": [
+    {
+      "id": "obgyn-reminder-daily-sign",
+      "title": "출근/퇴근 서명 확인",
+      "priority": "P0",
+      "paperclip_issue": "AI-12"
+    },
+    {
+      "id": "obgyn-reminder-today-schedule",
+      "title": "오늘 일정/장소/교수님 확인",
+      "priority": "P0",
+      "paperclip_issue": "AI-12"
+    },
+    {
+      "id": "obgyn-reminder-ufolio-progress",
+      "title": "U-Folio 12항목 진행률 확인",
+      "priority": "P1",
+      "paperclip_issue": "AI-14"
+    },
+    {
+      "id": "obgyn-reminder-field-question-log",
+      "title": "현장 돌발 질문 발생 시 field_questions에 기록",
+      "priority": "P1",
+      "paperclip_issue": "AI-15"
+    }
+  ]
+}

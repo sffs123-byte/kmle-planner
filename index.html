@@ -2403,6 +2403,7 @@
           <button class="btn btn-secondary" id="loadRespBundleBtn">호흡기 실습 불러오기</button>
           <button class="btn btn-secondary" id="loadCardioBundleBtn">심장내과 실습 불러오기</button>
           <button class="btn btn-secondary" id="loadPedsBundleBtn">소아청소년과 실습 불러오기</button>
+          <button class="btn btn-secondary" id="loadObgynBundleBtn">산부인과 실습 불러오기</button>
           <button class="btn btn-secondary" id="exportBtn">데이터 내보내기</button>
           <label class="btn btn-ghost" for="importInput">데이터 가져오기</label>
           <input id="importInput" type="file" accept="application/json" class="sr-only" />
@@ -8148,6 +8149,20 @@
       } catch (error) {
         console.error(error);
         alert('소아청소년과 실습 bundle 불러오기에 실패했어. 서버에서 열었는지, 파일 경로가 맞는지 확인해줘.');
+      }
+    });
+
+    byId('loadObgynBundleBtn').addEventListener('click', async () => {
+      if (location.protocol === 'file:') {
+        alert('파일로 직접 열었을 때는 자동 fetch가 막힐 수 있어. `데이터 가져오기`로 bundle 파일을 직접 선택해줘.');
+        return;
+      }
+      try {
+        await loadPlannerBundleFromUrl('./data/clerkships/bundles/obgyn_2026_06_track_a3g6.bundle.json');
+        alert('산부인과 실습 bundle을 불러왔어. 실습 캘린더 탭으로 이동했어.');
+      } catch (error) {
+        console.error(error);
+        alert('산부인과 실습 bundle 불러오기에 실패했어. 서버에서 열었는지, 파일 경로가 맞는지 확인해줘.');
       }
     });
 

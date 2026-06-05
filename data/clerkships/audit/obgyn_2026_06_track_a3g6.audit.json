@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-06-05T23:18:00+09:00",
+  "bundle": "data/clerkships/bundles/obgyn_2026_06_track_a3g6.bundle.json",
+  "clerkship_id": "obgyn-2026-06-track-a3g6",
+  "status": "local_smoke_pass",
+  "counts": {
+    "sessions": 20,
+    "assignments": 39,
+    "study_items": 12,
+    "pretest_items": 14,
+    "ufolio_items": 12,
+    "field_questions": 0,
+    "resident_queue": 3
+  },
+  "source_outputs": {
+    "resident1": "outputs/clerkship/obgyn_ingest_2026-06-05/resident1_schedule_assignment_matrix.md",
+    "resident2": "outputs/clerkship/obgyn_ingest_2026-06-05/resident2_cpx_ufolio_pretest_pack.md"
+  },
+  "paperclip_refs": {
+    "epic": "AI-6",
+    "siteops": "AI-7",
+    "ingest": "AI-8",
+    "bundle": "AI-9",
+    "ui": "AI-10",
+    "smoke": "AI-11",
+    "routine": "AI-12",
+    "resident1_matrix": "AI-13",
+    "resident2_pack": "AI-14",
+    "resident3_oncall": "AI-15",
+    "schema": "AI-16"
+  },
+  "smoke": {
+    "curl_index_button": "pass",
+    "curl_bundle_json_counts": "pass",
+    "browser_smoke": "blocked_by_policy_in_current_runtime; use live smoke after push"
+  },
+  "sha256": "1d09836dc5acc5ec911e47ab9bc150586d06c083f0dab49bd7bc580fbb64a2ad"
+}
