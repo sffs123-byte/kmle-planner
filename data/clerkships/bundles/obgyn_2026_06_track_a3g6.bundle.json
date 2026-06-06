@@ -62,9 +62,11 @@
         "date_range": "2026-06-08~2026-06-12",
         "track": "분만",
         "core_items": [
-          "산과 CASE",
-          "XR 발표 후보",
-          "NST/분만실 인계",
+          "산과 CASE 배정/EMR/NST 자료 확보",
+          "XR 발표 후보/금요일 예비 슬롯",
+          "NST 강의 후보",
+          "출근·퇴근 서명",
+          "분만실 환자리스트/NST/파토그램/EMR 루틴",
           "U-Folio 산과 관찰 항목 확보"
         ]
       },
@@ -401,6 +403,20 @@
           "80-90분: U-Folio 현장 체크 — 오늘 어느 분과에서 12항목 중 무엇을 채울지 확정."
         ]
       }
+    },
+    "delivery_week_calendar_fill": {
+      "version": "20260606T150033Z",
+      "title": "분만주 calendar-visible 세부 일정 보강",
+      "rule": "원문상 주차/오전/오후만 확인된 항목도 캘린더 본문에 보이게 배치하고, 정확한 시간은 확인 필요로 남긴다.",
+      "source_basis": [
+        "OBGYN-OVERALL-P0038~P0048 출근/퇴근 서명",
+        "OBGYN-OVERALL-P0080~P0084 의국회의",
+        "OBGYN-OVERALL-P0087~P0094 NST 강의",
+        "OBGYN-OVERALL-P0104~P0116 산과 CASE/XR/NST 자료",
+        "분만주 매뉴얼: 출근 루트, PK 자리, 환자리스트/NST/파토그램/EMR, 회진/질문, U-Folio 회수"
+      ],
+      "added_or_visible_session_count": 34,
+      "week1_expected_primary_sessions_min": 30
     }
   },
   "source_refs": [
@@ -687,13 +703,13 @@
       "week": "week1",
       "day": "월",
       "date": "2026-06-08",
-      "time_raw": "각 조 분만주 월요일, 이경노 교수님 회진 전후",
-      "start_time": "08:00",
-      "end_time": "",
-      "time_label": "분만주 월요일 · 이경노 교수님 회진 전후",
-      "title": "산과 CASE 받기",
+      "time_raw": "분만주 첫날 회진 시 CASE 배정. OT/Pre-test 사이 임시 슬롯",
+      "start_time": "09:30",
+      "end_time": "10:00",
+      "time_label": "월 09:30 임시 배치 · 회진 전후 확인",
+      "title": "산과 CASE 받기 / 출석부 인수",
       "professor": "",
-      "event_type": "case",
+      "event_type": "presentation",
       "difficulty": 10,
       "priority_label": "P0",
       "status": "needs_confirmation",
@@ -701,8 +717,8 @@
       "needs_confirmation": true,
       "site": "main",
       "location": "소아동 3층 분만실 / 이경노 교수님",
-      "summary": "분만조 첫날 이경노 교수님이 이민아/강병헌/이경노 Pf 케이스를 배정하고 발표 포인트를 알려줌.",
-      "note": "분만조 첫날 이경노 교수님이 이민아/강병헌/이경노 Pf 케이스를 배정하고 발표 포인트를 알려줌. / 케이스 받자마자 EMR/진단기준 공부. 환자 전화문진 금지.",
+      "summary": "첫날 회진 전후 이경노 교수님께 산과 CASE 배정. 분만조 조장이 출석부도 인수해 출근/퇴근서명 운영 시작.",
+      "note": "정확한 시간은 회진/OT 흐름에 따라 확인. 케이스 배정 시 핵심 공부 포인트를 받아 발표자뿐 아니라 조원 전체가 공유해야 함.",
       "calendar_body_short": "분만조 첫날 이경노 교수님이 이민아/강병헌/이경노 Pf 케이스를 배정하고 발표 포인트를 알려줌.",
       "resident_owner": "clerk1",
       "paperclip_refs": [
@@ -713,39 +729,44 @@
       ],
       "sections": {
         "인계 내용": [
-          "분만조 첫날 이경노 교수님이 이민아/강병헌/이경노 Pf 케이스를 배정하고 발표 포인트를 알려줌."
+          "각 조 분만조 도는 첫날 회진 시, 이경노 교수님께서 이민아/강병헌/이경노 교수님 케이스를 골고루 주신다는 인계.",
+          "분만조 조장이 전체조장에게서 첫날에 출석부를 넘겨받고 출석/퇴근서명을 맡는다."
         ],
         "주의사항 / 확인 필요": [
-          "케이스 받자마자 EMR/진단기준 공부. 환자 전화문진 금지."
+          "CASE 배정 실제 시각은 첫날 회진/OT/Pre-test 흐름에 따라 달라질 수 있음.",
+          "케이스 배정 때 공부할 내용을 알려주므로 발표자 외 조원도 공유 필요."
         ],
         "source": [
           "ALL §산과 CASE; WHOLE_SCHED; SCHED"
         ],
         "owner_slot": [
           "clerk1"
+        ],
+        "캘린더 배치 기준": [
+          "원문은 “분만주 첫날 회진 시”로 시간 미정. OT/Pre-test 사이에 보이도록 09:30 임시 배치."
         ]
       },
       "rotation_week": 1,
       "rotation_track": "A조 분만",
       "calendar_ready": true,
       "group_scope": "A조 분만",
-      "windowType": "clerkship-overlay",
+      "windowType": "clerkship-session",
       "date_confidence": "corrected_from_user_message_2026-06-06_first_week_delivery"
     },
     {
       "id": "obgyn-evt-obst-case-xr-presentation",
       "clerkship": "obgyn-2026-06-track-a3g6",
       "week": "week1",
-      "day": "목/금",
+      "day": "목",
       "date": "2026-06-11",
-      "time_raw": "분만주 목/금, XR 임상실습센터",
-      "start_time": "",
-      "end_time": "",
-      "time_label": "분만주 목/금 후보 · XR센터 일정 확인",
-      "title": "산과 CASE 발표 + XR 체험 후보",
-      "professor": "",
-      "event_type": "case",
-      "windowType": "clerkship-overlay",
+      "time_raw": "분만주 목/금. XR 실습 직후 이어서 진행 가능",
+      "start_time": "15:00",
+      "end_time": "16:30",
+      "time_label": "목 15:00 임시 배치 · 목/금 후보",
+      "title": "산과 CASE 발표 후보",
+      "professor": "이경노",
+      "event_type": "presentation",
+      "windowType": "clerkship-session",
       "difficulty": 10,
       "priority_label": "P0",
       "status": "needs_confirmation",
@@ -753,8 +774,8 @@
       "needs_confirmation": true,
       "site": "main",
       "location": "XR 임상실습센터 / 이경노 교수님",
-      "summary": "XR센터 VR 체험 후 이경노 교수님 케발 진행. 10분 이내 PPT, USB/메일 준비. 발표자 외 조원도 질문받을 수 있음.",
-      "note": "XR센터 VR 체험 후 이경노 교수님 케발 진행. 10분 이내 PPT, USB/메일 준비. 발표자 외 조원도 질문받을 수 있음. / 질문 3–4개 이상 준비. 발표자료 공유. 교수님이 5초 내 답변 요구한 인계 있음. 필요 자료 분실 시 이민아 교수님께 직접 말하라는 인계.",
+      "summary": "XR 체험 후 이경노 교수님 산과 CASE 발표 후보. 10분 이내 PPT, USB/메일 준비.",
+      "note": "정확한 목/금 및 시간은 공지 확인. 발표자 외 조원도 질문받을 수 있어 케이스 공유와 질문 3-4개 준비 필요.",
       "calendar_body_short": "XR센터 VR 체험 후 이경노 교수님 케발 진행. 10분 이내 PPT, USB/메일 준비. 발표자 외 조원도 질문받을 수 있음.",
       "resident_owner": "clerk1",
       "paperclip_refs": [
@@ -765,16 +786,21 @@
       ],
       "sections": {
         "인계 내용": [
-          "XR센터 VR 체험 후 이경노 교수님 케발 진행. 10분 이내 PPT, USB/메일 준비. 발표자 외 조원도 질문받을 수 있음."
+          "10분 이내 PPT. 한글파일 금지. USB 또는 메일에 발표자료 저장.",
+          "발표자뿐 아니라 참석 조원도 질문받을 수 있음."
         ],
         "주의사항 / 확인 필요": [
-          "질문 3–4개 이상 준비. 발표자료 공유. 교수님이 5초 내 답변 요구한 인계 있음. 필요 자료 분실 시 이민아 교수님께 직접 말하라는 인계."
+          "질문 3-4개 이상 준비. 교수님이 5초 내 답변을 요구했다는 인계 있음.",
+          "의무기록 진단명이 실제와 다를 수 있어 교과서 수준 진단기준 확인."
         ],
         "source": [
           "ALL §산과 CASE; SCHED"
         ],
         "owner_slot": [
           "clerk1"
+        ],
+        "캘린더 배치 기준": [
+          "원문은 분만주 목 or 금, XR 실습 직후. 우선 목요일 오후 15:00에 표시하고 금요일 예비 슬롯도 따로 둠."
         ]
       },
       "rotation_week": 1,
@@ -980,14 +1006,14 @@
       "week": "week1",
       "day": "월",
       "date": "2026-06-08",
-      "time_raw": "공식 퇴근 18:00, 분만실 스테이션",
-      "start_time": "18:00",
-      "end_time": "",
-      "time_label": "매 실습일 18:00 전후 · 분만실 스테이션",
-      "title": "퇴근 서명 루틴 시작",
+      "time_raw": "18:00 공식 퇴근, 17:40 인수인계 이후 방해되지 않는 시간에 받기",
+      "start_time": "17:40",
+      "end_time": "18:00",
+      "time_label": "월 17:40-18:00",
+      "title": "퇴근 서명(월)",
       "professor": "",
       "event_type": "admin",
-      "windowType": "clerkship-overlay",
+      "windowType": "clerkship-session",
       "difficulty": 10,
       "priority_label": "P0",
       "status": "needs_confirmation",
@@ -995,8 +1021,8 @@
       "needs_confirmation": true,
       "site": "main",
       "location": "소아동 3층 분만실 스테이션",
-      "summary": "분만조 조장이 분만실 담당 레지던트에게 12명 전원 퇴근서명 받고 전공의 톡방에 공지해야 퇴근 가능.",
-      "note": "분만조 조장이 분만실 담당 레지던트에게 12명 전원 퇴근서명 받고 전공의 톡방에 공지해야 퇴근 가능. / 17:40 전후 인수인계 방해하지 말고 이후 요청. 인수인계 늦어지면 18시 이후 대기. 불시점검 가능, 17시부터 병원 대기 권고.",
+      "summary": "분만조 조장이 분만실 레지던트 선생님께 퇴근서명. 인수인계 방해되지 않게 17:40 이후 대기.",
+      "note": "원칙은 전체 조원 인원 확인 후 퇴근서명. 서명 후 전공의 톡방에 말씀드려야 전원 퇴근 가능.",
       "calendar_body_short": "분만조 조장이 분만실 담당 레지던트에게 12명 전원 퇴근서명 받고 전공의 톡방에 공지해야 퇴근 가능.",
       "resident_owner": "secretary",
       "paperclip_refs": [
@@ -1007,16 +1033,20 @@
       ],
       "sections": {
         "인계 내용": [
-          "분만조 조장이 분만실 담당 레지던트에게 12명 전원 퇴근서명 받고 전공의 톡방에 공지해야 퇴근 가능."
+          "분만조 조장이 분만실 담당 레지던트 선생님께 받기.",
+          "서명 후 전공의 톡방에 공지해야 조원 전원 퇴근 가능."
         ],
         "주의사항 / 확인 필요": [
-          "17:40 전후 인수인계 방해하지 말고 이후 요청. 인수인계 늦어지면 18시 이후 대기. 불시점검 가능, 17시부터 병원 대기 권고."
+          "인수인계가 늦어지면 18시 이후까지 대기. 불시 전원 점검 가능."
         ],
         "source": [
           "ALL §퇴근서명; LEADER_SUM"
         ],
         "owner_slot": [
           "secretary"
+        ],
+        "캘린더 배치 기준": [
+          "원문은 공식 18:00 퇴근, 인수인계가 17:40 즈음. 매일 17:40-18:00 visible 일정으로 배치."
         ]
       },
       "rotation_week": 1,
@@ -1127,16 +1157,16 @@
       "id": "obgyn-common-dept-conf-main",
       "clerkship": "obgyn-2026-06-track-a3g6",
       "week": "week1",
-      "day": "수/목",
+      "day": "수",
       "date": "2026-06-10",
-      "time_raw": "원문상 수/목 08:00 또는 26년 3월 화/수 재개, 6층 의국",
-      "start_time": "07:40",
-      "end_time": "",
-      "time_label": "수/목 07:40 후보 · 실시 여부 확인",
-      "title": "본원 의국회의 후보",
+      "time_raw": "매주 수/목 08:00-08:30 후보. 07:40 출석 후 07:50까지 의국 세팅",
+      "start_time": "08:00",
+      "end_time": "08:30",
+      "time_label": "수 08:00-08:30 후보",
+      "title": "의국회의 후보(수)",
       "professor": "",
-      "event_type": "conference",
-      "windowType": "clerkship-overlay",
+      "event_type": "session",
+      "windowType": "clerkship-session",
       "difficulty": 7,
       "priority_label": "P1",
       "status": "needs_confirmation",
@@ -1144,8 +1174,8 @@
       "needs_confirmation": true,
       "site": "main",
       "location": "6층 의국",
-      "summary": "의국세팅·Zoom 세팅. 교수님 의국회의 내용이 시험에 나올 수 있다는 인계.",
-      "note": "의국세팅·Zoom 세팅. 교수님 의국회의 내용이 시험에 나올 수 있다는 인계. / 요일/실시 여부가 파일별로 다름 → OT 때 확인, 안 알려주면 교육담당 전공의에게 확인. 07:40 출첵·07:50 의국 도착 세팅.",
+      "summary": "수요일 의국회의 후보. 07:40 출석, 07:50까지 의국 도착 후 OT 때처럼 의자/PC/빔/Zoom 세팅.",
+      "note": "의국회의는 안 하는 경우도 있고 과거에는 화/수로 진행된 적도 있음. 변동 시 출근시간 조정 공지 필요.",
       "calendar_body_short": "의국세팅·Zoom 세팅. 교수님 의국회의 내용이 시험에 나올 수 있다는 인계.",
       "resident_owner": "secretary",
       "paperclip_refs": [
@@ -1156,16 +1186,20 @@
       ],
       "sections": {
         "인계 내용": [
-          "의국세팅·Zoom 세팅. 교수님 의국회의 내용이 시험에 나올 수 있다는 인계."
+          "07:40 출근서명 후 07:50까지 의국 도착, 의자/PC/빔/Zoom 세팅.",
+          "의국회의에서 Pre/Post-test 탈야가 나올 수 있다는 인계."
         ],
         "주의사항 / 확인 필요": [
-          "요일/실시 여부가 파일별로 다름 → OT 때 확인, 안 알려주면 교육담당 전공의에게 확인. 07:40 출첵·07:50 의국 도착 세팅."
+          "오티 때 의국회의 시행 여부를 잘 듣기. 없으면 07:50 출근으로 조정 가능."
         ],
         "source": [
           "ALL §의국회의; SCHED; WHOLE_SCHED; PREPOST"
         ],
         "owner_slot": [
           "secretary"
+        ],
+        "캘린더 배치 기준": [
+          "원문은 수/목 08:00-08:30, 과거 화/수 변동. 우선 수요일 08:00 visible 일정으로 반영."
         ]
       },
       "rotation_week": 1,
@@ -1232,8 +1266,8 @@
       "date": "2026-06-08",
       "time_raw": "1주차, 보통 시작 1–3일 내, 6층 의국 또는 소아동 수술실 세미나실",
       "start_time": "11:10",
-      "end_time": "",
-      "time_label": "1주차 월요일 후보 · 박미아 교수님",
+      "end_time": "12:00",
+      "time_label": "월 11:10-12:00 후보 · 박미아 교수님",
       "title": "부인과 OSCE 강의 후보",
       "professor": "",
       "event_type": "osce",
@@ -1266,12 +1300,16 @@
         ],
         "owner_slot": [
           "clerk1"
+        ],
+        "캘린더 배치 기준": [
+          "원문은 1주차, 보통 실습 시작 1-3일 이내. 이전 반영처럼 월 11:10 후보로 유지하되 종료 시간을 12:00으로 보강."
         ]
       },
       "rotation_week": 1,
       "rotation_track": "공통",
       "calendar_ready": true,
-      "group_scope": "공통"
+      "group_scope": "공통",
+      "windowType": "clerkship-session"
     },
     {
       "id": "obgyn-common-nst-lecture",
@@ -1279,14 +1317,14 @@
       "week": "week1",
       "day": "화",
       "date": "2026-06-09",
-      "time_raw": "1주차 예정이나 변동 가능, 강병헌 교수님, 의국 등",
-      "start_time": "",
-      "end_time": "",
-      "time_label": "1주차 후보 · 강병헌 교수님",
-      "title": "NST 강의 후보",
-      "professor": "",
-      "event_type": "exam",
-      "windowType": "clerkship-overlay",
+      "time_raw": "1주차에 진행, 분만조 통해 공지. 시간 미정이라 화요일 오후 임시 배치",
+      "start_time": "14:00",
+      "end_time": "14:30",
+      "time_label": "화 14:00 임시 배치 · 강병헌 교수님",
+      "title": "NST 강의 후보(1주차)",
+      "professor": "강병헌",
+      "event_type": "session",
+      "windowType": "clerkship-session",
       "difficulty": 7,
       "priority_label": "P1",
       "status": "needs_confirmation",
@@ -1294,8 +1332,8 @@
       "needs_confirmation": true,
       "site": "main",
       "location": "6층 의국",
-      "summary": "분만조 통해 공지. 약 30분, 질문 가능. 강의 때 NST 시험 일정 확인.",
-      "note": "분만조 통해 공지. 약 30분, 질문 가능. 강의 때 NST 시험 일정 확인. / 26년 3/4월에는 2주차/화요일 등 변동. 별도 공지 없으면 첫날/분만주에 여쭙기.",
+      "summary": "강병헌 교수님 NST 강의. 의국/장소 변동 가능, 약 30분. 강의 때 질문 가능.",
+      "note": "1주차 진행이 원칙이나 변동 가능. 26년 3/4월 인계에서는 2주차로 밀린 적 있음. 첫날/초반에 교수님께 일정 확인.",
       "calendar_body_short": "분만조 통해 공지. 약 30분, 질문 가능. 강의 때 NST 시험 일정 확인.",
       "resident_owner": "clerk1",
       "paperclip_refs": [
@@ -1306,16 +1344,20 @@
       ],
       "sections": {
         "인계 내용": [
-          "분만조 통해 공지. 약 30분, 질문 가능. 강의 때 NST 시험 일정 확인."
+          "강병헌 교수님 NST 강의. 의국 변동 가능. 약 30분 소요.",
+          "강의 때 학생 지정 질문 가능. NST 시험 일정도 이때 확인."
         ],
         "주의사항 / 확인 필요": [
-          "26년 3/4월에는 2주차/화요일 등 변동. 별도 공지 없으면 첫날/분만주에 여쭙기."
+          "실제 일정은 분만조 통해 교수님 공지. 2주차로 밀린 과거 인계 있음."
         ],
         "source": [
           "ALL §NST강의; SCHED; NST"
         ],
         "owner_slot": [
           "clerk1"
+        ],
+        "캘린더 배치 기준": [
+          "원문은 1주차 진행, 시간 미정. “오후면 14시” 원칙에 따라 화요일 14:00 임시 배치."
         ]
       },
       "rotation_week": 1,
@@ -1421,6 +1463,1637 @@
       "rotation_track": "공통",
       "calendar_ready": true,
       "group_scope": "공통"
+    },
+    {
+      "id": "obgyn-delivery-return-seat-mon",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "월",
+      "date": "2026-06-08",
+      "time_raw": "12:00-12:20",
+      "start_time": "12:00",
+      "end_time": "12:20",
+      "time_label": "12:00-12:20",
+      "title": "분만실 복귀 / PK 자리 확인",
+      "professor": "",
+      "event_type": "admin",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "소아동 3층 분만실/331병동",
+      "summary": "OT/Pre-test/OSCE 후보 이후 분만실 복귀, PK 자리·출석부 보관 위치·환자리스트/NST 바구니 확인.",
+      "note": "분만실 PK 자리, 출석부 보관, 환자리스트/NST 종이/파토그램/EMR 확인 흐름을 첫날 실제 위치와 연결. / 소아동 3층 분만실/331병동 구조도와 출근루트를 같이 확인. / 정확한 복귀 시각은 OSCE 강의 여부에 따라 달라질 수 있음.",
+      "calendar_body_short": "OT/Pre-test/OSCE 후보 이후 분만실 복귀, PK 자리·출석부 보관 위치·환자리스트/NST 바구니 확인.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "CONTENT §분만주 매뉴얼",
+        "OBGYN-DELIVERY-I0001",
+        "OBGYN-DELIVERY-I0007"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "분만실 PK 자리, 출석부 보관, 환자리스트/NST 종이/파토그램/EMR 확인 흐름을 첫날 실제 위치와 연결.",
+          "소아동 3층 분만실/331병동 구조도와 출근루트를 같이 확인."
+        ],
+        "주의사항 / 확인 필요": [
+          "정확한 복귀 시각은 OSCE 강의 여부에 따라 달라질 수 있음."
+        ],
+        "source": [
+          "CONTENT §분만주 매뉴얼",
+          "OBGYN-DELIVERY-I0001",
+          "OBGYN-DELIVERY-I0007"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-case-emr-mon",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "월",
+      "date": "2026-06-08",
+      "time_raw": "14:00-14:30",
+      "start_time": "14:00",
+      "end_time": "14:30",
+      "time_label": "14:00-14:30",
+      "title": "산과 CASE EMR/NST 자료 확보",
+      "professor": "",
+      "event_type": "presentation",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "분만실 스테이션 / EMR / NST 바구니",
+      "summary": "배정받은 산과 CASE의 EMR, NST 갈색봉투, 발표자료 준비 포인트를 확보.",
+      "note": "NST는 스테이션 위 흰색 바구니에 있고 본인 케이스 환자 이름 적힌 갈색봉투를 사진 찍어 다시 두라는 인계. / 케이스 배정 때 들은 중요 공부 포인트를 발표자와 조원 전체가 공유. / 환자에게 전화문진 금지. 개인정보 유출 주의. / 자료가 사라졌거나 찾기 어려우면 이민아 교수님께 직접 말해달라는 인계.",
+      "calendar_body_short": "배정받은 산과 CASE의 EMR, NST 갈색봉투, 발표자료 준비 포인트를 확보.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "OBGYN-OVERALL-P0108",
+        "OBGYN-OVERALL-P0116",
+        "OBGYN-OVERALL-P0118"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "NST는 스테이션 위 흰색 바구니에 있고 본인 케이스 환자 이름 적힌 갈색봉투를 사진 찍어 다시 두라는 인계.",
+          "케이스 배정 때 들은 중요 공부 포인트를 발표자와 조원 전체가 공유."
+        ],
+        "주의사항 / 확인 필요": [
+          "환자에게 전화문진 금지. 개인정보 유출 주의.",
+          "자료가 사라졌거나 찾기 어려우면 이민아 교수님께 직접 말해달라는 인계."
+        ],
+        "source": [
+          "OBGYN-OVERALL-P0108",
+          "OBGYN-OVERALL-P0116",
+          "OBGYN-OVERALL-P0118"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-signin-tue",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "화",
+      "date": "2026-06-09",
+      "time_raw": "07:50-08:05",
+      "start_time": "07:50",
+      "end_time": "08:05",
+      "time_label": "07:50-08:05",
+      "title": "출근 서명(화)",
+      "professor": "",
+      "event_type": "admin",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "소아동 3층 엘리베이터 앞",
+      "summary": "분만조 조장이 담당 인턴 선생님께 07:50 출근서명.",
+      "note": "출근 서명은 조장이 분만실 담당 인턴 선생님께 대면으로 받는다. / 월/화/금은 07:50, OT 또는 의국회의 있는 수/목은 07:40 기준. / 의국회의가 없으면 수/목도 07:50으로 조정 가능. / 담당 인턴은 주마다/월초마다 바뀔 수 있어 전날 확인.",
+      "calendar_body_short": "분만조 조장이 담당 인턴 선생님께 07:50 출근서명.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "OBGYN-OVERALL-P0038",
+        "OBGYN-OVERALL-P0039",
+        "OBGYN-CHIEF-FULL-P0112"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "출근 서명은 조장이 분만실 담당 인턴 선생님께 대면으로 받는다.",
+          "월/화/금은 07:50, OT 또는 의국회의 있는 수/목은 07:40 기준."
+        ],
+        "주의사항 / 확인 필요": [
+          "의국회의가 없으면 수/목도 07:50으로 조정 가능.",
+          "담당 인턴은 주마다/월초마다 바뀔 수 있어 전날 확인."
+        ],
+        "source": [
+          "OBGYN-OVERALL-P0038",
+          "OBGYN-OVERALL-P0039",
+          "OBGYN-CHIEF-FULL-P0112"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-signin-wed",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "수",
+      "date": "2026-06-10",
+      "time_raw": "07:40-08:00",
+      "start_time": "07:40",
+      "end_time": "08:00",
+      "time_label": "07:40-08:00",
+      "title": "출근 서명(수)",
+      "professor": "",
+      "event_type": "admin",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "소아동 3층 엘리베이터 앞",
+      "summary": "분만조 조장이 담당 인턴 선생님께 07:40 출근서명.",
+      "note": "출근 서명은 조장이 분만실 담당 인턴 선생님께 대면으로 받는다. / 월/화/금은 07:50, OT 또는 의국회의 있는 수/목은 07:40 기준. / 의국회의가 없으면 수/목도 07:50으로 조정 가능. / 담당 인턴은 주마다/월초마다 바뀔 수 있어 전날 확인.",
+      "calendar_body_short": "분만조 조장이 담당 인턴 선생님께 07:40 출근서명.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "OBGYN-OVERALL-P0038",
+        "OBGYN-OVERALL-P0039",
+        "OBGYN-CHIEF-FULL-P0112"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "출근 서명은 조장이 분만실 담당 인턴 선생님께 대면으로 받는다.",
+          "월/화/금은 07:50, OT 또는 의국회의 있는 수/목은 07:40 기준."
+        ],
+        "주의사항 / 확인 필요": [
+          "의국회의가 없으면 수/목도 07:50으로 조정 가능.",
+          "담당 인턴은 주마다/월초마다 바뀔 수 있어 전날 확인."
+        ],
+        "source": [
+          "OBGYN-OVERALL-P0038",
+          "OBGYN-OVERALL-P0039",
+          "OBGYN-CHIEF-FULL-P0112"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-signin-thu",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "목",
+      "date": "2026-06-11",
+      "time_raw": "07:40-08:00",
+      "start_time": "07:40",
+      "end_time": "08:00",
+      "time_label": "07:40-08:00",
+      "title": "출근 서명(목)",
+      "professor": "",
+      "event_type": "admin",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "소아동 3층 엘리베이터 앞",
+      "summary": "분만조 조장이 담당 인턴 선생님께 07:40 출근서명.",
+      "note": "출근 서명은 조장이 분만실 담당 인턴 선생님께 대면으로 받는다. / 월/화/금은 07:50, OT 또는 의국회의 있는 수/목은 07:40 기준. / 의국회의가 없으면 수/목도 07:50으로 조정 가능. / 담당 인턴은 주마다/월초마다 바뀔 수 있어 전날 확인.",
+      "calendar_body_short": "분만조 조장이 담당 인턴 선생님께 07:40 출근서명.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "OBGYN-OVERALL-P0038",
+        "OBGYN-OVERALL-P0039",
+        "OBGYN-CHIEF-FULL-P0112"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "출근 서명은 조장이 분만실 담당 인턴 선생님께 대면으로 받는다.",
+          "월/화/금은 07:50, OT 또는 의국회의 있는 수/목은 07:40 기준."
+        ],
+        "주의사항 / 확인 필요": [
+          "의국회의가 없으면 수/목도 07:50으로 조정 가능.",
+          "담당 인턴은 주마다/월초마다 바뀔 수 있어 전날 확인."
+        ],
+        "source": [
+          "OBGYN-OVERALL-P0038",
+          "OBGYN-OVERALL-P0039",
+          "OBGYN-CHIEF-FULL-P0112"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-signin-fri",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "금",
+      "date": "2026-06-12",
+      "time_raw": "07:50-08:05",
+      "start_time": "07:50",
+      "end_time": "08:05",
+      "time_label": "07:50-08:05",
+      "title": "출근 서명(금)",
+      "professor": "",
+      "event_type": "admin",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "소아동 3층 엘리베이터 앞",
+      "summary": "분만조 조장이 담당 인턴 선생님께 07:50 출근서명.",
+      "note": "출근 서명은 조장이 분만실 담당 인턴 선생님께 대면으로 받는다. / 월/화/금은 07:50, OT 또는 의국회의 있는 수/목은 07:40 기준. / 의국회의가 없으면 수/목도 07:50으로 조정 가능. / 담당 인턴은 주마다/월초마다 바뀔 수 있어 전날 확인.",
+      "calendar_body_short": "분만조 조장이 담당 인턴 선생님께 07:50 출근서명.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "OBGYN-OVERALL-P0038",
+        "OBGYN-OVERALL-P0039",
+        "OBGYN-CHIEF-FULL-P0112"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "출근 서명은 조장이 분만실 담당 인턴 선생님께 대면으로 받는다.",
+          "월/화/금은 07:50, OT 또는 의국회의 있는 수/목은 07:40 기준."
+        ],
+        "주의사항 / 확인 필요": [
+          "의국회의가 없으면 수/목도 07:50으로 조정 가능.",
+          "담당 인턴은 주마다/월초마다 바뀔 수 있어 전날 확인."
+        ],
+        "source": [
+          "OBGYN-OVERALL-P0038",
+          "OBGYN-OVERALL-P0039",
+          "OBGYN-CHIEF-FULL-P0112"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-common-dept-conf-thu",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "목",
+      "date": "2026-06-11",
+      "time_raw": "08:00-08:30",
+      "start_time": "08:00",
+      "end_time": "08:30",
+      "time_label": "08:00-08:30",
+      "title": "의국회의 후보(목)",
+      "professor": "",
+      "event_type": "session",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "6층 의국",
+      "summary": "목요일 의국회의 후보. 07:40 출석 후 의국 도착, Zoom/빔/의자 세팅.",
+      "note": "원문상 매주 수/목 08:00-08:30 후보. 과거에는 화/수 진행도 있었음. / 의국회의 내용이 시험 탈야가 될 수 있어 들어두는 것을 추천. / 의국회의 시행 여부는 OT/전공의 공지 확인. 없으면 분만실로 복귀.",
+      "calendar_body_short": "목요일 의국회의 후보. 07:40 출석 후 의국 도착, Zoom/빔/의자 세팅.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "OBGYN-OVERALL-P0080",
+        "OBGYN-OVERALL-P0081",
+        "OBGYN-OVERALL-P0084"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "원문상 매주 수/목 08:00-08:30 후보. 과거에는 화/수 진행도 있었음.",
+          "의국회의 내용이 시험 탈야가 될 수 있어 들어두는 것을 추천."
+        ],
+        "주의사항 / 확인 필요": [
+          "의국회의 시행 여부는 OT/전공의 공지 확인. 없으면 분만실로 복귀."
+        ],
+        "source": [
+          "OBGYN-OVERALL-P0080",
+          "OBGYN-OVERALL-P0081",
+          "OBGYN-OVERALL-P0084"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-morning-list-tue",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "화",
+      "date": "2026-06-09",
+      "time_raw": "09:00-09:30",
+      "start_time": "09:00",
+      "end_time": "09:30",
+      "time_label": "09:00-09:30",
+      "title": "분만실 환자리스트/NST/파토그램 확인(화)",
+      "professor": "",
+      "event_type": "session",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "분만실 스테이션",
+      "summary": "분만실 환자리스트, NST 종이, 파토그램, EMR 확인 루틴.",
+      "note": "분만실 PK 자리에서 환자리스트/NST 종이/파토그램/EMR을 확인하고 분만 참관 가능성을 본다. / 자리 비울 때는 전공의 선생님께 보고. / 환자 정보는 비식별 메모. 환자용 엘리베이터/수술실 식당 사용 금지.",
+      "calendar_body_short": "분만실 환자리스트, NST 종이, 파토그램, EMR 확인 루틴.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "CONTENT §분만주 매뉴얼",
+        "OBGYN-OVERALL-P0022",
+        "OBGYN-OVERALL-P0031"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "분만실 PK 자리에서 환자리스트/NST 종이/파토그램/EMR을 확인하고 분만 참관 가능성을 본다.",
+          "자리 비울 때는 전공의 선생님께 보고."
+        ],
+        "주의사항 / 확인 필요": [
+          "환자 정보는 비식별 메모. 환자용 엘리베이터/수술실 식당 사용 금지."
+        ],
+        "source": [
+          "CONTENT §분만주 매뉴얼",
+          "OBGYN-OVERALL-P0022",
+          "OBGYN-OVERALL-P0031"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-rounds-questions-tue",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "화",
+      "date": "2026-06-09",
+      "time_raw": "10:00-10:45",
+      "start_time": "10:00",
+      "end_time": "10:45",
+      "time_label": "10:00-10:45",
+      "title": "회진 참관 / 산과 질문 준비(화)",
+      "professor": "",
+      "event_type": "session",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "분만실/331병동",
+      "summary": "회진 참관, 이민아 교수님 질문타임 가능성, 산과 CASE 질문 준비.",
+      "note": "분만주 회진 참관과 이민아 교수님 질문타임 후보. / CASE 발표 전까지 질문 3-4개 이상 준비하고, 조원끼리 케이스 내용을 공유. / 일정은 교수님 회진 흐름에 따라 변동. 연락 항시 대기.",
+      "calendar_body_short": "회진 참관, 이민아 교수님 질문타임 가능성, 산과 CASE 질문 준비.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "CONTENT §분만주 매뉴얼",
+        "OBGYN-OVERALL-P0111",
+        "OBGYN-OVERALL-P0113"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "분만주 회진 참관과 이민아 교수님 질문타임 후보.",
+          "CASE 발표 전까지 질문 3-4개 이상 준비하고, 조원끼리 케이스 내용을 공유."
+        ],
+        "주의사항 / 확인 필요": [
+          "일정은 교수님 회진 흐름에 따라 변동. 연락 항시 대기."
+        ],
+        "source": [
+          "CONTENT §분만주 매뉴얼",
+          "OBGYN-OVERALL-P0111",
+          "OBGYN-OVERALL-P0113"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-morning-list-wed",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "수",
+      "date": "2026-06-10",
+      "time_raw": "09:00-09:30",
+      "start_time": "09:00",
+      "end_time": "09:30",
+      "time_label": "09:00-09:30",
+      "title": "분만실 환자리스트/NST/파토그램 확인(수)",
+      "professor": "",
+      "event_type": "session",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "분만실 스테이션",
+      "summary": "분만실 환자리스트, NST 종이, 파토그램, EMR 확인 루틴.",
+      "note": "분만실 PK 자리에서 환자리스트/NST 종이/파토그램/EMR을 확인하고 분만 참관 가능성을 본다. / 자리 비울 때는 전공의 선생님께 보고. / 환자 정보는 비식별 메모. 환자용 엘리베이터/수술실 식당 사용 금지.",
+      "calendar_body_short": "분만실 환자리스트, NST 종이, 파토그램, EMR 확인 루틴.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "CONTENT §분만주 매뉴얼",
+        "OBGYN-OVERALL-P0022",
+        "OBGYN-OVERALL-P0031"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "분만실 PK 자리에서 환자리스트/NST 종이/파토그램/EMR을 확인하고 분만 참관 가능성을 본다.",
+          "자리 비울 때는 전공의 선생님께 보고."
+        ],
+        "주의사항 / 확인 필요": [
+          "환자 정보는 비식별 메모. 환자용 엘리베이터/수술실 식당 사용 금지."
+        ],
+        "source": [
+          "CONTENT §분만주 매뉴얼",
+          "OBGYN-OVERALL-P0022",
+          "OBGYN-OVERALL-P0031"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-rounds-questions-wed",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "수",
+      "date": "2026-06-10",
+      "time_raw": "10:00-10:45",
+      "start_time": "10:00",
+      "end_time": "10:45",
+      "time_label": "10:00-10:45",
+      "title": "회진 참관 / 산과 질문 준비(수)",
+      "professor": "",
+      "event_type": "session",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "분만실/331병동",
+      "summary": "회진 참관, 이민아 교수님 질문타임 가능성, 산과 CASE 질문 준비.",
+      "note": "분만주 회진 참관과 이민아 교수님 질문타임 후보. / CASE 발표 전까지 질문 3-4개 이상 준비하고, 조원끼리 케이스 내용을 공유. / 일정은 교수님 회진 흐름에 따라 변동. 연락 항시 대기.",
+      "calendar_body_short": "회진 참관, 이민아 교수님 질문타임 가능성, 산과 CASE 질문 준비.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "CONTENT §분만주 매뉴얼",
+        "OBGYN-OVERALL-P0111",
+        "OBGYN-OVERALL-P0113"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "분만주 회진 참관과 이민아 교수님 질문타임 후보.",
+          "CASE 발표 전까지 질문 3-4개 이상 준비하고, 조원끼리 케이스 내용을 공유."
+        ],
+        "주의사항 / 확인 필요": [
+          "일정은 교수님 회진 흐름에 따라 변동. 연락 항시 대기."
+        ],
+        "source": [
+          "CONTENT §분만주 매뉴얼",
+          "OBGYN-OVERALL-P0111",
+          "OBGYN-OVERALL-P0113"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-morning-list-thu",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "목",
+      "date": "2026-06-11",
+      "time_raw": "09:00-09:30",
+      "start_time": "09:00",
+      "end_time": "09:30",
+      "time_label": "09:00-09:30",
+      "title": "분만실 환자리스트/NST/파토그램 확인(목)",
+      "professor": "",
+      "event_type": "session",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "분만실 스테이션",
+      "summary": "분만실 환자리스트, NST 종이, 파토그램, EMR 확인 루틴.",
+      "note": "분만실 PK 자리에서 환자리스트/NST 종이/파토그램/EMR을 확인하고 분만 참관 가능성을 본다. / 자리 비울 때는 전공의 선생님께 보고. / 환자 정보는 비식별 메모. 환자용 엘리베이터/수술실 식당 사용 금지.",
+      "calendar_body_short": "분만실 환자리스트, NST 종이, 파토그램, EMR 확인 루틴.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "CONTENT §분만주 매뉴얼",
+        "OBGYN-OVERALL-P0022",
+        "OBGYN-OVERALL-P0031"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "분만실 PK 자리에서 환자리스트/NST 종이/파토그램/EMR을 확인하고 분만 참관 가능성을 본다.",
+          "자리 비울 때는 전공의 선생님께 보고."
+        ],
+        "주의사항 / 확인 필요": [
+          "환자 정보는 비식별 메모. 환자용 엘리베이터/수술실 식당 사용 금지."
+        ],
+        "source": [
+          "CONTENT §분만주 매뉴얼",
+          "OBGYN-OVERALL-P0022",
+          "OBGYN-OVERALL-P0031"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-rounds-questions-thu",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "목",
+      "date": "2026-06-11",
+      "time_raw": "10:00-10:45",
+      "start_time": "10:00",
+      "end_time": "10:45",
+      "time_label": "10:00-10:45",
+      "title": "회진 참관 / 산과 질문 준비(목)",
+      "professor": "",
+      "event_type": "session",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "분만실/331병동",
+      "summary": "회진 참관, 이민아 교수님 질문타임 가능성, 산과 CASE 질문 준비.",
+      "note": "분만주 회진 참관과 이민아 교수님 질문타임 후보. / CASE 발표 전까지 질문 3-4개 이상 준비하고, 조원끼리 케이스 내용을 공유. / 일정은 교수님 회진 흐름에 따라 변동. 연락 항시 대기.",
+      "calendar_body_short": "회진 참관, 이민아 교수님 질문타임 가능성, 산과 CASE 질문 준비.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "CONTENT §분만주 매뉴얼",
+        "OBGYN-OVERALL-P0111",
+        "OBGYN-OVERALL-P0113"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "분만주 회진 참관과 이민아 교수님 질문타임 후보.",
+          "CASE 발표 전까지 질문 3-4개 이상 준비하고, 조원끼리 케이스 내용을 공유."
+        ],
+        "주의사항 / 확인 필요": [
+          "일정은 교수님 회진 흐름에 따라 변동. 연락 항시 대기."
+        ],
+        "source": [
+          "CONTENT §분만주 매뉴얼",
+          "OBGYN-OVERALL-P0111",
+          "OBGYN-OVERALL-P0113"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-morning-list-fri",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "금",
+      "date": "2026-06-12",
+      "time_raw": "09:00-09:30",
+      "start_time": "09:00",
+      "end_time": "09:30",
+      "time_label": "09:00-09:30",
+      "title": "분만실 환자리스트/NST/파토그램 확인(금)",
+      "professor": "",
+      "event_type": "session",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "분만실 스테이션",
+      "summary": "분만실 환자리스트, NST 종이, 파토그램, EMR 확인 루틴.",
+      "note": "분만실 PK 자리에서 환자리스트/NST 종이/파토그램/EMR을 확인하고 분만 참관 가능성을 본다. / 자리 비울 때는 전공의 선생님께 보고. / 환자 정보는 비식별 메모. 환자용 엘리베이터/수술실 식당 사용 금지.",
+      "calendar_body_short": "분만실 환자리스트, NST 종이, 파토그램, EMR 확인 루틴.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "CONTENT §분만주 매뉴얼",
+        "OBGYN-OVERALL-P0022",
+        "OBGYN-OVERALL-P0031"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "분만실 PK 자리에서 환자리스트/NST 종이/파토그램/EMR을 확인하고 분만 참관 가능성을 본다.",
+          "자리 비울 때는 전공의 선생님께 보고."
+        ],
+        "주의사항 / 확인 필요": [
+          "환자 정보는 비식별 메모. 환자용 엘리베이터/수술실 식당 사용 금지."
+        ],
+        "source": [
+          "CONTENT §분만주 매뉴얼",
+          "OBGYN-OVERALL-P0022",
+          "OBGYN-OVERALL-P0031"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-rounds-questions-fri",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "금",
+      "date": "2026-06-12",
+      "time_raw": "10:00-10:45",
+      "start_time": "10:00",
+      "end_time": "10:45",
+      "time_label": "10:00-10:45",
+      "title": "회진 참관 / 산과 질문 준비(금)",
+      "professor": "",
+      "event_type": "session",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "분만실/331병동",
+      "summary": "회진 참관, 이민아 교수님 질문타임 가능성, 산과 CASE 질문 준비.",
+      "note": "분만주 회진 참관과 이민아 교수님 질문타임 후보. / CASE 발표 전까지 질문 3-4개 이상 준비하고, 조원끼리 케이스 내용을 공유. / 일정은 교수님 회진 흐름에 따라 변동. 연락 항시 대기.",
+      "calendar_body_short": "회진 참관, 이민아 교수님 질문타임 가능성, 산과 CASE 질문 준비.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "CONTENT §분만주 매뉴얼",
+        "OBGYN-OVERALL-P0111",
+        "OBGYN-OVERALL-P0113"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "분만주 회진 참관과 이민아 교수님 질문타임 후보.",
+          "CASE 발표 전까지 질문 3-4개 이상 준비하고, 조원끼리 케이스 내용을 공유."
+        ],
+        "주의사항 / 확인 필요": [
+          "일정은 교수님 회진 흐름에 따라 변동. 연락 항시 대기."
+        ],
+        "source": [
+          "CONTENT §분만주 매뉴얼",
+          "OBGYN-OVERALL-P0111",
+          "OBGYN-OVERALL-P0113"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-lee-mina-seminar-tue",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "화",
+      "date": "2026-06-09",
+      "time_raw": "11:00-11:30",
+      "start_time": "11:00",
+      "end_time": "11:30",
+      "time_label": "11:00-11:30",
+      "title": "이민아 교수님 CASE 설명 후보",
+      "professor": "이민아",
+      "event_type": "presentation",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "분만실/세미나실 후보",
+      "summary": "화요일 오전 회진 후 세미나실에서 각 케이스 설명 가능성.",
+      "note": "원문: 화요일 오전 이민아 교수님께서 회진 도시고 잠깐 세미나실로 부르실 수 있음. / 각 케이스 설명을 들으면 바로 EMR/진단기준 공부 시작. / 후보 일정. 실제 호출 여부는 당일 회진 흐름 확인.",
+      "calendar_body_short": "화요일 오전 회진 후 세미나실에서 각 케이스 설명 가능성.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "OBGYN-OVERALL-P0111"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "원문: 화요일 오전 이민아 교수님께서 회진 도시고 잠깐 세미나실로 부르실 수 있음.",
+          "각 케이스 설명을 들으면 바로 EMR/진단기준 공부 시작."
+        ],
+        "주의사항 / 확인 필요": [
+          "후보 일정. 실제 호출 여부는 당일 회진 흐름 확인."
+        ],
+        "source": [
+          "OBGYN-OVERALL-P0111"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-ufolio-nst-tue",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "화",
+      "date": "2026-06-09",
+      "time_raw": "15:30-16:00",
+      "start_time": "15:30",
+      "end_time": "16:00",
+      "time_label": "15:30-16:00",
+      "title": "U-Folio 산과 관찰: 태아심음/NST",
+      "professor": "",
+      "event_type": "admin",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "분만실/NST 교육",
+      "summary": "U-Folio 산과 항목 중 태아심음·자궁수축 감시장치/NST 이해 항목 회수 후보.",
+      "note": "분만실/NST 교육에서 태아심음 자궁수축 감시장치의 이해 항목을 확보. / 관찰 직후 느낀점 임시저장 후 현장 전공의 승인번호까지 확인. / 현장승인은 교수님이 아니라 2-4년차 전공의에게 받는 흐름.",
+      "calendar_body_short": "U-Folio 산과 항목 중 태아심음·자궁수축 감시장치/NST 이해 항목 회수 후보.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "resident2_pack §U-Folio 12항목",
+        "CONTENT §u-folio"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "분만실/NST 교육에서 태아심음 자궁수축 감시장치의 이해 항목을 확보.",
+          "관찰 직후 느낀점 임시저장 후 현장 전공의 승인번호까지 확인."
+        ],
+        "주의사항 / 확인 필요": [
+          "현장승인은 교수님이 아니라 2-4년차 전공의에게 받는 흐름."
+        ],
+        "source": [
+          "resident2_pack §U-Folio 12항목",
+          "CONTENT §u-folio"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-case-prep-wed",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "수",
+      "date": "2026-06-10",
+      "time_raw": "14:00-14:30",
+      "start_time": "14:00",
+      "end_time": "14:30",
+      "time_label": "14:00-14:30",
+      "title": "산과 CASE 발표자료/질문 정리",
+      "professor": "",
+      "event_type": "presentation",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "분만실/PK실 후보",
+      "summary": "CASE 발표 PPT, 진단기준, 교수님 질문 대비, 조원 질문 3-4개 준비.",
+      "note": "발표 10분 이내, PPT 사용, USB 또는 메일 준비. / 발표자료를 조원에게 공유하고 서로 질문할 내용을 미리 생각. / 의무기록 진단명 자체가 틀릴 수 있다는 인계. 교과서 수준 진단기준 확인.",
+      "calendar_body_short": "CASE 발표 PPT, 진단기준, 교수님 질문 대비, 조원 질문 3-4개 준비.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "OBGYN-OVERALL-P0109",
+        "OBGYN-OVERALL-P0113"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "발표 10분 이내, PPT 사용, USB 또는 메일 준비.",
+          "발표자료를 조원에게 공유하고 서로 질문할 내용을 미리 생각."
+        ],
+        "주의사항 / 확인 필요": [
+          "의무기록 진단명 자체가 틀릴 수 있다는 인계. 교과서 수준 진단기준 확인."
+        ],
+        "source": [
+          "OBGYN-OVERALL-P0109",
+          "OBGYN-OVERALL-P0113"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-ufolio-delivery-wed",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "수",
+      "date": "2026-06-10",
+      "time_raw": "15:30-16:00",
+      "start_time": "15:30",
+      "end_time": "16:00",
+      "time_label": "15:30-16:00",
+      "title": "U-Folio 산과 관찰: 질식분만/회음절개",
+      "professor": "",
+      "event_type": "admin",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "분만실",
+      "summary": "질식분만 참관 1건 및 회음절개 봉합관찰 항목 확보 후보.",
+      "note": "분만 참관 시 보호자/커튼/응급 동선 주의. / 가능하면 질식분만 참관과 회음절개 봉합 관찰 내용을 U-Folio에 남긴다. / 분만 발생 여부에 따라 날짜 변동. 환자/보호자 상황과 성별 제한에 주의.",
+      "calendar_body_short": "질식분만 참관 1건 및 회음절개 봉합관찰 항목 확보 후보.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "resident2_pack §U-Folio 12항목",
+        "CONTENT §분만주 매뉴얼"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "분만 참관 시 보호자/커튼/응급 동선 주의.",
+          "가능하면 질식분만 참관과 회음절개 봉합 관찰 내용을 U-Folio에 남긴다."
+        ],
+        "주의사항 / 확인 필요": [
+          "분만 발생 여부에 따라 날짜 변동. 환자/보호자 상황과 성별 제한에 주의."
+        ],
+        "source": [
+          "resident2_pack §U-Folio 12항목",
+          "CONTENT §분만주 매뉴얼"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-case-final-check-thu",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "목",
+      "date": "2026-06-11",
+      "time_raw": "10:45-11:15",
+      "start_time": "10:45",
+      "end_time": "11:15",
+      "time_label": "10:45-11:15",
+      "title": "산과 CASE 최종 점검",
+      "professor": "",
+      "event_type": "presentation",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "분만실/PK실 후보",
+      "summary": "발표 전 슬라이드, 질문, EMR/NST 자료, USB/메일 저장 확인.",
+      "note": "교수님이 슬라이드 넘기라고 할 때만 다음으로 넘어가라는 인계. / 질문 3-4개와 진단기준/처치 기준을 마지막 점검. / 실제 발표가 금요일로 밀리면 이 카드는 준비 슬롯으로만 사용.",
+      "calendar_body_short": "발표 전 슬라이드, 질문, EMR/NST 자료, USB/메일 저장 확인.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "OBGYN-OVERALL-P0114"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "교수님이 슬라이드 넘기라고 할 때만 다음으로 넘어가라는 인계.",
+          "질문 3-4개와 진단기준/처치 기준을 마지막 점검."
+        ],
+        "주의사항 / 확인 필요": [
+          "실제 발표가 금요일로 밀리면 이 카드는 준비 슬롯으로만 사용."
+        ],
+        "source": [
+          "OBGYN-OVERALL-P0114"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-xr-vr-thu",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "목",
+      "date": "2026-06-11",
+      "time_raw": "14:00-15:00",
+      "start_time": "14:00",
+      "end_time": "15:00",
+      "time_label": "14:00-15:00",
+      "title": "XR 임상실습센터 VR 체험 후보",
+      "professor": "",
+      "event_type": "session",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "XR 임상실습센터",
+      "summary": "산과 CASE 발표 전후 XR 임상실습센터에서 약 1시간 VR 체험 후보.",
+      "note": "당일 오전 전공의 선생님이 센터 3층에서 먼저 실습 진행하라/같이 가자고 연락 주는 흐름이 있었다는 인계. / VR 체험 후 교수님 오셔서 CASE 발표/CPX 평가를 봐주실 수 있음. / 목/금 중 실제 공지 확인. 오전에 전공의 선생님께 연락 흐름 확인.",
+      "calendar_body_short": "산과 CASE 발표 전후 XR 임상실습센터에서 약 1시간 VR 체험 후보.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "OBGYN-OVERALL-P0105",
+        "OBGYN-OVERALL-P0115"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "당일 오전 전공의 선생님이 센터 3층에서 먼저 실습 진행하라/같이 가자고 연락 주는 흐름이 있었다는 인계.",
+          "VR 체험 후 교수님 오셔서 CASE 발표/CPX 평가를 봐주실 수 있음."
+        ],
+        "주의사항 / 확인 필요": [
+          "목/금 중 실제 공지 확인. 오전에 전공의 선생님께 연락 흐름 확인."
+        ],
+        "source": [
+          "OBGYN-OVERALL-P0105",
+          "OBGYN-OVERALL-P0115"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-case-backup-fri",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "금",
+      "date": "2026-06-12",
+      "time_raw": "14:00-15:30",
+      "start_time": "14:00",
+      "end_time": "15:30",
+      "time_label": "14:00-15:30",
+      "title": "산과 CASE 발표 예비 슬롯(금)",
+      "professor": "이경노",
+      "event_type": "presentation",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "XR 임상실습센터 / 이경노 교수님",
+      "summary": "목요일에 진행되지 않을 경우를 위한 산과 CASE 발표 금요일 예비 슬롯.",
+      "note": "원문은 분만주 보통 목 or 금. 목요일 미확정이므로 금요일 오후에도 visible 예비 슬롯을 둔다. / 발표자료/PPT/USB/메일/질문 준비 상태를 유지. / 실제 일정이 목요일 확정되면 이 예비 슬롯은 취소 처리.",
+      "calendar_body_short": "목요일에 진행되지 않을 경우를 위한 산과 CASE 발표 금요일 예비 슬롯.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "OBGYN-OVERALL-P0105"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "원문은 분만주 보통 목 or 금. 목요일 미확정이므로 금요일 오후에도 visible 예비 슬롯을 둔다.",
+          "발표자료/PPT/USB/메일/질문 준비 상태를 유지."
+        ],
+        "주의사항 / 확인 필요": [
+          "실제 일정이 목요일 확정되면 이 예비 슬롯은 취소 처리."
+        ],
+        "source": [
+          "OBGYN-OVERALL-P0105"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-ufolio-catchup-fri",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "금",
+      "date": "2026-06-12",
+      "time_raw": "15:30-16:00",
+      "start_time": "15:30",
+      "end_time": "16:00",
+      "time_label": "15:30-16:00",
+      "title": "분만주 U-Folio 산과 항목 누락 회수",
+      "professor": "",
+      "event_type": "admin",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "분만실/전공의 선생님",
+      "summary": "질식분만, 태아심음/NST, 산과 CASE/CPX 평가 관련 U-Folio 누락 확인.",
+      "note": "관찰 항목은 몰아서 받지 말고 분산 승인. 3개 이상 몰아받으면 지적될 수 있음. / 느낀점은 형식적으로 쓰지 않고 승인번호 입력 후 확인까지 눌러 저장. / 개인정보/식별 힌트는 제출물에 쓰지 않기.",
+      "calendar_body_short": "질식분만, 태아심음/NST, 산과 CASE/CPX 평가 관련 U-Folio 누락 확인.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "resident2_pack §U-Folio 현장승인"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "관찰 항목은 몰아서 받지 말고 분산 승인. 3개 이상 몰아받으면 지적될 수 있음.",
+          "느낀점은 형식적으로 쓰지 않고 승인번호 입력 후 확인까지 눌러 저장."
+        ],
+        "주의사항 / 확인 필요": [
+          "개인정보/식별 힌트는 제출물에 쓰지 않기."
+        ],
+        "source": [
+          "resident2_pack §U-Folio 현장승인"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-weekend-handoff-fri",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "금",
+      "date": "2026-06-12",
+      "time_raw": "16:00-16:30",
+      "start_time": "16:00",
+      "end_time": "16:30",
+      "time_label": "16:00-16:30",
+      "title": "분만주 인계 업데이트 / 다음 주 확인",
+      "professor": "",
+      "event_type": "chief",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "분만실/조장 톡방",
+      "summary": "분만주 끝나기 전 인턴 근무표, 다음 조/주말 인계, 변경 일정 공유 정리.",
+      "note": "금요일마다 다음 분만실 담당 인턴 선생님 연락처/근무표를 확인하거나 다음 조장에게 인계. / 일정 공지 받으면 조원 전체와 전공의 톡방에 양식 맞춰 공유. / 연락처/비밀번호 등 민감 정보는 공개 캘린더 텍스트에 직접 노출하지 않음.",
+      "calendar_body_short": "분만주 끝나기 전 인턴 근무표, 다음 조/주말 인계, 변경 일정 공유 정리.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "OBGYN-CHIEF-FULL-P0115",
+        "OBGYN-OVERALL-P0025"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "금요일마다 다음 분만실 담당 인턴 선생님 연락처/근무표를 확인하거나 다음 조장에게 인계.",
+          "일정 공지 받으면 조원 전체와 전공의 톡방에 양식 맞춰 공유."
+        ],
+        "주의사항 / 확인 필요": [
+          "연락처/비밀번호 등 민감 정보는 공개 캘린더 텍스트에 직접 노출하지 않음."
+        ],
+        "source": [
+          "OBGYN-CHIEF-FULL-P0115",
+          "OBGYN-OVERALL-P0025"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-dismissal-tue",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "화",
+      "date": "2026-06-09",
+      "time_raw": "17:40-18:00",
+      "start_time": "17:40",
+      "end_time": "18:00",
+      "time_label": "17:40-18:00",
+      "title": "퇴근 서명(화)",
+      "professor": "",
+      "event_type": "admin",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "소아동 3층 분만실 스테이션",
+      "summary": "분만조 조장이 분만실 레지던트 선생님께 퇴근서명. 17:40 인수인계 후 방해되지 않는 시간 대기.",
+      "note": "공식 퇴근은 18:00. 인수인계가 늦어지면 끝날 때까지 대기. / 서명 후 전공의 톡방에 말씀드려야 조원 전원 퇴근 가능. / 원칙은 전원 모여 인원 확인 후 퇴근서명. 불시점검 가능.",
+      "calendar_body_short": "분만조 조장이 분만실 레지던트 선생님께 퇴근서명. 17:40 인수인계 후 방해되지 않는 시간 대기.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "OBGYN-OVERALL-P0044",
+        "OBGYN-OVERALL-P0047",
+        "OBGYN-OVERALL-P0048"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "공식 퇴근은 18:00. 인수인계가 늦어지면 끝날 때까지 대기.",
+          "서명 후 전공의 톡방에 말씀드려야 조원 전원 퇴근 가능."
+        ],
+        "주의사항 / 확인 필요": [
+          "원칙은 전원 모여 인원 확인 후 퇴근서명. 불시점검 가능."
+        ],
+        "source": [
+          "OBGYN-OVERALL-P0044",
+          "OBGYN-OVERALL-P0047",
+          "OBGYN-OVERALL-P0048"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-dismissal-wed",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "수",
+      "date": "2026-06-10",
+      "time_raw": "17:40-18:00",
+      "start_time": "17:40",
+      "end_time": "18:00",
+      "time_label": "17:40-18:00",
+      "title": "퇴근 서명(수)",
+      "professor": "",
+      "event_type": "admin",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "소아동 3층 분만실 스테이션",
+      "summary": "분만조 조장이 분만실 레지던트 선생님께 퇴근서명. 17:40 인수인계 후 방해되지 않는 시간 대기.",
+      "note": "공식 퇴근은 18:00. 인수인계가 늦어지면 끝날 때까지 대기. / 서명 후 전공의 톡방에 말씀드려야 조원 전원 퇴근 가능. / 원칙은 전원 모여 인원 확인 후 퇴근서명. 불시점검 가능.",
+      "calendar_body_short": "분만조 조장이 분만실 레지던트 선생님께 퇴근서명. 17:40 인수인계 후 방해되지 않는 시간 대기.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "OBGYN-OVERALL-P0044",
+        "OBGYN-OVERALL-P0047",
+        "OBGYN-OVERALL-P0048"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "공식 퇴근은 18:00. 인수인계가 늦어지면 끝날 때까지 대기.",
+          "서명 후 전공의 톡방에 말씀드려야 조원 전원 퇴근 가능."
+        ],
+        "주의사항 / 확인 필요": [
+          "원칙은 전원 모여 인원 확인 후 퇴근서명. 불시점검 가능."
+        ],
+        "source": [
+          "OBGYN-OVERALL-P0044",
+          "OBGYN-OVERALL-P0047",
+          "OBGYN-OVERALL-P0048"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-dismissal-thu",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "목",
+      "date": "2026-06-11",
+      "time_raw": "17:40-18:00",
+      "start_time": "17:40",
+      "end_time": "18:00",
+      "time_label": "17:40-18:00",
+      "title": "퇴근 서명(목)",
+      "professor": "",
+      "event_type": "admin",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "소아동 3층 분만실 스테이션",
+      "summary": "분만조 조장이 분만실 레지던트 선생님께 퇴근서명. 17:40 인수인계 후 방해되지 않는 시간 대기.",
+      "note": "공식 퇴근은 18:00. 인수인계가 늦어지면 끝날 때까지 대기. / 서명 후 전공의 톡방에 말씀드려야 조원 전원 퇴근 가능. / 원칙은 전원 모여 인원 확인 후 퇴근서명. 불시점검 가능.",
+      "calendar_body_short": "분만조 조장이 분만실 레지던트 선생님께 퇴근서명. 17:40 인수인계 후 방해되지 않는 시간 대기.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "OBGYN-OVERALL-P0044",
+        "OBGYN-OVERALL-P0047",
+        "OBGYN-OVERALL-P0048"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "공식 퇴근은 18:00. 인수인계가 늦어지면 끝날 때까지 대기.",
+          "서명 후 전공의 톡방에 말씀드려야 조원 전원 퇴근 가능."
+        ],
+        "주의사항 / 확인 필요": [
+          "원칙은 전원 모여 인원 확인 후 퇴근서명. 불시점검 가능."
+        ],
+        "source": [
+          "OBGYN-OVERALL-P0044",
+          "OBGYN-OVERALL-P0047",
+          "OBGYN-OVERALL-P0048"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-delivery-dismissal-fri",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "금",
+      "date": "2026-06-12",
+      "time_raw": "17:40-18:00",
+      "start_time": "17:40",
+      "end_time": "18:00",
+      "time_label": "17:40-18:00",
+      "title": "퇴근 서명(금)",
+      "professor": "",
+      "event_type": "admin",
+      "difficulty": 8,
+      "priority_label": "확인 필요",
+      "status": "needs_confirmation",
+      "kind": "clerkship-central-datacenter",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "소아동 3층 분만실 스테이션",
+      "summary": "분만조 조장이 분만실 레지던트 선생님께 퇴근서명. 17:40 인수인계 후 방해되지 않는 시간 대기.",
+      "note": "공식 퇴근은 18:00. 인수인계가 늦어지면 끝날 때까지 대기. / 서명 후 전공의 톡방에 말씀드려야 조원 전원 퇴근 가능. / 원칙은 전원 모여 인원 확인 후 퇴근서명. 불시점검 가능.",
+      "calendar_body_short": "분만조 조장이 분만실 레지던트 선생님께 퇴근서명. 17:40 인수인계 후 방해되지 않는 시간 대기.",
+      "resident_owner": "secretary",
+      "paperclip_refs": [
+        "AI-13"
+      ],
+      "source_refs": [
+        "OBGYN-OVERALL-P0044",
+        "OBGYN-OVERALL-P0047",
+        "OBGYN-OVERALL-P0048"
+      ],
+      "sections": {
+        "캘린더 배치 기준": [
+          "원문에서 날짜/주차만 확인된 항목은 캘린더 가독성을 위해 임시 시간에 배치했다.",
+          "실제 공지 시간이 오면 해당 카드의 시간만 수정한다."
+        ],
+        "인계 내용": [
+          "공식 퇴근은 18:00. 인수인계가 늦어지면 끝날 때까지 대기.",
+          "서명 후 전공의 톡방에 말씀드려야 조원 전원 퇴근 가능."
+        ],
+        "주의사항 / 확인 필요": [
+          "원칙은 전원 모여 인원 확인 후 퇴근서명. 불시점검 가능."
+        ],
+        "source": [
+          "OBGYN-OVERALL-P0044",
+          "OBGYN-OVERALL-P0047",
+          "OBGYN-OVERALL-P0048"
+        ],
+        "owner_slot": [
+          "secretary"
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
     }
   ],
   "assignments": [

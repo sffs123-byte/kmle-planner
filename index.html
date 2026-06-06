@@ -2898,8 +2898,8 @@
 
   <script>
     const STORAGE_KEY = 'kmlePlannerState.v2';
-    const APP_VERSION = '20260606T141130Z';
-    const APP_VERSION_LABEL = '2026-06-06 23:11 KST';
+    const APP_VERSION = '20260606T150033Z';
+    const APP_VERSION_LABEL = '2026-06-07 00:00 KST';
     const STAGES = [
       { id: 'lecture', label: '강의 듣기', short: '강의', note: '강의/팟캐스트/기본 인강 소화' },
       { id: 'framework', label: '개념 틀 짜기', short: '개념틀', note: '총정리 구조, 도식, 로직 프레임 정리' },
@@ -3919,6 +3919,7 @@
         url: './data/clerkships/bundles/obgyn_2026_06_track_a3g6.bundle.json',
         minDatedSessions: 20,
         resident2PackVersion: '20260606T140332Z',
+        deliveryWeekCalendarVersion: '20260606T150033Z',
         label: '산부인과'
       }
     };
@@ -3931,6 +3932,7 @@
       const datedSessions = (bundle.sessions || []).filter(session => Boolean(session.date)).length;
       const sessionEvents = (state.calendarEvents || []).filter(event => event.bundleId === definition.clerkshipId && event.sourceKind === 'session').length;
       if (definition.resident2PackVersion && bundle?.fixed_info?.resident2_pack?.version !== definition.resident2PackVersion) return true;
+      if (definition.deliveryWeekCalendarVersion && bundle?.fixed_info?.delivery_week_calendar_fill?.version !== definition.deliveryWeekCalendarVersion) return true;
       return datedSessions < definition.minDatedSessions || sessionEvents < definition.minDatedSessions;
     }
 
