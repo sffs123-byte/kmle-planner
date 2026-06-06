@@ -99,7 +99,309 @@
           "u-folio/설문/출석부 마감"
         ]
       }
-    ]
+    ],
+    "resident2_pack": {
+      "version": "20260606T140332Z",
+      "title": "자비스 전공의 2 산부인과 CPX / U-Folio / Pretest / NST pack",
+      "owner_slot": "clerk2",
+      "source_path": "outputs/clerkship/obgyn_ingest_2026-06-05/resident2_cpx_ufolio_pretest_pack.md",
+      "source_lock": [
+        "CLERKSHIP_SHARED_MEMORY.md",
+        "outputs/clerkship/obgyn_ingest_2026-06-05/source_inventory.md",
+        "extracted_text/산부인과_CPX_인계_2026.05.09_업데이트_.docx.txt",
+        "extracted_text/산부인과_ufolio_인계_2026.05.09_업데이트_.docx.txt",
+        "extracted_text/pre-test_post-test_복기_2026.05.09_update_.docx.txt",
+        "extracted_text/nst_시험_복기_2026.05.09_update_.docx.txt"
+      ],
+      "count_summary": {
+        "study_items": 12,
+        "pretest_items": 14,
+        "ufolio_items": 12,
+        "total_pack_items": 38
+      },
+      "placement_rules": [
+        "확정 시간 흐름은 시간표 본문에 넣는다.",
+        "시간 미확정 후보와 확인 필요 사항은 오른쪽 종합 패널 또는 회색 기본 rotation 상세에 둔다.",
+        "CPX, NST, U-Folio, Pre/Post-test, 복기는 전공의 2 pack과 체크리스트에서 관리한다.",
+        "어디에 넣을지 애매한 항목은 임의 배치하지 말고 강렬에게 확인한다."
+      ],
+      "ufolio": {
+        "title": "U-Folio 12항목 + 현장승인 + 포트폴리오 제출법",
+        "required_items": [
+          {
+            "no": 1,
+            "area": "부인과",
+            "title": "질확대경검사 / 펀치생검 / 원추절제술",
+            "place": "외래, 수술",
+            "priority": "P0"
+          },
+          {
+            "no": 2,
+            "area": "부인과",
+            "title": "자궁내막조직검사",
+            "place": "외래",
+            "priority": "P0"
+          },
+          {
+            "no": 3,
+            "area": "부인과",
+            "title": "부인과 초음파검사",
+            "place": "외래",
+            "priority": "P1"
+          },
+          {
+            "no": 4,
+            "area": "부인과",
+            "title": "자궁내 피임장치 삽입 및 제거",
+            "place": "외래",
+            "priority": "P0"
+          },
+          {
+            "no": 5,
+            "area": "부인과",
+            "title": "부인과 수술보조",
+            "place": "수술",
+            "priority": "P1"
+          },
+          {
+            "no": 6,
+            "area": "부인과",
+            "title": "골반진찰",
+            "place": "외래",
+            "priority": "P1"
+          },
+          {
+            "no": 7,
+            "area": "산과",
+            "title": "임신 1삼분기 초음파 및 태아 목덜미 투명대(NT) 측정",
+            "place": "산과 외래",
+            "priority": "P1"
+          },
+          {
+            "no": 8,
+            "area": "산과",
+            "title": "임신 2,3삼분기 초음파 및 자궁경부 길이 측정",
+            "place": "산과 외래",
+            "priority": "P1"
+          },
+          {
+            "no": 9,
+            "area": "산과",
+            "title": "초음파 도플러 검사",
+            "place": "산과 외래",
+            "priority": "P1"
+          },
+          {
+            "no": 10,
+            "area": "산과",
+            "title": "질식분만 참관 1건 및 회음절개 봉합관찰",
+            "place": "분만실",
+            "priority": "P0"
+          },
+          {
+            "no": 11,
+            "area": "산과",
+            "title": "제왕절개술 참관 1건",
+            "place": "수술",
+            "priority": "P1"
+          },
+          {
+            "no": 12,
+            "area": "산과",
+            "title": "태아심음 자궁수축 감시장치의 이해",
+            "place": "분만실/NST 교육",
+            "priority": "P0"
+          }
+        ],
+        "onsite_approval": [
+          "메뉴: phase III_핵심임상실습_임상술기(관찰).",
+          "실습정보는 분과 산부인과(OO주차), 시간은 해당 시간 입력. 별도 시간 설정 엄격성은 확인 필요.",
+          "기본정보 담당교수/전공의는 현장에 있는 2-4년차 전공의 이름으로 제출. 원칙적으로 교수님께 받지 않음.",
+          "관찰 직후 또는 현장에서 항목을 선택하고, 느낀점란은 빈칸으로 두지 않는다.",
+          "현장에서 제출 후 핸드폰 화면을 전공의 선생님께 보여드리고 승인번호 입력을 받는다.",
+          "승인번호 입력 후 반드시 확인까지 눌러 저장한다.",
+          "모든 항목을 한꺼번에 승인받지 말고 분산해서 받는다.",
+          "3개 이상 몰아서 받으면 지적될 수 있다.",
+          "일부 선생님은 느낀점/내용을 읽으므로 형식적으로 쓰지 않는다.",
+          "보고서 작성 때 환자 재검색이 어려우므로 식별 힌트는 별도 메모하되 제출물에는 비식별화한다."
+        ],
+        "portfolio_submission": [
+          "메뉴: phase III_핵심임상실습_자유기록(과제).",
+          "실습항목은 자유기록(과제) → 포트폴리오 제출, 관찰임상술기에서 12항목 각각 선택.",
+          "실습지침서의 포트폴리오 양식 12장을 프린트해 항목별로 자필 작성한다.",
+          "케이스 설명란은 환자번호 앞 4자리만 쓰고 뒤 4자리는 **** 처리, 환자 이름은 영문 이니셜.",
+          "공부한 내용란 하단에 본인 서명 포함. 전공의/교수님 서명은 필요 없음.",
+          "12장을 한 파일로 합본하지 말고 항목별로 하나씩 스캔/이미지 또는 PDF 업로드.",
+          "U-Folio 실습내용란은 별도 작성 필요 없음. 파일 중심.",
+          "절대 미리 하나씩 제출하지 말고 실습 마지막 날 실습 종료 후 자정 전까지 일괄 업로드.",
+          "담당 교수/전공의는 해당 주 교육치프 전공의로 선택. 모르면 마지막 주에 박지원/정수화 선생님 등에게 확인 필요.",
+          "승인은 교육치프가 실습 종료 후 제출물을 나중에 한 번에 확인하는 흐름."
+        ],
+        "onsite_evaluation": [
+          "CPX, OSCE, 산과/부인과 증례발표는 자유기록(현장평가)로 교수님께 현장 평가 받는 계열.",
+          "시험/발표가 끝난 뒤 핸드폰에 U-Folio를 띄워 교수님께 드리면 교수님이 점수 입력.",
+          "산과 CPX는 2026년 1월 이후 현장평가를 받지 않고, 부인과 CPX만 받는 흐름으로 인계됨. 확인 필요.",
+          "부인과 CPX 대면진료증례보고서는 교수님별 제출 여부가 다르므로 CPX 섹션을 같이 확인."
+        ]
+      },
+      "cpx": {
+        "title": "부인과 CPX: 담당 / 주제 / 교수님별 주의점 / 대면증례보고서",
+        "common_operations": [
+          "범위는 부인과 CPX 전범위. OT 자료/실습지침서의 CPX 평가 항목 확인.",
+          "조별 담당은 최근 인계상 반복되며, 1주차에 박미아 교수님 또는 외래/수술 중 확인.",
+          "CPX 종료 후 핸드폰/패드에 U-Folio 현장평가를 띄워 교수님께 점수 입력 및 승인 받기.",
+          "대면진료증례보고서는 실습지침서 뒤 2장 양식 프린트 권장.",
+          "교수님 점수/서명/의견란은 기본적으로 필요 없다는 인계가 있으나 교수님별로 다름."
+        ],
+        "professor_rows": [
+          {
+            "group": "A",
+            "professor": "이건우",
+            "topics_2025_09": "월경통, 무월경, 질출혈",
+            "topics_recent": "월경통, 무월경, 질출혈, 과다월경",
+            "method": "의국, 조원 동시 진행. 교수님이 여러 SP 역할을 동시에 함.",
+            "report": "제출 있음. 양식 출력→작성→교수님이 보고 채점 후 가져감.",
+            "must_do": "주소별 필요한 질문만 빠르게, 감별진단 2-3개, 검사/치료 작성. 용어 정확히 쓰기.",
+            "avoid": "특이 증후군 등 쓸데없는 질문, 옆사람과 비슷한 질문 반복. 진단 하나 맞추기보다 접근 평가.",
+            "script": "AUB/amenorrhea/dysmenorrhea/menorrhagia 기본 문진표 + 감별진단 3개씩 암기."
+          },
+          {
+            "group": "B",
+            "professor": "김유진",
+            "topics_2025_09": "무월경, 질출혈",
+            "topics_recent": "과다월경 중심. PCOS/자궁경부암/폴립/자궁근종/선근증 등 변동",
+            "method": "1명씩 10분 내외, 교수님 SP, 1:1 피드백 후 전체 피드백.",
+            "report": "인계 충돌. 예전엔 유폴리오 자유기록 업로드, 2026.01엔 안 내도 될 듯하다고 함. 확인 필요.",
+            "must_do": "PPI/rapport, 주증상 중심 문진, 중간 요약, 열린 감별. 성경험/virgin 여부에 따른 검사 선택. CBC 언급.",
+            "avoid": "질환 하나 찍고 유도질문, virgin 환자에게 TVUS/HSG 등 부적절 검사, 골반진찰 무리.",
+            "script": "과다월경: 근종 vs 선근증 vs 내막용종/내막증. PCOS/경부암/위축성질염도 백업."
+          },
+          {
+            "group": "C",
+            "professor": "박미아",
+            "topics_2025_09": "질출혈(근종), 무월경(PCOS), 질분비물(칸디다+PID)",
+            "topics_recent": "질출혈, 무월경, 질분비물. 2026.03 탈야로 65세 자궁경부암도 있었음.",
+            "method": "1명씩, 시간 재나 여유 있음. SP 연기 후 피드백.",
+            "report": "대체로 제출 안 한 인계. 그래도 사전/당일 확인 필요.",
+            "must_do": "이름·등록번호 확인, 가임기 여성 임신 가능성/소변임신검사, 환자교육. PCOS는 피부/여드름/다모증, 칸디다는 당뇨·질세척 교육.",
+            "avoid": "괜찮다로 끝내기. 암/악성 가능성 설명 누락. 임신검사 누락.",
+            "script": "PCOS, 자궁근종/AUB, 칸디다±PID 3개 표준 케이스. 공감 질문과 안전망 설명."
+          },
+          {
+            "group": "D",
+            "professor": "김혜윤",
+            "topics_2025_09": "질분비물(BV, 트리코모나스)",
+            "topics_recent": "질분비물(칸디다, 세균질증). 최근은 세균성 질염 반복.",
+            "method": "1명씩, 10분 타이머, 신체진찰 구두, 현미경 사진 제시.",
+            "report": "제출 있음. 수기 작성 후 스캔하여 U-Folio 자유기록(과제)-대면증례보고서 업로드.",
+            "must_do": "질출혈·성파트너·피임/IUD·임신 가능성·STI risk 등 자세히. 검사명은 wet smear, KOH wet mount, 필요한 경우 Pap 등 정확히.",
+            "avoid": "10분 넘도록 문진만 하기, PAP smear 남발, BV 확정 후 불필요하게 칸디다/트리코모나스 가능성 설명.",
+            "script": "BV/Trichomonas/Candida 비교표, discharge 색·냄새·pH·현미경·치료 암기."
+          }
+        ]
+      },
+      "prepost_nst": {
+        "title": "Pre-test / Post-test / NST 빈출 주제와 공부 우선순위",
+        "risks": [
+          "Pre-test는 “실습 전 시험” 표시 20항목 중심이나, 표시 안 된 항목/탈야 출제 이력 있음.",
+          "Post-test는 전범위 49항목에서 5문제 서술형.",
+          "최근 흐름은 5문제 서술형이며 야마 파일 내 출제가 많으나 의국회의/OT 응용 문제가 1문제 들어간 적 있음.",
+          "야마와 문장을 똑같이 쓰면 0점 처리 경고 이력 있음. 구조는 외우되 문장은 본인 표현으로 재구성."
+        ],
+        "priorities": [
+          {
+            "priority": "P0",
+            "topic": "자궁경부암 / CIN / colposcopy",
+            "basis": "Pre-test에 자궁경부암 반복, CIN/colposcopy 탈야·응용",
+            "points": "역학-원인-증상-병기검사-병기별 치료, CIN 분류/치료/추적, colposcopy 병변"
+          },
+          {
+            "priority": "P0",
+            "topic": "임신성 고혈압 / 전자간증",
+            "basis": "Pre/Post 반복",
+            "points": "분류·진단, severe feature, 모체/태아 위험, 처치 원칙"
+          },
+          {
+            "priority": "P0",
+            "topic": "조산 / 조기진통",
+            "basis": "2026.04 pre, 2026.02 post",
+            "points": "임상적 의의, 진단, tocolytics/steroid/MgSO4/항생제, 조산아 분만 관리"
+          },
+          {
+            "priority": "P0",
+            "topic": "임신초기 기본검사 / 정규검사 / 산과초음파 / 다운증후군 선별",
+            "basis": "Pre 반복, post screening",
+            "points": "시기별 산전검사, 1·2·3삼분기 초음파, NT/모체혈청/NIPT 흐름"
+          },
+          {
+            "priority": "P0",
+            "topic": "정상분만·난산·제왕절개·유도분만/Bishop",
+            "basis": "Pre/Post 반복",
+            "points": "분만 1·2기, 난산 원인/대처, C/S 합병증·절개, Bishop score, induction 방법"
+          },
+          {
+            "priority": "P0",
+            "topic": "산후출혈 / 급성산과출혈",
+            "basis": "2026.01 pre, 2026.05 post",
+            "points": "4T, 태반부위 지혈기전, 초기처치, 약물/외과적 처치"
+          },
+          {
+            "priority": "P0",
+            "topic": "NST/전자태아감시",
+            "basis": "별도 NST 시험 거의 고정",
+            "points": "NST 9문제 template 우선 암기"
+          },
+          {
+            "priority": "P1",
+            "topic": "AUB / 성교후 질출혈 / 월경통",
+            "basis": "Pre 반복 + CPX 직결",
+            "points": "PALM-COEIN, 가임기 AUB 평가/치료, 원발/속발 월경통, postcoital bleeding 감별"
+          },
+          {
+            "priority": "P1",
+            "topic": "난소종양: 상피성/생식세포/성삭간질",
+            "basis": "Pre/Post 반복",
+            "points": "조직학적 분류, marker, 수술적 병기, 상담형 답안"
+          },
+          {
+            "priority": "P1",
+            "topic": "자궁내막증 / 불임 평가",
+            "basis": "Post 반복",
+            "points": "통증/불임 2대 문제, 치료와 효과, infertile couple 평가"
+          },
+          {
+            "priority": "P1",
+            "topic": "자궁내막암/증식증/폐경 후 골반종괴",
+            "basis": "Post 반복",
+            "points": "위험인자, 임상특성, 진단 접근, 치료/추적"
+          },
+          {
+            "priority": "P2",
+            "topic": "유산/반복유산, 산욕열, GDM, 항암화학요법, 자궁절제술",
+            "basis": "Post 반복/넓은 범위",
+            "points": "표 형태로 압축 암기. 시험 전날 2회독용"
+          }
+        ],
+        "nst_templates": [
+          "정상 NST 소견 / reactive NST 기준.",
+          "Non-reactive NST 그래프 제시 후 정상/비정상 판단.",
+          "Variability 정의.",
+          "Sinusoidal pattern 그래프: 명칭과 원인.",
+          "Variable deceleration 그래프: 명칭과 원인.",
+          "Late deceleration 그래프: 명칭과 원인. 2025.09에는 다른 decel 변형 가능.",
+          "태아 곤란증 또는 안심할 수 없는 태아 상태를 의심하는 NST 소견.",
+          "Early deceleration 그래프 + 40주 초산모 진통/두정위/경부 1 cm, effacement 80% 상황의 management.",
+          "자궁수축 그래프에서 강도·빈도·MVU 계산. Baseline 기준을 빼고 10분간 수축 강도 합산."
+        ],
+        "ninety_minute_order": [
+          "0-20분: NST 9문제 — 그래프 판독/용어/처치/MVU 계산까지 고정 답안화.",
+          "20-45분: Pre-test P0 7개 — 자궁경부암, PIH/preeclampsia, 조산, 산전검사/초음파, 분만/C/S/유도, PPH, AUB.",
+          "45-65분: CPX 주증상별 문진표 — AUB/amenorrhea/dysmenorrhea/discharge 4개.",
+          "65-80분: Post-test P1 — 난소종양, 자궁내막증, 자궁내막암/증식증, hysterectomy/chemo.",
+          "80-90분: U-Folio 현장 체크 — 오늘 어느 분과에서 12항목 중 무엇을 채울지 확정."
+        ]
+      }
+    }
   },
   "source_refs": [
     {
