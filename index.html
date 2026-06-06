@@ -2971,7 +2971,11 @@
     const CLERKSHIP_BLOCKS = [
       { start: '2026-04-01', end: '2026-04-10', label: '내분비대사', color: '#7c3aed', intensity: '중간', note: '블록 막바지라 마무리·복습 위주' },
       { start: '2026-04-13', end: '2026-04-24', label: '호흡기', color: '#0f766e', intensity: '높음', note: '실습 직전/실습 중 1순위 과목' },
-      { start: '2026-04-27', end: '2026-05-08', label: '심장', color: '#2563eb', intensity: '높음', note: '실습 + 조장 준비가 겹치는 핵심 블록' }
+      { start: '2026-04-27', end: '2026-05-08', label: '심장', color: '#2563eb', intensity: '높음', note: '실습 + 조장 준비가 겹치는 핵심 블록' },
+      { start: '2026-06-08', end: '2026-06-12', label: '산부인과 C조 병동', color: '#0f8b8d', intensity: '높음', note: '1주차 병동 · 세종 OSCE/CASE와 Pre-test가 겹치는 주' },
+      { start: '2026-06-15', end: '2026-06-19', label: '산부인과 C조 수술', color: '#7c3aed', intensity: '중간', note: '2주차 수술 · NST/CPX 후보 일정 확인' },
+      { start: '2026-06-22', end: '2026-06-26', label: '산부인과 C조 분만', color: '#dc2626', intensity: '높음', note: '3주차 분만 · 산과 CASE와 NST/U-Folio 회수' },
+      { start: '2026-06-29', end: '2026-07-03', label: '산부인과 C조 외래', color: '#2563eb', intensity: '중간', note: '4주차 외래 · 포트폴리오와 Post-test 마무리' }
     ];
 
     const CALENDAR_TIMELINE_START_HOUR = 8;
@@ -3419,7 +3423,7 @@
         professor: session.professor || '',
         difficulty: session.difficulty || null,
         track: bundle.meta?.track || '',
-        windowType: 'clerkship-session',
+        windowType: session.windowType || 'clerkship-session',
         bundleId: bundle.meta?.clerkship_id || '',
         sourceSessionId: session.id || '',
         sourceAssignmentId: '',
@@ -4733,6 +4737,7 @@
 
     function isWeeklySummaryEvent(event) {
       if (!event) return false;
+      if (event.windowType && event.windowType !== 'clerkship-session') return true;
       if (event.sourceSessionId || event.sourceKind === 'session' || event.windowType === 'clerkship-session') return false;
       if (event.sourceAssignmentId || event.sourceKind === 'assignment') return true;
       if (event.windowType && event.windowType !== 'clerkship-session') return true;
@@ -6703,7 +6708,7 @@
                 <button class="btn btn-small ${activeCalendarSummaryFilter === 'presentation_exam' ? 'btn-secondary' : 'btn-ghost'}" onclick="setCalendarSummaryFilter('presentation_exam')">발표·시험 ${categoryCounts.presentation_exam || 0}</button>
                 <button class="btn btn-small ${activeCalendarSummaryFilter === 'chief_admin' ? 'btn-secondary' : 'btn-ghost'}" onclick="setCalendarSummaryFilter('chief_admin')">조장·행정 ${categoryCounts.chief_admin || 0}</button>
                 ${locationGuide ? `<button class="btn btn-small btn-ghost" onclick="openCalendarLocationGuide('${weekKey}')">장소 지도 ${locationGuide.counts?.places || 0}</button>` : ''}
-                <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'basic_info')">심장내과 기본정보</button>
+                <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'basic_info')">${escapeHtml(bundle?.meta?.subject || '실습')} 기본정보</button>
                 ${fixedInfo.evaluation_score_weights ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'evaluation_scores')">평가 비중</button>` : ''}
                 ${pciOutpatientGuideForBundle(bundle) ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'pci_outpatient')">PCI/외래 가이드</button>` : ''}
                 ${communicationGuideForBundle(bundle)?.day_notices?.length ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'day_notices')">요일별 공지</button>` : ''}
