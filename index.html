@@ -2912,8 +2912,8 @@
 
   <script>
     const STORAGE_KEY = 'kmlePlannerState.v2';
-    const APP_VERSION = '20260606T180051Z';
-    const APP_VERSION_LABEL = '2026-06-07 03:00 KST';
+    const APP_VERSION = '20260606T195521Z';
+    const APP_VERSION_LABEL = '2026-06-07 04:55 KST';
     const STAGES = [
       { id: 'lecture', label: '강의 듣기', short: '강의', note: '강의/팟캐스트/기본 인강 소화' },
       { id: 'framework', label: '개념 틀 짜기', short: '개념틀', note: '총정리 구조, 도식, 로직 프레임 정리' },
@@ -4549,6 +4549,9 @@
       (fixedInfo.professor_directory || []).forEach(item => {
         ensure(item.name, {
           site: item.site || '',
+          modes: Array.isArray(item.modes) ? item.modes : [],
+          roles: Array.isArray(item.roles) ? item.roles : [],
+          sourceRefs: Array.isArray(item.source_refs) ? item.source_refs : [],
           contactHint: item.contact_note || '개별 연락은 해당 일정의 확인 문자/조장 공지 흐름을 우선 참고',
           phone: item.phone || '',
           contactLabel: item.contact_label || '연락처',
@@ -6924,6 +6927,7 @@
                 <button class="btn btn-small ${activeCalendarSummaryFilter === 'chief_admin' ? 'btn-secondary' : 'btn-ghost'}" onclick="setCalendarSummaryFilter('chief_admin')">조장·행정 ${categoryCounts.chief_admin || 0}</button>
                 ${locationGuide ? `<button class="btn btn-small btn-ghost" onclick="openCalendarLocationGuide('${weekKey}')">장소 지도 ${locationGuide.counts?.places || 0}</button>` : ''}
                 <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'basic_info')">${escapeHtml(bundle?.meta?.subject || '실습')} 기본정보</button>
+                ${fixedInfo.source_reference_index ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'source_index')">원문 목차</button>` : ''}
                 ${fixedInfo.evaluation_score_weights ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'evaluation_scores')">평가 비중</button>` : ''}
                 ${pciOutpatientGuideForBundle(bundle) ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'pci_outpatient')">PCI/외래 가이드</button>` : ''}
                 ${communicationGuideForBundle(bundle)?.day_notices?.length ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'day_notices')">요일별 공지</button>` : ''}
@@ -7470,7 +7474,7 @@
                           </div>
                           <div>
                             <div class="professor-column-label">연락 / 참고</div>
-                            ${item.contactMode === 'forbidden' ? `<div class="reference-info-line"><strong>${escapeHtml(item.contactLabel || '연락 정책')}</strong>: 연락 금지</div>` : item.phone ? `<div class="reference-info-line"><strong>${escapeHtml(item.contactLabel || '전화')}</strong>: ${escapeHtml(item.phone)}</div>` : ''}
+                            ${item.contactMode === 'forbidden' ? `<div class="reference-info-line"><strong>${escapeHtml(item.contactLabel || '연락 정책')}</strong>: 연락 금지</div>` : item.contactMode === 'private' ? `<div class="reference-info-line"><strong>${escapeHtml(item.contactLabel || '연락처')}</strong>: 비공개 인계에서 확인</div>` : item.phone ? `<div class="reference-info-line"><strong>${escapeHtml(item.contactLabel || '전화')}</strong>: ${escapeHtml(item.phone)}</div>` : ''}
                             ${item.contactHint ? `<div class="reference-info-line">${escapeHtml(item.contactHint)}</div>` : ''}
                             ${item.sourceRefs.length ? `<div class="reference-info-line"><strong>ref</strong>: ${escapeHtml(item.sourceRefs.join(', '))}</div>` : ''}
                           </div>
@@ -7567,6 +7571,66 @@
         `;
       }
 
+      if (panelKey === 'source_index') {
+        const sourceIndex = fixedInfo.source_reference_index || {};
+        const summary = sourceIndex.summary || {};
+        const sections = Array.isArray(sourceIndex.sections) ? sourceIndex.sections : [];
+        const privacyNotes = Array.isArray(sourceIndex.privacy_notes) ? sourceIndex.privacy_notes : [];
+        const privatePaths = Array.isArray(sourceIndex.private_source_paths) ? sourceIndex.private_source_paths : [];
+        return `
+          <div class="detail-screen-panel">
+            <div class="detail-screen-head">
+              <button class="detail-screen-back" onclick="openCalendarSummaryDetail('${weekKey}')">← 종합으로</button>
+              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
+            </div>
+            <div class="detail-screen-body">
+              <div class="detail-screen-hero">
+                <div class="badge-row">
+                  <span class="calendar-mini-chip">문서 ${Number(summary.source_documents || 0)}</span>
+                  <span class="calendar-mini-chip">block ${Number(summary.source_blocks_total || 0)}</span>
+                  <span class="calendar-mini-chip">이미지 ${Number(summary.images_total || 0)}</span>
+                  <span class="calendar-mini-chip">공개 연결 ${Number(summary.public_location_images_linked || 0)}</span>
+                </div>
+                <div class="detail-screen-title">${escapeHtml(sourceIndex.title || '원문 목차')}</div>
+                <div class="detail-screen-summary">전공의 공통 인계와 fulltext source pack을 어디에 반영했는지 확인하는 색인이다.</div>
+              </div>
+              <div class="detail-screen-stack">
+                <div class="detail-screen-section">
+                  <h4>보안 기준</h4>
+                  ${privacyNotes.length ? renderReferenceLinesHtml(privacyNotes.map(item => `- ${item}`)) : `<div class="empty">보안 메모가 없다.</div>`}
+                </div>
+                <div class="detail-screen-section">
+                  <h4>원문 경로</h4>
+                  <div class="reference-info-list">
+                    ${fixedInfo.primary_source ? `<div class="reference-info-line"><strong>공통 인계</strong>: ${escapeHtml(pathBasename(fixedInfo.primary_source))}</div>` : ''}
+                    ${fixedInfo.common_source_packet ? `<div class="reference-info-line"><strong>machine packet</strong>: ${escapeHtml(pathBasename(fixedInfo.common_source_packet))}</div>` : ''}
+                    ${fixedInfo.fulltext_sourcepack ? `<div class="reference-info-line"><strong>fulltext</strong>: ${escapeHtml(pathBasename(fixedInfo.fulltext_sourcepack))}</div>` : ''}
+                    ${privatePaths.map(item => `<div class="reference-info-line"><strong>private</strong>: ${escapeHtml(pathBasename(item))}</div>`).join('')}
+                  </div>
+                </div>
+                <div class="detail-screen-section">
+                  <h4>반영 목차</h4>
+                  ${sections.length ? `<div class="event-list">${sections.map(section => `
+                    <div class="event-item">
+                      <div class="event-time">${escapeHtml(section.id || 'source')}</div>
+                      <div>
+                        <div class="badge-row">
+                          <span class="calendar-mini-chip">text ${Number(section.text_blocks || 0)}</span>
+                          <span class="calendar-mini-chip">image ${Number(section.images || 0)}</span>
+                          ${section.site ? `<span class="calendar-mini-chip">${escapeHtml(section.site)}</span>` : ''}
+                        </div>
+                        <div class="item-title" style="margin-top:6px;">${escapeHtml(section.title || '')}</div>
+                        ${section.status ? `<div class="item-meta">${escapeHtml(section.status)}</div>` : ''}
+                      </div>
+                    </div>
+                  `).join('')}</div>` : `<div class="empty">원문 목차가 아직 없다.</div>`}
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
       if (panelKey !== 'basic_info') {
         return `
           <div class="detail-screen-panel">
@@ -7584,17 +7648,35 @@
         `;
       }
 
-      const contacts = [
+      const coreContacts = Array.isArray(fixedInfo.core_contacts) ? fixedInfo.core_contacts : [];
+      const legacyContacts = [
         fixedInfo['심장내과 의국'] ? { label: '심장내과 의국', value: fixedInfo['심장내과 의국'] } : null,
         fixedInfo['오스키 센터'] ? { label: '오스키센터', value: fixedInfo['오스키 센터'] } : null,
       ].filter(Boolean);
+      const contacts = [
+        ...coreContacts.map(item => ({
+          label: item.label || '',
+          value: item.value || '',
+          note: item.note || '',
+        })),
+        ...legacyContacts,
+      ].filter(item => item.label && item.value);
       const resident2Pack = resident2PackForBundle(bundle);
       const resident2Count = Number(resident2Pack?.count_summary?.total_pack_items || 0);
-      const principals = [
+      const explicitPrincipals = [
         fixedInfo['책임교수'] ? `책임교수: ${fixedInfo['책임교수']}` : null,
         Array.isArray(fixedInfo['부책임교수']) && fixedInfo['부책임교수'].length ? `부책임교수: ${fixedInfo['부책임교수'].join(', ')}` : null,
       ].filter(Boolean);
+      const professorSummary = Array.isArray(fixedInfo.professor_directory)
+        ? fixedInfo.professor_directory.slice(0, 8).map(item => {
+          const roles = Array.isArray(item.roles) ? item.roles.join(' · ') : '';
+          return roles ? `${item.name}: ${roles}` : `${item.name}: ${item.site || '실습 운영'}`;
+        })
+        : [];
+      const principals = explicitPrincipals.length ? explicitPrincipals : professorSummary;
       const memoLines = Array.isArray(fixedInfo['핵심 메모']) ? fixedInfo['핵심 메모'] : [];
+      const basicInfoSections = Array.isArray(fixedInfo.basic_info_sections) ? fixedInfo.basic_info_sections : [];
+      const sourceIndex = fixedInfo.source_reference_index || null;
 
       return `
         <div class="detail-screen-panel">
@@ -7609,8 +7691,9 @@
                 ${contacts.length ? `<span class="calendar-mini-chip">연락처 ${contacts.length}</span>` : ''}
                 ${principals.length ? `<span class="calendar-mini-chip">교수진 ${principals.length}</span>` : ''}
                 ${resident2Pack ? `<span class="calendar-mini-chip">전공의 2 ${resident2Count || 0}</span>` : ''}
+                ${sourceIndex ? `<span class="calendar-mini-chip">원문 ${sourceIndex.sections?.length || 0}</span>` : ''}
               </div>
-              <div class="detail-screen-title">${escapeHtml(bundle?.meta?.subject || '실습')} 기본정보</div>
+              <div class="detail-screen-title">${escapeHtml(fixedInfo.basic_info_title || `${bundle?.meta?.subject || '실습'} 기본정보`)}</div>
               <div class="detail-screen-summary">${calendarBoardRangeLabel(weekDays)} · 실습 중 자주 찾는 연락처와 기본 운영 정보를 한곳에 묶어둔다.</div>
               <div class="detail-filter-row">
                 ${bundleLocationGuide(bundle) ? `<button class="btn btn-small btn-ghost" onclick="openCalendarLocationGuide('${weekKey}')">장소 지도 보기</button>` : ''}
@@ -7618,6 +7701,7 @@
                 <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'group_rules')">조 운영 규칙</button>
                 ${hasSejongContextForWeek(weekDays) ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'sejong_notes')">세종 운영 메모</button>` : ''}
                 ${resident2Pack ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'resident2_pack')">전공의 2 Pack 보기</button>` : ''}
+                ${sourceIndex ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'source_index')">원문 목차</button>` : ''}
               </div>
             </div>
             <div class="reference-info-grid">
@@ -7633,11 +7717,17 @@
               <div class="reference-info-card">
                 <h5>핵심 연락처</h5>
                 <div class="reference-info-list">
-                  ${contacts.length ? contacts.map(item => `<div class="reference-info-line"><strong>${escapeHtml(item.label)}</strong>: ${escapeHtml(item.value)}</div>`).join('') : `<div class="reference-info-line">등록된 연락처가 없다.</div>`}
+                  ${contacts.length ? contacts.map(item => `<div class="reference-info-line"><strong>${escapeHtml(item.label)}</strong>: ${escapeHtml(item.value)}${item.note ? ` · ${escapeHtml(item.note)}` : ''}</div>`).join('') : `<div class="reference-info-line">등록된 연락처가 없다.</div>`}
                 </div>
               </div>
             </div>
             <div class="detail-screen-stack">
+              ${basicInfoSections.map(section => `
+                <div class="detail-screen-section">
+                  <h4>${escapeHtml(section.title || '기본정보')}</h4>
+                  ${Array.isArray(section.items) && section.items.length ? `<div>${section.items.map(item => `<div class="reference-info-line">${escapeHtml(item)}</div>`).join('')}</div>` : `<div class="empty">항목이 아직 없다.</div>`}
+                </div>
+              `).join('')}
               <div class="detail-screen-section">
                 <h4>기본 운영 메모</h4>
                 ${memoLines.length ? `<div>${memoLines.map(item => `<div class="reference-info-line">${escapeHtml(item)}</div>`).join('')}</div>` : `<div class="empty">기본 운영 메모가 아직 없다.</div>`}

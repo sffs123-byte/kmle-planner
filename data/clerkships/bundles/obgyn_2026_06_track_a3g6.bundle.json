@@ -37,14 +37,25 @@
       "version": "20260607T0448KST",
       "sourcepack": "obgyn_fulltext_sourcepack_v1.json",
       "mode": "click_detail_original_handoff_text",
-      "public_redaction": "강렬 명시 승인에 따라 산부인과 인계 운영정보는 redaction 없이 원문 보존; 환자 식별정보는 별도 범주",
+      "public_redaction": "phone/password values redacted; handoff prose preserved",
       "enriched_sessions": 56,
       "missing_sessions": [],
       "summary_version": "20260607T0435KST",
       "summary_mode": "three_line_summary_above_original_handoff_text",
       "summary_enriched_sessions": 56,
-      "sensitive_source_policy_version": "20260607T0448KST",
-      "sensitive_source_policy": "강렬 명시 승인: 산부인과 인계 운영정보(비밀번호/연락처)는 redaction 없이 원문 보존"
+      "sensitive_source_policy_version": "20260607T0500KST",
+      "sensitive_source_policy": "공개 bundle에는 비밀번호/연락처 직접값을 넣지 않고 [비공개]로 치환한다."
+    },
+    "basic_info_enrichment": {
+      "version": "20260607T0455KST",
+      "mode": "common_handoff_to_fixed_info",
+      "sources": [
+        "obgyn_common_handoff_raw_packet_2026-06-07",
+        "obgyn_fulltext_sourcepack_v1"
+      ],
+      "location_images_linked": 17,
+      "professor_cards": 11,
+      "privacy": "password/contact/student profile originals withheld from public bundle"
     }
   },
   "global_rules": [
@@ -465,6 +476,766 @@
         "매일 1주차 A조 분만 rotation: 빈 시간 활용",
         "매일 분만 루틴 체크: 본문에서 뺀 출퇴근/분만실 확인/U-Folio/준비 항목을 날짜별 상세로 보존"
       ]
+    },
+    "basic_info_title": "산부인과 기본정보 / 전체 인계",
+    "primary_source": "/Users/sffs123gmail.com/.openclaw/workspace/outputs/clerkship/obgyn_common_handoff_raw_packet_2026-06-07.md",
+    "common_source_packet": "/Users/sffs123gmail.com/.openclaw/workspace/outputs/clerkship/obgyn_common_handoff_raw_packet_2026-06-07.json",
+    "fulltext_sourcepack": "/Users/sffs123gmail.com/.openclaw/workspace-clerk2/outputs/clerkship/obgyn_fulltext_sourcepack_2026-06-06/obgyn_fulltext_sourcepack_v1.json",
+    "core_contacts": [
+      {
+        "label": "실습 소속",
+        "value": "A반 3조 6번 배강렬",
+        "note": "이번 학기 제출/사이트 표기 기준"
+      },
+      {
+        "label": "시작일 / 기간",
+        "value": "2026-06-08(월) ~ 2026-07-03(금)",
+        "note": "산부인과 4주 실습"
+      },
+      {
+        "label": "Rotation",
+        "value": "A조: 1주차 분만 → 2주차 외래 → 3주차 병동 → 4주차 수술",
+        "note": "강렬 확인 기준"
+      },
+      {
+        "label": "PK실",
+        "value": "소아동 지하 1층",
+        "note": "출입값은 공개 bundle에 노출하지 않음"
+      },
+      {
+        "label": "산부인과 의국",
+        "value": "소아동 6층",
+        "note": "OT/의국회의/NST/OSCE 후보 장소. 출입값은 비공개"
+      },
+      {
+        "label": "분만실 / 수술실",
+        "value": "소아동 3층 · 분만 331병동",
+        "note": "분만주 기본 장소, 수술주는 수술표 확인"
+      },
+      {
+        "label": "병동",
+        "value": "소아동 5층 산부인과 병동",
+        "note": "원문에 351/352 표현 혼재. 당일 회진 위치 확인"
+      },
+      {
+        "label": "외래",
+        "value": "소아동 1층 산부인과 외래",
+        "note": "2주차 외래 rotation 기본 장소"
+      },
+      {
+        "label": "Pre/Post test",
+        "value": "의과대학/감염생물학교실 405호 계열",
+        "note": "정확한 시간·장소는 조장이 사전 확인"
+      },
+      {
+        "label": "세종",
+        "value": "본관 4층 교육수련실 → 9층 임상실습실/3층 의학도서관",
+        "note": "출입증·감염관리교육·서명 먼저 확인"
+      }
+    ],
+    "핵심 메모": [
+      "A조 4주 순서는 분만 → 외래 → 병동 → 수술이다.",
+      "산부인과는 일정 변동이 잦고 교수님 일정이 조원 개인에게 전달될 수 있어 연락 대기를 기본값으로 둔다.",
+      "공통일정으로 이동할 때는 현장 전공의/교수님께 일정명과 복귀 예정 시간을 말한다.",
+      "출근/퇴근서명, 환자리스트, U-Folio는 timeline 본문이 아니라 루틴 칩/기본정보/체크리스트에서 관리한다.",
+      "비밀번호·연락처·조원 프로필·환자정보는 공개 화면에 직접 노출하지 않는다."
+    ],
+    "basic_info_sections": [
+      {
+        "title": "한 줄 구조",
+        "items": [
+          "A조 4주 순서는 분만 → 외래 → 병동 → 수술.",
+          "본문 시간표에는 실제 일정만 두고, 출퇴근/환자리스트/U-Folio 같은 반복 업무는 루틴 칩과 기본정보 패널에서 본다.",
+          "지도·교수님·원문목차는 기본정보에서 먼저 열고, 주차별 manual은 각 rotation 카드 상세로 내려보낸다."
+        ]
+      },
+      {
+        "title": "평가/일정 축",
+        "items": [
+          "산과: NST 강의, NST 시험, 산과 CASE 발표, 산과 CPX/u-folio 평가.",
+          "부인과: OSCE 강의, OSCE 평가, CASE 발표, CPX.",
+          "공통: OT, Pre-test, Post-test, 의국회의 후보, 마지막날 출석부/설문지 제출."
+        ]
+      },
+      {
+        "title": "확인 필요 우선순위",
+        "items": [
+          "1주차 NST 강의 시간/장소와 2주차 NST 시험 일정.",
+          "의국회의 진행 여부와 Zoom/의국 세팅.",
+          "산과 CASE 발표/XR VR 시간과 담당 전공의.",
+          "3주차 세종 OSCE/CASE 담당 교수·시간·장소.",
+          "2~3주차 부인과 CPX 담당 교수와 보고서 제출 방식."
+        ]
+      },
+      {
+        "title": "공개 bundle 보안 기준",
+        "items": [
+          "비밀번호와 연락처 직접값은 [비공개] 또는 공유본 비공개로 유지.",
+          "교수님 연락처표 원본과 조원 프로필/연락처 이미지는 공개 asset으로 올리지 않음.",
+          "장소 지도는 sourcepack에서 exported로 표시된 이미지 중심으로만 연결."
+        ]
+      }
+    ],
+    "location_guide": {
+      "title": "산부인과 장소 지도",
+      "source_md": "/Users/sffs123gmail.com/.openclaw/workspace/outputs/clerkship/obgyn_common_handoff_raw_packet_2026-06-07.md",
+      "intro": [
+        "공통 인계와 fulltext sourcepack에서 장소/지도/동선 이미지만 먼저 추렸다.",
+        "비밀번호, 전화번호, 조원 프로필, 환자식별정보가 들어간 원본 이미지는 연결하지 않는다.",
+        "분만·외래·병동·수술 base rotation 카드에서도 같은 장소 가이드를 참조한다."
+      ],
+      "entries": [
+        {
+          "campus": "본원",
+          "title": "소아동 지하 1층 PK실",
+          "summary": [
+            "산부인과 실습 중 기본 대기 공간. 인계상 2층 PK실은 ENT 의국 옆이라 방음이 약해 지하 1층 사용을 권장한다.",
+            "출입 비밀번호 같은 민감 정보는 공개 bundle에 직접 넣지 않고 원문/개인 인계에서 확인한다.",
+            "분만·외래·병동·수술 사이 비는 시간에는 여기 또는 각 rotation별 대기 장소를 우선 사용한다."
+          ],
+          "image_files": [],
+          "asset_urls": []
+        },
+        {
+          "campus": "본원",
+          "title": "산부인과 의국 / 교육실",
+          "summary": [
+            "소아동 6층. OT, 의국회의, NST 강의/시험, 부인과 OSCE 강의 후보 장소다.",
+            "OT/의국회의 전에는 커튼, 의자, PC, 빔프로젝터, Zoom 세팅을 미리 확인한다.",
+            "비밀번호와 세부 출입값은 공개 화면에 노출하지 않는다."
+          ],
+          "image_files": [
+            "산부인과_의국_교육실_01.png",
+            "의국_OSCE_자리배치_01.png",
+            "의국_리모컨_컴퓨터_01.png"
+          ],
+          "asset_urls": [
+            "./assets/obgyn-location-guide/본원/산부인과_의국_교육실_01.png",
+            "./assets/obgyn-location-guide/본원/의국_OSCE_자리배치_01.png",
+            "./assets/obgyn-location-guide/본원/의국_리모컨_컴퓨터_01.png"
+          ]
+        },
+        {
+          "campus": "본원",
+          "title": "소아동 5층 산부인과 병동",
+          "summary": [
+            "인계상 351/352 병동 표현이 섞여 있어 당일 병동 안내와 회진 위치를 우선 확인한다.",
+            "병동주에는 아침 출석 장소로 내려가지 않고 7시 30분 전후 병동 회진 대기가 필요할 수 있다.",
+            "A조는 3주차 병동에서 부인과 A/D조 CASE 배정과 세종 OSCE/CASE가 연결된다."
+          ],
+          "image_files": [],
+          "asset_urls": []
+        },
+        {
+          "campus": "본원",
+          "title": "소아동 3층 분만실 / 331병동",
+          "summary": [
+            "A조 1주차 기본 장소. 출근서명, 환자리스트, NST 종이, 파토그램, EMR 확인 루틴이 여기서 돈다.",
+            "분만 참관은 보호자 동선과 커튼 상황을 보고 전공의/교수님 지시에 맞춰 들어간다.",
+            "스테이션과 PK 자리, 신발장, 신생아실/NICU 자동문 위치를 지도에서 먼저 확인한다."
+          ],
+          "image_files": [
+            "분만실_331병동_구조도_01.png",
+            "분만실_출근루트_01.png",
+            "분만실_참관위치_01.png"
+          ],
+          "asset_urls": [
+            "./assets/obgyn-location-guide/본원/분만실_331병동_구조도_01.png",
+            "./assets/obgyn-location-guide/본원/분만실_출근루트_01.png",
+            "./assets/obgyn-location-guide/본원/분만실_참관위치_01.png"
+          ]
+        },
+        {
+          "campus": "본원",
+          "title": "소아동 3층 수술실 / 본관 로봇수술",
+          "summary": [
+            "A조 4주차 기본 장소. 소아동 3층 수술실과 본관 3층 로봇수술 가능성을 구분한다.",
+            "수술 참관 위치, 신발/탈의 동선, 의료진 동선 방해 금지를 먼저 확인한다.",
+            "수술주에는 첫 수술 마취 시작부터 마지막 수술 종료까지를 원칙으로 보되, 당일 수술표와 전공의 안내가 우선이다."
+          ],
+          "image_files": [
+            "수술실_소아동3층_약도_01.png",
+            "수술실_출근루트_01.png",
+            "수술참관_서는위치_01.png"
+          ],
+          "asset_urls": [
+            "./assets/obgyn-location-guide/본원/수술실_소아동3층_약도_01.png",
+            "./assets/obgyn-location-guide/본원/수술실_출근루트_01.png",
+            "./assets/obgyn-location-guide/본원/수술참관_서는위치_01.png"
+          ]
+        },
+        {
+          "campus": "본원",
+          "title": "소아동 1층 산부인과 외래",
+          "summary": [
+            "A조 2주차 기본 장소. 외래 진료실, 초음파실, 진료실별 서는 위치가 다르다.",
+            "교수님·간호사·환자 동선을 막지 않는 선에서 관찰하고, TVUS/커튼/질경 검사 상황에서는 프라이버시를 우선한다.",
+            "외래주에는 부인과 CPX 담당교수 확인과 U-Folio 관찰 항목 확보를 같이 챙긴다."
+          ],
+          "image_files": [
+            "외래_진료실1_자리_01.png",
+            "외래_초음파실_자리_01.png",
+            "외래_진료실2_자리_01.png"
+          ],
+          "asset_urls": [
+            "./assets/obgyn-location-guide/본원/외래_진료실1_자리_01.png",
+            "./assets/obgyn-location-guide/본원/외래_초음파실_자리_01.png",
+            "./assets/obgyn-location-guide/본원/외래_진료실2_자리_01.png"
+          ]
+        },
+        {
+          "campus": "세종",
+          "title": "세종 기본 동선 / 교육수련실 / 실습 공간",
+          "summary": [
+            "세종 파견 전 본관 4층 교육수련실에서 출입증 수령, 감염관리교육, 서명 절차를 확인한다.",
+            "원문 기준 학생 사용 공간은 9층 임상실습실과 3층 의학도서관이며, 세부 위치는 안내사항 이미지와 현장 안내를 우선한다.",
+            "슈즈락커, 실내화, 실습학생 락커 위치는 세종 장소 이미지에서 한 번에 확인한다."
+          ],
+          "image_files": [
+            "세종_실습생_안내사항_01.png",
+            "세종_복도동선_01.png",
+            "세종_슈즈락커_01.png",
+            "세종_실내화_01.png",
+            "세종_실습학생_락커_01.png"
+          ],
+          "asset_urls": [
+            "./assets/obgyn-location-guide/세종/세종_실습생_안내사항_01.png",
+            "./assets/obgyn-location-guide/세종/세종_복도동선_01.png",
+            "./assets/obgyn-location-guide/세종/세종_슈즈락커_01.png",
+            "./assets/obgyn-location-guide/세종/세종_실내화_01.png",
+            "./assets/obgyn-location-guide/세종/세종_실습학생_락커_01.png"
+          ]
+        },
+        {
+          "campus": "본원/기타",
+          "title": "XR 임상실습센터 / 감염생물학교실 405호",
+          "summary": [
+            "산과 CASE 발표 전후 XR 임상실습센터 3층 VR 체험 후보가 있다. 시간은 이경노 교수님 또는 담당 전공의 확인이 필요하다.",
+            "Pre-test는 보통 실습 첫날 오전 10시, 감염생물학교실/의과대학 405호 계열로 배치되지만 조장이 사전 확인한다.",
+            "Post-test는 마지막날 오후 후보이며 장소도 사전 확인 필요다."
+          ],
+          "image_files": [],
+          "asset_urls": []
+        }
+      ],
+      "counts": {
+        "places": 8,
+        "images": 17,
+        "campuses": 3
+      }
+    },
+    "professor_directory": [
+      {
+        "name": "강병헌",
+        "site": "본원",
+        "roles": [
+          "NST 강의",
+          "NST 시험",
+          "산과 CASE 후보"
+        ],
+        "modes": [
+          "산과",
+          "강의/시험"
+        ],
+        "contact_note": "NST 강의는 1주차, NST 시험은 2주차 후보. 시간/장소는 교수님 일정에 따라 변동되어 1주차에 확인.",
+        "source_refs": [
+          "OBGYN-OVERALL-P0005",
+          "OBGYN-OVERALL-P0006",
+          "OBGYN-OVERALL-P0090",
+          "OBGYN-OVERALL-P0098",
+          "OBGYN-OVERALL-P0182"
+        ],
+        "contact_label": "공유본 비공개",
+        "phone": "공유본 비공개",
+        "contact_mode": "private",
+        "image_path": ""
+      },
+      {
+        "name": "이경노",
+        "site": "본원",
+        "roles": [
+          "산과 CASE",
+          "산과 CPX",
+          "XR/VR"
+        ],
+        "modes": [
+          "산과",
+          "분만주"
+        ],
+        "contact_note": "분만주 월요일 회진 후 산과 CASE 배정. 산과 CPX는 별도 시행 없이 CASE/u-folio 평가로 처리될 수 있다는 인계.",
+        "source_refs": [
+          "OBGYN-OVERALL-P0007",
+          "OBGYN-OVERALL-P0008",
+          "OBGYN-OVERALL-P0107",
+          "OBGYN-OVERALL-P0115",
+          "OBGYN-OVERALL-P0187",
+          "OBGYN-OVERALL-P0188"
+        ],
+        "contact_label": "공유본 비공개",
+        "phone": "공유본 비공개",
+        "contact_mode": "private",
+        "image_path": ""
+      },
+      {
+        "name": "이민아",
+        "site": "본원",
+        "roles": [
+          "분만주 회진",
+          "산과 CASE 설명",
+          "질문타임"
+        ],
+        "modes": [
+          "산과",
+          "분만실"
+        ],
+        "contact_note": "분만주 회진/CASE 설명 후보. NST 직접 관찰 여부와 산과 CASE 준비 질문이 나올 수 있음.",
+        "source_refs": [
+          "OBGYN-OVERALL-P0108",
+          "OBGYN-OVERALL-P0111",
+          "OBGYN-OVERALL-P0117"
+        ],
+        "contact_label": "공유본 비공개",
+        "phone": "공유본 비공개",
+        "contact_mode": "private",
+        "image_path": ""
+      },
+      {
+        "name": "박미아",
+        "site": "본원",
+        "roles": [
+          "부인과 OSCE 강의",
+          "CPX 담당 확인"
+        ],
+        "modes": [
+          "부인과",
+          "OSCE/CPX"
+        ],
+        "contact_note": "1주차 OSCE 강의 후보. 부인과 CPX 담당교수 배정 확인 라인으로 반복 인계됨. 세종 OSCE/CASE 담당 확인은 송수연 교수님 경유.",
+        "source_refs": [
+          "OBGYN-OVERALL-P0011",
+          "OBGYN-OVERALL-P0128",
+          "OBGYN-OVERALL-P0167",
+          "OBGYN-OVERALL-P0186"
+        ],
+        "contact_label": "공유본 비공개",
+        "phone": "공유본 비공개",
+        "contact_mode": "private",
+        "image_path": ""
+      },
+      {
+        "name": "이건우",
+        "site": "본원",
+        "roles": [
+          "부인과 CASE 배정",
+          "A조 CPX 후보"
+        ],
+        "modes": [
+          "부인과",
+          "병동/외래"
+        ],
+        "contact_note": "A조 병동주 월요일 회진 때 A/D조 부인과 CASE를 받을 후보. A조 CPX 담당 가능성이 있으나 OT/박미아 교수님 확인 필요.",
+        "source_refs": [
+          "OBGYN-OVERALL-P0151",
+          "OBGYN-OVERALL-P0152",
+          "OBGYN-OVERALL-P0186"
+        ],
+        "contact_label": "공유본 비공개",
+        "phone": "공유본 비공개",
+        "contact_mode": "private",
+        "image_path": ""
+      },
+      {
+        "name": "송수연",
+        "site": "세종",
+        "roles": [
+          "세종 일정 담당",
+          "부인과 OSCE/CASE 연결"
+        ],
+        "modes": [
+          "세종",
+          "OSCE/CASE"
+        ],
+        "contact_note": "병동주 전주에 세종 OSCE 평가와 CASE 발표 담당교수/시간/장소를 확인하는 경유 라인.",
+        "source_refs": [
+          "OBGYN-OVERALL-P0142",
+          "OBGYN-OVERALL-P0149",
+          "OBGYN-OVERALL-P0184",
+          "OBGYN-OVERALL-P0185"
+        ],
+        "contact_label": "공유본 비공개",
+        "phone": "공유본 비공개",
+        "contact_mode": "private",
+        "image_path": ""
+      },
+      {
+        "name": "신원교",
+        "site": "세종",
+        "roles": [
+          "세종 OSCE/CASE 담당 후보"
+        ],
+        "modes": [
+          "부인과",
+          "세종"
+        ],
+        "contact_note": "세종 OSCE/CASE 담당 후보. 원문 인계상 친절하고 평가를 꼼꼼히 보지 않는 편이라는 후기.",
+        "source_refs": [
+          "OBGYN-OVERALL-P0158",
+          "OBGYN-OVERALL-P0185"
+        ],
+        "contact_label": "공유본 비공개",
+        "phone": "공유본 비공개",
+        "contact_mode": "private",
+        "image_path": ""
+      },
+      {
+        "name": "정예원",
+        "site": "세종",
+        "roles": [
+          "세종 OSCE/CASE 담당 후보"
+        ],
+        "modes": [
+          "부인과",
+          "세종"
+        ],
+        "contact_note": "세종 CASE에서 영상소견, 병리소견, 병기/치료 질문 축이 반복 인계됨.",
+        "source_refs": [
+          "OBGYN-OVERALL-P0161",
+          "OBGYN-OVERALL-P0185"
+        ],
+        "contact_label": "공유본 비공개",
+        "phone": "공유본 비공개",
+        "contact_mode": "private",
+        "image_path": ""
+      },
+      {
+        "name": "유헌종",
+        "site": "세종",
+        "roles": [
+          "세종 OSCE/CASE 담당 후보"
+        ],
+        "modes": [
+          "부인과",
+          "세종"
+        ],
+        "contact_note": "세종 OSCE/CASE 담당 후보. 세부 후기는 병동/세종 인계 원문을 같이 확인.",
+        "source_refs": [
+          "OBGYN-OVERALL-P0162",
+          "OBGYN-OVERALL-P0185"
+        ],
+        "contact_label": "공유본 비공개",
+        "phone": "공유본 비공개",
+        "contact_mode": "private",
+        "image_path": ""
+      },
+      {
+        "name": "김유진",
+        "site": "본원/세종",
+        "roles": [
+          "B조 CPX 담당 후보"
+        ],
+        "modes": [
+          "부인과 CPX"
+        ],
+        "contact_note": "이전 인계상 B조 CPX 담당 후보. A조 직접 대상은 아니지만 담당 변동 가능성이 있어 교수님 패널에 보존.",
+        "source_refs": [
+          "OBGYN-OVERALL-T0004",
+          "OBGYN-OVERALL-P0186"
+        ],
+        "contact_label": "공유본 비공개",
+        "phone": "공유본 비공개",
+        "contact_mode": "private",
+        "image_path": ""
+      },
+      {
+        "name": "김혜윤",
+        "site": "본원/세종",
+        "roles": [
+          "D조 CPX 담당 후보",
+          "유폴리오 제출 주의"
+        ],
+        "modes": [
+          "부인과 CPX"
+        ],
+        "contact_note": "이전 인계상 D조 CPX 담당 후보. 포트폴리오 제출 시점 관련 주의 인계가 있어 보존.",
+        "source_refs": [
+          "OBGYN-OVERALL-T0004",
+          "OBGYN-OVERALL-P0178"
+        ],
+        "contact_label": "공유본 비공개",
+        "phone": "공유본 비공개",
+        "contact_mode": "private",
+        "image_path": ""
+      }
+    ],
+    "group_rules": {
+      "title": "산부인과 공통 운영 규칙",
+      "source": "OBGYN common handoff raw packet 2026-06-07",
+      "sections": [
+        {
+          "title": "연락과 일정 공유",
+          "items": [
+            "출근 후부터 퇴근 전까지는 연락을 받을 수 있게 두기.",
+            "교수님 일정이 조원 아무에게나 전달될 수 있으므로 개인에게 온 공지는 조원방과 전공의 톡방에 공유.",
+            "고정 스케줄은 반복 확인하지 말고, 변동 가능성이 있는 항목만 담당자에게 확인."
+          ]
+        },
+        {
+          "title": "공통일정 이동",
+          "items": [
+            "공통일정 때문에 자리를 비울 때는 현장 전공의/교수님께 일정명과 복귀 예정 시간을 말하고 이동.",
+            "일정 보고에서는 줄임말을 피하고 “케이스 발표 다녀오겠습니다”처럼 풀어서 말하기.",
+            "전체 조장은 전공의 톡방에 공통 일정과 복귀 흐름을 사전 공지."
+          ]
+        },
+        {
+          "title": "출석/퇴근",
+          "items": [
+            "공식 원칙은 8 to 6. 출근서명과 퇴근서명은 timeline 본문이 아니라 루틴 칩/체크리스트에서 관리.",
+            "분만조는 출근서명과 퇴근서명을 주도하고, 퇴근서명 후 전공의 톡방 공유가 필요할 수 있음.",
+            "퇴근 방식은 언제든 바뀔 수 있어 마지막 1시간은 병원 안에서 대기하는 쪽이 안전."
+          ]
+        },
+        {
+          "title": "보안/민감정보",
+          "items": [
+            "비밀번호, 개인 전화번호, 조원 프로필/연락처 원본은 공개 bundle에 직접 넣지 않는다.",
+            "환자 전화문진 금지. 환자 식별정보가 들어간 자료는 캡처/공유 전 반드시 가린다.",
+            "교수/전공의 연락처는 개인 저장본 또는 원문 인계에서 확인하고, 사이트에는 “공유본 비공개”로만 표시."
+          ]
+        }
+      ]
+    },
+    "assignment_checklist": {
+      "title": "산부인과 공통 기본 체크리스트",
+      "source": "obgyn_common_handoff_raw_packet_2026-06-07",
+      "sections": [
+        {
+          "title": "실습 전/첫날",
+          "subsections": [
+            {
+              "title": "기본 세팅",
+              "items": [
+                {
+                  "id": "obgyn-basic-read-common-handoff",
+                  "label": "전체 인계와 A조 4주 rotation 확인"
+                },
+                {
+                  "id": "obgyn-basic-profile-contact-file",
+                  "label": "조원 프로필/연락처 파일 준비 및 민감정보 관리"
+                },
+                {
+                  "id": "obgyn-basic-professor-directory",
+                  "label": "교수님 역할/담당 일정 패널 확인"
+                },
+                {
+                  "id": "obgyn-basic-location-map",
+                  "label": "PK실/의국/분만실/외래/수술실/세종 지도 확인"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "매일",
+          "subsections": [
+            {
+              "title": "현장 운영",
+              "items": [
+                {
+                  "id": "obgyn-basic-contact-ready",
+                  "label": "출근 후부터 연락 대기 및 일정 공유"
+                },
+                {
+                  "id": "obgyn-basic-away-report",
+                  "label": "공통일정 이동 전 현장 전공의/교수님께 보고"
+                },
+                {
+                  "id": "obgyn-basic-attendance-sign",
+                  "label": "출근/퇴근 서명 루틴 칩 확인"
+                },
+                {
+                  "id": "obgyn-basic-sensitive-check",
+                  "label": "비밀번호/연락처/환자정보 공개 노출 금지"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "마지막날",
+          "subsections": [
+            {
+              "title": "제출/정리",
+              "items": [
+                {
+                  "id": "obgyn-basic-attendance-submit",
+                  "label": "Post-test 후 출석부/설문지 제출 흐름 확인"
+                },
+                {
+                  "id": "obgyn-basic-ufolio-final",
+                  "label": "U-Folio 12항목/현장평가/포트폴리오 제출 확인"
+                },
+                {
+                  "id": "obgyn-basic-next-handoff",
+                  "label": "다음 조 인계 업데이트"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "source_reference_index": {
+      "title": "산부인과 인계 원문 목차 / Source Index",
+      "generated_at": "2026-06-07T04:55:00+09:00",
+      "summary": {
+        "source_documents": 14,
+        "source_blocks_total": 1607,
+        "common_packet_blocks": 501,
+        "images_total": 76,
+        "public_location_images_linked": 17,
+        "private_or_not_exported_images": 45
+      },
+      "private_source_paths": [
+        "/Users/sffs123gmail.com/.openclaw/workspace/outputs/clerkship/obgyn_common_handoff_raw_packet_2026-06-07.md",
+        "/Users/sffs123gmail.com/.openclaw/workspace/outputs/clerkship/obgyn_common_handoff_raw_packet_2026-06-07.json",
+        "/Users/sffs123gmail.com/.openclaw/workspace-clerk2/outputs/clerkship/obgyn_fulltext_sourcepack_2026-06-06/obgyn_fulltext_sourcepack_v1.json"
+      ],
+      "sections": [
+        {
+          "id": "basic_overview",
+          "title": "기본정보 / 전체 인계",
+          "text_blocks": 193,
+          "images": 8,
+          "site": "fixed_info 기본정보 패널",
+          "status": "fixed_info에 1차 반영"
+        },
+        {
+          "id": "calendar_schedule",
+          "title": "4주 일정 / 캘린더",
+          "text_blocks": 5,
+          "images": 0,
+          "site": "sessions / day_reminders",
+          "status": "A조 분만→외래→병동→수술 반영"
+        },
+        {
+          "id": "location_maps",
+          "title": "장소 지도 / 이미지",
+          "text_blocks": 0,
+          "images": 15,
+          "site": "fixed_info.location_guide",
+          "status": "본원/세종 지도 이미지 17개 연결"
+        },
+        {
+          "id": "professor_directory",
+          "title": "교수님별 연락 경로 / 역할",
+          "text_blocks": 0,
+          "images": 1,
+          "site": "fixed_info.professor_directory",
+          "status": "연락처 값 제외, 역할/주의사항 중심 반영"
+        },
+        {
+          "id": "delivery_manual",
+          "title": "분만주 매뉴얼",
+          "text_blocks": 124,
+          "images": 7,
+          "site": "분만 rotation/base 상세",
+          "status": "기존 루틴/rotation chip에 연결됨"
+        },
+        {
+          "id": "outpatient_manual",
+          "title": "외래주 매뉴얼",
+          "text_blocks": 24,
+          "images": 3,
+          "site": "외래 rotation/base 상세",
+          "status": "다음 pass에서 rotation_manuals로 보강"
+        },
+        {
+          "id": "ward_sejong_manual",
+          "title": "병동주 / 세종 매뉴얼",
+          "text_blocks": 234,
+          "images": 5,
+          "site": "병동 rotation/base 상세 + 세종 메모",
+          "status": "세종 장소 지도 5개 연결, manual 보강 예정"
+        },
+        {
+          "id": "surgery_manual",
+          "title": "수술주 매뉴얼",
+          "text_blocks": 305,
+          "images": 6,
+          "site": "수술 rotation/base 상세",
+          "status": "수술 지도 3개 연결, manual 보강 예정"
+        },
+        {
+          "id": "nst_exam",
+          "title": "NST 강의 / NST 시험",
+          "text_blocks": 42,
+          "images": 0,
+          "site": "study_items / pretest_items",
+          "status": "전공의2 pack + 후보 session 반영"
+        },
+        {
+          "id": "prepost_exam",
+          "title": "Pre-test / Post-test 복기",
+          "text_blocks": 94,
+          "images": 3,
+          "site": "pretest_items / assignments",
+          "status": "이미지 원본은 공개 제외"
+        },
+        {
+          "id": "case_osce_vr",
+          "title": "CASE 발표 / OSCE / VR",
+          "text_blocks": 0,
+          "images": 6,
+          "site": "presentation_guide / assignments",
+          "status": "후보 session·assignment 반영, guide 보강 예정"
+        },
+        {
+          "id": "cpx_manual",
+          "title": "CPX 가이드",
+          "text_blocks": 220,
+          "images": 4,
+          "site": "fixed_info.cpx_guide / study_items",
+          "status": "전공의2 pack에 1차 반영"
+        },
+        {
+          "id": "uportfolio_manual",
+          "title": "U-Folio 제출 / 현장승인",
+          "text_blocks": 98,
+          "images": 7,
+          "site": "uportfolio_guide / ufolio_items",
+          "status": "전공의2 pack과 ufolio_items에 반영"
+        },
+        {
+          "id": "chief_ops",
+          "title": "조장 운영 / 연락 / 인계 업데이트",
+          "text_blocks": 268,
+          "images": 22,
+          "site": "assignment_checklist / group_rules",
+          "status": "중요 업무 assignment 반영, 상세 checklist 보강 예정"
+        },
+        {
+          "id": "raw_archive",
+          "title": "원문 아카이브 / source reference index",
+          "text_blocks": 1607,
+          "images": 76,
+          "site": "analysis_appendix.reference_blocks",
+          "status": "공개 bundle에는 원문 전체 미노출, private sourcepack 경로 보존"
+        },
+        {
+          "id": "privacy_redaction",
+          "title": "공개/비공개 분리 및 redaction",
+          "text_blocks": 0,
+          "images": 45,
+          "site": "audit/security gate",
+          "status": "비밀번호/연락처/민감 이미지 직접 노출 금지"
+        }
+      ],
+      "privacy_notes": [
+        "공개 bundle에는 비밀번호와 전화번호 직접값을 넣지 않는다.",
+        "교수님/전공의 연락처표 원본 이미지는 공개 asset에 복사하지 않는다.",
+        "원문 전체 block archive는 private sourcepack에 보존하고, 사이트에는 목차와 반영 상태만 우선 표시한다."
+      ]
     }
   },
   "source_refs": [
@@ -579,7 +1350,7 @@
           "[산과 Case 발표]",
           "- 월요일 회진 때 이경노 교수님이 case 배정해주심.  발표 시간/ 장소/ VR 일정까지 물어보거나 문자로 여쭤보기 (안 오시면 문자드리기)",
           "- 26년) 주로 목-금/ 의국에서 진행",
-          "- 케이스 받고 바로 수술방 세미나실 컴퓨터에서 VMware 로그인해서 EMR 진로 기록 따오기. 비밀번호 1234qwer@ (굳이 말하고 가지 않아도 됨. 조원에게는 말해서 혹시 찾으면 연락받을 수 있도록 하기)",
+          "- 케이스 받고 바로 수술방 세미나실 컴퓨터에서 VMware 로그인해서 EMR 진로 기록 따오기. 비밀번호 [비공개] (굳이 말하고 가지 않아도 됨. 조원에게는 말해서 혹시 찾으면 연락받을 수 있도록 하기)",
           "이민아 교수님께서 바로 케이스 물어보거나/ 다음날 브리핑하라 하시니 바로 준비하는게 좋음.",
           "[VR 실습]",
           "장소: XR 센터 3층/ 시간: 이경노 교수님께 문의",
@@ -852,7 +1623,7 @@
           "26년 4월 12조) 정수화 선생님께서는 손씻을 때 한쪽 손에서 팔까지 (팔꿈치는 너무 열심히X) 한번에 닦고 난 후 다음 팔로 넘어가시는 걸 선호하십니다",
           "26년 4월 9조) 수술 종료 후 환자 깨울 때 붙잡고, 이송용 베드로 옮기는 것은 거의 모든 수술에서 참여했습니다. 고영복 교수님 수술에서는 환자를 수술방으로 들여보내는 것도 인턴선생님과 같이 하면 좋습니다. (교수님께서 직접 언급하심)",
           "26년 4월 10조) 앞 조 인계들처럼 인턴선생님들 하는 업무 하루 정도보면 다 눈에 보이니까 수술마다 도와드리면 됩니다. 수술 일정이 갑자기 추가되거나 순서가 바뀌는 경우가 많은데 전공의 선생님들이나 교수님 말씀 들으면 어느 정도 추론 가능하고 인턴 선생님께 확인차 다시 여쭤보면 잘 알려주십니다.",
-          "소아 수술실 세미나실 컴 비밀번호 1234qwer@",
+          "소아 수술실 세미나실 컴 비밀번호 [비공개]",
           "★ 복장",
           "-수술실 들어가기 전에 꼭 모자와 마스크 쓸 것. 끈으로 묶는 모자(수술 가운이랑 같은 재질같아 보임)는 전공의쌤이나 교수님용이므로 절대 사용 X. Nurse cap이라고 되어있는 고무줄모자 쓰자.(아줌마 모자, 색 상관 X) 마스크는 위, 아래로 줄 2개 있는 마스크를 쓰면 됨.",
           "-수술복은 탈의실 내부에 비치되어 있음. 수술실 입실 전에 아래와 같이 준비하고 들어가면 됨. 우리가 아는 수술용 가운은 어시 설 때에만 수술실 내에서 간호사쌤 도움 하에 착용하면 됨. (평소에는 사진 상태로만 수술방 돌아다님)",
@@ -1049,7 +1820,7 @@
           "- 환자분께 전화문진 드리지 마세요! 개인정보 유출입니다.",
           "- 월요일 회진 때 이경노 교수님이 case 배정해주심.  발표 시간/ 장소/ VR 일정까지 물어보거나 문자로 여쭤보기 (안 오시면 문자드리기)",
           "- 26년) 주로 목-금/ 의국에서 진행",
-          "- 케이스 받고 바로 수술방 세미나실 컴퓨터에서 VMware 로그인해서 EMR 진로 기록 따오기. 비밀번호 1234qwer@ (굳이 말하고 가지 않아도 됨. 조원에게는 말해서 혹시 찾으면 연락받을 수 있도록 하기)",
+          "- 케이스 받고 바로 수술방 세미나실 컴퓨터에서 VMware 로그인해서 EMR 진로 기록 따오기. 비밀번호 [비공개] (굳이 말하고 가지 않아도 됨. 조원에게는 말해서 혹시 찾으면 연락받을 수 있도록 하기)",
           "이민아 교수님께서 바로 케이스 물어보거나/ 다음날 브리핑하라 하시니 바로 준비하는게 좋음."
         ]
       },
@@ -1537,7 +2308,7 @@
         "인계 원문": [
           "1) OT",
           "*시간: 실습 첫날 오전 8시 (7시 40분 출첵 후 바로 의국 이동해서 세팅 및 대기)",
-          "*장소: 6층 의국, 비번 7264",
+          "*장소: 6층 의국, 비번 [비공개]",
           "- 오티 때도 교수님, 전공의선생님들 모두 들어오십니다.",
           "- 커튼 내리기 (바깥 검정색, 안쪽 하얀색 둘 다), 의자 세팅은 사진 참고(조원들이 도와주기)",
           "- PC켜고 빔프로젝터 켜기, 바탕화면에 OT 파일 (드롭박스에도 있음)",
@@ -1677,7 +2448,7 @@
         "인계 원문": [
           "3) 의국회의 (자세한 세팅법은 조장인계파일 참고**)",
           "* 시간: 매주 수, 목요일 오전 8시부터 약 8시 30분까지 진행. (7:40까지 만나서 아침 출석하고, 7:50까지 의국 도착 후 세팅)",
-          "* 장소: 산부인과 의국 (소아동 6층, 비밀번호 7264)",
+          "* 장소: 산부인과 의국 (소아동 6층, 비밀번호 [비공개])",
           "- 의국세팅: OT때 했던 의국세팅으로 준비해두고 줌 세팅까지 완료해둘 것. 줌 세팅은 조장파일 참고",
           "- 26년도 3월) 의국회의 화수에 진행됨.",
           "-화수 의국회의: 여부는 미정. 오티 때 공지해주시나 안 해주시면 의국회의 하는지 여부 교육담당 전공의샘께 여쭙기."
@@ -1731,7 +2502,7 @@
         "인계 원문": [
           "3) 의국회의 (자세한 세팅법은 조장인계파일 참고**)",
           "* 시간: 매주 수, 목요일 오전 8시부터 약 8시 30분까지 진행. (7:40까지 만나서 아침 출석하고, 7:50까지 의국 도착 후 세팅)",
-          "* 장소: 산부인과 의국 (소아동 6층, 비밀번호 7264)",
+          "* 장소: 산부인과 의국 (소아동 6층, 비밀번호 [비공개])",
           "- 의국세팅: OT때 했던 의국세팅으로 준비해두고 줌 세팅까지 완료해둘 것. 줌 세팅은 조장파일 참고",
           "- 26년도 3월) 의국회의 화수에 진행됨.",
           "-화수 의국회의: 여부는 미정. 오티 때 공지해주시나 안 해주시면 의국회의 하는지 여부 교육담당 전공의샘께 여쭙기.",
@@ -1814,7 +2585,7 @@
           "*준비: 주제는 wet smear(ecto, endo), wet smear 2가지. 학생들이 하는 것을 직접 보시고 피드백 해주시는 방식으로 강의 해주시기 때문에 사전에 드롭박스에서 OSCE 대본 보고 연습. 박미아 교수님은 술기마다 말을 많이 하시는 걸 좋아하심.",
           "(*) 박미아 교수님 피드백",
           "- 2명 정도 시켜봄 (조장1명, 조원 1명), 골반 내진 시킬 수 있으니 미리 준비 (못해도 상관없고 알려주심)",
-          "7) 박미아 교수님께 부인과 OSCE 강의 시간 및 장소 확인 연락드리기(010-9297-3342) -> 안내 받으면 조원들에게 공지 (피드백 받을 사람: 조장 + 1명 정하기)",
+          "7) 박미아 교수님께 부인과 OSCE 강의 시간 및 장소 확인 연락드리기([비공개 연락처]) -> 안내 받으면 조원들에게 공지 (피드백 받을 사람: 조장 + 1명 정하기)",
           "2) 의국 위치, OT 세팅 미리 확인하기, OSCE 세팅 미리 확인하기"
         ]
       },
@@ -2155,7 +2926,7 @@
         "인계 원문": [
           "- 월요일 회진 때 이경노 교수님이 case 배정해주심.  발표 시간/ 장소/ VR 일정까지 물어보거나 문자로 여쭤보기 (안 오시면 문자드리기)",
           "- 26년) 주로 목-금/ 의국에서 진행",
-          "- 케이스 받고 바로 수술방 세미나실 컴퓨터에서 VMware 로그인해서 EMR 진로 기록 따오기. 비밀번호 1234qwer@ (굳이 말하고 가지 않아도 됨. 조원에게는 말해서 혹시 찾으면 연락받을 수 있도록 하기)",
+          "- 케이스 받고 바로 수술방 세미나실 컴퓨터에서 VMware 로그인해서 EMR 진로 기록 따오기. 비밀번호 [비공개] (굳이 말하고 가지 않아도 됨. 조원에게는 말해서 혹시 찾으면 연락받을 수 있도록 하기)",
           "이민아 교수님께서 바로 케이스 물어보거나/ 다음날 브리핑하라 하시니 바로 준비하는게 좋음.",
           "- “전공의쌤들이 NST 줬냐”고 물으셨습니다. 출근 후 스테이션에서 NST 직접 챙겨가는 거 말씀하시는 것 같습니다. 네 하시면 됩니다. 역시 “직접 하는 것을 봤냐”고도 물으셨습니다. 여기도 네 하시면 됩니다. (아니면 스테이션 위에 흰색 바구니 안에 갈색 봉투 있는데, 거기서 케이스 환자 거 통째로 가져가서 보거나, 사진 찍은 다음에 다시 돌려 놔도 괜찮습니다. 허락 맡을 필요 없음.)",
           "- NST는 스테이션 위 흰색 바구니에 있습니다. 본인 케이스 환자 이름 적힌 갈색봉투 집어가서 사진찍어서 집어넣으면 됩니다. => 안 물어보고 가져가서 쓰고 다시 놓으면 됨",
@@ -2478,7 +3249,7 @@
         "인계 원문": [
           "3) 의국회의 (자세한 세팅법은 조장인계파일 참고**)",
           "* 시간: 매주 수, 목요일 오전 8시부터 약 8시 30분까지 진행. (7:40까지 만나서 아침 출석하고, 7:50까지 의국 도착 후 세팅)",
-          "* 장소: 산부인과 의국 (소아동 6층, 비밀번호 7264)",
+          "* 장소: 산부인과 의국 (소아동 6층, 비밀번호 [비공개])",
           "- 의국세팅: OT때 했던 의국세팅으로 준비해두고 줌 세팅까지 완료해둘 것. 줌 세팅은 조장파일 참고",
           "- 26년도 3월) 의국회의 화수에 진행됨.",
           "-화수 의국회의: 여부는 미정. 오티 때 공지해주시나 안 해주시면 의국회의 하는지 여부 교육담당 전공의샘께 여쭙기."
@@ -3167,7 +3938,7 @@
           "- 환자분께 전화문진 드리지 마세요! 개인정보 유출입니다.",
           "- 월요일 회진 때 이경노 교수님이 case 배정해주심.  발표 시간/ 장소/ VR 일정까지 물어보거나 문자로 여쭤보기 (안 오시면 문자드리기)",
           "- 26년) 주로 목-금/ 의국에서 진행",
-          "- 케이스 받고 바로 수술방 세미나실 컴퓨터에서 VMware 로그인해서 EMR 진로 기록 따오기. 비밀번호 1234qwer@ (굳이 말하고 가지 않아도 됨. 조원에게는 말해서 혹시 찾으면 연락받을 수 있도록 하기)",
+          "- 케이스 받고 바로 수술방 세미나실 컴퓨터에서 VMware 로그인해서 EMR 진로 기록 따오기. 비밀번호 [비공개] (굳이 말하고 가지 않아도 됨. 조원에게는 말해서 혹시 찾으면 연락받을 수 있도록 하기)",
           "이민아 교수님께서 바로 케이스 물어보거나/ 다음날 브리핑하라 하시니 바로 준비하는게 좋음."
         ]
       },
@@ -3297,7 +4068,7 @@
           "- 환자분께 전화문진 드리지 마세요! 개인정보 유출입니다.",
           "- 월요일 회진 때 이경노 교수님이 case 배정해주심.  발표 시간/ 장소/ VR 일정까지 물어보거나 문자로 여쭤보기 (안 오시면 문자드리기)",
           "- 26년) 주로 목-금/ 의국에서 진행",
-          "- 케이스 받고 바로 수술방 세미나실 컴퓨터에서 VMware 로그인해서 EMR 진로 기록 따오기. 비밀번호 1234qwer@ (굳이 말하고 가지 않아도 됨. 조원에게는 말해서 혹시 찾으면 연락받을 수 있도록 하기)",
+          "- 케이스 받고 바로 수술방 세미나실 컴퓨터에서 VMware 로그인해서 EMR 진로 기록 따오기. 비밀번호 [비공개] (굳이 말하고 가지 않아도 됨. 조원에게는 말해서 혹시 찾으면 연락받을 수 있도록 하기)",
           "이민아 교수님께서 바로 케이스 물어보거나/ 다음날 브리핑하라 하시니 바로 준비하는게 좋음."
         ]
       },
@@ -3433,7 +4204,7 @@
           "- 환자분께 전화문진 드리지 마세요! 개인정보 유출입니다.",
           "- 월요일 회진 때 이경노 교수님이 case 배정해주심.  발표 시간/ 장소/ VR 일정까지 물어보거나 문자로 여쭤보기 (안 오시면 문자드리기)",
           "- 26년) 주로 목-금/ 의국에서 진행",
-          "- 케이스 받고 바로 수술방 세미나실 컴퓨터에서 VMware 로그인해서 EMR 진로 기록 따오기. 비밀번호 1234qwer@ (굳이 말하고 가지 않아도 됨. 조원에게는 말해서 혹시 찾으면 연락받을 수 있도록 하기)",
+          "- 케이스 받고 바로 수술방 세미나실 컴퓨터에서 VMware 로그인해서 EMR 진로 기록 따오기. 비밀번호 [비공개] (굳이 말하고 가지 않아도 됨. 조원에게는 말해서 혹시 찾으면 연락받을 수 있도록 하기)",
           "이민아 교수님께서 바로 케이스 물어보거나/ 다음날 브리핑하라 하시니 바로 준비하는게 좋음."
         ]
       },
@@ -3858,7 +4629,7 @@
         "인계 원문": [
           "3) 의국회의 (자세한 세팅법은 조장인계파일 참고**)",
           "* 시간: 매주 수, 목요일 오전 8시부터 약 8시 30분까지 진행. (7:40까지 만나서 아침 출석하고, 7:50까지 의국 도착 후 세팅)",
-          "* 장소: 산부인과 의국 (소아동 6층, 비밀번호 7264)",
+          "* 장소: 산부인과 의국 (소아동 6층, 비밀번호 [비공개])",
           "- 의국세팅: OT때 했던 의국세팅으로 준비해두고 줌 세팅까지 완료해둘 것. 줌 세팅은 조장파일 참고",
           "- 26년도 3월) 의국회의 화수에 진행됨.",
           "-화수 의국회의: 여부는 미정. 오티 때 공지해주시나 안 해주시면 의국회의 하는지 여부 교육담당 전공의샘께 여쭙기."
@@ -3953,7 +4724,7 @@
         "인계 원문": [
           "3) 의국회의 (자세한 세팅법은 조장인계파일 참고**)",
           "* 시간: 매주 수, 목요일 오전 8시부터 약 8시 30분까지 진행. (7:40까지 만나서 아침 출석하고, 7:50까지 의국 도착 후 세팅)",
-          "* 장소: 산부인과 의국 (소아동 6층, 비밀번호 7264)",
+          "* 장소: 산부인과 의국 (소아동 6층, 비밀번호 [비공개])",
           "- 의국세팅: OT때 했던 의국세팅으로 준비해두고 줌 세팅까지 완료해둘 것. 줌 세팅은 조장파일 참고",
           "- 26년도 3월) 의국회의 화수에 진행됨.",
           "-화수 의국회의: 여부는 미정. 오티 때 공지해주시나 안 해주시면 의국회의 하는지 여부 교육담당 전공의샘께 여쭙기.",
