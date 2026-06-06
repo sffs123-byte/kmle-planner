@@ -1209,6 +1209,16 @@
       border-color: color-mix(in srgb, #d97706 44%, var(--line));
     }
 
+    .calendar-event-card.is-base-schedule {
+      border-style: dashed;
+      background: linear-gradient(180deg, rgba(248,250,252,0.98), rgba(255,255,255,0.96));
+      box-shadow: inset 0 0 0 1px rgba(148,163,184,0.10);
+    }
+
+    .calendar-event-card.is-base-schedule .calendar-event-title {
+      color: #334155;
+    }
+
     .calendar-event-card.is-cancelled {
       opacity: 0.82;
       background: linear-gradient(180deg, rgba(243,244,246,0.98), rgba(255,255,255,0.98));
@@ -2890,8 +2900,8 @@
 
   <script>
     const STORAGE_KEY = 'kmlePlannerState.v2';
-    const APP_VERSION = '20260525T195426Z';
-    const APP_VERSION_LABEL = '2026-05-26 04:54 KST';
+    const APP_VERSION = '20260606T114144Z';
+    const APP_VERSION_LABEL = '2026-06-06 20:41 KST';
     const STAGES = [
       { id: 'lecture', label: '강의 듣기', short: '강의', note: '강의/팟캐스트/기본 인강 소화' },
       { id: 'framework', label: '개념 틀 짜기', short: '개념틀', note: '총정리 구조, 도식, 로직 프레임 정리' },
@@ -2965,6 +2975,7 @@
       presentation: { label: '발표', color: '#7c3aed' },
       chief: { label: '조장', color: '#0f172a' },
       exam: { label: '시험', color: '#dc2626' },
+      rotation: { label: '기본', color: '#64748b' },
       admin: { label: '행정', color: '#0f8b8d' }
     };
 
@@ -3335,6 +3346,13 @@
 
     function calendarEventIsCancelled(event) {
       return event?.displayState === 'cancelled';
+    }
+
+    function isCalendarBaseScheduleEvent(event) {
+      const signature = `${event?.type || ''} ${event?.sourceSessionId || ''} ${event?.title || ''}`.toLowerCase();
+      return event?.windowType === 'clerkship-base'
+        || event?.type === 'rotation'
+        || signature.includes('rotation');
     }
 
     function normalizeState(data) {
@@ -4739,6 +4757,7 @@
 
     function isWeeklySummaryEvent(event) {
       if (!event) return false;
+      if (isCalendarBaseScheduleEvent(event)) return false;
       if (event.windowType && event.windowType !== 'clerkship-session') return true;
       if (event.sourceSessionId || event.sourceKind === 'session' || event.windowType === 'clerkship-session') return false;
       if (event.sourceAssignmentId || event.sourceKind === 'assignment') return true;
@@ -5151,9 +5170,57 @@
       return left.every((value, index) => Math.abs(value - right[index]) < 2);
     }
 
+    function calendarTimelineRangesOverlap(left, right) {
+      return left.layoutStart < right.layoutEnd && right.layoutStart < left.layoutEnd;
+    }
+
+    function subtractCalendarTimelineRange(segments, blockStart, blockEnd) {
+      return segments.flatMap(segment => {
+        const overlapStart = Math.max(segment.start, blockStart);
+        const overlapEnd = Math.min(segment.end, blockEnd);
+        if (overlapEnd <= overlapStart) return [segment];
+        return [
+          { start: segment.start, end: overlapStart },
+          { start: overlapEnd, end: segment.end }
+        ].filter(next => next.end - next.start >= 15);
+      });
+    }
+
+    function splitCalendarBaseScheduleEntries(timedEntries) {
+      const baseEntries = timedEntries.filter(entry => isCalendarBaseScheduleEvent(entry.event));
+      if (!baseEntries.length) return timedEntries;
+
+      const blockingEntries = timedEntries.filter(entry => !isCalendarBaseScheduleEvent(entry.event));
+      const splitBaseEntries = [];
+      baseEntries.forEach(entry => {
+        let segments = [{ start: entry.timeline.layoutStart, end: entry.timeline.layoutEnd }];
+        blockingEntries
+          .filter(blocker => calendarTimelineRangesOverlap(entry.timeline, blocker.timeline))
+          .sort((a, b) => a.timeline.layoutStart - b.timeline.layoutStart || a.timeline.layoutEnd - b.timeline.layoutEnd)
+          .forEach(blocker => {
+            segments = subtractCalendarTimelineRange(segments, blocker.timeline.layoutStart, blocker.timeline.layoutEnd);
+          });
+
+        segments.forEach((segment, index) => {
+          splitBaseEntries.push({
+            ...entry,
+            timeline: {
+              ...entry.timeline,
+              layoutStart: segment.start,
+              layoutEnd: segment.end,
+              timeLabel: `${formatMinutesAsClock(segment.start)}–${formatMinutesAsClock(segment.end)}`,
+              baseSegmentIndex: index + 1
+            }
+          });
+        });
+      });
+
+      return [...blockingEntries, ...splitBaseEntries];
+    }
+
     function layoutCalendarDayEvents(dateIso) {
       const dayEvents = dailyPrimaryEvents(dateIso);
-      const timedEntries = [];
+      let timedEntries = [];
       const untimedEvents = [];
 
       dayEvents.forEach(event => {
@@ -5165,6 +5232,7 @@
         timedEntries.push({ event, timeline });
       });
 
+      timedEntries = splitCalendarBaseScheduleEntries(timedEntries);
       timedEntries.sort((a, b) => a.timeline.layoutStart - b.timeline.layoutStart || a.timeline.layoutEnd - b.timeline.layoutEnd || a.event.title.localeCompare(b.event.title, 'ko'));
 
       const clusters = [];
@@ -5764,15 +5832,16 @@
                   const event = entry.event;
                   const session = findBundleSessionForEvent(event);
                   const relatedAssignments = session ? findRelatedAssignmentsForSession(event, session) : [];
-                  const metaParts = [event.professor, calendarEventTimeLabel(event)].filter(Boolean);
+                  const isBaseSchedule = isCalendarBaseScheduleEvent(event);
+                  const metaParts = [event.professor, entry.timeline.timeLabel || calendarEventTimeLabel(event)].filter(Boolean);
                   if (!event.professor && session?.location) metaParts.unshift(session.location);
                   const boardConfig = calendarEventBoardConfig(event, session, relatedAssignments);
-                  const surfaceColor = calendarEventSurfaceColor(event, boardConfig);
-                  const borderColor = calendarEventBorderColor(event, boardConfig);
-                  const flags = boardConfig.flags;
+                  const surfaceColor = isBaseSchedule ? EVENT_TYPE_META.rotation.color : calendarEventSurfaceColor(event, boardConfig);
+                  const borderColor = isBaseSchedule ? EVENT_TYPE_META.rotation.color : calendarEventBorderColor(event, boardConfig);
+                  const flags = isBaseSchedule ? ['기본'] : boardConfig.flags;
                   return `
                     <button
-                      class="calendar-event-card ${activeCalendarEditEventId === event.id || activeCalendarMoveEventId === event.id ? 'is-active' : ''} ${calendarEventIsCancelled(event) ? 'is-cancelled' : ''}"
+                      class="calendar-event-card ${isBaseSchedule ? 'is-base-schedule' : ''} ${activeCalendarEditEventId === event.id || activeCalendarMoveEventId === event.id ? 'is-active' : ''} ${calendarEventIsCancelled(event) ? 'is-cancelled' : ''}"
                       data-duration-minutes="${Math.max(calendarEventDurationMinutes(event, { forLayout: true }), 15)}"
                       data-layout-start-minutes="${entry.timeline.layoutStart}"
                       data-layout-end-minutes="${entry.timeline.layoutEnd}"
