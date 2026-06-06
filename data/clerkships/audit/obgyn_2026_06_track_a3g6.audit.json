@@ -2,7 +2,7 @@
   "generated_at": "2026-06-06T17:24:33+09:00",
   "bundle": "data/clerkships/bundles/obgyn_2026_06_track_a3g6.bundle.json",
   "clerkship_id": "obgyn-2026-06-track-a3g6",
-  "status": "calendar_dates_patch_local_smoke_pass",
+  "status": "calendar_dates_patch_live_smoke_pass",
   "counts": {
     "sessions": 20,
     "assignments": 39,
@@ -35,7 +35,7 @@
     "browser_smoke": "blocked_by_policy_in_current_runtime; use live smoke after push",
     "live_chrome_before_patch": "pass_2026-06-06_existing_bundle_loads_but_dates_empty",
     "calendar_patch_local_smoke": "pass_2026-06-06_port8791_chrome_20_sessions_66_assignment_summaries_86_total_events",
-    "calendar_patch_live_smoke": "pending"
+    "calendar_patch_live_smoke": "pass_2026-06-06_github_pages_chrome_mobile_20_sessions_66_assignment_summaries_86_total_events_version_20260606T083054Z"
   },
   "sha256": "0a7a3435cdc412d1c9494b38de93bb67af189b19bd3e08047e8d0707614ff9e5",
   "calendar_patch": {
