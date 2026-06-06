@@ -3959,7 +3959,7 @@
         minDatedSessions: 20,
         resident2PackVersion: '20260606T140332Z',
         deliveryWeekCalendarVersion: '20260606T180051Z',
-        detailEnrichmentVersion: '20260607T0448KST',
+        detailEnrichmentVersion: '20260607T0503KST',
         label: '산부인과'
       }
     };
@@ -7389,7 +7389,12 @@
         const evalGuide = fixedInfo.evaluation_score_weights || {};
         const items = Array.isArray(evalGuide.items) ? evalGuide.items : [];
         const cpx = Array.isArray(evalGuide.cpx_breakdown) ? evalGuide.cpx_breakdown : [];
+        const priorities = Array.isArray(evalGuide.priority_strategy) ? evalGuide.priority_strategy : [];
+        const notes = Array.isArray(evalGuide.notes) ? evalGuide.notes : [];
+        const sources = Array.isArray(evalGuide.source_refs) ? evalGuide.source_refs : [];
         const total = Number(evalGuide.total_points || items.reduce((sum, item) => sum + (Number(item.points || 0) || 0), 0));
+        const totalLabel = evalGuide.total_label || `총 ${total}%`;
+        const sourcePageLabel = evalGuide.source_page_label || (evalGuide.source_page ? `${evalGuide.source_page}페이지` : '');
         return `
           <div class="detail-screen-panel">
             <div class="detail-screen-head">
@@ -7399,26 +7404,48 @@
             <div class="detail-screen-body">
               <div class="detail-screen-hero">
                 <div class="badge-row">
-                  <span class="calendar-mini-chip">총 ${total}점</span>
+                  <span class="calendar-mini-chip">${escapeHtml(totalLabel)}</span>
                   <span class="calendar-mini-chip">평가항목 ${items.length}</span>
-                  <span class="calendar-mini-chip">CPX 각 6점</span>
+                  ${evalGuide.primary_focus ? `<span class="calendar-mini-chip">${escapeHtml(evalGuide.primary_focus)}</span>` : ''}
                 </div>
-                <div class="detail-screen-title">심장내과 평가 비중</div>
-                <div class="detail-screen-summary">${escapeHtml(evalGuide.source_pdf || '1-6. 심장내과.pdf')} ${evalGuide.source_page ? `${evalGuide.source_page}페이지` : ''} · 비율(%) 숫자만 반영, 지식/술기/태도 세부점수는 제외.</div>
+                <div class="detail-screen-title">${escapeHtml(evalGuide.title || '평가 비중')}</div>
+                <div class="detail-screen-summary">${escapeHtml(evalGuide.summary || evalGuide.source_pdf || '')}${sourcePageLabel ? ` · ${escapeHtml(sourcePageLabel)}` : ''}</div>
               </div>
               <div class="detail-screen-stack">
                 <div class="detail-screen-section">
                   <h4>평가항목별 비율</h4>
                   <div class="reference-info-list">
-                    ${items.map(item => `<div class="reference-info-line"><strong>${escapeHtml(item.label || '')}</strong>: ${Number(item.points || 0)}점${item.display_note ? ` · ${escapeHtml(item.display_note)}` : ''}</div>`).join('')}
+                    ${items.map(item => {
+                      const pointLabel = item.point_label || `${Number(item.points || 0)}%`;
+                      const elementText = item.elements ? ` · ${escapeHtml(item.elements)}` : '';
+                      return `<div class="reference-info-line"><strong>${escapeHtml(item.label || '')}</strong>: ${escapeHtml(pointLabel)}${item.display_note ? ` · ${escapeHtml(item.display_note)}` : ''}${elementText}</div>`;
+                    }).join('')}
                   </div>
                 </div>
-                <div class="detail-screen-section">
+                ${priorities.length ? `<div class="detail-screen-section">
+                  <h4>실습 운영 우선순위</h4>
+                  <div class="reference-info-list">
+                    ${priorities.map(item => `<div class="reference-info-line"><strong>${escapeHtml(item.rank || '')} ${escapeHtml(item.label || '')}</strong>: ${escapeHtml(item.action || '')}${item.reason ? ` · ${escapeHtml(item.reason)}` : ''}</div>`).join('')}
+                  </div>
+                </div>` : ''}
+                ${cpx.length ? `<div class="detail-screen-section">
                   <h4>CPX 세부 반영</h4>
                   <div class="reference-info-list">
-                    ${cpx.map(item => `<div class="reference-info-line"><strong>${escapeHtml(item.label || '')}</strong>: ${Number(item.points || 0)}점</div>`).join('')}
+                    ${cpx.map(item => `<div class="reference-info-line"><strong>${escapeHtml(item.label || '')}</strong>: ${escapeHtml(item.point_label || `${Number(item.points || 0)}점`)}</div>`).join('')}
                   </div>
-                </div>
+                </div>` : ''}
+                ${notes.length ? `<div class="detail-screen-section">
+                  <h4>주의</h4>
+                  <div class="reference-info-list">
+                    ${notes.map(note => `<div class="reference-info-line">${escapeHtml(note)}</div>`).join('')}
+                  </div>
+                </div>` : ''}
+                ${sources.length ? `<div class="detail-screen-section">
+                  <h4>근거</h4>
+                  <div class="reference-info-list">
+                    ${sources.map(ref => `<div class="reference-info-line">${escapeHtml(ref)}</div>`).join('')}
+                  </div>
+                </div>` : ''}
               </div>
             </div>
           </div>
