@@ -2900,8 +2900,8 @@
 
   <script>
     const STORAGE_KEY = 'kmlePlannerState.v2';
-    const APP_VERSION = '20260606T114144Z';
-    const APP_VERSION_LABEL = '2026-06-06 20:41 KST';
+    const APP_VERSION = '20260606T120849Z';
+    const APP_VERSION_LABEL = '2026-06-06 21:08 KST';
     const STAGES = [
       { id: 'lecture', label: '강의 듣기', short: '강의', note: '강의/팟캐스트/기본 인강 소화' },
       { id: 'framework', label: '개념 틀 짜기', short: '개념틀', note: '총정리 구조, 도식, 로직 프레임 정리' },
@@ -2983,10 +2983,10 @@
       { start: '2026-04-01', end: '2026-04-10', label: '내분비대사', color: '#7c3aed', intensity: '중간', note: '블록 막바지라 마무리·복습 위주' },
       { start: '2026-04-13', end: '2026-04-24', label: '호흡기', color: '#0f766e', intensity: '높음', note: '실습 직전/실습 중 1순위 과목' },
       { start: '2026-04-27', end: '2026-05-08', label: '심장', color: '#2563eb', intensity: '높음', note: '실습 + 조장 준비가 겹치는 핵심 블록' },
-      { start: '2026-06-08', end: '2026-06-12', label: '산부인과 A조 분만', color: '#dc2626', intensity: '높음', note: '1주차 분만 · 산과 CASE와 NST/U-Folio 회수' },
-      { start: '2026-06-15', end: '2026-06-19', label: '산부인과 A조 외래', color: '#2563eb', intensity: '중간', note: '2주차 외래 · CPX 후보와 외래 관찰 항목 확보' },
-      { start: '2026-06-22', end: '2026-06-26', label: '산부인과 A조 병동', color: '#0f8b8d', intensity: '높음', note: '3주차 병동 · 세종 OSCE/CASE와 부인과 CASE' },
-      { start: '2026-06-29', end: '2026-07-03', label: '산부인과 A조 수술', color: '#7c3aed', intensity: '중간', note: '4주차 수술 · Post-test와 포트폴리오 마무리' }
+      { id: 'obgyn-a-delivery', start: '2026-06-08', end: '2026-06-12', label: '산부인과 A조 분만', color: '#dc2626', intensity: '높음', note: '1주차 분만 · 산과 CASE와 NST/U-Folio 회수', baseSchedule: true, baseTitle: '1주차 A조 분만 rotation', baseStart: '08:00', baseEnd: '18:00' },
+      { id: 'obgyn-a-outpatient', start: '2026-06-15', end: '2026-06-19', label: '산부인과 A조 외래', color: '#2563eb', intensity: '중간', note: '2주차 외래 · CPX 후보와 외래 관찰 항목 확보', baseSchedule: true, baseTitle: '2주차 A조 외래 rotation', baseStart: '08:00', baseEnd: '18:00' },
+      { id: 'obgyn-a-ward', start: '2026-06-22', end: '2026-06-26', label: '산부인과 A조 병동', color: '#0f8b8d', intensity: '높음', note: '3주차 병동 · 세종 OSCE/CASE와 부인과 CASE', baseSchedule: true, baseTitle: '3주차 A조 병동 rotation', baseStart: '08:00', baseEnd: '18:00' },
+      { id: 'obgyn-a-surgery', start: '2026-06-29', end: '2026-07-03', label: '산부인과 A조 수술', color: '#7c3aed', intensity: '중간', note: '4주차 수술 · Post-test와 포트폴리오 마무리', baseSchedule: true, baseTitle: '4주차 A조 수술 rotation', baseStart: '08:00', baseEnd: '18:00' }
     ];
 
     const CALENDAR_TIMELINE_START_HOUR = 8;
@@ -4253,6 +4253,29 @@
       return CLERKSHIP_BLOCKS.find(block => date >= block.start && date <= block.end) || null;
     }
 
+    function clerkshipBlockBaseEventForDate(dateIso) {
+      const block = getClerkshipBlock(dateIso);
+      if (!block?.baseSchedule) return null;
+      const startTime = block.baseStart || '08:00';
+      const endTime = block.baseEnd || '18:00';
+      return normalizeCalendarEvent({
+        id: `clerkship-base-${block.id || safeId(block.label) || 'block'}-${dateIso}`,
+        date: dateIso,
+        baseDate: dateIso,
+        type: 'rotation',
+        title: block.baseTitle || block.label,
+        time: `${startTime}–${endTime}`,
+        baseTime: `${startTime}–${endTime}`,
+        startTime,
+        endTime,
+        note: block.note || '',
+        difficulty: block.intensity === '높음' ? 8 : block.intensity === '중간' ? 5 : 3,
+        windowType: 'clerkship-base',
+        bundleId: bundleIdForDate(dateIso) || '',
+        sourceKind: 'clerkship-base'
+      });
+    }
+
     function calendarEventsForDate(dateInput) {
       const date = typeof dateInput === 'string' ? dateInput : formatDateInput(dateInput);
       return (state.calendarEvents || []).filter(event => event.date === date);
@@ -4880,10 +4903,12 @@
 
     function dailyPrimaryEvents(dateIso) {
       const bundleId = bundleIdForDate(dateIso);
-      return calendarEventsForDate(dateIso)
+      const primaryEvents = calendarEventsForDate(dateIso)
         .filter(event => !bundleId || event.bundleId === bundleId)
         .filter(event => !isWeeklySummaryEvent(event))
-        .sort(compareEventChronology);
+      const baseEvent = clerkshipBlockBaseEventForDate(dateIso);
+      if (baseEvent && !primaryEvents.some(isCalendarBaseScheduleEvent)) primaryEvents.push(baseEvent);
+      return primaryEvents.sort(compareEventChronology);
     }
 
     function isSummaryPrimaryCandidate(event) {
