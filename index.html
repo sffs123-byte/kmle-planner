@@ -3825,11 +3825,20 @@
       renderWeekGrid();
     }
 
+    function bundleDefaultDate(bundle) {
+      const fixedStart = String(bundle?.fixed_info?.start_date || '').slice(0, 10);
+      const sessionDates = (bundle?.sessions || [])
+        .map(session => String(session?.date || '').slice(0, 10))
+        .filter(Boolean)
+        .sort();
+      return fixedStart || sessionDates[0] || formatDateInput(new Date());
+    }
+
     function applyPlannerBundle(bundle, { switchToCalendar = true, jumpToBundleDate = true } = {}) {
       state = mergePlannerBundleIntoState(bundle, state);
       selectedSubjectId = ensureSubjectForBundle(state, bundle).id;
       if (jumpToBundleDate) {
-        selectedCalendarDate = bundle.sessions?.[0]?.date || formatDateInput(new Date());
+        selectedCalendarDate = bundleDefaultDate(bundle);
         selectedCalendarScope = 'slot';
         selectedCalendarSlotKey = '';
         const baseDate = parseIsoDate(selectedCalendarDate);
@@ -3849,6 +3858,69 @@
       if (!looksLikePlannerBundle(bundle)) throw new Error('invalid bundle');
       applyPlannerBundle(bundle, options);
       return bundle;
+    }
+
+    function requestedClerkshipBundleKey() {
+      const params = new URLSearchParams(location.search);
+      const raw = String(params.get('clerkship') || params.get('bundle') || params.get('autoBundle') || '').trim().toLowerCase();
+      if (!raw) return '';
+      const compact = raw.replace(/[^a-z0-9가-힣]/g, '');
+      if (['obgyn', 'ob', 'gyn', 'obgyne', '산부인과', '산과', '부인과'].includes(compact)) return 'obgyn';
+      return '';
+    }
+
+    const REQUESTED_CLERKSHIP_BUNDLES = {
+      obgyn: {
+        clerkshipId: 'obgyn-2026-06-track-a3g6',
+        url: './data/clerkships/bundles/obgyn_2026_06_track_a3g6.bundle.json',
+        minDatedSessions: 20,
+        label: '산부인과'
+      }
+    };
+
+    function clerkshipBundleNeedsRefresh(definition) {
+      const params = new URLSearchParams(location.search);
+      if (params.get('forceBundle') === '1' || params.get('reloadBundle') === '1') return true;
+      const bundle = state.clerkshipBundles?.[definition.clerkshipId];
+      if (!bundle) return true;
+      const datedSessions = (bundle.sessions || []).filter(session => Boolean(session.date)).length;
+      const sessionEvents = (state.calendarEvents || []).filter(event => event.bundleId === definition.clerkshipId && event.sourceKind === 'session').length;
+      return datedSessions < definition.minDatedSessions || sessionEvents < definition.minDatedSessions;
+    }
+
+    let requestedBundleLoadInFlight = false;
+    async function ensureRequestedClerkshipBundle({ source = 'url' } = {}) {
+      const key = requestedClerkshipBundleKey();
+      const definition = key ? REQUESTED_CLERKSHIP_BUNDLES[key] : null;
+      if (!definition || location.protocol === 'file:' || requestedBundleLoadInFlight) return false;
+      requestedBundleLoadInFlight = true;
+      try {
+        if (clerkshipBundleNeedsRefresh(definition)) {
+          const cacheBustedUrl = `${definition.url}?source=${encodeURIComponent(source)}&ts=${Date.now()}`;
+          await loadPlannerBundleFromUrl(cacheBustedUrl, {
+            switchToCalendar: true,
+            jumpToBundleDate: true
+          });
+          return true;
+        }
+        const bundle = state.clerkshipBundles?.[definition.clerkshipId];
+        if (bundle) {
+          selectedCalendarDate = bundleDefaultDate(bundle);
+          selectedCalendarScope = 'slot';
+          selectedCalendarSlotKey = '';
+          const baseDate = parseIsoDate(selectedCalendarDate);
+          selectedWeekKey = weekKeyFromDate(baseDate);
+          calendarMonthCursor = startOfWeek(baseDate);
+          renderAll();
+          document.querySelector('[data-tab="calendar"]').click();
+        }
+        return false;
+      } catch (error) {
+        console.error(`requested ${definition.label} bundle load failed`, error);
+        return false;
+      } finally {
+        requestedBundleLoadInFlight = false;
+      }
     }
 
     async function ensureRespiratoryBundlePresent() {
@@ -8300,6 +8372,7 @@
     window.deleteTask = deleteTask;
     window.__kmlePlannerSoftRefresh = softRefreshPlannerApp;
     window.__kmlePlannerHardRefresh = hardRefreshPlannerApp;
+    window.__kmlePlannerEnsureRequestedBundle = ensureRequestedClerkshipBundle;
     window.__kmlePlannerAppInfo = () => ({
       version: APP_VERSION,
       versionLabel: APP_VERSION_LABEL,
@@ -8316,6 +8389,10 @@
     window.updatePartField = updatePartField;
     window.togglePartFlag = togglePartFlag;
     window.deleteSubject = deleteSubject;
+    window.addEventListener('kmlePlannerSyncReady', () => {
+      void ensureRequestedClerkshipBundle({ source: 'sync-ready' });
+    });
+    void ensureRequestedClerkshipBundle({ source: 'initial' });
 
     if ('serviceWorker' in navigator && location.protocol !== 'file:') {
       window.addEventListener('load', async () => {

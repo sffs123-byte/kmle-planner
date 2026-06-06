@@ -1186,4 +1186,15 @@ bootstrapMetaFromCurrentState();
 renderConfigToUI();
 renderSessionText();
 setStatus('Local DB / planner_user_state 연결 준비 중이다.', 'default');
-void initializeSupabase();
+void initializeSupabase().finally(() => {
+  try {
+    window.dispatchEvent(new CustomEvent('kmlePlannerSyncReady', {
+      detail: { store: stateStoreLabel(), localDbMode }
+    }));
+    if (typeof window.__kmlePlannerEnsureRequestedBundle === 'function') {
+      void window.__kmlePlannerEnsureRequestedBundle({ source: 'sync-ready' });
+    }
+  } catch (error) {
+    console.error('sync ready hook failed', error);
+  }
+});
