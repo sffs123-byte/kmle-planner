@@ -2972,10 +2972,10 @@
       { start: '2026-04-01', end: '2026-04-10', label: '내분비대사', color: '#7c3aed', intensity: '중간', note: '블록 막바지라 마무리·복습 위주' },
       { start: '2026-04-13', end: '2026-04-24', label: '호흡기', color: '#0f766e', intensity: '높음', note: '실습 직전/실습 중 1순위 과목' },
       { start: '2026-04-27', end: '2026-05-08', label: '심장', color: '#2563eb', intensity: '높음', note: '실습 + 조장 준비가 겹치는 핵심 블록' },
-      { start: '2026-06-08', end: '2026-06-12', label: '산부인과 C조 병동', color: '#0f8b8d', intensity: '높음', note: '1주차 병동 · 세종 OSCE/CASE와 Pre-test가 겹치는 주' },
-      { start: '2026-06-15', end: '2026-06-19', label: '산부인과 C조 수술', color: '#7c3aed', intensity: '중간', note: '2주차 수술 · NST/CPX 후보 일정 확인' },
-      { start: '2026-06-22', end: '2026-06-26', label: '산부인과 C조 분만', color: '#dc2626', intensity: '높음', note: '3주차 분만 · 산과 CASE와 NST/U-Folio 회수' },
-      { start: '2026-06-29', end: '2026-07-03', label: '산부인과 C조 외래', color: '#2563eb', intensity: '중간', note: '4주차 외래 · 포트폴리오와 Post-test 마무리' }
+      { start: '2026-06-08', end: '2026-06-12', label: '산부인과 A조 분만', color: '#dc2626', intensity: '높음', note: '1주차 분만 · 산과 CASE와 NST/U-Folio 회수' },
+      { start: '2026-06-15', end: '2026-06-19', label: '산부인과 A조 외래', color: '#2563eb', intensity: '중간', note: '2주차 외래 · CPX 후보와 외래 관찰 항목 확보' },
+      { start: '2026-06-22', end: '2026-06-26', label: '산부인과 A조 병동', color: '#0f8b8d', intensity: '높음', note: '3주차 병동 · 세종 OSCE/CASE와 부인과 CASE' },
+      { start: '2026-06-29', end: '2026-07-03', label: '산부인과 A조 수술', color: '#7c3aed', intensity: '중간', note: '4주차 수술 · Post-test와 포트폴리오 마무리' }
     ];
 
     const CALENDAR_TIMELINE_START_HOUR = 8;
@@ -3849,6 +3849,8 @@
         selectedWeekKey = weekKeyFromDate(baseDate);
         calendarMonthCursor = startOfWeek(baseDate);
       }
+      window.__kmlePlannerState = state;
+      saveState(`${bundle?.meta?.subject || 'bundle'} bundle 적용`);
       renderAll();
       if (switchToCalendar) {
         document.querySelector('[data-tab="calendar"]').click();
