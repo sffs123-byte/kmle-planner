@@ -34,6 +34,7 @@
       ]
     },
     "detail_enrichment": {
+      "version": "20260607T0300KST",
       "sourcepack": "obgyn_fulltext_sourcepack_v1.json",
       "mode": "click_detail_original_handoff_text",
       "public_redaction": "phone/password values redacted; handoff prose preserved",

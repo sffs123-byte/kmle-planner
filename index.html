@@ -3959,6 +3959,7 @@
         minDatedSessions: 20,
         resident2PackVersion: '20260606T140332Z',
         deliveryWeekCalendarVersion: '20260606T180051Z',
+        detailEnrichmentVersion: '20260607T0300KST',
         label: '산부인과'
       }
     };
@@ -3972,6 +3973,7 @@
       const sessionEvents = (state.calendarEvents || []).filter(event => event.bundleId === definition.clerkshipId && event.sourceKind === 'session').length;
       if (definition.resident2PackVersion && bundle?.fixed_info?.resident2_pack?.version !== definition.resident2PackVersion) return true;
       if (definition.deliveryWeekCalendarVersion && bundle?.fixed_info?.delivery_week_calendar_fill?.version !== definition.deliveryWeekCalendarVersion) return true;
+      if (definition.detailEnrichmentVersion && bundle?.meta?.detail_enrichment?.version !== definition.detailEnrichmentVersion) return true;
       return datedSessions < definition.minDatedSessions || sessionEvents < definition.minDatedSessions;
     }
 
