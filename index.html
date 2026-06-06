@@ -1184,6 +1184,13 @@
       box-shadow: inset 3px 0 0 #64748b;
     }
 
+    .calendar-untimed-chip.is-routine-chip {
+      color: #0f172a;
+      background: linear-gradient(180deg, rgba(240,253,250,0.98), rgba(255,255,255,0.98));
+      border-color: rgba(20,184,166,0.54);
+      box-shadow: inset 3px 0 0 #14b8a6;
+    }
+
     .calendar-event-card {
       position: absolute;
       z-index: 1;
@@ -2905,8 +2912,8 @@
 
   <script>
     const STORAGE_KEY = 'kmlePlannerState.v2';
-    const APP_VERSION = '20260606T174358Z';
-    const APP_VERSION_LABEL = '2026-06-07 02:43 KST';
+    const APP_VERSION = '20260606T180051Z';
+    const APP_VERSION_LABEL = '2026-06-07 03:00 KST';
     const STAGES = [
       { id: 'lecture', label: '강의 듣기', short: '강의', note: '강의/팟캐스트/기본 인강 소화' },
       { id: 'framework', label: '개념 틀 짜기', short: '개념틀', note: '총정리 구조, 도식, 로직 프레임 정리' },
@@ -3926,7 +3933,7 @@
         url: './data/clerkships/bundles/obgyn_2026_06_track_a3g6.bundle.json',
         minDatedSessions: 20,
         resident2PackVersion: '20260606T140332Z',
-        deliveryWeekCalendarVersion: '20260606T174358Z',
+        deliveryWeekCalendarVersion: '20260606T180051Z',
         label: '산부인과'
       }
     };
@@ -4824,6 +4831,7 @@
     function isWeeklySummaryEvent(event) {
       if (!event) return false;
       if (event.windowType === 'clerkship-base') return false;
+      if (event.windowType === 'clerkship-compact-routine') return false;
       if (isCalendarBaseScheduleEvent(event)) return true;
       if (event.windowType && event.windowType !== 'clerkship-session') return true;
       if (event.sourceSessionId || event.sourceKind === 'session' || event.windowType === 'clerkship-session') return false;
@@ -5932,10 +5940,10 @@
               </div>
               ${untimedEvents.length ? `
                 <div class="calendar-day-untimed">
-                  <div class="calendar-day-untimed-title">${untimedEvents.some(isCalendarBaseScheduleEvent) ? '빈 시간 / 기본 rotation' : '시간 미정'}</div>
+                  <div class="calendar-day-untimed-title">${untimedEvents.some(event => isCalendarBaseScheduleEvent(event) || event.windowType === 'clerkship-compact-routine') ? '빈 시간 / 루틴' : '시간 미정'}</div>
                   <div class="calendar-session-badges">
                     ${untimedEvents.map(event => `
-                      <button class="calendar-untimed-chip ${isCalendarBaseScheduleEvent(event) ? 'is-base-schedule' : ''}" onclick="handleCalendarEventCardClick(event, '${event.id}')" onpointerdown="beginCalendarEventLongPress('${event.id}', event)" onpointerup="cancelCalendarEventLongPress()" onpointerleave="cancelCalendarEventLongPress()" onpointercancel="cancelCalendarEventLongPress()">
+                      <button class="calendar-untimed-chip ${isCalendarBaseScheduleEvent(event) ? 'is-base-schedule' : ''} ${event.windowType === 'clerkship-compact-routine' ? 'is-routine-chip' : ''}" onclick="handleCalendarEventCardClick(event, '${event.id}')" onpointerdown="beginCalendarEventLongPress('${event.id}', event)" onpointerup="cancelCalendarEventLongPress()" onpointerleave="cancelCalendarEventLongPress()" onpointercancel="cancelCalendarEventLongPress()">
                         <span>${escapeHtml(event.title)}</span>
                       </button>
                     `).join('')}
