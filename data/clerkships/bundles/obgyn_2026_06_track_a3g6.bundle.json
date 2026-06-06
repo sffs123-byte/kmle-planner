@@ -67,7 +67,10 @@
           "NST 강의 후보",
           "출근·퇴근 서명",
           "분만실 환자리스트/NST/파토그램/EMR 루틴",
-          "U-Folio 산과 관찰 항목 확보"
+          "U-Folio 산과 관찰 항목 확보",
+          "화/수/목 의국회의 후보 확인",
+          "분만실 담당 인턴/근무표 확인",
+          "의국회의 Zoom/의국 세팅 확인"
         ]
       },
       {
@@ -405,18 +408,19 @@
       }
     },
     "delivery_week_calendar_fill": {
-      "version": "20260606T150033Z",
-      "title": "분만주 calendar-visible 세부 일정 보강",
+      "version": "20260606T151819Z",
+      "title": "분만주 calendar-visible 세부 일정 보강 v2",
       "rule": "원문상 주차/오전/오후만 확인된 항목도 캘린더 본문에 보이게 배치하고, 정확한 시간은 확인 필요로 남긴다.",
       "source_basis": [
         "OBGYN-OVERALL-P0038~P0048 출근/퇴근 서명",
         "OBGYN-OVERALL-P0080~P0084 의국회의",
         "OBGYN-OVERALL-P0087~P0094 NST 강의",
         "OBGYN-OVERALL-P0104~P0116 산과 CASE/XR/NST 자료",
+        "FULLTEXT 2026-1 화/수 의국회의, NST 1주차 목 오후 후보, 조장 인턴/Zoom 세팅 인계",
         "분만주 매뉴얼: 출근 루트, PK 자리, 환자리스트/NST/파토그램/EMR, 회진/질문, U-Folio 회수"
       ],
-      "added_or_visible_session_count": 34,
-      "week1_expected_primary_sessions_min": 30
+      "added_or_visible_session_count": 37,
+      "week1_expected_primary_sessions_min": 33
     }
   },
   "source_refs": [
@@ -1315,12 +1319,12 @@
       "id": "obgyn-common-nst-lecture",
       "clerkship": "obgyn-2026-06-track-a3g6",
       "week": "week1",
-      "day": "화",
-      "date": "2026-06-09",
-      "time_raw": "1주차에 진행, 분만조 통해 공지. 시간 미정이라 화요일 오후 임시 배치",
-      "start_time": "14:00",
-      "end_time": "14:30",
-      "time_label": "화 14:00 임시 배치 · 강병헌 교수님",
+      "day": "목",
+      "date": "2026-06-11",
+      "time_raw": "1주차 목요일 오후 의국 후보. 과거 조는 2주차 화요일로 밀린 인계도 있어 공지 확인 필요",
+      "start_time": "13:00",
+      "end_time": "13:30",
+      "time_label": "목 13:00 임시 배치 · 1주차 목 오후/변동 가능",
       "title": "NST 강의 후보(1주차)",
       "professor": "강병헌",
       "event_type": "session",
@@ -1331,9 +1335,9 @@
       "kind": "clerkship-central-datacenter",
       "needs_confirmation": true,
       "site": "main",
-      "location": "6층 의국",
-      "summary": "강병헌 교수님 NST 강의. 의국/장소 변동 가능, 약 30분. 강의 때 질문 가능.",
-      "note": "1주차 진행이 원칙이나 변동 가능. 26년 3/4월 인계에서는 2주차로 밀린 적 있음. 첫날/초반에 교수님께 일정 확인.",
+      "location": "6층 의국 후보",
+      "summary": "강병헌 교수님 NST 강의. fulltext 인계에는 1주차 목요일 오후 의국 후보가 있고, 과거 조에서는 2주차로 밀린 사례도 있어 확인 필요.",
+      "note": "A조 첫주 분만조가 공지받거나 회진 때 여쭤보기. 강의 때 NST 시험 일정도 같이 확인.",
       "calendar_body_short": "분만조 통해 공지. 약 30분, 질문 가능. 강의 때 NST 시험 일정 확인.",
       "resident_owner": "clerk1",
       "paperclip_refs": [
@@ -1344,20 +1348,22 @@
       ],
       "sections": {
         "인계 내용": [
-          "강병헌 교수님 NST 강의. 의국 변동 가능. 약 30분 소요.",
-          "강의 때 학생 지정 질문 가능. NST 시험 일정도 이때 확인."
+          "강병헌 교수님 NST 강의. 1주차에 조원을 통해 강의 시간/장소 공지받거나 회진 때 여쭤보기.",
+          "fulltext 조장 인계에는 1주차 목요일 오후, 6층 의국 후보로 적혀 있음.",
+          "강의 때 NST 시험 일정도 여쭤봐야 함."
         ],
         "주의사항 / 확인 필요": [
-          "실제 일정은 분만조 통해 교수님 공지. 2주차로 밀린 과거 인계 있음."
+          "과거 26년 3월/4월 인계에는 교수님 일정 때문에 2주차 화요일로 밀린 사례도 있음.",
+          "실제 공지되면 이 카드 날짜/시간만 수정."
         ],
         "source": [
-          "ALL §NST강의; SCHED; NST"
+          "FULLTEXT §산과 일정 NST 강의; FULLTEXT lines 1326-1332, 1559-1565"
         ],
         "owner_slot": [
           "clerk1"
         ],
         "캘린더 배치 기준": [
-          "원문은 1주차 진행, 시간 미정. “오후면 14시” 원칙에 따라 화요일 14:00 임시 배치."
+          "요약 pack의 1주차 후보에 fulltext의 “1주차 목요일 오후 의국” 근거를 반영해 목요일 13:00으로 임시 배치."
         ]
       },
       "rotation_week": 1,
@@ -3094,6 +3100,145 @@
       "calendar_ready": true,
       "group_scope": "A조 분만",
       "date_confidence": "delivery_week_inferred_from_handoff_2026-06-06"
+    },
+    {
+      "id": "obgyn-common-dept-conf-tue",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "화",
+      "date": "2026-06-09",
+      "time_raw": "26년 1학기 매주 화, 수 08:00 의국회의 후보. 다른 인계에는 수/목 후보도 있어 공지 확인 필요",
+      "start_time": "08:00",
+      "end_time": "08:30",
+      "time_label": "화 08:00-08:30 후보",
+      "title": "의국회의 후보(화)",
+      "professor": "",
+      "event_type": "session",
+      "windowType": "clerkship-session",
+      "difficulty": 7,
+      "priority_label": "P1",
+      "status": "needs_confirmation",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "6층 의국 / Zoom 세팅 후보",
+      "summary": "fulltext 조장 인계에는 26년 1학기 화/수 08:00 의국회의 흐름이 있음. OT에서 실제 요일 확인.",
+      "note": "기존 수/목 인계와 충돌하므로 화/수/목 후보를 모두 보이게 두고 실제 공지 후 정리.",
+      "calendar_body_short": "26년 1학기 화/수 08:00 의국회의 후보. 실제 여부 확인.",
+      "resident_owner": "secretary",
+      "sections": {
+        "인계 내용": [
+          "26년 1학기에는 매주 화, 수요일 8시 의국회의로 운영되었다는 fulltext 인계가 있음.",
+          "의국회의가 없을 수 있으므로 OT 때 잘 듣고, 공지 없으면 교육담당 전공의 선생님께 확인."
+        ],
+        "주의사항 / 확인 필요": [
+          "다른 인계에는 수/목 08:00 후보도 있어 요일 충돌. 실제 공지 확인 전까지 후보로 둠.",
+          "있으면 07:40 출근서명, 07:50 의국 세팅 흐름."
+        ],
+        "source": [
+          "FULLTEXT §공통 일정 의국회의; FULLTEXT lines 205, 607-625, 1326, 1523, 2636-2730"
+        ],
+        "캘린더 배치 기준": [
+          "화/수 의국회의라는 fulltext 근거가 있어 화요일 오전 08:00 후보를 추가 표시."
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "fulltext_candidate_2026_spring"
+    },
+    {
+      "id": "obgyn-delivery-intern-roster-mon",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "월",
+      "date": "2026-06-08",
+      "time_raw": "첫주 월요일 오후 임시 배치. 분만실 담당 인턴/근무표/연락처 확인",
+      "start_time": "14:30",
+      "end_time": "15:00",
+      "time_label": "월 14:30-15:00 임시 배치",
+      "title": "분만실 담당 인턴/근무표 확인",
+      "professor": "",
+      "event_type": "admin",
+      "windowType": "clerkship-session",
+      "difficulty": 8,
+      "priority_label": "P0",
+      "status": "needs_confirmation",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "소아동 3층 분만실 스테이션 / 수술실 문 앞 근무표 후보",
+      "summary": "분만실 담당 인턴 선생님, 산부인과 인턴 근무표/연락처 확인. 출근 서명 운영을 위해 필요.",
+      "note": "못 찾으면 분홍색 옷 입은 간호사 선생님께 여쭤보기. 매주 일요일 다음 주 인턴 선생님께 연락하는 흐름도 인계됨.",
+      "calendar_body_short": "분만실 담당 인턴/근무표 확인.",
+      "resident_owner": "secretary",
+      "sections": {
+        "인계 내용": [
+          "소아동 3층 분만실 스테이션 또는 소아동 수술실 1,2번 수술방 문 앞의 산부인과 인턴 근무표/연락처 확인.",
+          "일정 상 인계가 끊기면 직접 확인해야 함. 못 찾으면 간호사 선생님께 여쭤보기."
+        ],
+        "주의사항 / 확인 필요": [
+          "총조장이 병동주 등으로 아침 출석에 참여 못할 수 있어 분만조 조장이 일주일간 출근/퇴근서명을 맡는 구조.",
+          "담당 인턴이 주마다 또는 하루 단위로 바뀔 수 있음."
+        ],
+        "source": [
+          "FULLTEXT §분만실 담당 인턴 선생님 번호 확인; FULLTEXT lines 1944-1956, 2184-2196, 2286-2316, 3180-3186"
+        ],
+        "캘린더 배치 기준": [
+          "날짜는 첫주 월요일 업무로 확정 가능하나 시간 미정. 오후 14:30에 임시 배치."
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "fulltext_admin_candidate"
+    },
+    {
+      "id": "obgyn-delivery-conference-setup-mon",
+      "clerkship": "obgyn-2026-06-track-a3g6",
+      "week": "week1",
+      "day": "월",
+      "date": "2026-06-08",
+      "time_raw": "첫주 월요일 오후 임시 배치. 의국회의 여부/Zoom 링크/세팅 확인",
+      "start_time": "15:00",
+      "end_time": "15:30",
+      "time_label": "월 15:00-15:30 임시 배치",
+      "title": "의국회의 여부/Zoom 세팅 확인",
+      "professor": "",
+      "event_type": "admin",
+      "windowType": "clerkship-session",
+      "difficulty": 7,
+      "priority_label": "P1",
+      "status": "needs_confirmation",
+      "needs_confirmation": true,
+      "site": "main",
+      "location": "6층 의국 / 의학교육실 Zoom 링크 후보",
+      "summary": "의국회의가 있으면 Zoom/빔/컴퓨터/의자/마이크 세팅 확인. 26년 1학기 Zoom 링크 인계 있음.",
+      "note": "의국회의 요일이 화/수 또는 수/목으로 충돌하므로 월요일에 여부 확인. 처음 세팅은 오래 걸릴 수 있어 미리 확인 필요.",
+      "calendar_body_short": "의국회의 여부와 Zoom/의국 세팅 확인.",
+      "resident_owner": "secretary",
+      "sections": {
+        "인계 내용": [
+          "의국회의가 있으면 Zoom 링크, 빔프로젝터, 컴퓨터, 스피커, 의자, 마이크/카메라 세팅 필요.",
+          "26년 1학기에는 의학교육실에서 받은 Zoom 링크를 계속 사용했다는 인계가 있음.",
+          "전공의 선생님 있는 톡방에 회의 ID/링크를 전달하는 흐름."
+        ],
+        "주의사항 / 확인 필요": [
+          "처음 세팅은 오래 걸리므로 첫 회의 전 미리 시험 세팅 권장.",
+          "마이크는 Zoom 음소거와 장비 음소거가 같이 엮일 수 있음."
+        ],
+        "source": [
+          "FULLTEXT §의국회의 세팅; FULLTEXT lines 2404-2422, 2619-2730, 2802-2808, 3298-3305"
+        ],
+        "캘린더 배치 기준": [
+          "월요일에 의국회의 여부와 링크/세팅을 확인해야 다음날 후보에 대응 가능하므로 월요일 오후 15:00 임시 배치."
+        ]
+      },
+      "rotation_week": 1,
+      "rotation_track": "A조 분만",
+      "calendar_ready": true,
+      "group_scope": "A조 분만",
+      "date_confidence": "fulltext_admin_candidate"
     }
   ],
   "assignments": [
