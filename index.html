@@ -2995,7 +2995,31 @@
       { start: '2026-04-01', end: '2026-04-10', label: '내분비대사', color: '#7c3aed', intensity: '중간', note: '블록 막바지라 마무리·복습 위주' },
       { start: '2026-04-13', end: '2026-04-24', label: '호흡기', color: '#0f766e', intensity: '높음', note: '실습 직전/실습 중 1순위 과목' },
       { start: '2026-04-27', end: '2026-05-08', label: '심장', color: '#2563eb', intensity: '높음', note: '실습 + 조장 준비가 겹치는 핵심 블록' },
-      { id: 'obgyn-a-delivery', start: '2026-06-08', end: '2026-06-12', label: '산부인과 A조 분만', color: '#dc2626', intensity: '높음', note: '1주차 분만 · 실제 일정 사이 빈 시간 기본 rotation', baseSchedule: true, compactBaseSchedule: true, baseTitle: '1주차 A조 분만 rotation', baseStart: '08:00', baseEnd: '18:00', baseTimeLabel: '빈 시간 활용', baseDetailTitle: '분만주 기본 rotation', baseDetails: ['시간표 본문은 의국회의, 강의, CASE, XR, 시험처럼 실제 배정된 일정 위주로 남긴다.', '빈 시간에는 분만실 실습, 회진 참관, NST/파토그램/EMR 확인을 진행한다.', '출퇴근 서명, 환자리스트 확인, U-Folio, 단순 준비 루틴은 시간표 본문에서 빼고 종합 패널/체크리스트에서 관리한다.'] },
+      {
+        id: 'obgyn-a-delivery',
+        start: '2026-06-08',
+        end: '2026-06-12',
+        label: '산부인과 A조 분만',
+        color: '#dc2626',
+        intensity: '높음',
+        note: '1주차 분만 · 빈 시간에는 분만실 PK 자리에서 대기하며 NST/파토그램/EMR과 분만 진행을 확인한다.',
+        baseSchedule: true,
+        compactBaseSchedule: true,
+        baseTitle: '1주차 A조 분만 rotation',
+        baseStart: '08:00',
+        baseEnd: '18:00',
+        baseTimeLabel: '빈 시간 활용',
+        baseDetailTitle: '분만주 인계 원문',
+        baseDetails: [
+          '지도상 331병동 내 전공의 당직실 앞 Pk 책상(방이 아님 걍 책상..)에서 자습이 주요 일과',
+          '출근하자마자 331 스테이션 앞에 있는 환자리스트를 종이로 뽑아두기.',
+          '분만조는 8시부터 6시까지 PK 책상(분만실 안에서는 환자 분들 대기하고 처치하므로 있으면 안 돼요.)에서 대기하며 분만을 기다리면 됩니다.',
+          '분만이 생길 때까지 무한 대기하면서 공부하면 됩니다. 하지만 PK 책상에 앉아있지만 말고 종종 나와보면서 분만 진행되고 있는지 상황 보고, EMR 볼 일 있으면 분만실 내 pk 실 컴퓨터를 사용합니다. 비밀번호는 [비공개].',
+          'NST 켜져 있으면 NST 종이랑 파토그램 보고 분만 진행 상황을 확인합니다.',
+          '자리 비우게 될 때는 전공의 선생님께 보고하고, 환자 정보는 비식별로 정리합니다.',
+          '분만조가 퇴근 서명을 받기 때문에 출석부/퇴근 서명 흐름을 꼭 확인합니다.'
+        ]
+      },
       { id: 'obgyn-a-outpatient', start: '2026-06-15', end: '2026-06-19', label: '산부인과 A조 외래', color: '#2563eb', intensity: '중간', note: '2주차 외래 · CPX 후보와 외래 관찰 항목 확보', baseSchedule: true, baseTitle: '2주차 A조 외래 rotation', baseStart: '08:00', baseEnd: '18:00', baseDetailTitle: '외래주 세부 후보', baseDetails: ['부인과 CPX 후보: A조는 이건우 교수님 가능성이 높으나 담당 교수 확인 필요', '외래에서 부인과/산과 u-folio 관찰 항목 확보', '다음 병동주 세종 CASE/OSCE 일정 확인 준비'] },
       { id: 'obgyn-a-ward', start: '2026-06-22', end: '2026-06-26', label: '산부인과 A조 병동', color: '#0f8b8d', intensity: '높음', note: '3주차 병동 · 세종 OSCE/CASE와 부인과 CASE', baseSchedule: true, baseTitle: '3주차 A조 병동 rotation', baseStart: '08:00', baseEnd: '18:00', baseDetailTitle: '병동주 세부 후보', baseDetails: ['월요일 회진 후 이건우 교수님께 A/D조 부인과 CASE 배정 후보', '목요일 세종 부인과 OSCE 평가 & CASE 발표 후보', '병동주 회진 대기 시간과 병동 호수 확인 필요'] },
       { id: 'obgyn-a-surgery', start: '2026-06-29', end: '2026-07-03', label: '산부인과 A조 수술', color: '#7c3aed', intensity: '중간', note: '4주차 수술 · Post-test와 포트폴리오 마무리', baseSchedule: true, baseTitle: '4주차 A조 수술 rotation', baseStart: '08:00', baseEnd: '18:00', baseDetailTitle: '수술주 세부 후보', baseDetails: ['수술 참관 및 부인과 수술보조/제왕절개술 관찰 항목 확보', 'Post-test와 출석부/설문지/유폴리오 마감 정리', '실습 마지막 날 이후 포트폴리오 12항목 제출'] }
@@ -3363,6 +3387,7 @@
     }
 
     function isCalendarBaseScheduleEvent(event) {
+      if (event?.sourceSessionId || event?.sourceKind === 'session') return false;
       const signature = `${event?.type || ''} ${event?.sourceSessionId || ''} ${event?.title || ''}`.toLowerCase();
       return event?.windowType === 'clerkship-base'
         || event?.type === 'rotation'
@@ -6480,6 +6505,7 @@
       const relatedAssignments = findRelatedAssignmentsForSession(event, session);
       const ordered = ['intro', '핵심 정리', '준비 / 운영 포인트', '질문 / 예시 포인트', '조사 / 보강 내용'];
       const knownSections = new Set(ordered);
+      const hiddenSectionTitles = new Set(['source', 'owner_slot', '캘린더 배치 기준', '배치 기준', 'calendar_body_placement', 'source_refs', 'paperclip_refs']);
       const sections = [
         ...ordered.map(key => {
           let items = Array.isArray(session.sections[key]) ? [...session.sections[key]] : [];
@@ -6489,7 +6515,7 @@
           return [key, items];
         }),
         ...Object.entries(session.sections)
-          .filter(([key]) => !knownSections.has(key))
+          .filter(([key]) => !knownSections.has(key) && !hiddenSectionTitles.has(key))
           .map(([key, value]) => [key, Array.isArray(value) ? [...value] : []])
       ].filter(([, items]) => items.length > 0);
 
@@ -6651,13 +6677,6 @@
         {
           title: event?.baseDetailTitle || '세부 후보',
           items: detailItems
-        },
-        {
-          title: '표시 방식',
-          items: [
-            'OT, Pre-test, 강의처럼 실제 시간이 있는 일정이 들어오면 기본 rotation은 그 구간만 잘려서 남는다.',
-            '시간이 아직 확정되지 않은 CASE, NST, XR 후보는 주간 종합 또는 회색 후보 카드에서 따로 확인한다.'
-          ]
         }
       ].filter(section => section.items.length > 0);
 
