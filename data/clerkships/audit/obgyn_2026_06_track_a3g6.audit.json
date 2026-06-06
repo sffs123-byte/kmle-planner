@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-05T23:18:00+09:00",
+  "generated_at": "2026-06-06T17:24:33+09:00",
   "bundle": "data/clerkships/bundles/obgyn_2026_06_track_a3g6.bundle.json",
   "clerkship_id": "obgyn-2026-06-track-a3g6",
-  "status": "local_smoke_pass",
+  "status": "calendar_dates_patch_local_smoke_pass",
   "counts": {
     "sessions": 20,
     "assignments": 39,
@@ -32,7 +32,34 @@
   "smoke": {
     "curl_index_button": "pass",
     "curl_bundle_json_counts": "pass",
-    "browser_smoke": "blocked_by_policy_in_current_runtime; use live smoke after push"
+    "browser_smoke": "blocked_by_policy_in_current_runtime; use live smoke after push",
+    "live_chrome_before_patch": "pass_2026-06-06_existing_bundle_loads_but_dates_empty",
+    "calendar_patch_local_smoke": "pass_2026-06-06_port8791_chrome_20_sessions_66_assignment_summaries_86_total_events",
+    "calendar_patch_live_smoke": "pending"
   },
-  "sha256": "1d09836dc5acc5ec911e47ab9bc150586d06c083f0dab49bd7bc580fbb64a2ad"
+  "sha256": "0a7a3435cdc412d1c9494b38de93bb67af189b19bd3e08047e8d0707614ff9e5",
+  "calendar_patch": {
+    "patched_at": "2026-06-06T17:24:33+09:00",
+    "scope": "A반 3조 6번 / 2026-06-08~2026-07-03 / C조",
+    "sessions_with_dates": 20,
+    "assignments_with_iso_windows": 39,
+    "needs_confirmation_sessions": [
+      "obgyn-rot-ward",
+      "obgyn-evt-ward-rounds",
+      "obgyn-evt-obst-case-assign",
+      "obgyn-evt-obst-case-xr-presentation",
+      "obgyn-evt-gyn-case-assign",
+      "obgyn-evt-sejong-gyn-osce-case",
+      "obgyn-evt-gyn-cpx",
+      "obgyn-common-daily-attendance",
+      "obgyn-common-dismissal-sign",
+      "obgyn-common-pretest",
+      "obgyn-common-dept-conf-main",
+      "obgyn-common-sejong-conf",
+      "obgyn-common-gyn-osce-lecture",
+      "obgyn-common-nst-lecture",
+      "obgyn-common-nst-exam",
+      "obgyn-common-posttest"
+    ]
+  }
 }
