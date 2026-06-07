@@ -2912,8 +2912,8 @@
 
   <script>
     const STORAGE_KEY = 'kmlePlannerState.v2';
-    const APP_VERSION = '20260606T195521Z';
-    const APP_VERSION_LABEL = '2026-06-07 04:55 KST';
+    const APP_VERSION = '20260607T094737Z';
+    const APP_VERSION_LABEL = '2026-06-07 18:47 KST';
     const STAGES = [
       { id: 'lecture', label: '강의 듣기', short: '강의', note: '강의/팟캐스트/기본 인강 소화' },
       { id: 'framework', label: '개념 틀 짜기', short: '개념틀', note: '총정리 구조, 도식, 로직 프레임 정리' },
@@ -6927,6 +6927,7 @@
                 <button class="btn btn-small ${activeCalendarSummaryFilter === 'chief_admin' ? 'btn-secondary' : 'btn-ghost'}" onclick="setCalendarSummaryFilter('chief_admin')">조장·행정 ${categoryCounts.chief_admin || 0}</button>
                 ${locationGuide ? `<button class="btn btn-small btn-ghost" onclick="openCalendarLocationGuide('${weekKey}')">장소 지도 ${locationGuide.counts?.places || 0}</button>` : ''}
                 <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'basic_info')">${escapeHtml(bundle?.meta?.subject || '실습')} 기본정보</button>
+                ${fixedInfo.takoyaki_checklist ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'takoyaki_checklist')">Takoyaki 체크</button>` : ''}
                 ${fixedInfo.source_reference_index ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'source_index')">원문 목차</button>` : ''}
                 ${fixedInfo.evaluation_score_weights ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'evaluation_scores')">평가 비중</button>` : ''}
                 ${pciOutpatientGuideForBundle(bundle) ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'pci_outpatient')">PCI/외래 가이드</button>` : ''}
@@ -7658,6 +7659,59 @@
         `;
       }
 
+      if (panelKey === 'takoyaki_checklist') {
+        const checklist = fixedInfo.takoyaki_checklist || {};
+        const quickSummary = Array.isArray(checklist.quick_summary) ? checklist.quick_summary : [];
+        const scheduleMapping = Array.isArray(checklist.schedule_mapping) ? checklist.schedule_mapping : [];
+        const originalLines = Array.isArray(checklist.original_lines) ? checklist.original_lines : [];
+        return `
+          <div class="detail-screen-panel">
+            <div class="detail-screen-head">
+              <button class="detail-screen-back" onclick="openCalendarSummaryDetail('${weekKey}')">← 종합으로</button>
+              <button class="detail-screen-close" onclick="closeCalendarDetailScreen()" aria-label="닫기">✕</button>
+            </div>
+            <div class="detail-screen-body">
+              <div class="detail-screen-hero">
+                <div class="badge-row">
+                  <span class="calendar-mini-chip">요약 ${quickSummary.length}</span>
+                  <span class="calendar-mini-chip">매핑 ${scheduleMapping.length}</span>
+                  <span class="calendar-mini-chip">원문 ${originalLines.length}</span>
+                  ${checklist.preserve_original ? `<span class="calendar-mini-chip">원문 유지</span>` : ''}
+                </div>
+                <div class="detail-screen-title">${escapeHtml(checklist.title || 'Takoyaki 체크리스트')}</div>
+                <div class="detail-screen-summary">${escapeHtml(checklist.source || 'Telegram PDF')} · 요약은 위에, 원문은 아래에 그대로 보존한다.</div>
+              </div>
+              <div class="detail-screen-stack">
+                ${quickSummary.map(section => `
+                  <div class="detail-screen-section">
+                    <h4>${escapeHtml(section.title || '요약')}</h4>
+                    ${renderReferenceLinesHtml((section.items || []).map(item => `- ${item}`))}
+                  </div>
+                `).join('')}
+                <div class="detail-screen-section">
+                  <h4>일정별 반영 위치</h4>
+                  ${scheduleMapping.length ? `<div class="event-list">${scheduleMapping.map(item => `
+                    <div class="event-item">
+                      <div class="event-time">${escapeHtml(item.target || '일정')}</div>
+                      <div>
+                        <div class="item-title">${escapeHtml(item.title || '')}</div>
+                        <div class="reference-info-list" style="margin-top:6px;">
+                          ${(item.items || []).map(line => `<div class="reference-info-line">${escapeHtml(line)}</div>`).join('')}
+                        </div>
+                      </div>
+                    </div>
+                  `).join('')}</div>` : `<div class="empty">일정 매핑이 아직 없다.</div>`}
+                </div>
+                <div class="detail-screen-section">
+                  <h4>원문</h4>
+                  ${originalLines.length ? renderReferenceLinesHtml(originalLines) : `<div class="empty">원문이 아직 없다.</div>`}
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
       if (panelKey !== 'basic_info') {
         return `
           <div class="detail-screen-panel">
@@ -7724,6 +7778,7 @@
               <div class="detail-screen-summary">${calendarBoardRangeLabel(weekDays)} · 실습 중 자주 찾는 연락처와 기본 운영 정보를 한곳에 묶어둔다.</div>
               <div class="detail-filter-row">
                 ${bundleLocationGuide(bundle) ? `<button class="btn btn-small btn-ghost" onclick="openCalendarLocationGuide('${weekKey}')">장소 지도 보기</button>` : ''}
+                ${fixedInfo.takoyaki_checklist ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'takoyaki_checklist')">Takoyaki 체크</button>` : ''}
                 <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'professors')">교수님</button>
                 <button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'group_rules')">조 운영 규칙</button>
                 ${hasSejongContextForWeek(weekDays) ? `<button class="btn btn-small btn-ghost" onclick="openCalendarReferencePanel('${weekKey}', 'sejong_notes')">세종 운영 메모</button>` : ''}

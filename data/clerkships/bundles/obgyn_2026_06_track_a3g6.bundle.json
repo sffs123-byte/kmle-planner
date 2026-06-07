@@ -8,7 +8,8 @@
       "subject": "산부인과 인계",
       "purpose": "실습 중앙 데이터센터: 일정, 과제, pretest, 현장 질문, ufolio/CPX 관리",
       "source_inventory": "outputs/clerkship/obgyn_ingest_2026-06-05/source_inventory.md",
-      "extraction_manifest": "outputs/clerkship/obgyn_ingest_2026-06-05/extraction_manifest.json"
+      "extraction_manifest": "outputs/clerkship/obgyn_ingest_2026-06-05/extraction_manifest.json",
+      "takoyaki_checklist": "/Users/sffs123gmail.com/.openclaw/workspace/outputs/clerkship/obgyn_takoyaki_checklist_source_2026-06-07.md"
     },
     "paperclip": {
       "epic": "AI-6",
@@ -34,7 +35,7 @@
       ]
     },
     "detail_enrichment": {
-      "version": "20260607T1747KST",
+      "version": "20260607T1845KST",
       "sourcepack": "obgyn_fulltext_sourcepack_v1.json",
       "mode": "click_detail_original_handoff_text",
       "enriched_sessions": 56,
@@ -50,7 +51,9 @@
       "delivery_field_handoff_source": "강렬 텔레그램 추가 인계 2026-06-07 12:54 KST",
       "operational_info_policy": "강렬 명시 승인 기준: 산부인과 운영정보(비밀번호/연락처/의국·PK실 접근정보)는 원문값 보존; 환자식별정보는 별도 범주로 구분.",
       "monday_common_schedule_version": "20260607T1747KST",
-      "monday_common_schedule_source": "강렬 텔레그램 6/8 월요일 공통일정 공지 2026-06-07 17:32 KST"
+      "monday_common_schedule_source": "강렬 텔레그램 6/8 월요일 공통일정 공지 2026-06-07 17:32 KST",
+      "takoyaki_checklist_version": "20260607T1845KST",
+      "takoyaki_checklist_source": "TalkFile_산부인과_Checklist_by_Takoyaki_미완.pdf"
     },
     "basic_info_enrichment": {
       "version": "20260607T0455KST",
@@ -606,6 +609,16 @@
           "환자 식별정보와 차트 원문은 별도 범주로 보고, 원문 source의 안전 표기 기준을 유지.",
           "장소 지도와 기본정보는 실습 운영에 필요한 범위에서 기본정보 패널과 클릭 상세에 연결."
         ]
+      },
+      {
+        "title": "Takoyaki 체크리스트 요약",
+        "items": [
+          "장소: 의국/병동/분만실/외래/수술/시험 장소를 한 줄로 확인하는 빠른 요약.",
+          "과제: U-Folio 현장승인 12개 + 수기 자유기록 12개 + 산과/부인과 케이스 + 설문지.",
+          "시험: Pre-test, Post-test, NST, 부인과 OSCE, 부인과 CPX를 별도 축으로 관리.",
+          "출퇴근: 출근은 소아동 3층 엘리베이터 앞, 퇴근은 분만실 스테이션. 분만조 조장이 매일 퇴근 서명.",
+          "공통일정: OT/의국회의/NST/OSCE는 의국 세팅과 현장 보고가 핵심."
+        ]
       }
     ],
     "location_guide": {
@@ -1034,6 +1047,15 @@
             "환자 전화문진 금지. 환자 식별정보가 들어간 자료는 캡처/공유 전 별도 구분한다.",
             "교수/전공의 연락처는 원문 인계값을 우선 보존하고, 값이 확인된 항목은 사이트에도 그대로 표시한다."
           ]
+        },
+        {
+          "title": "Takoyaki 공통 운영 규칙",
+          "items": [
+            "공통일정 진행 시 반드시 현장의 전공의 선생님이나 교수님께 말씀드리고 이동한다.",
+            "조장은 공통일정 이동 전 전공의 단톡에 사전 공지한다.",
+            "출퇴근 서명은 조장이 인원 확인 후 처리한다. 불시점검 가능성 때문에 퇴근 전 병원 대기 원칙을 지킨다.",
+            "병동조는 아침 출근 확인 예외가 있으므로 조장이 회진 일정이라고 설명하고 전원 출첵 받는다."
+          ]
         }
       ]
     },
@@ -1114,6 +1136,53 @@
               ]
             }
           ]
+        },
+        {
+          "title": "Takoyaki 체크리스트",
+          "subsections": [
+            {
+              "title": "시험/평가",
+              "items": [
+                {
+                  "id": "obgyn-takoyaki-pretest",
+                  "label": "Pre-test: 첫날 오전 10시, 실습 전 시험 표시 20항목 중 5문제"
+                },
+                {
+                  "id": "obgyn-takoyaki-posttest",
+                  "label": "Post-test: 마지막날 오후 4시, 전 범위 49항목 중 5문제"
+                },
+                {
+                  "id": "obgyn-takoyaki-nst",
+                  "label": "NST 강의/시험: 강병헌 교수님, 강의 내용 중심 출제"
+                },
+                {
+                  "id": "obgyn-takoyaki-osce-cpx",
+                  "label": "부인과 OSCE/CPX 시험 후 U-Folio 현장평가 확인"
+                }
+              ]
+            },
+            {
+              "title": "제출/마감",
+              "items": [
+                {
+                  "id": "obgyn-takoyaki-ufolio-observed-12",
+                  "label": "임상술기관찰 현장승인 12개: 3~4줄이라도 작성 후 제출/수정"
+                },
+                {
+                  "id": "obgyn-takoyaki-ufolio-handwrite-12",
+                  "label": "임상술기 자유기록 12개: 수기 작성 후 마지막 날까지 정리"
+                },
+                {
+                  "id": "obgyn-takoyaki-case-2",
+                  "label": "산과 케이스 1개 + 부인과 케이스 1개 확보"
+                },
+                {
+                  "id": "obgyn-takoyaki-survey",
+                  "label": "설문지: 마지막 날 4주차 분만조 조장이 분만실 레지던트 선생님께 제출"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1121,17 +1190,19 @@
       "title": "산부인과 인계 원문 목차 / Source Index",
       "generated_at": "2026-06-07T04:55:00+09:00",
       "summary": {
-        "source_documents": 14,
+        "source_documents": 15,
         "source_blocks_total": 1607,
         "common_packet_blocks": 501,
         "images_total": 76,
         "public_location_images_linked": 17,
-        "private_or_not_exported_images": 45
+        "private_or_not_exported_images": 45,
+        "takoyaki_checklist_lines": 58
       },
       "private_source_paths": [
         "/Users/sffs123gmail.com/.openclaw/workspace/outputs/clerkship/obgyn_common_handoff_raw_packet_2026-06-07.md",
         "/Users/sffs123gmail.com/.openclaw/workspace/outputs/clerkship/obgyn_common_handoff_raw_packet_2026-06-07.json",
-        "/Users/sffs123gmail.com/.openclaw/workspace-clerk2/outputs/clerkship/obgyn_fulltext_sourcepack_2026-06-06/obgyn_fulltext_sourcepack_v1.json"
+        "/Users/sffs123gmail.com/.openclaw/workspace-clerk2/outputs/clerkship/obgyn_fulltext_sourcepack_2026-06-06/obgyn_fulltext_sourcepack_v1.json",
+        "/Users/sffs123gmail.com/.openclaw/workspace/outputs/clerkship/obgyn_takoyaki_checklist_source_2026-06-07.md"
       ],
       "sections": [
         {
@@ -1261,6 +1332,14 @@
           "images": 45,
           "site": "운영정보 기준 / 환자식별정보 gate",
           "status": "운영정보는 원문값 보존, 환자식별정보는 별도 구분"
+        },
+        {
+          "id": "takoyaki_checklist",
+          "title": "Takoyaki 산부인과 Checklist PDF",
+          "text_blocks": 58,
+          "images": 0,
+          "site": "fixed_info.takoyaki_checklist / 일정별 detail section / assignment_checklist",
+          "status": "원문 보존 + 일정별 요약 발췌 반영"
         }
       ],
       "operational_info_notes": [
@@ -1268,7 +1347,7 @@
         "교수님/전공의 연락처표는 원문/OCR 근거값과 sourcepack 경로를 함께 보존한다.",
         "환자식별정보와 차트 원문은 운영정보와 별도로 구분해 다룬다."
       ],
-      "latest_notice": "6/8 월요일 공통일정 확정본 반영: 2026-06-07 17:32 KST 강렬 텔레그램 공지 기준"
+      "latest_notice": "Takoyaki 체크리스트 PDF 반영: 2026-06-07 18:38 KST 강렬 Telegram 첨부 기준"
     },
     "evaluation_score_weights": {
       "title": "산부인과 평가 비중 / 실습 전략",
@@ -1390,7 +1469,7 @@
     },
     "delivery_week_field_handoff": {
       "title": "분만주 현장 추가 인계",
-      "source": "강렬 텔레그램 추가 인계 2026-06-07 12:54 KST / 강렬 텔레그램 6/8 월요일 공통일정 공지 2026-06-07 17:32 KST",
+      "source": "강렬 텔레그램 추가 인계 2026-06-07 12:54 KST / 강렬 텔레그램 6/8 월요일 공통일정 공지 2026-06-07 17:32 KST / Takoyaki PDF 2026-06-07",
       "sections": [
         {
           "title": "6/8 월요일 공통일정",
@@ -1487,10 +1566,23 @@
             "- 질식분만",
             "- 태아심음 자궁수축 감시장치 이해"
           ]
+        },
+        {
+          "title": "Takoyaki 체크리스트 요약",
+          "items": [
+            "출근 확인: 소아동 3층 엘리베이터 앞, 분만실 담당 인턴 선생님.",
+            "월/목/금 07:50, 화/수 의국회의일 07:40.",
+            "병동조 제외: 07:30까지 바로 5층 회진 대기. 조장이 병동조 회진 일정 있다고 말하고 전원 출첵 받기.",
+            "퇴근 확인: 분만실 스테이션, 분만실 담당 레지던트 선생님, 오후 6시.",
+            "17:40쯤 선생님들 인수인계 끝난 뒤 분만조 조장이 전원 퇴근 서명.",
+            "전원 모여 인원 수 확인 후 퇴근이 원칙. 불시점검 가능성 때문에 17시부터는 병원 대기.",
+            "분만조 조장이 매일 퇴근 서명 받기.",
+            "공통일정 전 현장 전공의/교수님께 말씀드리고 이동하기."
+          ]
         }
       ],
       "preserve_original": true,
-      "version": "20260607T1747KST"
+      "version": "20260607T1845KST"
     },
     "monday_common_schedule_2026_06_08": {
       "title": "6/8 월요일 공통일정 확정본",
@@ -1539,6 +1631,248 @@
         "6/8 기준 공통일정은 기존 후보 시간보다 우선한다."
       ],
       "preserve_original": true
+    },
+    "takoyaki_checklist": {
+      "title": "산부인과 Checklist by Takoyaki",
+      "source": "Telegram PDF attachment from 강렬, 2026-06-07 18:38 KST",
+      "source_file": "/Users/sffs123gmail.com/.openclaw/workspace/outputs/clerkship/obgyn_takoyaki_checklist_source_2026-06-07.md",
+      "received_at": "2026-06-07T18:38:40+09:00",
+      "version": "20260607T1845KST",
+      "preserve_original": true,
+      "use_policy": "요약은 빠른 브리핑층으로 쓰고, 원문 문장은 아래 original_lines와 각 일정 상세에 발췌 보존한다.",
+      "quick_summary": [
+        {
+          "title": "장소",
+          "items": [
+            "의국: 소아동 6층, 계단 *7113# / 의국 비밀번호 7264.",
+            "부인과 병동: 소아동 5층 351, 352.",
+            "분만실: 소아동 3층 331.",
+            "외래: 소아동 1층.",
+            "수술: 소아동 3층 1,2룸 / 본관 3층 로봇 7,11룸.",
+            "시험: 의대 도서관동 405호."
+          ]
+        },
+        {
+          "title": "과제",
+          "items": [
+            "과제 큰 틀: U-Folio + 수기 작성 + 케이스 2개.",
+            "임상술기관찰 현장승인 12개: 3~4줄이라도 작성해 제출 후 수정.",
+            "임상술기 자유기록 12개: 뽑아서 수기로 작성, 산부인과 마지막 날까지.",
+            "산과 케이스 1개는 분만조, 부인과 케이스 1개는 병동조에서 세종 발표.",
+            "설문지는 4주차 분만조 조장이 마지막 날 분만실 레지던트 선생님께 제출."
+          ]
+        },
+        {
+          "title": "시험",
+          "items": [
+            "Pre-test: 첫날 오전 10시, 실습 전 시험 표시 20항목 중 5문제.",
+            "Post-test: 마지막날 오후 4시, 전 범위 49개 항목 중 5문제. 가끔 탈야 1문제 가능.",
+            "NST 시험: 강병헌 교수님, 야마 중심이나 가끔 1문제 탈야 가능.",
+            "부인과 OSCE 시험과 부인과 CPX 시험은 U-Folio 현장평가/자유기록과 연결."
+          ]
+        },
+        {
+          "title": "출근/퇴근",
+          "items": [
+            "출근 확인: 소아동 3층 엘리베이터 앞, 분만실 담당 인턴 선생님.",
+            "월/목/금 07:50, 화/수 의국회의일 07:40.",
+            "병동조 제외: 07:30까지 바로 5층 회진 대기. 조장이 병동조 회진 일정 있다고 말하고 전원 출첵 받기.",
+            "퇴근 확인: 분만실 스테이션, 분만실 담당 레지던트 선생님, 오후 6시.",
+            "17:40쯤 선생님들 인수인계 끝난 뒤 분만조 조장이 전원 퇴근 서명.",
+            "전원 모여 인원 수 확인 후 퇴근이 원칙. 불시점검 가능성 때문에 17시부터는 병원 대기."
+          ]
+        },
+        {
+          "title": "공통일정",
+          "items": [
+            "공통일정 진행 시 반드시 현장 전공의 선생님이나 교수님께 말씀드리고 가기. 조장은 사전에 전공의 단톡에 공지.",
+            "OT: 의국 진행. 커튼 내리고 의자 세팅 후 PC, 빔프로젝터 켜기.",
+            "Pre-test: 첫날 오전 10시. C,D조는 OT 끝나고 일정 참여하다가 교수님께 말씀드리고 나오기.",
+            "Post-test: 마지막날 오후. 1번은 하위 문제 4개, 2~5번은 일반 왕주.",
+            "의국회의: 의국 진행, 의국 세팅 및 Zoom 세팅.",
+            "NST 강의: 산과 강병헌 교수님, 의국, 1 or 2주차, 30분, 1주차 분만조 통해 공지, 학생 지정 질문 가능.",
+            "NST 시험: 산과 강병헌 교수님, 의국, 2주차, 9~10문항, 사실상 강의 내용 전부 출제.",
+            "OSCE 강의: 부인과 박미아 교수님, 의국 또는 소아동 수술실 세미나실, PAP ecto/endo + wet smear, 세팅 + 연필 필요, 2명 정도 시연."
+          ]
+        },
+        {
+          "title": "조별 메모",
+          "items": [
+            "분만조: 분만조 조장이 매일 퇴근 서명 받기.",
+            "병동조: C조가 C,B조 2주치 부인과 케이스, A조가 A,D조 2주치 부인과 케이스 받기. 담당은 이건우 교수님.",
+            "병동조: 분과 조장 미리 정하고 전 주 목요일 송수연 교수님께 문자드려 세종 케발 담당 교수님 확정 받기.",
+            "외래조/수술조는 PDF에 제목만 있고 세부는 기존 분과별 인계와 사이트 rotation manual을 따른다."
+          ]
+        }
+      ],
+      "schedule_mapping": [
+        {
+          "target": "basic_info/location_guide",
+          "title": "장소 요약",
+          "items": [
+            "의국: 소아동 6층, 계단 *7113# / 의국 비밀번호 7264.",
+            "부인과 병동: 소아동 5층 351, 352.",
+            "분만실: 소아동 3층 331.",
+            "외래: 소아동 1층.",
+            "수술: 소아동 3층 1,2룸 / 본관 3층 로봇 7,11룸.",
+            "시험: 의대 도서관동 405호."
+          ]
+        },
+        {
+          "target": "obgyn-common-daily-attendance + obgyn-delivery-signin-*",
+          "title": "출근 확인",
+          "items": [
+            "출근 확인: 소아동 3층 엘리베이터 앞, 분만실 담당 인턴 선생님.",
+            "월/목/금 07:50, 화/수 의국회의일 07:40.",
+            "병동조 제외: 07:30까지 바로 5층 회진 대기. 조장이 병동조 회진 일정 있다고 말하고 전원 출첵 받기."
+          ]
+        },
+        {
+          "target": "obgyn-common-dismissal-sign + obgyn-delivery-dismissal-*",
+          "title": "퇴근 확인",
+          "items": [
+            "퇴근 확인: 분만실 스테이션, 분만실 담당 레지던트 선생님, 오후 6시.",
+            "17:40쯤 선생님들 인수인계 끝난 뒤 분만조 조장이 전원 퇴근 서명.",
+            "전원 모여 인원 수 확인 후 퇴근이 원칙. 불시점검 가능성 때문에 17시부터는 병원 대기."
+          ]
+        },
+        {
+          "target": "obgyn-common-ot",
+          "title": "OT 세팅",
+          "items": [
+            "OT: 의국 진행. 커튼 내리고 의자 세팅 후 PC, 빔프로젝터 켜기."
+          ]
+        },
+        {
+          "target": "obgyn-common-pretest",
+          "title": "Pre-test",
+          "items": [
+            "Pre-test: 첫날 오전 10시, 실습 전 시험 표시 20항목 중 5문제.",
+            "Pre-test: 첫날 오전 10시. C,D조는 OT 끝나고 일정 참여하다가 교수님께 말씀드리고 나오기."
+          ]
+        },
+        {
+          "target": "obgyn-common-posttest",
+          "title": "Post-test",
+          "items": [
+            "Post-test: 마지막날 오후 4시, 전 범위 49개 항목 중 5문제. 가끔 탈야 1문제 가능.",
+            "Post-test: 마지막날 오후. 1번은 하위 문제 4개, 2~5번은 일반 왕주."
+          ]
+        },
+        {
+          "target": "obgyn-common-dept-conf-*",
+          "title": "의국회의",
+          "items": [
+            "의국회의: 의국 진행, 의국 세팅 및 Zoom 세팅."
+          ]
+        },
+        {
+          "target": "obgyn-common-nst-lecture / obgyn-common-nst-exam",
+          "title": "NST",
+          "items": [
+            "NST 강의: 산과 강병헌 교수님, 의국, 1 or 2주차, 30분, 1주차 분만조 통해 공지, 학생 지정 질문 가능.",
+            "NST 시험: 산과 강병헌 교수님, 의국, 2주차, 9~10문항, 사실상 강의 내용 전부 출제.",
+            "NST 시험: 강병헌 교수님, 야마 중심이나 가끔 1문제 탈야 가능."
+          ]
+        },
+        {
+          "target": "obgyn-common-gyn-osce-lecture / 세종 OSCE",
+          "title": "OSCE",
+          "items": [
+            "OSCE 강의: 부인과 박미아 교수님, 의국 또는 소아동 수술실 세미나실, PAP ecto/endo + wet smear, 세팅 + 연필 필요, 2명 정도 시연.",
+            "부인과 OSCE 시험과 부인과 CPX 시험은 U-Folio 현장평가/자유기록과 연결."
+          ]
+        },
+        {
+          "target": "obgyn-evt-gyn-cpx",
+          "title": "CPX",
+          "items": [
+            "부인과 CPX 시험은 담당 교수/일정/대면증례보고서 여부 확인.",
+            "부인과 OSCE 시험과 부인과 CPX 시험은 U-Folio 현장평가/자유기록과 연결."
+          ]
+        },
+        {
+          "target": "assignments / ufolio_items",
+          "title": "U-Folio/수기/설문지",
+          "items": [
+            "과제 큰 틀: U-Folio + 수기 작성 + 케이스 2개.",
+            "임상술기관찰 현장승인 12개: 3~4줄이라도 작성해 제출 후 수정.",
+            "임상술기 자유기록 12개: 뽑아서 수기로 작성, 산부인과 마지막 날까지.",
+            "산과 케이스 1개는 분만조, 부인과 케이스 1개는 병동조에서 세종 발표.",
+            "설문지는 4주차 분만조 조장이 마지막 날 분만실 레지던트 선생님께 제출."
+          ]
+        },
+        {
+          "target": "rotation sessions",
+          "title": "분만/병동/외래/수술",
+          "items": [
+            "분만조: 분만조 조장이 매일 퇴근 서명 받기.",
+            "병동조: C조가 C,B조 2주치 부인과 케이스, A조가 A,D조 2주치 부인과 케이스 받기. 담당은 이건우 교수님.",
+            "병동조: 분과 조장 미리 정하고 전 주 목요일 송수연 교수님께 문자드려 세종 케발 담당 교수님 확정 받기.",
+            "외래조/수술조는 PDF에 제목만 있고 세부는 기존 분과별 인계와 사이트 rotation manual을 따른다."
+          ]
+        }
+      ],
+      "original_lines": [
+        "산부인과 Checklist by Takoyaki",
+        "의국 [소아동 6층, 비밀번호 7264, 계단 *7113#]",
+        "부인과 병동 [소아동 5층 351, 352]",
+        "분만실 [소아동 3층 331]",
+        "외래 [소아동 1층]",
+        "수술 [소아동 3층 1,2룸 / 본관 3층 로봇 7,11룸]",
+        "시험 [의대 도서관동 405호]",
+        "과제: U-folio + 수기 작성 + 케이스 2개",
+        "1) 임상술기관찰 현장승인 12개 – 3~4줄이라도 작성하여 제출 후 수정",
+        "2) 임상술기 자유기록 12개 – 뽑아서 수기로 작성 (산부인과 마지막 날까지)",
+        "3) 산과 케이스 1개 – 분만조",
+        "4) 부인과 케이스 1개 – 병동조 (세종에서 발표)",
+        "5) 설문지 – 4주차 분만조 조장이 마지막 날 분만실 레지던트샘께 제출",
+        "시험",
+        "1) 필기 시험 (Pre-test): 첫날 오전 10시 - ‘실습 전 시험’으로 표시된 20 항목 중 5문제 (왕주)",
+        "2) 필기 시험 (Post-test): 마지막날 오후 4시 - 전 범위 49개 항목 중 5문제 (왕주, 가끔 1문제씩 탈야함)",
+        "3) NST 시험 (강병헌 교수님): 야마 (가끔 1문제씩 탈야)",
+        "4) 부인과 OSCE 시험",
+        "5) 부인과 CPX 시험",
+        "출근 확인: 소아동 3층 엘리베이터 앞 / 분만실 담당 인턴샘",
+        "- 월목금 - 오전 7시 50분 / 화수 의국회의 – 오전 7시 40분",
+        "- 병동조 제외 (7시 30분까지 바로 5층 회진 대기) [조장-병동조 회진 일정 있다고 말하고 전원 출첵 받기]",
+        "퇴근 확인: 분만실 스테이션 / 분만실 담당 레지던트샘",
+        "- 오후 6시",
+        "- 5시 40분쯤 선생님들 인수인계 끝난 후 분만조 조장이 전원 퇴근 서명",
+        "- 전원 모여서 인원 수 확인 후 퇴근이 원칙 / 불시점검 가능성 있으니 5시부터는 병원 대기",
+        "공통일정 진행 시 반드시 현장의 전공의 샘이나 교수님께 말씀 드리고 가기 [조장-사전에 전공의 단톡에 공지]",
+        "1. 공통일정",
+        "1) OT 강의 (교수님, 전공의선생님)",
+        " - 의국 진행",
+        " - 커튼 내리고 의자 세팅 후 PC, 빔프로젝터 켜기",
+        "2) Pre-test (첫날 오전 10시)",
+        " - C,D조는 OT 끝나고 일정 참여하다가 교수님께 말씀드리고 나오기",
+        "3) Post-test (마지막날 오후)",
+        " - 1번은 하위 문제 4개, 2~5번은 일반 왕주",
+        "4) 의국회의",
+        " - 의국 진행",
+        " - 의국 세팅 및 줌 세팅",
+        "5) NST 강의 (산과 - 강병헌 교수님)",
+        " - 의국 진행 (1 or 2주차)",
+        " - 30분 진행 / 1주차에 분만조 통해 교수님께서 공지",
+        " - 학생 지정해서 질문하기도 함",
+        "6) NST 시험 (산과 - 강병헌 교수님)",
+        " - 의국 진행 (2주차)",
+        " - 9~10 문항 (1~2문제 제외하고 대부분 야마)",
+        " - 사실상 강의 내용의 전부를 출제",
+        "7) OSCE 강의 (부인과 - 박미아 교수님)",
+        " - 의국 or 소아동 수술실 세미나실 진행 (1주차)",
+        " - PAP (ecto, endo), wet smear 한번에 하는 것으로 진행",
+        " - 세팅 + 연필 필요!",
+        " - 강의 때도 2명 정도 시켜봄 (조장 1명, 조원 1명)",
+        "2. 분만조",
+        " - 분만조 조장이 매일 퇴근 서명 받기",
+        "3. 병동조",
+        " - C조가 C,B조 2주치 부인과 케이스 받고, A조가 A,D조 2주치 부인과 케이스 받기 (이건우 교수님)",
+        " - 분과 조장 미리 정하고, 전 주 목요일에 송수연 교수님께 문자드려서 세종 케발 담당 교수님 확정 받기",
+        "4. 외래조",
+        "5. 수술조"
+      ]
     }
   },
   "source_refs": [
@@ -1593,7 +1927,8 @@
         "AI-13"
       ],
       "source_refs": [
-        "ALL §조별일정; SCHED"
+        "ALL §조별일정; SCHED",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "점수 배정 / 실습 전략": [
@@ -1739,6 +2074,15 @@
           "장소: XR 센터 3층/ 시간: 이경노 교수님께 문의",
           "15조에서는 XR 센터 실습 같이 가주신 전공의 샘이 정수화 샘이었는데 16조는 정수민 샘이라고 당일  오전에 정수화 샘께 직접 여쭤봐서 알아냄 (매번 같이 가주시는 전공의 샘 달라지는 듯). 교수님께서는 실습 당일 오전에 전공의 샘께 연락드려보라 했는데 정수화샘께서 딱히 전공의샘께 연락 안 드려도 된다 하셨음. 실습 당일 담당 전공의 샘이 오전에 ‘먼저 가서 진행하라/같이 센터로 이동하자’ 단톡에 먼저 연락 주셨음. (사전에 단톡에 산과 cpx 및 케발 일정 공유할 때 xr 센터 실습 전공의 샘께서 진행해주신다는 내용 살짝 언급하면 remind 용으로 좋긴 할 듯)",
           "유폴리오 항목으로 질식분만, 태아심음 자궁수축 감시장치 이해. 이렇게 2개 보통 채울 수 있음. 이외에도 환자에 따라 초음파 하는거 보면 채우면 됨. 승인은 우리 조는 목요일쯤 다 모아서 한번에 정수화 선생님한테 받음. 분만조에서 본 항목들은 모아서 받는게 나을 듯."
+        ],
+        "Takoyaki 체크리스트 / 분만조": [
+          "분만조 조장이 매일 퇴근 서명 받기.",
+          "분만실은 소아동 3층 331."
+        ],
+        "Takoyaki 원문 발췌": [
+          "분만실 [소아동 3층 331]",
+          "2. 분만조",
+          " - 분만조 조장이 매일 퇴근 서명 받기"
         ]
       },
       "rotation_week": 1,
@@ -1746,7 +2090,11 @@
       "date_confidence": "corrected_from_user_message_2026-06-06_first_week_delivery",
       "calendar_ready": true,
       "group_scope": "A조",
-      "detail_source_ref_count": 57
+      "detail_source_ref_count": 57,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 분만조",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-rot-outpatient",
@@ -1777,7 +2125,8 @@
         "AI-13"
       ],
       "source_refs": [
-        "ALL §장소/유폴; LEADER_SUM"
+        "ALL §장소/유폴; LEADER_SUM",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "점수 배정 / 실습 전략": [
@@ -1833,6 +2182,13 @@
           "외래(산과) - 임신 1삼분기 초음파/임신 2, 3삼분기 초음파/초음파 도플러 검사",
           "수술 - 부인과 수술보조/질확대경검사∙펀치생검∙원추절제술/제왕절개술 참관",
           "분만 - 질식분만 참관 및 회음절개 봉합관찰/태아심음 자궁수축 장치의 이해"
+        ],
+        "Takoyaki 체크리스트 / 외래조": [
+          "외래는 소아동 1층. PDF에는 외래조 세부는 제목만 있어 기존 외래 인계와 site 외래 rotation manual을 따른다."
+        ],
+        "Takoyaki 원문 발췌": [
+          "외래 [소아동 1층]",
+          "4. 외래조"
         ]
       },
       "rotation_week": 2,
@@ -1840,7 +2196,11 @@
       "date_confidence": "corrected_from_user_message_2026-06-06_first_week_delivery",
       "calendar_ready": true,
       "group_scope": "A조",
-      "detail_source_ref_count": 42
+      "detail_source_ref_count": 42,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 외래조",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-rot-ward",
@@ -1871,7 +2231,8 @@
         "AI-13"
       ],
       "source_refs": [
-        "ALL; SCHED; WHOLE_SCHED"
+        "ALL; SCHED; WHOLE_SCHED",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "점수 배정 / 실습 전략": [
@@ -1949,6 +2310,17 @@
           "26년도 3월) 교수님께서 오티날에 직접 수술표에 동그라미쳐서 주셨음. 알아서 사다리 타면 될 듯. 중간에 수술미뤄진 분이 있어서 이건우 교수님 외래 학생에게 시켜서 새로운 케이스 받았었음.",
           "- 만약 케이스 개수를 부족하게 전달받은 경우 교육치프 전공의선생님께 연락하면 됨",
           "- 환자분께 전화문진 드리지 마세요! 개인정보 유출입니다."
+        ],
+        "Takoyaki 체크리스트 / 병동조": [
+          "병동조: C조가 C,B조 2주치 부인과 케이스, A조가 A,D조 2주치 부인과 케이스 받기. 담당은 이건우 교수님.",
+          "병동조: 분과 조장 미리 정하고 전 주 목요일 송수연 교수님께 문자드려 세종 케발 담당 교수님 확정 받기.",
+          "부인과 병동은 소아동 5층 351, 352."
+        ],
+        "Takoyaki 원문 발췌": [
+          "부인과 병동 [소아동 5층 351, 352]",
+          "3. 병동조",
+          " - C조가 C,B조 2주치 부인과 케이스 받고, A조가 A,D조 2주치 부인과 케이스 받기 (이건우 교수님)",
+          " - 분과 조장 미리 정하고, 전 주 목요일에 송수연 교수님께 문자드려서 세종 케발 담당 교수님 확정 받기"
         ]
       },
       "rotation_week": 3,
@@ -1956,7 +2328,11 @@
       "date_confidence": "corrected_from_user_message_2026-06-06_first_week_delivery",
       "calendar_ready": true,
       "group_scope": "A조",
-      "detail_source_ref_count": 64
+      "detail_source_ref_count": 64,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 병동조",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-rot-surgery",
@@ -1987,7 +2363,8 @@
         "AI-13"
       ],
       "source_refs": [
-        "ALL §장소요약; UFOLIO"
+        "ALL §장소요약; UFOLIO",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "점수 배정 / 실습 전략": [
@@ -2044,6 +2421,13 @@
           ": 기본 정보 – 담당교수(전공의) -> 해당 주 치프 전공의 선생님",
           ": 실습 항목 – 자유기록(과제) 선택 -> 포트폴리오 제출",
           "– 관찰임상술기 선택 -> 해당 임상술기 선택"
+        ],
+        "Takoyaki 체크리스트 / 수술조": [
+          "수술은 소아동 3층 1,2룸 / 본관 3층 로봇 7,11룸. PDF에는 수술조 세부는 제목만 있어 기존 수술 인계를 따른다."
+        ],
+        "Takoyaki 원문 발췌": [
+          "수술 [소아동 3층 1,2룸 / 본관 3층 로봇 7,11룸]",
+          "5. 수술조"
         ]
       },
       "rotation_week": 4,
@@ -2051,7 +2435,11 @@
       "date_confidence": "corrected_from_user_message_2026-06-06_first_week_delivery",
       "calendar_ready": true,
       "group_scope": "A조",
-      "detail_source_ref_count": 43
+      "detail_source_ref_count": 43,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 수술조",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-evt-ward-rounds",
@@ -2200,7 +2588,8 @@
         "AI-13"
       ],
       "source_refs": [
-        "ALL §산과 CASE; WHOLE_SCHED; SCHED"
+        "ALL §산과 CASE; WHOLE_SCHED; SCHED",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "점수 배정 / 실습 전략": [
@@ -2264,6 +2653,12 @@
           "- 26년) 주로 목-금/ 의국에서 진행",
           "- 케이스 받고 바로 수술방 세미나실 컴퓨터에서 VMware 로그인해서 EMR 진로 기록 따오기. 비밀번호 1234qwer@ (굳이 말하고 가지 않아도 됨. 조원에게는 말해서 혹시 찾으면 연락받을 수 있도록 하기)",
           "이민아 교수님께서 바로 케이스 물어보거나/ 다음날 브리핑하라 하시니 바로 준비하는게 좋음."
+        ],
+        "Takoyaki 체크리스트 / 산과 케이스": [
+          "산과 케이스 1개는 분만조에서 받는 항목으로 분류. 월요일 회진/분만실 복귀 후 확인."
+        ],
+        "Takoyaki 원문 발췌": [
+          "3) 산과 케이스 1개 – 분만조"
         ]
       },
       "rotation_week": 1,
@@ -2274,7 +2669,11 @@
       "date_confidence": "corrected_from_user_message_2026-06-06_first_week_delivery",
       "calendar_visible": true,
       "calendar_body_placement": "calendar_body_actual_or_candidate",
-      "detail_source_ref_count": 19
+      "detail_source_ref_count": 19,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 산과 케이스",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-evt-obst-case-xr-presentation",
@@ -2305,7 +2704,8 @@
         "AI-13"
       ],
       "source_refs": [
-        "ALL §산과 CASE; SCHED"
+        "ALL §산과 CASE; SCHED",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "점수 배정 / 실습 전략": [
@@ -2355,6 +2755,12 @@
           "[VR 실습]",
           "장소: XR 센터 3층/ 시간: 이경노 교수님께 문의",
           "15조에서는 XR 센터 실습 같이 가주신 전공의 샘이 정수화 샘이었는데 16조는 정수민 샘이라고 당일  오전에 정수화 샘께 직접 여쭤봐서 알아냄 (매번 같이 가주시는 전공의 샘 달라지는 듯). 교수님께서는 실습 당일 오전에 전공의 샘께 연락드려보라 했는데 정수화샘께서 딱히 전공의샘께 연락 안 드려도 된다 하셨음. 실습 당일 담당 전공의 샘이 오전에 ‘먼저 가서 진행하라/같이 센터로 이동하자’ 단톡에 먼저 연락 주셨음. (사전에 단톡에 산과 cpx 및 케발 일정 공유할 때 xr 센터 실습 전공의 샘께서 진행해주신다는 내용 살짝 언급하면 remind 용으로 좋긴 할 듯)"
+        ],
+        "Takoyaki 체크리스트 / 산과 케이스 발표": [
+          "산과 케이스 1개는 분만조 과제. 발표 후 U-Folio 현장평가/자유기록 흐름을 확인."
+        ],
+        "Takoyaki 원문 발췌": [
+          "3) 산과 케이스 1개 – 분만조"
         ]
       },
       "rotation_week": 1,
@@ -2364,7 +2770,11 @@
       "date_confidence": "corrected_from_user_message_2026-06-06_first_week_delivery",
       "calendar_visible": true,
       "calendar_body_placement": "calendar_body_actual_or_candidate",
-      "detail_source_ref_count": 18
+      "detail_source_ref_count": 18,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 산과 케이스 발표",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-evt-gyn-case-assign",
@@ -2395,7 +2805,8 @@
         "AI-13"
       ],
       "source_refs": [
-        "ALL §부인과 CASE; WHOLE_SCHED; LEADER_SUM"
+        "ALL §부인과 CASE; WHOLE_SCHED; LEADER_SUM",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "점수 배정 / 실습 전략": [
@@ -2450,6 +2861,14 @@
           "26년3월 14조 (A조):  월요일에 7시 50분, 금요일에 8시 20분에 오심",
           "26년 4월 9조(C조): 월요일에는OT 전 7시 40분쯤에 오셨음. 회진 다 끝나고 교수님께 케이스 받을 수 있는지 여쭤보니, “지금 수술목록 없어서 이따 줄게” 하셔서 뽑아간 수술 리스트 보여드리니 동그라미 쳐주심. 화요일에는 9시가 다 돼서 오심. 금요일에도 9시에 오셔서 15분정도 회진도심. 회진 중에 질문 없으시고, 계단으로 나가실 때 따라가는 척 하면 안와도 된다고 하심.",
           "26년 1월 21조 (B조): 매일 오전 9시까지 대기했을 때 한 번도 못 뵘"
+        ],
+        "Takoyaki 체크리스트 / 부인과 케이스": [
+          "부인과 케이스 1개는 병동조에서 받고 세종에서 발표. A조는 A,D조 2주치 부인과 케이스를 받는 흐름."
+        ],
+        "Takoyaki 원문 발췌": [
+          "4) 부인과 케이스 1개 – 병동조 (세종에서 발표)",
+          "3. 병동조",
+          " - C조가 C,B조 2주치 부인과 케이스 받고, A조가 A,D조 2주치 부인과 케이스 받기 (이건우 교수님)"
         ]
       },
       "rotation_week": 3,
@@ -2457,7 +2876,11 @@
       "calendar_ready": true,
       "group_scope": "A조 병동",
       "date_confidence": "corrected_from_user_message_2026-06-06_first_week_delivery",
-      "detail_source_ref_count": 41
+      "detail_source_ref_count": 41,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 부인과 케이스",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-evt-sejong-gyn-osce-case",
@@ -2487,7 +2910,8 @@
         "AI-13"
       ],
       "source_refs": [
-        "ALL §OSCE평가/부인과CASE; SCHED; UFOLIO"
+        "ALL §OSCE평가/부인과CASE; SCHED; UFOLIO",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "점수 배정 / 실습 전략": [
@@ -2526,6 +2950,14 @@
           "26년도 3월) 교수님께서 오티날에 직접 수술표에 동그라미쳐서 주셨음. 알아서 사다리 타면 될 듯. 중간에 수술미뤄진 분이 있어서 이건우 교수님 외래 학생에게 시켜서 새로운 케이스 받았었음.",
           "- 만약 케이스 개수를 부족하게 전달받은 경우 교육치프 전공의선생님께 연락하면 됨",
           "- 환자분께 전화문진 드리지 마세요! 개인정보 유출입니다."
+        ],
+        "Takoyaki 체크리스트 / 부인과 OSCE 시험": [
+          "부인과 OSCE 시험은 세종/병동주 일정과 연결. PAP ecto/endo + wet smear 흐름을 기준으로 준비."
+        ],
+        "Takoyaki 원문 발췌": [
+          "4) 부인과 OSCE 시험",
+          "7) OSCE 강의 (부인과 - 박미아 교수님)",
+          " - PAP (ecto, endo), wet smear 한번에 하는 것으로 진행"
         ]
       },
       "rotation_week": 3,
@@ -2533,7 +2965,11 @@
       "calendar_ready": true,
       "group_scope": "A조 병동/세종",
       "date_confidence": "corrected_from_user_message_2026-06-06_first_week_delivery",
-      "detail_source_ref_count": 21
+      "detail_source_ref_count": 21,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 부인과 OSCE 시험",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-evt-gyn-cpx",
@@ -2564,7 +3000,8 @@
         "AI-13"
       ],
       "source_refs": [
-        "ALL §부인과 CPX; CPX; SCHED"
+        "ALL §부인과 CPX; CPX; SCHED",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "점수 배정 / 실습 전략": [
@@ -2620,6 +3057,12 @@
           "원래 자궁탈출증, 자궁근종, 자궁선근증이 만년 야마였다고 했는데 안나옴. 교수님께서 외래 / 수술에서 어떤 질환 주로 맡으시는지 EMR에서 보고 준비하면 도움될듯. 우리 조는 PCOS, 자궁경부암, 폴립 출제됨. 질출혈, 무월경에서 내셨는데 선배 인계에는 위축성 질염이 나온 적도 있다고 하긴 함. 이외에도 선배 인계에서 혈소판 감소증, 골반내농양, 조기난소부전, 난소암 등등 나왔다고 하니 월경통도 공부 해야할듯함.",
           "신체진찰은 말로만 진행함 (골반검사 진행하겠습니다~하면 소견 말씀해주시는 방식)",
           "처음에 PPI 잘 쌓고, 주 증상에 맞게 문진하고, 요약하기. 답을 맞추는 것보단 해야할 질문을 하는 게 더 중요하며, 어떤 질환을 염두에 두고 질문하지 말고 개방적으로 질문하라고 피드백하심."
+        ],
+        "Takoyaki 체크리스트 / 부인과 CPX": [
+          "부인과 CPX 시험은 담당 교수별 일정/대면증례보고서 여부를 확인. 시험 후 U-Folio 현장평가와 연결."
+        ],
+        "Takoyaki 원문 발췌": [
+          "5) 부인과 CPX 시험"
         ]
       },
       "rotation_week": 2,
@@ -2627,7 +3070,11 @@
       "calendar_ready": true,
       "group_scope": "A조",
       "date_confidence": "corrected_from_user_message_2026-06-06_first_week_delivery",
-      "detail_source_ref_count": 42
+      "detail_source_ref_count": 42,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 부인과 CPX",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-common-daily-attendance",
@@ -2658,7 +3105,8 @@
         "AI-13"
       ],
       "source_refs": [
-        "ALL §출석부; LEADER_SUM"
+        "ALL §출석부; LEADER_SUM",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "점수 배정 / 실습 전략": [
@@ -2711,6 +3159,16 @@
           ": C, D조는 OT-프테 사이에 자습하면 안되고, 일정 참여해야함. (A, B도 분과별 인계 참고, 보통 자습 가능)",
           "<실습 중 조장이 할 일>",
           "1. 매일 출근 출석: 7:50(or 7:40), 소아동 3층 엘베 앞"
+        ],
+        "Takoyaki 체크리스트 / 출근 확인": [
+          "출근 확인: 소아동 3층 엘리베이터 앞, 분만실 담당 인턴 선생님.",
+          "월/목/금 07:50, 화/수 의국회의일 07:40.",
+          "병동조 제외: 07:30까지 바로 5층 회진 대기. 조장이 병동조 회진 일정 있다고 말하고 전원 출첵 받기."
+        ],
+        "Takoyaki 원문 발췌": [
+          "출근 확인: 소아동 3층 엘리베이터 앞 / 분만실 담당 인턴샘",
+          "- 월목금 - 오전 7시 50분 / 화수 의국회의 – 오전 7시 40분",
+          "- 병동조 제외 (7시 30분까지 바로 5층 회진 대기) [조장-병동조 회진 일정 있다고 말하고 전원 출첵 받기]"
         ]
       },
       "rotation_week": 1,
@@ -2720,7 +3178,11 @@
       "date_confidence": "corrected_from_user_message_2026-06-06_first_week_delivery",
       "calendar_visible": true,
       "calendar_body_placement": "calendar_primary_card",
-      "detail_source_ref_count": 15
+      "detail_source_ref_count": 15,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 출근 확인",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-common-dismissal-sign",
@@ -2751,7 +3213,8 @@
         "AI-13"
       ],
       "source_refs": [
-        "ALL §퇴근서명; LEADER_SUM"
+        "ALL §퇴근서명; LEADER_SUM",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "점수 배정 / 실습 전략": [
@@ -2800,6 +3263,17 @@
           "2. 신발장에서 신발 다시 갈아신고 퇴근!",
           "- 퇴근시간은 6시입니다. 퇴근사인 받았다고 카톡 남겨야 병동조 및 다른 대기하고 있는 조가 퇴근 가능하므로 퇴근사인 받으면 조원들 카톡방에 카톡 남겨주세요.",
           "- 5~6시 사이에 던트쌤들 인계 전 또는 후에 전공의쌤 아무나 싸인 받으면 됩니다. 가끔 빨리 싸인하고 보내주실 때도 있습니다. 보통 인계는 5시 40~50분쯤 시작하셔서 경우에 따라 6시 조금 넘을수도 있어요/ 가끔은 고영복 교수님께서 퇴근길에 사인하고 5시 20분쯤 보내주시기도 함"
+        ],
+        "Takoyaki 체크리스트 / 퇴근 확인": [
+          "퇴근 확인: 분만실 스테이션, 분만실 담당 레지던트 선생님, 오후 6시.",
+          "17:40쯤 선생님들 인수인계 끝난 뒤 분만조 조장이 전원 퇴근 서명.",
+          "전원 모여 인원 수 확인 후 퇴근이 원칙. 불시점검 가능성 때문에 17시부터는 병원 대기."
+        ],
+        "Takoyaki 원문 발췌": [
+          "퇴근 확인: 분만실 스테이션 / 분만실 담당 레지던트샘",
+          "- 오후 6시",
+          "- 5시 40분쯤 선생님들 인수인계 끝난 후 분만조 조장이 전원 퇴근 서명",
+          "- 전원 모여서 인원 수 확인 후 퇴근이 원칙 / 불시점검 가능성 있으니 5시부터는 병원 대기"
         ]
       },
       "rotation_week": 1,
@@ -2809,7 +3283,11 @@
       "date_confidence": "corrected_from_user_message_2026-06-06_first_week_delivery",
       "calendar_visible": true,
       "calendar_body_placement": "calendar_primary_card",
-      "detail_source_ref_count": 11
+      "detail_source_ref_count": 11,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 퇴근 확인",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-common-ot",
@@ -2839,7 +3317,8 @@
         "AI-13"
       ],
       "source_refs": [
-        "ALL §OT; SCHED; LEADER_SUM"
+        "ALL §OT; SCHED; LEADER_SUM",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "3줄 요약": [
@@ -2868,6 +3347,14 @@
           "- 커튼 내리기 (바깥 검정색, 안쪽 하얀색 둘 다), 의자 세팅은 사진 참고(조원들이 도와주기)",
           "- PC켜고 빔프로젝터 켜기, 바탕화면에 OT 파일 (드롭박스에도 있음)",
           "2) 의국 위치, OT 세팅 미리 확인하기, OSCE 세팅 미리 확인하기"
+        ],
+        "Takoyaki 체크리스트 / OT": [
+          "OT: 의국 진행. 커튼 내리고 의자 세팅 후 PC, 빔프로젝터 켜기."
+        ],
+        "Takoyaki 원문 발췌": [
+          "1) OT 강의 (교수님, 전공의선생님)",
+          " - 의국 진행",
+          " - 커튼 내리고 의자 세팅 후 PC, 빔프로젝터 켜기"
         ]
       },
       "rotation_week": 1,
@@ -2877,7 +3364,11 @@
       "windowType": "clerkship-session",
       "calendar_visible": true,
       "calendar_body_placement": "calendar_body_actual_or_candidate",
-      "detail_source_ref_count": 7
+      "detail_source_ref_count": 7,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / OT",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-common-pretest",
@@ -2907,7 +3398,8 @@
         "AI-13"
       ],
       "source_refs": [
-        "ALL §Pre-test; WHOLE_SCHED; SCHED; PREPOST"
+        "ALL §Pre-test; WHOLE_SCHED; SCHED; PREPOST",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "점수 배정 / 실습 전략": [
@@ -2970,6 +3462,15 @@
           "- 26년도 1월(19-21조): OT 때 야마와 똑같이 쓰면 0점 처리 한다고 하셨습니다.",
           "- 26년도 3월(13-16조): 프테는 파일 내에서 5문제, 포테는 1문제는 탈야하셨습니다. 그 한 문제가 의국회의에서 유헌종 교수님께서 진행하신 수업에서 진행됐던 내용 그대로 나오셨습니다. 그러니 교수님이 진행하시는 의국회의는 잘 들어보는 게 좋을 지도…",
           "- 26년도 4월(9-12조): 프테, 포테 모두 탈야 없었고 빈출 문제 위주로 출제되었습니다. 의국회의 문제는 나오지 않았습니다."
+        ],
+        "Takoyaki 체크리스트 / Pre-test": [
+          "Pre-test: 첫날 오전 10시, 실습 전 시험 표시 20항목 중 5문제.",
+          "Pre-test: 첫날 오전 10시. C,D조는 OT 끝나고 일정 참여하다가 교수님께 말씀드리고 나오기."
+        ],
+        "Takoyaki 원문 발췌": [
+          "1) 필기 시험 (Pre-test): 첫날 오전 10시 - ‘실습 전 시험’으로 표시된 20 항목 중 5문제 (왕주)",
+          "2) Pre-test (첫날 오전 10시)",
+          " - C,D조는 OT 끝나고 일정 참여하다가 교수님께 말씀드리고 나오기"
         ]
       },
       "rotation_week": 1,
@@ -2979,7 +3480,11 @@
       "windowType": "clerkship-session",
       "calendar_visible": true,
       "calendar_body_placement": "calendar_body_actual_or_candidate",
-      "detail_source_ref_count": 36
+      "detail_source_ref_count": 36,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / Pre-test",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-common-dept-conf-main",
@@ -3010,7 +3515,8 @@
         "AI-13"
       ],
       "source_refs": [
-        "ALL §의국회의; SCHED; WHOLE_SCHED; PREPOST"
+        "ALL §의국회의; SCHED; WHOLE_SCHED; PREPOST",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "3줄 요약": [
@@ -3025,6 +3531,14 @@
           "- 의국세팅: OT때 했던 의국세팅으로 준비해두고 줌 세팅까지 완료해둘 것. 줌 세팅은 조장파일 참고",
           "- 26년도 3월) 의국회의 화수에 진행됨.",
           "-화수 의국회의: 여부는 미정. 오티 때 공지해주시나 안 해주시면 의국회의 하는지 여부 교육담당 전공의샘께 여쭙기."
+        ],
+        "Takoyaki 체크리스트 / 의국회의": [
+          "의국회의: 의국 진행, 의국 세팅 및 Zoom 세팅."
+        ],
+        "Takoyaki 원문 발췌": [
+          "4) 의국회의",
+          " - 의국 진행",
+          " - 의국 세팅 및 줌 세팅"
         ]
       },
       "rotation_week": 1,
@@ -3033,7 +3547,11 @@
       "group_scope": "공통",
       "calendar_visible": true,
       "calendar_body_placement": "calendar_body_actual_or_candidate",
-      "detail_source_ref_count": 6
+      "detail_source_ref_count": 6,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 의국회의",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-common-sejong-conf",
@@ -3137,7 +3655,8 @@
         "AI-13"
       ],
       "source_refs": [
-        "ALL §OSCE강의; SCHED; LEADER_SUM"
+        "ALL §OSCE강의; SCHED; LEADER_SUM",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "점수 배정 / 실습 전략": [
@@ -3183,6 +3702,17 @@
           "- 2명 정도 시켜봄 (조장1명, 조원 1명), 골반 내진 시킬 수 있으니 미리 준비 (못해도 상관없고 알려주심)",
           "7) 박미아 교수님께 부인과 OSCE 강의 시간 및 장소 확인 연락드리기(010-9297-3342) -> 안내 받으면 조원들에게 공지 (피드백 받을 사람: 조장 + 1명 정하기)",
           "2) 의국 위치, OT 세팅 미리 확인하기, OSCE 세팅 미리 확인하기"
+        ],
+        "Takoyaki 체크리스트 / OSCE 강의": [
+          "OSCE 강의: 부인과 박미아 교수님, 의국 또는 소아동 수술실 세미나실, PAP ecto/endo + wet smear, 세팅 + 연필 필요, 2명 정도 시연.",
+          "강의 때 조장 1명 + 조원 1명 정도 시연 가능. 연필과 세팅 확인."
+        ],
+        "Takoyaki 원문 발췌": [
+          "7) OSCE 강의 (부인과 - 박미아 교수님)",
+          " - 의국 or 소아동 수술실 세미나실 진행 (1주차)",
+          " - PAP (ecto, endo), wet smear 한번에 하는 것으로 진행",
+          " - 세팅 + 연필 필요!",
+          " - 강의 때도 2명 정도 시켜봄 (조장 1명, 조원 1명)"
         ]
       },
       "rotation_week": 1,
@@ -3192,7 +3722,11 @@
       "windowType": "clerkship-session",
       "calendar_visible": true,
       "calendar_body_placement": "calendar_body_actual_or_candidate",
-      "detail_source_ref_count": 14
+      "detail_source_ref_count": 14,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / OSCE 강의",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-common-nst-lecture",
@@ -3223,7 +3757,8 @@
         "AI-13"
       ],
       "source_refs": [
-        "ALL §NST강의; SCHED; NST"
+        "ALL §NST강의; SCHED; NST",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "점수 배정 / 실습 전략": [
@@ -3247,6 +3782,15 @@
           "26년도 4월) 2주차 화요일에 진행하였습니다. 질문 몇 개 있었으나, 학생 지정해서 질문하지는 않으셨습니다. 틀린 대답해도 껄껄 웃으시면서 알려주십니다.",
           "*nst 강의와 시험 일정은 기존조 시간표와 달랐음. 교수님 스케줄 따라 변동 있는듯.",
           "-nst 강의는 첫 주 목요일 3시에 의국에서 (첫 주 분만조 A조 통해서 교수님께서 첫 주 수요일에 강의 일정 공지. 첫 주 분만조(A조)가 강병헌 교수님 분만실 회진 때 뵈면 한 번 여쭤봐도 좋음) 30분간 진행함. 강의 끝나고 전체조장이 nst 시험 일정 여쭤보고 강의 자료 받기 (강의 자료 거의 매년 동일하긴 함. 조원들 필요에 따라 안 받아도 무관. 달라고 부탁드리면 ‘매년 같은 자료인데…’ 하시며 주시긴 했음)."
+        ],
+        "Takoyaki 체크리스트 / NST 강의": [
+          "NST 강의: 산과 강병헌 교수님, 의국, 1 or 2주차, 30분, 1주차 분만조 통해 공지, 학생 지정 질문 가능."
+        ],
+        "Takoyaki 원문 발췌": [
+          "5) NST 강의 (산과 - 강병헌 교수님)",
+          " - 의국 진행 (1 or 2주차)",
+          " - 30분 진행 / 1주차에 분만조 통해 교수님께서 공지",
+          " - 학생 지정해서 질문하기도 함"
         ]
       },
       "rotation_week": 1,
@@ -3255,7 +3799,11 @@
       "group_scope": "공통",
       "calendar_visible": true,
       "calendar_body_placement": "calendar_body_actual_or_candidate",
-      "detail_source_ref_count": 10
+      "detail_source_ref_count": 10,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / NST 강의",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-common-nst-exam",
@@ -3286,7 +3834,8 @@
         "AI-13"
       ],
       "source_refs": [
-        "ALL §NST시험; SCHED; NST"
+        "ALL §NST시험; SCHED; NST",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "점수 배정 / 실습 전략": [
@@ -3331,13 +3880,28 @@
           "9. 사진으로 그래프 주고 MVU 계산하기, 강도 및 횟수 물어봄.",
           "(베이스라인 20 기준으로 10분간 강도 100이 3회 있었음)",
           "*MVU 계산 문제는 그래프 변화 있을 수 있으니 강도, 횟수, MVU 계산하는 방법 알고있기"
+        ],
+        "Takoyaki 체크리스트 / NST 시험": [
+          "NST 시험: 강병헌 교수님, 야마 중심이나 가끔 1문제 탈야 가능.",
+          "NST 시험: 산과 강병헌 교수님, 의국, 2주차, 9~10문항, 사실상 강의 내용 전부 출제."
+        ],
+        "Takoyaki 원문 발췌": [
+          "3) NST 시험 (강병헌 교수님): 야마 (가끔 1문제씩 탈야)",
+          "6) NST 시험 (산과 - 강병헌 교수님)",
+          " - 의국 진행 (2주차)",
+          " - 9~10 문항 (1~2문제 제외하고 대부분 야마)",
+          " - 사실상 강의 내용의 전부를 출제"
         ]
       },
       "rotation_week": 2,
       "rotation_track": "공통",
       "calendar_ready": true,
       "group_scope": "공통",
-      "detail_source_ref_count": 31
+      "detail_source_ref_count": 31,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / NST 시험",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-common-posttest",
@@ -3367,7 +3931,8 @@
         "AI-13"
       ],
       "source_refs": [
-        "ALL §Post-test; SCHED; WHOLE_SCHED; PREPOST"
+        "ALL §Post-test; SCHED; WHOLE_SCHED; PREPOST",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "점수 배정 / 실습 전략": [
@@ -3417,13 +3982,26 @@
           "- 26년도 1월(19-21조): OT 때 야마와 똑같이 쓰면 0점 처리 한다고 하셨습니다.",
           "- 26년도 3월(13-16조): 프테는 파일 내에서 5문제, 포테는 1문제는 탈야하셨습니다. 그 한 문제가 의국회의에서 유헌종 교수님께서 진행하신 수업에서 진행됐던 내용 그대로 나오셨습니다. 그러니 교수님이 진행하시는 의국회의는 잘 들어보는 게 좋을 지도…",
           "- 26년도 4월(9-12조): 프테, 포테 모두 탈야 없었고 빈출 문제 위주로 출제되었습니다. 의국회의 문제는 나오지 않았습니다."
+        ],
+        "Takoyaki 체크리스트 / Post-test": [
+          "Post-test: 마지막날 오후 4시, 전 범위 49개 항목 중 5문제. 가끔 탈야 1문제 가능.",
+          "Post-test: 마지막날 오후. 1번은 하위 문제 4개, 2~5번은 일반 왕주."
+        ],
+        "Takoyaki 원문 발췌": [
+          "2) 필기 시험 (Post-test): 마지막날 오후 4시 - 전 범위 49개 항목 중 5문제 (왕주, 가끔 1문제씩 탈야함)",
+          "3) Post-test (마지막날 오후)",
+          " - 1번은 하위 문제 4개, 2~5번은 일반 왕주"
         ]
       },
       "rotation_week": 4,
       "rotation_track": "공통",
       "calendar_ready": true,
       "group_scope": "공통",
-      "detail_source_ref_count": 36
+      "detail_source_ref_count": 36,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / Post-test",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-delivery-return-seat-mon",
@@ -3644,7 +4222,8 @@
       "source_refs": [
         "OBGYN-OVERALL-P0038",
         "OBGYN-OVERALL-P0039",
-        "OBGYN-CHIEF-FULL-P0112"
+        "OBGYN-CHIEF-FULL-P0112",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "3줄 요약": [
@@ -3679,6 +4258,11 @@
           ": C, D조는 OT-프테 사이에 자습하면 안되고, 일정 참여해야함. (A, B도 분과별 인계 참고, 보통 자습 가능)",
           "<실습 중 조장이 할 일>",
           "1. 매일 출근 출석: 7:50(or 7:40), 소아동 3층 엘베 앞"
+        ],
+        "Takoyaki 체크리스트 / 출근 확인": [
+          "출근 확인: 소아동 3층 엘리베이터 앞, 분만실 담당 인턴 선생님.",
+          "월/목/금 07:50, 화/수 의국회의일 07:40.",
+          "병동조 제외: 07:30까지 바로 5층 회진 대기. 조장이 병동조 회진 일정 있다고 말하고 전원 출첵 받기."
         ]
       },
       "rotation_week": 1,
@@ -3689,7 +4273,10 @@
       "windowType": "clerkship-overlay",
       "calendar_visible": false,
       "calendar_body_placement": "weekly_summary_or_base_detail",
-      "detail_source_ref_count": 15
+      "detail_source_ref_count": 15,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 출근 확인"
+      ]
     },
     {
       "id": "obgyn-delivery-signin-wed",
@@ -3721,7 +4308,8 @@
       "source_refs": [
         "OBGYN-OVERALL-P0038",
         "OBGYN-OVERALL-P0039",
-        "OBGYN-CHIEF-FULL-P0112"
+        "OBGYN-CHIEF-FULL-P0112",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "3줄 요약": [
@@ -3756,6 +4344,11 @@
           ": C, D조는 OT-프테 사이에 자습하면 안되고, 일정 참여해야함. (A, B도 분과별 인계 참고, 보통 자습 가능)",
           "<실습 중 조장이 할 일>",
           "1. 매일 출근 출석: 7:50(or 7:40), 소아동 3층 엘베 앞"
+        ],
+        "Takoyaki 체크리스트 / 출근 확인": [
+          "출근 확인: 소아동 3층 엘리베이터 앞, 분만실 담당 인턴 선생님.",
+          "월/목/금 07:50, 화/수 의국회의일 07:40.",
+          "병동조 제외: 07:30까지 바로 5층 회진 대기. 조장이 병동조 회진 일정 있다고 말하고 전원 출첵 받기."
         ]
       },
       "rotation_week": 1,
@@ -3766,7 +4359,10 @@
       "windowType": "clerkship-overlay",
       "calendar_visible": false,
       "calendar_body_placement": "weekly_summary_or_base_detail",
-      "detail_source_ref_count": 15
+      "detail_source_ref_count": 15,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 출근 확인"
+      ]
     },
     {
       "id": "obgyn-delivery-signin-thu",
@@ -3798,7 +4394,8 @@
       "source_refs": [
         "OBGYN-OVERALL-P0038",
         "OBGYN-OVERALL-P0039",
-        "OBGYN-CHIEF-FULL-P0112"
+        "OBGYN-CHIEF-FULL-P0112",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "3줄 요약": [
@@ -3833,6 +4430,11 @@
           ": C, D조는 OT-프테 사이에 자습하면 안되고, 일정 참여해야함. (A, B도 분과별 인계 참고, 보통 자습 가능)",
           "<실습 중 조장이 할 일>",
           "1. 매일 출근 출석: 7:50(or 7:40), 소아동 3층 엘베 앞"
+        ],
+        "Takoyaki 체크리스트 / 출근 확인": [
+          "출근 확인: 소아동 3층 엘리베이터 앞, 분만실 담당 인턴 선생님.",
+          "월/목/금 07:50, 화/수 의국회의일 07:40.",
+          "병동조 제외: 07:30까지 바로 5층 회진 대기. 조장이 병동조 회진 일정 있다고 말하고 전원 출첵 받기."
         ]
       },
       "rotation_week": 1,
@@ -3843,7 +4445,10 @@
       "windowType": "clerkship-overlay",
       "calendar_visible": false,
       "calendar_body_placement": "weekly_summary_or_base_detail",
-      "detail_source_ref_count": 15
+      "detail_source_ref_count": 15,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 출근 확인"
+      ]
     },
     {
       "id": "obgyn-delivery-signin-fri",
@@ -3875,7 +4480,8 @@
       "source_refs": [
         "OBGYN-OVERALL-P0038",
         "OBGYN-OVERALL-P0039",
-        "OBGYN-CHIEF-FULL-P0112"
+        "OBGYN-CHIEF-FULL-P0112",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "3줄 요약": [
@@ -3910,6 +4516,11 @@
           ": C, D조는 OT-프테 사이에 자습하면 안되고, 일정 참여해야함. (A, B도 분과별 인계 참고, 보통 자습 가능)",
           "<실습 중 조장이 할 일>",
           "1. 매일 출근 출석: 7:50(or 7:40), 소아동 3층 엘베 앞"
+        ],
+        "Takoyaki 체크리스트 / 출근 확인": [
+          "출근 확인: 소아동 3층 엘리베이터 앞, 분만실 담당 인턴 선생님.",
+          "월/목/금 07:50, 화/수 의국회의일 07:40.",
+          "병동조 제외: 07:30까지 바로 5층 회진 대기. 조장이 병동조 회진 일정 있다고 말하고 전원 출첵 받기."
         ]
       },
       "rotation_week": 1,
@@ -3920,7 +4531,10 @@
       "windowType": "clerkship-overlay",
       "calendar_visible": false,
       "calendar_body_placement": "weekly_summary_or_base_detail",
-      "detail_source_ref_count": 15
+      "detail_source_ref_count": 15,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 출근 확인"
+      ]
     },
     {
       "id": "obgyn-common-dept-conf-thu",
@@ -3952,7 +4566,8 @@
       "source_refs": [
         "OBGYN-OVERALL-P0080",
         "OBGYN-OVERALL-P0081",
-        "OBGYN-OVERALL-P0084"
+        "OBGYN-OVERALL-P0084",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "3줄 요약": [
@@ -3967,6 +4582,14 @@
           "- 의국세팅: OT때 했던 의국세팅으로 준비해두고 줌 세팅까지 완료해둘 것. 줌 세팅은 조장파일 참고",
           "- 26년도 3월) 의국회의 화수에 진행됨.",
           "-화수 의국회의: 여부는 미정. 오티 때 공지해주시나 안 해주시면 의국회의 하는지 여부 교육담당 전공의샘께 여쭙기."
+        ],
+        "Takoyaki 체크리스트 / 의국회의": [
+          "의국회의: 의국 진행, 의국 세팅 및 Zoom 세팅."
+        ],
+        "Takoyaki 원문 발췌": [
+          "4) 의국회의",
+          " - 의국 진행",
+          " - 의국 세팅 및 줌 세팅"
         ]
       },
       "rotation_week": 1,
@@ -3977,7 +4600,11 @@
       "windowType": "clerkship-session",
       "calendar_visible": true,
       "calendar_body_placement": "calendar_body_actual_or_candidate",
-      "detail_source_ref_count": 6
+      "detail_source_ref_count": 6,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 의국회의",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-delivery-morning-list-tue",
@@ -5330,7 +5957,8 @@
       "source_refs": [
         "OBGYN-OVERALL-P0044",
         "OBGYN-OVERALL-P0047",
-        "OBGYN-OVERALL-P0048"
+        "OBGYN-OVERALL-P0048",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "3줄 요약": [
@@ -5361,6 +5989,19 @@
           "2. 신발장에서 신발 다시 갈아신고 퇴근!",
           "- 퇴근시간은 6시입니다. 퇴근사인 받았다고 카톡 남겨야 병동조 및 다른 대기하고 있는 조가 퇴근 가능하므로 퇴근사인 받으면 조원들 카톡방에 카톡 남겨주세요.",
           "- 5~6시 사이에 던트쌤들 인계 전 또는 후에 전공의쌤 아무나 싸인 받으면 됩니다. 가끔 빨리 싸인하고 보내주실 때도 있습니다. 보통 인계는 5시 40~50분쯤 시작하셔서 경우에 따라 6시 조금 넘을수도 있어요/ 가끔은 고영복 교수님께서 퇴근길에 사인하고 5시 20분쯤 보내주시기도 함"
+        ],
+        "Takoyaki 체크리스트 / 퇴근 확인": [
+          "퇴근 확인: 분만실 스테이션, 분만실 담당 레지던트 선생님, 오후 6시.",
+          "17:40쯤 선생님들 인수인계 끝난 뒤 분만조 조장이 전원 퇴근 서명.",
+          "전원 모여 인원 수 확인 후 퇴근이 원칙. 불시점검 가능성 때문에 17시부터는 병원 대기."
+        ],
+        "Takoyaki 원문 발췌": [
+          "퇴근 확인: 분만실 스테이션 / 분만실 담당 레지던트샘",
+          "- 오후 6시",
+          "- 5시 40분쯤 선생님들 인수인계 끝난 후 분만조 조장이 전원 퇴근 서명",
+          "- 전원 모여서 인원 수 확인 후 퇴근이 원칙 / 불시점검 가능성 있으니 5시부터는 병원 대기",
+          "2. 분만조",
+          " - 분만조 조장이 매일 퇴근 서명 받기"
         ]
       },
       "rotation_week": 1,
@@ -5371,7 +6012,11 @@
       "windowType": "clerkship-overlay",
       "calendar_visible": false,
       "calendar_body_placement": "weekly_summary_or_base_detail",
-      "detail_source_ref_count": 11
+      "detail_source_ref_count": 11,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 퇴근 확인",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-delivery-dismissal-wed",
@@ -5403,7 +6048,8 @@
       "source_refs": [
         "OBGYN-OVERALL-P0044",
         "OBGYN-OVERALL-P0047",
-        "OBGYN-OVERALL-P0048"
+        "OBGYN-OVERALL-P0048",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "3줄 요약": [
@@ -5434,6 +6080,19 @@
           "2. 신발장에서 신발 다시 갈아신고 퇴근!",
           "- 퇴근시간은 6시입니다. 퇴근사인 받았다고 카톡 남겨야 병동조 및 다른 대기하고 있는 조가 퇴근 가능하므로 퇴근사인 받으면 조원들 카톡방에 카톡 남겨주세요.",
           "- 5~6시 사이에 던트쌤들 인계 전 또는 후에 전공의쌤 아무나 싸인 받으면 됩니다. 가끔 빨리 싸인하고 보내주실 때도 있습니다. 보통 인계는 5시 40~50분쯤 시작하셔서 경우에 따라 6시 조금 넘을수도 있어요/ 가끔은 고영복 교수님께서 퇴근길에 사인하고 5시 20분쯤 보내주시기도 함"
+        ],
+        "Takoyaki 체크리스트 / 퇴근 확인": [
+          "퇴근 확인: 분만실 스테이션, 분만실 담당 레지던트 선생님, 오후 6시.",
+          "17:40쯤 선생님들 인수인계 끝난 뒤 분만조 조장이 전원 퇴근 서명.",
+          "전원 모여 인원 수 확인 후 퇴근이 원칙. 불시점검 가능성 때문에 17시부터는 병원 대기."
+        ],
+        "Takoyaki 원문 발췌": [
+          "퇴근 확인: 분만실 스테이션 / 분만실 담당 레지던트샘",
+          "- 오후 6시",
+          "- 5시 40분쯤 선생님들 인수인계 끝난 후 분만조 조장이 전원 퇴근 서명",
+          "- 전원 모여서 인원 수 확인 후 퇴근이 원칙 / 불시점검 가능성 있으니 5시부터는 병원 대기",
+          "2. 분만조",
+          " - 분만조 조장이 매일 퇴근 서명 받기"
         ]
       },
       "rotation_week": 1,
@@ -5444,7 +6103,11 @@
       "windowType": "clerkship-overlay",
       "calendar_visible": false,
       "calendar_body_placement": "weekly_summary_or_base_detail",
-      "detail_source_ref_count": 11
+      "detail_source_ref_count": 11,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 퇴근 확인",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-delivery-dismissal-thu",
@@ -5476,7 +6139,8 @@
       "source_refs": [
         "OBGYN-OVERALL-P0044",
         "OBGYN-OVERALL-P0047",
-        "OBGYN-OVERALL-P0048"
+        "OBGYN-OVERALL-P0048",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "3줄 요약": [
@@ -5507,6 +6171,19 @@
           "2. 신발장에서 신발 다시 갈아신고 퇴근!",
           "- 퇴근시간은 6시입니다. 퇴근사인 받았다고 카톡 남겨야 병동조 및 다른 대기하고 있는 조가 퇴근 가능하므로 퇴근사인 받으면 조원들 카톡방에 카톡 남겨주세요.",
           "- 5~6시 사이에 던트쌤들 인계 전 또는 후에 전공의쌤 아무나 싸인 받으면 됩니다. 가끔 빨리 싸인하고 보내주실 때도 있습니다. 보통 인계는 5시 40~50분쯤 시작하셔서 경우에 따라 6시 조금 넘을수도 있어요/ 가끔은 고영복 교수님께서 퇴근길에 사인하고 5시 20분쯤 보내주시기도 함"
+        ],
+        "Takoyaki 체크리스트 / 퇴근 확인": [
+          "퇴근 확인: 분만실 스테이션, 분만실 담당 레지던트 선생님, 오후 6시.",
+          "17:40쯤 선생님들 인수인계 끝난 뒤 분만조 조장이 전원 퇴근 서명.",
+          "전원 모여 인원 수 확인 후 퇴근이 원칙. 불시점검 가능성 때문에 17시부터는 병원 대기."
+        ],
+        "Takoyaki 원문 발췌": [
+          "퇴근 확인: 분만실 스테이션 / 분만실 담당 레지던트샘",
+          "- 오후 6시",
+          "- 5시 40분쯤 선생님들 인수인계 끝난 후 분만조 조장이 전원 퇴근 서명",
+          "- 전원 모여서 인원 수 확인 후 퇴근이 원칙 / 불시점검 가능성 있으니 5시부터는 병원 대기",
+          "2. 분만조",
+          " - 분만조 조장이 매일 퇴근 서명 받기"
         ]
       },
       "rotation_week": 1,
@@ -5517,7 +6194,11 @@
       "windowType": "clerkship-overlay",
       "calendar_visible": false,
       "calendar_body_placement": "weekly_summary_or_base_detail",
-      "detail_source_ref_count": 11
+      "detail_source_ref_count": 11,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 퇴근 확인",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-delivery-dismissal-fri",
@@ -5549,7 +6230,8 @@
       "source_refs": [
         "OBGYN-OVERALL-P0044",
         "OBGYN-OVERALL-P0047",
-        "OBGYN-OVERALL-P0048"
+        "OBGYN-OVERALL-P0048",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "3줄 요약": [
@@ -5580,6 +6262,19 @@
           "2. 신발장에서 신발 다시 갈아신고 퇴근!",
           "- 퇴근시간은 6시입니다. 퇴근사인 받았다고 카톡 남겨야 병동조 및 다른 대기하고 있는 조가 퇴근 가능하므로 퇴근사인 받으면 조원들 카톡방에 카톡 남겨주세요.",
           "- 5~6시 사이에 던트쌤들 인계 전 또는 후에 전공의쌤 아무나 싸인 받으면 됩니다. 가끔 빨리 싸인하고 보내주실 때도 있습니다. 보통 인계는 5시 40~50분쯤 시작하셔서 경우에 따라 6시 조금 넘을수도 있어요/ 가끔은 고영복 교수님께서 퇴근길에 사인하고 5시 20분쯤 보내주시기도 함"
+        ],
+        "Takoyaki 체크리스트 / 퇴근 확인": [
+          "퇴근 확인: 분만실 스테이션, 분만실 담당 레지던트 선생님, 오후 6시.",
+          "17:40쯤 선생님들 인수인계 끝난 뒤 분만조 조장이 전원 퇴근 서명.",
+          "전원 모여 인원 수 확인 후 퇴근이 원칙. 불시점검 가능성 때문에 17시부터는 병원 대기."
+        ],
+        "Takoyaki 원문 발췌": [
+          "퇴근 확인: 분만실 스테이션 / 분만실 담당 레지던트샘",
+          "- 오후 6시",
+          "- 5시 40분쯤 선생님들 인수인계 끝난 후 분만조 조장이 전원 퇴근 서명",
+          "- 전원 모여서 인원 수 확인 후 퇴근이 원칙 / 불시점검 가능성 있으니 5시부터는 병원 대기",
+          "2. 분만조",
+          " - 분만조 조장이 매일 퇴근 서명 받기"
         ]
       },
       "rotation_week": 1,
@@ -5590,7 +6285,11 @@
       "windowType": "clerkship-overlay",
       "calendar_visible": false,
       "calendar_body_placement": "weekly_summary_or_base_detail",
-      "detail_source_ref_count": 11
+      "detail_source_ref_count": 11,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 퇴근 확인",
+        "Takoyaki 원문 발췌"
+      ]
     },
     {
       "id": "obgyn-common-dept-conf-tue",
@@ -5629,6 +6328,14 @@
           "- 의국세팅: OT때 했던 의국세팅으로 준비해두고 줌 세팅까지 완료해둘 것. 줌 세팅은 조장파일 참고",
           "- 26년도 3월) 의국회의 화수에 진행됨.",
           "-화수 의국회의: 여부는 미정. 오티 때 공지해주시나 안 해주시면 의국회의 하는지 여부 교육담당 전공의샘께 여쭙기."
+        ],
+        "Takoyaki 체크리스트 / 의국회의": [
+          "의국회의: 의국 진행, 의국 세팅 및 Zoom 세팅."
+        ],
+        "Takoyaki 원문 발췌": [
+          "4) 의국회의",
+          " - 의국 진행",
+          " - 의국 세팅 및 줌 세팅"
         ]
       },
       "rotation_week": 1,
@@ -5638,7 +6345,14 @@
       "date_confidence": "fulltext_candidate_2026_spring",
       "calendar_visible": true,
       "calendar_body_placement": "calendar_body_actual_or_candidate",
-      "detail_source_ref_count": 6
+      "detail_source_ref_count": 6,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 의국회의",
+        "Takoyaki 원문 발췌"
+      ],
+      "source_refs": [
+        "TAKOYAKI-CHECKLIST-2026-06-07"
+      ]
     },
     {
       "id": "obgyn-delivery-intern-roster-mon",
@@ -5729,6 +6443,14 @@
           "1) 분만실 인턴 선생님께 연락드려 출근 출석 체크 시간, 장소 연락드리기",
           "2) 의국 위치, OT 세팅 미리 확인하기, OSCE 세팅 미리 확인하기",
           "5. 매주 다음 분만실 인턴 선생님께 연락 드려 출근 출석 시간 및 장소 안내(일요일)"
+        ],
+        "Takoyaki 체크리스트 / 의국회의": [
+          "의국회의: 의국 진행, 의국 세팅 및 Zoom 세팅."
+        ],
+        "Takoyaki 원문 발췌": [
+          "4) 의국회의",
+          " - 의국 진행",
+          " - 의국 세팅 및 줌 세팅"
         ]
       },
       "rotation_week": 1,
@@ -5738,7 +6460,14 @@
       "date_confidence": "fulltext_admin_candidate",
       "calendar_visible": false,
       "calendar_body_placement": "weekly_summary_or_base_detail",
-      "detail_source_ref_count": 11
+      "detail_source_ref_count": 11,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 의국회의",
+        "Takoyaki 원문 발췌"
+      ],
+      "source_refs": [
+        "TAKOYAKI-CHECKLIST-2026-06-07"
+      ]
     },
     {
       "id": "obgyn-delivery-routine-chip-mon",
@@ -5776,7 +6505,8 @@
         "OBGYN-OVERALL-P0108",
         "OBGYN-OVERALL-P0116",
         "OBGYN-OVERALL-P0118",
-        "ALL §퇴근서명; LEADER_SUM"
+        "ALL §퇴근서명; LEADER_SUM",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "3줄 요약": [
@@ -5857,6 +6587,16 @@
           "2. 신발장에서 신발 다시 갈아신고 퇴근!",
           "- 퇴근시간은 6시입니다. 퇴근사인 받았다고 카톡 남겨야 병동조 및 다른 대기하고 있는 조가 퇴근 가능하므로 퇴근사인 받으면 조원들 카톡방에 카톡 남겨주세요.",
           "- 5~6시 사이에 던트쌤들 인계 전 또는 후에 전공의쌤 아무나 싸인 받으면 됩니다. 가끔 빨리 싸인하고 보내주실 때도 있습니다. 보통 인계는 5시 40~50분쯤 시작하셔서 경우에 따라 6시 조금 넘을수도 있어요/ 가끔은 고영복 교수님께서 퇴근길에 사인하고 5시 20분쯤 보내주시기도 함"
+        ],
+        "Takoyaki 체크리스트 / 출퇴근·공통일정": [
+          "출근 확인: 소아동 3층 엘리베이터 앞, 분만실 담당 인턴 선생님.",
+          "월/목/금 07:50, 화/수 의국회의일 07:40.",
+          "병동조 제외: 07:30까지 바로 5층 회진 대기. 조장이 병동조 회진 일정 있다고 말하고 전원 출첵 받기.",
+          "퇴근 확인: 분만실 스테이션, 분만실 담당 레지던트 선생님, 오후 6시.",
+          "17:40쯤 선생님들 인수인계 끝난 뒤 분만조 조장이 전원 퇴근 서명.",
+          "전원 모여 인원 수 확인 후 퇴근이 원칙. 불시점검 가능성 때문에 17시부터는 병원 대기.",
+          "공통일정 진행 시 반드시 현장 전공의 선생님이나 교수님께 말씀드리고 이동.",
+          "분만조 조장이 매일 퇴근 서명 받기."
         ]
       },
       "rotation_week": 1,
@@ -5866,7 +6606,10 @@
       "calendar_body_placement": "compact_day_chip",
       "group_scope": "A조 분만",
       "date_confidence": "delivery_week_routine_compacted_2026-06-07",
-      "detail_source_ref_count": 28
+      "detail_source_ref_count": 28,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 출퇴근·공통일정"
+      ]
     },
     {
       "id": "obgyn-delivery-routine-chip-tue",
@@ -5909,7 +6652,8 @@
         "CONTENT §u-folio",
         "OBGYN-OVERALL-P0044",
         "OBGYN-OVERALL-P0047",
-        "OBGYN-OVERALL-P0048"
+        "OBGYN-OVERALL-P0048",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "3줄 요약": [
@@ -5977,6 +6721,16 @@
           "2. 신발장에서 신발 다시 갈아신고 퇴근!",
           "- 퇴근시간은 6시입니다. 퇴근사인 받았다고 카톡 남겨야 병동조 및 다른 대기하고 있는 조가 퇴근 가능하므로 퇴근사인 받으면 조원들 카톡방에 카톡 남겨주세요.",
           "- 5~6시 사이에 던트쌤들 인계 전 또는 후에 전공의쌤 아무나 싸인 받으면 됩니다. 가끔 빨리 싸인하고 보내주실 때도 있습니다. 보통 인계는 5시 40~50분쯤 시작하셔서 경우에 따라 6시 조금 넘을수도 있어요/ 가끔은 고영복 교수님께서 퇴근길에 사인하고 5시 20분쯤 보내주시기도 함"
+        ],
+        "Takoyaki 체크리스트 / 출퇴근·공통일정": [
+          "출근 확인: 소아동 3층 엘리베이터 앞, 분만실 담당 인턴 선생님.",
+          "월/목/금 07:50, 화/수 의국회의일 07:40.",
+          "병동조 제외: 07:30까지 바로 5층 회진 대기. 조장이 병동조 회진 일정 있다고 말하고 전원 출첵 받기.",
+          "퇴근 확인: 분만실 스테이션, 분만실 담당 레지던트 선생님, 오후 6시.",
+          "17:40쯤 선생님들 인수인계 끝난 뒤 분만조 조장이 전원 퇴근 서명.",
+          "전원 모여 인원 수 확인 후 퇴근이 원칙. 불시점검 가능성 때문에 17시부터는 병원 대기.",
+          "공통일정 진행 시 반드시 현장 전공의 선생님이나 교수님께 말씀드리고 이동.",
+          "분만조 조장이 매일 퇴근 서명 받기."
         ]
       },
       "rotation_week": 1,
@@ -5986,7 +6740,10 @@
       "calendar_body_placement": "compact_day_chip",
       "group_scope": "A조 분만",
       "date_confidence": "delivery_week_routine_compacted_2026-06-07",
-      "detail_source_ref_count": 28
+      "detail_source_ref_count": 28,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 출퇴근·공통일정"
+      ]
     },
     {
       "id": "obgyn-delivery-routine-chip-wed",
@@ -6029,7 +6786,8 @@
         "resident2_pack §U-Folio 12항목",
         "OBGYN-OVERALL-P0044",
         "OBGYN-OVERALL-P0047",
-        "OBGYN-OVERALL-P0048"
+        "OBGYN-OVERALL-P0048",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "3줄 요약": [
@@ -6097,6 +6855,16 @@
           "2. 신발장에서 신발 다시 갈아신고 퇴근!",
           "- 퇴근시간은 6시입니다. 퇴근사인 받았다고 카톡 남겨야 병동조 및 다른 대기하고 있는 조가 퇴근 가능하므로 퇴근사인 받으면 조원들 카톡방에 카톡 남겨주세요.",
           "- 5~6시 사이에 던트쌤들 인계 전 또는 후에 전공의쌤 아무나 싸인 받으면 됩니다. 가끔 빨리 싸인하고 보내주실 때도 있습니다. 보통 인계는 5시 40~50분쯤 시작하셔서 경우에 따라 6시 조금 넘을수도 있어요/ 가끔은 고영복 교수님께서 퇴근길에 사인하고 5시 20분쯤 보내주시기도 함"
+        ],
+        "Takoyaki 체크리스트 / 출퇴근·공통일정": [
+          "출근 확인: 소아동 3층 엘리베이터 앞, 분만실 담당 인턴 선생님.",
+          "월/목/금 07:50, 화/수 의국회의일 07:40.",
+          "병동조 제외: 07:30까지 바로 5층 회진 대기. 조장이 병동조 회진 일정 있다고 말하고 전원 출첵 받기.",
+          "퇴근 확인: 분만실 스테이션, 분만실 담당 레지던트 선생님, 오후 6시.",
+          "17:40쯤 선생님들 인수인계 끝난 뒤 분만조 조장이 전원 퇴근 서명.",
+          "전원 모여 인원 수 확인 후 퇴근이 원칙. 불시점검 가능성 때문에 17시부터는 병원 대기.",
+          "공통일정 진행 시 반드시 현장 전공의 선생님이나 교수님께 말씀드리고 이동.",
+          "분만조 조장이 매일 퇴근 서명 받기."
         ]
       },
       "rotation_week": 1,
@@ -6106,7 +6874,10 @@
       "calendar_body_placement": "compact_day_chip",
       "group_scope": "A조 분만",
       "date_confidence": "delivery_week_routine_compacted_2026-06-07",
-      "detail_source_ref_count": 28
+      "detail_source_ref_count": 28,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 출퇴근·공통일정"
+      ]
     },
     {
       "id": "obgyn-delivery-routine-chip-thu",
@@ -6148,7 +6919,8 @@
         "OBGYN-OVERALL-P0114",
         "OBGYN-OVERALL-P0044",
         "OBGYN-OVERALL-P0047",
-        "OBGYN-OVERALL-P0048"
+        "OBGYN-OVERALL-P0048",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "3줄 요약": [
@@ -6216,6 +6988,16 @@
           "2. 신발장에서 신발 다시 갈아신고 퇴근!",
           "- 퇴근시간은 6시입니다. 퇴근사인 받았다고 카톡 남겨야 병동조 및 다른 대기하고 있는 조가 퇴근 가능하므로 퇴근사인 받으면 조원들 카톡방에 카톡 남겨주세요.",
           "- 5~6시 사이에 던트쌤들 인계 전 또는 후에 전공의쌤 아무나 싸인 받으면 됩니다. 가끔 빨리 싸인하고 보내주실 때도 있습니다. 보통 인계는 5시 40~50분쯤 시작하셔서 경우에 따라 6시 조금 넘을수도 있어요/ 가끔은 고영복 교수님께서 퇴근길에 사인하고 5시 20분쯤 보내주시기도 함"
+        ],
+        "Takoyaki 체크리스트 / 출퇴근·공통일정": [
+          "출근 확인: 소아동 3층 엘리베이터 앞, 분만실 담당 인턴 선생님.",
+          "월/목/금 07:50, 화/수 의국회의일 07:40.",
+          "병동조 제외: 07:30까지 바로 5층 회진 대기. 조장이 병동조 회진 일정 있다고 말하고 전원 출첵 받기.",
+          "퇴근 확인: 분만실 스테이션, 분만실 담당 레지던트 선생님, 오후 6시.",
+          "17:40쯤 선생님들 인수인계 끝난 뒤 분만조 조장이 전원 퇴근 서명.",
+          "전원 모여 인원 수 확인 후 퇴근이 원칙. 불시점검 가능성 때문에 17시부터는 병원 대기.",
+          "공통일정 진행 시 반드시 현장 전공의 선생님이나 교수님께 말씀드리고 이동.",
+          "분만조 조장이 매일 퇴근 서명 받기."
         ]
       },
       "rotation_week": 1,
@@ -6225,7 +7007,10 @@
       "calendar_body_placement": "compact_day_chip",
       "group_scope": "A조 분만",
       "date_confidence": "delivery_week_routine_compacted_2026-06-07",
-      "detail_source_ref_count": 28
+      "detail_source_ref_count": 28,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 출퇴근·공통일정"
+      ]
     },
     {
       "id": "obgyn-delivery-routine-chip-fri",
@@ -6269,7 +7054,8 @@
         "OBGYN-OVERALL-P0025",
         "OBGYN-OVERALL-P0044",
         "OBGYN-OVERALL-P0047",
-        "OBGYN-OVERALL-P0048"
+        "OBGYN-OVERALL-P0048",
+        "TAKOYAKI-CHECKLIST-2026-06-07"
       ],
       "sections": {
         "3줄 요약": [
@@ -6337,6 +7123,16 @@
           "2. 신발장에서 신발 다시 갈아신고 퇴근!",
           "- 퇴근시간은 6시입니다. 퇴근사인 받았다고 카톡 남겨야 병동조 및 다른 대기하고 있는 조가 퇴근 가능하므로 퇴근사인 받으면 조원들 카톡방에 카톡 남겨주세요.",
           "- 5~6시 사이에 던트쌤들 인계 전 또는 후에 전공의쌤 아무나 싸인 받으면 됩니다. 가끔 빨리 싸인하고 보내주실 때도 있습니다. 보통 인계는 5시 40~50분쯤 시작하셔서 경우에 따라 6시 조금 넘을수도 있어요/ 가끔은 고영복 교수님께서 퇴근길에 사인하고 5시 20분쯤 보내주시기도 함"
+        ],
+        "Takoyaki 체크리스트 / 출퇴근·공통일정": [
+          "출근 확인: 소아동 3층 엘리베이터 앞, 분만실 담당 인턴 선생님.",
+          "월/목/금 07:50, 화/수 의국회의일 07:40.",
+          "병동조 제외: 07:30까지 바로 5층 회진 대기. 조장이 병동조 회진 일정 있다고 말하고 전원 출첵 받기.",
+          "퇴근 확인: 분만실 스테이션, 분만실 담당 레지던트 선생님, 오후 6시.",
+          "17:40쯤 선생님들 인수인계 끝난 뒤 분만조 조장이 전원 퇴근 서명.",
+          "전원 모여 인원 수 확인 후 퇴근이 원칙. 불시점검 가능성 때문에 17시부터는 병원 대기.",
+          "공통일정 진행 시 반드시 현장 전공의 선생님이나 교수님께 말씀드리고 이동.",
+          "분만조 조장이 매일 퇴근 서명 받기."
         ]
       },
       "rotation_week": 1,
@@ -6346,7 +7142,10 @@
       "calendar_body_placement": "compact_day_chip",
       "group_scope": "A조 분만",
       "date_confidence": "delivery_week_routine_compacted_2026-06-07",
-      "detail_source_ref_count": 28
+      "detail_source_ref_count": 28,
+      "takoyaki_checklist_refs": [
+        "Takoyaki 체크리스트 / 출퇴근·공통일정"
+      ]
     }
   ],
   "assignments": [
@@ -6959,7 +7758,8 @@
       "milestones": [],
       "notes": [
         "시험장 착석시간 공지. C/D는 OT-프테 사이 일정 참여. 야마 그대로 베끼기/틀린답 공유 주의.",
-        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여"
+        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여",
+        "Takoyaki: Pre-test는 첫날 오전 10시, 실습 전 시험 표시 20항목 중 5문제."
       ],
       "resident_owner": "clerk1",
       "paperclip_issue": "AI-13",
@@ -6968,7 +7768,11 @@
       ],
       "onsite_required": false,
       "deadline_label": "Pre-test 전 09:45",
-      "calendar_ready": true
+      "calendar_ready": true,
+      "takoyaki_checklist_ref": true,
+      "source_refs": [
+        "TAKOYAKI-CHECKLIST-2026-06-07"
+      ]
     },
     {
       "id": "obgyn-asg-posttest-reminder-study",
@@ -6990,7 +7794,8 @@
       "milestones": [],
       "notes": [
         "마지막날 16:00 전후 시험 가능. 시험 후 바로 퇴근 금지, 18시 퇴근서명 대기.",
-        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여"
+        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여",
+        "Takoyaki: Post-test는 마지막날 오후 4시, 전 범위 49항목 중 5문제. 가끔 1문제 탈야 가능."
       ],
       "resident_owner": "clerk1",
       "paperclip_issue": "AI-13",
@@ -6999,7 +7804,11 @@
       ],
       "onsite_required": true,
       "deadline_label": "Post-test 전 16:00",
-      "calendar_ready": true
+      "calendar_ready": true,
+      "takoyaki_checklist_ref": true,
+      "source_refs": [
+        "TAKOYAKI-CHECKLIST-2026-06-07"
+      ]
     },
     {
       "id": "obgyn-asg-osce-lecture-prep",
@@ -7021,7 +7830,8 @@
       "milestones": [],
       "notes": [
         "pap ecto/endo + wet smear 대본/영상 숙지. 골반모형·슬라이드 3개·장갑 S/M·물통·연필 준비.",
-        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여"
+        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여",
+        "Takoyaki: OSCE 강의는 PAP ecto/endo + wet smear 동시 진행, 세팅 + 연필 필요, 조장/조원 시연 가능."
       ],
       "resident_owner": "clerk1",
       "paperclip_issue": "AI-13",
@@ -7030,7 +7840,11 @@
       ],
       "onsite_required": false,
       "deadline_label": "OSCE 강의 전",
-      "calendar_ready": true
+      "calendar_ready": true,
+      "takoyaki_checklist_ref": true,
+      "source_refs": [
+        "TAKOYAKI-CHECKLIST-2026-06-07"
+      ]
     },
     {
       "id": "obgyn-asg-osce-video-film",
@@ -7083,7 +7897,8 @@
       "milestones": [],
       "notes": [
         "강병헌 교수님 강의 일정·장소 수신 후 공지. 강의 때 시험 일정 여쭙기.",
-        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여"
+        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여",
+        "Takoyaki: NST 강의는 강병헌 교수님, 의국, 1 or 2주차 30분. 1주차 분만조 통해 공지."
       ],
       "resident_owner": "secretary",
       "paperclip_issue": "AI-13",
@@ -7092,7 +7907,11 @@
       ],
       "onsite_required": false,
       "deadline_label": "NST 강의 후보일 전후",
-      "calendar_ready": true
+      "calendar_ready": true,
+      "takoyaki_checklist_ref": true,
+      "source_refs": [
+        "TAKOYAKI-CHECKLIST-2026-06-07"
+      ]
     },
     {
       "id": "obgyn-asg-nst-exam-prep-recall",
@@ -7114,7 +7933,8 @@
       "milestones": [],
       "notes": [
         "9–10문항 예상, 그래프 용지/주관식 용지 제출. 조원 번호순 복기 분담, 시험 직후 공유.",
-        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여"
+        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여",
+        "Takoyaki: NST 시험은 2주차 의국, 9~10문항. 1~2문제 제외 대부분 야마, 사실상 강의 내용 전부 출제."
       ],
       "resident_owner": "clerk1",
       "paperclip_issue": "AI-13",
@@ -7123,7 +7943,11 @@
       ],
       "onsite_required": false,
       "deadline_label": "NST 시험 후보 전",
-      "calendar_ready": true
+      "calendar_ready": true,
+      "takoyaki_checklist_ref": true,
+      "source_refs": [
+        "TAKOYAKI-CHECKLIST-2026-06-07"
+      ]
     },
     {
       "id": "obgyn-asg-obst-case-receive",
@@ -7145,7 +7969,8 @@
       "milestones": [],
       "notes": [
         "이경노 교수님 회진 전후 케이스 인원수대로 요청/수령, 발표 포인트 기록.",
-        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여"
+        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여",
+        "Takoyaki: 산과 케이스 1개는 분만조에서 받는 과제."
       ],
       "resident_owner": "clerk1",
       "paperclip_issue": "AI-13",
@@ -7154,7 +7979,11 @@
       ],
       "onsite_required": false,
       "deadline_label": "1주차 분만주 월요일",
-      "calendar_ready": true
+      "calendar_ready": true,
+      "takoyaki_checklist_ref": true,
+      "source_refs": [
+        "TAKOYAKI-CHECKLIST-2026-06-07"
+      ]
     },
     {
       "id": "obgyn-asg-obst-case-ppt-present",
@@ -7207,7 +8036,8 @@
       "milestones": [],
       "notes": [
         "이건우 교수님께 CASE 받기 전 해당 주 부인과 수술 목록을 수술명·질환명 보이게 프린트.",
-        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여"
+        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여",
+        "Takoyaki: 부인과 케이스 1개는 병동조에서 받고 세종에서 발표."
       ],
       "resident_owner": "clerk1",
       "paperclip_issue": "AI-13",
@@ -7216,7 +8046,11 @@
       ],
       "onsite_required": false,
       "deadline_label": "3주차 병동주 월요일 회진 후",
-      "calendar_ready": true
+      "calendar_ready": true,
+      "takoyaki_checklist_ref": true,
+      "source_refs": [
+        "TAKOYAKI-CHECKLIST-2026-06-07"
+      ]
     },
     {
       "id": "obgyn-asg-sejong-osce-case-schedule",
@@ -7238,7 +8072,8 @@
       "milestones": [],
       "notes": [
         "송수연 교수님께 담당 교수 확인 → 담당 교수에게 일정/장소 확인 → 조원 공지.",
-        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여"
+        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여",
+        "Takoyaki: 병동조는 전 주 목요일 송수연 교수님께 문자드려 세종 케발 담당 교수님 확정."
       ],
       "resident_owner": "secretary",
       "paperclip_issue": "AI-13",
@@ -7247,7 +8082,11 @@
       ],
       "onsite_required": false,
       "deadline_label": "A조 병동주 전 일요일 20:00",
-      "calendar_ready": true
+      "calendar_ready": true,
+      "takoyaki_checklist_ref": true,
+      "source_refs": [
+        "TAKOYAKI-CHECKLIST-2026-06-07"
+      ]
     },
     {
       "id": "obgyn-asg-gyn-case-ppt-present",
@@ -7300,7 +8139,8 @@
       "milestones": [],
       "notes": [
         "A조 기준 이건우 교수님 가능성이 높으나 담당 교수 변동 가능.",
-        "보고서 제출 여부·방식은 교수마다 다르므로 사전/당일 확인."
+        "보고서 제출 여부·방식은 교수마다 다르므로 사전/당일 확인.",
+        "Takoyaki: 부인과 CPX 시험은 별도 시험 축. 담당 교수/시간/대면증례보고서 여부 확인."
       ],
       "resident_owner": "secretary",
       "paperclip_issue": "AI-13",
@@ -7309,7 +8149,11 @@
       ],
       "onsite_required": false,
       "deadline_label": "1주차 안에 담당 교수/보고서 확인",
-      "calendar_ready": true
+      "calendar_ready": true,
+      "takoyaki_checklist_ref": true,
+      "source_refs": [
+        "TAKOYAKI-CHECKLIST-2026-06-07"
+      ]
     },
     {
       "id": "obgyn-asg-gyn-cpx-case-report-conditional",
@@ -7362,7 +8206,8 @@
       "milestones": [],
       "notes": [
         "외래/분만/수술에서 12항목 확보. 현장 전공의 2–4년차 승인 가능 여부는 해당 주 확인. 느낀점 빈칸 금지, 제출→승인번호→확인.",
-        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여"
+        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여",
+        "Takoyaki: 임상술기관찰 현장승인 12개는 3~4줄이라도 작성해 제출 후 수정."
       ],
       "resident_owner": "clerk1",
       "paperclip_issue": "AI-13",
@@ -7371,7 +8216,11 @@
       ],
       "onsite_required": true,
       "deadline_label": "실습 종료 전 12항목 승인",
-      "calendar_ready": true
+      "calendar_ready": true,
+      "takoyaki_checklist_ref": true,
+      "source_refs": [
+        "TAKOYAKI-CHECKLIST-2026-06-07"
+      ]
     },
     {
       "id": "obgyn-asg-ufolio-portfolio-12-handwrite-scan",
@@ -7393,7 +8242,8 @@
       "milestones": [],
       "notes": [
         "부인과6+산과6. 환자번호 앞4자리+별표, 이니셜, 공부한 내용 하단 본인서명. 하나씩 업로드, 합본 금지. 미리 제출 금지.",
-        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여"
+        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여",
+        "Takoyaki: 임상술기 자유기록 12개는 뽑아서 수기로 작성, 산부인과 마지막 날까지."
       ],
       "resident_owner": "clerk1",
       "paperclip_issue": "AI-13",
@@ -7402,7 +8252,11 @@
       ],
       "onsite_required": true,
       "deadline_label": "마지막날 자정 전",
-      "calendar_ready": true
+      "calendar_ready": true,
+      "takoyaki_checklist_ref": true,
+      "source_refs": [
+        "TAKOYAKI-CHECKLIST-2026-06-07"
+      ]
     },
     {
       "id": "obgyn-asg-ufolio-onsite-evals",
@@ -7455,7 +8309,8 @@
       "milestones": [],
       "notes": [
         "조장이 마지막날 조원 수대로 프린트, 조원 작성, 포테 때 분만조 조장에게 전달. 양식은 실습지침서 뒤.",
-        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여"
+        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여",
+        "Takoyaki: 설문지는 4주차 분만조 조장이 마지막 날 분만실 레지던트 선생님께 제출."
       ],
       "resident_owner": "secretary",
       "paperclip_issue": "AI-13",
@@ -7464,7 +8319,11 @@
       ],
       "onsite_required": false,
       "deadline_label": "마지막 주 금요일 18:00",
-      "calendar_ready": true
+      "calendar_ready": true,
+      "takoyaki_checklist_ref": true,
+      "source_refs": [
+        "TAKOYAKI-CHECKLIST-2026-06-07"
+      ]
     },
     {
       "id": "obgyn-asg-final-attendance-survey-submit",
@@ -7486,7 +8345,8 @@
       "milestones": [],
       "notes": [
         "분만조 조장이 출석부·설문지를 분만실 담당 레지던트에게 제출.",
-        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여"
+        "calendar patch: A반 3조 6번 2026-06-08 시작 기준 ISO window 부여",
+        "Takoyaki: 설문지/출석부는 마지막 날 퇴근 흐름에서 분만실 레지던트 선생님께 제출."
       ],
       "resident_owner": "secretary",
       "paperclip_issue": "AI-13",
@@ -7495,7 +8355,11 @@
       ],
       "onsite_required": false,
       "deadline_label": "Post-test 후 18:00",
-      "calendar_ready": true
+      "calendar_ready": true,
+      "takoyaki_checklist_ref": true,
+      "source_refs": [
+        "TAKOYAKI-CHECKLIST-2026-06-07"
+      ]
     },
     {
       "id": "obgyn-asg-dropbox-upload-handoff",
