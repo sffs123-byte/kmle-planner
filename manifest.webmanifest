@@ -3,7 +3,7 @@
   "short_name": "국시 플래너",
   "description": "국시 준비 일정, 과목 진행도, 복습 루프를 관리하는 로컬 스타일 학습 플래너",
   "lang": "ko",
-  "start_url": "./",
+  "start_url": "./?clerkship=obgyn&forceBundle=1&pwa=1",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",

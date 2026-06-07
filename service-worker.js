@@ -1,10 +1,11 @@
-const CACHE_NAME = 'kmle-planner-20260607T095650Z';
+const CACHE_NAME = 'kmle-planner-20260607T2030KST';
 const ASSETS = [
   './',
   './index.html',
   './manifest.webmanifest',
   './sync.js',
   './version.json',
+  './data/clerkships/bundles/obgyn_2026_06_track_a3g6.bundle.json',
   './assets/icons/icon-180.png',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
