@@ -3959,7 +3959,7 @@
         minDatedSessions: 20,
         resident2PackVersion: '20260606T140332Z',
         deliveryWeekCalendarVersion: '20260606T180051Z',
-        detailEnrichmentVersion: '20260607T0503KST',
+        detailEnrichmentVersion: '20260607T1256KST',
         label: '산부인과'
       }
     };
@@ -7501,7 +7501,7 @@
                           </div>
                           <div>
                             <div class="professor-column-label">연락 / 참고</div>
-                            ${item.contactMode === 'forbidden' ? `<div class="reference-info-line"><strong>${escapeHtml(item.contactLabel || '연락 정책')}</strong>: 연락 금지</div>` : item.contactMode === 'private' ? `<div class="reference-info-line"><strong>${escapeHtml(item.contactLabel || '연락처')}</strong>: 비공개 인계에서 확인</div>` : item.phone ? `<div class="reference-info-line"><strong>${escapeHtml(item.contactLabel || '전화')}</strong>: ${escapeHtml(item.phone)}</div>` : ''}
+                            ${item.contactMode === 'forbidden' ? `<div class="reference-info-line"><strong>${escapeHtml(item.contactLabel || '연락 정책')}</strong>: 연락 금지</div>` : item.contactMode === 'private' ? `<div class="reference-info-line"><strong>${escapeHtml(item.contactLabel || '연락처')}</strong>: 원문 인계에서 확인</div>` : item.phone ? `<div class="reference-info-line"><strong>${escapeHtml(item.contactLabel || '전화')}</strong>: ${escapeHtml(item.phone)}</div>` : ''}
                             ${item.contactHint ? `<div class="reference-info-line">${escapeHtml(item.contactHint)}</div>` : ''}
                             ${item.sourceRefs.length ? `<div class="reference-info-line"><strong>ref</strong>: ${escapeHtml(item.sourceRefs.join(', '))}</div>` : ''}
                           </div>
@@ -7602,8 +7602,8 @@
         const sourceIndex = fixedInfo.source_reference_index || {};
         const summary = sourceIndex.summary || {};
         const sections = Array.isArray(sourceIndex.sections) ? sourceIndex.sections : [];
-        const privacyNotes = Array.isArray(sourceIndex.privacy_notes) ? sourceIndex.privacy_notes : [];
-        const privatePaths = Array.isArray(sourceIndex.private_source_paths) ? sourceIndex.private_source_paths : [];
+        const operationalNotes = Array.isArray(sourceIndex.operational_info_notes) ? sourceIndex.operational_info_notes : [];
+        const sourcePaths = Array.isArray(sourceIndex.private_source_paths) ? sourceIndex.private_source_paths : [];
         return `
           <div class="detail-screen-panel">
             <div class="detail-screen-head">
@@ -7616,15 +7616,15 @@
                   <span class="calendar-mini-chip">문서 ${Number(summary.source_documents || 0)}</span>
                   <span class="calendar-mini-chip">block ${Number(summary.source_blocks_total || 0)}</span>
                   <span class="calendar-mini-chip">이미지 ${Number(summary.images_total || 0)}</span>
-                  <span class="calendar-mini-chip">공개 연결 ${Number(summary.public_location_images_linked || 0)}</span>
+                  <span class="calendar-mini-chip">지도 연결 ${Number(summary.public_location_images_linked || 0)}</span>
                 </div>
                 <div class="detail-screen-title">${escapeHtml(sourceIndex.title || '원문 목차')}</div>
                 <div class="detail-screen-summary">전공의 공통 인계와 fulltext source pack을 어디에 반영했는지 확인하는 색인이다.</div>
               </div>
               <div class="detail-screen-stack">
                 <div class="detail-screen-section">
-                  <h4>보안 기준</h4>
-                  ${privacyNotes.length ? renderReferenceLinesHtml(privacyNotes.map(item => `- ${item}`)) : `<div class="empty">보안 메모가 없다.</div>`}
+                  <h4>운영정보 기준</h4>
+                  ${operationalNotes.length ? renderReferenceLinesHtml(operationalNotes.map(item => `- ${item}`)) : `<div class="empty">기준 메모가 없다.</div>`}
                 </div>
                 <div class="detail-screen-section">
                   <h4>원문 경로</h4>
@@ -7632,7 +7632,7 @@
                     ${fixedInfo.primary_source ? `<div class="reference-info-line"><strong>공통 인계</strong>: ${escapeHtml(pathBasename(fixedInfo.primary_source))}</div>` : ''}
                     ${fixedInfo.common_source_packet ? `<div class="reference-info-line"><strong>machine packet</strong>: ${escapeHtml(pathBasename(fixedInfo.common_source_packet))}</div>` : ''}
                     ${fixedInfo.fulltext_sourcepack ? `<div class="reference-info-line"><strong>fulltext</strong>: ${escapeHtml(pathBasename(fixedInfo.fulltext_sourcepack))}</div>` : ''}
-                    ${privatePaths.map(item => `<div class="reference-info-line"><strong>private</strong>: ${escapeHtml(pathBasename(item))}</div>`).join('')}
+                    ${sourcePaths.map(item => `<div class="reference-info-line"><strong>sourcepack</strong>: ${escapeHtml(pathBasename(item))}</div>`).join('')}
                   </div>
                 </div>
                 <div class="detail-screen-section">
