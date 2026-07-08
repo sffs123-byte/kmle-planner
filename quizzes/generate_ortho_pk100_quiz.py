@@ -24,10 +24,10 @@ QUIZ_DIR = ROOT / "quizzes"
 DATA = QUIZ_DIR / "data" / "ortho_pk100_questions.json"
 OUT = QUIZ_DIR / "정형외과_PK100_Anki.html"
 
-TITLE = "정형외과 PK 시험문제 100"
+TITLE = "정형외과 PK 시험문제 100 (81문항)"
 STORAGE_PREFIX = "ortho_pk100_anki_skill_20260708"
 LOCK_LINE = (
-    "Anki Quiz Builder rail · 원문 번호 1-24, 31-87 · "
+    "Anki Quiz Builder rail · 원문 파일상 25-30번 누락 · "
     "81문항 · 이미지 103개 · 정답 매핑 81/81"
 )
 
@@ -84,11 +84,12 @@ def render_images(images: list[dict], label: str) -> str:
         "<div style='display:flex;flex-wrap:wrap;gap:10px;margin:14px 0;'>"
     ]
     for idx, image in enumerate(images, 1):
-        src = image.get("data_uri", "")
+        src = image.get("src") or image.get("data_uri", "")
         filename = image.get("filename", f"image-{idx}")
         parts.append(
             "<figure style='margin:0;flex:1 1 220px;max-width:100%;'>"
             f"<img src='{e(src)}' alt='원문 이미지' "
+            "loading='lazy' decoding='async' "
             "style='max-width:100%;height:auto;border-radius:8px;"
             "border:1px solid rgba(148,163,184,.35);background:#fff;' />"
             f"<figcaption style='font-size:11px;color:#94a3b8;margin-top:4px;'>{e(label)} {idx} · {e(filename)}</figcaption>"
@@ -225,6 +226,14 @@ def validate_source(questions: list[dict]) -> None:
         "image_count": image_count + choice_image_count == 103,
         "unique_ids": len({q["id"] for q in questions}) == len(questions),
     }
+    for q in questions:
+        for image in q.get("images") or []:
+            if not (image.get("src") or image.get("data_uri")):
+                checks[f"image_src_q{q.get('original_no')}"] = False
+        for group in q.get("choice_images") or []:
+            for image in group or []:
+                if not (image.get("src") or image.get("data_uri")):
+                    checks[f"choice_image_src_q{q.get('original_no')}"] = False
     failed = [name for name, ok in checks.items() if not ok]
     if failed:
         raise SystemExit(f"Source validation failed: {failed}")
