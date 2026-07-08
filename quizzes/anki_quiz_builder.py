@@ -67,6 +67,355 @@ import html as html_lib
 import json
 import os
 import re
+import sys
+from dataclasses import dataclass, field
+from typing import List, Optional
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# Rail Mode — 자동 가드레일 시스템
+# ═══════════════════════════════════════════════════════════════════════
+#
+# 소아 pretest 1/2/3주차에서 쌓인 피드백을 코드 레벨에서 자동 강제한다.
+# build_html() / QuizBuilder.build() 호출 시 자동 실행.
+#
+# Rail 종류:
+#   ERROR   — 빌드 중단 (필수 필드 누락, id 중복)
+#   WARNING — 경고 출력 + 빌드 계속 (답 누수, 캡션 진단명 등)
+#   AUTO-FIX — 자동 수정 + info 출력 (label-colon 마스킹, md table 변환)
+#   INFO    — 참고 정보 (객관식 선지 보존 확인 등)
+# ═══════════════════════════════════════════════════════════════════════
+
+@dataclass
+class RailIssue:
+    """단일 rail 검사 결과"""
+    level: str          # "error", "warning", "auto-fix", "info"
+    rail: str           # rail 이름
+    card_id: str        # 해당 카드 id ("_global" for deck-level)
+    message: str        # 설명
+    fixed: bool = False # auto-fix가 적용됐으면 True
+
+
+@dataclass
+class RailReport:
+    """전체 rail 검사 결과"""
+    issues: List[RailIssue] = field(default_factory=list)
+    cards_checked: int = 0
+    auto_fixes: int = 0
+
+    @property
+    def errors(self) -> List[RailIssue]:
+        return [i for i in self.issues if i.level == "error"]
+
+    @property
+    def warnings(self) -> List[RailIssue]:
+        return [i for i in self.issues if i.level == "warning"]
+
+    @property
+    def has_errors(self) -> bool:
+        return len(self.errors) > 0
+
+    def summary(self) -> str:
+        lines = [f"🛤️ Rail Report — {self.cards_checked} cards checked"]
+        counts = {}
+        for i in self.issues:
+            counts[i.level] = counts.get(i.level, 0) + 1
+        if counts:
+            parts = []
+            for lvl in ["error", "warning", "auto-fix", "info"]:
+                if lvl in counts:
+                    icon = {"error": "🔴", "warning": "🟡", "auto-fix": "🔧", "info": "ℹ️"}[lvl]
+                    parts.append(f"{icon} {lvl}: {counts[lvl]}")
+            lines.append("  " + " | ".join(parts))
+        else:
+            lines.append("  ✅ No issues found")
+        return "\n".join(lines)
+
+    def print_report(self):
+        print(self.summary(), file=sys.stderr)
+        for i in self.issues:
+            if i.level in ("error", "warning"):
+                icon = "🔴" if i.level == "error" else "🟡"
+                print(f"  {icon} [{i.rail}] {i.card_id}: {i.message}", file=sys.stderr)
+
+
+# ── Rail 패턴 상수 ──
+
+# 단답형 앞면에서 답이 새는 label-colon 패턴
+LABEL_COLON_PATTERNS = [
+    (r"원인균\s*[:：]\s*(.+)", "원인균"),
+    (r"치료\s*(?:약제)?\s*[:：]\s*(.+)", "치료"),
+    (r"진단명?\s*[:：]\s*(.+)", "진단명"),
+    (r"검사\s*[:：]\s*(.+)", "검사"),
+    (r"답\s*[:：]\s*(.+)", "답"),
+    (r"정답\s*[:：]\s*(.+)", "정답"),
+    (r"치료제\s*[:：]\s*(.+)", "치료제"),
+    (r"기전\s*[:：]\s*(.+)", "기전"),
+]
+
+# 객관식 선지 패턴 (이건 front에 있어도 OK)
+CHOICE_PATTERN = re.compile(
+    r"^\s*(?:[①②③④⑤]|\d[).]\s|[A-E][).]\s|\([1-5]\))", re.MULTILINE
+)
+
+# 이미지 캡션에서 진단명/병명이 들어간 패턴
+CAPTION_ANSWER_LEAK_PATTERN = re.compile(
+    r"(?:진단|diagnosis|치료|treatment|원인균|pathogen|organism)", re.IGNORECASE
+)
+
+# 7섹션 해설 필수 heading 키워드
+SEVEN_SECTION_HEADINGS = [
+    "Big picture",
+    "핵심 단서",
+    "시험장 사고 흐름",
+    "쉽게 이해하기",
+    "감별",
+    "Lock line",
+    "암기 확인",
+]
+
+# Markdown pipe table 감지
+MD_TABLE_LINE = re.compile(r"^\s*\|.+\|\s*$")
+MD_TABLE_SEP = re.compile(r"^\s*\|[\s:*-]+\|\s*$")
+
+
+def _is_short_answer_card(q_text: str) -> bool:
+    """객관식이 아닌 카드인지 판별"""
+    plain = re.sub(r"<[^>]*>", "", q_text)
+    return not bool(CHOICE_PATTERN.search(plain))
+
+
+def _mask_label_colon(text: str) -> tuple:
+    """label-colon 답 누수를 [답 숨김]으로 마스킹. (수정된 텍스트, 수정 수) 반환"""
+    fixes = 0
+    for pattern, label in LABEL_COLON_PATTERNS:
+        def _replacer(m):
+            return f"{label} : [답 숨김]"
+        new_text = re.sub(pattern, _replacer, text)
+        if new_text != text:
+            fixes += 1
+            text = new_text
+    return text, fixes
+
+
+def _convert_md_tables_in_html(html_text: str) -> tuple:
+    """HTML 문자열 안의 markdown pipe table을 <table>로 변환. (변환된 텍스트, 변환 수) 반환"""
+    lines = html_text.split("\n")
+    result = []
+    table_buf = []
+    conversions = 0
+    in_table = False
+
+    def flush_table():
+        nonlocal conversions
+        if not table_buf:
+            return ""
+        # table_buf에서 separator 제거하고 HTML table 생성
+        rows = []
+        is_header = True
+        for tl in table_buf:
+            if MD_TABLE_SEP.match(tl):
+                is_header = False
+                continue
+            cells = [c.strip() for c in tl.strip().strip("|").split("|")]
+            tag = "th" if is_header and rows == [] else "td"
+            row_html = "".join(f"<{tag}>{c}</{tag}>" for c in cells)
+            rows.append(f"<tr>{row_html}</tr>")
+            if is_header and tag == "th":
+                is_header = False  # first row is always header if separator follows
+        if rows:
+            conversions += 1
+            return '<div class="tutor-table-wrap"><table class="tutor-md-table">' + "".join(rows) + "</table></div>"
+        return ""
+
+    for line in lines:
+        if MD_TABLE_LINE.match(line):
+            in_table = True
+            table_buf.append(line)
+        else:
+            if in_table:
+                table_html = flush_table()
+                if table_html:
+                    result.append(table_html)
+                table_buf = []
+                in_table = False
+            result.append(line)
+
+    # flush any trailing table
+    if table_buf:
+        table_html = flush_table()
+        if table_html:
+            result.append(table_html)
+
+    return "\n".join(result), conversions
+
+
+def _card_q(c: dict) -> str:
+    """카드의 질문 필드를 가져온다. q / question / display_question 지원."""
+    return c.get("q", "") or c.get("question", "") or c.get("display_question", "") or ""
+
+
+def _card_a(c: dict) -> str:
+    """카드의 답 필드를 가져온다. a / answer 지원."""
+    return c.get("a", "") or c.get("answer", "") or ""
+
+
+def _card_id(c: dict) -> str:
+    """카드 id"""
+    return c.get("id", "?")
+
+
+def _q_field_name(c: dict) -> str:
+    """카드에서 실제로 쓰는 질문 필드명 반환"""
+    if "q" in c: return "q"
+    if "display_question" in c: return "display_question"
+    if "question" in c: return "question"
+    return "q"
+
+
+def run_rails(cards: list, mode: str = "pretest", strict: bool = False) -> RailReport:
+    """
+    카드 리스트에 Rail 검사를 실행하고, auto-fix 가능한 것은 카드를 직접 수정한다.
+
+    Parameters
+    ----------
+    cards  : 카드 딕셔너리 리스트. 필드명은 q/a 또는 question/answer 둘 다 지원.
+    mode   : "pretest" (모든 rail) / "basic" (필수만)
+    strict : True면 warning도 error로 승격
+
+    Returns
+    -------
+    RailReport
+    """
+    report = RailReport(cards_checked=len(cards))
+
+    # ── RAIL 1: 필수 필드 검증 ──
+    for c in cards:
+        cid = _card_id(c)
+        if "id" not in c or not c["id"]:
+            report.issues.append(RailIssue(
+                level="error", rail="required-field", card_id=cid,
+                message="필수 필드 'id' 누락 또는 비어있음"
+            ))
+        if not _card_q(c).strip():
+            report.issues.append(RailIssue(
+                level="error", rail="required-field", card_id=cid,
+                message="질문 필드 누락 (q/question/display_question 모두 비어있음)"
+            ))
+        if not _card_a(c).strip():
+            report.issues.append(RailIssue(
+                level="error", rail="required-field", card_id=cid,
+                message="답 필드 누락 (a/answer 모두 비어있음)"
+            ))
+
+    # ── RAIL 2: 중복 id 검사 ──
+    seen_ids = {}
+    for c in cards:
+        cid = _card_id(c)
+        if cid in seen_ids:
+            report.issues.append(RailIssue(
+                level="error", rail="duplicate-id",
+                card_id=cid,
+                message=f"id 중복 — 첫 번째: #{seen_ids[cid]}, 현재: #{c.get('num', c.get('num_in_source', '?'))}"
+            ))
+        seen_ids[cid] = c.get("num", c.get("num_in_source", "?"))
+
+    if mode == "basic":
+        return report
+
+    # ── RAIL 3: 단답형 앞면 답 누수 감지 + label-colon 자동 마스킹 ──
+    for c in cards:
+        q = _card_q(c)
+        if _is_short_answer_card(q):
+            new_q, fix_count = _mask_label_colon(q)
+            if fix_count > 0:
+                fld = _q_field_name(c)
+                c[fld] = new_q
+                report.auto_fixes += fix_count
+                report.issues.append(RailIssue(
+                    level="auto-fix", rail="label-colon-mask",
+                    card_id=_card_id(c),
+                    message=f"label-colon 답 누수 {fix_count}건 → [답 숨김] 자동 마스킹",
+                    fixed=True
+                ))
+
+    # ── RAIL 4: 이미지 캡션 진단명 감지 ──
+    for c in cards:
+        q = _card_q(c)
+        # <img> 태그의 alt/title/caption 속성에서 진단명 검사
+        for img_match in re.finditer(r'<img[^>]*(?:alt|title)=["\']([^"\']*)["\']', q, re.IGNORECASE):
+            caption = img_match.group(1)
+            if CAPTION_ANSWER_LEAK_PATTERN.search(caption):
+                report.issues.append(RailIssue(
+                    level="warning", rail="caption-leak",
+                    card_id=_card_id(c),
+                    message=f"앞면 이미지 캡션에 진단명/치료명 포함 가능성: '{caption[:50]}'"
+                ))
+        # 일반 텍스트 캡션 패턴 (예: "원문 사진 crop: HSV 잇몸구내염")
+        for cap_match in re.finditer(r"(?:원문|사진|crop|이미지)[^:：]*[:：]\s*(.{3,30})", q):
+            cap_text = cap_match.group(1)
+            if CAPTION_ANSWER_LEAK_PATTERN.search(cap_text):
+                report.issues.append(RailIssue(
+                    level="warning", rail="caption-leak",
+                    card_id=_card_id(c),
+                    message=f"캡션 내 답 누수 의심: '{cap_text[:40]}'"
+                ))
+
+    # ── RAIL 5: 7섹션 해설 검증 ──
+    for c in cards:
+        explanation = c.get("enhanced_explanation", "") or c.get("g", "")
+        if not explanation:
+            continue
+        missing = []
+        for heading in SEVEN_SECTION_HEADINGS:
+            if heading.lower() not in explanation.lower():
+                missing.append(heading)
+        if missing and len(missing) <= 4:
+            # 일부만 누락 = 해설이 있는데 불완전
+            report.issues.append(RailIssue(
+                level="warning", rail="7section-incomplete",
+                card_id=_card_id(c),
+                message=f"7섹션 해설 누락: {', '.join(missing)}"
+            ))
+
+    # ── RAIL 6: markdown pipe table → HTML table 자동 변환 ──
+    for c in cards:
+        for fld in ("a", "answer", "g", "enhanced_explanation", "explanation"):
+            val = c.get(fld, "")
+            if not val or not isinstance(val, str):
+                continue
+            if MD_TABLE_LINE.search(val):
+                new_val, conv_count = _convert_md_tables_in_html(val)
+                if conv_count > 0:
+                    c[fld] = new_val
+                    report.auto_fixes += conv_count
+                    report.issues.append(RailIssue(
+                        level="auto-fix", rail="md-table-convert",
+                        card_id=_card_id(c),
+                        message=f"'{fld}' 필드 markdown table {conv_count}건 → HTML <table> 변환",
+                        fixed=True
+                    ))
+
+    # ── RAIL 7: uncertain 마커 보존 확인 ──
+    UNCERTAIN_MARKERS = ["uncertain", "원문 확인 필요", "추정답"]
+    for c in cards:
+        if c.get("uncertain") is True:
+            a = _card_a(c)
+            has_marker = any(m in a for m in UNCERTAIN_MARKERS)
+            if not has_marker:
+                report.issues.append(RailIssue(
+                    level="warning", rail="uncertain-marker-missing",
+                    card_id=_card_id(c),
+                    message="uncertain=true이지만 답에 확인필요/추정답 마커 없음"
+                ))
+
+    # ── strict 모드: warning → error 승격 ──
+    if strict:
+        for i in report.issues:
+            if i.level == "warning":
+                i.level = "error"
+
+    return report
 
 
 def build_card_guide(card, page_images):
@@ -80,8 +429,27 @@ def build_card_guide(card, page_images):
     return "\n".join(parts) if parts else "<p>해설 이미지 없음</p>"
 
 
-def build_html(cards, page_images, title="Anki 퀴즈", storage_prefix="quiz", enable_self_answer=True, randomize_review=False):
-    """최종 HTML 조립"""
+def build_html(cards, page_images, title="Anki 퀴즈", storage_prefix="quiz",
+               enable_self_answer=True, randomize_review=False,
+               enable_rail=True, rail_mode="pretest", rail_strict=False):
+    """최종 HTML 조립
+
+    Parameters
+    ----------
+    enable_rail  : Rail 가드레일 자동 실행 (기본 True)
+    rail_mode    : "pretest" (전체 rail) / "basic" (필수만)
+    rail_strict  : True면 warning도 error로 승격, 빌드 중단
+    """
+
+    # ── Rail 자동 실행 ──
+    if enable_rail:
+        rail_report = run_rails(cards, mode=rail_mode, strict=rail_strict)
+        rail_report.print_report()
+        if rail_report.has_errors:
+            raise ValueError(
+                f"🛤️ Rail ERROR — 빌드 중단. {len(rail_report.errors)}건의 에러를 먼저 수정하세요.\n"
+                + "\n".join(f"  🔴 [{e.rail}] {e.card_id}: {e.message}" for e in rail_report.errors)
+            )
 
     num_cards = len(cards)
     title_html = html_lib.escape(title)
@@ -3617,7 +3985,8 @@ class QuizBuilder:
     """카드 목록을 받아 단일 HTML 파일로 출력하는 빌더."""
 
     def __init__(self, cards, title="Anki 퀴즈", storage_prefix="quiz",
-                 subtitle=None, page_images=None, enable_self_answer=True, randomize_review=False):
+                 subtitle=None, page_images=None, enable_self_answer=True, randomize_review=False,
+                 enable_rail=True, rail_mode="pretest", rail_strict=False):
         """
         Parameters
         ----------
@@ -3628,6 +3997,9 @@ class QuizBuilder:
         page_images    : {페이지번호: base64문자열} 딕셔너리 (선택)
         enable_self_answer : 퀴즈 모드에서 "내 답안 먼저 써보기" UI 표시 여부
         randomize_review : 복습 시작 버튼에서 카드 순서를 셔플할지 여부
+        enable_rail    : Rail 가드레일 자동 실행 (기본 True)
+        rail_mode      : "pretest" (전체 rail) / "basic" (필수만)
+        rail_strict    : True면 warning도 error로 승격, 빌드 중단
         """
         self.cards = cards
         self.title = title
@@ -3636,6 +4008,9 @@ class QuizBuilder:
         self.page_images = page_images or {}
         self.enable_self_answer = enable_self_answer
         self.randomize_review = randomize_review
+        self.enable_rail = enable_rail
+        self.rail_mode = rail_mode
+        self.rail_strict = rail_strict
 
         # Populate 'g' field from page_images if not directly provided
         for c in self.cards:
@@ -3644,7 +4019,11 @@ class QuizBuilder:
 
     def build(self) -> str:
         """완성된 HTML 문자열 반환"""
-        return build_html(self.cards, self.page_images, self.title, self.storage_prefix, self.enable_self_answer, self.randomize_review)
+        return build_html(
+            self.cards, self.page_images, self.title, self.storage_prefix,
+            self.enable_self_answer, self.randomize_review,
+            self.enable_rail, self.rail_mode, self.rail_strict
+        )
 
     def write(self, path: str) -> None:
         """HTML을 파일로 저장"""
