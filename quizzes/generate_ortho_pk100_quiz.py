@@ -32,11 +32,27 @@ LOCK_LINE = (
 )
 
 MANUAL_NOTES = {
+    19: "수정 PDF의 빨간 표시/메모 기준으로 5번 흉추 전만으로 보정함.",
     22: "정답은 수정 PDF 시각 하이라이트 기준으로 수동 보정함.",
     23: "정답은 원본 PDF 시각 하이라이트 기준으로 수동 보정함.",
     31: "정답은 수정 PDF 시각 하이라이트 기준으로 수동 보정함.",
     72: "정답은 수정 PDF 시각 하이라이트 기준으로 수동 보정함.",
     82: "두 해설 PDF 모두 정답 하이라이트가 없어 Thomas test 문항으로 보고 1번으로 보정함.",
+}
+
+IMAGE_RECHECK_NOTES = {
+    2: "그림 B의 '다'가 Arcade of Frohse/supinator 부위인지 강렬이 이미지로 다시 설명해줘야 함.",
+    3: "MRI/관절경에서 TFCC foveal tear 및 trampoline sign 위치를 강렬이 이미지로 다시 설명해줘야 함.",
+    4: "MRI에서 주상골 근위부 AVN 소견을 강렬이 이미지로 다시 설명해줘야 함.",
+    5: "정복 후 X-ray의 scapholunate gap/불안정성 여부를 강렬이 이미지로 다시 설명해줘야 함.",
+    8: "월상골 collapse와 관절염 동반 여부를 강렬이 이미지로 다시 설명해줘야 함.",
+    9: "MRI의 tendon sheath synovitis와 수술사진 rice bodies를 강렬이 이미지로 다시 설명해줘야 함.",
+    11: "사진 C의 능동 거상 가능 여부와 MRI massive cuff tear를 강렬이 이미지로 다시 설명해줘야 함.",
+    13: "CT/MRI의 glenoid bone loss와 Hill-Sachs 병변을 강렬이 이미지로 다시 설명해줘야 함.",
+    14: "초음파 probe 방향과 극상건 파열 소견을 강렬이 이미지로 다시 설명해줘야 함.",
+    15: "capitellum OCD/관절조영 CT 소견을 강렬이 이미지로 다시 설명해줘야 함.",
+    17: "검은 탈출 위치가 L4-5에서 L5 root를 누르는 구조인지 강렬이 이미지로 다시 설명해줘야 함.",
+    19: "Cobb angle이 수술 기준에 못 미치는지와 흉추 전만 소견을 강렬이 이미지로 다시 설명해줘야 함.",
 }
 
 CATEGORY_LABELS = {
@@ -140,6 +156,7 @@ def make_answer(q: dict) -> str:
     answer_index = q.get("answer_index")
     answer_text = q.get("answer_text") or "정답 매핑 확인 필요"
     note = MANUAL_NOTES.get(no)
+    image_recheck = IMAGE_RECHECK_NOTES.get(no)
 
     parts = [
         "<div style='display:grid;gap:12px;'>",
@@ -154,6 +171,16 @@ def make_answer(q: dict) -> str:
             [
                 "<section style='background:#fff7ed;border:1px solid #fdba74;border-radius:10px;padding:10px 12px;color:#7c2d12;'>",
                 f"<strong>수동 보정 note</strong><br>{e(note)}",
+                "</section>",
+            ]
+        )
+
+    if image_recheck:
+        parts.extend(
+            [
+                "<section style='background:#fef2f2;border:1px solid #fca5a5;border-radius:10px;padding:10px 12px;color:#7f1d1d;'>",
+                "<strong>이미지 재설명 필요</strong><br>",
+                f"{e(image_recheck)}",
                 "</section>",
             ]
         )
