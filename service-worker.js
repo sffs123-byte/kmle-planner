@@ -1,10 +1,11 @@
-const CACHE_NAME = 'kmle-planner-20260709T081827Z';
+const CACHE_NAME = 'kmle-planner-20260818T134525Z';
 const ASSETS = [
   './',
   './index.html',
   './manifest.webmanifest',
   './sync.js',
   './version.json',
+  './quizzes/충남대_안과_포테_기출_Anki.html',
   './data/clerkships/bundles/obgyn_2026_06_track_a3g6.bundle.json',
   './assets/icons/icon-180.png',
   './assets/icons/icon-192.png',
