@@ -10,10 +10,9 @@
     "required_fields": true,
     "no_private_paths": true
   },
-  "card_count": 57,
+  "card_count": 49,
   "question_variant_correction_count": 49,
   "kind_counts": {
-    "trend": 8,
     "question": 26,
     "variant": 12,
     "uncertain": 7,
@@ -21,7 +20,6 @@
     "image": 3
   },
   "status_counts": {
-    "분석": 8,
     "복기 확정": 24,
     "변형": 6,
     "원문 불완전": 2,
@@ -70,10 +68,16 @@
   "generated_checks": {
     "quiz_data_present": true,
     "all_ids_present": true,
-    "question_ids_present": true,
     "storage_prefix_present": true,
     "ordered_mode_present": true,
     "random_mode_present": true,
+    "order_mode_enabled": true,
+    "mode_and_remaining_badges": true,
+    "due_priority_random": true,
+    "session_order_restore": true,
+    "backup_restore_present": true,
+    "trend_cards_removed": true,
+    "updated_card_count_visible": true,
     "favicon_present": true,
     "quiz_number_not_double_prefixed": true,
     "card_id_count": true,
@@ -83,14 +87,14 @@
     "no_private_paths": true
   },
   "rail": {
-    "cards_checked": 57,
+    "cards_checked": 49,
     "errors": 0,
     "warnings": 0,
     "auto_fixes": 0
   },
   "output": {
     "path": "quizzes/충남대_안과_포테_기출_Anki.html",
-    "bytes": 462555,
+    "bytes": 425130,
     "storage_prefix": "cnu_ophthalmology_posttest_anki_20260818_v1"
   }
 }

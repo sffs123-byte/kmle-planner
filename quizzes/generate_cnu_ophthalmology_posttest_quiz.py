@@ -22,6 +22,7 @@ from collections import Counter
 from pathlib import Path
 
 from anki_quiz_builder import QuizBuilder, run_rails
+from anki_backup_restore import inject_backup_restore
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -30,10 +31,10 @@ DATA_PATH = QUIZ_DIR / "data" / "cnu_ophthalmology_posttest_anki_cards.json"
 OUT_PATH = QUIZ_DIR / "충남대_안과_포테_기출_Anki.html"
 QC_PATH = QUIZ_DIR / "qc_cnu_ophthalmology_posttest_anki.json"
 
-TITLE = "충남대 안과 포테 기출 Anki · 2021–2026 · 57카드"
+TITLE = "충남대 안과 포테 기출 Anki · 2021–2026 · 49카드"
 STORAGE_PREFIX = "cnu_ophthalmology_posttest_anki_20260818_v1"
-EXPECTED_CARD_COUNT = 57
-EXPECTED_TREND_COUNT = 8
+EXPECTED_CARD_COUNT = 49
+EXPECTED_TREND_COUNT = 0
 EXPECTED_UNCERTAIN_COUNT = 7
 EXPECTED_AXES = list(range(1, 26))
 
@@ -225,22 +226,7 @@ def build_cards(source_cards: list[dict]) -> list[dict]:
     ]
 
 
-def inject_study_modes(html_text: str, source_cards: list[dict]) -> str:
-    question_ids = [
-        card["id"]
-        for card in source_cards
-        if card["kind"] != "trend"
-    ]
-    ids_js = json.dumps(question_ids, ensure_ascii=False)
-    marker = "const STORAGE_PREFIX = "
-    if html_text.count(marker) != 1:
-        raise SystemExit("Study mode injection marker mismatch")
-    html_text = html_text.replace(
-        marker,
-        f"const QUESTION_IDS = {ids_js};\n\n{marker}",
-        1,
-    )
-
+def decorate_html(html_text: str) -> str:
     title_marker = "</title>"
     if html_text.count(title_marker) != 1:
         raise SystemExit("Favicon injection marker mismatch")
@@ -249,21 +235,6 @@ def inject_study_modes(html_text: str, source_cards: list[dict]) -> str:
         '</title>\n<link rel="icon" href="../assets/icons/favicon.svg">',
         1,
     )
-
-    old_hero = """<div class="review-hero-title">랜덤 복습 시작</div>
-            <div class="review-hero-sub">사이드바가 접혀도 여기서 바로 시작됩니다. 순서 힌트 없이 랜덤으로 나옵니다.</div>
-        </div>
-        <button class="review-hero-btn" id="btnReviewHero" data-start-review="1" onclick="startReview()">복습 시작</button>"""
-    new_hero = """<div class="review-hero-title">학습 모드 선택</div>
-            <div class="review-hero-sub">처음에는 25축 순서로, 두 번째부터는 번호 힌트 없이 랜덤 실전으로 복습하세요.</div>
-        </div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;">
-          <button class="review-hero-btn" id="btnReviewHero" data-start-review="1" onclick="startReview()">순서·SRS 시작</button>
-          <button class="review-hero-btn" style="background:#7c3aed;" onclick="startQuizWith(shuffledCopy([...QUESTION_IDS]))">랜덤 실전</button>
-        </div>"""
-    if html_text.count(old_hero) != 1:
-        raise SystemExit("Hero injection marker mismatch")
-    html_text = html_text.replace(old_hero, new_hero, 1)
 
     quiz_num_marker = '<span class="card-num">Q${data.num}</span>'
     if html_text.count(quiz_num_marker) != 1:
@@ -278,23 +249,34 @@ def inject_study_modes(html_text: str, source_cards: list[dict]) -> str:
     banner = """<div style="margin:0 0 14px;padding:14px 16px;border-radius:12px;
 background:linear-gradient(135deg,rgba(30,64,175,.24),rgba(124,58,237,.18));
 border:1px solid rgba(147,197,253,.35);color:#dbeafe;line-height:1.65;">
-<b>57카드</b> · 실제 문제/변형/교정 49 · 출제 흐름 8 · 불확실 복기 7<br>
-<span style="font-size:12px;color:#bfdbfe;">25개 반복축 전수 · 공식 정답지 아님 · 최신 실습 주 사진/PPT 우선</span>
+<b>49카드</b> · 실제 문제/변형/교정만 수록 · 불확실 복기 7<br>
+<span style="font-size:12px;color:#bfdbfe;">순서대로 첫 공부 · due 카드 우선 랜덤 실전 · 공식 정답지 아님 · 최신 실습 주 사진/PPT 우선</span>
 </div>
 <div class="card-grid">"""
     if html_text.count(grid_marker) != 1:
         raise SystemExit("Banner injection marker mismatch")
-    return html_text.replace(grid_marker, banner, 1)
+    html_text = html_text.replace(grid_marker, banner, 1)
+    return inject_backup_restore(
+        html_text,
+        site_id="cnu-ophthalmology-posttest-anki",
+        download_prefix="충남대_안과_Anki_수정본",
+    )
 
 
 def validate_generated(html_text: str, cards: list[dict], qc: dict) -> dict:
     checks = {
         "quiz_data_present": "const QUIZ_DATA" in html_text,
         "all_ids_present": "const ALL_IDS" in html_text,
-        "question_ids_present": "const QUESTION_IDS" in html_text,
         "storage_prefix_present": STORAGE_PREFIX in html_text,
-        "ordered_mode_present": "순서·SRS 시작" in html_text,
-        "random_mode_present": "랜덤 실전" in html_text,
+        "ordered_mode_present": "순서대로 시작" in html_text,
+        "random_mode_present": "랜덤 시작" in html_text,
+        "order_mode_enabled": "const ENABLE_ORDER_MODES = true" in html_text,
+        "mode_and_remaining_badges": all(token in html_text for token in ("quizOrderModeBadge", "quizRemainingBadge")),
+        "due_priority_random": "shuffledCopy(plan.dueIds)" in html_text,
+        "session_order_restore": "orderMode: saved.orderMode || 'ordered'" in html_text,
+        "backup_restore_present": all(token in html_text for token in ("BACKUP_RESTORE_V1", "btnExportBackup", "btnImportBackup")),
+        "trend_cards_removed": all(f'trend0{number}' not in html_text for number in range(1, 9)),
+        "updated_card_count_visible": "<b>49카드</b>" in html_text,
         "favicon_present": '../assets/icons/favicon.svg' in html_text,
         "quiz_number_not_double_prefixed": '<span class="card-num">Q${data.num}</span>' not in html_text,
         "card_id_count": sum(f'"{card["id"]}"' in html_text for card in cards) == len(cards),
@@ -324,14 +306,15 @@ def main() -> None:
         cards=cards,
         title=TITLE,
         storage_prefix=STORAGE_PREFIX,
-        subtitle="25축 전수 · 2026 1·2·3조 변형 · 출제 흐름",
+        subtitle="25축 전수 · 2026 1·2·3조 실제 문제와 변형",
         enable_self_answer=True,
         randomize_review=False,
+        enable_order_modes=True,
         enable_rail=True,
         rail_mode="pretest",
         rail_strict=False,
     )
-    html_text = inject_study_modes(builder.build(), source_cards)
+    html_text = decorate_html(builder.build())
     html_text = "\n".join(line.rstrip() for line in html_text.splitlines()) + "\n"
     qc = validate_generated(html_text, cards, qc)
     OUT_PATH.write_text(html_text, encoding="utf-8")

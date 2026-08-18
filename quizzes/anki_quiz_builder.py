@@ -430,7 +430,7 @@ def build_card_guide(card, page_images):
 
 
 def build_html(cards, page_images, title="Anki 퀴즈", storage_prefix="quiz",
-               enable_self_answer=True, randomize_review=False,
+               enable_self_answer=True, randomize_review=False, enable_order_modes=False,
                enable_rail=True, rail_mode="pretest", rail_strict=False):
     """최종 HTML 조립
 
@@ -455,6 +455,38 @@ def build_html(cards, page_images, title="Anki 퀴즈", storage_prefix="quiz",
     title_html = html_lib.escape(title)
     storage_prefix_js = json.dumps(f"{storage_prefix}_")
     randomize_review_js = "true" if randomize_review else "false"
+    enable_order_modes_js = "true" if enable_order_modes else "false"
+
+    if enable_order_modes:
+        mobile_start_html = '<button class="mobile-review-start" id="btnReviewMobile" data-start-review="1" data-order="random">랜덤 퀴즈</button>'
+        sidebar_quiz_buttons_html = '''
+            <button class="btn-review" id="btnReviewOrdered" data-start-review="1" data-order="ordered">순서대로 시작 (0개)</button>
+            <button class="btn-review" id="btnReviewRandom" data-start-review="1" data-order="random">랜덤 시작 (0개)</button>
+            <button class="btn-reset" id="btnReset" onclick="handleResetTap()">전체 다시 풀기<br><small>[3연타 시 초기화]</small></button>'''
+        review_hero_html = '''
+    <div class="review-hero" id="reviewHero">
+        <div>
+            <div class="review-hero-title">퀴즈 모드 선택</div>
+            <div class="review-hero-sub">첫 학습은 순서대로, 실전 회상은 랜덤으로. 복귀 카드는 두 모드 모두 우선 출제됩니다.</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;min-width:min(100%,360px)">
+            <button class="review-hero-btn" id="btnReviewHeroOrdered" data-start-review="1" data-order="ordered">순서대로 시작</button>
+            <button class="review-hero-btn" id="btnReviewHeroRandom" data-start-review="1" data-order="random">랜덤 시작</button>
+        </div>
+    </div>'''
+    else:
+        mobile_start_html = '<button class="mobile-review-start" id="btnReviewMobile" data-start-review="1">복습 시작</button>'
+        sidebar_quiz_buttons_html = '''
+            <button class="btn-review" id="btnReview" data-start-review="1">복습 시작 (0개)</button>
+            <button class="btn-reset" id="btnReset" onclick="handleResetTap()">전체 다시 풀기<br><small>[3연타 시 초기화]</small></button>'''
+        review_hero_html = '''
+    <div class="review-hero" id="reviewHero">
+        <div>
+            <div class="review-hero-title">랜덤 복습 시작</div>
+            <div class="review-hero-sub">사이드바가 접혀도 여기서 바로 시작됩니다.</div>
+        </div>
+        <button class="review-hero-btn" id="btnReviewHero" data-start-review="1">복습 시작</button>
+    </div>'''
 
     # Build QUIZ_DATA JS object
     quiz_data_items = []
@@ -1176,7 +1208,7 @@ body.quiz-mode-active .mobile-review-start {{ display: none !important; }}
 
 <!-- Mobile sidebar toggle -->
 <button class="sb-mobile-toggle" id="sbMobileToggle" onclick="toggleMobileSidebar()">☰</button>
-<button class="mobile-review-start" id="btnReviewMobile" data-start-review="1" onclick="startReview()">복습 시작</button>
+{mobile_start_html}
 <div class="sb-overlay" id="sbOverlay" onclick="toggleMobileSidebar()"></div>
 
 <!-- Sidebar -->
@@ -1189,8 +1221,7 @@ body.quiz-mode-active .mobile-review-start {{ display: none !important; }}
             <div class="progress-label" id="progressLabel">0 / {num_cards} 완료</div>
         </div>
         <div class="sb-quiz-btns">
-            <button class="btn-review" id="btnReview" data-start-review="1" onclick="startReview()">복습 시작 (0개)</button>
-            <button class="btn-reset" id="btnReset" onclick="handleResetTap()">전체 다시 풀기<br><small>[3연타 시 초기화]</small></button>
+            {sidebar_quiz_buttons_html}
         </div>
         <div style="margin-top:12px;">
             {sidebar_html}
@@ -1200,13 +1231,7 @@ body.quiz-mode-active .mobile-review-start {{ display: none !important; }}
 
 <!-- Main card view -->
 <div class="main" id="mainContent">
-    <div class="review-hero" id="reviewHero">
-        <div>
-            <div class="review-hero-title">랜덤 복습 시작</div>
-            <div class="review-hero-sub">사이드바가 접혀도 여기서 바로 시작됩니다. 순서 힌트 없이 랜덤으로 나옵니다.</div>
-        </div>
-        <button class="review-hero-btn" id="btnReviewHero" data-start-review="1" onclick="startReview()">복습 시작</button>
-    </div>
+    {review_hero_html}
     <div class="card-grid">
         {cards_html}
     </div>
@@ -1221,6 +1246,8 @@ body.quiz-mode-active .mobile-review-start {{ display: none !important; }}
         <span class="stat" id="statGreen">🟢 0</span>
         <span class="stat" id="statMaster">😊 0</span>
         <span class="stat" id="statBlue">🔵 0</span>
+        <span class="stat" id="quizOrderModeBadge">순서대로</span>
+        <span class="stat" id="quizRemainingBadge">남음 0</span>
         <button class="undo-btn" id="undoBtn" onclick="undoLast()" disabled>↩ 되돌리기</button>
     </div>
     <div id="quizBody"></div>
@@ -1233,6 +1260,7 @@ body.quiz-mode-active .mobile-review-start {{ display: none !important; }}
 
 const STORAGE_PREFIX = {storage_prefix_js};
 const RANDOMIZE_REVIEW = {randomize_review_js};
+const ENABLE_ORDER_MODES = {enable_order_modes_js};
 const SRS_KEY = STORAGE_PREFIX + 'srs_v1';
 const HIST_KEY = STORAGE_PREFIX + 'hist_v1';
 const EDITS_KEY = STORAGE_PREFIX + 'edits_v1';
@@ -1252,6 +1280,7 @@ let bonusSrs = {{}};
 let waitTimer = null;
 let activeQuizCardId = null;
 let resumeQuizUiState = null;
+let quizOrderMode = 'ordered';
 
 function saveSrs() {{ localStorage.setItem(SRS_KEY, JSON.stringify(srs)); }}
 function saveHist() {{ localStorage.setItem(HIST_KEY, JSON.stringify(history)); }}
@@ -1326,6 +1355,7 @@ function saveQuizSession() {{
         pending: sanitizeQuizPending(pending, new Set(activeQuizCardId ? [activeQuizCardId] : [])),
         bonusMode: Boolean(bonusMode),
         bonusSrs: bonusMode ? bonusSrs : {{}},
+        orderMode: quizOrderMode,
         answerVisible: Boolean(answerEl && answerEl.classList.contains('visible')),
         guideVisible: Boolean(guideEl && guideEl.style.display !== 'none'),
         savedAt: Date.now()
@@ -1341,7 +1371,8 @@ function resumeSavedQuizIfAny() {{
         restoreCurrentId: saved.currentId || null,
         restoreState: saved,
         bonusMode: Boolean(saved.bonusMode),
-        bonusSrs: saved.bonusSrs || {{}}
+        bonusSrs: saved.bonusSrs || {{}},
+        orderMode: saved.orderMode || 'ordered'
     }});
 }}
 
@@ -1590,12 +1621,22 @@ function updateReviewBtn() {{
     const plan = getStudyPlan();
     const count = plan.dueIds.length + plan.freshIds.length;
     const label = '복습 시작 (' + count + '개)';
+    const orderedLabel = '순서대로 시작 (' + count + '개)';
+    const randomLabel = '랜덤 시작 (' + count + '개)';
     const btn = document.getElementById('btnReview');
     if (btn) btn.textContent = label;
+    const orderedBtn = document.getElementById('btnReviewOrdered');
+    if (orderedBtn) orderedBtn.textContent = orderedLabel;
+    const randomBtn = document.getElementById('btnReviewRandom');
+    if (randomBtn) randomBtn.textContent = randomLabel;
     const mobileBtn = document.getElementById('btnReviewMobile');
-    if (mobileBtn) mobileBtn.textContent = label;
+    if (mobileBtn) mobileBtn.textContent = ENABLE_ORDER_MODES ? '랜덤 (' + count + ')' : label;
     const heroBtn = document.getElementById('btnReviewHero');
     if (heroBtn) heroBtn.textContent = label;
+    const heroOrdered = document.getElementById('btnReviewHeroOrdered');
+    if (heroOrdered) heroOrdered.textContent = orderedLabel;
+    const heroRandom = document.getElementById('btnReviewHeroRandom');
+    if (heroRandom) heroRandom.textContent = randomLabel;
 }}
 
 function shuffledCopy(ids) {{
@@ -1607,12 +1648,16 @@ function shuffledCopy(ids) {{
     return arr;
 }}
 
-function startReview() {{
+function startReview(orderMode = null) {{
     const plan = getStudyPlan();
-    // Queue rule: due cards first, then unseen cards. Some focused memory decks opt into shuffle.
+    const requestedMode = orderMode === 'random' ? 'random' : 'ordered';
+    quizOrderMode = ENABLE_ORDER_MODES ? requestedMode : (RANDOMIZE_REVIEW ? 'random' : 'ordered');
+    // Queue rule: due cards first, then unseen cards. Random mode shuffles within each group only.
     // Future scheduled cards stay in pending and jump ahead only when their time arrives.
-    const reviewIds = [...plan.dueIds, ...plan.freshIds];
-    startQuizWith(RANDOMIZE_REVIEW ? shuffledCopy(reviewIds) : reviewIds, {{ pending: plan.futurePending }});
+    const reviewIds = quizOrderMode === 'random'
+        ? [...shuffledCopy(plan.dueIds), ...shuffledCopy(plan.freshIds)]
+        : [...plan.dueIds, ...plan.freshIds];
+    startQuizWith(reviewIds, {{ pending: plan.futurePending, orderMode: quizOrderMode }});
 }}
 
 let _lastStartTouch = 0;
@@ -1624,7 +1669,7 @@ function startReviewFromEvent(ev) {{
     if (ev.stopImmediatePropagation) ev.stopImmediatePropagation();
     if (ev.type === 'click' && Date.now() - _lastStartTouch < 450) return;
     if (ev.type === 'touchend') _lastStartTouch = Date.now();
-    startReview();
+    startReview(target.dataset.order || null);
 }}
 
 let _resetTaps = 0, _resetTimer = null;
@@ -1654,10 +1699,13 @@ function doResetQuiz() {{
     ALL_IDS.forEach(id => {{ srs[id] = {{ greenStreak: 0, redCount: 0, nextReview: null, mastered: false, lastRating: null }}; }});
     saveSrs();
     saveHist();
-    startQuizWith([...ALL_IDS]);
+    startQuizWith([...ALL_IDS], {{ orderMode: 'ordered' }});
 }}
 
 function startQuizWith(ids, options = {{}}) {{
+    quizOrderMode = options.orderMode === 'random' ? 'random' : 'ordered';
+    const modeBadge = document.getElementById('quizOrderModeBadge');
+    if (modeBadge) modeBadge.textContent = quizOrderMode === 'random' ? '🔀 랜덤' : '↕ 순서';
     bonusMode = Boolean(options.bonusMode);
     bonusSrs = bonusMode && options.bonusSrs && typeof options.bonusSrs === 'object' ? options.bonusSrs : {{}};
     const queued = new Set();
@@ -2274,6 +2322,8 @@ function updateStats() {{
     const el3 = document.getElementById('statGreen'); if (el3) el3.textContent = '🟢 ' + green;
     const el4 = document.getElementById('statMaster'); if (el4) el4.textContent = '😊 ' + master;
     const el5 = document.getElementById('statBlue'); if (el5) el5.textContent = '🔵 ' + blue;
+    const remaining = queue.length + pending.length + (activeQuizCardId ? 1 : 0);
+    const el6 = document.getElementById('quizRemainingBadge'); if (el6) el6.textContent = '남음 ' + remaining;
 }}
 
 function renderWaiting() {{
@@ -3986,6 +4036,7 @@ class QuizBuilder:
 
     def __init__(self, cards, title="Anki 퀴즈", storage_prefix="quiz",
                  subtitle=None, page_images=None, enable_self_answer=True, randomize_review=False,
+                 enable_order_modes=False,
                  enable_rail=True, rail_mode="pretest", rail_strict=False):
         """
         Parameters
@@ -3997,6 +4048,7 @@ class QuizBuilder:
         page_images    : {페이지번호: base64문자열} 딕셔너리 (선택)
         enable_self_answer : 퀴즈 모드에서 "내 답안 먼저 써보기" UI 표시 여부
         randomize_review : 복습 시작 버튼에서 카드 순서를 셔플할지 여부
+        enable_order_modes : 순서대로/랜덤 시작 버튼을 함께 표시
         enable_rail    : Rail 가드레일 자동 실행 (기본 True)
         rail_mode      : "pretest" (전체 rail) / "basic" (필수만)
         rail_strict    : True면 warning도 error로 승격, 빌드 중단
@@ -4008,6 +4060,7 @@ class QuizBuilder:
         self.page_images = page_images or {}
         self.enable_self_answer = enable_self_answer
         self.randomize_review = randomize_review
+        self.enable_order_modes = enable_order_modes
         self.enable_rail = enable_rail
         self.rail_mode = rail_mode
         self.rail_strict = rail_strict
@@ -4021,7 +4074,7 @@ class QuizBuilder:
         """완성된 HTML 문자열 반환"""
         return build_html(
             self.cards, self.page_images, self.title, self.storage_prefix,
-            self.enable_self_answer, self.randomize_review,
+            self.enable_self_answer, self.randomize_review, self.enable_order_modes,
             self.enable_rail, self.rail_mode, self.rail_strict
         )
 

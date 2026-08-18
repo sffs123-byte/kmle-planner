@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>충남대 안과 포테 기출 Anki · 2021–2026 · 57카드</title>
+<title>충남대 안과 포테 기출 Anki · 2021–2026 · 49카드</title>
 <link rel="icon" href="../assets/icons/favicon.svg">
 <style>
 :root {
@@ -637,38 +637,47 @@ body.quiz-mode-active .mobile-review-start { display: none !important; }
     .rating-btns { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
     .rating-btns button { width: 100%; min-width: 0; padding: 11px 8px; font-size: 13px; }
 }
+
+/* BACKUP_RESTORE_V1 */
+.backup-tools { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--card-border); display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.backup-tools button { min-height: 42px; padding: 9px 6px; border: 1px solid var(--card-border); border-radius: 8px; background: var(--card-bg); color: var(--text); cursor: pointer; font-weight: 700; }
+.backup-tools button:hover { border-color: var(--accent); color: var(--accent); }
+.backup-help { grid-column: 1 / -1; color: var(--text-dim); font-size: 11px; line-height: 1.45; text-align: center; }
+
 </style>
 </head>
 <body>
 
 <!-- Mobile sidebar toggle -->
 <button class="sb-mobile-toggle" id="sbMobileToggle" onclick="toggleMobileSidebar()">☰</button>
-<button class="mobile-review-start" id="btnReviewMobile" data-start-review="1" onclick="startReview()">복습 시작</button>
+<button class="mobile-review-start" id="btnReviewMobile" data-start-review="1" data-order="random">랜덤 퀴즈</button>
 <div class="sb-overlay" id="sbOverlay" onclick="toggleMobileSidebar()"></div>
 
 <!-- Sidebar -->
 <div class="sidebar" id="sidebar">
     <button class="sb-toggle" onclick="toggleSidebar()">☰</button>
     <div class="sb-inner">
-        <div class="sb-title">충남대 안과 포테 기출 Anki · 2021–2026 · 57카드</div>
+        <div class="sb-title">충남대 안과 포테 기출 Anki · 2021–2026 · 49카드</div>
         <div class="progress-wrap">
             <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
-            <div class="progress-label" id="progressLabel">0 / 57 완료</div>
+            <div class="progress-label" id="progressLabel">0 / 49 완료</div>
         </div>
         <div class="sb-quiz-btns">
-            <button class="btn-review" id="btnReview" data-start-review="1" onclick="startReview()">복습 시작 (0개)</button>
+
+            <button class="btn-review" id="btnReviewOrdered" data-start-review="1" data-order="ordered">순서대로 시작 (0개)</button>
+            <button class="btn-review" id="btnReviewRandom" data-start-review="1" data-order="random">랜덤 시작 (0개)</button>
             <button class="btn-reset" id="btnReset" onclick="handleResetTap()">전체 다시 풀기<br><small>[3연타 시 초기화]</small></button>
+
+            <!-- BACKUP_RESTORE_UI_V1 -->
+            <div class="backup-tools" aria-label="수정본 백업 및 복원">
+                <button type="button" id="btnExportBackup" onclick="exportBackup()">📤 수정본<br>내보내기</button>
+                <button type="button" id="btnImportBackup" onclick="document.getElementById('backupFileInput').click()">📥 수정본<br>불러오기</button>
+                <input type="file" id="backupFileInput" accept="application/json,.json" hidden onchange="importBackupFile(this.files && this.files[0]); this.value=''">
+                <div class="backup-help">수정 해설·자기답안·SRS·랜덤 세션·필기를 JSON 파일로 옮깁니다.</div>
+            </div>
         </div>
         <div style="margin-top:12px;">
-            <div class="sb-item" onclick="scrollToCard('trend01')">T1. 출제 흐름전체 경향2021~2026 충남대 안과 포테의 가…</div>
-<div class="sb-item" onclick="scrollToCard('trend02')">T2. 출제 흐름전체 경향2021 원형에서 2026 시험으로 갈수…</div>
-<div class="sb-item" onclick="scrollToCard('trend03')">T3. 출제 흐름축 9·10·11·12·13·14·21가장 촘촘하…</div>
-<div class="sb-item" onclick="scrollToCard('trend04')">T4. 출제 흐름축 11·12·13·14·16·18·19·20·2…</div>
-<div class="sb-item" onclick="scrollToCard('trend05')">T5. 출제 흐름축 21·22·23·242026년에 별도 실기시험…</div>
-<div class="sb-item" onclick="scrollToCard('trend06')">T6. 출제 흐름축 5·10·12·13·14·20·252026년…</div>
-<div class="sb-item" onclick="scrollToCard('trend07')">T7. 출제 흐름전체 경향더 이상 같은 문장이 나오지 않을 수 있…</div>
-<div class="sb-item" onclick="scrollToCard('trend08')">T8. 출제 흐름전체 경향이 덱을 가장 효율적으로 쓰는 순서는?</div>
-<div class="sb-item" onclick="scrollToCard('q01a')">Q01-A. 복기 확정축 1보조기구 없이 세극등현미경만으로 관찰 가능한…</div>
+            <div class="sb-item" onclick="scrollToCard('q01a')">Q01-A. 복기 확정축 1보조기구 없이 세극등현미경만으로 관찰 가능한…</div>
 <div class="sb-item" onclick="scrollToCard('q01b')">Q01-B. 변형축 1세극등 단독 관찰에 대한 2025 변형을 O/X로…</div>
 <div class="sb-item" onclick="scrollToCard('q02a')">Q02-A. 복기 확정축 2백내장수술 PE&amp;PCL·IOL에 대한 설명…</div>
 <div class="sb-item" onclick="scrollToCard('q02b')">Q02-B. 변형축 2백내장수술 2025~2026 추가 선지를 O/X로…</div>
@@ -723,231 +732,24 @@ body.quiz-mode-active .mobile-review-start { display: none !important; }
 
 <!-- Main card view -->
 <div class="main" id="mainContent">
+
     <div class="review-hero" id="reviewHero">
         <div>
-            <div class="review-hero-title">학습 모드 선택</div>
-            <div class="review-hero-sub">처음에는 25축 순서로, 두 번째부터는 번호 힌트 없이 랜덤 실전으로 복습하세요.</div>
+            <div class="review-hero-title">퀴즈 모드 선택</div>
+            <div class="review-hero-sub">첫 학습은 순서대로, 실전 회상은 랜덤으로. 복귀 카드는 두 모드 모두 우선 출제됩니다.</div>
         </div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;">
-          <button class="review-hero-btn" id="btnReviewHero" data-start-review="1" onclick="startReview()">순서·SRS 시작</button>
-          <button class="review-hero-btn" style="background:#7c3aed;" onclick="startQuizWith(shuffledCopy([...QUESTION_IDS]))">랜덤 실전</button>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;min-width:min(100%,360px)">
+            <button class="review-hero-btn" id="btnReviewHeroOrdered" data-start-review="1" data-order="ordered">순서대로 시작</button>
+            <button class="review-hero-btn" id="btnReviewHeroRandom" data-start-review="1" data-order="random">랜덤 시작</button>
         </div>
     </div>
     <div style="margin:0 0 14px;padding:14px 16px;border-radius:12px;
 background:linear-gradient(135deg,rgba(30,64,175,.24),rgba(124,58,237,.18));
 border:1px solid rgba(147,197,253,.35);color:#dbeafe;line-height:1.65;">
-<b>57카드</b> · 실제 문제/변형/교정 49 · 출제 흐름 8 · 불확실 복기 7<br>
-<span style="font-size:12px;color:#bfdbfe;">25개 반복축 전수 · 공식 정답지 아님 · 최신 실습 주 사진/PPT 우선</span>
+<b>49카드</b> · 실제 문제/변형/교정만 수록 · 불확실 복기 7<br>
+<span style="font-size:12px;color:#bfdbfe;">순서대로 첫 공부 · due 카드 우선 랜덤 실전 · 공식 정답지 아님 · 최신 실습 주 사진/PPT 우선</span>
 </div>
 <div class="card-grid">
-
-        <div class="card" id="card-trend01">
-            <div class="card-header">
-                <span class="card-num">T1</span>
-                <div class="card-title"><div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#5b21b6;background:#ede9fe;'>출제 흐름</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#334155;background:#e2e8f0;'>전체 경향</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>2021~2026 충남대 안과 포테의 가장 안정적인 전체 구조는?</div></div>
-                <button class="draw-btn" onclick="toggleDraw('trend01')" title="필기 모드">🍎</button>
-                <button class="edit-btn" onclick="toggleEdit('trend01')" title="편집">✏️</button>
-                <button class="copy-btn" onclick="copyQA('trend01')" title="문제+답 복사">📋</button>
-            </div>
-            <div class="card-body">
-                <button class="toggle-btn" onclick="toggleAnswer('trend01')">정답 보기 ▼</button>
-                <div class="answer-area" id="ans-trend01" style="display:none">
-                    <div class="draw-toolbar" id="draw-toolbar-trend01"></div>
-                    <div style="position:relative;">
-                        <div class="answer-content" id="ans-content-trend01"><div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>25개 문제축이 큰 틀에서 반복된다.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>1~4 전안부·백내장·안와·눈물길, 5~10 외안근·시각경로·망막·개방각녹내장, 11~14 폐쇄각녹내장·시신경유두·수술, 15~20 안성형·검사·감염·망막박리, 21~24 시력·직상검안경, 25 사진진단의 배열이 반복되었다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>번호 자체보다 25개 판단축을 먼저 고정하고, 이후 조별 변형을 얹는 방식이 가장 효율적이다.</p></section></div></div>
-                        <canvas class="draw-canvas" id="draw-canvas-trend01" style="display:none;"></canvas>
-                    </div>
-                    <button class="save-btn" id="save-trend01" style="display:none" onclick="saveEdit('trend01')">💾 저장</button>
-                </div>
-                <button class="toggle-btn guide-btn" onclick="toggleGuide('trend01')">📖 Study Guide</button>
-                <div class="guide-area" id="guide-trend01" style="display:none">
-                    <!-- guide images loaded dynamically -->
-                </div>
-                <button class="done-btn" id="done-trend01" onclick="toggleDone('trend01')">✓ 완료</button>
-            </div>
-        </div>
-
-        <div class="card" id="card-trend02">
-            <div class="card-header">
-                <span class="card-num">T2</span>
-                <div class="card-title"><div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#5b21b6;background:#ede9fe;'>출제 흐름</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#334155;background:#e2e8f0;'>전체 경향</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>2021 원형에서 2026 시험으로 갈수록 문제 형식은 어떻게 변했는가?</div></div>
-                <button class="draw-btn" onclick="toggleDraw('trend02')" title="필기 모드">🍎</button>
-                <button class="edit-btn" onclick="toggleEdit('trend02')" title="편집">✏️</button>
-                <button class="copy-btn" onclick="copyQA('trend02')" title="문제+답 복사">📋</button>
-            </div>
-            <div class="card-body">
-                <button class="toggle-btn" onclick="toggleAnswer('trend02')">정답 보기 ▼</button>
-                <div class="answer-area" id="ans-trend02" style="display:none">
-                    <div class="draw-toolbar" id="draw-toolbar-trend02"></div>
-                    <div style="position:relative;">
-                        <div class="answer-content" id="ans-content-trend02"><div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>핵심 개념은 유지되지만 선지·사진이 교체되고, 수술명·처치명을 직접 쓰는 단답형이 늘었다.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>2026에는 레이저홍채절개술, 섬유주절제술, 열공망막박리와 공막돌륭술을 사진 또는 그림 뒤에 단답으로 쓰게 한 복기가 확인된다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>옛 정답 번호 암기보다 ‘사진 → 진단 → 처치명’ 연결을 말로 회상해야 한다.</p></section></div></div>
-                        <canvas class="draw-canvas" id="draw-canvas-trend02" style="display:none;"></canvas>
-                    </div>
-                    <button class="save-btn" id="save-trend02" style="display:none" onclick="saveEdit('trend02')">💾 저장</button>
-                </div>
-                <button class="toggle-btn guide-btn" onclick="toggleGuide('trend02')">📖 Study Guide</button>
-                <div class="guide-area" id="guide-trend02" style="display:none">
-                    <!-- guide images loaded dynamically -->
-                </div>
-                <button class="done-btn" id="done-trend02" onclick="toggleDone('trend02')">✓ 완료</button>
-            </div>
-        </div>
-
-        <div class="card" id="card-trend03">
-            <div class="card-header">
-                <span class="card-num">T3</span>
-                <div class="card-title"><div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#5b21b6;background:#ede9fe;'>출제 흐름</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#0f766e;background:#ccfbf1;'>축 9·10·11·12·13·14·21</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>가장 촘촘하게 반복되는 단일 분야는?</div></div>
-                <button class="draw-btn" onclick="toggleDraw('trend03')" title="필기 모드">🍎</button>
-                <button class="edit-btn" onclick="toggleEdit('trend03')" title="편집">✏️</button>
-                <button class="copy-btn" onclick="copyQA('trend03')" title="문제+답 복사">📋</button>
-            </div>
-            <div class="card-body">
-                <button class="toggle-btn" onclick="toggleAnswer('trend03')">정답 보기 ▼</button>
-                <div class="answer-area" id="ans-trend03" style="display:none">
-                    <div class="draw-toolbar" id="draw-toolbar-trend03"></div>
-                    <div style="position:relative;">
-                        <div class="answer-content" id="ans-content-trend03"><div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>녹내장 계열이다.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>개방각녹내장, 목표안압, 선천녹내장, 급성폐쇄각녹내장, LPI, 시신경유두, trabeculectomy·Ahmed valve가 연속적으로 반복된다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>단순 정의보다 전방각·안압·시신경손상·수술사진을 함께 묶어 공부해야 한다.</p></section></div></div>
-                        <canvas class="draw-canvas" id="draw-canvas-trend03" style="display:none;"></canvas>
-                    </div>
-                    <button class="save-btn" id="save-trend03" style="display:none" onclick="saveEdit('trend03')">💾 저장</button>
-                </div>
-                <button class="toggle-btn guide-btn" onclick="toggleGuide('trend03')">📖 Study Guide</button>
-                <div class="guide-area" id="guide-trend03" style="display:none">
-                    <!-- guide images loaded dynamically -->
-                </div>
-                <button class="done-btn" id="done-trend03" onclick="toggleDone('trend03')">✓ 완료</button>
-            </div>
-        </div>
-
-        <div class="card" id="card-trend04">
-            <div class="card-header">
-                <span class="card-num">T4</span>
-                <div class="card-title"><div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#5b21b6;background:#ede9fe;'>출제 흐름</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#0f766e;background:#ccfbf1;'>축 11·12·13·14·16·18·19·20·25</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>사진 문제의 출제 흐름에서 가장 위험한 암기법은?</div></div>
-                <button class="draw-btn" onclick="toggleDraw('trend04')" title="필기 모드">🍎</button>
-                <button class="edit-btn" onclick="toggleEdit('trend04')" title="편집">✏️</button>
-                <button class="copy-btn" onclick="copyQA('trend04')" title="문제+답 복사">📋</button>
-            </div>
-            <div class="card-body">
-                <button class="toggle-btn" onclick="toggleAnswer('trend04')">정답 보기 ▼</button>
-                <div class="answer-area" id="ans-trend04" style="display:none">
-                    <div class="draw-toolbar" id="draw-toolbar-trend04"></div>
-                    <div style="position:relative;">
-                        <div class="answer-content" id="ans-content-trend04"><div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>‘번호=진단명’으로 외우는 것이다.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>같은 번호에 LPI, Ahmed valve, trabeculectomy, 망막박리, 결막하출혈, BRVO 등 서로 다른 사진이 들어간 기록이 있다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>사진의 형태적 단서와 수술 구조를 먼저 읽고 답해야 한다.</p></section></div></div>
-                        <canvas class="draw-canvas" id="draw-canvas-trend04" style="display:none;"></canvas>
-                    </div>
-                    <button class="save-btn" id="save-trend04" style="display:none" onclick="saveEdit('trend04')">💾 저장</button>
-                </div>
-                <button class="toggle-btn guide-btn" onclick="toggleGuide('trend04')">📖 Study Guide</button>
-                <div class="guide-area" id="guide-trend04" style="display:none">
-                    <!-- guide images loaded dynamically -->
-                </div>
-                <button class="done-btn" id="done-trend04" onclick="toggleDone('trend04')">✓ 완료</button>
-            </div>
-        </div>
-
-        <div class="card" id="card-trend05">
-            <div class="card-header">
-                <span class="card-num">T5</span>
-                <div class="card-title"><div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#5b21b6;background:#ede9fe;'>출제 흐름</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#0f766e;background:#ccfbf1;'>축 21·22·23·24</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>2026년에 별도 실기시험이 폐지됐는데도 반드시 외워야 하는 술기 영역은?</div></div>
-                <button class="draw-btn" onclick="toggleDraw('trend05')" title="필기 모드">🍎</button>
-                <button class="edit-btn" onclick="toggleEdit('trend05')" title="편집">✏️</button>
-                <button class="copy-btn" onclick="copyQA('trend05')" title="문제+답 복사">📋</button>
-            </div>
-            <div class="card-body">
-                <button class="toggle-btn" onclick="toggleAnswer('trend05')">정답 보기 ▼</button>
-                <div class="answer-area" id="ans-trend05" style="display:none">
-                    <div class="draw-toolbar" id="draw-toolbar-trend05"></div>
-                    <div style="position:relative;">
-                        <div class="answer-content" id="ans-content-trend05"><div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>시력측정과 직상검안경 절차다.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>체크리스트 채점은 폐지됐지만 21~24번 계열 객관식으로 반복 출제된다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>손동작 평가가 없어도 절차 순서·오답선지는 포테 지식으로 남았다.</p></section></div></div>
-                        <canvas class="draw-canvas" id="draw-canvas-trend05" style="display:none;"></canvas>
-                    </div>
-                    <button class="save-btn" id="save-trend05" style="display:none" onclick="saveEdit('trend05')">💾 저장</button>
-                </div>
-                <button class="toggle-btn guide-btn" onclick="toggleGuide('trend05')">📖 Study Guide</button>
-                <div class="guide-area" id="guide-trend05" style="display:none">
-                    <!-- guide images loaded dynamically -->
-                </div>
-                <button class="done-btn" id="done-trend05" onclick="toggleDone('trend05')">✓ 완료</button>
-            </div>
-        </div>
-
-        <div class="card" id="card-trend06">
-            <div class="card-header">
-                <span class="card-num">T6</span>
-                <div class="card-title"><div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#5b21b6;background:#ede9fe;'>출제 흐름</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#0f766e;background:#ccfbf1;'>축 5·10·12·13·14·20·25</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>2026년 뒤 조로 갈수록 확인된 변화는?</div></div>
-                <button class="draw-btn" onclick="toggleDraw('trend06')" title="필기 모드">🍎</button>
-                <button class="edit-btn" onclick="toggleEdit('trend06')" title="편집">✏️</button>
-                <button class="copy-btn" onclick="copyQA('trend06')" title="문제+답 복사">📋</button>
-            </div>
-            <div class="card-body">
-                <button class="toggle-btn" onclick="toggleAnswer('trend06')">정답 보기 ▼</button>
-                <div class="answer-area" id="ans-trend06" style="display:none">
-                    <div class="draw-toolbar" id="draw-toolbar-trend06"></div>
-                    <div style="position:relative;">
-                        <div class="answer-content" id="ans-content-trend06"><div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>선지 전면 교체와 새 사진·주관식 수술명 문제가 늘었다.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>3조에서는 외안근 선지가 전부 바뀌고, 선천녹내장에 MIGS·striae 선지가 추가됐으며, LPI와 공막돌륭술을 단답으로 쓰게 했다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>앞 조 복기는 범위 지도이고, 뒤 조 대비는 원리 설명과 새 사진 대응력이 핵심이다.</p></section></div></div>
-                        <canvas class="draw-canvas" id="draw-canvas-trend06" style="display:none;"></canvas>
-                    </div>
-                    <button class="save-btn" id="save-trend06" style="display:none" onclick="saveEdit('trend06')">💾 저장</button>
-                </div>
-                <button class="toggle-btn guide-btn" onclick="toggleGuide('trend06')">📖 Study Guide</button>
-                <div class="guide-area" id="guide-trend06" style="display:none">
-                    <!-- guide images loaded dynamically -->
-                </div>
-                <button class="done-btn" id="done-trend06" onclick="toggleDone('trend06')">✓ 완료</button>
-            </div>
-        </div>
-
-        <div class="card" id="card-trend07">
-            <div class="card-header">
-                <span class="card-num">T7</span>
-                <div class="card-title"><div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#5b21b6;background:#ede9fe;'>출제 흐름</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#334155;background:#e2e8f0;'>전체 경향</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>더 이상 같은 문장이 나오지 않을 수 있는 오래된 기출을 왜 공부해야 하는가?</div></div>
-                <button class="draw-btn" onclick="toggleDraw('trend07')" title="필기 모드">🍎</button>
-                <button class="edit-btn" onclick="toggleEdit('trend07')" title="편집">✏️</button>
-                <button class="copy-btn" onclick="copyQA('trend07')" title="문제+답 복사">📋</button>
-            </div>
-            <div class="card-body">
-                <button class="toggle-btn" onclick="toggleAnswer('trend07')">정답 보기 ▼</button>
-                <div class="answer-area" id="ans-trend07" style="display:none">
-                    <div class="draw-toolbar" id="draw-toolbar-trend07"></div>
-                    <div style="position:relative;">
-                        <div class="answer-content" id="ans-content-trend07"><div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>오답을 만드는 방식과 반복되는 판단축을 보여주기 때문이다.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>예를 들어 안압 21mmHg만으로 녹내장을 진단하게 하거나, 외안근·검안경 절차에서 방향을 뒤집는 선지는 문장이 바뀌어도 재사용 가능하다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>정답 문장보다 ‘왜 나머지가 틀렸는가’를 설명할 수 있어야 변형에 강하다.</p></section></div></div>
-                        <canvas class="draw-canvas" id="draw-canvas-trend07" style="display:none;"></canvas>
-                    </div>
-                    <button class="save-btn" id="save-trend07" style="display:none" onclick="saveEdit('trend07')">💾 저장</button>
-                </div>
-                <button class="toggle-btn guide-btn" onclick="toggleGuide('trend07')">📖 Study Guide</button>
-                <div class="guide-area" id="guide-trend07" style="display:none">
-                    <!-- guide images loaded dynamically -->
-                </div>
-                <button class="done-btn" id="done-trend07" onclick="toggleDone('trend07')">✓ 완료</button>
-            </div>
-        </div>
-
-        <div class="card" id="card-trend08">
-            <div class="card-header">
-                <span class="card-num">T8</span>
-                <div class="card-title"><div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#5b21b6;background:#ede9fe;'>출제 흐름</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#334155;background:#e2e8f0;'>전체 경향</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>이 덱을 가장 효율적으로 쓰는 순서는?</div></div>
-                <button class="draw-btn" onclick="toggleDraw('trend08')" title="필기 모드">🍎</button>
-                <button class="edit-btn" onclick="toggleEdit('trend08')" title="편집">✏️</button>
-                <button class="copy-btn" onclick="copyQA('trend08')" title="문제+답 복사">📋</button>
-            </div>
-            <div class="card-body">
-                <button class="toggle-btn" onclick="toggleAnswer('trend08')">정답 보기 ▼</button>
-                <div class="answer-area" id="ans-trend08" style="display:none">
-                    <div class="draw-toolbar" id="draw-toolbar-trend08"></div>
-                    <div style="position:relative;">
-                        <div class="answer-content" id="ans-content-trend08"><div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>T카드로 구조 파악 → Q01~Q25 순서 학습 → 랜덤 실전 → 불확실 카드만 최신 강의사진으로 보정.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>순서 학습은 25축을 고정하고, 랜덤 학습은 번호 힌트를 제거한다. 불확실 복기는 공식 답처럼 암기하지 않는다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>실습 주 최신 PPT의 사진이 최종 우선이며, 이 덱은 복기 기반 범위 지도다.</p></section></div></div>
-                        <canvas class="draw-canvas" id="draw-canvas-trend08" style="display:none;"></canvas>
-                    </div>
-                    <button class="save-btn" id="save-trend08" style="display:none" onclick="saveEdit('trend08')">💾 저장</button>
-                </div>
-                <button class="toggle-btn guide-btn" onclick="toggleGuide('trend08')">📖 Study Guide</button>
-                <div class="guide-area" id="guide-trend08" style="display:none">
-                    <!-- guide images loaded dynamically -->
-                </div>
-                <button class="done-btn" id="done-trend08" onclick="toggleDone('trend08')">✓ 완료</button>
-            </div>
-        </div>
 
         <div class="card" id="card-q01a">
             <div class="card-header">
@@ -2234,6 +2036,8 @@ border:1px solid rgba(147,197,253,.35);color:#dbeafe;line-height:1.65;">
         <span class="stat" id="statGreen">🟢 0</span>
         <span class="stat" id="statMaster">😊 0</span>
         <span class="stat" id="statBlue">🔵 0</span>
+        <span class="stat" id="quizOrderModeBadge">순서대로</span>
+        <span class="stat" id="quizRemainingBadge">남음 0</span>
         <button class="undo-btn" id="undoBtn" onclick="undoLast()" disabled>↩ 되돌리기</button>
     </div>
     <div id="quizBody"></div>
@@ -2242,14 +2046,6 @@ border:1px solid rgba(147,197,253,.35);color:#dbeafe;line-height:1.65;">
 <script>
 // ── Data ──
 const QUIZ_DATA = {
-"trend01": { num: `T1`, q: `<div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#5b21b6;background:#ede9fe;'>출제 흐름</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#334155;background:#e2e8f0;'>전체 경향</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>2021~2026 충남대 안과 포테의 가장 안정적인 전체 구조는?</div>`, a: `<div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>25개 문제축이 큰 틀에서 반복된다.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>1~4 전안부·백내장·안와·눈물길, 5~10 외안근·시각경로·망막·개방각녹내장, 11~14 폐쇄각녹내장·시신경유두·수술, 15~20 안성형·검사·감염·망막박리, 21~24 시력·직상검안경, 25 사진진단의 배열이 반복되었다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>번호 자체보다 25개 판단축을 먼저 고정하고, 이후 조별 변형을 얹는 방식이 가장 효율적이다.</p></section></div>`, g: `<div style='line-height:1.72;color:#0f172a;'><h4 style='margin:0 0 8px;'>Source / QC</h4><p style='margin:6px 0;'><b>출처:</b> 2021 원형 · 2025 HI·야마·복기 · 2026 1·2·3조</p><p style='margin:6px 0;'><b>반복축:</b> 전체 경향</p><p style='margin:6px 0;'><b>신뢰표시:</b> 분석</p><p style='margin:8px 0 0;color:#475569;font-size:12px;'>학생 복기 기반이며 실습 주 최신 PPT·공식 안내가 최종 우선입니다.</p></div>` },
-"trend02": { num: `T2`, q: `<div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#5b21b6;background:#ede9fe;'>출제 흐름</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#334155;background:#e2e8f0;'>전체 경향</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>2021 원형에서 2026 시험으로 갈수록 문제 형식은 어떻게 변했는가?</div>`, a: `<div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>핵심 개념은 유지되지만 선지·사진이 교체되고, 수술명·처치명을 직접 쓰는 단답형이 늘었다.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>2026에는 레이저홍채절개술, 섬유주절제술, 열공망막박리와 공막돌륭술을 사진 또는 그림 뒤에 단답으로 쓰게 한 복기가 확인된다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>옛 정답 번호 암기보다 ‘사진 → 진단 → 처치명’ 연결을 말로 회상해야 한다.</p></section></div>`, g: `<div style='line-height:1.72;color:#0f172a;'><h4 style='margin:0 0 8px;'>Source / QC</h4><p style='margin:6px 0;'><b>출처:</b> 2021 원형 · 2026-04-24 · 2026-05-01</p><p style='margin:6px 0;'><b>반복축:</b> 전체 경향</p><p style='margin:6px 0;'><b>신뢰표시:</b> 분석</p><p style='margin:8px 0 0;color:#475569;font-size:12px;'>학생 복기 기반이며 실습 주 최신 PPT·공식 안내가 최종 우선입니다.</p></div>` },
-"trend03": { num: `T3`, q: `<div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#5b21b6;background:#ede9fe;'>출제 흐름</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#0f766e;background:#ccfbf1;'>축 9·10·11·12·13·14·21</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>가장 촘촘하게 반복되는 단일 분야는?</div>`, a: `<div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>녹내장 계열이다.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>개방각녹내장, 목표안압, 선천녹내장, 급성폐쇄각녹내장, LPI, 시신경유두, trabeculectomy·Ahmed valve가 연속적으로 반복된다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>단순 정의보다 전방각·안압·시신경손상·수술사진을 함께 묶어 공부해야 한다.</p></section></div>`, g: `<div style='line-height:1.72;color:#0f172a;'><h4 style='margin:0 0 8px;'>Source / QC</h4><p style='margin:6px 0;'><b>출처:</b> 2021 원형 · 2025 HI · 2026 1·2·3조</p><p style='margin:6px 0;'><b>반복축:</b> 9, 10, 11, 12, 13, 14, 21</p><p style='margin:6px 0;'><b>신뢰표시:</b> 분석</p><p style='margin:8px 0 0;color:#475569;font-size:12px;'>학생 복기 기반이며 실습 주 최신 PPT·공식 안내가 최종 우선입니다.</p></div>` },
-"trend04": { num: `T4`, q: `<div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#5b21b6;background:#ede9fe;'>출제 흐름</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#0f766e;background:#ccfbf1;'>축 11·12·13·14·16·18·19·20·25</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>사진 문제의 출제 흐름에서 가장 위험한 암기법은?</div>`, a: `<div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>‘번호=진단명’으로 외우는 것이다.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>같은 번호에 LPI, Ahmed valve, trabeculectomy, 망막박리, 결막하출혈, BRVO 등 서로 다른 사진이 들어간 기록이 있다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>사진의 형태적 단서와 수술 구조를 먼저 읽고 답해야 한다.</p></section></div>`, g: `<div style='line-height:1.72;color:#0f172a;'><h4 style='margin:0 0 8px;'>Source / QC</h4><p style='margin:6px 0;'><b>출처:</b> 2025 복기 · 2026-04-24 · 2026-05-01</p><p style='margin:6px 0;'><b>반복축:</b> 11, 12, 13, 14, 16, 18, 19, 20, 25</p><p style='margin:6px 0;'><b>신뢰표시:</b> 분석</p><p style='margin:8px 0 0;color:#475569;font-size:12px;'>학생 복기 기반이며 실습 주 최신 PPT·공식 안내가 최종 우선입니다.</p></div>` },
-"trend05": { num: `T5`, q: `<div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#5b21b6;background:#ede9fe;'>출제 흐름</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#0f766e;background:#ccfbf1;'>축 21·22·23·24</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>2026년에 별도 실기시험이 폐지됐는데도 반드시 외워야 하는 술기 영역은?</div>`, a: `<div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>시력측정과 직상검안경 절차다.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>체크리스트 채점은 폐지됐지만 21~24번 계열 객관식으로 반복 출제된다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>손동작 평가가 없어도 절차 순서·오답선지는 포테 지식으로 남았다.</p></section></div>`, g: `<div style='line-height:1.72;color:#0f172a;'><h4 style='margin:0 0 8px;'>Source / QC</h4><p style='margin:6px 0;'><b>출처:</b> 2026 최신 인계 · 2025 야마 · 2026-04-17·04-24</p><p style='margin:6px 0;'><b>반복축:</b> 21, 22, 23, 24</p><p style='margin:6px 0;'><b>신뢰표시:</b> 분석</p><p style='margin:8px 0 0;color:#475569;font-size:12px;'>학생 복기 기반이며 실습 주 최신 PPT·공식 안내가 최종 우선입니다.</p></div>` },
-"trend06": { num: `T6`, q: `<div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#5b21b6;background:#ede9fe;'>출제 흐름</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#0f766e;background:#ccfbf1;'>축 5·10·12·13·14·20·25</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>2026년 뒤 조로 갈수록 확인된 변화는?</div>`, a: `<div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>선지 전면 교체와 새 사진·주관식 수술명 문제가 늘었다.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>3조에서는 외안근 선지가 전부 바뀌고, 선천녹내장에 MIGS·striae 선지가 추가됐으며, LPI와 공막돌륭술을 단답으로 쓰게 했다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>앞 조 복기는 범위 지도이고, 뒤 조 대비는 원리 설명과 새 사진 대응력이 핵심이다.</p></section></div>`, g: `<div style='line-height:1.72;color:#0f172a;'><h4 style='margin:0 0 8px;'>Source / QC</h4><p style='margin:6px 0;'><b>출처:</b> 2026-04-17 · 2026-04-24 · 2026-05-01</p><p style='margin:6px 0;'><b>반복축:</b> 5, 10, 12, 13, 14, 20, 25</p><p style='margin:6px 0;'><b>신뢰표시:</b> 분석</p><p style='margin:8px 0 0;color:#475569;font-size:12px;'>학생 복기 기반이며 실습 주 최신 PPT·공식 안내가 최종 우선입니다.</p></div>` },
-"trend07": { num: `T7`, q: `<div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#5b21b6;background:#ede9fe;'>출제 흐름</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#334155;background:#e2e8f0;'>전체 경향</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>더 이상 같은 문장이 나오지 않을 수 있는 오래된 기출을 왜 공부해야 하는가?</div>`, a: `<div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>오답을 만드는 방식과 반복되는 판단축을 보여주기 때문이다.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>예를 들어 안압 21mmHg만으로 녹내장을 진단하게 하거나, 외안근·검안경 절차에서 방향을 뒤집는 선지는 문장이 바뀌어도 재사용 가능하다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>정답 문장보다 ‘왜 나머지가 틀렸는가’를 설명할 수 있어야 변형에 강하다.</p></section></div>`, g: `<div style='line-height:1.72;color:#0f172a;'><h4 style='margin:0 0 8px;'>Source / QC</h4><p style='margin:6px 0;'><b>출처:</b> 2021 원형 · 2025·2026 변형</p><p style='margin:6px 0;'><b>반복축:</b> 전체 경향</p><p style='margin:6px 0;'><b>신뢰표시:</b> 분석</p><p style='margin:8px 0 0;color:#475569;font-size:12px;'>학생 복기 기반이며 실습 주 최신 PPT·공식 안내가 최종 우선입니다.</p></div>` },
-"trend08": { num: `T8`, q: `<div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#5b21b6;background:#ede9fe;'>출제 흐름</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#334155;background:#e2e8f0;'>전체 경향</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>이 덱을 가장 효율적으로 쓰는 순서는?</div>`, a: `<div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>T카드로 구조 파악 → Q01~Q25 순서 학습 → 랜덤 실전 → 불확실 카드만 최신 강의사진으로 보정.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>순서 학습은 25축을 고정하고, 랜덤 학습은 번호 힌트를 제거한다. 불확실 복기는 공식 답처럼 암기하지 않는다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>실습 주 최신 PPT의 사진이 최종 우선이며, 이 덱은 복기 기반 범위 지도다.</p></section></div>`, g: `<div style='line-height:1.72;color:#0f172a;'><h4 style='margin:0 0 8px;'>Source / QC</h4><p style='margin:6px 0;'><b>출처:</b> 2026 평가·자료맵 · 기출 전수정리</p><p style='margin:6px 0;'><b>반복축:</b> 전체 경향</p><p style='margin:6px 0;'><b>신뢰표시:</b> 분석</p><p style='margin:8px 0 0;color:#475569;font-size:12px;'>학생 복기 기반이며 실습 주 최신 PPT·공식 안내가 최종 우선입니다.</p></div>` },
 "q01a": { num: `Q01-A`, q: `<div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#166534;background:#dcfce7;'>복기 확정</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#0f766e;background:#ccfbf1;'>축 1</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>보조기구 없이 세극등현미경만으로 관찰 가능한 구조는?</div><ol style='margin:14px 0 0 1.3rem;padding:0;color:#e2e8f0;'><li style='margin:8px 0;padding-left:4px;line-height:1.62;'>주변부 망막</li><li style='margin:8px 0;padding-left:4px;line-height:1.62;'>수정체</li><li style='margin:8px 0;padding-left:4px;line-height:1.62;'>쉴렘관</li><li style='margin:8px 0;padding-left:4px;line-height:1.62;'>섬유주</li><li style='margin:8px 0;padding-left:4px;line-height:1.62;'>시신경</li></ol>`, a: `<div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>② 수정체</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>세극등만으로 눈꺼풀·결막·각막·앞방·홍채·수정체·유리체 앞부분을 본다. 망막은 렌즈, 전방각은 프리즘이 필요하다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>2021 원형. 이후에는 ‘가능/불가능’을 뒤집고 정답 구조를 각막·쉴렘관·시신경으로 바꿨다.</p></section></div>`, g: `<div style='line-height:1.72;color:#0f172a;'><h4 style='margin:0 0 8px;'>Source / QC</h4><p style='margin:6px 0;'><b>출처:</b> 2021 원형 · 안과 필기시험 HI</p><p style='margin:6px 0;'><b>반복축:</b> 1</p><p style='margin:6px 0;'><b>신뢰표시:</b> 복기 확정</p><p style='margin:8px 0 0;color:#475569;font-size:12px;'>학생 복기 기반이며 실습 주 최신 PPT·공식 안내가 최종 우선입니다.</p></div>` },
 "q01b": { num: `Q01-B`, q: `<div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#1d4ed8;background:#dbeafe;'>변형</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#0f766e;background:#ccfbf1;'>축 1</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>세극등 단독 관찰에 대한 2025 변형을 O/X로 판단하라.</div><ol style='margin:14px 0 0 1.3rem;padding:0;color:#e2e8f0;'><li style='margin:8px 0;padding-left:4px;line-height:1.62;'>각막은 관찰 가능하다.</li><li style='margin:8px 0;padding-left:4px;line-height:1.62;'>쉴렘관은 관찰 가능하다.</li><li style='margin:8px 0;padding-left:4px;line-height:1.62;'>시신경은 관찰 가능하다.</li><li style='margin:8px 0;padding-left:4px;line-height:1.62;'>전방각은 보조기구 없이 관찰 가능하다.</li></ol>`, a: `<div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>O, X, X, X</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>각막은 전안부 구조다. 쉴렘관·전방각에는 전방각경/프리즘이, 시신경에는 안저 관찰용 광학계가 필요하다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>정답 구조 하나보다 ‘단독 관찰 범위’를 통째로 외우는 문제로 변했다.</p></section></div>`, g: `<div style='line-height:1.72;color:#0f172a;'><h4 style='margin:0 0 8px;'>Source / QC</h4><p style='margin:6px 0;'><b>출처:</b> 2025 HI·복기</p><p style='margin:6px 0;'><b>반복축:</b> 1</p><p style='margin:6px 0;'><b>신뢰표시:</b> 변형</p><p style='margin:8px 0 0;color:#475569;font-size:12px;'>학생 복기 기반이며 실습 주 최신 PPT·공식 안내가 최종 우선입니다.</p></div>` },
 "q02a": { num: `Q02-A`, q: `<div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#166534;background:#dcfce7;'>복기 확정</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#0f766e;background:#ccfbf1;'>축 2</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>백내장수술 PE&amp;PCL·IOL에 대한 설명 중 옳은 것은?</div><ol style='margin:14px 0 0 1.3rem;padding:0;color:#e2e8f0;'><li style='margin:8px 0;padding-left:4px;line-height:1.62;'>인공수정체는 유리체강 내에 둔다.</li><li style='margin:8px 0;padding-left:4px;line-height:1.62;'>인공수정체 도수는 환자의 나이에 따라 결정한다.</li><li style='margin:8px 0;padding-left:4px;line-height:1.62;'>인공수정체는 조절능력을 회복시킨다.</li><li style='margin:8px 0;padding-left:4px;line-height:1.62;'>초음파는 수정체 피질을 제거할 때 주로 사용한다.</li><li style='margin:8px 0;padding-left:4px;line-height:1.62;'>수술 시 후낭은 남겨둔다.</li></ol>`, a: `<div style='display:grid;gap:11px;'><section style='background:#ecfdf5;border:1px solid #86efac;color:#064e3b;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>정답·판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>⑤ 수술 시 후낭은 남겨둔다.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>수정체낭을 지지대로 남겨 후방 인공수정체를 안정적으로 삽입한다. 초음파는 주로 핵을 유화하고 피질은 흡인한다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>수술 단계와 IOL 위치·기능을 묶어 묻는 안정 축이다.</p></section></div>`, g: `<div style='line-height:1.72;color:#0f172a;'><h4 style='margin:0 0 8px;'>Source / QC</h4><p style='margin:6px 0;'><b>출처:</b> 2021 원형 · 2025 야마</p><p style='margin:6px 0;'><b>반복축:</b> 2</p><p style='margin:6px 0;'><b>신뢰표시:</b> 복기 확정</p><p style='margin:8px 0 0;color:#475569;font-size:12px;'>학생 복기 기반이며 실습 주 최신 PPT·공식 안내가 최종 우선입니다.</p></div>` },
@@ -2300,12 +2096,11 @@ const QUIZ_DATA = {
 "q25d": { num: `Q25-D`, q: `<div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#9a3412;background:#ffedd5;'>진단 미확정</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#0f766e;background:#ccfbf1;'>축 25</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>2026-05-01 중심부에 노란 삼출물 같은 점이 보였다는 새 안저사진의 진단은?</div><div style='margin:10px 0 0;padding:8px 10px;border-radius:8px;background:rgba(251,146,60,.13);border:1px solid rgba(251,146,60,.45);color:#fed7aa;font-size:12px;font-weight:750;'>⚠️ 불완전 학생 복기 — 정답을 추측하지 말고 답면의 한계를 확인하세요.</div>`, a: `<div style='display:grid;gap:11px;'><section style='background:#fff7ed;border:1px solid #fdba74;color:#7c2d12;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>불확실성 포함 판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>원문 확인 필요: 복기 작성자도 BRVO나 PRP 후 상태가 아니라고만 기록했고 정확한 진단을 확정하지 못했다.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>사진 없이 노란 점이라는 서술만으로 특정 황반질환을 단정하면 안 된다. 실습 주 최신 PPT 사진을 우선 확인한다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>마지막 사진문제는 조마다 교체되므로 형태학적 감별이 필요하다.</p></section></div>`, g: `<div style='line-height:1.72;color:#0f172a;'><h4 style='margin:0 0 8px;'>Source / QC</h4><p style='margin:6px 0;'><b>출처:</b> 2026-05-01 3조</p><p style='margin:6px 0;'><b>반복축:</b> 25</p><p style='margin:6px 0;'><b>신뢰표시:</b> 진단 미확정</p><p style='margin:8px 0 0;color:#475569;font-size:12px;'>학생 복기 기반이며 실습 주 최신 PPT·공식 안내가 최종 우선입니다.</p></div>` },
 "qx01": { num: `QX-1`, q: `<div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#9a3412;background:#ffedd5;'>HI 추가·불완전</span><span style='display:inline-flex;align-items:center;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:850;color:#334155;background:#e2e8f0;'>전체 경향</span></div><div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>HI에 남은 ‘29세 여성, 야구공 수상 후 진단’ 추가 문항의 확정 답은?</div><div style='margin:10px 0 0;padding:8px 10px;border-radius:8px;background:rgba(251,146,60,.13);border:1px solid rgba(251,146,60,.45);color:#fed7aa;font-size:12px;font-weight:750;'>⚠️ 불완전 학생 복기 — 정답을 추측하지 말고 답면의 한계를 확인하세요.</div>`, a: `<div style='display:grid;gap:11px;'><section style='background:#fff7ed;border:1px solid #fdba74;color:#7c2d12;border-radius:10px;padding:12px 14px;'><div style='font-size:12px;font-weight:850;margin-bottom:5px;'>불확실성 포함 판정</div><div style='font-size:15px;font-weight:900;line-height:1.7;'>원문 확인 필요: 추정답으로 전방출혈(hyphema) 또는 비천공성 안구손상이 적혀 있으나 사진·완전 문장이 없어 공식 답으로 확정할 수 없다.</div></section><section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 13px;color:#111827;'><h4 style='margin:0 0 6px;'>왜?</h4><p style='margin:7px 0;line-height:1.72;'>둔상 후 전방의 수평 혈액층이면 hyphema를 우선 생각하지만, 이 카드의 목적은 불완전 복기를 확정답으로 암기하지 않는 것이다.</p></section><section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;padding:11px 13px;color:#1e3a8a;'><h4 style='margin:0 0 6px;'>출제 흐름</h4><p style='margin:7px 0;line-height:1.72;'>25축 밖의 추가 사진문제가 들어올 수 있음을 보여준다.</p></section></div>`, g: `<div style='line-height:1.72;color:#0f172a;'><h4 style='margin:0 0 8px;'>Source / QC</h4><p style='margin:6px 0;'><b>출처:</b> 안과 필기시험 HI 추가 문구</p><p style='margin:6px 0;'><b>반복축:</b> 전체 경향</p><p style='margin:6px 0;'><b>신뢰표시:</b> HI 추가·불완전</p><p style='margin:8px 0 0;color:#475569;font-size:12px;'>학생 복기 기반이며 실습 주 최신 PPT·공식 안내가 최종 우선입니다.</p></div>` }
 };
-const ALL_IDS = ["trend01", "trend02", "trend03", "trend04", "trend05", "trend06", "trend07", "trend08", "q01a", "q01b", "q02a", "q02b", "q03a", "q03b", "q04", "q05a", "q05b", "q06a", "q06b", "q07", "q08a", "q08b", "q09a", "q09b", "q10a", "q10b", "q10c", "q11", "q12", "q13a", "q13b", "q14a", "q14b", "q15a", "q15b", "q15c", "q16", "q17", "q18a", "q18b", "q18c", "q19a", "q19b", "q20a", "q20b", "q20c", "q21", "q22", "q23", "q24a", "q24b", "q24c", "q25a", "q25b", "q25c", "q25d", "qx01"];
-
-const QUESTION_IDS = ["q01a", "q01b", "q02a", "q02b", "q03a", "q03b", "q04", "q05a", "q05b", "q06a", "q06b", "q07", "q08a", "q08b", "q09a", "q09b", "q10a", "q10b", "q10c", "q11", "q12", "q13a", "q13b", "q14a", "q14b", "q15a", "q15b", "q15c", "q16", "q17", "q18a", "q18b", "q18c", "q19a", "q19b", "q20a", "q20b", "q20c", "q21", "q22", "q23", "q24a", "q24b", "q24c", "q25a", "q25b", "q25c", "q25d", "qx01"];
+const ALL_IDS = ["q01a", "q01b", "q02a", "q02b", "q03a", "q03b", "q04", "q05a", "q05b", "q06a", "q06b", "q07", "q08a", "q08b", "q09a", "q09b", "q10a", "q10b", "q10c", "q11", "q12", "q13a", "q13b", "q14a", "q14b", "q15a", "q15b", "q15c", "q16", "q17", "q18a", "q18b", "q18c", "q19a", "q19b", "q20a", "q20b", "q20c", "q21", "q22", "q23", "q24a", "q24b", "q24c", "q25a", "q25b", "q25c", "q25d", "qx01"];
 
 const STORAGE_PREFIX = "cnu_ophthalmology_posttest_anki_20260818_v1_";
 const RANDOMIZE_REVIEW = false;
+const ENABLE_ORDER_MODES = true;
 const SRS_KEY = STORAGE_PREFIX + 'srs_v1';
 const HIST_KEY = STORAGE_PREFIX + 'hist_v1';
 const EDITS_KEY = STORAGE_PREFIX + 'edits_v1';
@@ -2325,6 +2120,7 @@ let bonusSrs = {};
 let waitTimer = null;
 let activeQuizCardId = null;
 let resumeQuizUiState = null;
+let quizOrderMode = 'ordered';
 
 function saveSrs() { localStorage.setItem(SRS_KEY, JSON.stringify(srs)); }
 function saveHist() { localStorage.setItem(HIST_KEY, JSON.stringify(history)); }
@@ -2399,6 +2195,7 @@ function saveQuizSession() {
         pending: sanitizeQuizPending(pending, new Set(activeQuizCardId ? [activeQuizCardId] : [])),
         bonusMode: Boolean(bonusMode),
         bonusSrs: bonusMode ? bonusSrs : {},
+        orderMode: quizOrderMode,
         answerVisible: Boolean(answerEl && answerEl.classList.contains('visible')),
         guideVisible: Boolean(guideEl && guideEl.style.display !== 'none'),
         savedAt: Date.now()
@@ -2414,7 +2211,8 @@ function resumeSavedQuizIfAny() {
         restoreCurrentId: saved.currentId || null,
         restoreState: saved,
         bonusMode: Boolean(saved.bonusMode),
-        bonusSrs: saved.bonusSrs || {}
+        bonusSrs: saved.bonusSrs || {},
+        orderMode: saved.orderMode || 'ordered'
     });
 }
 
@@ -2665,12 +2463,22 @@ function updateReviewBtn() {
     const plan = getStudyPlan();
     const count = plan.dueIds.length + plan.freshIds.length;
     const label = '복습 시작 (' + count + '개)';
+    const orderedLabel = '순서대로 시작 (' + count + '개)';
+    const randomLabel = '랜덤 시작 (' + count + '개)';
     const btn = document.getElementById('btnReview');
     if (btn) btn.textContent = label;
+    const orderedBtn = document.getElementById('btnReviewOrdered');
+    if (orderedBtn) orderedBtn.textContent = orderedLabel;
+    const randomBtn = document.getElementById('btnReviewRandom');
+    if (randomBtn) randomBtn.textContent = randomLabel;
     const mobileBtn = document.getElementById('btnReviewMobile');
-    if (mobileBtn) mobileBtn.textContent = label;
+    if (mobileBtn) mobileBtn.textContent = ENABLE_ORDER_MODES ? '랜덤 (' + count + ')' : label;
     const heroBtn = document.getElementById('btnReviewHero');
     if (heroBtn) heroBtn.textContent = label;
+    const heroOrdered = document.getElementById('btnReviewHeroOrdered');
+    if (heroOrdered) heroOrdered.textContent = orderedLabel;
+    const heroRandom = document.getElementById('btnReviewHeroRandom');
+    if (heroRandom) heroRandom.textContent = randomLabel;
 }
 
 function shuffledCopy(ids) {
@@ -2682,12 +2490,16 @@ function shuffledCopy(ids) {
     return arr;
 }
 
-function startReview() {
+function startReview(orderMode = null) {
     const plan = getStudyPlan();
-    // Queue rule: due cards first, then unseen cards. Some focused memory decks opt into shuffle.
+    const requestedMode = orderMode === 'random' ? 'random' : 'ordered';
+    quizOrderMode = ENABLE_ORDER_MODES ? requestedMode : (RANDOMIZE_REVIEW ? 'random' : 'ordered');
+    // Queue rule: due cards first, then unseen cards. Random mode shuffles within each group only.
     // Future scheduled cards stay in pending and jump ahead only when their time arrives.
-    const reviewIds = [...plan.dueIds, ...plan.freshIds];
-    startQuizWith(RANDOMIZE_REVIEW ? shuffledCopy(reviewIds) : reviewIds, { pending: plan.futurePending });
+    const reviewIds = quizOrderMode === 'random'
+        ? [...shuffledCopy(plan.dueIds), ...shuffledCopy(plan.freshIds)]
+        : [...plan.dueIds, ...plan.freshIds];
+    startQuizWith(reviewIds, { pending: plan.futurePending, orderMode: quizOrderMode });
 }
 
 let _lastStartTouch = 0;
@@ -2699,7 +2511,7 @@ function startReviewFromEvent(ev) {
     if (ev.stopImmediatePropagation) ev.stopImmediatePropagation();
     if (ev.type === 'click' && Date.now() - _lastStartTouch < 450) return;
     if (ev.type === 'touchend') _lastStartTouch = Date.now();
-    startReview();
+    startReview(target.dataset.order || null);
 }
 
 let _resetTaps = 0, _resetTimer = null;
@@ -2729,10 +2541,13 @@ function doResetQuiz() {
     ALL_IDS.forEach(id => { srs[id] = { greenStreak: 0, redCount: 0, nextReview: null, mastered: false, lastRating: null }; });
     saveSrs();
     saveHist();
-    startQuizWith([...ALL_IDS]);
+    startQuizWith([...ALL_IDS], { orderMode: 'ordered' });
 }
 
 function startQuizWith(ids, options = {}) {
+    quizOrderMode = options.orderMode === 'random' ? 'random' : 'ordered';
+    const modeBadge = document.getElementById('quizOrderModeBadge');
+    if (modeBadge) modeBadge.textContent = quizOrderMode === 'random' ? '🔀 랜덤' : '↕ 순서';
     bonusMode = Boolean(options.bonusMode);
     bonusSrs = bonusMode && options.bonusSrs && typeof options.bonusSrs === 'object' ? options.bonusSrs : {};
     const queued = new Set();
@@ -3361,6 +3176,8 @@ function updateStats() {
     const el3 = document.getElementById('statGreen'); if (el3) el3.textContent = '🟢 ' + green;
     const el4 = document.getElementById('statMaster'); if (el4) el4.textContent = '😊 ' + master;
     const el5 = document.getElementById('statBlue'); if (el5) el5.textContent = '🔵 ' + blue;
+    const remaining = queue.length + pending.length + (activeQuizCardId ? 1 : 0);
+    const el6 = document.getElementById('quizRemainingBadge'); if (el6) el6.textContent = '남음 ' + remaining;
 }
 
 function renderWaiting() {
@@ -5034,6 +4851,115 @@ const guideObserver = new MutationObserver(function(mutations) {
         }
     });
 });
+
+
+// ── Versioned backup / restore ──
+const BACKUP_SITE_ID = "cnu-ophthalmology-posttest-anki";
+const BACKUP_DOWNLOAD_PREFIX = "충남대_안과_Anki_수정본";
+const BACKUP_FORMAT = 'openclaw-anki-backup';
+const BACKUP_VERSION = 1;
+const BACKUP_MAX_BYTES = 64 * 1024 * 1024;
+
+function flushEditableChangesForBackup() {
+    ALL_IDS.forEach(id => {
+        const content = document.getElementById('ans-content-' + id);
+        if (content && content.contentEditable === 'true') edits[id] = content.innerHTML;
+    });
+    const quizContent = document.getElementById('quizAnsContent');
+    if (activeQuizCardId && quizContent && quizContent.contentEditable === 'true') edits[activeQuizCardId] = quizContent.innerHTML;
+    saveEdits();
+}
+
+function collectBackupStorage() {
+    flushEditableChangesForBackup();
+    saveQuizSession();
+    const data = {};
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && key.startsWith(STORAGE_PREFIX)) {
+            data[key.slice(STORAGE_PREFIX.length)] = localStorage.getItem(key);
+        }
+    }
+    return data;
+}
+
+function exportBackup() {
+    try {
+        const payload = {
+            format: BACKUP_FORMAT,
+            version: BACKUP_VERSION,
+            siteId: BACKUP_SITE_ID,
+            storagePrefix: STORAGE_PREFIX,
+            exportedAt: new Date().toISOString(),
+            cardCount: ALL_IDS.length,
+            data: collectBackupStorage()
+        };
+        const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+        const day = payload.exportedAt.slice(0, 10).replaceAll('-', '');
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = BACKUP_DOWNLOAD_PREFIX + '_' + day + '.json';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+    } catch (err) {
+        console.error('Backup export failed', err);
+        alert('수정본 내보내기에 실패했습니다. 브라우저 저장공간을 확인해 주세요.');
+    }
+}
+
+function validateBackupPayload(payload) {
+    if (!payload || typeof payload !== 'object' || Array.isArray(payload)) throw new Error('JSON object required');
+    if (payload.format !== BACKUP_FORMAT || payload.version !== BACKUP_VERSION) throw new Error('Unsupported backup format');
+    if (payload.siteId !== BACKUP_SITE_ID || payload.storagePrefix !== STORAGE_PREFIX) throw new Error('Wrong site backup');
+    if (!payload.data || typeof payload.data !== 'object' || Array.isArray(payload.data)) throw new Error('Invalid data block');
+    const clean = {};
+    for (const suffix of Object.keys(payload.data)) {
+        const value = payload.data[suffix];
+        if (!suffix || suffix.length > 100 || suffix.includes('__proto__') || typeof value !== 'string') throw new Error('Invalid storage entry');
+        JSON.parse(value);
+        clean[suffix] = value;
+    }
+    return clean;
+}
+
+function replaceSiteStorage(data) {
+    const before = {};
+    const existingKeys = [];
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && key.startsWith(STORAGE_PREFIX)) existingKeys.push(key);
+    }
+    existingKeys.forEach(key => { before[key] = localStorage.getItem(key); });
+    try {
+        existingKeys.forEach(key => localStorage.removeItem(key));
+        Object.keys(data).forEach(suffix => localStorage.setItem(STORAGE_PREFIX + suffix, data[suffix]));
+    } catch (err) {
+        Object.keys(data).forEach(suffix => localStorage.removeItem(STORAGE_PREFIX + suffix));
+        Object.keys(before).forEach(key => localStorage.setItem(key, before[key]));
+        throw err;
+    }
+}
+
+async function importBackupFile(file) {
+    if (!file) return;
+    try {
+        if (file.size > BACKUP_MAX_BYTES) throw new Error('Backup file too large');
+        const payload = JSON.parse(await file.text());
+        const clean = validateBackupPayload(payload);
+        const when = payload.exportedAt ? new Date(payload.exportedAt).toLocaleString('ko-KR') : '날짜 정보 없음';
+        if (!confirm(`이 기기의 현재 수정 내용과 학습 기록을 백업 파일로 교체할까요?\n\n백업 시각: ${when}\n복원 후 페이지가 새로고침됩니다.`)) return;
+        replaceSiteStorage(clean);
+        alert('수정본을 불러왔습니다. 페이지를 새로고침합니다.');
+        location.reload();
+    } catch (err) {
+        console.error('Backup import failed', err);
+        alert('이 사이트에서 만든 올바른 수정본 JSON 파일이 아닙니다. 기존 데이터는 변경되지 않았습니다.');
+    }
+}
+// BACKUP_RESTORE_JS_V1
+
 
 // ── Init ──
 window.addEventListener('DOMContentLoaded', function() {
