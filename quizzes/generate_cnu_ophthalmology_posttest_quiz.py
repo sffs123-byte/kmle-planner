@@ -28,6 +28,7 @@ from anki_backup_restore import inject_backup_restore
 ROOT = Path(__file__).resolve().parent.parent
 QUIZ_DIR = ROOT / "quizzes"
 DATA_PATH = QUIZ_DIR / "data" / "cnu_ophthalmology_posttest_anki_cards.json"
+EXPLANATIONS_PATH = QUIZ_DIR / "data" / "cnu_ophthalmology_posttest_anki_explanations.json"
 OUT_PATH = QUIZ_DIR / "충남대_안과_포테_기출_Anki.html"
 QC_PATH = QUIZ_DIR / "qc_cnu_ophthalmology_posttest_anki.json"
 
@@ -37,6 +38,8 @@ EXPECTED_CARD_COUNT = 49
 EXPECTED_TREND_COUNT = 0
 EXPECTED_UNCERTAIN_COUNT = 7
 EXPECTED_AXES = list(range(1, 26))
+EXPECTED_LIMITED_IDS = {"q05b", "q10c", "q15c", "q18c", "q19b", "q25d", "qx01"}
+IMAGE_STATUSES = {"exact", "teaching-reference", "missing"}
 
 
 def e(value: object) -> str:
@@ -94,6 +97,42 @@ def render_choices(card: dict) -> str:
     )
 
 
+def render_images(images: list[dict], *, surface: str) -> str:
+    if not images:
+        return ""
+    cards = []
+    for item in images:
+        image_status = item["status"]
+        if image_status == "missing":
+            cards.append(
+                "<figure style='margin:0;padding:14px;border-radius:12px;"
+                "border:1px dashed #fb923c;background:rgba(124,45,18,.18);color:#fed7aa;'>"
+                f"{badge('원문 미확보', '#9a3412', '#ffedd5')}"
+                "<div style='margin-top:9px;font-size:13px;font-weight:760;line-height:1.6;'>"
+                f"{e(item['caption'])}</div></figure>"
+            )
+            continue
+        if image_status == "exact":
+            status = badge("충남대 출제자료", "#166534", "#dcfce7")
+        else:
+            status = badge("시험 원본 아님", "#9a3412", "#ffedd5")
+        cards.append(
+            "<figure style='margin:0;padding:9px;border-radius:12px;border:1px solid "
+            + ("rgba(147,197,253,.42);background:rgba(15,23,42,.42);" if surface == "front" else "#dbeafe;background:#f8fafc;")
+            + "'>"
+            f"<img src='{e(item['src'])}' alt='{e(item['alt'])}' loading='lazy' decoding='async' "
+            "style='display:block;width:100%;max-height:430px;object-fit:contain;border-radius:8px;background:#020617;'>"
+            "<figcaption style='display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:8px;"
+            + ("color:#cbd5e1;" if surface == "front" else "color:#334155;")
+            + "font-size:11px;line-height:1.5;'>"
+            f"{status}<span>{e(item['caption'])}</span></figcaption></figure>"
+        )
+    return (
+        "<div style='display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));"
+        f"gap:10px;margin-top:14px;'>{''.join(cards)}</div>"
+    )
+
+
 def make_front(card: dict) -> str:
     alert = ""
     if card.get("uncertain"):
@@ -104,12 +143,6 @@ def make_front(card: dict) -> str:
             "⚠️ 불완전 학생 복기 — 정답을 추측하지 말고 답면의 한계를 확인하세요."
             "</div>"
         )
-    elif card.get("kind") == "image":
-        alert = (
-            "<div style='margin:10px 0 0;color:#bfdbfe;font-size:12px;'>"
-            "사진 원본은 시험지마다 교체됨 · 형태 단서 기반 재구성 카드"
-            "</div>"
-        )
     return "".join(
         [
             "<div style='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px;'>",
@@ -118,8 +151,23 @@ def make_front(card: dict) -> str:
             "</div>",
             f"<div style='font-size:1rem;line-height:1.72;font-weight:780;color:#f8fafc;'>{e(card['q'])}</div>",
             render_choices(card),
+            render_images(card.get("front_images") or [], surface="front"),
             alert,
         ]
+    )
+
+
+def text_section(title: str, body: object, *, background: str, border: str, color: str) -> str:
+    if isinstance(body, list):
+        content = "<ul style='margin:0;padding-left:1.15rem;'>" + "".join(
+            f"<li style='margin:6px 0;line-height:1.68;'>{e(item)}</li>" for item in body
+        ) + "</ul>"
+    else:
+        content = paragraphs(body)
+    return (
+        f"<section style='background:{background};border:1px solid {border};border-radius:10px;"
+        f"padding:11px 13px;color:{color};'>"
+        f"<h4 style='margin:0 0 6px;'>{e(title)}</h4>{content}</section>"
     )
 
 
@@ -138,16 +186,16 @@ def make_answer(card: dict) -> str:
             "</div>",
             f"<div style='font-size:15px;font-weight:900;line-height:1.7;'>{e(card['a'])}</div>",
             "</section>",
-            "<section style='background:#fff;border:1px solid #e5e7eb;border-radius:10px;"
-            "padding:11px 13px;color:#111827;'>",
-            "<h4 style='margin:0 0 6px;'>왜?</h4>",
-            paragraphs(card.get("why")),
-            "</section>",
-            "<section style='background:#eff6ff;border:1px solid #93c5fd;border-radius:10px;"
-            "padding:11px 13px;color:#1e3a8a;'>",
-            "<h4 style='margin:0 0 6px;'>출제 흐름</h4>",
-            paragraphs(card.get("trend")),
-            "</section>",
+            text_section("왜 맞나", card["why_correct"], background="#ffffff", border="#e5e7eb", color="#111827"),
+            text_section("오답 함정", card["distractors"], background="#fff7ed", border="#fdba74", color="#7c2d12"),
+            text_section("출제 변형", card["variants"], background="#eff6ff", border="#93c5fd", color="#1e3a8a"),
+            text_section("교과서 근거", card["evidence"], background="#f8fafc", border="#cbd5e1", color="#334155"),
+            text_section("3초 암기문장", card["lock"], background="#f0fdf4", border="#86efac", color="#14532d"),
+            (
+                text_section("원문 한계", card["limitation"], background="#fff7ed", border="#fb923c", color="#9a3412")
+                if card.get("limitation") else ""
+            ),
+            render_images(card.get("answer_images") or [], surface="answer"),
             "</div>",
         ]
     )
@@ -170,17 +218,27 @@ def make_guide(card: dict) -> str:
     )
 
 
-def load_source() -> tuple[dict, list[dict]]:
+def load_source() -> tuple[dict, list[dict], dict[str, dict]]:
     payload = json.loads(DATA_PATH.read_text(encoding="utf-8"))
-    return payload["meta"], payload["cards"]
+    explanations = json.loads(EXPLANATIONS_PATH.read_text(encoding="utf-8"))
+    return payload["meta"], payload["cards"], explanations
 
 
-def validate_source(meta: dict, cards: list[dict]) -> dict:
+def validate_source(meta: dict, cards: list[dict], explanations: dict[str, dict]) -> dict:
     ids = [card["id"] for card in cards]
     axes = sorted({axis for card in cards for axis in card.get("axes", [])})
     kind_counts = Counter(card["kind"] for card in cards)
     status_counts = Counter(card["status"] for card in cards)
     uncertain_cards = [card for card in cards if card.get("uncertain")]
+    explanation_fields = ("why_correct", "distractors", "variants", "evidence", "lock")
+    image_items = [
+        item
+        for explanation in explanations.values()
+        for field in ("front_images", "answer_images")
+        for item in explanation.get(field, [])
+    ]
+    asset_items = [item for item in image_items if item.get("status") != "missing"]
+    missing_items = [item for item in image_items if item.get("status") == "missing"]
     private_path_pattern = re.compile(r"(?:/Users/|\.openclaw|Dropbox|sffs123gmail)")
 
     checks = {
@@ -195,7 +253,24 @@ def validate_source(meta: dict, cards: list[dict]) -> dict:
             all(str(card.get(field, "")).strip() for field in ("id", "num", "kind", "status", "q", "a", "why", "trend"))
             for card in cards
         ),
+        "explanation_id_match": set(explanations) == set(ids),
+        "six_section_fields": all(
+            all(explanations.get(card_id, {}).get(field) for field in explanation_fields)
+            for card_id in ids
+        ),
+        "distractors_are_lists": all(isinstance(explanations[card_id]["distractors"], list) for card_id in ids),
+        "evidence_are_lists": all(isinstance(explanations[card_id]["evidence"], list) for card_id in ids),
+        "limited_ids_exact": {card_id for card_id, value in explanations.items() if value.get("limitation")} == EXPECTED_LIMITED_IDS,
+        "image_statuses_valid": all(item.get("status") in IMAGE_STATUSES for item in image_items),
+        "image_metadata_complete": all(
+            item.get("caption") and (
+                item.get("status") == "missing" or (item.get("src") and item.get("alt"))
+            ) for item in image_items
+        ),
+        "image_assets_exist": all((QUIZ_DIR / item["src"]).is_file() for item in asset_items),
+        "missing_original_panels": len(missing_items) == 4,
         "no_private_paths": not private_path_pattern.search(json.dumps(cards, ensure_ascii=False)),
+        "no_private_paths_in_explanations": not private_path_pattern.search(json.dumps(explanations, ensure_ascii=False)),
     }
     failed = [name for name, ok in checks.items() if not ok]
     if failed:
@@ -209,10 +284,22 @@ def validate_source(meta: dict, cards: list[dict]) -> dict:
         "status_counts": dict(status_counts),
         "uncertain_count": len(uncertain_cards),
         "axes": axes,
+        "explanations": {
+            "complete": len(explanations),
+            "limited": len(EXPECTED_LIMITED_IDS),
+            "image_assets": len({item["src"] for item in asset_items}),
+            "exact_image_placements": sum(item["status"] == "exact" for item in asset_items),
+            "teaching_reference_placements": sum(item["status"] == "teaching-reference" for item in asset_items),
+            "missing_original_panels": len(missing_items),
+        },
     }
 
 
-def build_cards(source_cards: list[dict]) -> list[dict]:
+def build_cards(source_cards: list[dict], explanations: dict[str, dict]) -> list[dict]:
+    merged_cards = []
+    for source_card in source_cards:
+        card = {**source_card, **explanations[source_card["id"]]}
+        merged_cards.append(card)
     return [
         {
             "id": card["id"],
@@ -222,7 +309,7 @@ def build_cards(source_cards: list[dict]) -> list[dict]:
             "g": make_guide(card),
             "uncertain": bool(card.get("uncertain")),
         }
-        for card in source_cards
+        for card in merged_cards
     ]
 
 
@@ -249,8 +336,8 @@ def decorate_html(html_text: str) -> str:
     banner = """<div style="margin:0 0 14px;padding:14px 16px;border-radius:12px;
 background:linear-gradient(135deg,rgba(30,64,175,.24),rgba(124,58,237,.18));
 border:1px solid rgba(147,197,253,.35);color:#dbeafe;line-height:1.65;">
-<b>49카드</b> · 실제 문제/변형/교정만 수록 · 불확실 복기 7<br>
-<span style="font-size:12px;color:#bfdbfe;">순서대로 첫 공부 · due 카드 우선 랜덤 실전 · 공식 정답지 아님 · 최신 실습 주 사진/PPT 우선</span>
+<b>49카드</b> · 전 카드 6단계 해설 · 이미지 자산 22개 · 불확실 복기 7<br>
+<span style="font-size:12px;color:#bfdbfe;">순서대로 첫 공부 · due 카드 우선 랜덤 실전 · 원문 미확보/시험 원본 아님 표시 · 최신 실습 주 사진/PPT 우선</span>
 </div>
 <div class="card-grid">"""
     if html_text.count(grid_marker) != 1:
@@ -281,6 +368,13 @@ def validate_generated(html_text: str, cards: list[dict], qc: dict) -> dict:
         "quiz_number_not_double_prefixed": '<span class="card-num">Q${data.num}</span>' not in html_text,
         "card_id_count": sum(f'"{card["id"]}"' in html_text for card in cards) == len(cards),
         "uncertainty_visible": html_text.count("원문 확인 필요") >= EXPECTED_UNCERTAIN_COUNT,
+        "six_sections_visible": all(
+            html_text.count(title) >= len(cards)
+            for title in ("왜 맞나", "오답 함정", "출제 변형", "교과서 근거", "3초 암기문장")
+        ),
+        "image_asset_references": html_text.count("assets/cnu_ophthalmology_posttest/") >= 22,
+        "missing_original_visible": html_text.count("원문 미확보") >= 4,
+        "teaching_reference_visible": "시험 원본 아님" in html_text,
         "medical_correction_visible": "정립·가상상" in html_text,
         "removed_wrong_claim": "상이 반대로 맺힌다. (맞음)" not in html_text,
         "no_private_paths": all(token not in html_text for token in ("/Users/", ".openclaw", "sffs123gmail")),
@@ -293,9 +387,9 @@ def validate_generated(html_text: str, cards: list[dict], qc: dict) -> dict:
 
 
 def main() -> None:
-    meta, source_cards = load_source()
-    qc = validate_source(meta, source_cards)
-    cards = build_cards(source_cards)
+    meta, source_cards, explanations = load_source()
+    qc = validate_source(meta, source_cards, explanations)
+    cards = build_cards(source_cards, explanations)
 
     rail_report = run_rails(cards, mode="pretest", strict=False)
     rail_report.print_report()

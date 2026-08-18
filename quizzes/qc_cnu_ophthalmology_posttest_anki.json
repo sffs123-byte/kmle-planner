@@ -8,7 +8,17 @@
     "axes_1_to_25": true,
     "official_key_flag": true,
     "required_fields": true,
-    "no_private_paths": true
+    "explanation_id_match": true,
+    "six_section_fields": true,
+    "distractors_are_lists": true,
+    "evidence_are_lists": true,
+    "limited_ids_exact": true,
+    "image_statuses_valid": true,
+    "image_metadata_complete": true,
+    "image_assets_exist": true,
+    "missing_original_panels": true,
+    "no_private_paths": true,
+    "no_private_paths_in_explanations": true
   },
   "card_count": 49,
   "question_variant_correction_count": 49,
@@ -65,6 +75,14 @@
     24,
     25
   ],
+  "explanations": {
+    "complete": 49,
+    "limited": 7,
+    "image_assets": 22,
+    "exact_image_placements": 21,
+    "teaching_reference_placements": 7,
+    "missing_original_panels": 4
+  },
   "generated_checks": {
     "quiz_data_present": true,
     "all_ids_present": true,
@@ -82,6 +100,10 @@
     "quiz_number_not_double_prefixed": true,
     "card_id_count": true,
     "uncertainty_visible": true,
+    "six_sections_visible": true,
+    "image_asset_references": true,
+    "missing_original_visible": true,
+    "teaching_reference_visible": true,
     "medical_correction_visible": true,
     "removed_wrong_claim": true,
     "no_private_paths": true
@@ -94,7 +116,7 @@
   },
   "output": {
     "path": "quizzes/충남대_안과_포테_기출_Anki.html",
-    "bytes": 425130,
+    "bytes": 622629,
     "storage_prefix": "cnu_ophthalmology_posttest_anki_20260818_v1"
   }
 }
