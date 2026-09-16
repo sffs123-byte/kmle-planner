@@ -6,6 +6,9 @@
 ## 사용
 
 - 순서대로 / 랜덤 시작 → 정답 보기 → 색상 버튼으로 복습 시점 선택.
+- 퀴즈 모아보기 → 번호·문제 검색 / 5개 주제 필터 → 문제 펼치기 → 정답 보기.
+- 모아보기는 기존 학습 순서·SRS·필기를 바꾸지 않습니다. 상세 해설·용어는 선택적으로 펼치며, 수정한 답안도 반영합니다.
+- 주소 끝에 `#browse`를 붙이면 모아보기로 바로 들어갑니다. 원래 카드의 편집·필기는 ‘원래 카드 · 필기’로 이동합니다.
 - 다시 1분 / 어려움 5분 / 보통 10분(연속 2회면 숙달) / 내일 1일.
 - 랜덤 초기 큐는 중복 없이 구성되며, 복습 시각이 된 카드는 다시 출제됩니다.
 - 새로고침하면 현재 카드·순서·정답 공개·Study Guide 상태가 복원됩니다.
@@ -26,7 +29,7 @@ python3 quizzes/neurosurgery-yeosin-56/build_deck.py
 - 생성기: `generate_skill_deck.py`
 - 공용 UI·학습 엔진: `../anki_quiz_builder.py` (기존 skill 빌더)
 - 공용 백업: `../anki_backup_restore.py`
-- 이 덱 한정 보완: `deck-layout.css`, `storage-adapter.js`, `skill-adapter.js`
+- 이 덱 한정 보완: `deck-layout.css`, `storage-adapter.js`, `skill-adapter.js`, `browse-adapter.js`
 - 결과: `index.html`, `build-qc.json`
 
 기존 `app.js`, `style.css`, `deck.js`는 이전 버전 기록으로 보존되며 현재 HTML에서 불러오지 않습니다.

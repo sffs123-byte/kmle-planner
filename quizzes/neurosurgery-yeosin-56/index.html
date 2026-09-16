@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>신경외과 여신 완성본 · 56문제 Anki</title>
 <link rel="icon" href="../../assets/icons/favicon.svg">
-<meta name="deck-version" content="2026-09-17.skill.1">
+<meta name="deck-version" content="2026-09-17.skill.2">
 <style>
 :root {
     --bg: #1e2030;
@@ -667,6 +667,34 @@ body.quiz-mode-active .mobile-review-start { display: none !important; }
 .reset-actions button{padding:10px 14px;border:1px solid var(--card-border);border-radius:8px;cursor:pointer;background:var(--bg);color:var(--text)}
 #deckResetConfirm{background:var(--accent);color:#fff}
 .quiz-header button{white-space:nowrap;flex:0 0 auto}
+.browse-entry{grid-column:1/-1;background:var(--card-bg);color:var(--accent);border:1px solid var(--accent)}
+#deckBrowseDialog{margin:auto;box-sizing:border-box;width:min(940px,calc(100vw - 32px));max-width:calc(100vw - 32px);height:88dvh;max-height:88dvh;padding:0;border:1px solid var(--card-border);border-radius:16px;background:var(--bg);color:var(--text);overflow:auto;overscroll-behavior:contain}
+#deckBrowseDialog::backdrop{background:rgba(0,0,0,.72)}
+#deckBrowseDialog[open]{display:flex;flex-direction:column}
+.browse-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:20px 22px 12px;background:var(--bg);position:sticky;top:0;z-index:2;border-bottom:1px solid var(--card-border);flex-shrink:0}
+.browse-head h2{margin:0;font-size:22px;line-height:1.4}.browse-head h2 small{font-size:13px;color:var(--text-dim);font-weight:400}
+.browse-head p{font-size:13px;color:var(--text-dim);margin:7px 0 0;line-height:1.5}
+#deckBrowseDialog button,#deckBrowseDialog input,#deckBrowseDialog select{font:inherit;color:var(--text);background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;min-height:42px;padding:8px 12px;box-sizing:border-box}
+#deckBrowseDialog button{cursor:pointer}#browseClose{white-space:nowrap;flex-shrink:0}
+#deckBrowseDialog :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.browse-toolbar{padding:16px 22px 8px;display:grid;grid-template-columns:minmax(0,1fr) minmax(140px,.45fr) auto;align-items:end;gap:10px;flex-shrink:0}
+.browse-toolbar label{font-size:12px;color:var(--text-dim);display:grid;gap:5px;min-width:0}
+.browse-toolbar input,.browse-toolbar select{width:100%}
+#browseCount{grid-column:1/-1;font-size:12px;color:var(--text-dim);margin:0}
+#browseList{padding:0 22px 22px}#browseEmpty{padding:12px 22px;color:var(--text-dim)}
+.browse-item{margin:8px 0;background:var(--card-bg);border:1px solid var(--card-border);border-radius:10px;overflow-wrap:anywhere}
+.browse-item>summary{display:flex;align-items:baseline;gap:10px;list-style:none;cursor:pointer;padding:13px 14px;line-height:1.65;font-size:14px;font-weight:600}
+.browse-item>summary::-webkit-details-marker{display:none}.browse-item>summary::after{content:'+';color:var(--text-dim);margin-left:auto;flex-shrink:0}.browse-item[open]>summary::after{content:'−'}
+.browse-num{color:var(--accent);min-width:24px;font-variant-numeric:tabular-nums}.browse-question{min-width:0}
+.browse-content{padding:0 14px 14px}.browse-actions{display:flex;gap:8px;flex-wrap:wrap}
+#deckBrowseDialog .browse-reveal{background:var(--accent);color:#fff;border-color:var(--accent)}
+.browse-answer{font-size:14px;line-height:1.75;border-top:1px solid var(--card-border);margin-top:14px;padding-top:4px;overflow-wrap:anywhere}
+.browse-answer mark{background:#ffe58a;color:#20232b}.browse-answer img{max-width:100%;height:auto}
+.browse-answer table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:12px}.browse-answer th,.browse-answer td{padding:5px;overflow-wrap:anywhere}
+.browse-answer p{margin:8px 0}.browse-answer ol,.browse-answer ul{padding-left:22px}
+.browse-guide{margin-top:12px;border-top:1px solid var(--card-border);padding-top:10px}.browse-guide>summary{cursor:pointer;color:var(--accent);font-weight:600}
+.browse-guide a{color:var(--accent)}
+@media(max-width:600px){#deckBrowseDialog{width:calc(100vw - 16px);max-width:calc(100vw - 16px);height:92dvh;max-height:92dvh}.browse-head{padding:14px 12px 10px}.browse-head h2{font-size:19px}.browse-head h2 small{display:block}.browse-toolbar{padding:12px;grid-template-columns:minmax(0,1fr) auto}.browse-toolbar label:first-child{grid-column:1/-1}#browseList{padding:0 10px 14px}.browse-item>summary{padding:12px 10px;gap:7px;font-size:13px}.browse-content{padding:0 10px 12px}}
 @media(max-width:600px){.review-hero{display:block}.review-hero>div+div{margin-top:12px}.question-image img{max-height:320px}.quiz-q-text{font-size:17px}.quiz-header{flex-wrap:wrap;overflow:visible}.quiz-answer{font-size:14px;line-height:1.7}}
 
 </style>
@@ -5285,6 +5313,131 @@ window.addEventListener('DOMContentLoaded', function() {
 
     resumeSavedQuizIfAny();
 });
+const DECK_CATEGORIES = {"S13": "척추·척수", "S09": "척추·척수", "S04": "척추·척수", "S05": "척추·척수", "S17": "척추·척수", "S01": "척추·척수", "S02": "척추·척수", "S12": "척추·척수", "S03": "척추·척수", "S07": "척추·척수", "S08": "척추·척수", "S18": "척추·척수", "S15": "척추·척수", "S10": "척추·척수", "S19": "척추·척수", "S14": "척추·척수", "S06": "척추·척수", "S16": "척추·척수", "S20": "척추·척수", "S11": "척추·척수", "T01": "뇌종양", "T06": "뇌종양", "T07": "뇌종양", "T02": "뇌종양", "T09": "뇌종양", "T10": "뇌종양", "T03": "뇌종양", "T11": "뇌종양", "T12": "뇌종양", "T13": "뇌종양", "T14": "뇌종양", "T04": "뇌종양", "T08": "뇌종양", "T05": "뇌종양", "N03": "신경진찰", "V01": "뇌혈관", "V09": "뇌혈관", "V05": "뇌혈관", "V10": "뇌혈관", "V02": "뇌혈관", "V06": "뇌혈관", "V07": "뇌혈관", "V03": "뇌혈관", "V08": "뇌혈관", "V04": "뇌혈관", "N06": "신경진찰", "N01": "신경진찰", "N04": "신경진찰", "N05": "신경진찰", "N02": "신경진찰", "H01": "외상·응급", "H02": "외상·응급", "H04": "외상·응급", "H05": "외상·응급", "H03": "외상·응급", "H06": "외상·응급"};
+// Read-only collection built from the shared deck. Does not grade, reset or
+// replace the active SRS queue; the original cards keep editing/drawing tools.
+window.addEventListener('DOMContentLoaded', function () {
+    const dialog = document.createElement('dialog');
+    dialog.id = 'deckBrowseDialog';
+    dialog.setAttribute('aria-labelledby', 'browseTitle');
+    dialog.innerHTML = `<div class="browse-head">
+      <div><h2 id="browseTitle">퀴즈 모아보기 <small>56문제</small></h2>
+      <p>문제를 골라 펼치세요. 정답은 버튼을 누르면 보여요.</p></div>
+      <button id="browseClose" type="button" aria-label="퀴즈 모아보기 닫기">닫기 ×</button>
+    </div>
+    <div class="browse-toolbar">
+      <label>문제 검색<input id="browseSearch" type="search" placeholder="문제 번호 또는 검색어" autocomplete="off"></label>
+      <label>주제<select id="browseCategory"><option value="">전체 주제</option></select></label>
+      <button id="browseClear" type="button">검색 지우기</button>
+      <p id="browseCount" role="status" aria-live="polite"></p>
+    </div>
+    <div id="browseList"></div><p id="browseEmpty" hidden>일치하는 문제가 없어요. 검색어나 주제를 바꿔보세요.</p>`;
+    document.body.appendChild(dialog);
+    const search = document.getElementById('browseSearch');
+    const category = document.getElementById('browseCategory');
+    [...new Set(Object.values(DECK_CATEGORIES))].forEach(name => {
+        const option = document.createElement('option');
+        option.value = name; option.textContent = name; category.appendChild(option);
+    });
+    const list = document.getElementById('browseList');
+    const rows = ALL_IDS.map(id => {
+        const data = QUIZ_DATA[id];
+        const source = document.createElement('div'); source.innerHTML = data.q;
+        source.querySelectorAll('figure').forEach(el => el.remove());
+        const question = source.textContent.trim();
+        const row = document.createElement('details');
+        row.className = 'browse-item'; row.dataset.cardId = id;
+        const summary = document.createElement('summary');
+        const number = document.createElement('span'); number.className = 'browse-num'; number.textContent = data.num;
+        const title = document.createElement('span'); title.className = 'browse-question'; title.textContent = question;
+        summary.append(number, title); row.appendChild(summary);
+        row.addEventListener('toggle', () => {
+            if (!row.open || row.dataset.loaded) return;
+            row.dataset.loaded = 'true';
+            const body = document.createElement('div'); body.className = 'browse-content';
+            const fullQuestion = document.createElement('div'); fullQuestion.innerHTML = data.q;
+            // Text is already in the summary; retain every source question image.
+            fullQuestion.querySelectorAll('figure').forEach(fig => body.appendChild(fig));
+            const actions = document.createElement('div'); actions.className = 'browse-actions';
+            const reveal = document.createElement('button'); reveal.type = 'button';
+            reveal.className = 'browse-reveal'; reveal.textContent = '정답 보기';
+            reveal.setAttribute('aria-expanded', 'false');
+            const go = document.createElement('button'); go.type = 'button'; go.textContent = '원래 카드 · 필기';
+            go.onclick = () => { dialog.close(); exitQuiz(); scrollToCard(id); };
+            actions.append(reveal, go); body.appendChild(actions);
+            const answer = document.createElement('div'); answer.className = 'browse-answer'; answer.hidden = true;
+            answer.id = 'browse-answer-' + id; reveal.setAttribute('aria-controls', answer.id);
+            reveal.onclick = () => {
+                const show = answer.hidden;
+                answer.hidden = !show;
+                reveal.textContent = show ? '정답 숨기기' : '정답 보기';
+                reveal.setAttribute('aria-expanded', String(show));
+                if (show) {
+                    answer.innerHTML = Object.prototype.hasOwnProperty.call(edits, id) ? edits[id] : data.a;
+                    if (data.g) {
+                        const guide = document.createElement('details'); guide.className = 'browse-guide';
+                        const label = document.createElement('summary'); label.textContent = '상세 해설 · 용어 풀이';
+                        const text = document.createElement('div'); text.innerHTML = data.g;
+                        guide.append(label, text); answer.appendChild(guide);
+                    }
+                }
+            };
+            body.appendChild(answer); row.appendChild(body);
+        });
+        list.appendChild(row);
+        return {row, id, question: question.normalize('NFKC').toLocaleLowerCase()};
+    });
+    function filter() {
+        const term = search.value.normalize('NFKC').trim().toLocaleLowerCase();
+        const number = term.match(/^(?:#|q)?\s*(\d+)\s*번?$/i);
+        const words = term.split(/\s+/).filter(Boolean);
+        let count = 0;
+        rows.forEach(({row, id, question}) => {
+            const match = (!category.value || DECK_CATEGORIES[id] === category.value) &&
+                (number ? Number(QUIZ_DATA[id].num) === Number(number[1]) : words.every(word => question.includes(word)));
+            row.hidden = !match; if (match) count++;
+        });
+        document.getElementById('browseCount').textContent = count + ' / 56문제';
+        document.getElementById('browseEmpty').hidden = count !== 0;
+    }
+    search.addEventListener('input', filter); category.addEventListener('change', filter);
+    document.getElementById('browseClear').onclick = () => {search.value = ''; category.value = ''; filter(); search.focus();};
+    document.getElementById('browseClose').onclick = () => dialog.close();
+    let previousOverflow = '';
+    function open() {
+        if (dialog.open) return;
+        // Hide answers left open on the previous visit; never expose them merely
+        // by opening the collection. Existing study state stays untouched.
+        rows.forEach(({row}) => {
+            row.open = false;
+            const answer = row.querySelector('.browse-answer');
+            if (answer) answer.hidden = true;
+            const reveal = row.querySelector('.browse-reveal');
+            if (reveal) {reveal.textContent = '정답 보기'; reveal.setAttribute('aria-expanded', 'false');}
+        });
+        previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        filter(); dialog.showModal();
+        window.history.replaceState(null, '', '#browse');
+        document.getElementById('browseClose').focus();
+    }
+    dialog.addEventListener('close', () => {
+        document.body.style.overflow = previousOverflow;
+        if (location.hash === '#browse') window.history.replaceState(null, '', location.pathname + location.search);
+    });
+    function button(id, parent, css) {
+        const b = document.createElement('button'); b.id = id; b.type = 'button';
+        b.className = css; b.textContent = '퀴즈 모아보기'; b.onclick = open;
+        parent.appendChild(b);
+    }
+    button('btnBrowseHero', document.getElementById('reviewHero').lastElementChild, 'review-hero-btn browse-entry');
+    button('btnBrowseSidebar', document.querySelector('.sb-quiz-btns'), 'btn-review');
+    button('btnBrowseQuiz', document.getElementById('quizHeader'), 'undo-btn');
+    window.addEventListener('hashchange', () => {if (location.hash === '#browse') open();});
+    filter();
+    if (location.hash === '#browse') open();
+});
+
 </script>
 </body>
 </html>

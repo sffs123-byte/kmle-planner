@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-17.skill.1",
+  "version": "2026-09-17.skill.2",
   "cards": 56,
   "builder": "../anki_quiz_builder.py",
   "builderSha256": "f857c0b8e11abe8e74ff4910315d3c7cf8e34c3f508b814ea75468bbd7a7a432",
@@ -7,5 +7,5 @@
   "images": 3,
   "terms": 57,
   "railErrors": 0,
-  "htmlSha256": "68efc00a94a06f381c63dda416b962d1508eada1a7455d9b606f9afb513035a3"
+  "htmlSha256": "5662945e47030af136bb12dc538d604946fd273d66709ab9832f4cd704b5c163"
 }

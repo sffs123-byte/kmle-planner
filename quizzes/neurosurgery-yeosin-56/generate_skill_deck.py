@@ -13,7 +13,7 @@ from anki_backup_restore import inject_backup_restore
 
 TITLE = '신경외과 여신 완성본 · 56문제 Anki'
 PREFIX = 'neurosurgery_yeosin_56_anki'
-VERSION = '2026-09-17.skill.1'
+VERSION = '2026-09-17.skill.2'
 
 def replace_once(text, old, new):
     assert text.count(old) == 1, f'Builder marker changed: {old[:70]}'
@@ -60,6 +60,10 @@ def decorate(text):
         text = text.replace(f"JSON.parse(deckStorage.getItem({key}) || '{fallback}')", f'deckStoredJson({key}, {fallback})')
     text = replace_once(text, 'const STORAGE_PREFIX = ', (ROOT/'storage-adapter.js').read_text() + '\nconst STORAGE_PREFIX = ')
     text = replace_once(text, '// ── Init ──', (ROOT/'skill-adapter.js').read_text() + '\n// ── Init ──')
+    categories = {c['id']: c['category'] for c in json.loads((ROOT/'deck.json').read_text())}
+    browse = 'const DECK_CATEGORIES = ' + json.dumps(categories, ensure_ascii=False) + ';\n'
+    browse += (ROOT/'browse-adapter.js').read_text()
+    text = replace_once(text, '</script>\n</body>', browse + '\n</script>\n</body>')
     return text
 
 def build(root=ROOT):
