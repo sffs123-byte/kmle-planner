@@ -1,0 +1,11 @@
+{
+  "version": "2026-09-17.skill.1",
+  "cards": 56,
+  "builder": "../anki_quiz_builder.py",
+  "builderSha256": "f857c0b8e11abe8e74ff4910315d3c7cf8e34c3f508b814ea75468bbd7a7a432",
+  "sourceSha256": "88d3c2c34a6dcaf2864b51a7a0a0b80ab019dfb985d23891f82c0e3bcd412682",
+  "images": 3,
+  "terms": 57,
+  "railErrors": 0,
+  "htmlSha256": "68efc00a94a06f381c63dda416b962d1508eada1a7455d9b606f9afb513035a3"
+}

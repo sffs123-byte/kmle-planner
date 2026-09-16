@@ -1,0 +1,23 @@
+/* Content layout only; retain the existing Anki theme and tools. */
+.question-image {margin:10px 0;max-width:100%}
+.question-image img {display:block;max-width:100%;max-height:440px;width:auto;height:auto;border-radius:8px}
+.question-image figcaption,.source-link {font-size:12px;color:var(--text-dim)}
+.deck-note {margin:0 0 16px;padding:12px 16px;border:1px solid var(--card-border);border-radius:10px;color:var(--text);line-height:1.6}
+.deck-note small {color:var(--text-dim)}
+.answer-content,.quiz-answer,.quiz-guide {overflow-wrap:anywhere;min-width:0}
+.answer-content table,.quiz-answer table,.quiz-guide table {width:100%;table-layout:fixed;border-collapse:collapse;font-size:13px}
+.answer-content th,.answer-content td,.quiz-answer th,.quiz-answer td {padding:7px;overflow-wrap:anywhere}
+.quiz-guide p,.quiz-answer p {margin:8px 0}
+.quiz-guide mark,.quiz-answer mark {background:#ffe58a;color:#20232b;padding:0 2px}
+.term-guide {margin-top:12px}.term-guide summary {cursor:pointer;color:var(--accent);font-weight:700}
+.term-guide dd {margin:3px 0 10px 0}.source-link a {color:var(--accent)}
+.legacy-memo {margin-top:14px;border-top:1px solid var(--card-border);padding-top:10px}
+.legacy-memo p {white-space:pre-wrap}
+#deck-storage-warning {position:fixed;top:0;left:0;right:0;z-index:10000;background:#ffe58a;color:#20232b;text-align:center;padding:8px;font-size:13px}
+#deckResetDialog {max-width:min(460px,90vw);border:1px solid var(--card-border);border-radius:14px;background:var(--card-bg);color:var(--text);padding:22px;line-height:1.7}
+#deckResetDialog::backdrop{background:rgba(0,0,0,.6)}
+.reset-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:18px}
+.reset-actions button{padding:10px 14px;border:1px solid var(--card-border);border-radius:8px;cursor:pointer;background:var(--bg);color:var(--text)}
+#deckResetConfirm{background:var(--accent);color:#fff}
+.quiz-header button{white-space:nowrap;flex:0 0 auto}
+@media(max-width:600px){.review-hero{display:block}.review-hero>div+div{margin-top:12px}.question-image img{max-height:320px}.quiz-q-text{font-size:17px}.quiz-header{flex-wrap:wrap;overflow:visible}.quiz-answer{font-size:14px;line-height:1.7}}
