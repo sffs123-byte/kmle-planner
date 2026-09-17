@@ -78,7 +78,7 @@ window.addEventListener('DOMContentLoaded', function () {
         list.appendChild(row);
         return {row, id, number, question: question.normalize('NFKC').toLocaleLowerCase()};
     });
-    const hashForSet = () => set.value === '2' ? '#browse-set2' : '#browse';
+    const hashForSet = () => '#browse';
     function filter() {
         const term = search.value.normalize('NFKC').trim().toLocaleLowerCase();
         const number = term.match(/^(?:#|q)?\s*(\d+)\s*번?$/i);
@@ -89,6 +89,7 @@ window.addEventListener('DOMContentLoaded', function () {
         document.getElementById('browseTitle').textContent = (exam ? exam.label + ' 모아보기' : '퀴즈 모아보기') + ' · ' + total + '문제';
         document.getElementById('browseDescription').textContent = exam ? exam.source + ' · 원래 문항 순서 / 정답은 눌러서 확인' : '전체 중복통합 56문제 · 문제를 골라 펼치세요.';
         document.getElementById('browseSetNote').hidden = !exam;
+        document.getElementById('browseSetNote').textContent = set.value === 'C' ? '18·19번은 사진 대신 관찰·진찰소견으로 재구성.' : '10·17·18번은 영상 대신 관찰·진찰소견으로 재구성.';
         search.placeholder = exam ? '2세트 문항 번호 또는 검색어' : '문제 번호 또는 검색어';
         let count = 0;
         [...rows].sort((a, b) => (numbers.get(a.id) || 999) - (numbers.get(b.id) || 999)).forEach(({row, id, question, number: badge}) => {
@@ -145,11 +146,8 @@ window.addEventListener('DOMContentLoaded', function () {
     button('btnBrowseHero', document.getElementById('reviewHero').lastElementChild, 'review-hero-btn browse-entry');
     button('btnBrowseSidebar', document.querySelector('.sb-quiz-btns'), 'btn-review');
     button('btnBrowseQuiz', document.getElementById('quizHeader'), 'undo-btn');
-    button('btnSet2Browse', document.getElementById('reviewHero').lastElementChild, 'review-hero-btn browse-entry set2-entry', '2');
-    button('btnSet2Sidebar', document.querySelector('.sb-quiz-btns'), 'btn-review set2-entry', '2');
     function openHash() {
-        if (location.hash === '#browse-set2') open('2');
-        else if (location.hash === '#browse') open();
+        if (location.hash === '#browse') open();
     }
     window.addEventListener('hashchange', openHash);
     filter();

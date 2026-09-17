@@ -1,3 +1,19 @@
+// Source-format answers replace summaries; keep earlier personal edits accessible.
+(function migrateOriginalAnswers() {
+    const flag=STORAGE_PREFIX+'original_answer_format_v1';
+    if(deckStorage.getItem(flag)) return;
+    if(Object.keys(edits).length) {
+        deckStorage.setItem(STORAGE_PREFIX+'previous_summary_edits_v1', JSON.stringify(edits));
+        for(const id of Object.keys(edits)) {
+            if(!QUIZ_DATA[id]) continue;
+            const previous=edits[id];
+            if(!previous.includes('class="original-note"'))
+                edits[id]=QUIZ_DATA[id].a+'<details class="previous-answer-edit"><summary>이전 Anki 수정 답안 (보존)</summary>'+previous+'</details>';
+        }
+        saveEdits();
+    }
+    deckStorage.setItem(flag,JSON.stringify(true));
+})();
 // Retain former app data; copy notes without treating its ratings as SRS.
 function preserveLegacyNotes() {
     const flag=STORAGE_PREFIX+'legacy_import_v1';

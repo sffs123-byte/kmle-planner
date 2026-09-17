@@ -54,3 +54,27 @@
 @media(max-width:600px){#deckBrowseDialog{width:calc(100vw - 16px);max-width:calc(100vw - 16px);height:92dvh;max-height:92dvh}.browse-head{padding:14px 12px 10px}.browse-head h2{font-size:19px}.browse-head h2 small{display:block}.browse-toolbar{padding:12px;grid-template-columns:minmax(0,1fr) auto}.browse-toolbar label:first-child{grid-column:1/-1}#browseList{padding:0 10px 14px}.browse-item>summary{padding:12px 10px;gap:7px;font-size:13px}.browse-content{padding:0 10px 12px}}
 @media(max-width:600px){.review-hero{display:block}.review-hero>div+div{margin-top:12px}.question-image img{max-height:320px}.quiz-q-text{font-size:17px}.quiz-header{flex-wrap:wrap;overflow:visible}.quiz-answer{font-size:14px;line-height:1.7}}
 @media(max-width:600px){.browse-toolbar{grid-template-columns:minmax(0,1fr) minmax(105px,.65fr);grid-template-areas:'set category' 'search clear' 'count count'}.browse-toolbar label:first-child{grid-column:auto}#browseSetNote{padding:0 12px 8px}}
+.study-scope-panel{margin:0 0 16px;padding:16px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:12px}
+.study-scope-tabs{display:flex;gap:8px;margin:10px 0;flex-wrap:wrap}
+.study-scope-tabs button{padding:12px 18px;border:1px solid var(--card-border);border-radius:9px;background:var(--bg);color:var(--text);font:inherit;font-weight:700;cursor:pointer;min-height:46px}
+.study-scope-tabs button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.study-scope-panel p{margin:8px 0;line-height:1.5;font-size:13px}.study-scope-panel small{font-size:12px;color:var(--text-dim)}
+.study-scope-badge{font-size:12px;font-weight:700;color:var(--accent);white-space:nowrap}
+#btnStudyResume[hidden]{display:none}
+@media(max-width:600px){.study-scope-panel{padding:12px}.study-scope-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.study-scope-tabs button{padding:10px 5px;font-size:13px}.quiz-q-top .card-num{white-space:nowrap}}
+/* White note surface preserves the source's black text and literal highlight colors. */
+.original-note{background:#fff;color:#111827;padding:14px 16px;border-radius:8px;font-size:15px;line-height:1.6;overflow-wrap:anywhere;text-align:left}
+.original-note strong,.original-note b,.original-note em,.original-note abbr{color:inherit}
+.original-note p{margin:6px 0}.original-note p:empty{display:none}.original-note ul,.original-note ol{margin:6px 0;padding-left:24px}
+.original-note li{margin:3px 0}.original-note li>p{margin:3px 0}.original-note table{border-collapse:collapse;table-layout:fixed;width:100%}
+.original-note th,.original-note td{border:1px solid #d1d5db;padding:6px;background:transparent;color:inherit}
+.original-note a{color:#2563eb}.original-note summary{cursor:pointer;color:inherit}.original-note details{margin:8px 0}.original-note abbr[title]{cursor:help;text-decoration:underline dotted;text-underline-offset:3px}
+.note-correction{font-size:13px;line-height:1.6;border-left:3px solid #d4a130;padding:4px 10px;margin-top:10px;color:var(--text)}
+.note-correction>strong{color:var(--text)}.previous-answer-edit{margin-top:12px;padding-top:8px;border-top:1px solid var(--card-border)}
+#originalTermDialog{max-width:min(460px,90vw);box-sizing:border-box;border:1px solid var(--card-border);border-radius:12px;background:var(--card-bg);color:var(--text);padding:20px;line-height:1.7}
+#originalTermDialog::backdrop{background:rgba(0,0,0,.5)}#originalTermDialog h3{margin:0 0 8px}#originalTermDialog p{white-space:pre-wrap;margin:0 0 12px}#originalTermDialog button{padding:8px 16px;border:1px solid var(--card-border);border-radius:8px;background:var(--bg);color:var(--text);cursor:pointer}
+@media(max-width:600px){.original-note{padding:10px;font-size:14px}.original-note ul,.original-note ol{padding-left:20px}}
+/* Scope label is a pill, not the old one-digit circular badge. */
+.quiz-q .card-num{width:auto;height:auto;min-height:34px;min-width:54px;padding:5px 10px;border-radius:8px;font-size:14px;white-space:nowrap;flex-shrink:0}
+.note-correction{background:#fff8e7;color:#574315;border-radius:0 6px 6px 0}.note-correction>strong{color:#574315}
+.quiz-answer .source-link{color:#475569}.quiz-answer .source-link a{color:#1d4ed8}
