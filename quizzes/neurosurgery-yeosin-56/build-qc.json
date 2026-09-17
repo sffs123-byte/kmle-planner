@@ -1,10 +1,10 @@
 {
-  "version": "2026-09-17.skill.8-source-answers",
+  "version": "2026-09-18.skill.9-spinal-prognosis",
   "cards": 56,
   "builder": "../anki_quiz_builder.py",
   "builderSha256": "f857c0b8e11abe8e74ff4910315d3c7cf8e34c3f508b814ea75468bbd7a7a432",
-  "sourceSha256": "82776f69cf4ee289369d70b6ec86addcccde5115f13323f1d14d92b1b02a37ee",
-  "originalNotesSha256": "6efa91277dc28dd1703838cb2b405a6fe49b0c1b76cbb4561a2c55ace65aceba",
+  "sourceSha256": "f5d4153b462b912af997aafce3234e830ae7a80015591124676b5c2ef71d175a",
+  "originalNotesSha256": "09040ed46000db782303d029975865bbcfcffe2fea53c0a49393ad69a42ea686",
   "originalQuestionsSha256": "4fb8fa3b792aee8ffec3688633f0f07cf1435adad5ae285aec9b1a07f5c2ce8a",
   "images": 13,
   "questionImagesSha256": "3c4eb1a6c87c164cc44390e2358ce8f2dbdad8ec548e3995f4dea73c9608d16c",
@@ -13,5 +13,5 @@
   "answerImagesSha256": "af5e759e245f4c38dc297a718574e7c38de94e1a6c1c54ed67cb3f4c04b90bea",
   "terms": 57,
   "railErrors": 0,
-  "htmlSha256": "b0a5a2c4588cf367b3e5fe5dc6ef03fadba39ce759f3dd78c6ef570a6f6fbc38"
+  "htmlSha256": "7c383cfdd66f6701413729b1e3295e7f0031c31e3656324a9ca8200e3ed81cc0"
 }
