@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', function () {
       <button id="browseClear" type="button">검색 지우기</button>
       <p id="browseCount" role="status" aria-live="polite"></p>
     </div>
-    <p id="browseSetNote" hidden>기존 교정 해설을 사용합니다. 10·17·18번 영상 문항은 관찰·진찰소견을 글로 풀어 쓴 복습형입니다.</p>
+    <p id="browseSetNote" hidden>시험지 원문 질문과 기존 원문 필기를 사용합니다.</p>
     <div id="browseList"></div><p id="browseEmpty" hidden>일치하는 문제가 없어요. 검색어나 주제를 바꿔보세요.</p>`;
     document.body.appendChild(dialog);
     const search = document.getElementById('browseSearch');
@@ -34,8 +34,7 @@ window.addEventListener('DOMContentLoaded', function () {
     const rows = ALL_IDS.map(id => {
         const data = QUIZ_DATA[id];
         const source = document.createElement('div'); source.innerHTML = data.q;
-        source.querySelectorAll('figure').forEach(el => el.remove());
-        const question = source.textContent.trim();
+        const question = source.querySelector('.source-question-text')?.textContent || source.textContent.trim();
         const row = document.createElement('details');
         row.className = 'browse-item'; row.dataset.cardId = id;
         const summary = document.createElement('summary');
@@ -46,9 +45,10 @@ window.addEventListener('DOMContentLoaded', function () {
             if (!row.open || row.dataset.loaded) return;
             row.dataset.loaded = 'true';
             const body = document.createElement('div'); body.className = 'browse-content';
-            const fullQuestion = document.createElement('div'); fullQuestion.innerHTML = data.q;
-            // Text is already in the summary; retain every source question image.
-            fullQuestion.querySelectorAll('figure').forEach(fig => body.appendChild(fig));
+            const fullQuestion = document.createElement('div'); fullQuestion.innerHTML = studyQuestion(id, set.value || 'all');
+            // Main wording is already in the summary; retain source details/media.
+            fullQuestion.querySelector('.source-question')?.remove();
+            body.appendChild(fullQuestion);
             const actions = document.createElement('div'); actions.className = 'browse-actions';
             const reveal = document.createElement('button'); reveal.type = 'button';
             reveal.className = 'browse-reveal'; reveal.textContent = '정답 보기';
@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', function () {
             body.appendChild(answer); row.appendChild(body);
         });
         list.appendChild(row);
-        return {row, id, number, question: question.normalize('NFKC').toLocaleLowerCase()};
+        return {row, id, number, title};
     });
     const hashForSet = () => '#browse';
     function filter() {
@@ -89,10 +89,13 @@ window.addEventListener('DOMContentLoaded', function () {
         document.getElementById('browseTitle').textContent = (exam ? exam.label + ' 모아보기' : '퀴즈 모아보기') + ' · ' + total + '문제';
         document.getElementById('browseDescription').textContent = exam ? exam.source + ' · 원래 문항 순서 / 정답은 눌러서 확인' : '전체 중복통합 56문제 · 문제를 골라 펼치세요.';
         document.getElementById('browseSetNote').hidden = !exam;
-        document.getElementById('browseSetNote').textContent = set.value === 'C' ? '18·19번은 사진 대신 관찰·진찰소견으로 재구성.' : '10·17·18번은 영상 대신 관찰·진찰소견으로 재구성.';
-        search.placeholder = exam ? '2세트 문항 번호 또는 검색어' : '문제 번호 또는 검색어';
+        document.getElementById('browseSetNote').textContent = '시험지 원문 질문과 기존 원문 필기를 사용합니다.';
+        search.placeholder = exam ? exam.label + ' 문항 번호 또는 검색어' : '문제 번호 또는 검색어';
         let count = 0;
-        [...rows].sort((a, b) => (numbers.get(a.id) || 999) - (numbers.get(b.id) || 999)).forEach(({row, id, question, number: badge}) => {
+        [...rows].sort((a, b) => (numbers.get(a.id) || 999) - (numbers.get(b.id) || 999)).forEach(({row, id, title, number: badge}) => {
+            const source = document.createElement('div');source.innerHTML = studyQuestion(id, set.value || 'all');
+            title.textContent = source.querySelector('.source-question-text')?.textContent || source.textContent;
+            const question = title.textContent.normalize('NFKC').toLocaleLowerCase();
             list.appendChild(row);
             const n = numbers.get(id);
             badge.textContent = n || QUIZ_DATA[id].num;
@@ -114,7 +117,8 @@ window.addEventListener('DOMContentLoaded', function () {
         });
     }
     set.addEventListener('change', () => {
-        search.value = ''; category.value = ''; hideAnswers(); filter();
+        search.value = ''; category.value = ''; hideAnswers();
+        rows.forEach(({row}) => {row.querySelector('.browse-content')?.remove();delete row.dataset.loaded;});filter();
         if (dialog.open) window.history.replaceState(null, '', hashForSet());
     });
     search.addEventListener('input', filter); category.addEventListener('change', filter);
@@ -124,7 +128,8 @@ window.addEventListener('DOMContentLoaded', function () {
     function open(scope = '') {
         set.value = scope;
         search.value = ''; category.value = '';
-        hideAnswers(); filter();
+        hideAnswers();
+        rows.forEach(({row}) => {row.querySelector('.browse-content')?.remove();delete row.dataset.loaded;});filter();
         if (dialog.open) return;
         // Hide answers left open on the previous visit; never expose them merely
         // by opening the collection. Existing study state stays untouched.

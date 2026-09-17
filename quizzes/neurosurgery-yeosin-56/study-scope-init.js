@@ -15,3 +15,4 @@ function scopeStorageKey(suffix) {
 function studyIds() {return DECK_EXAM_SETS[deckStudyScope]?.items.map(i => i.id) || ALL_IDS;}
 function studyLabel() {return DECK_EXAM_SETS[deckStudyScope]?.label || '전체';}
 function studyNumber(id) {return DECK_EXAM_SETS[deckStudyScope]?.items.find(i => i.id === id)?.num ?? QUIZ_DATA[id]?.num;}
+function studyQuestion(id, scope = deckStudyScope) {return DECK_SOURCE_QUESTIONS[scope]?.[id] || QUIZ_DATA[id]?.q || '';}

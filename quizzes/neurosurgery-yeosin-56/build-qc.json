@@ -1,12 +1,13 @@
 {
-  "version": "2026-09-17.skill.4-set-study",
+  "version": "2026-09-17.skill.5-verbatim-questions",
   "cards": 56,
   "builder": "../anki_quiz_builder.py",
   "builderSha256": "f857c0b8e11abe8e74ff4910315d3c7cf8e34c3f508b814ea75468bbd7a7a432",
   "sourceSha256": "88d3c2c34a6dcaf2864b51a7a0a0b80ab019dfb985d23891f82c0e3bcd412682",
   "originalNotesSha256": "57e1f9ed1c107b7b22fdeb6b3ffc3ba3c2c51dc72ccfa60b6f006a812059e717",
+  "originalQuestionsSha256": "4fb8fa3b792aee8ffec3688633f0f07cf1435adad5ae285aec9b1a07f5c2ce8a",
   "images": 3,
   "terms": 57,
   "railErrors": 0,
-  "htmlSha256": "32899a4a63ca79df6caa0ff98a5bab6f1054480fb57813b29ac9067e26c090f5"
+  "htmlSha256": "605f99bc0d1a1cab8e7a3a1827df8e4732fcbbbe3507a199533ce4bfd42bf283"
 }

@@ -1,0 +1,656 @@
+{
+  "all": {
+    "S01": {
+      "text": "척수 경막을 기준으로 종양을 분류하고, 각각에 대하여 호발하는 척수종양을 2개씩 쓰시오. (1, 2, 4)",
+      "sourceSet": "2",
+      "num": 1,
+      "sourcePage": 2
+    },
+    "S07": {
+      "text": "Spinal shock에서 회복되는 지표 3가지, shock 환자에서 예후 판정은 언제하며 그 예후에 대한 간단한 소견을 기술 (2, 4)",
+      "sourceSet": "2",
+      "num": 2,
+      "sourcePage": 2
+    },
+    "S08": {
+      "text": "불완전 척수 손상 중 경추부 중심 척수 증후군에 대해 아래 물음에 간단히 답하기 (2, B)\n- 주요 손상기전(굴곡/신전), 영상검사 중 가장 유용한 검사, 마비가 심한 곳(상지/하지)",
+      "sourceSet": "2",
+      "num": 3,
+      "sourcePage": 2
+    },
+    "S09": {
+      "text": "요추 추간판탈출증 환자에서 추간판 절제술 시행하는 수술 적응증과 응급인 것 2개 (2)",
+      "sourceSet": "2",
+      "num": 4,
+      "sourcePage": 2
+    },
+    "S10": {
+      "text": "폐쇄성 수두증, 교통성 수두증의 차이점에 대해 간략히 쓰고 대표적인 질환 2개씩 쓰시오. 또한 내시경적 제3뇌실 조루술이 사용될 수 있는 수두증은? (2)",
+      "sourceSet": "2",
+      "num": 5,
+      "sourcePage": 2
+    },
+    "S11": {
+      "text": "개방성 척추유합부전 (2, B)",
+      "sourceSet": "2",
+      "num": 6,
+      "sourcePage": 2
+    },
+    "T06": {
+      "text": "MRI, CT에서 ring enhancement 보일 때 감별진단 3개 (2, C)",
+      "sourceSet": "2",
+      "num": 7,
+      "sourcePage": 2
+    },
+    "T07": {
+      "text": "소아 뇌종양으로 천막하부에 발생하는 대표적 종양 4개 (2, C)",
+      "sourceSet": "2",
+      "num": 8,
+      "sourcePage": 2
+    },
+    "T03": {
+      "text": "감마나이프로 흔히 치료하는 대표적 뇌종양은? (1, 2)",
+      "sourceSet": "2",
+      "num": 9,
+      "sourcePage": 2
+    },
+    "T08": {
+      "text": "두통으로 내원하여 시행한 영상검사 결과(진단, 유전질환, 치료원칙) (2, 4)",
+      "sourceSet": "2",
+      "num": 10,
+      "sourcePage": 2,
+      "fullText": "#. 다음은 두통으로 내원하여 시행한 환자의 영상 검사 결과이다.\n1) 이 환자의 진단은 무엇인가?\n2) 이 환자에게서 예상되는 유전적 질환은 무엇인가?\n3) 치료의 중요한 원칙 2가지에 대해 기술하시오.",
+      "fullSourcePage": 6
+    },
+    "N03": {
+      "text": "의식의 5단계를 기술하고 Glasgow Coma Scale(GCS)와 서로 연동하여 기술하세요. (2, 4)",
+      "sourceSet": "2",
+      "num": 11,
+      "sourcePage": 2
+    },
+    "V05": {
+      "text": "혈관연축(cerebral vasospasm)의 증상들을 설명하고 치료법들을 설명하시오. (2, 4, C)\n1) 증상\n2) 치료법",
+      "sourceSet": "2",
+      "num": 12,
+      "sourcePage": 2
+    },
+    "V02": {
+      "text": "자발성 뇌출혈의 종류와 각각의 흔한 원인에 대해 설명 (1, 2, B)",
+      "sourceSet": "2",
+      "num": 13,
+      "sourcePage": 2
+    },
+    "V06": {
+      "text": "자발성 뇌실질내출혈의 수술적 또는 비수술적 치료방침 (2)",
+      "sourceSet": "2",
+      "num": 14,
+      "sourcePage": 2
+    },
+    "V07": {
+      "text": "자발성 뇌실질내출혈의 Brain CT & MRI 소견을 출혈 후 시간 경과에 따라 설명 (2, B, C)",
+      "sourceSet": "2",
+      "num": 15,
+      "sourcePage": 2
+    },
+    "V08": {
+      "text": "경동맥 해면 정맥동루(Carotid-Cavernous fistulae) 증상, 진단, 치료 (2, B)",
+      "sourceSet": "2",
+      "num": 16,
+      "sourcePage": 2
+    },
+    "N04": {
+      "text": "사진 보고 손상 의심되는 신경과 좌/우측 기술 (2, B, C)",
+      "sourceSet": "2",
+      "num": 17,
+      "sourcePage": 2,
+      "fullText": "#. 다음 환자의 사진을 보고 손상이 의심되는 신경과 좌/우측 기술하시오.",
+      "fullSourcePage": 8
+    },
+    "H04": {
+      "text": "8세 남아 fall down 후 골절 문제 (2, B, C)",
+      "sourceSet": "2",
+      "num": 18,
+      "sourcePage": 2,
+      "fullText": "#. 8세 남아가 침대에서 fall down 후 발생한 의식소실 및 두통을 주소로 내원하였다. X-ray 사진이다.\n1. 다음에 시행할 검사\n2. 엑스레이 상에서는 출혈소견이 관찰되지 않음. 보호자에게 어떻게 설명해야하는지\n3. skull의 vascular groove와의 차이점",
+      "fullSourcePage": 10
+    },
+    "H05": {
+      "text": "21세 남자 환자 오토바이 사고(CSF rhinorrhea) (2, 4, C)",
+      "sourceSet": "2",
+      "num": 19,
+      "sourcePage": 2,
+      "fullText": "# 21세 남자 환자가 motorcycle driver TA 후 응급실로 내원하였다. 내원 당시 이학적 검사에서 open wound가 관찰되었으며, 시행한 brain CT에서 다음과 같았다. 환자 내원일 communicated depressed skull Fracture에 대하여 reconstruction과 open wound에 대하여 wound repair 시행하였다. 환자 수술적 치료 후 supine position에서 rhinorrhea는 없었으나 앉아서 머리를 숙이게 되면 rhinorrhea가 관찰되었음. 환자는 1주일 전부터 콧물 기침 등의 감기 증상은 있었다고 하였다.\n1. 환자의 CSF rhinorrhea와 coryza와의 감별은 어떻게 해야할까?\n2. 환자가 약 9일의 보존적 치료에도 CSF rhinorrhea가 멈추지 않았다고 한다. 다음으로 시행해야 할 처치는 무엇인가?",
+      "fullSourcePage": 10
+    },
+    "H06": {
+      "text": "Status epilepticus 정의와 치료에 대해 설명하시오. (2, 4)",
+      "sourceSet": "2",
+      "num": 20,
+      "sourcePage": 2
+    },
+    "S17": {
+      "text": "수내 척수종양의 호발 종양 3개, 지각해리 증상과 기전 (C)",
+      "sourceSet": "C",
+      "num": 1,
+      "sourcePage": 3
+    },
+    "S03": {
+      "text": "Spinal shock의 정의, shock 중일 때와 끝나고 나서의 운동 마비를 비교하여 기술 (1, C)",
+      "sourceSet": "C",
+      "num": 2,
+      "sourcePage": 3
+    },
+    "S18": {
+      "text": "골다공성 단순 압박골절의 초기 보존적 치료 시 환자 자세에 대하여 기술하고 척추체 성형술의 주요 합병증 3개 (C)",
+      "sourceSet": "C",
+      "num": 3,
+      "sourcePage": 3
+    },
+    "S04": {
+      "text": "경추부 신경근에 대하여 (1, B, C)",
+      "sourceSet": "C",
+      "num": 4,
+      "sourcePage": 3
+    },
+    "S19": {
+      "text": "뇌척수액을 생산하는 주요 구조물과 하루 생산량, 뇌척수액의 생성과 흡수에 관련한 주요경로 (C)",
+      "sourceSet": "C",
+      "num": 5,
+      "sourcePage": 3
+    },
+    "S20": {
+      "text": "신생아에서 잠재성 척추유합부전이 존재할 가능성이 있음을 시사하는 징표가 되는 피부 변화 또는 이상 소견들 (C)",
+      "sourceSet": "C",
+      "num": 6,
+      "sourcePage": 3
+    },
+    "T02": {
+      "text": "뇌하수체 샘종의 임상양상 (1, C)",
+      "sourceSet": "C",
+      "num": 9,
+      "sourcePage": 3
+    },
+    "T14": {
+      "text": "수막종 전적출 후 발생 부위 경막 소작하였을 때 수술적 적출 정도 표현하는 지표와 이 환자의 정도는? (C)",
+      "sourceSet": "C",
+      "num": 10,
+      "sourcePage": 3
+    },
+    "V09": {
+      "text": "급성 뇌혈관 폐색(acute cerebrovascular occlusion) 환자에서 이용되고 있는 재개통술의 방법들을 설명하시오. (4, C)",
+      "sourceSet": "C",
+      "num": 11,
+      "sourcePage": 3
+    },
+    "V10": {
+      "text": "파열된 뇌동맥류의 치료방법들과 각각의 장단점들 (C)",
+      "sourceSet": "C",
+      "num": 13,
+      "sourcePage": 3
+    },
+    "V03": {
+      "text": "뇌에 생길 수 있는 혈관기형(Intracerebral vascular malformation)들의 종류와 특징들을 설명하시오. (1, 4, C)",
+      "sourceSet": "C",
+      "num": 15,
+      "sourcePage": 3
+    },
+    "N06": {
+      "text": "자율신경계 (교감신경, 부교감신경) (C)",
+      "sourceSet": "C",
+      "num": 16,
+      "sourcePage": 3,
+      "fullText": "(1) 교감신경계의 발생위치와 범위\n(2) 부교감신경을 담당하는 뇌신경, 척수신경",
+      "fullSourcePage": 8
+    },
+    "N01": {
+      "text": "신경 손상 시 발생하는 운동신경 마비에 의한 motor power grade에 대하여 기술하세요. (1, 4, C)",
+      "sourceSet": "C",
+      "num": 17,
+      "sourcePage": 3
+    },
+    "S13": {
+      "text": "경추 추간판탈출증 환자에서 이학적 검사명 3가지 (B)",
+      "sourceSet": "B",
+      "num": 3,
+      "sourcePage": 2,
+      "fullText": null,
+      "fullSourcePage": null
+    },
+    "S05": {
+      "text": "L3~S1 각 요추부 신경근에 대한 가능성 있는 병변의 부위와 운동 및 감각 reflex 변화에 대하여 기술하시오. (1, 4)",
+      "sourceSet": "1",
+      "num": 5,
+      "sourcePage": 1,
+      "fullText": null,
+      "fullSourcePage": null
+    },
+    "S02": {
+      "text": "측방 척수 증후군에 대해 다음 질문에 답하기 (1)\n   - 운동, 통각/온도 감각, 촉각/진동/위치 감각",
+      "sourceSet": "1",
+      "num": 2,
+      "sourcePage": 1,
+      "fullText": null,
+      "fullSourcePage": null
+    },
+    "S12": {
+      "text": "엉치지각보존에 대해서 (4, B)",
+      "sourceSet": "B",
+      "num": 1,
+      "sourcePage": 2,
+      "fullText": null,
+      "fullSourcePage": null
+    },
+    "S15": {
+      "text": "정상압 수두증의 증상 3가지와 치료 (4)",
+      "sourceSet": "4",
+      "num": 15,
+      "sourcePage": 3,
+      "fullText": null,
+      "fullSourcePage": null
+    },
+    "S14": {
+      "text": "지주막낭종 (B)",
+      "sourceSet": "B",
+      "num": 5,
+      "sourcePage": 2,
+      "fullText": null,
+      "fullSourcePage": null
+    },
+    "S06": {
+      "text": "척수결박을 일으킬 수 있는 질환 3가지 이상 (1)",
+      "sourceSet": "1",
+      "num": 6,
+      "sourcePage": 1,
+      "fullText": null,
+      "fullSourcePage": null
+    },
+    "S16": {
+      "text": "척수 결박을 의심할 수 있는 척수 원추(conus medullaris)가 끝나는 위치는? (4)",
+      "sourceSet": "4",
+      "num": 16,
+      "sourcePage": 3,
+      "fullText": null,
+      "fullSourcePage": null
+    },
+    "T01": {
+      "text": "가장 호발하는 대표적 뇌종양 5가지를 쓰시오. (1, 4)",
+      "sourceSet": "1",
+      "num": 7,
+      "sourcePage": 1,
+      "fullText": null,
+      "fullSourcePage": null
+    },
+    "T09": {
+      "text": "송과체 부위 종양의 임상적 소견, 신경학적 결손 (B)",
+      "sourceSet": "B",
+      "num": 7,
+      "sourcePage": 2,
+      "fullText": null,
+      "fullSourcePage": null
+    },
+    "T10": {
+      "text": "뇌종양의 안전한 제거를 위하여 수술 중 이용하는 감시장치 시스템은? (B)",
+      "sourceSet": "B",
+      "num": 8,
+      "sourcePage": 2,
+      "fullText": null,
+      "fullSourcePage": null
+    },
+    "T11": {
+      "text": "Astrocytic tumor를 WHO grade에 따라 구분하시오. (B)",
+      "sourceSet": "B",
+      "num": 9,
+      "sourcePage": 2,
+      "fullText": null,
+      "fullSourcePage": null
+    },
+    "T12": {
+      "text": "뇌종양 유발 유전 질환 (B)",
+      "sourceSet": "B",
+      "num": 10,
+      "sourcePage": 2,
+      "fullText": null,
+      "fullSourcePage": null
+    },
+    "T13": {
+      "text": "전이성 뇌종양 중 가장 흔한 원발암(2개)과 출혈을 잘 일으키는 원발암(2개)를 기술하시오. (4)",
+      "sourceSet": "4",
+      "num": 20,
+      "sourcePage": 3,
+      "fullText": null,
+      "fullSourcePage": null
+    },
+    "T04": {
+      "text": "CP angle에 종괴가 보일 때 감별해야할 대표적 종양 두 가지와 영상의학적 감별점에 대해 기술하시오. (1, 4, B)",
+      "sourceSet": "1",
+      "num": 10,
+      "sourcePage": 1,
+      "fullText": null,
+      "fullSourcePage": null
+    },
+    "T05": {
+      "text": "61세 남자환자(뇌농양) (1, B)",
+      "sourceSet": "1",
+      "num": 11,
+      "sourcePage": 1,
+      "fullText": "61세 남자환자가 1주일 전부터 발생한 두통과 3주 전부터 나타난 slurred speech를 주소로 내원. 시행한 뇌 MRI\n1. 진단 :\n2. 위 사진처럼 ring contrast enhancing lesion 시 감별진단",
+      "fullSourcePage": 6
+    },
+    "V01": {
+      "text": "뇌졸중(stroke), 뇌출혈(intracranial hemorrhage), 뇌경색(cerebral infarction), 일과성허혈발작(transient ischemic attack, TIA)을 구분하여 설명하시오. (1, 4)",
+      "sourceSet": "1",
+      "num": 12,
+      "sourcePage": 1,
+      "fullText": null,
+      "fullSourcePage": null
+    },
+    "V04": {
+      "text": "모야모야병의 진단기준과 치료 (1, B)",
+      "sourceSet": "1",
+      "num": 15,
+      "sourcePage": 1,
+      "fullText": null,
+      "fullSourcePage": null
+    },
+    "N05": {
+      "text": "각각의 사진에서 문제가 되는 뇌의 구조물과 visual field defect에 대하여 기술하시오. (4)",
+      "sourceSet": "4",
+      "num": 9,
+      "sourcePage": 3,
+      "fullText": "각각의 사진에서 보여주는 소견에서 문제가 되는 뇌의 구조물과 visual field defect에 대하여 기술하시오.\n(1)\n(2)",
+      "fullSourcePage": 8
+    },
+    "N02": {
+      "text": "요추천자에 대하여 답하시오. (1, 4)\n   1) SAH 환자의 lumbar tapping 시 traumatic tap 여부를 알 수 있는 방법은?\n   2) bacterial meningitis와 nonbacterial meningitis의 CSF study는 어떤 결과 차이가 있을까요?",
+      "sourceSet": "1",
+      "num": 17,
+      "sourcePage": 1,
+      "fullText": null,
+      "fullSourcePage": null
+    },
+    "H01": {
+      "text": "45세 남자 환자(a-SDH 문제) (1)",
+      "sourceSet": "1",
+      "num": 18,
+      "sourcePage": 1,
+      "fullText": "45세 남자 환자 보행자 교통사고 후 의식저하로 내원. 이학적 검사에서 좌측 두정엽에 약 4cm 가량의 두피 열상이 관찰되었고, 의식은 drowsy하였고 근력 위약은 없었다. (사진 1,2) 약 4시간 경과 후에 의식이 semicomatose mentality와 Rt. pupil dilated and fixed, Lt. side weakness 악화되어 재차 Brain CT 시행하였다. (사진3)\n1. 병변이 발생한 기전 :\n2. 진단 :\n3. 치료 :\n4. 예후가 EDH보다 안 좋은 이유",
+      "fullSourcePage": 9
+    },
+    "H02": {
+      "text": "76세 남자 환자(c-SDH 문제) (1, B)",
+      "sourceSet": "1",
+      "num": 19,
+      "sourcePage": 1,
+      "fullText": "76세 남자 환자가 내원 3일 전부터 발생한 Rt. side weakness, 연하곤란을 주소로 내원함. 환자는 만성 알코올리즘으로 20년 동안 매일 소주 2병씩 마셨음. 최근 간 경화증 진단받았음. 환자의 병력상 두부외상의 기왕력은 뚜렷하지 않았다고 함. 신경학적 검사에서 의식은 명료하였고, 우측 근력 저하 GⅡ의 소견과 dysphasia 소견이 관찰되었음. Brain CT는 다음과 같음\n1. 사진에서 보이는 소견 :\n2. 치료 :",
+      "fullSourcePage": 9
+    },
+    "H03": {
+      "text": "45세 남자 환자 오토바이 사고(temporal bone fracture) (1, B)",
+      "sourceSet": "1",
+      "num": 20,
+      "sourcePage": 1,
+      "fullText": "45세 남자환자가 오토바이 사고 후 발생한 의식저하로 내원하였음. 내원 당시 drowsy mentality였고 시행한 brain CT에서 다음과 같은 소견 보임.\n1. 진단 :\n2. 가장 먼저 시행할 수 있는 치료",
+      "fullSourcePage": 10
+    }
+  },
+  "2": {
+    "S01": {
+      "text": "척수 경막을 기준으로 종양을 분류하고, 각각에 대하여 호발하는 척수종양을 2개씩 쓰시오. (1, 2, 4)",
+      "sourceSet": "2",
+      "num": 1,
+      "sourcePage": 2
+    },
+    "S07": {
+      "text": "Spinal shock에서 회복되는 지표 3가지, shock 환자에서 예후 판정은 언제하며 그 예후에 대한 간단한 소견을 기술 (2, 4)",
+      "sourceSet": "2",
+      "num": 2,
+      "sourcePage": 2
+    },
+    "S08": {
+      "text": "불완전 척수 손상 중 경추부 중심 척수 증후군에 대해 아래 물음에 간단히 답하기 (2, B)\n- 주요 손상기전(굴곡/신전), 영상검사 중 가장 유용한 검사, 마비가 심한 곳(상지/하지)",
+      "sourceSet": "2",
+      "num": 3,
+      "sourcePage": 2
+    },
+    "S09": {
+      "text": "요추 추간판탈출증 환자에서 추간판 절제술 시행하는 수술 적응증과 응급인 것 2개 (2)",
+      "sourceSet": "2",
+      "num": 4,
+      "sourcePage": 2
+    },
+    "S10": {
+      "text": "폐쇄성 수두증, 교통성 수두증의 차이점에 대해 간략히 쓰고 대표적인 질환 2개씩 쓰시오. 또한 내시경적 제3뇌실 조루술이 사용될 수 있는 수두증은? (2)",
+      "sourceSet": "2",
+      "num": 5,
+      "sourcePage": 2
+    },
+    "S11": {
+      "text": "개방성 척추유합부전 (2, B)",
+      "sourceSet": "2",
+      "num": 6,
+      "sourcePage": 2
+    },
+    "T06": {
+      "text": "MRI, CT에서 ring enhancement 보일 때 감별진단 3개 (2, C)",
+      "sourceSet": "2",
+      "num": 7,
+      "sourcePage": 2
+    },
+    "T07": {
+      "text": "소아 뇌종양으로 천막하부에 발생하는 대표적 종양 4개 (2, C)",
+      "sourceSet": "2",
+      "num": 8,
+      "sourcePage": 2
+    },
+    "T03": {
+      "text": "감마나이프로 흔히 치료하는 대표적 뇌종양은? (1, 2)",
+      "sourceSet": "2",
+      "num": 9,
+      "sourcePage": 2
+    },
+    "T08": {
+      "text": "두통으로 내원하여 시행한 영상검사 결과(진단, 유전질환, 치료원칙) (2, 4)",
+      "sourceSet": "2",
+      "num": 10,
+      "sourcePage": 2,
+      "fullText": "#. 다음은 두통으로 내원하여 시행한 환자의 영상 검사 결과이다.\n1) 이 환자의 진단은 무엇인가?\n2) 이 환자에게서 예상되는 유전적 질환은 무엇인가?\n3) 치료의 중요한 원칙 2가지에 대해 기술하시오.",
+      "fullSourcePage": 6
+    },
+    "N03": {
+      "text": "의식의 5단계를 기술하고 Glasgow Coma Scale(GCS)와 서로 연동하여 기술하세요. (2, 4)",
+      "sourceSet": "2",
+      "num": 11,
+      "sourcePage": 2
+    },
+    "V05": {
+      "text": "혈관연축(cerebral vasospasm)의 증상들을 설명하고 치료법들을 설명하시오. (2, 4, C)\n1) 증상\n2) 치료법",
+      "sourceSet": "2",
+      "num": 12,
+      "sourcePage": 2
+    },
+    "V02": {
+      "text": "자발성 뇌출혈의 종류와 각각의 흔한 원인에 대해 설명 (1, 2, B)",
+      "sourceSet": "2",
+      "num": 13,
+      "sourcePage": 2
+    },
+    "V06": {
+      "text": "자발성 뇌실질내출혈의 수술적 또는 비수술적 치료방침 (2)",
+      "sourceSet": "2",
+      "num": 14,
+      "sourcePage": 2
+    },
+    "V07": {
+      "text": "자발성 뇌실질내출혈의 Brain CT & MRI 소견을 출혈 후 시간 경과에 따라 설명 (2, B, C)",
+      "sourceSet": "2",
+      "num": 15,
+      "sourcePage": 2
+    },
+    "V08": {
+      "text": "경동맥 해면 정맥동루(Carotid-Cavernous fistulae) 증상, 진단, 치료 (2, B)",
+      "sourceSet": "2",
+      "num": 16,
+      "sourcePage": 2
+    },
+    "N04": {
+      "text": "사진 보고 손상 의심되는 신경과 좌/우측 기술 (2, B, C)",
+      "sourceSet": "2",
+      "num": 17,
+      "sourcePage": 2,
+      "fullText": "#. 다음 환자의 사진을 보고 손상이 의심되는 신경과 좌/우측 기술하시오.",
+      "fullSourcePage": 8
+    },
+    "H04": {
+      "text": "8세 남아 fall down 후 골절 문제 (2, B, C)",
+      "sourceSet": "2",
+      "num": 18,
+      "sourcePage": 2,
+      "fullText": "#. 8세 남아가 침대에서 fall down 후 발생한 의식소실 및 두통을 주소로 내원하였다. X-ray 사진이다.\n1. 다음에 시행할 검사\n2. 엑스레이 상에서는 출혈소견이 관찰되지 않음. 보호자에게 어떻게 설명해야하는지\n3. skull의 vascular groove와의 차이점",
+      "fullSourcePage": 10
+    },
+    "H05": {
+      "text": "21세 남자 환자 오토바이 사고(CSF rhinorrhea) (2, 4, C)",
+      "sourceSet": "2",
+      "num": 19,
+      "sourcePage": 2,
+      "fullText": "# 21세 남자 환자가 motorcycle driver TA 후 응급실로 내원하였다. 내원 당시 이학적 검사에서 open wound가 관찰되었으며, 시행한 brain CT에서 다음과 같았다. 환자 내원일 communicated depressed skull Fracture에 대하여 reconstruction과 open wound에 대하여 wound repair 시행하였다. 환자 수술적 치료 후 supine position에서 rhinorrhea는 없었으나 앉아서 머리를 숙이게 되면 rhinorrhea가 관찰되었음. 환자는 1주일 전부터 콧물 기침 등의 감기 증상은 있었다고 하였다.\n1. 환자의 CSF rhinorrhea와 coryza와의 감별은 어떻게 해야할까?\n2. 환자가 약 9일의 보존적 치료에도 CSF rhinorrhea가 멈추지 않았다고 한다. 다음으로 시행해야 할 처치는 무엇인가?",
+      "fullSourcePage": 10
+    },
+    "H06": {
+      "text": "Status epilepticus 정의와 치료에 대해 설명하시오. (2, 4)",
+      "sourceSet": "2",
+      "num": 20,
+      "sourcePage": 2
+    }
+  },
+  "C": {
+    "S17": {
+      "text": "수내 척수종양의 호발 종양 3개, 지각해리 증상과 기전 (C)",
+      "sourceSet": "C",
+      "num": 1,
+      "sourcePage": 3
+    },
+    "S03": {
+      "text": "Spinal shock의 정의, shock 중일 때와 끝나고 나서의 운동 마비를 비교하여 기술 (1, C)",
+      "sourceSet": "C",
+      "num": 2,
+      "sourcePage": 3
+    },
+    "S18": {
+      "text": "골다공성 단순 압박골절의 초기 보존적 치료 시 환자 자세에 대하여 기술하고 척추체 성형술의 주요 합병증 3개 (C)",
+      "sourceSet": "C",
+      "num": 3,
+      "sourcePage": 3
+    },
+    "S04": {
+      "text": "경추부 신경근에 대하여 (1, B, C)",
+      "sourceSet": "C",
+      "num": 4,
+      "sourcePage": 3
+    },
+    "S19": {
+      "text": "뇌척수액을 생산하는 주요 구조물과 하루 생산량, 뇌척수액의 생성과 흡수에 관련한 주요경로 (C)",
+      "sourceSet": "C",
+      "num": 5,
+      "sourcePage": 3
+    },
+    "S20": {
+      "text": "신생아에서 잠재성 척추유합부전이 존재할 가능성이 있음을 시사하는 징표가 되는 피부 변화 또는 이상 소견들 (C)",
+      "sourceSet": "C",
+      "num": 6,
+      "sourcePage": 3
+    },
+    "T06": {
+      "text": "MRI, CT에서 ring enhancement 보일 때 감별진단 3개 (2, C)",
+      "sourceSet": "C",
+      "num": 7,
+      "sourcePage": 3
+    },
+    "T07": {
+      "text": "소아 뇌종양으로 천막하부에 발생하는 대표적 종양 4개 (2, C)",
+      "sourceSet": "C",
+      "num": 8,
+      "sourcePage": 3
+    },
+    "T02": {
+      "text": "뇌하수체 샘종의 임상양상 (1, C)",
+      "sourceSet": "C",
+      "num": 9,
+      "sourcePage": 3
+    },
+    "T14": {
+      "text": "수막종 전적출 후 발생 부위 경막 소작하였을 때 수술적 적출 정도 표현하는 지표와 이 환자의 정도는? (C)",
+      "sourceSet": "C",
+      "num": 10,
+      "sourcePage": 3
+    },
+    "V09": {
+      "text": "급성 뇌혈관 폐색(acute cerebrovascular occlusion) 환자에서 이용되고 있는 재개통술의 방법들을 설명하시오. (4, C)",
+      "sourceSet": "C",
+      "num": 11,
+      "sourcePage": 3
+    },
+    "V05": {
+      "text": "혈관연축(cerebral vasospasm)의 증상들을 설명하고 치료법들을 설명하시오. (2, 4, C)\n1) 증상\n2) 치료법",
+      "sourceSet": "C",
+      "num": 12,
+      "sourcePage": 3
+    },
+    "V10": {
+      "text": "파열된 뇌동맥류의 치료방법들과 각각의 장단점들 (C)",
+      "sourceSet": "C",
+      "num": 13,
+      "sourcePage": 3
+    },
+    "V07": {
+      "text": "자발성 뇌실질내출혈의 Brain CT & MRI 소견을 출혈 후 시간 경과에 따라 설명 (2, B, C)",
+      "sourceSet": "C",
+      "num": 14,
+      "sourcePage": 3
+    },
+    "V03": {
+      "text": "뇌에 생길 수 있는 혈관기형(Intracerebral vascular malformation)들의 종류와 특징들을 설명하시오. (1, 4, C)",
+      "sourceSet": "C",
+      "num": 15,
+      "sourcePage": 3
+    },
+    "N06": {
+      "text": "자율신경계 (교감신경, 부교감신경) (C)",
+      "sourceSet": "C",
+      "num": 16,
+      "sourcePage": 3,
+      "fullText": "(1) 교감신경계의 발생위치와 범위\n(2) 부교감신경을 담당하는 뇌신경, 척수신경",
+      "fullSourcePage": 8
+    },
+    "N01": {
+      "text": "신경 손상 시 발생하는 운동신경 마비에 의한 motor power grade에 대하여 기술하세요. (1, 4, C)",
+      "sourceSet": "C",
+      "num": 17,
+      "sourcePage": 3
+    },
+    "N04": {
+      "text": "사진 보고 손상 의심되는 신경과 좌/우측 기술 (2, B, C)",
+      "sourceSet": "C",
+      "num": 18,
+      "sourcePage": 3,
+      "fullText": "#. 다음 환자의 사진을 보고 손상이 의심되는 신경과 좌/우측 기술하시오.",
+      "fullSourcePage": 8
+    },
+    "H04": {
+      "text": "8세 남아 fall down 후 골절 문제 (2, B, C)",
+      "sourceSet": "C",
+      "num": 19,
+      "sourcePage": 3,
+      "fullText": "#. 8세 남아가 침대에서 fall down 후 발생한 의식소실 및 두통을 주소로 내원하였다. X-ray 사진이다.\n1. 다음에 시행할 검사\n2. 엑스레이 상에서는 출혈소견이 관찰되지 않음. 보호자에게 어떻게 설명해야하는지\n3. skull의 vascular groove와의 차이점",
+      "fullSourcePage": 10
+    },
+    "H05": {
+      "text": "21세 남자 환자 오토바이 사고(CSF rhinorrhea) (2, 4, C)",
+      "sourceSet": "C",
+      "num": 20,
+      "sourcePage": 3,
+      "fullText": "# 21세 남자 환자가 motorcycle driver TA 후 응급실로 내원하였다. 내원 당시 이학적 검사에서 open wound가 관찰되었으며, 시행한 brain CT에서 다음과 같았다. 환자 내원일 communicated depressed skull Fracture에 대하여 reconstruction과 open wound에 대하여 wound repair 시행하였다. 환자 수술적 치료 후 supine position에서 rhinorrhea는 없었으나 앉아서 머리를 숙이게 되면 rhinorrhea가 관찰되었음. 환자는 1주일 전부터 콧물 기침 등의 감기 증상은 있었다고 하였다.\n1. 환자의 CSF rhinorrhea와 coryza와의 감별은 어떻게 해야할까?\n2. 환자가 약 9일의 보존적 치료에도 CSF rhinorrhea가 멈추지 않았다고 한다. 다음으로 시행해야 할 처치는 무엇인가?",
+      "fullSourcePage": 10
+    }
+  }
+}

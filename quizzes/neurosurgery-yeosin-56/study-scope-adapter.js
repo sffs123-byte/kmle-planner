@@ -71,10 +71,9 @@ function updateScopeControls() {
     const resume = document.getElementById('btnStudyResume');
     if (resume) resume.hidden = !loadQuizSession();
     const note = document.getElementById('studyScopeNote');
-    if (note) note.textContent = deckStudyScope === '2'
-        ? '원문 1–20번 순서 · 10·17·18번은 영상 대신 관찰·진찰소견으로 재구성.'
-        : deckStudyScope === 'C' ? '원문 1–20번 순서 · 18·19번은 사진 대신 관찰·진찰소견으로 재구성.'
-        : '전체 56개 질문군 · 기존 학습 기록을 그대로 사용합니다.';
+    if (note) note.textContent = deckStudyScope === 'all'
+        ? '전체 56개 질문군 · 시험지 원문 질문 · 기존 학습 기록을 그대로 사용합니다.'
+        : '원문 1–20번 순서 · 질문 문구 그대로 · 정답은 원문 필기 서식';
     const badge = document.getElementById('studyScopeBadge');
     if (badge) badge.textContent = studyLabel() + ' ' + studyIds().length + '문제';
     const resetTitle = document.getElementById('deckResetTitle');
