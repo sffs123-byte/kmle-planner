@@ -143,6 +143,10 @@
       {
         "term": "구해면체반사",
         "definition": "구해면체반사(bulbocavernosus reflex): 귀두·음핵 자극에 외항문괄약근(external anal sphincter)이 수축하는 S2–4 반사로, 자발적 항문수축과 다르다."
+      },
+      {
+        "term": "Sacral sparing",
+        "definition": "Sacral sparing(엉치기능 보존): 척수손상 후에도 S4–5의 감각 또는 운동기능이 남아 있는 것. 항문 주위 촉각·통각, 깊은 항문압박감각(DAP), 수의적 항문수축(VAC) 중 하나라도 보존되면 해당하며 불완전손상을 뜻한다. 항문반사·구해면체반사만 남은 것은 해당하지 않는다."
       }
     ],
     "sourceRequired": false,

@@ -13,7 +13,7 @@ from anki_backup_restore import inject_backup_restore
 
 TITLE = '신경외과 여신 완성본 · 56문제 Anki'
 PREFIX = 'neurosurgery_yeosin_56_anki'
-VERSION = '2026-09-18.skill.9-spinal-prognosis'
+VERSION = '2026-09-18.skill.10-sacral-term'
 
 def replace_once(text, old, new):
     assert text.count(old) == 1, f'Builder marker changed: {old[:70]}'

@@ -1,17 +1,17 @@
 {
-  "version": "2026-09-18.skill.9-spinal-prognosis",
+  "version": "2026-09-18.skill.10-sacral-term",
   "cards": 56,
   "builder": "../anki_quiz_builder.py",
   "builderSha256": "f857c0b8e11abe8e74ff4910315d3c7cf8e34c3f508b814ea75468bbd7a7a432",
-  "sourceSha256": "f5d4153b462b912af997aafce3234e830ae7a80015591124676b5c2ef71d175a",
-  "originalNotesSha256": "09040ed46000db782303d029975865bbcfcffe2fea53c0a49393ad69a42ea686",
+  "sourceSha256": "6a61d5f1a162e4fc6cc900d92f148d786d660c88fd1bfb0ccf93ffeb890af779",
+  "originalNotesSha256": "aa85956138b67fd3fed620dbb8d7a310a85aca23d359682942e7e6ca90b569d1",
   "originalQuestionsSha256": "4fb8fa3b792aee8ffec3688633f0f07cf1435adad5ae285aec9b1a07f5c2ce8a",
   "images": 13,
   "questionImagesSha256": "3c4eb1a6c87c164cc44390e2358ce8f2dbdad8ec548e3995f4dea73c9608d16c",
   "answerImageCards": 56,
   "answerImages": 58,
   "answerImagesSha256": "af5e759e245f4c38dc297a718574e7c38de94e1a6c1c54ed67cb3f4c04b90bea",
-  "terms": 57,
+  "terms": 58,
   "railErrors": 0,
-  "htmlSha256": "7c383cfdd66f6701413729b1e3295e7f0031c31e3656324a9ca8200e3ed81cc0"
+  "htmlSha256": "f83ca22bfda89e91f5f5d1dc88dd87f4872a06b96a7777e0f99f35b692da9ff6"
 }
