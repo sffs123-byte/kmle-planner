@@ -13,7 +13,7 @@ from anki_backup_restore import inject_backup_restore
 
 TITLE = '신경외과 여신 완성본 · 56문제 Anki'
 PREFIX = 'neurosurgery_yeosin_56_anki'
-VERSION = '2026-09-17.skill.5-verbatim-questions'
+VERSION = '2026-09-17.skill.6-source-images'
 
 def replace_once(text, old, new):
     assert text.count(old) == 1, f'Builder marker changed: {old[:70]}'
@@ -23,10 +23,17 @@ def source_question_html(item, card):
     q = '<div class="source-question"><p class="source-question-text">' + html.escape(item['text']) + '</p></div>'
     if item.get('fullText'):
         q += '<details class="source-question-detail" open><summary>원문 상세 지문</summary><div class="source-question-full">' + html.escape(item['fullText']) + '</div></details>'
-    for im in card.get('questionImages', []):
+    images = json.loads((ROOT/'question-images.json').read_text()).get(card['id'], card.get('questionImages', []))
+    if images:
+        q += '<div class="question-images">'
+    for index, im in enumerate(images, 1):
         p = ROOT / im['src']
         assert p.is_file() and p.resolve().is_relative_to(ROOT)
-        q += f'<figure class="question-image"><img src="{html.escape(im["src"], quote=True)}" alt="원문 문제 그림"></figure>'
+        src = html.escape(im['src'], quote=True)
+        label = html.escape(im.get('label', f'원문 그림 {index}'))
+        q += f'<figure class="question-image"><button type="button" class="question-image-open" aria-label="{label} 확대"><img src="{src}" alt="{label}" decoding="async"></button><figcaption>{label} · 눌러서 확대</figcaption></figure>'
+    if images:
+        q += '</div>'
     q += '<p class="question-source-link"><a href="' + html.escape(card['sourceUrl'], quote=True) + '" target="_blank" rel="noopener">원문 확인 · ' + html.escape(str(item['sourceSet'])) + '세트 ' + str(item['num']) + '번</a></p>'
     assert not any(x in q for x in ['`', '${', '\\', '</script>'])
     return q
@@ -99,6 +106,7 @@ def decorate(text):
     text = replace_once(text, "const num = card?.querySelector('.card-num')?.textContent || data.num || id;", "const num = inQuiz ? studyNumber(id) : (card?.querySelector('.card-num')?.textContent || data.num || id);")
     text = replace_once(text, '// ── Init ──', (ROOT/'study-scope-adapter.js').read_text() + '\n// ── Init ──')
     browse += (ROOT/'browse-adapter.js').read_text()
+    browse += '\n' + (ROOT/'question-image-viewer.js').read_text()
     text = replace_once(text, '</script>\n</body>', browse + '\n</script>\n</body>')
     return text
 
@@ -122,7 +130,8 @@ def build(root=ROOT):
         'sourceSha256':hashlib.sha256((root/'deck.json').read_bytes()).hexdigest(),
         'originalNotesSha256':hashlib.sha256((root/'original-notes.json').read_bytes()).hexdigest(),
         'originalQuestionsSha256':hashlib.sha256((root/'original-questions.json').read_bytes()).hexdigest(),
-        'images':sum(len(c.get('questionImages',[])) for c in source),
+        'images':sum(len(v) for v in json.loads((root/'question-images.json').read_text()).values()),
+        'questionImagesSha256':hashlib.sha256((root/'question-images.json').read_bytes()).hexdigest(),
         'terms':sum(len(c['terms']) for c in source),'railErrors':0,
         'htmlSha256':hashlib.sha256(generated.encode()).hexdigest()}
     (root/'build-qc.json').write_text(json.dumps(qc,ensure_ascii=False,indent=2)+'\n')

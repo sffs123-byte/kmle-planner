@@ -1,0 +1,85 @@
+{
+  "T08": [
+    {
+      "src": "images/q-t08-01.jpg",
+      "page": 6,
+      "label": "문제 영상"
+    }
+  ],
+  "T05": [
+    {
+      "src": "images/q-t05-01.jpg",
+      "page": 6,
+      "label": "문제 영상 A–D"
+    }
+  ],
+  "N04": [
+    {
+      "src": "images/q-n04-01.jpg",
+      "page": 8,
+      "label": "사진 (1)"
+    },
+    {
+      "src": "images/q-n04-02.jpg",
+      "page": 8,
+      "label": "사진 (2)"
+    },
+    {
+      "src": "images/q-n04-03.jpg",
+      "page": 8,
+      "label": "사진 (3)"
+    },
+    {
+      "src": "images/q-n04-04.jpg",
+      "page": 8,
+      "label": "사진 (4)"
+    }
+  ],
+  "N05": [
+    {
+      "src": "images/q-n05-01.jpg",
+      "page": 8,
+      "label": "사진 (1)"
+    },
+    {
+      "src": "images/q-n05-02.jpg",
+      "page": 8,
+      "label": "사진 (2)"
+    }
+  ],
+  "H01": [
+    {
+      "src": "images/q-h01-01.jpg",
+      "page": 9,
+      "label": "사진 1·2·3 (왼쪽부터)"
+    }
+  ],
+  "H02": [
+    {
+      "src": "images/q-h02-01.jpg",
+      "page": 9,
+      "label": "문제 CT"
+    }
+  ],
+  "H04": [
+    {
+      "src": "images/q-h04-01.jpg",
+      "page": 10,
+      "label": "문제 X-ray"
+    }
+  ],
+  "H05": [
+    {
+      "src": "images/q-h05-01.jpg",
+      "page": 10,
+      "label": "문제 CT"
+    }
+  ],
+  "H03": [
+    {
+      "src": "images/q-h03-01.jpg",
+      "page": 10,
+      "label": "문제 CT"
+    }
+  ]
+}

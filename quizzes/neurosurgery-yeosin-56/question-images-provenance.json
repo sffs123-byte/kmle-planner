@@ -1,0 +1,403 @@
+{
+  "sourceTitle": "신경외과 여신 완성본 · 문제와 해설",
+  "sourcePdfSha256": "0d91c47c767fd3f360226c4f20174ef0bc9ecb02aba103b8bb0c7802daec6001",
+  "figures": [
+    {
+      "id": "T08",
+      "num": 33,
+      "sets": {
+        "2": 10,
+        "C": null
+      },
+      "publicSrc": "images/q-t08-01.jpg",
+      "sourcePdfPage": 6,
+      "xref": 46,
+      "pageBbox": [
+        59.36800003051758,
+        393.64898681640625,
+        263.37799072265625,
+        547.0809936523438
+      ],
+      "nativePixelCrop": null,
+      "nativeSize": [
+        659,
+        496
+      ],
+      "outputSize": [
+        659,
+        496
+      ],
+      "panelDescription": "MRI·혈관조영 6개 패널",
+      "sha256": "0230df948d91c38be08e700739a2228a093c731b3343374afaf733600f39ae75",
+      "answerTextExcluded": true,
+      "sourceImagePixelsUnaltered": true
+    },
+    {
+      "id": "T05",
+      "num": 34,
+      "sets": {
+        "2": null,
+        "C": null
+      },
+      "publicSrc": "images/q-t05-01.jpg",
+      "sourcePdfPage": 6,
+      "xref": 47,
+      "pageBbox": [
+        38.979000091552734,
+        681.0950317382812,
+        285.6860046386719,
+        751.4580078125
+      ],
+      "nativePixelCrop": null,
+      "nativeSize": [
+        816,
+        233
+      ],
+      "outputSize": [
+        816,
+        233
+      ],
+      "panelDescription": "A–D 4개 MRI 패널",
+      "sha256": "b35ec415781c50f60e19f3ebdcb4c8bcc0a061610f6a7df4c94d56c28657a810",
+      "answerTextExcluded": true,
+      "sourceImagePixelsUnaltered": true
+    },
+    {
+      "id": "N04",
+      "num": 48,
+      "sets": {
+        "2": 17,
+        "C": 18
+      },
+      "publicSrc": "images/q-n04-01.jpg",
+      "sourcePdfPage": 8,
+      "xref": 61,
+      "pageBbox": [
+        38.979000091552734,
+        323.406005859375,
+        134.20799255371094,
+        409.11199951171875
+      ],
+      "nativePixelCrop": null,
+      "nativeSize": [
+        328,
+        295
+      ],
+      "outputSize": [
+        328,
+        295
+      ],
+      "panelDescription": "(1)",
+      "sha256": "74efc7ad36d472d20fb4c4d0fffb74208caf4029b48e92eb01162ea84af9e382",
+      "answerTextExcluded": true,
+      "sourceImagePixelsUnaltered": true
+    },
+    {
+      "id": "N04",
+      "num": 48,
+      "sets": {
+        "2": 17,
+        "C": 18
+      },
+      "publicSrc": "images/q-n04-02.jpg",
+      "sourcePdfPage": 8,
+      "xref": 62,
+      "pageBbox": [
+        173.66700744628906,
+        323.406005859375,
+        271.05499267578125,
+        373.9909973144531
+      ],
+      "nativePixelCrop": null,
+      "nativeSize": [
+        354,
+        184
+      ],
+      "outputSize": [
+        354,
+        184
+      ],
+      "panelDescription": "(2)",
+      "sha256": "4c0ca694acfa50f365e9be74511b0c7334819379b364c62a9df2489e02d8c4a1",
+      "answerTextExcluded": true,
+      "sourceImagePixelsUnaltered": true
+    },
+    {
+      "id": "N04",
+      "num": 48,
+      "sets": {
+        "2": 17,
+        "C": 18
+      },
+      "publicSrc": "images/q-n04-03.jpg",
+      "sourcePdfPage": 8,
+      "xref": 63,
+      "pageBbox": [
+        173.66700744628906,
+        385.9779968261719,
+        269.8550109863281,
+        443.3949890136719
+      ],
+      "nativePixelCrop": [
+        10,
+        20,
+        422,
+        231
+      ],
+      "nativeSize": [
+        430,
+        257
+      ],
+      "outputSize": [
+        412,
+        211
+      ],
+      "panelDescription": "(3) 비교 사진 2개; 이마·눈·입 보존",
+      "sha256": "23545d51eb808d9734502f86679d10fdc31b088dc241b2e3774de71f822e9fa8",
+      "answerTextExcluded": true,
+      "sourceImagePixelsUnaltered": false
+    },
+    {
+      "id": "N04",
+      "num": 48,
+      "sets": {
+        "2": 17,
+        "C": 18
+      },
+      "publicSrc": "images/q-n04-04.jpg",
+      "sourcePdfPage": 8,
+      "xref": 64,
+      "pageBbox": [
+        38.979000091552734,
+        455.5019836425781,
+        216.00399780273438,
+        505.60699462890625
+      ],
+      "nativePixelCrop": null,
+      "nativeSize": [
+        789,
+        223
+      ],
+      "outputSize": [
+        789,
+        223
+      ],
+      "panelDescription": "(4) 눈운동 비교 사진 2줄",
+      "sha256": "dc4be96ca7c519843e78d1c629d94129d6afc75cde08abf613c8622bc93888a7",
+      "answerTextExcluded": true,
+      "sourceImagePixelsUnaltered": true
+    },
+    {
+      "id": "N05",
+      "num": 49,
+      "sets": {
+        "2": null,
+        "C": null
+      },
+      "publicSrc": "images/q-n05-01.jpg",
+      "sourcePdfPage": 8,
+      "xref": 65,
+      "pageBbox": [
+        42.33700180053711,
+        624.9959716796875,
+        162.87200927734375,
+        697.5169677734375
+      ],
+      "nativePixelCrop": null,
+      "nativeSize": [
+        416,
+        250
+      ],
+      "outputSize": [
+        416,
+        250
+      ],
+      "panelDescription": "(1) CT 2개 패널",
+      "sha256": "091933fb1db787fa8992603f618345c9cf8ce27380473bfb21728a23453c81e9",
+      "answerTextExcluded": true,
+      "sourceImagePixelsUnaltered": true
+    },
+    {
+      "id": "N05",
+      "num": 49,
+      "sets": {
+        "2": null,
+        "C": null
+      },
+      "publicSrc": "images/q-n05-02.jpg",
+      "sourcePdfPage": 8,
+      "xref": 66,
+      "pageBbox": [
+        182.66200256347656,
+        624.9959716796875,
+        255.5830078125,
+        697.636962890625
+      ],
+      "nativePixelCrop": null,
+      "nativeSize": [
+        276,
+        275
+      ],
+      "outputSize": [
+        276,
+        275
+      ],
+      "panelDescription": "(2) MRI",
+      "sha256": "f3f63664dcb24e6f3a56aa4989ec4c9c5a480c4da35ad6373fa7f510878c7b05",
+      "answerTextExcluded": true,
+      "sourceImagePixelsUnaltered": true
+    },
+    {
+      "id": "H01",
+      "num": 51,
+      "sets": {
+        "2": null,
+        "C": null
+      },
+      "publicSrc": "images/q-h01-01.jpg",
+      "sourcePdfPage": 9,
+      "xref": 77,
+      "pageBbox": [
+        38.979000091552734,
+        289.7230224609375,
+        285.6860046386719,
+        358.64801025390625
+      ],
+      "nativePixelCrop": null,
+      "nativeSize": [
+        787,
+        220
+      ],
+      "outputSize": [
+        787,
+        220
+      ],
+      "panelDescription": "CT 3개; 임상 경과 순서",
+      "sha256": "573c8aa5b7852836befc98b64786a55db3941e0098f49c9de51dbd9011b4dae8",
+      "answerTextExcluded": true,
+      "sourceImagePixelsUnaltered": true
+    },
+    {
+      "id": "H02",
+      "num": 52,
+      "sets": {
+        "2": null,
+        "C": null
+      },
+      "publicSrc": "images/q-h02-01.jpg",
+      "sourcePdfPage": 9,
+      "xref": 78,
+      "pageBbox": [
+        199.09300231933594,
+        478.3960266113281,
+        285.6860046386719,
+        565.4210205078125
+      ],
+      "nativePixelCrop": null,
+      "nativeSize": [
+        251,
+        253
+      ],
+      "outputSize": [
+        251,
+        253
+      ],
+      "panelDescription": "증례 옆 CT",
+      "sha256": "b291468468e4d5062a797943c7500b7b3736e0d7546249684edc088a4e171517",
+      "answerTextExcluded": true,
+      "sourceImagePixelsUnaltered": true
+    },
+    {
+      "id": "H04",
+      "num": 53,
+      "sets": {
+        "2": 18,
+        "C": 19
+      },
+      "publicSrc": "images/q-h04-01.jpg",
+      "sourcePdfPage": 10,
+      "xref": 95,
+      "pageBbox": [
+        216.12399291992188,
+        87.50399780273438,
+        285.68701171875,
+        149.83599853515625
+      ],
+      "nativePixelCrop": null,
+      "nativeSize": [
+        208,
+        186
+      ],
+      "outputSize": [
+        208,
+        186
+      ],
+      "panelDescription": "증례 옆 X-ray",
+      "sha256": "485131b3b764dcdffb51b91f7e77f6163c0bd6b3482af1ee11ef5665ea71ca69",
+      "answerTextExcluded": true,
+      "sourceImagePixelsUnaltered": true
+    },
+    {
+      "id": "H05",
+      "num": 54,
+      "sets": {
+        "2": 19,
+        "C": 20
+      },
+      "publicSrc": "images/q-h05-01.jpg",
+      "sourcePdfPage": 10,
+      "xref": 96,
+      "pageBbox": [
+        204.72999572753906,
+        308.06298828125,
+        285.6860046386719,
+        374.469970703125
+      ],
+      "nativePixelCrop": null,
+      "nativeSize": [
+        287,
+        236
+      ],
+      "outputSize": [
+        287,
+        236
+      ],
+      "panelDescription": "증례 옆 CT",
+      "sha256": "01513ae15dec80e8e686a33d73bbf65407ca56fecd5365115f3092e4bd5fe7bd",
+      "answerTextExcluded": true,
+      "sourceImagePixelsUnaltered": true
+    },
+    {
+      "id": "H03",
+      "num": 55,
+      "sets": {
+        "2": null,
+        "C": null
+      },
+      "publicSrc": "images/q-h03-01.jpg",
+      "sourcePdfPage": 10,
+      "xref": 97,
+      "pageBbox": [
+        216.12399291992188,
+        531.259033203125,
+        285.68701171875,
+        601.6220092773438
+      ],
+      "nativePixelCrop": null,
+      "nativeSize": [
+        348,
+        352
+      ],
+      "outputSize": [
+        348,
+        352
+      ],
+      "panelDescription": "증례 옆 CT",
+      "sha256": "fd09f00859d82f5ba9ed7fe76cad4d23231a91768178ee08b00c5466b2a861fc",
+      "answerTextExcluded": true,
+      "sourceImagePixelsUnaltered": true
+    }
+  ],
+  "cardsWithRequiredImages": 9,
+  "imageAssets": 13
+}
