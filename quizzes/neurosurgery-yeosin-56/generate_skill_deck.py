@@ -13,7 +13,7 @@ from anki_backup_restore import inject_backup_restore
 
 TITLE = '신경외과 여신 완성본 · 56문제 Anki'
 PREFIX = 'neurosurgery_yeosin_56_anki'
-VERSION = '2026-09-17.skill.2'
+VERSION = '2026-09-17.skill.3-set2'
 
 def replace_once(text, old, new):
     assert text.count(old) == 1, f'Builder marker changed: {old[:70]}'
@@ -62,6 +62,12 @@ def decorate(text):
     text = replace_once(text, '// ── Init ──', (ROOT/'skill-adapter.js').read_text() + '\n// ── Init ──')
     categories = {c['id']: c['category'] for c in json.loads((ROOT/'deck.json').read_text())}
     browse = 'const DECK_CATEGORIES = ' + json.dumps(categories, ensure_ascii=False) + ';\n'
+    exam_sets = json.loads((ROOT/'exam-sets.json').read_text())
+    for exam in exam_sets.values():
+        assert len(exam['items']) == 20 and len({i['id'] for i in exam['items']}) == 20
+        assert [i['num'] for i in exam['items']] == list(range(1, 21))
+        assert all(i['id'] in categories for i in exam['items'])
+    browse += 'const DECK_EXAM_SETS = ' + json.dumps(exam_sets, ensure_ascii=False) + ';\n'
     browse += (ROOT/'browse-adapter.js').read_text()
     text = replace_once(text, '</script>\n</body>', browse + '\n</script>\n</body>')
     return text

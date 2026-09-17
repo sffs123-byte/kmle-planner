@@ -6,19 +6,26 @@ window.addEventListener('DOMContentLoaded', function () {
     dialog.setAttribute('aria-labelledby', 'browseTitle');
     dialog.innerHTML = `<div class="browse-head">
       <div><h2 id="browseTitle">퀴즈 모아보기 <small>56문제</small></h2>
-      <p>문제를 골라 펼치세요. 정답은 버튼을 누르면 보여요.</p></div>
+      <p id="browseDescription">문제를 골라 펼치세요. 정답은 버튼을 누르면 보여요.</p></div>
       <button id="browseClose" type="button" aria-label="퀴즈 모아보기 닫기">닫기 ×</button>
     </div>
     <div class="browse-toolbar">
-      <label>문제 검색<input id="browseSearch" type="search" placeholder="문제 번호 또는 검색어" autocomplete="off"></label>
-      <label>주제<select id="browseCategory"><option value="">전체 주제</option></select></label>
+      <label class="browse-set-label">시험지<select id="browseSet"><option value="">전체 56문제</option></select></label>
+      <label class="browse-search-label">문제 검색<input id="browseSearch" type="search" placeholder="문제 번호 또는 검색어" autocomplete="off"></label>
+      <label class="browse-category-label">주제<select id="browseCategory"><option value="">전체 주제</option></select></label>
       <button id="browseClear" type="button">검색 지우기</button>
       <p id="browseCount" role="status" aria-live="polite"></p>
     </div>
+    <p id="browseSetNote" hidden>기존 교정 해설을 사용합니다. 10·17·18번 영상 문항은 관찰·진찰소견을 글로 풀어 쓴 복습형입니다.</p>
     <div id="browseList"></div><p id="browseEmpty" hidden>일치하는 문제가 없어요. 검색어나 주제를 바꿔보세요.</p>`;
     document.body.appendChild(dialog);
     const search = document.getElementById('browseSearch');
     const category = document.getElementById('browseCategory');
+    const set = document.getElementById('browseSet');
+    Object.entries(DECK_EXAM_SETS).forEach(([id, exam]) => {
+        const option = document.createElement('option');
+        option.value = id; option.textContent = exam.label + ' · ' + exam.items.length + '문제'; set.appendChild(option);
+    });
     [...new Set(Object.values(DECK_CATEGORIES))].forEach(name => {
         const option = document.createElement('option');
         option.value = name; option.textContent = name; category.appendChild(option);
@@ -69,29 +76,34 @@ window.addEventListener('DOMContentLoaded', function () {
             body.appendChild(answer); row.appendChild(body);
         });
         list.appendChild(row);
-        return {row, id, question: question.normalize('NFKC').toLocaleLowerCase()};
+        return {row, id, number, question: question.normalize('NFKC').toLocaleLowerCase()};
     });
+    const hashForSet = () => set.value === '2' ? '#browse-set2' : '#browse';
     function filter() {
         const term = search.value.normalize('NFKC').trim().toLocaleLowerCase();
         const number = term.match(/^(?:#|q)?\s*(\d+)\s*번?$/i);
         const words = term.split(/\s+/).filter(Boolean);
+        const exam = DECK_EXAM_SETS[set.value];
+        const numbers = new Map((exam ? exam.items : ALL_IDS.map(id => ({id, num: Number(QUIZ_DATA[id].num)}))).map(i => [i.id, i.num]));
+        const total = numbers.size;
+        document.getElementById('browseTitle').textContent = (exam ? exam.label + ' 모아보기' : '퀴즈 모아보기') + ' · ' + total + '문제';
+        document.getElementById('browseDescription').textContent = exam ? exam.source + ' · 원래 문항 순서 / 정답은 눌러서 확인' : '전체 중복통합 56문제 · 문제를 골라 펼치세요.';
+        document.getElementById('browseSetNote').hidden = !exam;
+        search.placeholder = exam ? '2세트 문항 번호 또는 검색어' : '문제 번호 또는 검색어';
         let count = 0;
-        rows.forEach(({row, id, question}) => {
-            const match = (!category.value || DECK_CATEGORIES[id] === category.value) &&
-                (number ? Number(QUIZ_DATA[id].num) === Number(number[1]) : words.every(word => question.includes(word)));
+        [...rows].sort((a, b) => (numbers.get(a.id) || 999) - (numbers.get(b.id) || 999)).forEach(({row, id, question, number: badge}) => {
+            list.appendChild(row);
+            const n = numbers.get(id);
+            badge.textContent = n || QUIZ_DATA[id].num;
+            row.dataset.examNumber = n || '';
+            const match = Boolean(n) && (!category.value || DECK_CATEGORIES[id] === category.value) &&
+                (number ? n === Number(number[1]) : words.every(word => question.includes(word)));
             row.hidden = !match; if (match) count++;
         });
-        document.getElementById('browseCount').textContent = count + ' / 56문제';
+        document.getElementById('browseCount').textContent = (exam ? exam.label + ' · ' : '') + count + ' / ' + total + '문제';
         document.getElementById('browseEmpty').hidden = count !== 0;
     }
-    search.addEventListener('input', filter); category.addEventListener('change', filter);
-    document.getElementById('browseClear').onclick = () => {search.value = ''; category.value = ''; filter(); search.focus();};
-    document.getElementById('browseClose').onclick = () => dialog.close();
-    let previousOverflow = '';
-    function open() {
-        if (dialog.open) return;
-        // Hide answers left open on the previous visit; never expose them merely
-        // by opening the collection. Existing study state stays untouched.
+    function hideAnswers() {
         rows.forEach(({row}) => {
             row.open = false;
             const answer = row.querySelector('.browse-answer');
@@ -99,25 +111,47 @@ window.addEventListener('DOMContentLoaded', function () {
             const reveal = row.querySelector('.browse-reveal');
             if (reveal) {reveal.textContent = '정답 보기'; reveal.setAttribute('aria-expanded', 'false');}
         });
+    }
+    set.addEventListener('change', () => {
+        search.value = ''; category.value = ''; hideAnswers(); filter();
+        if (dialog.open) window.history.replaceState(null, '', hashForSet());
+    });
+    search.addEventListener('input', filter); category.addEventListener('change', filter);
+    document.getElementById('browseClear').onclick = () => {search.value = ''; category.value = ''; filter(); search.focus();};
+    document.getElementById('browseClose').onclick = () => dialog.close();
+    let previousOverflow = '';
+    function open(scope = '') {
+        set.value = scope;
+        search.value = ''; category.value = '';
+        hideAnswers(); filter();
+        if (dialog.open) return;
+        // Hide answers left open on the previous visit; never expose them merely
+        // by opening the collection. Existing study state stays untouched.
         previousOverflow = document.body.style.overflow;
         document.body.style.overflow = 'hidden';
         filter(); dialog.showModal();
-        window.history.replaceState(null, '', '#browse');
+        window.history.replaceState(null, '', hashForSet());
         document.getElementById('browseClose').focus();
     }
     dialog.addEventListener('close', () => {
         document.body.style.overflow = previousOverflow;
-        if (location.hash === '#browse') window.history.replaceState(null, '', location.pathname + location.search);
+        if (['#browse', '#browse-set2'].includes(location.hash)) window.history.replaceState(null, '', location.pathname + location.search);
     });
-    function button(id, parent, css) {
+    function button(id, parent, css, scope = '') {
         const b = document.createElement('button'); b.id = id; b.type = 'button';
-        b.className = css; b.textContent = '퀴즈 모아보기'; b.onclick = open;
+        b.className = css; b.textContent = scope === '2' ? '2세트 모아보기 · 20문제' : '퀴즈 모아보기'; b.onclick = () => open(scope);
         parent.appendChild(b);
     }
     button('btnBrowseHero', document.getElementById('reviewHero').lastElementChild, 'review-hero-btn browse-entry');
     button('btnBrowseSidebar', document.querySelector('.sb-quiz-btns'), 'btn-review');
     button('btnBrowseQuiz', document.getElementById('quizHeader'), 'undo-btn');
-    window.addEventListener('hashchange', () => {if (location.hash === '#browse') open();});
+    button('btnSet2Browse', document.getElementById('reviewHero').lastElementChild, 'review-hero-btn browse-entry set2-entry', '2');
+    button('btnSet2Sidebar', document.querySelector('.sb-quiz-btns'), 'btn-review set2-entry', '2');
+    function openHash() {
+        if (location.hash === '#browse-set2') open('2');
+        else if (location.hash === '#browse') open();
+    }
+    window.addEventListener('hashchange', openHash);
     filter();
-    if (location.hash === '#browse') open();
+    openHash();
 });
