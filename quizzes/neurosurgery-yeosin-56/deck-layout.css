@@ -89,6 +89,13 @@
 .question-image-open img{margin:0;object-fit:contain}
 .question-image figcaption{margin-top:4px;line-height:1.4;font-weight:400}
 .question-image-open:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.source-answer-guide{margin:8px 0 16px;padding:10px;box-sizing:border-box;min-width:0;max-width:100%;background:#fff;color:#243047;border-radius:8px}
+.source-answer-note{font-size:12px;line-height:1.5}
+.source-answer-guide .source-answer-note,.source-answer-guide figcaption{color:#475569}
+.source-answer-images{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;max-width:100%}
+.source-answer-images>.source-answer-image{margin:0;min-width:0}
+.source-answer-image .question-image-open{width:100%}
+.source-answer-image img{width:100%;max-height:none;height:auto;border-radius:0}
 #questionImageDialog{box-sizing:border-box;margin:auto;width:min(1180px,calc(100vw - 16px));max-width:calc(100vw - 16px);height:90dvh;max-height:90dvh;padding:0;border:1px solid var(--card-border);border-radius:12px;background:var(--bg);color:var(--text);overflow:hidden}
 #questionImageDialog[open]{display:flex;flex-direction:column}
 #questionImageDialog::backdrop{background:rgba(0,0,0,.82)}
@@ -98,4 +105,5 @@
 .question-image-viewport{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:12px;box-sizing:border-box;touch-action:pan-x pan-y pinch-zoom}
 #questionImageFull{display:block;width:auto;max-width:100%;height:auto;max-height:100%;object-fit:contain;margin:auto;background:#fff}
 #questionImageDialog.image-zoomed #questionImageFull{max-width:none;max-height:none;margin:0}
+#questionImageDialog.answer-image:not(.image-zoomed) #questionImageFull{width:100%;max-height:none;margin:0 auto}
 @media(max-width:390px){.question-image-toolbar{flex-wrap:wrap}.question-image-toolbar strong{flex-basis:100%;font-size:13px}}

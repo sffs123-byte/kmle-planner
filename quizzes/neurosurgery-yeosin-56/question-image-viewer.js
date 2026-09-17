@@ -1,4 +1,5 @@
-// Read-only source-image viewer. Does not touch answers, SRS or annotations.
+// Read-only source-image viewer for question figures and answer-page crops.
+// Does not touch answers, SRS or annotations.
 window.addEventListener('DOMContentLoaded', function () {
     const dialog = document.createElement('dialog');
     dialog.id = 'questionImageDialog';
@@ -29,6 +30,7 @@ window.addEventListener('DOMContentLoaded', function () {
         full.src = img.currentSrc || img.src;
         full.alt = img.alt;
         dialog.querySelector('#questionImageTitle').textContent = img.alt;
+        dialog.classList.toggle('answer-image', button.dataset.imageKind === 'answer');
         setZoom(false);
         dialog.showModal();
         viewport.scrollTo(0, 0);
@@ -39,6 +41,7 @@ window.addEventListener('DOMContentLoaded', function () {
     dialog.addEventListener('close', function () {
         setZoom(false);
         full.removeAttribute('src');
+        dialog.classList.remove('answer-image');
         if (opener?.isConnected) opener.focus({preventScroll:true});
         opener = null;
     });

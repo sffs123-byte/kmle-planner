@@ -13,7 +13,7 @@ from anki_backup_restore import inject_backup_restore
 
 TITLE = '신경외과 여신 완성본 · 56문제 Anki'
 PREFIX = 'neurosurgery_yeosin_56_anki'
-VERSION = '2026-09-17.skill.6-source-images'
+VERSION = '2026-09-17.skill.8-source-answers'
 
 def replace_once(text, old, new):
     assert text.count(old) == 1, f'Builder marker changed: {old[:70]}'
@@ -38,19 +38,34 @@ def source_question_html(item, card):
     assert not any(x in q for x in ['`', '${', '\\', '</script>'])
     return q
 
+def source_answer_html(card, images):
+    result = '<section class="source-answer-guide"><p><strong>여신 원문 답안</strong></p><p class="source-answer-note">원문 그대로의 캡처입니다. 교정된 내용은 정답 필기를 함께 확인하세요.</p><div class="source-answer-images">'
+    for index, item in enumerate(images, 1):
+        path = ROOT / item['src']
+        assert path.is_file() and path.resolve().is_relative_to(ROOT)
+        src = html.escape(item['src'], quote=True)
+        label = f'여신 원문 답안 {index} · PDF {int(item["page"])}쪽'
+        result += f'<figure class="question-image source-answer-image"><button type="button" class="question-image-open" data-image-kind="answer" aria-label="{label} 확대"><img src="{src}" alt="{label}" loading="lazy" decoding="async"></button><figcaption>{label} · 눌러서 확대</figcaption></figure>'
+    result += '</div></section>'
+    assert not any(x in result for x in ['`', '${', '\\', '</script>'])
+    return result
+
 def card_data(source):
     cards = []
     originals = json.loads((ROOT/'original-notes.json').read_text())
     supplements = json.loads((ROOT/'original-supplements.json').read_text())
     questions = json.loads((ROOT/'original-questions.json').read_text())
+    answer_images = json.loads((ROOT/'answer-images.json').read_text())
     assert set(originals) == {c['id'] for c in source}
     assert set(questions['all']) == set(originals)
+    assert set(answer_images) == set(originals) and all(answer_images.values())
     for c in source:
         q = source_question_html(questions['all'][c['id']], c)
         answer = '<div class="original-note">' + originals[c['id']] + '</div>'
         if c['id'] in supplements:
             answer += '<aside class="note-correction"><strong>보충·교정</strong><p>' + html.escape(supplements[c['id']]) + '</p></aside>'
-        guide = '<details><summary>요점·보충 답안</summary>' + c['answerHtml'] + '</details>'
+        guide = source_answer_html(c, answer_images[c['id']])
+        guide += '<details><summary>요점·보충 답안</summary>' + c['answerHtml'] + '</details>'
         if c['terms']:
             guide += '<details class="term-guide"><summary>용어 풀이</summary><dl>'
             for t in c['terms']:
@@ -132,6 +147,9 @@ def build(root=ROOT):
         'originalQuestionsSha256':hashlib.sha256((root/'original-questions.json').read_bytes()).hexdigest(),
         'images':sum(len(v) for v in json.loads((root/'question-images.json').read_text()).values()),
         'questionImagesSha256':hashlib.sha256((root/'question-images.json').read_bytes()).hexdigest(),
+        'answerImageCards':len(json.loads((root/'answer-images.json').read_text())),
+        'answerImages':sum(len(v) for v in json.loads((root/'answer-images.json').read_text()).values()),
+        'answerImagesSha256':hashlib.sha256((root/'answer-images.json').read_bytes()).hexdigest(),
         'terms':sum(len(c['terms']) for c in source),'railErrors':0,
         'htmlSha256':hashlib.sha256(generated.encode()).hexdigest()}
     (root/'build-qc.json').write_text(json.dumps(qc,ensure_ascii=False,indent=2)+'\n')
