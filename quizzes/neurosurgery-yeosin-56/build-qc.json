@@ -1,10 +1,10 @@
 {
-  "version": "2026-09-18.skill.11-gcs-user-revision",
+  "version": "2026-09-18.skill.12-user-backup",
   "cards": 56,
   "builder": "../anki_quiz_builder.py",
   "builderSha256": "f857c0b8e11abe8e74ff4910315d3c7cf8e34c3f508b814ea75468bbd7a7a432",
-  "sourceSha256": "66b639f461b2dd67d708b1b6c14615ac74c9fa0e56f8e27d987d6ac5c1dfd10f",
-  "originalNotesSha256": "23ffe73e70b8355c43e777e0db6929fe74393767fd7eb37887b89d4a4bbd6994",
+  "sourceSha256": "6929d2624876e51a1ab229d01d51912b95c5ef1155309e1c749090aafe649c8a",
+  "originalNotesSha256": "9b465980d3da88e232d16433afeba0e022c9396aead2250729a0c752cc065ccb",
   "originalQuestionsSha256": "4fb8fa3b792aee8ffec3688633f0f07cf1435adad5ae285aec9b1a07f5c2ce8a",
   "images": 13,
   "questionImagesSha256": "3c4eb1a6c87c164cc44390e2358ce8f2dbdad8ec548e3995f4dea73c9608d16c",
@@ -13,5 +13,5 @@
   "answerImagesSha256": "af5e759e245f4c38dc297a718574e7c38de94e1a6c1c54ed67cb3f4c04b90bea",
   "terms": 58,
   "railErrors": 0,
-  "htmlSha256": "d5e514b42a123c11409dd8046afad2ec5149a213a4bab4951ad5c500e58227c3"
+  "htmlSha256": "4cd63501d51024df4232869a890e03559c878d453248bec95416147a777d8ddd"
 }
